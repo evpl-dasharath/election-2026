@@ -5,6 +5,36 @@ from core.models import (
     PartyAllianceYear
 )
 
+# Pre-load alliance maps once at import time for O(1) lookups
+# These are refreshed on server restart; call _refresh_alliance_cache() after DB changes.
+_ALLIANCE_CACHE: dict[tuple, str] = {}
+
+def _build_cache():
+    global _ALLIANCE_CACHE
+    _ALLIANCE_CACHE = {
+        (r.party_code, r.election_year, r.election_type): r.alliance
+        for r in PartyAllianceYear.objects.all()
+    }
+
+_build_cache()  # run at startup
+
+def get_alliance(party_code: str, year: int = 2026, etype: str = 'LA') -> str:
+    """Return alliance for a party in a specific election year.
+    Looks up PartyAllianceYear first; falls back to Party.alliance for current year."""
+    cached = _ALLIANCE_CACHE.get((party_code, year, etype))
+    if cached:
+        return cached
+    # Fallback: live DB lookup (handles parties added after server start)
+    entry = PartyAllianceYear.objects.filter(
+        party_code=party_code, election_year=year, election_type=etype
+    ).first()
+    if entry:
+        _ALLIANCE_CACHE[(party_code, year, etype)] = entry.alliance
+        return entry.alliance
+    # Final fallback: Party.alliance
+    party = Party.objects.filter(code=party_code).first()
+    return party.alliance if party else 'OTH'
+
 
 class DistrictSerializer(serializers.ModelSerializer):
     class Meta:
@@ -78,7 +108,7 @@ class ConstituencyListSerializer(serializers.ModelSerializer):
             return {
                 'name': leader.name,
                 'party': leader.party.code,
-                'alliance': leader.party.alliance,
+                'alliance': get_alliance(leader.party.code, 2026),
                 'votes': leader.votes,
                 'percentage': float(leader.vote_percentage),
             }
@@ -94,7 +124,7 @@ class ConstituencyListSerializer(serializers.ModelSerializer):
             return {
                 'name': runner.name,
                 'party': runner.party.code,
-                'alliance': runner.party.alliance,
+                'alliance': get_alliance(runner.party.code, 2026),
                 'votes': runner.votes,
                 'percentage': float(runner.vote_percentage),
             }
@@ -169,11 +199,11 @@ class ConstituencyDetailSerializer(serializers.ModelSerializer):
                 {
                     'name': c['name'],
                     'party': c['party_code'],
-                    'alliance': c['alliance'],
+                    # Use year-aware lookup for 2026 alliance
+                    'alliance': get_alliance(c['party_code'], 2026),
                     'votes': c['votes'],
                     'percentage': float(c['vote_percentage']),
                     'is_winner': c['is_winner'],
-                    # is_leading computed dynamically: highest votes when counting is active
                     'is_leading': (
                         idx == 0
                         and c['votes'] > 0
@@ -189,6 +219,8 @@ class ConstituencyDetailSerializer(serializers.ModelSerializer):
                 {
                     'candidate': r['candidate_name'],
                     'party': r['party_code'],
+                    # Use 2021-specific alliance lookup (handles JD(S)=LDF, LJD=LDF, etc.)
+                    'alliance': get_alliance(r['party_code'], 2021),
                     'votes': r['total_votes'],
                     'percentage': float(r['vote_percentage']),
                     'is_winner': r['is_winner'],

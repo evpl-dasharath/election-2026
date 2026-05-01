@@ -8,6 +8,7 @@ import {
   prefetchConstituencyDetail,
 } from '../hooks/useElectionData';
 import GlobalHeader from '../components/GlobalHeader';
+import { partyAbbr } from '../utils/partyAbbr';
 
 // ── Design tokens ─────────────────────────────────────────────
 const AC: Record<string, string> = {
@@ -57,6 +58,7 @@ function inferAlliance(party: string): string {
   return 'OTH';
 }
 
+
 // ─────────────────────────────────────────────────────────────
 export default function ConstituencyPage() {
   const { id } = useParams<{ id: string }>();
@@ -105,7 +107,11 @@ export default function ConstituencyPage() {
     if (!historical?.la_2021 || candidates_2026_safe.length === 0) return null;
     return ['LDF', 'UDF', 'NDA'].map(al => {
       const v26 = candidates_2026_safe.filter(cd => cd.alliance === al).reduce((s, cd) => s + cd.percentage, 0);
-      const v21 = historical.la_2021.top_5.filter(x => inferAlliance(x.party) === al).reduce((s, x) => s + x.percentage, 0);
+      // Use the `alliance` field the API returns (mapped via PartyAllianceYear) — NOT inferAlliance()
+      // which doesn't know about parties like INL, RSP (UDF in 2021), etc.
+      const v21 = historical.la_2021.top_5
+        .filter(x => ((x as any).alliance ?? inferAlliance(x.party)) === al)
+        .reduce((s, x) => s + x.percentage, 0);
       return { alliance: al, v21: v21.toFixed(1), v26: v26.toFixed(1), swing: v26 - v21 };
     });
   }, [historical, candidates_2026_safe]);
@@ -175,6 +181,31 @@ export default function ConstituencyPage() {
   const margin = leader && runnerUp ? leader.votes - runnerUp.votes : null;
 
   const hasSwing = swingData && swingData.some(s => parseFloat(s.v21) > 0);
+
+  // ── Sitting-MLA & vote-delta helpers (need historical context) ──
+  const normName = (s: string) => s.toLowerCase().replace(/[^a-z]/g, '');
+  const isSittingMla = (candidateName: string): boolean => {
+    if (!historical?.la_2021?.winner) return false;
+    const cn = normName(candidateName);
+    const sn = normName(historical.la_2021.winner);
+    if (cn === sn) return true;
+    // Tolerate minor spelling variants: match first 4 chars AND last 4 chars
+    if (cn.length >= 6 && sn.length >= 6) {
+      return cn.slice(0, 4) === sn.slice(0, 4) && cn.slice(-4) === sn.slice(-4);
+    }
+    return cn.slice(0, Math.min(cn.length, sn.length)) === sn.slice(0, Math.min(cn.length, sn.length));
+  };
+  const get2021Pct = (candidateName: string): number | null => {
+    if (!historical?.la_2021?.top_5?.length) return null;
+    const cn = normName(candidateName);
+    const found = historical.la_2021.top_5.find(r => {
+      const rn = normName(r.candidate);
+      if (cn.length < 5 || rn.length < 5) return cn === rn;
+      const pfx = Math.min(cn.length, rn.length, 8);
+      return cn.slice(0, pfx) === rn.slice(0, pfx);
+    });
+    return found ? found.percentage : null;
+  };
 
   return (
     <div style={{ fontFamily: "'DM Sans',sans-serif", background: '#F5F2EE', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
@@ -262,6 +293,25 @@ export default function ConstituencyPage() {
 
           {/* ── HERO ──────────────────────────────────────────── */}
           <div style={{ background: leader ? (ABG[leader.alliance] || '#FDFCFB') : '#FDFCFB', borderBottom: `3px solid ${leader ? ac(leader.alliance) : '#E2DDD8'}`, padding: '24px 32px' }}>
+
+            {/* Inline prev / next nav */}
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
+              {prevC ? (
+                <button onClick={() => navigate(`/constituency/${prevC.id}`)} style={{ background: 'transparent', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 5, color: '#5C5245', fontSize: 12, fontFamily: "'DM Sans',sans-serif", padding: '4px 0' }}>
+                  <span style={{ fontSize: 15 }}>←</span>
+                  <span style={{ fontWeight: 600 }}>{prevC.name}</span>
+                  <span style={{ color: '#9CA3AF', fontSize: 11 }}>{prevC.district}</span>
+                </button>
+              ) : <div />}
+              {nextC ? (
+                <button onClick={() => navigate(`/constituency/${nextC.id}`)} style={{ background: 'transparent', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 5, color: '#5C5245', fontSize: 12, fontFamily: "'DM Sans',sans-serif", padding: '4px 0' }}>
+                  <span style={{ color: '#9CA3AF', fontSize: 11 }}>{nextC.district}</span>
+                  <span style={{ fontWeight: 600 }}>{nextC.name}</span>
+                  <span style={{ fontSize: 15 }}>→</span>
+                </button>
+              ) : <div />}
+            </div>
+
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 18 }}>
               <div>
                 <div style={{ fontFamily: "'DM Serif Display',serif", fontSize: 30, letterSpacing: '-0.4px', color: '#1A1611', lineHeight: 1.15, marginBottom: 8 }}>{c.name}</div>
@@ -275,6 +325,24 @@ export default function ConstituencyPage() {
                     </MetaChip>
                   )}
                 </div>
+                {/* Seat alliance pill */}
+                {!histLoading && historical?.la_2021 && (() => {
+                  // Use the top_5 winner's alliance (from PartyAllianceYear — correctly maps INL→LDF etc.)
+                  const sittingAlliance = historical.la_2021.top_5?.find(r => r.is_winner)?.alliance
+                    ?? historical.la_2021.top_5?.[0]?.alliance
+                    ?? null;
+                  if (!sittingAlliance) return null;
+                  const alColor = ac(sittingAlliance);
+                  return (
+                    <div style={{ marginTop: 10, display: 'flex', alignItems: 'center', gap: 6 }}>
+                      <div style={{ display: 'inline-flex', alignItems: 'center', gap: 5, background: 'rgba(255,255,255,0.75)', border: `1px solid ${alColor}40`, borderRadius: 20, padding: '3px 10px' }}>
+                        <div style={{ width: 7, height: 7, borderRadius: '50%', background: alColor, flexShrink: 0 }} />
+                        <span style={{ fontSize: 11, fontWeight: 700, color: alColor }}>{sittingAlliance}</span>
+                        <span style={{ fontSize: 10, color: '#5C5245' }}>seat (2021)</span>
+                      </div>
+                    </div>
+                  );
+                })()}
               </div>
               {live_result && (
                 <div style={{ textAlign: 'right', flexShrink: 0 }}>
@@ -302,11 +370,9 @@ export default function ConstituencyPage() {
                       <span>{leader.party}</span>
                       {(leader as any).is_incumbent && <Badge bg="#854D0E">Incumbent</Badge>}
                     </div>
-                    {runnerUp && margin !== null && (
-                      <div style={{ marginTop: 10, fontSize: 13, color: '#5C5245' }}>
-                        {leader.is_winner ? 'Won' : 'Leading'} by{' '}
-                        <strong style={{ fontFamily: "'JetBrains Mono',monospace", color: '#1A1611', fontSize: 15 }}>{margin.toLocaleString('en-IN')}</strong>
-                        {' '}votes vs <span style={{ fontWeight: 600, color: '#1A1611' }}>{runnerUp.name}</span>
+                    {runnerUp && (
+                      <div style={{ marginTop: 8, fontSize: 12, color: '#5C5245' }}>
+                        vs <span style={{ fontWeight: 600, color: '#1A1611' }}>{runnerUp.name}</span>
                         <span style={{ marginLeft: 6, fontSize: 11, color: ac(runnerUp.alliance) }}>{runnerUp.alliance} · {runnerUp.party}</span>
                       </div>
                     )}
@@ -314,6 +380,12 @@ export default function ConstituencyPage() {
                   <div style={{ textAlign: 'right', flexShrink: 0 }}>
                     <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 30, fontWeight: 600, color: ac(leader.alliance), letterSpacing: '-1px' }}>{leader.votes.toLocaleString('en-IN')}</div>
                     <div style={{ fontSize: 11, color: '#5C5245' }}>{leader.percentage.toFixed(1)}% of votes</div>
+                    {margin !== null && (
+                      <div style={{ marginTop: 6 }}>
+                        <div style={{ fontSize: 22, fontWeight: 800, fontFamily: "'JetBrains Mono',monospace", color: ac(leader.alliance), letterSpacing: '-1px', lineHeight: 1 }}>+{margin.toLocaleString('en-IN')}</div>
+                        <div style={{ fontSize: 10, color: '#9CA3AF', marginTop: 2 }}>margin</div>
+                      </div>
+                    )}
                     {(live_result as any)?.last_updated && (
                       <div style={{ fontSize: 10, color: '#9CA3AF', marginTop: 6 }}>
                         Updated {new Date((live_result as any).last_updated).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' })} IST
@@ -348,24 +420,30 @@ export default function ConstituencyPage() {
                   const color = ac(cd.alliance);
                   const isTop = cd.is_winner || cd.is_leading;
                   const barW = maxVotes > 0 ? Math.round((cd.votes / maxVotes) * 100) : 0;
-                  const abbr = cd.party.replace('(M)', '').replace('(J)', '').substring(0, 3);
-                  const depositLost = isDepositLost(cd.votes, totalValid);
-                  const isIncumbent = (cd as any).is_incumbent;
+                  const abbr = partyAbbr(cd.party);
+                  const isIncumbent = isSittingMla(cd.name);
                   return (
-                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 14, padding: '13px 15px', background: isTop ? (ABG[cd.alliance] || '#FDFCFB') : '#FDFCFB', borderRadius: 10, border: `1.5px solid ${isTop ? color : '#E2DDD8'}`, opacity: depositLost ? 0.65 : 1 }}>
-                      <div style={{ width: 38, height: 38, borderRadius: '50%', background: color, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 11, fontWeight: 700, color: '#fff', flexShrink: 0 }}>{abbr}</div>
+                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 14, padding: '13px 15px', background: isTop ? (ABG[cd.alliance] || '#FDFCFB') : '#FDFCFB', borderRadius: 10, border: `1.5px solid ${isTop ? color : '#E2DDD8'}` }}>
+                      <div style={{ width: 38, height: 38, borderRadius: '50%', background: color, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 10, fontWeight: 700, color: '#fff', flexShrink: 0 }}>{abbr}</div>
                       <div style={{ flex: 1, minWidth: 0 }}>
                         <div style={{ fontSize: 14, fontWeight: 600, color: '#1A1611', display: 'flex', alignItems: 'center', gap: 7, flexWrap: 'wrap' }}>
                           {cd.name}
                           {cd.is_winner && <Badge bg="#15803D">✓ Winner</Badge>}
                           {cd.is_leading && !cd.is_winner && <Badge bg="#1D4ED8">▲ Leading</Badge>}
-                          {isIncumbent && <Badge bg="#854D0E">Incumbent</Badge>}
-                          {depositLost && <Badge bg="#6B7280">Deposit Lost</Badge>}
+                          {isIncumbent && <Badge bg="#854D0E">Sitting MLA</Badge>}
                         </div>
                         <div style={{ fontSize: 11, color: '#5C5245', marginTop: 2 }}>{cd.party} · {cd.alliance}</div>
                       </div>
                       <div style={{ flex: 1, maxWidth: 180 }}>
-                        <div style={{ fontSize: 10, color: '#5C5245', marginBottom: 3, fontFamily: "'JetBrains Mono',monospace" }}>{cd.percentage.toFixed(1)}%</div>
+                        <div style={{ fontSize: 10, color: '#5C5245', marginBottom: 3, fontFamily: "'JetBrains Mono',monospace", display: 'flex', alignItems: 'center', gap: 4 }}>
+                          {cd.percentage.toFixed(1)}%
+                          {live_result?.status === 'RESULT_DECLARED' && (() => {
+                            const pct21 = get2021Pct(cd.name);
+                            if (pct21 === null) return null;
+                            const delta = cd.percentage - pct21;
+                            return <span style={{ fontSize: 9, fontWeight: 700, color: delta >= 0 ? '#16A34A' : '#DC2626' }}>{delta >= 0 ? '▲' : '▼'}{Math.abs(delta).toFixed(1)}</span>;
+                          })()}
+                        </div>
                         <div style={{ height: 6, background: '#E2DDD8', borderRadius: 3, overflow: 'hidden' }}>
                           <div style={{ height: '100%', width: `${barW}%`, background: color, borderRadius: 3, transition: 'width 0.8s ease' }} />
                         </div>
@@ -443,10 +521,16 @@ export default function ConstituencyPage() {
                         <td style={{ padding: '9px 16px', width: 24, color: '#9CA3AF', fontFamily: "'JetBrains Mono',monospace", fontSize: 11 }}>{i + 1}</td>
                         <td style={{ padding: '9px 8px' }}>
                           <div style={{ display: 'flex', alignItems: 'center', gap: 7 }}>
-                            <div style={{ width: 8, height: 8, borderRadius: '50%', background: ac(inferAlliance(cand.party)), flexShrink: 0 }} />
+                            {/* Use alliance from API — it's already correctly mapped via PartyAllianceYear */}
+                            <div style={{ width: 8, height: 8, borderRadius: '50%', background: ac((cand as any).alliance || inferAlliance(cand.party)), flexShrink: 0 }} />
                             <span style={{ fontWeight: i === 0 ? 600 : 400, color: '#1A1611' }}>{cand.candidate}</span>
                           </div>
-                          <div style={{ fontSize: 11, color: '#5C5245', marginLeft: 15, marginTop: 1 }}>{cand.party}</div>
+                          <div style={{ fontSize: 11, color: '#5C5245', marginLeft: 15, marginTop: 1, display: 'flex', alignItems: 'center', gap: 5 }}>
+                            {cand.party}
+                            {(cand as any).alliance && (cand as any).alliance !== 'OTH' && (
+                              <span style={{ fontSize: 9, fontWeight: 700, color: ac((cand as any).alliance), letterSpacing: 0.5 }}>{(cand as any).alliance}</span>
+                            )}
+                          </div>
                         </td>
                         <td style={{ padding: '9px 16px', textAlign: 'right', fontFamily: "'JetBrains Mono',monospace", color: '#1A1611', fontWeight: i === 0 ? 600 : 400 }}>{cand.votes.toLocaleString('en-IN')}</td>
                         <td style={{ padding: '9px 16px', textAlign: 'right', fontSize: 11, color: '#5C5245' }}>{cand.percentage.toFixed(1)}%</td>
@@ -488,15 +572,7 @@ export default function ConstituencyPage() {
             </div>
           )}
 
-          {/* ── PREV / NEXT NAV ───────────────────────────────── */}
-          <div style={{ padding: '8px 32px 32px', display: 'flex', gap: 12 }}>
-            {prevC ? (
-              <NavButton dir="prev" label={prevC.name} sub={prevC.district} onClick={() => navigate(`/constituency/${prevC.id}`)} />
-            ) : <div style={{ flex: 1 }} />}
-            {nextC ? (
-              <NavButton dir="next" label={nextC.name} sub={nextC.district} onClick={() => navigate(`/constituency/${nextC.id}`)} />
-            ) : <div style={{ flex: 1 }} />}
-          </div>
+          <div style={{ height: 32 }} />
 
         </div>{/* end main */}
       </div>{/* end grid */}

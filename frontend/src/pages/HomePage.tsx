@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useStateSummary, useConstituencies, useParties } from '../hooks/useElectionData';
 import type { Alliance, Region, ConstituencyListItem } from '../types';
 import GlobalHeader from '../components/GlobalHeader';
+import { partyAbbr } from '../utils/partyAbbr';
 
 // ── Constants ──────────────────────────────────────────────
 const ALLIANCE_COLORS: Record<string, string> = {
@@ -486,7 +487,7 @@ function ConstituencyCard({ c, onClick }: { c: ConstituencyListItem; onClick: ()
                 style={{ backgroundColor: 'rgba(255,255,255,0.95)', color }}
                 title={c.leader.party}
               >
-                {c.leader.party.replace(/[^A-Za-z0-9(]/g, '').slice(0, 4)}
+              {partyAbbr(c.leader.party)}
               </div>
             </div>
 

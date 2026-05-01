@@ -132,8 +132,8 @@ def process_round(const_id, s, round_num):
 
     # Print every 5 rounds or at the end
     if round_num % 5 == 0 or round_num == s['total_rounds']:
-        leader    = sorted_cands[0]
-        margin    = cur_votes[sorted_cands[0].id] - cur_votes[sorted_cands[1].id] if len(sorted_cands) > 1 else 0
+        by_votes = sorted(candidates, key=lambda c: cur_votes.get(c.id, 0), reverse=True)
+        margin   = cur_votes[by_votes[0].id] - cur_votes[by_votes[1].id] if len(by_votes) > 1 else 0
         print(f"  ⟳  [{now()}] {s['name']:30s}  R{round_num:2d}/{s['total_rounds']}"
               f"  {pct*100:3.0f}%  leader +{margin:,}")
 
