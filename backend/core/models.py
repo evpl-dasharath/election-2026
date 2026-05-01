@@ -223,7 +223,7 @@ class ConstituencyMeta2021(models.Model):
 
 
 class HistoricalResult2016(models.Model):
-    """2016 LA election results (winner + runner-up only)"""
+    """2016 LA election results (winner + runner-up summary — kept for backward compat)"""
     constituency = models.ForeignKey(Constituency, on_delete=models.CASCADE, related_name='results_2016')
     
     # Winner
@@ -249,6 +249,43 @@ class HistoricalResult2016(models.Model):
     
     def __str__(self):
         return f"{self.constituency.name} - {self.winner_candidate} ({self.winner_party})"
+
+
+class HistoricalResult2016Full(models.Model):
+    """2016 LA election results — full candidate-level records (from Detailed Results.xlsx).
+    Mirrors HistoricalResult2021 so the same alliance-share aggregation logic works."""
+    constituency = models.ForeignKey(Constituency, on_delete=models.CASCADE, related_name='results_2016_full')
+
+    # Candidate details
+    candidate_name = models.CharField(max_length=200)
+    sex = models.CharField(max_length=10, blank=True)
+    age = models.IntegerField(null=True, blank=True)
+    category = models.CharField(max_length=20, blank=True, help_text="GEN, SC, ST")
+
+    # Party — normalised code (xlsx aliases resolved)
+    party_code = models.CharField(max_length=50, help_text="Normalised party code")
+
+    # Votes
+    general_votes = models.IntegerField(default=0)
+    postal_votes = models.IntegerField(default=0)
+    total_votes = models.IntegerField(default=0)
+    vote_percentage = models.DecimalField(max_digits=5, decimal_places=2, default=0)
+
+    # Constituency totals (denormalised for convenience)
+    total_electors = models.IntegerField(default=0)
+    total_votes_polled = models.IntegerField(default=0)
+
+    # Status
+    is_winner = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ['constituency__number', '-total_votes']
+        verbose_name = "2016 LA Result (Full)"
+        verbose_name_plural = "2016 LA Results (Full)"
+
+    def __str__(self):
+        mark = "✓" if self.is_winner else ""
+        return f"{self.constituency.name} - {self.candidate_name} ({self.party_code}) {mark}"
 
 
 class ParliamentResult(models.Model):

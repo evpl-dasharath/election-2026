@@ -1,10 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useStateSummary, clearElectionDataCache } from '../hooks/useElectionData';
-
-const AC: Record<string, string> = {
-  LDF: '#D42B2B', UDF: '#1A8FE3', NDA: '#F7921C', OTH: '#9CA3AF',
-};
+import { ALLIANCE_COLORS, PURE_IND_COLOR } from '../utils/colorUtils';
 
 const STALE_MS = 30_000;
 
@@ -43,6 +40,12 @@ export default function GlobalHeader() {
   const ndaLeading = summary?.alliance_summary.NDA.leading || 0;
   const othWon     = summary?.alliance_summary.OTH?.won     || 0;
   const othLeading = summary?.alliance_summary.OTH?.leading || 0;
+  const indWon     = summary?.ind_summary?.won     || 0;
+  const indLeading = summary?.ind_summary?.leading || 0;
+
+  // OTH = total OTH alliance minus pure IND (IND is a subset of OTH alliance)
+  const othOnlyWon     = Math.max(0, othWon     - indWon);
+  const othOnlyLeading = Math.max(0, othLeading - indLeading);
 
   // Totals
   const declared = summary?.results_declared     || 0;
@@ -50,12 +53,24 @@ export default function GlobalHeader() {
   const pending  = 140 - declared - counting;
   const pct      = Math.round(((declared + counting) / 140) * 100);
 
-  const pills = [
-    { id: 'LDF', won: ldfWon, lead: ldfLeading },
-    { id: 'UDF', won: udfWon, lead: udfLeading },
-    { id: 'NDA', won: ndaWon, lead: ndaLeading },
-    { id: 'OTH', won: othWon, lead: othLeading },
-  ] as const;
+  // Main alliance pills — always shown
+  const mainPills = [
+    { id: 'LDF', won: ldfWon, lead: ldfLeading, color: ALLIANCE_COLORS.LDF },
+    { id: 'UDF', won: udfWon, lead: udfLeading, color: ALLIANCE_COLORS.UDF },
+    { id: 'NDA', won: ndaWon, lead: ndaLeading, color: ALLIANCE_COLORS.NDA },
+  ];
+
+  // Conditional pills — only shown when they have at least one lead or win
+  const conditionalPills = [
+    ...(othOnlyWon + othOnlyLeading > 0
+      ? [{ id: 'OTH', won: othOnlyWon, lead: othOnlyLeading, color: ALLIANCE_COLORS.OTH }]
+      : []),
+    ...(indWon + indLeading > 0
+      ? [{ id: 'IND', won: indWon, lead: indLeading, color: PURE_IND_COLOR }]
+      : []),
+  ];
+
+  const allPills = [...mainPills, ...conditionalPills];
 
   return (
     <header className="bg-ink text-white shrink-0 sticky top-0 z-50 border-b border-white/10">
@@ -85,10 +100,9 @@ export default function GlobalHeader() {
           </button>
         </div>
 
-        {/* Center: 4 alliance pills */}
+        {/* Center: alliance pills */}
         <div className="flex items-center gap-2 flex-1 justify-center">
-          {pills.map(({ id, won, lead }) => {
-            const color = AC[id];
+          {allPills.map(({ id, won, lead, color }) => {
             const total = won + lead;
             return (
               <div

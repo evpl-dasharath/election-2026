@@ -25,6 +25,12 @@ const ATAG_FG: Record<string, string> = {
   LDF: '#D42B2B', UDF: '#1A8FE3', NDA: '#C2620A', OTH: '#6B7280',
 };
 function ac(a: string) { return AC[a] || '#6B7280'; }
+/** Badge/dot color: alliance color for LDF/UDF/NDA; party-specific color for OTH non-IND; grey for IND */
+function badgeColor(alliance: string, party: string, colorCode?: string) {
+  if (alliance !== 'OTH') return ac(alliance);
+  if (party === 'IND' || party === 'NOTA') return '#9CA3AF';
+  return colorCode || '#6B7280';
+}
 
 // ── Helpers ───────────────────────────────────────────────────
 function sLabel(s: string) {
@@ -105,14 +111,14 @@ export default function ConstituencyPage() {
   // Swing — must be before any early return (Rules of Hooks)
   const swingData = useMemo(() => {
     if (!historical?.la_2021 || candidates_2026_safe.length === 0) return null;
-    return ['LDF', 'UDF', 'NDA'].map(al => {
-      const v26 = candidates_2026_safe.filter(cd => cd.alliance === al).reduce((s, cd) => s + cd.percentage, 0);
-      // Use the `alliance` field the API returns (mapped via PartyAllianceYear) — NOT inferAlliance()
-      // which doesn't know about parties like INL, RSP (UDF in 2021), etc.
-      const v21 = historical.la_2021.top_5
-        .filter(x => ((x as any).alliance ?? inferAlliance(x.party)) === al)
-        .reduce((s, x) => s + x.percentage, 0);
-      return { alliance: al, v21: v21.toFixed(1), v26: v26.toFixed(1), swing: v26 - v21 };
+    const has2016 = !!(historical.la_2016?.alliance_shares);
+    return (['LDF', 'UDF', 'NDA', 'OTH'] as const).map(al => {
+      const v26raw = candidates_2026_safe.filter(cd => cd.alliance === al).reduce((s, cd) => s + cd.percentage, 0);
+      const v21raw = historical.la_2021.alliance_shares?.[al] ?? 0;
+      const v16raw = has2016 ? (historical.la_2016!.alliance_shares?.[al] ?? 0) : null;
+      const swing2126 = v26raw - v21raw;
+      const swing1621 = v16raw !== null ? v21raw - v16raw : null;
+      return { alliance: al, v16: v16raw, v21: v21raw, v26: v26raw, swing2126, swing1621, has2016 };
     });
   }, [historical, candidates_2026_safe]);
 
@@ -180,7 +186,9 @@ export default function ConstituencyPage() {
   const runnerUp = leader ? candidates_2026_safe.filter(cd => cd !== leader)[0] : null;
   const margin = leader && runnerUp ? leader.votes - runnerUp.votes : null;
 
-  const hasSwing = swingData && swingData.some(s => parseFloat(s.v21) > 0);
+  const hasSwing = swingData && swingData.some(s => s.v21 > 0.05);
+  // 2026 vote-share data only shown once counting is fully declared
+  const is2026Final = live_result?.status === 'RESULT_DECLARED';
 
   // ── Sitting-MLA & vote-delta helpers (need historical context) ──
   const normName = (s: string) => s.toLowerCase().replace(/[^a-z]/g, '');
@@ -196,9 +204,9 @@ export default function ConstituencyPage() {
     return cn.slice(0, Math.min(cn.length, sn.length)) === sn.slice(0, Math.min(cn.length, sn.length));
   };
   const get2021Pct = (candidateName: string): number | null => {
-    if (!historical?.la_2021?.top_5?.length) return null;
+    if (!historical?.la_2021?.candidates?.length) return null;
     const cn = normName(candidateName);
-    const found = historical.la_2021.top_5.find(r => {
+    const found = historical.la_2021.candidates.find(r => {
       const rn = normName(r.candidate);
       if (cn.length < 5 || rn.length < 5) return cn === rn;
       const pfx = Math.min(cn.length, rn.length, 8);
@@ -327,9 +335,9 @@ export default function ConstituencyPage() {
                 </div>
                 {/* Seat alliance pill */}
                 {!histLoading && historical?.la_2021 && (() => {
-                  // Use the top_5 winner's alliance (from PartyAllianceYear — correctly maps INL→LDF etc.)
-                  const sittingAlliance = historical.la_2021.top_5?.find(r => r.is_winner)?.alliance
-                    ?? historical.la_2021.top_5?.[0]?.alliance
+                  // Use the candidates winner's alliance (from PartyAllianceYear — correctly maps INL→LDF etc.)
+                  const sittingAlliance = historical.la_2021.candidates?.find(r => r.is_winner)?.alliance
+                    ?? historical.la_2021.candidates?.[0]?.alliance
                     ?? null;
                   if (!sittingAlliance) return null;
                   const alColor = ac(sittingAlliance);
@@ -417,7 +425,7 @@ export default function ConstituencyPage() {
             ) : (
               <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                 {candidates_2026.map((cd, i) => {
-                  const color = ac(cd.alliance);
+                  const color = badgeColor(cd.alliance, cd.party, cd.party_color);
                   const isTop = cd.is_winner || cd.is_leading;
                   const barW = maxVotes > 0 ? Math.round((cd.votes / maxVotes) * 100) : 0;
                   const abbr = partyAbbr(cd.party);
@@ -460,37 +468,154 @@ export default function ConstituencyPage() {
           </div>
 
           {/* ── SWING ANALYSIS ────────────────────────────────── */}
-          {hasSwing && (
+          {swingData && (
             <div style={{ padding: '0 32px 22px' }}>
               <Divider />
-              <SectionTitle>Vote Share Swing — 2021 vs 2026</SectionTitle>
-              <div style={{ background: '#FDFCFB', border: '1px solid #E2DDD8', borderRadius: 10, overflow: 'hidden' }}>
-                <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
-                  <thead>
-                    <tr style={{ borderBottom: '1px solid #E2DDD8' }}>
-                      {['Alliance', '2021 %', '2026 %', 'Change'].map((h, i) => (
-                        <th key={h} style={{ padding: '10px 16px', textAlign: i === 0 ? 'left' : 'right', fontSize: 10, fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#5C5245' }}>{h}</th>
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {swingData!.map(({ alliance, v21, v26, swing }) => (
-                      <tr key={alliance} style={{ borderBottom: '1px solid #F5F2EE' }}>
-                        <td style={{ padding: '10px 16px' }}>
-                          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                            <div style={{ width: 10, height: 10, borderRadius: 2, background: ac(alliance) }} />
-                            <span style={{ fontWeight: 600, color: '#1A1611' }}>{alliance}</span>
-                          </div>
-                        </td>
-                        <td style={{ padding: '10px 16px', textAlign: 'right', fontFamily: "'JetBrains Mono',monospace", color: '#5C5245' }}>{v21}%</td>
-                        <td style={{ padding: '10px 16px', textAlign: 'right', fontFamily: "'JetBrains Mono',monospace", fontWeight: 600, color: '#1A1611' }}>{v26}%</td>
-                        <td style={{ padding: '10px 16px', textAlign: 'right', fontFamily: "'JetBrains Mono',monospace", fontWeight: 700, color: swing === 0 ? '#5C5245' : swing > 0 ? '#16A34A' : '#DC2626' }}>
-                          {swing === 0 ? '—' : `${swing > 0 ? '▲' : '▼'} ${Math.abs(swing).toFixed(1)}%`}
-                        </td>
+              <SectionTitle>Vote Share Swing — 2016 / 2021 / 2026</SectionTitle>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, alignItems: 'stretch' }}>
+
+                {/* LEFT: Table — fixed layout, tight columns */}
+                <div style={{ background: '#FDFCFB', border: '1px solid #E2DDD8', borderRadius: 10, overflow: 'hidden' }}>
+                  <table style={{ width: '100%', borderCollapse: 'collapse', tableLayout: 'fixed' }}>
+                    <colgroup>
+                      <col style={{ width: '28%' }} />
+                      <col style={{ width: '24%' }} />
+                      <col style={{ width: '24%' }} />
+                      <col style={{ width: '24%' }} />
+                    </colgroup>
+                    <thead>
+                      <tr style={{ borderBottom: '2px solid #E2DDD8', background: '#F5F2EE' }}>
+                        <th style={{ padding: '8px 12px', textAlign: 'left', fontSize: 10, fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#5C5245' }}>Alliance</th>
+                        <th style={{ padding: '8px 8px', textAlign: 'right', fontSize: 10, fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#5C5245' }}>2016</th>
+                        <th style={{ padding: '8px 8px', textAlign: 'right', fontSize: 10, fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#5C5245' }}>2021</th>
+                        <th style={{ padding: '8px 8px', textAlign: 'right', fontSize: 10, fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#5C5245', borderLeft: '1px solid #E2DDD8' }}>2026</th>
                       </tr>
+                    </thead>
+                    <tbody>
+                      {swingData.map(({ alliance, v16, v21, v26, swing2126, swing1621, has2016: h16 }) => {
+                        const clr = ac(alliance);
+                        const isZero = v21 < 0.05 && v26 < 0.05 && (v16 === null || v16 < 0.05);
+                        if (isZero) return null;
+                        // Shared cell style for all 3 years — uniform look
+                        const numStyle: React.CSSProperties = {
+                          fontFamily: "'JetBrains Mono',monospace",
+                          fontSize: 18, fontWeight: 700,
+                          color: '#1A1611', letterSpacing: '-0.5px',
+                        };
+                        const pctStyle: React.CSSProperties = { fontSize: 11, fontWeight: 400 };
+                        return (
+                          <tr key={alliance} style={{ borderBottom: '1px solid #F5F2EE' }}>
+                            <td style={{ padding: '8px 12px' }}>
+                              <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                                <div style={{ width: 10, height: 10, borderRadius: 2, background: clr, flexShrink: 0 }} />
+                                <span style={{ fontWeight: 700, fontSize: 13, color: '#1A1611' }}>{alliance}</span>
+                              </div>
+                            </td>
+
+                            {/* 2016 — same style as 2021; placeholder chip always shown */}
+                            <td style={{ padding: '8px 8px', textAlign: 'right' }}>
+                              <div style={{ display: 'inline-flex', flexDirection: 'column', alignItems: 'flex-end', gap: 4 }}>
+                                {h16 && v16 !== null && v16 > 0.05
+                                  ? <span style={numStyle}>{v16.toFixed(1)}<span style={pctStyle}>%</span></span>
+                                  : <span style={{ color: '#D1D5DB', fontSize: 14 }}>—</span>
+                                }
+                                {/* Always show a placeholder to keep row height uniform */}
+                                <span style={{ display: 'inline-flex', alignItems: 'center', background: '#F3F4F6', color: '#D1D5DB', fontSize: 10, fontFamily: "'JetBrains Mono',monospace", padding: '2px 6px', borderRadius: 4, whiteSpace: 'nowrap' }}>
+                                  — base
+                                </span>
+                              </div>
+                            </td>
+
+                            {/* 2021 */}
+                            <td style={{ padding: '8px 8px', textAlign: 'right' }}>
+                              <div style={{ display: 'inline-flex', flexDirection: 'column', alignItems: 'flex-end', gap: 4 }}>
+                                {v21 > 0.05
+                                  ? <span style={numStyle}>{v21.toFixed(1)}<span style={pctStyle}>%</span></span>
+                                  : <span style={{ color: '#D1D5DB', fontSize: 14 }}>—</span>
+                                }
+                                {h16 && swing1621 !== null && Math.abs(swing1621) >= 0.1
+                                  ? <SwingChip value={swing1621} label="vs '16" />
+                                  : <span style={{ display: 'inline-flex', alignItems: 'center', background: '#F3F4F6', color: '#D1D5DB', fontSize: 10, fontFamily: "'JetBrains Mono',monospace", padding: '2px 6px', borderRadius: 4, whiteSpace: 'nowrap' }}>— no chg</span>
+                                }
+                              </div>
+                            </td>
+
+                            {/* 2026 — only revealed once 100% counted (RESULT_DECLARED) */}
+                            <td style={{ padding: '8px 8px', textAlign: 'right', borderLeft: '1px solid #E2DDD8' }}>
+                              <div style={{ display: 'inline-flex', flexDirection: 'column', alignItems: 'flex-end', gap: 4 }}>
+                                {is2026Final && v26 > 0.05
+                                  ? <span style={numStyle}>{v26.toFixed(1)}<span style={pctStyle}>%</span></span>
+                                  : <span style={{ color: '#D1D5DB', fontSize: 14 }}>—</span>
+                                }
+                                {is2026Final && Math.abs(swing2126) >= 0.1
+                                  ? <SwingChip value={swing2126} label="vs '21" />
+                                  : <span style={{ display: 'inline-flex', alignItems: 'center', background: '#F3F4F6', color: '#D1D5DB', fontSize: 10, fontFamily: "'JetBrains Mono',monospace", padding: '2px 6px', borderRadius: 4, whiteSpace: 'nowrap' }}>{is2026Final ? '— no chg' : '— pending'}</span>
+                                }
+                              </div>
+                            </td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+
+                {/* RIGHT: Vertical stacked columns — fills full height of table */}
+                <div style={{ background: '#FDFCFB', border: '1px solid #E2DDD8', borderRadius: 10, padding: '12px 10px 10px', overflow: 'hidden', display: 'flex', flexDirection: 'column', height: '100%', boxSizing: 'border-box' }}>
+                  <div style={{ display: 'flex', gap: 8, alignItems: 'stretch', flex: 1, minHeight: 0 }}>
+                    {(['2016', '2021', '2026'] as const).map(yr => {
+                      const has16 = swingData[0]?.has2016;
+                      if (yr === '2016' && !has16) return null;
+                      // 2026 bar: only show real data if fully declared; else show grey placeholder
+                      const showData = yr !== '2026' || is2026Final;
+                      const yData = showData
+                        ? swingData.map(({ alliance, v16, v21, v26 }) => ({
+                            alliance,
+                            value: yr === '2016' ? (v16 ?? 0) : yr === '2021' ? v21 : v26,
+                            color: ac(alliance),
+                          })).filter(d => d.value > 0.05)
+                        : [];
+                      const total = yData.reduce((s, d) => s + d.value, 0);
+                      return (
+                        <div key={yr} style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+                          {/* Label on top — same style as table column header */}
+                          <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase' as const, color: yr === '2026' ? '#1A1611' : '#9CA3AF', textAlign: 'center', marginBottom: 5 }}>
+                            {yr}{yr === '2026' && !is2026Final && <span style={{ fontSize: 7, color: '#D1D5DB', marginLeft: 2, textTransform: 'none' as const, letterSpacing: 0 }}>pending</span>}
+                          </div>
+                          {/* Stacked bar */}
+                          <div style={{ flex: 1, display: 'flex', flexDirection: 'column', borderRadius: 4, overflow: 'hidden' }}>
+                            {showData && yData.map(({ alliance, value, color }) => (
+                              <div
+                                key={alliance}
+                                style={{
+                                  height: `${(value / Math.max(total, 100)) * 100}%`,
+                                  background: color,
+                                  minHeight: value > 0.5 ? 2 : 0,
+                                  transition: 'height 0.6s ease',
+                                }}
+                                title={`${alliance} ${yr}: ${value.toFixed(1)}%`}
+                              />
+                            ))}
+                            {/* Grey remainder or full grey if pending */}
+                            {(!showData || total < 98) && (
+                              <div style={{ flex: 1, background: '#E2DDD8', opacity: showData ? 0.35 : 0.6 }} />
+                            )}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  {/* Legend */}
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px 8px', marginTop: 8 }}>
+                    {swingData.filter(d => d.v21 > 0.05 || d.v26 > 0.05).map(({ alliance }) => (
+                      <div key={alliance} style={{ display: 'flex', alignItems: 'center', gap: 3 }}>
+                        <div style={{ width: 7, height: 7, borderRadius: 2, background: ac(alliance) }} />
+                        <span style={{ fontSize: 8, fontWeight: 700, color: ac(alliance) }}>{alliance}</span>
+                      </div>
                     ))}
-                  </tbody>
-                </table>
+                  </div>
+                </div>
+
               </div>
             </div>
           )}
@@ -500,45 +625,24 @@ export default function ConstituencyPage() {
             <div style={{ padding: '0 32px 22px' }}>
               <Divider />
               <SectionTitle>2021 Assembly Election</SectionTitle>
-              <div style={{ background: '#FDFCFB', border: '1px solid #E2DDD8', borderRadius: 10, overflow: 'hidden' }}>
-                {historical.la_2021.winner && (
-                  <div style={{ padding: '14px 18px', borderBottom: '1px solid #E2DDD8', background: '#FEF0F0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <div>
-                      <div style={{ fontSize: 15, fontWeight: 600, color: '#1A1611', marginBottom: 2 }}>{historical.la_2021.winner}</div>
-                      <div style={{ fontSize: 12, color: '#5C5245' }}>{historical.la_2021.party}</div>
-                    </div>
-                    {historical.la_2021.margin != null && (
-                      <div style={{ textAlign: 'right', fontSize: 12, color: '#5C5245' }}>
-                        Margin <strong style={{ fontFamily: "'JetBrains Mono',monospace", color: '#1A1611' }}>{historical.la_2021.margin.toLocaleString('en-IN')}</strong>
-                      </div>
-                    )}
-                  </div>
-                )}
-                <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 12 }}>
-                  <tbody>
-                    {historical.la_2021.top_5.map((cand, i) => (
-                      <tr key={i} style={{ borderBottom: '1px solid #F5F2EE' }}>
-                        <td style={{ padding: '9px 16px', width: 24, color: '#9CA3AF', fontFamily: "'JetBrains Mono',monospace", fontSize: 11 }}>{i + 1}</td>
-                        <td style={{ padding: '9px 8px' }}>
-                          <div style={{ display: 'flex', alignItems: 'center', gap: 7 }}>
-                            {/* Use alliance from API — it's already correctly mapped via PartyAllianceYear */}
-                            <div style={{ width: 8, height: 8, borderRadius: '50%', background: ac((cand as any).alliance || inferAlliance(cand.party)), flexShrink: 0 }} />
-                            <span style={{ fontWeight: i === 0 ? 600 : 400, color: '#1A1611' }}>{cand.candidate}</span>
-                          </div>
-                          <div style={{ fontSize: 11, color: '#5C5245', marginLeft: 15, marginTop: 1, display: 'flex', alignItems: 'center', gap: 5 }}>
-                            {cand.party}
-                            {(cand as any).alliance && (cand as any).alliance !== 'OTH' && (
-                              <span style={{ fontSize: 9, fontWeight: 700, color: ac((cand as any).alliance), letterSpacing: 0.5 }}>{(cand as any).alliance}</span>
-                            )}
-                          </div>
-                        </td>
-                        <td style={{ padding: '9px 16px', textAlign: 'right', fontFamily: "'JetBrains Mono',monospace", color: '#1A1611', fontWeight: i === 0 ? 600 : 400 }}>{cand.votes.toLocaleString('en-IN')}</td>
-                        <td style={{ padding: '9px 16px', textAlign: 'right', fontSize: 11, color: '#5C5245' }}>{cand.percentage.toFixed(1)}%</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
+              <HistoricalCandidateTable
+                candidates={historical.la_2021.candidates}
+                margin={historical.la_2021.margin}
+                prevCandidates={historical.la_2016?.candidates ?? null}
+              />
+            </div>
+          )}
+
+          {/* ── 2016 RESULTS ──────────────────────────────────── */}
+          {!histLoading && historical?.la_2016 && (
+            <div style={{ padding: '0 32px 22px' }}>
+              <Divider />
+              <SectionTitle>2016 Assembly Election</SectionTitle>
+              <HistoricalCandidateTable
+                candidates={historical.la_2016.candidates}
+                margin={historical.la_2016.margin}
+                prevCandidates={null}
+              />
             </div>
           )}
 
@@ -603,6 +707,23 @@ function Divider() {
   return <div style={{ height: 1, background: '#E2DDD8', marginBottom: 22 }} />;
 }
 
+function SwingChip({ value, label }: { value: number; label: string }) {
+  const isPos = value >= 0;
+  const clr = isPos ? '#16A34A' : '#DC2626';
+  const bg = isPos ? 'rgba(22,163,74,0.1)' : 'rgba(220,38,38,0.1)';
+  return (
+    <span style={{
+      display: 'inline-flex', alignItems: 'center', gap: 2,
+      background: bg, color: clr, fontSize: 10, fontWeight: 700,
+      fontFamily: "'JetBrains Mono',monospace",
+      padding: '2px 6px', borderRadius: 4, letterSpacing: '-0.3px', whiteSpace: 'nowrap',
+    }}>
+      {isPos ? '▲' : '▼'} {isPos ? '+' : ''}{value.toFixed(1)}pp
+      <span style={{ fontSize: 8, fontWeight: 400, color: isPos ? '#15803D' : '#B91C1C', marginLeft: 2 }}>{label}</span>
+    </span>
+  );
+}
+
 function HistCard({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div style={{ background: '#FDFCFB', border: '1px solid #E2DDD8', borderRadius: 10, padding: 16 }}>
@@ -648,5 +769,161 @@ function NavButton({ dir, label, sub, onClick }: { dir: 'prev' | 'next'; label: 
       <div style={{ fontSize: 13, fontWeight: 600, color: '#1A1611' }}>{label}</div>
       <div style={{ fontSize: 11, color: '#5C5245' }}>{sub}</div>
     </button>
+  );
+}
+
+// ── Compact historical candidate table ────────────────────────────────────────
+function HistoricalCandidateTable({
+  candidates,
+  margin,
+  prevCandidates,
+}: {
+  candidates: Array<{ candidate: string; party: string; votes: number; percentage: number; is_winner: boolean; alliance: string; color_code?: string }>;
+  margin: number | null;
+  prevCandidates: Array<{ candidate: string; party: string; alliance: string; percentage: number }> | null;
+}) {
+  const totalVotes = candidates.reduce((s, c) => s + c.votes, 0);
+  const winner = candidates.find(c => c.is_winner) ?? candidates[0];
+  const winColor = winner ? ac(winner.alliance) : '#5C5245';
+
+  // ── Vote-share change by alliance (main fronts) or party (OTH) ──────────
+  // Aggregate current and previous totals by alliance and party
+  const aggMap = (arr: Array<{ party: string; alliance: string; percentage: number }>) => {
+    const al = new Map<string, number>();
+    const pt = new Map<string, number>();
+    for (const r of arr) {
+      al.set(r.alliance, (al.get(r.alliance) ?? 0) + r.percentage);
+      pt.set(r.party,    (pt.get(r.party)    ?? 0) + r.percentage);
+    }
+    return { al, pt };
+  };
+  const curr = aggMap(candidates);
+  const prev = prevCandidates ? aggMap(prevCandidates) : null;
+
+  const getChange = (alliance: string, party: string): number | null => {
+    if (!prev) return null;
+    if (alliance !== 'OTH') {
+      const c = curr.al.get(alliance), p = prev.al.get(alliance);
+      return (c !== undefined && p !== undefined) ? c - p : null;
+    }
+    const c = curr.pt.get(party), p = prev.pt.get(party);
+    return (c !== undefined && p !== undefined) ? c - p : null;
+  };
+
+  // Previous margin % = gap between top-2 in previous election (by % since we don't have prev total votes)
+  const prevMarginPct = (prevCandidates && prevCandidates.length >= 2)
+    ? prevCandidates[0].percentage - prevCandidates[1].percentage
+    : null;
+  const currMarginPct = totalVotes > 0 && margin != null ? (margin / totalVotes) * 100 : null;
+  const marginPctChange = (prevMarginPct !== null && currMarginPct !== null)
+    ? currMarginPct - prevMarginPct
+    : null;
+
+  const thStyle: React.CSSProperties = {
+    padding: '8px 8px', fontSize: 11, fontWeight: 700, letterSpacing: '1.2px',
+    textTransform: 'uppercase', color: '#5C5245', background: '#F5F2EE',
+    borderBottom: '2px solid #E2DDD8', textAlign: 'right',
+  };
+
+  return (
+    <div style={{ background: '#FDFCFB', border: '1px solid #E2DDD8', borderRadius: 10, overflow: 'hidden' }}>
+      <table style={{ width: '100%', borderCollapse: 'collapse', tableLayout: 'fixed' }}>
+        <colgroup>
+          <col style={{ width: '3%' }} />
+          <col />
+          <col style={{ width: '18%' }} />
+          <col style={{ width: '11%' }} />
+          {prevCandidates !== null && <col style={{ width: '13%' }} />}
+        </colgroup>
+        <thead>
+          <tr>
+            <th style={{ ...thStyle, textAlign: 'left', paddingLeft: 12 }}>#</th>
+            <th style={{ ...thStyle, textAlign: 'left' }}>Candidate</th>
+            <th style={thStyle}>Votes</th>
+            <th style={thStyle}>%</th>
+            {prevCandidates !== null && <th style={{ ...thStyle, paddingRight: 12 }}>±%</th>}
+          </tr>
+        </thead>
+        <tbody>
+          {candidates.map((cand, i) => {
+            const isWinner = cand.is_winner || i === 0;
+            const clr = badgeColor(cand.alliance, cand.party, cand.color_code);
+            const prevPct = getChange(cand.alliance, cand.party);
+            const swing = prevPct;
+            return (
+              <tr key={i} style={{ borderBottom: '1px solid #F5F2EE' }}>
+                <td style={{ padding: '7px 4px 7px 12px', color: '#9CA3AF', fontFamily: "'JetBrains Mono',monospace", fontSize: 12 }}>{i + 1}</td>
+                <td style={{ padding: '7px 8px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                    {/* Circle badge — solid alliance color, party abbr in white */}
+                    <div style={{ width: 30, height: 30, borderRadius: '50%', background: clr, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 8, fontWeight: 800, color: '#fff', flexShrink: 0 }}>
+                      {partyAbbr(cand.party)}
+                    </div>
+                    <div>
+                      <div style={{ fontSize: 14, fontWeight: isWinner ? 600 : 400, color: '#1A1611' }}>
+                        {cand.candidate}
+                      </div>
+                      <div style={{ fontSize: 11, marginTop: 2, display: 'flex', alignItems: 'center', gap: 4 }}>
+                        <span style={{ color: clr, fontWeight: 700 }}>{cand.party}</span>
+                        {cand.alliance && cand.alliance !== 'OTH' && (
+                          <span style={{ background: clr, color: '#fff', fontSize: 9, fontWeight: 700, padding: '1px 6px', borderRadius: 3, letterSpacing: 0.3 }}>{cand.alliance}</span>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td style={{ padding: '7px 8px', textAlign: 'right', fontFamily: "'JetBrains Mono',monospace", fontSize: 14, fontWeight: isWinner ? 600 : 400, color: '#1A1611' }}>
+                  {cand.votes.toLocaleString('en-IN')}
+                </td>
+                <td style={{ padding: '7px 8px', textAlign: 'right', fontSize: 14, fontFamily: "'JetBrains Mono',monospace", color: '#1A1611' }}>
+                  {cand.percentage.toFixed(1)}%
+                </td>
+                {prevCandidates !== null && (
+                  <td style={{ padding: '7px 12px 7px 4px', textAlign: 'right' }}>
+                    {swing !== null && Math.abs(swing) >= 0.1 ? (
+                      <span style={{ fontSize: 14, fontWeight: 700, fontFamily: "'JetBrains Mono',monospace", color: swing >= 0 ? '#16A34A' : '#DC2626' }}>
+                        {swing >= 0 ? '▲' : '▼'}{Math.abs(swing).toFixed(1)}
+                      </span>
+                    ) : swing !== null ? (
+                      <span style={{ fontSize: 14, color: '#D1D5DB' }}>≈</span>
+                    ) : (
+                      <span style={{ fontSize: 14, color: '#E2DDD8' }}>—</span>
+                    )}
+                  </td>
+                )}
+              </tr>
+            );
+          })}
+        </tbody>
+        <tfoot>
+          {/* Margin row — label spanning # + Candidate, value in Votes and % cols */}
+          {margin != null && (
+            <tr style={{ background: '#F5F2EE', borderTop: '2px solid #E2DDD8' }}>
+              <td colSpan={2} style={{ padding: '9px 12px', textAlign: 'right', fontSize: 12, color: '#5C5245', fontWeight: 600, fontStyle: 'italic' }}>
+                Margin of victory
+              </td>
+              <td style={{ padding: '9px 8px', textAlign: 'right', fontFamily: "'JetBrains Mono',monospace", fontSize: 14, fontWeight: 700, color: winColor }}>
+                {margin.toLocaleString('en-IN')}
+              </td>
+              <td style={{ padding: '9px 8px', textAlign: 'right', fontFamily: "'JetBrains Mono',monospace", fontSize: 13, color: '#5C5245' }}>
+                {totalVotes > 0 ? ((margin / totalVotes) * 100).toFixed(2) + '%' : '—'}
+              </td>
+              {prevCandidates !== null && (
+                <td style={{ padding: '9px 12px 9px 4px', textAlign: 'right' }}>
+                  {marginPctChange !== null && Math.abs(marginPctChange) >= 0.1 ? (
+                    <span style={{ fontSize: 11, fontWeight: 700, fontFamily: "'JetBrains Mono',monospace", color: marginPctChange >= 0 ? '#16A34A' : '#DC2626' }}>
+                      {marginPctChange >= 0 ? '▲' : '▼'}{Math.abs(marginPctChange).toFixed(1)}
+                    </span>
+                  ) : (
+                    <span style={{ fontSize: 11, color: '#D1D5DB' }}>≈</span>
+                  )}
+                </td>
+              )}
+            </tr>
+          )}
+        </tfoot>
+
+      </table>
+    </div>
   );
 }

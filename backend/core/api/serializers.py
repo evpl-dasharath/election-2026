@@ -111,6 +111,7 @@ class ConstituencyListSerializer(serializers.ModelSerializer):
                 'alliance': get_alliance(leader.party.code, 2026),
                 'votes': leader.votes,
                 'percentage': float(leader.vote_percentage),
+                'party_color': leader.party.color_code,
             }
         return None
 
@@ -127,6 +128,7 @@ class ConstituencyListSerializer(serializers.ModelSerializer):
                 'alliance': get_alliance(runner.party.code, 2026),
                 'votes': runner.votes,
                 'percentage': float(runner.vote_percentage),
+                'party_color': runner.party.color_code,
             }
         return None
 

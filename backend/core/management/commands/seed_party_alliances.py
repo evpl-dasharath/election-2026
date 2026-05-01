@@ -54,15 +54,12 @@ LA_2021 = [
     ('RMP',    'RMPI',    'UDF', '#DC143C'),   # shorter alias
 
     # NDA -------------------------------------------------------------------
-    ('BJP',      '',        'NDA', '#FF9933'),   # Bharatiya Janata Party
-    ('BDJS',     '',        'NDA', '#FFD700'),   # Bharat Dharma Jana Sena
-    ('AIADMK',   '',        'NDA', '#D4AC0D'),   # All India Anna Dravida Munnetra Kazhagam
+    ('BJP',      '',        'NDA', '#FF9933'),   # Bharatiya Janata Party - 113 seats
+    ('BDJS',     '',        'NDA', '#FFD700'),   # Bharat Dharma Jana Sena - 21 seats
+    ('AIADMK',   '',        'NDA', '#D4AC0D'),   # All India Anna Dravida Munnetra Kazhagam - 2 seats
     ('ADMK',   'AIADMK',  'NDA', '#D4AC0D'),   # ADMK short alias in 2021 CSV
-    ('KKC',      '',        'NDA', '#CD853F'),   # Kerala Kanavu Congress
-    ('JRP',      '',        'NDA', '#B8860B'),   # Jana Rashtriya Party - C. K. Janu
-    ('AITC',     '',        'NDA', '#1B8A00'),   # All India Trinamool Congress (contested under NDA)
-    ('JD(U)',    '',        'NDA', '#008000'),   # Janata Dal (United) - NDA ally
-    ('SHS',      '',        'NDA', '#FF6600'),   # Shiv Sena - NDA ally
+    ('KKC',      '',        'NDA', '#CD853F'),   # Kerala Kanavu Congress (Vishnupuram Chandrasekharan) - 1 seat
+    ('JRP',      '',        'NDA', '#B8860B'),   # Janadhipathya Rashtriya Party - C.K.Janu - 1 seat
 
     # OTH -------------------------------------------------------------------
     ('IND',      '',        'OTH', '#808080'),
@@ -73,7 +70,10 @@ LA_2021 = [
     ('SUCI',     '',        'OTH', '#B22222'),
     ('AAP',      '',        'OTH', '#0066CC'),
     ('NOTA',     '',        'OTH', '#A9A9A9'),
-    ('RJD',      '',        'OTH', '#336699'),   # Rashtriya Janata Dal - no Kerala front
+    ('RJD',      '',        'OTH', '#336699'),   # Rashtriya Janata Dal - no Kerala front in 2021
+    ('JD(U)',    '',        'OTH', '#008000'),   # Janata Dal (United) - not in any 2021 Kerala front
+    ('SHS',      '',        'OTH', '#FF6600'),   # Shiv Sena - not in any 2021 Kerala front
+    ('AITC',     '',        'OTH', '#1B8A00'),   # All India Trinamool Congress - not in any 2021 Kerala front
     # Small fringe / unrecognised parties in 2021 CSV - all OTH
     ('ABHM',     '',        'OTH', '#808080'),
     ('ADHRMPI',  '',        'OTH', '#808080'),
@@ -98,50 +98,152 @@ LA_2021 = [
 
 # ---------------------------------------------------------------------------
 # 2016 Kerala Legislative Assembly election
+# Source: Wikipedia / ECI alliance declarations + Detailed Results.xlsx
+# LUF (Left United Front: RMP, SUCI, MCPI-U) is NOT counted as an alliance — OTH
 # ---------------------------------------------------------------------------
 LA_2016 = [
     # LDF -------------------------------------------------------------------
-    ('CPI(M)',   '',        'LDF', '#ED1E26'),
-    ('CPI',      '',        'LDF', '#FF4444'),
-    ('NCP',      '',        'LDF', '#00BFFF'),
-    ('JD(S)',    '',        'LDF', '#006400'),   # JD(S) was LDF in 2016 too
-    ('KEC(B)',   '',        'LDF', '#A0522D'),
+    ('CPI(M)',   '',        'LDF', '#ED1E26'),   # Communist Party of India (Marxist) - 90 seats
+    ('CPM',    'CPI(M)',   'LDF', '#ED1E26'),   # ECI xlsx alias
+    ('CPIM',   'CPI(M)',   'LDF', '#ED1E26'),   # another xlsx alias
+    ('CPI',      '',        'LDF', '#FF4444'),   # Communist Party of India - 25 seats
+    ('JD(S)',    '',        'LDF', '#006400'),   # Janata Dal (Secular) - 5 seats (LDF in 2016)
+    ('KEC(B)',   '',        'LDF', '#A0522D'),   # Kerala Congress (B) - R. Balakrishna Pillai - 1 seat
     ('KC(B)',   'KEC(B)',  'LDF', '#A0522D'),
-    ('INL',      '',        'LDF', '#2E8B57'),
-    ('CON(S)',   '',        'LDF', '#87CEEB'),
+    ('INL',      '',        'LDF', '#2E8B57'),   # Indian National League - 3 seats (LDF ally)
+    ('CON(S)',   '',        'LDF', '#87CEEB'),   # Congress (Secular) - Kadannappalli - 1 seat
     ('CONG(S)', 'CON(S)',  'LDF', '#87CEEB'),
-    ('JKC',      '',        'LDF', '#B8860B'),
-    ('RSP(B)',   '',        'LDF', '#FF8C00'),   # RSP (Bolshevik) was LDF in 2016
+    ('C(S)',    'CON(S)',  'LDF', '#87CEEB'),   # ECI xlsx code for Cong(S)
+    ('JKC',      '',        'LDF', '#B8860B'),   # Janadhipathya Kerala Congress (Francis George) - 4 seats
+    ('NCP',      '',        'LDF', '#00BFFF'),   # Nationalist Congress Party (T.P.Peethambaran) - 4 seats
+    ('NSC',      '',        'LDF', '#6B8E23'),   # National Secular Congress (V.Abdurahiman) - LDF
+    ('KC(ST)',   '',        'LDF', '#996633'),   # Kerala Congress (Skaria Thomas) - LDF ally 2016 - 1 seat
+    ('KCST',   'KC(ST)',  'LDF', '#996633'),   # ECI xlsx alias
+    ('KC(S)',    '',        'LDF', '#7B68EE'),   # Kerala Congress (Secular) - C.F.Thomas - LDF
+    ('KCS',    'KC(S)',   'LDF', '#7B68EE'),   # ECI xlsx alias
+    ('JSS',      '',        'LDF', '#556B2F'),   # Janathipathiya Samrakshana Samithy - 4 seats
+    ('CMP(A)',   '',        'LDF', '#8B0000'),   # Communist Marxist Party (Aravindakshan) - 1 seat (LDF, distinct from CMP=C.P.John which is UDF)
+    ('CMPA',   'CMP(A)',  'LDF', '#8B0000'),   # ECI xlsx alias
+    ('RSP(L)',   '',        'LDF', '#B22222'),   # Revolutionary Socialist Party (Leninist) - Kovoor Kunjumon - 1 seat
+    ('RSPL',   'RSP(L)',  'LDF', '#B22222'),   # ECI xlsx alias
 
     # UDF -------------------------------------------------------------------
-    ('INC',      '',        'UDF', '#19AAED'),
-    ('IUML',     '',        'UDF', '#0F8A3C'),
-    ('KEC',      '',        'UDF', '#1E90FF'),
-    ('KC',      'KEC',     'UDF', '#1E90FF'),
-    ('RSP',      '',        'UDF', '#FF6347'),
-    ('RMPI',     '',        'UDF', '#DC143C'),
-    ('RMPOI',  'RMPI',    'UDF', '#DC143C'),
-    ('RMP',    'RMPI',    'UDF', '#DC143C'),
-    ('KC(M)',   'KEC(M)',  'UDF', '#1E90FF'),   # KEC(M) was UDF in 2016
-    ('KEC(M)',   '',        'UDF', '#1E90FF'),
-    ('KEC(J)',   '',        'UDF', '#5F9EA0'),
+    ('INC',      '',        'UDF', '#19AAED'),   # Indian National Congress - 87 seats
+    ('IUML',     '',        'UDF', '#0F8A3C'),   # Indian Union Muslim League - 24 seats
+    ('KEC(M)',   '',        'UDF', '#3399FF'),   # Kerala Congress (Mani) - 15 seats (UDF in 2016)
+    ('KC(M)',   'KEC(M)',  'UDF', '#3399FF'),
+    ('JD(U)',    '',        'UDF', '#008000'),   # Janata Dal (United) - 7 seats (UDF ally in 2016, NOT NDA)
+    ('RSP',      '',        'UDF', '#FF6347'),   # Revolutionary Socialist Party (A.A.Aziz faction) - 5 seats
+    ('CMPKSC',   '',        'UDF', '#6495ED'),   # Communist Marxist Party (C.P.John faction) - UDF ally
+    ('KEC(J)',   '',        'UDF', '#5F9EA0'),   # Kerala Congress (Jacob) - Anoop Jacob - 1 seat
     ('KC(J)',   'KEC(J)',  'UDF', '#5F9EA0'),
-    ('CMP',      '',        'UDF', '#6495ED'),
+    ('KEC',      '',        'UDF', '#1E90FF'),   # Kerala Congress (P.J.Joseph main faction)
+    ('KC',      'KEC',    'UDF', '#1E90FF'),
 
     # NDA -------------------------------------------------------------------
-    ('BJP',      '',        'NDA', '#FF9933'),
-    ('BDJS',     '',        'NDA', '#FFD700'),
+    ('BJP',      '',        'NDA', '#FF9933'),   # Bharatiya Janata Party - 98 seats
+    ('BDJS',     '',        'NDA', '#FFD700'),   # Bharat Dharma Jana Sena - 36 seats
+    ('KC(T)',    '',        'NDA', '#CD853F'),   # Kerala Congress (Thomas) - P.C.Thomas - 4 seats
+    ('KCT',    'KC(T)',   'NDA', '#CD853F'),   # ECI xlsx alias
+    ('JSS(R)',   '',        'NDA', '#A0522D'),   # Janadhipathya Samrakshana Samithi (Rajan Babu) - 1 seat
+    ('JRS',      '',        'NDA', '#B8860B'),   # Janadhipathya Rashtriya Sabha (C.K.Janu) - 1 seat (NDA in 2016, LDF-JRP in 2021)
+
+    # OTH (includes LUF parties — LUF is NOT counted as a front, per policy) ------
+    ('IND',      '',        'OTH', '#808080'),   # Independents
+    ('SDPI',     '',        'OTH', '#4B0082'),   # Social Democratic Party of India
+    ('BSP',      '',        'OTH', '#00008B'),   # Bahujan Samaj Party
+    ('PDP',      '',        'OTH', '#8B0000'),   # Peoples Democratic Party (Abdul Nasar Madani)
+    ('WPOI',    'WPI',     'OTH', '#800080'),   # Welfare Party of India (xlsx alias)
+    ('WPI',      '',        'OTH', '#800080'),   # Welfare Party of India
+    ('CPI(ML)(L)', '',     'OTH', '#CC0000'),   # CPI(ML) Liberation
+    ('ADMK',   'AIADMK',  'OTH', '#D4AC0D'),   # AIADMK - independent (no Kerala front)
+    ('AIADMK',   '',        'OTH', '#D4AC0D'),
+    ('SP',       '',        'OTH', '#FF0000'),   # Samajwadi Party - 9 seats
+    ('SHS',      '',        'OTH', '#FF6600'),   # Shiv Sena - 16 seats (no coalition in 2016 Kerala)
+    # LUF parties → OTH (Left United Front is NOT recognised as alliance)
+    ('SUCI',     '',        'OTH', '#B22222'),   # Socialist Unity Centre of India (Communist) - LUF
+    ('MCPI',     '',        'OTH', '#8B0000'),   # Marxist Communist Party of India (United) - LUF
+    ('RMPI',     '',        'OTH', '#DC143C'),   # Revolutionary Marxist Party of India - LUF
+    ('RMPOI',  'RMPI',    'OTH', '#DC143C'),
+    ('RMP',    'RMPI',    'OTH', '#DC143C'),
+    # Miscellaneous fringe parties
+    ('KLJP',     '',        'OTH', '#808080'),   # Kerala Lok Jan Party
+    ('NOTA',     '',        'OTH', '#A9A9A9'),   # None of the above
+    ('AKTP',     '',        'OTH', '#808080'),   # Akhila Kerala Thozhilali Party
+    ('APOI',     '',        'OTH', '#808080'),   # Ambedkarite Party of India
+    ('IGP',      '',        'OTH', '#808080'),   # Indian Gandhian Party
+    ('PPGP',     '',        'OTH', '#808080'),   # Prarambha Pratinidhi Ganapam / fringe
+    ('SDP',      '',        'OTH', '#808080'),   # Socialist Democratic Party (fringe)
+]
+
+
+# ---------------------------------------------------------------------------
+# 2026 Kerala Legislative Assembly election
+# Source: Wikipedia alliance declarations
+# ---------------------------------------------------------------------------
+LA_2026 = [
+    # LDF -------------------------------------------------------------------
+    ('CPI(M)',    '',          'LDF', '#ED1E26'),   # Communist Party of India (Marxist) - 77 seats
+    ('CPIM',     'CPI(M)',    'LDF', '#ED1E26'),   # alias
+    ('CPI',       '',          'LDF', '#FF4444'),   # Communist Party of India - 24 seats
+    ('KC(M)',     '',          'LDF', '#8B4513'),   # Kerala Congress (M) - Jose K. Mani - 12 seats
+    ('KEC(M)',    '',          'LDF', '#8B4513'),   # alias
+    ('NCP(SP)',   '',          'LDF', '#00BFFF'),   # NCP – Sharadchandra Pawar - 3 seats
+    ('RJD',       '',          'LDF', '#336699'),   # Rashtriya Janata Dal (LJD renamed) - 3 seats
+    ('LJD',      'RJD',       'LDF', '#336699'),   # LJD alias (same party, renamed to RJD)
+    ('JD(S)-LDF', '',          'LDF', '#006400'),   # Indian Socialist Janata Dal (JD(S) faction) - 1 seat
+    ('ISJD',    'JD(S)-LDF',  'LDF', '#006400'),   # alias
+    ('KEC(B)',    '',          'LDF', '#A0522D'),   # Kerala Congress (B) - K.B.Ganesh Kumar - 1 seat
+    ('KC(B)',    'KEC(B)',     'LDF', '#A0522D'),   # alias
+    ('INL',       '',          'LDF', '#2E8B57'),   # Indian National League - 1 seat
+    ('CON(S)',    '',          'LDF', '#87CEEB'),   # Congress (Secular) - Kadannappalli - 1 seat
+    ('C(S)',     'CON(S)',     'LDF', '#87CEEB'),   # alias
+    ('CONG(S)',  'CON(S)',     'LDF', '#87CEEB'),   # alias
+    ('RSP(L)',    '',          'LDF', '#B22222'),   # Revolutionary Socialist Party (Leninist) - 1 seat
+    ('RSPL',    'RSP(L)',     'LDF', '#B22222'),   # alias
+
+    # UDF -------------------------------------------------------------------
+    ('INC',       '',          'UDF', '#19AAED'),   # Indian National Congress - 92 seats
+    ('IUML',      '',          'UDF', '#0F8A3C'),   # Indian Union Muslim League - 26 seats
+    ('KEC',       '',          'UDF', '#1E90FF'),   # Kerala Congress (P.J.Joseph) - 8 seats
+    ('KC',       'KEC',        'UDF', '#1E90FF'),   # alias
+    ('RSP',       '',          'UDF', '#FF6347'),   # Revolutionary Socialist Party (Shibu Baby John) - 4 seats
+    ('KC(J)',     '',          'UDF', '#5F9EA0'),   # Kerala Congress (Jacob) - Anoop Jacob - 1 seat
+    ('KEC(J)',   'KC(J)',      'UDF', '#5F9EA0'),   # alias
+    ('RMPI',      '',          'UDF', '#DC143C'),   # Revolutionary Marxist Party of India - N.Venu - 1 seat
+    ('RMP',      'RMPI',      'UDF', '#DC143C'),   # alias
+    ('RMPOI',   'RMPI',       'UDF', '#DC143C'),   # alias
+    ('CMP',       '',          'UDF', '#6495ED'),   # Communist Marxist Party - C.P.John - 1 seat
+
+    # NDA -------------------------------------------------------------------
+    ('BJP',       '',          'NDA', '#FF9933'),   # Bharatiya Janata Party - 98 seats
+    ('BDJS',      '',          'NDA', '#FFD700'),   # Bharat Dharma Jana Sena - 22 seats
+    ('TTP',       '',          'NDA', '#FF4500'),   # Twenty20 Party - Sabu M. Jacob - 19 seats
 
     # OTH -------------------------------------------------------------------
-    ('IND',      '',        'OTH', '#808080'),
-    ('SDPI',     '',        'OTH', '#4B0082'),
-    ('NOTA',     '',        'OTH', '#A9A9A9'),
+    ('IND',       '',          'OTH', '#808080'),
+    ('NOTA',      '',          'OTH', '#A9A9A9'),
+    ('BSP',       '',          'OTH', '#00008B'),
+    ('AAP',       '',          'OTH', '#0066CC'),
+    ('SDPI',      '',          'OTH', '#4B0082'),
+    ('SUCI',      '',          'OTH', '#B22222'),
+    ('DHRMP',     '',          'OTH', '#808080'),
+    ('CPIML',     '',          'OTH', '#CC0000'),   # CPI(ML) Red Star
+    ('CPIMLL',    '',          'OTH', '#CC0000'),   # CPI(ML) Liberation
+    ('JRP',       '',          'OTH', '#808080'),   # Janam Rashtriya Party (not same as 2021 JRP)
+    ('API',       '',          'OTH', '#808080'),   # Ambedkarite Party of India
+    ('EPI',       '',          'OTH', '#808080'),   # Equality Party of India
+    ('IGP',       '',          'OTH', '#808080'),   # Indian Gandhiyan Party
+    ('NCP',       '',          'OTH', '#808080'),   # NCP (Sharad Pawar breakaway contesting alone — NOT LDF's NCP-SP)
+    ('SP(I)',     '',          'OTH', '#808080'),   # Socialist Party (India)
+    ('SRP',       '',          'OTH', '#808080'),   # Socialist Republican Party (Kerala)
 ]
 
 
 DATASETS = {
     (2021, 'LA'): LA_2021,
     (2016, 'LA'): LA_2016,
+    (2026, 'LA'): LA_2026,
 }
 
 

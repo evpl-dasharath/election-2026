@@ -27,6 +27,7 @@ export interface Candidate {
   percentage: number;
   is_winner: boolean;
   is_leading: boolean;
+  party_color: string;
 }
 
 export interface LiveResult {
@@ -59,6 +60,7 @@ export interface ConstituencyListItem {
     alliance: Alliance;
     votes: number;
     percentage: number;
+    party_color: string;  // hex from DB Party.color_code
   } | null;
   runner_up: {
     name: string;
@@ -66,6 +68,7 @@ export interface ConstituencyListItem {
     alliance: Alliance;
     votes: number;
     percentage: number;
+    party_color: string;
   } | null;
 }
 
@@ -91,6 +94,16 @@ export interface Historical2021Candidate {
   color_code: string;
 }
 
+export interface Historical2016Candidate {
+  candidate: string;
+  party: string;
+  votes: number;
+  percentage: number;
+  is_winner: boolean;
+  alliance: Alliance;
+  color_code: string;
+}
+
 export interface Historical2016 {
   winner_candidate: string;
   winner_party: string;
@@ -103,6 +116,10 @@ export interface Historical2016 {
   runnerup_votes: number;
   runnerup_percentage: number;
   margin: number;
+  /** Full alliance vote-share aggregates from all candidates */
+  alliance_shares: Record<Alliance, number>;
+  /** All candidates from the 2016 election (excl. NOTA) */
+  candidates: Historical2016Candidate[];
 }
 
 export interface ParliamentResult {
@@ -127,7 +144,9 @@ export interface HistoricalComparison {
     winner: string | null;
     party: string | null;
     margin: number | null;
-    top_5: Historical2021Candidate[];
+    /** Alliance vote-share aggregates from all candidates in 2021 */
+    alliance_shares: Record<Alliance, number>;
+    candidates: Historical2021Candidate[];
   };
   la_2016: Historical2016 | null;
   ls_2019: ParliamentResult | null;
@@ -146,6 +165,11 @@ export interface StateSummary {
       leading: number;
       trailing: number;
     };
+  };
+  /** Pure IND (party code exactly 'IND') — separate from OTH alliance_summary */
+  ind_summary: {
+    won: number;
+    leading: number;
   };
   total_votes_counted: number;
 }

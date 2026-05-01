@@ -4,11 +4,11 @@ import { useStateSummary, useConstituencies, useParties } from '../hooks/useElec
 import type { Alliance, Region, ConstituencyListItem } from '../types';
 import GlobalHeader from '../components/GlobalHeader';
 import { partyAbbr } from '../utils/partyAbbr';
-
-// ── Constants ──────────────────────────────────────────────
-const ALLIANCE_COLORS: Record<string, string> = {
-  LDF: '#D42B2B', UDF: '#1A8FE3', NDA: '#F7921C', OTH: '#9CA3AF',
-};
+import {
+  ALLIANCE_COLORS, PURE_IND_COLOR,
+  resolvePartyColor, resolveCardBg,
+  isRawIND, isSupportedIND,
+} from '../utils/colorUtils';
 
 const REGION_META: { key: Region; label: string; subtitle: string }[] = [
   { key: 'north', label: 'North', subtitle: 'Malabar' },
@@ -33,19 +33,6 @@ const DISTRICT_REGION: Record<string, Region> = {
 
 const MAJORITY = 71;
 
-// ── Helper: party colour ───────────────────────────────────
-const PARTY_COLORS: Record<string, string> = {
-  'CPI(M)': '#DF2525', CPIM: '#DF2525', CPI: '#EF4444',
-  INC: '#19AAED', IUML: '#16A34A', 'KEC(M)': '#EAB308',
-  RSP: '#B91C1C', BJP: '#F97316', BDJS: '#FDBA74',
-};
-
-function getPartyColor(code: string, alliance: string, parties: { code: string; color_code?: string }[]): string {
-  const p = parties.find(x => x.code === code);
-  if (p?.color_code) return p.color_code;
-  if (PARTY_COLORS[code]) return PARTY_COLORS[code];
-  return ALLIANCE_COLORS[alliance] || '#6B7280';
-}
 
 // ── Region tally helper ────────────────────────────────────
 function regionTally(list: ConstituencyListItem[], region: Region) {
@@ -73,24 +60,22 @@ export default function HomePage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeResultFilter, setActiveResultFilter] = useState<string | null>(null);
 
-  const SMALL_MARGIN = 8_000; // votes — "lead by small margin"
-  const CLOSE_MARGIN = 4_000; // votes — "close contest"
+  const STRONG_MARGIN = 10_000; // votes — "strong lead"
+  const LEAN_MARGIN   = 3_000;  // votes — "lean lead" (below this = bare)
 
   // ── Derived data ────
   const totalSeats = summary?.total_constituencies || 140;
 
-  const indSeats = useMemo(() =>
-    constituencies.filter(c => {
-      const live = c.status === 'IN_PROGRESS' || c.status === 'RESULT_DECLARED';
-      return live && c.leader?.party === 'IND';
-    }).length
-  , [constituencies]);
+  const indWon     = summary?.ind_summary?.won     || 0;
+  const indLeading = summary?.ind_summary?.leading || 0;
+  const indSeats   = indWon + indLeading;
 
   const ldfSeats = summary ? summary.alliance_summary.LDF.won + summary.alliance_summary.LDF.leading : 0;
   const udfSeats = summary ? summary.alliance_summary.UDF.won + summary.alliance_summary.UDF.leading : 0;
   const ndaSeats = summary ? summary.alliance_summary.NDA.won + summary.alliance_summary.NDA.leading : 0;
-  const othSeatsRaw = summary ? (summary.alliance_summary.OTH?.won || 0) + (summary.alliance_summary.OTH?.leading || 0) : 0;
-  const othSeats = Math.max(0, othSeatsRaw - indSeats);
+  const othTotal = summary ? (summary.alliance_summary.OTH?.won || 0) + (summary.alliance_summary.OTH?.leading || 0) : 0;
+  // OTH excluding pure IND (IND is tracked separately)
+  const othSeats = Math.max(0, othTotal - indSeats);
 
   const allianceList = [
     { name: 'LDF', seats: ldfSeats },
@@ -115,22 +100,24 @@ export default function HomePage() {
     return { text: `Hung Assembly — ${phase}`, color: '' };
   }, [countingPct, hasMajority, leading]);
 
-  // Party breakdown for bar
+  // Party breakdown for bar — each party is its own segment
   const partyBreakdown = useMemo(() => {
-    const bd: Record<string, { alliance: string; count: number }> = {};
+    const bd: Record<string, { alliance: string; count: number; partyColor: string }> = {};
     constituencies.forEach(c => {
       const live = c.status === 'IN_PROGRESS' || c.status === 'RESULT_DECLARED';
       if (live && c.leader) {
-        const a = c.leader.party === 'IND' ? 'IND' : c.leader.alliance;
-        if (!bd[c.leader.party]) bd[c.leader.party] = { alliance: a, count: 0 };
-        bd[c.leader.party].count++;
+        const code     = c.leader.party;
+        const alliance = c.leader.alliance;
+        const pColor   = resolvePartyColor(code, alliance, parties);
+        if (!bd[code]) bd[code] = { alliance, count: 0, partyColor: pColor };
+        bd[code].count++;
       }
     });
-    const order: Record<string, number> = { LDF: 1, NDA: 2, OTH: 3, IND: 4, UDF: 5 };
+    const order: Record<string, number> = { LDF: 1, UDF: 2, NDA: 3, OTH: 4, IND: 5 };
     return Object.entries(bd)
       .map(([party, d]) => ({ party, ...d }))
-      .sort((a, b) => (order[a.alliance] ?? 3) - (order[b.alliance] ?? 3) || b.count - a.count);
-  }, [constituencies]);
+      .sort((a, b) => (order[a.alliance] ?? 4) - (order[b.alliance] ?? 4) || b.count - a.count);
+  }, [constituencies, parties]);
 
   // ── Filtering ────
   const handleRegionClick = (r: Region) => {
@@ -156,22 +143,26 @@ export default function HomePage() {
         const isDone = c.status === 'RESULT_DECLARED';
         const isLive = c.status === 'IN_PROGRESS';
         switch (activeResultFilter) {
-          case 'ldf_won':   return isDone && al === 'LDF';
-          case 'ldf_lead':  return isLive && al === 'LDF';
-          case 'ldf_close': return isLive && al === 'LDF' && margin !== null && margin < SMALL_MARGIN;
-          case 'udf_won':   return isDone && al === 'UDF';
-          case 'udf_lead':  return isLive && al === 'UDF';
-          case 'udf_close': return isLive && al === 'UDF' && margin !== null && margin < SMALL_MARGIN;
-          case 'nda_won':   return isDone && al === 'NDA';
-          case 'nda_lead':  return isLive && al === 'NDA';
-          case 'nda_close': return isLive && al === 'NDA' && margin !== null && margin < SMALL_MARGIN;
-          case 'close':     return (isLive || isDone) && margin !== null && margin < CLOSE_MARGIN;
+          // Strong lead: margin > STRONG_MARGIN
+          case 'ldf_strong': return isLive && al === 'LDF' && margin !== null && margin > STRONG_MARGIN;
+          case 'udf_strong': return isLive && al === 'UDF' && margin !== null && margin > STRONG_MARGIN;
+          case 'nda_strong': return isLive && al === 'NDA' && margin !== null && margin > STRONG_MARGIN;
+          // Lean lead: LEAN_MARGIN < margin <= STRONG_MARGIN
+          case 'ldf_lean':   return isLive && al === 'LDF' && margin !== null && margin > LEAN_MARGIN && margin <= STRONG_MARGIN;
+          case 'udf_lean':   return isLive && al === 'UDF' && margin !== null && margin > LEAN_MARGIN && margin <= STRONG_MARGIN;
+          case 'nda_lean':   return isLive && al === 'NDA' && margin !== null && margin > LEAN_MARGIN && margin <= STRONG_MARGIN;
+          // Bare lead: margin <= LEAN_MARGIN
+          case 'ldf_bare':   return isLive && al === 'LDF' && margin !== null && margin <= LEAN_MARGIN;
+          case 'udf_bare':   return isLive && al === 'UDF' && margin !== null && margin <= LEAN_MARGIN;
+          case 'nda_bare':   return isLive && al === 'NDA' && margin !== null && margin <= LEAN_MARGIN;
+          // Cross-alliance bare (any alliance barely leading)
+          case 'all_bare':   return isLive && margin !== null && margin <= LEAN_MARGIN;
           default: break;
         }
       }
       return true;
     });
-  }, [constituencies, activeRegion, activeDistrict, searchTerm, activeResultFilter, SMALL_MARGIN, CLOSE_MARGIN]);
+  }, [constituencies, activeRegion, activeDistrict, searchTerm, activeResultFilter, STRONG_MARGIN, LEAN_MARGIN]);
 
   // ── Render ──────────────────────────────────────────────
   return (
@@ -192,14 +183,13 @@ export default function HomePage() {
         {/* Alliance numbers row */}
         <div className="flex items-end mb-4 gap-0 overflow-x-auto custom-scrollbar pb-2 -mb-2">
           <div className="flex items-start shrink-0">
+            {/* Fixed alliance blocks — always shown */}
             {[
               { label: 'LDF', seats: ldfSeats, color: ALLIANCE_COLORS.LDF },
               { label: 'UDF', seats: udfSeats, color: ALLIANCE_COLORS.UDF },
               { label: 'NDA', seats: ndaSeats, color: ALLIANCE_COLORS.NDA },
-              { label: 'IND', seats: indSeats, color: '#6B7280' },
-              { label: 'OTH', seats: othSeats, color: '#9CA3AF' },
             ].map((a, i) => (
-              <div key={a.label} className={`px-8 ${i < 4 ? 'border-r border-pageborder' : ''} ${i === 4 ? 'border-r-2 border-dashed border-pageborder' : ''}`}>
+              <div key={a.label} className={`px-8 ${i < 2 ? 'border-r border-pageborder' : ''}`}>
                 <div className="w-2.5 h-2.5 mb-2" style={{ backgroundColor: a.color }} />
                 <div className="text-[13px] font-semibold mb-0.5" style={{ color: a.color }}>{a.label}</div>
                 <div className="flex items-baseline gap-1.5">
@@ -209,9 +199,33 @@ export default function HomePage() {
               </div>
             ))}
 
+            {/* OTH block — only shown when > 0 */}
+            {othSeats > 0 && (
+              <div className="px-8 border-r border-pageborder">
+                <div className="w-2.5 h-2.5 mb-2" style={{ backgroundColor: ALLIANCE_COLORS.OTH }} />
+                <div className="text-[13px] font-semibold mb-0.5" style={{ color: ALLIANCE_COLORS.OTH }}>OTH</div>
+                <div className="flex items-baseline gap-1.5">
+                  <span className="font-sans font-bold text-[22px] text-ink leading-none">{othSeats} <span className="text-[14px]">seats</span></span>
+                  <span className="text-[12px] text-ink2 font-mono font-medium">({((othSeats / totalSeats) * 100).toFixed(1)}%)</span>
+                </div>
+              </div>
+            )}
+
+            {/* IND block — only shown when > 0 */}
+            {indSeats > 0 && (
+              <div className="px-8 border-r border-pageborder">
+                <div className="w-2.5 h-2.5 mb-2" style={{ backgroundColor: PURE_IND_COLOR }} />
+                <div className="text-[13px] font-semibold mb-0.5" style={{ color: PURE_IND_COLOR }}>IND</div>
+                <div className="flex items-baseline gap-1.5">
+                  <span className="font-sans font-bold text-[22px] text-ink leading-none">{indSeats} <span className="text-[14px]">seats</span></span>
+                  <span className="text-[12px] text-ink2 font-mono font-medium">({((indSeats / totalSeats) * 100).toFixed(1)}%)</span>
+                </div>
+              </div>
+            )}
+
             {/* Top parties */}
             {[...partyBreakdown].sort((a, b) => b.count - a.count).slice(0, 6).map((p, idx, arr) => {
-              const pc = getPartyColor(p.party, p.alliance, parties);
+              const pc = p.partyColor;
               return (
                 <div key={p.party} className={`px-8 ${idx < arr.length - 1 ? 'border-r border-pageborder' : ''}`}>
                   <div className="w-2.5 h-2.5 mb-2" style={{ backgroundColor: pc }} />
@@ -231,18 +245,46 @@ export default function HomePage() {
           <div className="absolute left-[50.71%] top-1 bottom-0 w-[3px] bg-white z-20 shadow-[0_0_8px_rgba(0,0,0,0.5)] border-x border-black/30" title="71 seats for majority">
             <div className="absolute top-[100%] mt-1 text-[10px] font-bold text-ink2 bg-white px-1.5 py-0.5 rounded shadow-sm border border-pageborder whitespace-nowrap">Majority 71</div>
           </div>
+          {/* Alliance-level bar — OTH is now split per-party */}
           <div className="h-[28px] flex w-full font-sans text-[15px] font-bold text-white relative shadow-sm rounded-sm overflow-hidden border border-pageborder/50">
             {ldfSeats > 0 && <div className="h-full bg-ldf transition-all duration-500 flex items-center px-3" style={{ width: `${(ldfSeats/totalSeats)*100}%` }}>{ldfSeats > 5 && ldfSeats}</div>}
             {ndaSeats > 0 && <div className="h-full bg-nda transition-all duration-500 flex items-center px-3" style={{ width: `${(ndaSeats/totalSeats)*100}%` }}>{ndaSeats > 5 && ndaSeats}</div>}
-            {othSeats > 0 && <div className="h-full bg-oth transition-all duration-500 flex items-center px-3" style={{ width: `${(othSeats/totalSeats)*100}%` }}>{othSeats > 5 && othSeats}</div>}
-            {indSeats > 0 && <div className="h-full bg-gray-500 transition-all duration-500 flex items-center px-3" style={{ width: `${(indSeats/totalSeats)*100}%` }}>{indSeats > 5 && indSeats}</div>}
+            {/* OTH parties — individual segments */}
+            {partyBreakdown
+              .filter(p => p.alliance === 'OTH' && !isRawIND(p.party) && !isSupportedIND(p.party))
+              .map(p => (
+                <div
+                  key={p.party}
+                  className="h-full transition-all duration-500 flex items-center px-1"
+                  style={{ width: `${(p.count/totalSeats)*100}%`, backgroundColor: p.partyColor }}
+                  title={`${p.party}: ${p.count}`}
+                >
+                  {p.count > 5 && <span className="text-[11px] font-bold">{p.count}</span>}
+                </div>
+              ))
+            }
+            {/* Supported IND — individual tinted segments */}
+            {partyBreakdown
+              .filter(p => isSupportedIND(p.party))
+              .map(p => (
+                <div
+                  key={p.party}
+                  className="h-full transition-all duration-500"
+                  style={{ width: `${(p.count/totalSeats)*100}%`, backgroundColor: p.partyColor }}
+                  title={`${p.party}: ${p.count}`}
+                />
+              ))
+            }
+            {/* Pure IND */}
+            {indSeats > 0 && <div className="h-full transition-all duration-500 flex items-center px-3" style={{ width: `${(indSeats/totalSeats)*100}%`, backgroundColor: PURE_IND_COLOR }}>{indSeats > 5 && indSeats}</div>}
             {udfSeats > 0 && <div className="h-full bg-udf transition-all duration-500 flex items-center px-3" style={{ width: `${(udfSeats/totalSeats)*100}%` }}>{udfSeats > 5 && udfSeats}</div>}
             {(() => { const cnt = ldfSeats+ndaSeats+othSeats+indSeats+udfSeats; const unc = Math.max(0,totalSeats-cnt); return unc > 0 ? <div className="h-full bg-pageborder/50 transition-all duration-500" style={{ width: `${(unc/totalSeats)*100}%` }} title={`${unc} seats awaited`} /> : null; })()}
           </div>
+          {/* Fine-grained party bar */}
           <div className="h-[8px] flex w-full shadow-sm rounded-sm overflow-hidden border border-pageborder/50">
             {partyBreakdown.map((p, i) => {
               if (p.count === 0) return null;
-              return <div key={p.party+i} className="h-full border-r border-white/60 last:border-0 transition-all duration-500" style={{ width: `${(p.count/totalSeats)*100}%`, backgroundColor: getPartyColor(p.party, p.alliance, parties) }} title={`${p.party}: ${p.count}`} />;
+              return <div key={p.party+i} className="h-full border-r border-white/60 last:border-0 transition-all duration-500" style={{ width: `${(p.count/totalSeats)*100}%`, backgroundColor: p.partyColor }} title={`${p.party}: ${p.count}`} />;
             })}
           </div>
         </div>
@@ -322,14 +364,15 @@ export default function HomePage() {
 
       {/* ── RESULT TYPE FILTER ── */}
       <div className="bg-surface px-8 py-2 border-b border-pageborder flex items-center gap-3 overflow-x-auto custom-scrollbar">
-        <span className="text-[10px] font-bold tracking-widest uppercase text-ink2 shrink-0">Filter</span>
+        <span className="text-[10px] font-bold tracking-widest uppercase text-ink2 shrink-0">In Play</span>
 
         {(['LDF', 'UDF', 'NDA'] as const).map((al, gi) => {
           const color = ALLIANCE_COLORS[al];
+          // Strong/Lean/Bare — all live (IN_PROGRESS) only, Won excluded
           const chips = [
-            { key: `${al.toLowerCase()}_won`,   label: `${al} Won`,       icon: '✓' },
-            { key: `${al.toLowerCase()}_lead`,  label: `${al} Lead`,      icon: '▲' },
-            { key: `${al.toLowerCase()}_close`, label: `${al} Close`,     icon: '~' },
+            { key: `${al.toLowerCase()}_strong`, label: `${al} Strong`, icon: '▲▲', title: `${al} leading by >10,000 votes` },
+            { key: `${al.toLowerCase()}_lean`,   label: `${al} Lean`,   icon: '▲',  title: `${al} leading by 3,000–10,000 votes` },
+            { key: `${al.toLowerCase()}_bare`,   label: `${al} Bare`,   icon: '~',  title: `${al} leading by <3,000 votes` },
           ];
           return (
             <div key={al} className={`flex items-center gap-1.5 ${gi > 0 ? 'border-l border-pageborder pl-3' : ''}`}>
@@ -338,6 +381,7 @@ export default function HomePage() {
                 return (
                   <button
                     key={ch.key}
+                    title={ch.title}
                     onClick={() => setActiveResultFilter(isActive ? null : ch.key)}
                     className="text-[11px] font-semibold px-2.5 py-1 rounded-full border transition-all duration-150 whitespace-nowrap shrink-0"
                     style={{
@@ -346,7 +390,7 @@ export default function HomePage() {
                       color: isActive ? '#fff' : color,
                     }}
                   >
-                    {ch.icon} {ch.label}
+                    <span style={{ fontSize: '9px', opacity: 0.85 }}>{ch.icon}</span> {ch.label}
                   </button>
                 );
               })}
@@ -354,17 +398,19 @@ export default function HomePage() {
           );
         })}
 
+        {/* Cross-alliance: any seat barely in play */}
         <div className="border-l border-pageborder pl-3 shrink-0">
           <button
-            onClick={() => setActiveResultFilter(activeResultFilter === 'close' ? null : 'close')}
+            title="All alliances with bare lead (<3,000 votes) — most contested seats"
+            onClick={() => setActiveResultFilter(activeResultFilter === 'all_bare' ? null : 'all_bare')}
             className="text-[11px] font-semibold px-2.5 py-1 rounded-full border transition-all duration-150 whitespace-nowrap"
             style={{
-              borderColor: activeResultFilter === 'close' ? '#F59E0B' : '#F59E0B88',
-              background: activeResultFilter === 'close' ? '#F59E0B' : 'transparent',
-              color: activeResultFilter === 'close' ? '#fff' : '#B45309',
+              borderColor: activeResultFilter === 'all_bare' ? '#F59E0B' : '#F59E0B88',
+              background: activeResultFilter === 'all_bare' ? '#F59E0B' : 'transparent',
+              color: activeResultFilter === 'all_bare' ? '#fff' : '#B45309',
             }}
           >
-            ⚡ Close Contests
+            ⚡ All Bare
           </button>
         </div>
 
@@ -422,13 +468,19 @@ function ConstituencyCard({ c, onClick }: { c: ConstituencyListItem; onClick: ()
   const isDone = c.status === 'RESULT_DECLARED';
   const countingStarted = isLive || isDone;
   const alliance = c.leader?.alliance || '';
-  const color = ALLIANCE_COLORS[alliance] || '#9CA3AF';
+
+  // Resolve card background
+  const bg = countingStarted && c.leader
+    ? resolveCardBg(c.leader.party, alliance, c.leader.party_color ?? '', [])
+    : '#E8E4DF';
+  
+  // Badge text color = card bg color (badge is white circle, text should be party color)
+  const badgeTextColor = bg;
+
   const margin = countingStarted && c.leader && c.runner_up
     ? c.leader.votes - c.runner_up.votes : null;
-  const isClose = isLive && margin !== null && margin < 500;
-
-  // All active cards = solid alliance color; awaited = neutral
-  const bg = countingStarted ? color : '#E8E4DF';
+  const BARE_THRESHOLD = 3_000;
+  const isClose = isLive && margin !== null && margin < BARE_THRESHOLD;
 
   // Progress bar: leader vote % * 2 as proxy for counting progress
   const progressPct = isDone ? 100
@@ -437,13 +489,39 @@ function ConstituencyCard({ c, onClick }: { c: ConstituencyListItem; onClick: ()
 
   const statusLabel = isDone ? 'WON' : isLive ? 'LEADING' : 'AWAITED';
 
+  // Stripe color = runner-up's color — for OTH/IND use actual party color, not generic grey
+  const ruStripeColor = isClose && c.runner_up
+    ? (() => {
+        const al  = c.runner_up!.alliance;
+        const ru  = c.runner_up!;
+        let base: string;
+        if (al === 'OTH' || ru.party === 'IND') {
+          // Use party_color from DB; fall back to alliance grey
+          base = ru.party_color || ALLIANCE_COLORS.OTH;
+        } else {
+          base = ALLIANCE_COLORS[al] || '#000000';
+        }
+        // IND-vs-IND: both card bg and stripe would be the same grey → use dark slate instead
+        if (base === PURE_IND_COLOR || base === '#6B7280') {
+          base = '#1E293B'; // dark slate — contrasts clearly against grey
+        }
+        return base + '66'; // hex alpha ~40%
+      })()
+    : 'rgba(0,0,0,0.13)';
+
   return (
     <div
       onClick={onClick}
-      className="rounded-md cursor-pointer transition-all duration-150 hover:brightness-110 hover:shadow-lg overflow-hidden"
+      className="rounded-md cursor-pointer transition-all duration-150 hover:brightness-110 overflow-hidden relative"
       style={{
         backgroundColor: bg,
-        outline: isClose ? '2px solid #F59E0B' : 'none',
+        // Bare: diagonal stripes in runner-up alliance color — encodes the contest dynamic
+        backgroundImage: isClose
+          ? `repeating-linear-gradient(45deg, transparent, transparent 7px, ${ruStripeColor} 7px, ${ruStripeColor} 9px)`
+          : 'none',
+        boxShadow: isClose
+          ? '0 4px 18px rgba(0,0,0,0.35)'
+          : '0 1px 4px rgba(0,0,0,0.15)',
       }}
     >
       <div className="px-3 pt-2.5 pb-2">
@@ -453,13 +531,21 @@ function ConstituencyCard({ c, onClick }: { c: ConstituencyListItem; onClick: ()
             className="font-mono text-[9px]"
             style={{ color: countingStarted ? 'rgba(255,255,255,0.5)' : '#9CA3AF' }}
           >#{String(c.number).padStart(3, '0')}</span>
-          <span
-            className="text-[8px] font-bold tracking-wider px-1.5 py-0.5 rounded"
-            style={{
-              backgroundColor: countingStarted ? 'rgba(0,0,0,0.2)' : '#D1CBC4',
-              color: countingStarted ? 'rgba(255,255,255,0.9)' : '#6B7280',
-            }}
-          >{isClose ? 'CLOSE' : statusLabel}</span>
+          {isClose ? (
+            // BARE badge — dark semi-transparent, readable on all alliance colors
+            <span
+              className="text-[8px] font-black tracking-wider px-1.5 py-0.5 rounded"
+              style={{ backgroundColor: 'rgba(0,0,0,0.45)', color: 'rgba(255,255,255,0.95)' }}
+            >⚡ BARE</span>
+          ) : (
+            <span
+              className="text-[8px] font-bold tracking-wider px-1.5 py-0.5 rounded"
+              style={{
+                backgroundColor: countingStarted ? 'rgba(0,0,0,0.2)' : '#D1CBC4',
+                color: countingStarted ? 'rgba(255,255,255,0.9)' : '#6B7280',
+              }}
+            >{statusLabel}</span>
+          )}
         </div>
 
         {/* Constituency name */}
@@ -484,7 +570,7 @@ function ConstituencyCard({ c, onClick }: { c: ConstituencyListItem; onClick: ()
               {/* Party round badge */}
               <div
                 className="shrink-0 w-9 h-9 rounded-full flex items-center justify-center font-bold text-[10px] tracking-wide"
-                style={{ backgroundColor: 'rgba(255,255,255,0.95)', color }}
+                style={{ backgroundColor: 'rgba(255,255,255,0.95)', color: badgeTextColor }}
                 title={c.leader.party}
               >
               {partyAbbr(c.leader.party)}
@@ -504,7 +590,11 @@ function ConstituencyCard({ c, onClick }: { c: ConstituencyListItem; onClick: ()
 
             {/* Runner-up */}
             {c.runner_up && (() => {
-              const ruColor = ALLIANCE_COLORS[c.runner_up.alliance] || '#6B7280';
+              // Runner-up color: use party_color from API for OTH, else alliance color
+              const ruAlliance = c.runner_up.alliance;
+              const ruColor = ruAlliance === 'OTH' || isRawIND(c.runner_up.party) || isSupportedIND(c.runner_up.party)
+                ? (c.runner_up.party_color || ALLIANCE_COLORS[ruAlliance] || '#6B7280')
+                : (ALLIANCE_COLORS[ruAlliance] || '#6B7280');
               return (
                 <div
                   className="mt-1.5 rounded px-2 py-1 flex items-center gap-1.5 min-w-0"
