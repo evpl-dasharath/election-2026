@@ -1,0 +1,102 @@
+{
+  "constituency": {
+    "id": 124,
+    "number": 124,
+    "name": "KOLLAM",
+    "district": "Kollam"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 170646,
+    "votes_polled": 106956,
+    "votes_counted": 38364,
+    "valid_votes": 110299,
+    "rounds_completed": 8,
+    "total_rounds": 23,
+    "last_updated": "2026-04-30T12:05:02.312603+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Adv. Bindhu Krishna",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 17795,
+      "percentage": 16.13,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Adv. Sinu L R",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 9544,
+      "percentage": 8.65,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Dr. N. Prathap Kumar",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 3368,
+      "percentage": 3.05,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "S. Jayamohan",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 3151,
+      "percentage": 2.86,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Mylode Sudhan",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 2942,
+      "percentage": 2.67,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "M Mukesh",
+      "party": "CPI(M)",
+      "votes": 58524,
+      "percentage": 44.86,
+      "is_winner": true
+    },
+    {
+      "candidate": "Adv. BINDHU KRISHNA",
+      "party": "INC",
+      "votes": 56452,
+      "percentage": 43.27,
+      "is_winner": false
+    },
+    {
+      "candidate": "Sunil M",
+      "party": "BJP",
+      "votes": 14252,
+      "percentage": 10.93,
+      "is_winner": false
+    },
+    {
+      "candidate": "REMANAN",
+      "party": "BSP",
+      "votes": 290,
+      "percentage": 0.22,
+      "is_winner": false
+    },
+    {
+      "candidate": "BABY S",
+      "party": "ADHRMPI",
+      "votes": 183,
+      "percentage": 0.14,
+      "is_winner": false
+    }
+  ]
+}

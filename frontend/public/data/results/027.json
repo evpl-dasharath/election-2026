@@ -1,0 +1,138 @@
+{
+  "constituency": {
+    "id": 27,
+    "number": 27,
+    "name": "KOZHIKODE NORTH",
+    "district": "Kozhikode"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 217199,
+    "votes_polled": 157363,
+    "votes_counted": 47232,
+    "valid_votes": 157440,
+    "rounds_completed": 6,
+    "total_rounds": 20,
+    "last_updated": "2026-04-30T12:10:31.312574+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "A Sajeena",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 11366,
+      "percentage": 7.22,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Jayanth Kumar",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 6124,
+      "percentage": 3.89,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Jayanth S",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 5733,
+      "percentage": 3.64,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Raveendranathan Nair",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 4623,
+      "percentage": 2.94,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Dr. Alphonsa Mathew",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 4623,
+      "percentage": 2.94,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Raveendran",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 4111,
+      "percentage": 2.61,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Navya Haridas",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 4050,
+      "percentage": 2.57,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Thottathil Ravindran",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 3618,
+      "percentage": 2.3,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. K Jayanth",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 3111,
+      "percentage": 1.98,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Thottathil Ravindran",
+      "party": "CPI(M)",
+      "votes": 59124,
+      "percentage": 42.98,
+      "is_winner": true
+    },
+    {
+      "candidate": "K M ABHIJITH",
+      "party": "INC",
+      "votes": 46196,
+      "percentage": 33.58,
+      "is_winner": false
+    },
+    {
+      "candidate": "M T RAMESH",
+      "party": "BJP",
+      "votes": 30952,
+      "percentage": 22.5,
+      "is_winner": false
+    },
+    {
+      "candidate": "N ABHIJITH",
+      "party": "IND",
+      "votes": 328,
+      "percentage": 0.24,
+      "is_winner": false
+    },
+    {
+      "candidate": "K RAHIM",
+      "party": "SUCI",
+      "votes": 156,
+      "percentage": 0.11,
+      "is_winner": false
+    }
+  ]
+}

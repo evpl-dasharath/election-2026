@@ -1,0 +1,97 @@
+{
+  "constituency": {
+    "id": 88,
+    "number": 88,
+    "name": "DEVIKULAM",
+    "district": "Idukki"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 214287,
+    "votes_polled": 141239,
+    "votes_counted": 72669,
+    "valid_votes": 145338,
+    "rounds_completed": 11,
+    "total_rounds": 22,
+    "last_updated": "2026-04-30T12:00:49.313193+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Selvi",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 25972,
+      "percentage": 17.87,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Chelladurai .M",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 17871,
+      "percentage": 12.3,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Rajendran .V. B",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 9689,
+      "percentage": 6.67,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. A. Raja",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 9596,
+      "percentage": 6.6,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "S. Rajendran",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 6633,
+      "percentage": 4.56,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "F. Raja",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 4614,
+      "percentage": 3.17,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Adv. A. Raja",
+      "party": "CPI(M)",
+      "votes": 59049,
+      "percentage": 51.0,
+      "is_winner": true
+    },
+    {
+      "candidate": "D. Kumar",
+      "party": "INC",
+      "votes": 51201,
+      "percentage": 44.22,
+      "is_winner": false
+    },
+    {
+      "candidate": "Ganesan. S",
+      "party": "IND",
+      "votes": 4717,
+      "percentage": 4.07,
+      "is_winner": false
+    }
+  ]
+}

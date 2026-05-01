@@ -1,0 +1,102 @@
+{
+  "constituency": {
+    "id": 80,
+    "number": 80,
+    "name": "KOCHI",
+    "district": "Ernakulam"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 228347,
+    "votes_polled": 153650,
+    "votes_counted": 51928,
+    "valid_votes": 155784,
+    "rounds_completed": 6,
+    "total_rounds": 18,
+    "last_updated": "2026-04-30T12:05:22.312581+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Mohammed Shiyas",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 25742,
+      "percentage": 16.52,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Aneesh Mattancherry",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 13676,
+      "percentage": 8.78,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ajeesh P.E",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 7102,
+      "percentage": 4.56,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Xavier Joolappan",
+      "party": "TTP",
+      "alliance": "NDA",
+      "votes": 3931,
+      "percentage": 2.52,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. J. Maxi",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 2212,
+      "percentage": 1.42,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "K.J. MAXY",
+      "party": "CPI(M)",
+      "votes": 54632,
+      "percentage": 42.45,
+      "is_winner": true
+    },
+    {
+      "candidate": "TONY CHAMMANY",
+      "party": "INC",
+      "votes": 40553,
+      "percentage": 31.51,
+      "is_winner": false
+    },
+    {
+      "candidate": "C.G.RAJAGOPAL",
+      "party": "BJP",
+      "votes": 10991,
+      "percentage": 8.54,
+      "is_winner": false
+    },
+    {
+      "candidate": "Nipun Cherian",
+      "party": "IND",
+      "votes": 2149,
+      "percentage": 1.67,
+      "is_winner": false
+    },
+    {
+      "candidate": "RAJANEESH BABU",
+      "party": "IND",
+      "votes": 228,
+      "percentage": 0.18,
+      "is_winner": false
+    }
+  ]
+}

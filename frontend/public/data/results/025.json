@@ -1,0 +1,102 @@
+{
+  "constituency": {
+    "id": 25,
+    "number": 25,
+    "name": "BALUSSERI",
+    "district": "Kozhikode"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 221694,
+    "votes_polled": 147649,
+    "votes_counted": 41329,
+    "valid_votes": 148787,
+    "rounds_completed": 5,
+    "total_rounds": 18,
+    "last_updated": "2026-04-30T12:13:04.312451+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "V. T. Sooraj",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 21167,
+      "percentage": 14.23,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Adv. K.M. Sachindev",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 8125,
+      "percentage": 5.46,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Abhijith",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 5128,
+      "percentage": 3.45,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "C. P. Sateeshan",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 3106,
+      "percentage": 2.09,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sooraj K S/o Asokan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 2766,
+      "percentage": 1.86,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Adv. K.M. SACHINDEV",
+      "party": "CPI(M)",
+      "votes": 91839,
+      "percentage": 50.47,
+      "is_winner": true
+    },
+    {
+      "candidate": "DHARMAJAN BOLGATTY",
+      "party": "INC",
+      "votes": 71467,
+      "percentage": 39.28,
+      "is_winner": false
+    },
+    {
+      "candidate": "LIBIN BALUSSERY",
+      "party": "BJP",
+      "votes": 16490,
+      "percentage": 9.06,
+      "is_winner": false
+    },
+    {
+      "candidate": "CHANDRIKA",
+      "party": "WPOI",
+      "votes": 889,
+      "percentage": 0.49,
+      "is_winner": false
+    },
+    {
+      "candidate": "JOBISH BALUSSERY",
+      "party": "BSP",
+      "votes": 476,
+      "percentage": 0.26,
+      "is_winner": false
+    }
+  ]
+}

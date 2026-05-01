@@ -1,0 +1,120 @@
+{
+  "constituency": {
+    "id": 11,
+    "number": 11,
+    "name": "KANNUR",
+    "district": "Kannur"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 182682,
+    "votes_polled": 138125,
+    "votes_counted": 93905,
+    "valid_votes": 92965,
+    "rounds_completed": 12,
+    "total_rounds": 15,
+    "last_updated": "2026-04-29T11:27:22.573742+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Kadannappalli Ramachandran",
+      "party": "CONG(S)",
+      "alliance": "LDF",
+      "votes": 41399,
+      "percentage": 45.83,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Adv. T. O. Mohanan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 29533,
+      "percentage": 32.69,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "C. Raghunath",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 17825,
+      "percentage": 19.73,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ramachandran Kuniyil",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 516,
+      "percentage": 0.57,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "M.K. Shahazad",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 452,
+      "percentage": 0.5,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "T.K. Mohanan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 369,
+      "percentage": 0.41,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Suresh Kumar",
+      "party": "BJKP",
+      "alliance": "OTH",
+      "votes": 244,
+      "percentage": 0.27,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "RAMACHANDRAN KADANNAPPALLI",
+      "party": "C(S)",
+      "votes": 60313,
+      "percentage": 44.98,
+      "is_winner": true
+    },
+    {
+      "candidate": "SATHEESHAN PACHENI",
+      "party": "INC",
+      "votes": 58568,
+      "percentage": 43.68,
+      "is_winner": false
+    },
+    {
+      "candidate": "ARCHANA VANDICHAL",
+      "party": "BJP",
+      "votes": 11581,
+      "percentage": 8.64,
+      "is_winner": false
+    },
+    {
+      "candidate": "B SHAMSUDHEEN MOULAVI",
+      "party": "SDPI",
+      "votes": 2069,
+      "percentage": 1.54,
+      "is_winner": false
+    },
+    {
+      "candidate": "T K GANESH BABU",
+      "party": "NWLBRP",
+      "votes": 716,
+      "percentage": 0.53,
+      "is_winner": false
+    }
+  ]
+}

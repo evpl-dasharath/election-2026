@@ -1,0 +1,120 @@
+{
+  "constituency": {
+    "id": 32,
+    "number": 32,
+    "name": "THIRUVAMBADY",
+    "district": "Kozhikode"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 220901,
+    "votes_polled": 156025,
+    "votes_counted": 54007,
+    "valid_votes": 162022,
+    "rounds_completed": 8,
+    "total_rounds": 24,
+    "last_updated": "2026-04-30T12:07:59.313067+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Muhammed Kasim",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 16035,
+      "percentage": 9.9,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Sunny V Joseph",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 8744,
+      "percentage": 5.4,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "C. K. Kasim",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 6378,
+      "percentage": 3.94,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Linto Joseph",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 5986,
+      "percentage": 3.69,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "P K Kasim  S/o Abdullakkutty Haji",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 5534,
+      "percentage": 3.42,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Dr. Wilson Rockey",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 5343,
+      "percentage": 3.3,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sunny Thomas",
+      "party": "TTP",
+      "alliance": "NDA",
+      "votes": 4286,
+      "percentage": 2.65,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Linto Joseph",
+      "party": "CPI(M)",
+      "votes": 67867,
+      "percentage": 47.46,
+      "is_winner": true
+    },
+    {
+      "candidate": "C. P. Cheriya Muhammed",
+      "party": "IUML",
+      "votes": 63224,
+      "percentage": 44.21,
+      "is_winner": false
+    },
+    {
+      "candidate": "Baby Ambattu",
+      "party": "BJP",
+      "votes": 7794,
+      "percentage": 5.45,
+      "is_winner": false
+    },
+    {
+      "candidate": "Sunny. V. Joseph",
+      "party": "IND",
+      "votes": 1847,
+      "percentage": 1.29,
+      "is_winner": false
+    },
+    {
+      "candidate": "K. P. Cheriya Muhammed S/o Kunhoyi",
+      "party": "IND",
+      "votes": 1121,
+      "percentage": 0.78,
+      "is_winner": false
+    }
+  ]
+}

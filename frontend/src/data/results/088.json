@@ -1,0 +1,97 @@
+{
+  "constituency": {
+    "id": 88,
+    "number": 88,
+    "name": "DEVIKULAM",
+    "district": "Idukki"
+  },
+  "live_result": {
+    "status": "NOT_STARTED",
+    "total_electors": 142265,
+    "votes_polled": 110781,
+    "votes_counted": 0,
+    "valid_votes": 0,
+    "rounds_completed": 0,
+    "total_rounds": 14,
+    "last_updated": "2026-04-29T11:27:22.960000+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Adv. A. Raja",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "F. Raja",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "S. Rajendran",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Chelladurai .M",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Rajendran .V. B",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Selvi",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Adv. A. Raja",
+      "party": "CPI(M)",
+      "votes": 59049,
+      "percentage": 51.0,
+      "is_winner": true
+    },
+    {
+      "candidate": "D. Kumar",
+      "party": "INC",
+      "votes": 51201,
+      "percentage": 44.22,
+      "is_winner": false
+    },
+    {
+      "candidate": "Ganesan. S",
+      "party": "IND",
+      "votes": 4717,
+      "percentage": 4.07,
+      "is_winner": false
+    }
+  ]
+}

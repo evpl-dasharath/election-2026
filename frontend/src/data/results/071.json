@@ -1,0 +1,111 @@
+{
+  "constituency": {
+    "id": 71,
+    "number": 71,
+    "name": "PUTHUKKAD",
+    "district": "Thrissur"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 192377,
+    "votes_polled": 151939,
+    "votes_counted": 24123,
+    "valid_votes": 23881,
+    "rounds_completed": 3,
+    "total_rounds": 16,
+    "last_updated": "2026-04-29T11:27:22.891959+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "K. K. Ramachandran",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 9448,
+      "percentage": 41.36,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "K. M. Babu Raj",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 7540,
+      "percentage": 33.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "A. Nagesh",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 4796,
+      "percentage": 20.99,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "P C Pushpakaran",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 471,
+      "percentage": 2.06,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Jayakrishnan P N",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 436,
+      "percentage": 1.91,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Anifa V K",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 155,
+      "percentage": 0.68,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "K.K. Ramachandran",
+      "party": "CPI(M)",
+      "votes": 73365,
+      "percentage": 46.94,
+      "is_winner": true
+    },
+    {
+      "candidate": "Sunil Anthikkad (Sunilkumar. P.V)",
+      "party": "INC",
+      "votes": 46012,
+      "percentage": 29.44,
+      "is_winner": false
+    },
+    {
+      "candidate": "A. Nagesh (Parameswaran.A)",
+      "party": "BJP",
+      "votes": 34893,
+      "percentage": 22.33,
+      "is_winner": false
+    },
+    {
+      "candidate": "Rajesh Appatt",
+      "party": "CPIM",
+      "votes": 489,
+      "percentage": 0.31,
+      "is_winner": false
+    },
+    {
+      "candidate": "P.C. Pushpakaran",
+      "party": "BSP",
+      "votes": 455,
+      "percentage": 0.29,
+      "is_winner": false
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "constituency": {
+    "id": 108,
+    "number": 108,
+    "name": "KAYAMKULAM",
+    "district": "Alappuzha"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 214600,
+    "votes_polled": 142967,
+    "votes_counted": 49729,
+    "valid_votes": 142971,
+    "rounds_completed": 8,
+    "total_rounds": 23,
+    "last_updated": "2026-04-30T12:06:29.312611+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Thambi Mettuthara",
+      "party": "BDJS",
+      "alliance": "NDA",
+      "votes": 23039,
+      "percentage": 16.11,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Adv. M. Liju",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 19712,
+      "percentage": 13.79,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. U. Prathibha",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 6565,
+      "percentage": 4.59,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Adv. U. Prathibha",
+      "party": "CPI(M)",
+      "votes": 77348,
+      "percentage": 47.97,
+      "is_winner": true
+    },
+    {
+      "candidate": "Aritha Babu",
+      "party": "INC",
+      "votes": 71050,
+      "percentage": 44.06,
+      "is_winner": false
+    },
+    {
+      "candidate": "Pradeeplal",
+      "party": "BDJS",
+      "votes": 11413,
+      "percentage": 7.08,
+      "is_winner": false
+    },
+    {
+      "candidate": "Maniyappan Achari",
+      "party": "IND",
+      "votes": 372,
+      "percentage": 0.23,
+      "is_winner": false
+    },
+    {
+      "candidate": "Rajeev R",
+      "party": "IND",
+      "votes": 230,
+      "percentage": 0.14,
+      "is_winner": false
+    }
+  ]
+}

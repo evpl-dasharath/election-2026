@@ -1,0 +1,86 @@
+{
+  "constituency": {
+    "id": 36,
+    "number": 36,
+    "name": "WANDOOR",
+    "district": "Malappuram"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 223993,
+    "votes_polled": 146304,
+    "votes_counted": 39535,
+    "valid_votes": 150236,
+    "rounds_completed": 5,
+    "total_rounds": 19,
+    "last_updated": "2026-04-30T12:10:30.313392+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "E. P. Kumaradas",
+      "party": "IND (BJP)",
+      "alliance": "NDA",
+      "votes": 21841,
+      "percentage": 14.54,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Anilkumar S/o Kuttan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 10880,
+      "percentage": 7.24,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "A. P. Anil Kumar",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 5115,
+      "percentage": 3.4,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Dr. K.K Damodaran",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 2909,
+      "percentage": 1.94,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "A P ANILKUMAR",
+      "party": "INC",
+      "votes": 87415,
+      "percentage": 51.44,
+      "is_winner": true
+    },
+    {
+      "candidate": "MIDHUNA P",
+      "party": "CPI(M)",
+      "votes": 71852,
+      "percentage": 42.28,
+      "is_winner": false
+    },
+    {
+      "candidate": "Dr. P C VIJAYAN",
+      "party": "BJP",
+      "votes": 7057,
+      "percentage": 4.15,
+      "is_winner": false
+    },
+    {
+      "candidate": "KRISHNAN C",
+      "party": "WPOI",
+      "votes": 2943,
+      "percentage": 1.73,
+      "is_winner": false
+    }
+  ]
+}

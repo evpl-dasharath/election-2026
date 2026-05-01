@@ -1,0 +1,95 @@
+{
+  "constituency": {
+    "id": 140,
+    "number": 140,
+    "name": "NEYYATTINKARA",
+    "district": "Thiruvananthapuram"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 164910,
+    "votes_polled": 104536,
+    "votes_counted": 38456,
+    "valid_votes": 105756,
+    "rounds_completed": 8,
+    "total_rounds": 22,
+    "last_updated": "2026-04-30T12:07:52.313002+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Surendranathan. K",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 24289,
+      "percentage": 22.97,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Bibin S.B",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 4711,
+      "percentage": 4.45,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "S. Rajasekharan Nair",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 4297,
+      "percentage": 4.06,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "N. Sakthan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 3381,
+      "percentage": 3.2,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. Ansalan",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 1881,
+      "percentage": 1.78,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "K. ANSALAN",
+      "party": "CPI(M)",
+      "votes": 65497,
+      "percentage": 47.02,
+      "is_winner": true
+    },
+    {
+      "candidate": "SELVARAJ. R",
+      "party": "INC",
+      "votes": 51235,
+      "percentage": 36.78,
+      "is_winner": false
+    },
+    {
+      "candidate": "CHENKAL. S. RAJASEKHARAN NAIR",
+      "party": "BJP",
+      "votes": 21009,
+      "percentage": 15.08,
+      "is_winner": false
+    },
+    {
+      "candidate": "PREMAKUMAR. T. R",
+      "party": "BSP",
+      "votes": 643,
+      "percentage": 0.46,
+      "is_winner": false
+    }
+  ]
+}

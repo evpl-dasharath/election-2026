@@ -1,0 +1,138 @@
+{
+  "constituency": {
+    "id": 127,
+    "number": 127,
+    "name": "VARKALA",
+    "district": "Thiruvananthapuram"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 166632,
+    "votes_polled": 111361,
+    "votes_counted": 44105,
+    "valid_votes": 113414,
+    "rounds_completed": 7,
+    "total_rounds": 18,
+    "last_updated": "2026-04-30T12:01:25.312778+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Vivekanandan K",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 11627,
+      "percentage": 10.25,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Harikrishnan S G",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 10260,
+      "percentage": 9.05,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Smitha Sundaresan",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 4544,
+      "percentage": 4.01,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Vinod Elakamon",
+      "party": "Anna DHRM",
+      "alliance": "OTH",
+      "votes": 3757,
+      "percentage": 3.31,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Raju S Kottarakonam",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 3635,
+      "percentage": 3.21,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Varkala Kahar",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 2969,
+      "percentage": 2.62,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "M. K. Kannan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 2893,
+      "percentage": 2.55,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "S\u00e4ju",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 2654,
+      "percentage": 2.34,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. V Joy",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 2350,
+      "percentage": 2.07,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Adv. V Joy",
+      "party": "CPI(M)",
+      "votes": 68816,
+      "percentage": 50.89,
+      "is_winner": true
+    },
+    {
+      "candidate": "Adv. BRM Shafeer",
+      "party": "INC",
+      "votes": 50995,
+      "percentage": 37.71,
+      "is_winner": false
+    },
+    {
+      "candidate": "Aji S",
+      "party": "BDJS",
+      "votes": 11214,
+      "percentage": 8.29,
+      "is_winner": false
+    },
+    {
+      "candidate": "Anu M.C",
+      "party": "BSP",
+      "votes": 1948,
+      "percentage": 1.44,
+      "is_winner": false
+    },
+    {
+      "candidate": "Prince",
+      "party": "IND",
+      "votes": 658,
+      "percentage": 0.49,
+      "is_winner": false
+    }
+  ]
+}

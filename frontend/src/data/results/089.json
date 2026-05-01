@@ -1,0 +1,86 @@
+{
+  "constituency": {
+    "id": 89,
+    "number": 89,
+    "name": "UDUMBANCHOLA",
+    "district": "Idukki"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 150303,
+    "votes_polled": 119505,
+    "votes_counted": 48277,
+    "valid_votes": 47794,
+    "rounds_completed": 5,
+    "total_rounds": 16,
+    "last_updated": "2026-04-29T11:27:22.962291+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Adv. Sangeetha Viswanadhan",
+      "party": "BDJS",
+      "alliance": "NDA",
+      "votes": 20992,
+      "percentage": 45.56,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Adv. Senapathi Venu",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 14484,
+      "percentage": 31.43,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. K. Jayachandran",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 10289,
+      "percentage": 22.33,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "P.K. Sajeevan",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 312,
+      "percentage": 0.68,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "M. M. MANI",
+      "party": "CPI(M)",
+      "votes": 77381,
+      "percentage": 61.8,
+      "is_winner": true
+    },
+    {
+      "candidate": "ADV. E.M. AUGUSTHY",
+      "party": "INC",
+      "votes": 39076,
+      "percentage": 31.21,
+      "is_winner": false
+    },
+    {
+      "candidate": "SANTHOSH MADHAVAN",
+      "party": "BDJS",
+      "votes": 7208,
+      "percentage": 5.76,
+      "is_winner": false
+    },
+    {
+      "candidate": "A C BIJU",
+      "party": "BSP",
+      "votes": 867,
+      "percentage": 0.69,
+      "is_winner": false
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "constituency": {
+    "id": 116,
+    "number": 116,
+    "name": "KARUNAGAPPALLY",
+    "district": "Kollam"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 210181,
+    "votes_polled": 156858,
+    "votes_counted": 63568,
+    "valid_votes": 162454,
+    "rounds_completed": 9,
+    "total_rounds": 23,
+    "last_updated": "2026-04-30T12:04:38.314109+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "C. R. Mahesh",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 20668,
+      "percentage": 12.72,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Adv.M.S. Thara",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 14971,
+      "percentage": 9.22,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Twinkle Prabhakaran",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 9393,
+      "percentage": 5.78,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "V. S. Jithin Dev",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 8849,
+      "percentage": 5.45,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Latheef",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 8464,
+      "percentage": 5.21,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "C. R Mahesh",
+      "party": "INC",
+      "votes": 94225,
+      "percentage": 54.38,
+      "is_winner": true
+    },
+    {
+      "candidate": "R. Ramachandran",
+      "party": "CPI",
+      "votes": 65017,
+      "percentage": 37.52,
+      "is_winner": false
+    },
+    {
+      "candidate": "Bitty Sudheer",
+      "party": "BJP",
+      "votes": 12144,
+      "percentage": 7.01,
+      "is_winner": false
+    },
+    {
+      "candidate": "Adv. Sumayya Najeeb",
+      "party": "SDPI",
+      "votes": 1037,
+      "percentage": 0.6,
+      "is_winner": false
+    },
+    {
+      "candidate": "Bhargavan S",
+      "party": "SUCI",
+      "votes": 283,
+      "percentage": 0.16,
+      "is_winner": false
+    }
+  ]
+}

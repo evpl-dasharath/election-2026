@@ -1,0 +1,129 @@
+{
+  "constituency": {
+    "id": 106,
+    "number": 106,
+    "name": "KUTTANAD",
+    "district": "Alappuzha"
+  },
+  "live_result": {
+    "status": "RESULT_DECLARED",
+    "total_electors": 153981,
+    "votes_polled": 110204,
+    "votes_counted": 138454,
+    "valid_votes": 137069,
+    "rounds_completed": 16,
+    "total_rounds": 16,
+    "last_updated": "2026-04-29T11:27:23.049368+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Thomas K. Thomas",
+      "party": "NCP(SP)",
+      "alliance": "LDF",
+      "votes": 56579,
+      "percentage": 43.16,
+      "is_winner": true,
+      "is_leading": false
+    },
+    {
+      "name": "Reji Cheriyan",
+      "party": "KEC",
+      "alliance": "UDF",
+      "votes": 46214,
+      "percentage": 35.26,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Santhosh Santhy",
+      "party": "BDJS",
+      "alliance": "NDA",
+      "votes": 24223,
+      "percentage": 18.48,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "P.K. Sasi",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 1195,
+      "percentage": 0.91,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Jaisappan Mathai",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 979,
+      "percentage": 0.75,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Renju T. R.",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 870,
+      "percentage": 0.66,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Joemon Joseph Srampickal A. P. J. Juman V. S.",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 544,
+      "percentage": 0.42,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Joseph Mathew",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 475,
+      "percentage": 0.36,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "THOMAS K THOMAS",
+      "party": "NCP",
+      "votes": 57379,
+      "percentage": 45.67,
+      "is_winner": true
+    },
+    {
+      "candidate": "Adv. JACOB ABRAHAM",
+      "party": "KEC",
+      "votes": 51863,
+      "percentage": 41.28,
+      "is_winner": false
+    },
+    {
+      "candidate": "THAMPI METTUTHARA",
+      "party": "BDJS",
+      "votes": 14946,
+      "percentage": 11.9,
+      "is_winner": false
+    },
+    {
+      "candidate": "Dr. VINU",
+      "party": "DSJP",
+      "votes": 533,
+      "percentage": 0.42,
+      "is_winner": false
+    },
+    {
+      "candidate": "BIJU XAVIER",
+      "party": "SUCI",
+      "votes": 392,
+      "percentage": 0.31,
+      "is_winner": false
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "constituency": {
+    "id": 72,
+    "number": 72,
+    "name": "CHALAKKUDY",
+    "district": "Thrissur"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 179208,
+    "votes_polled": 135391,
+    "votes_counted": 95488,
+    "valid_votes": 94533,
+    "rounds_completed": 12,
+    "total_rounds": 15,
+    "last_updated": "2026-04-29T11:27:22.897025+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Adv. Charlypaul",
+      "party": "TTP",
+      "alliance": "NDA",
+      "votes": 36819,
+      "percentage": 40.68,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "T. J. Saneesh Kumar Joseph",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 36655,
+      "percentage": 40.5,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv Biju Chirayath",
+      "party": "KC(M)",
+      "alliance": "UDF",
+      "votes": 14438,
+      "percentage": 15.95,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Arun Edathadan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 757,
+      "percentage": 0.84,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "M S Asokan Mangalappilly",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 732,
+      "percentage": 0.81,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "A D Biju",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 624,
+      "percentage": 0.69,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Wilson Kallen",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 474,
+      "percentage": 0.52,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Saneeshkumar Joseph",
+      "party": "INC",
+      "votes": 61888,
+      "percentage": 43.23,
+      "is_winner": true
+    },
+    {
+      "candidate": "DENNIES K ANTONY",
+      "party": "KC(M)",
+      "votes": 60831,
+      "percentage": 42.49,
+      "is_winner": false
+    },
+    {
+      "candidate": "Unnikrishnan K.A",
+      "party": "BDJS",
+      "votes": 17301,
+      "percentage": 12.09,
+      "is_winner": false
+    },
+    {
+      "candidate": "T N Rajan",
+      "party": "IND",
+      "votes": 713,
+      "percentage": 0.5,
+      "is_winner": false
+    },
+    {
+      "candidate": "M S Asokan",
+      "party": "BSP",
+      "votes": 617,
+      "percentage": 0.43,
+      "is_winner": false
+    }
+  ]
+}

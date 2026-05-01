@@ -1,0 +1,129 @@
+{
+  "constituency": {
+    "id": 48,
+    "number": 48,
+    "name": "PONNANI",
+    "district": "Malappuram"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 216529,
+    "votes_polled": 160707,
+    "votes_counted": 11339,
+    "valid_votes": 11225,
+    "rounds_completed": 1,
+    "total_rounds": 14,
+    "last_updated": "2026-04-29T11:27:22.782790+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "K. P. Noushad Ali",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 3951,
+      "percentage": 35.2,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "E. Maneesh",
+      "party": "BDJS",
+      "alliance": "NDA",
+      "votes": 3718,
+      "percentage": 33.12,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. M. K. Sakeer",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 2449,
+      "percentage": 21.82,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sakkeer S/o Illyas",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 360,
+      "percentage": 3.21,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sageer M.K",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 264,
+      "percentage": 2.35,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sakkeer S/o Muhammed",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 257,
+      "percentage": 2.29,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Anvar Pazhanji",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 119,
+      "percentage": 1.06,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Noushadali",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 107,
+      "percentage": 0.95,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "P NANDAKUMAR",
+      "party": "CPI(M)",
+      "votes": 74668,
+      "percentage": 51.35,
+      "is_winner": true
+    },
+    {
+      "candidate": "Adv. A.M. ROHITH",
+      "party": "INC",
+      "votes": 57625,
+      "percentage": 39.63,
+      "is_winner": false
+    },
+    {
+      "candidate": "SUBRAMANNIAN CHUNKAPPALLII",
+      "party": "BDJS",
+      "votes": 7419,
+      "percentage": 5.1,
+      "is_winner": false
+    },
+    {
+      "candidate": "ANVAR PAZHANJI",
+      "party": "SDPI",
+      "votes": 3065,
+      "percentage": 2.11,
+      "is_winner": false
+    },
+    {
+      "candidate": "GANESH VADERI",
+      "party": "WPOI",
+      "votes": 1863,
+      "percentage": 1.28,
+      "is_winner": false
+    }
+  ]
+}

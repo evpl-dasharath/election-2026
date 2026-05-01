@@ -1,0 +1,120 @@
+{
+  "constituency": {
+    "id": 23,
+    "number": 23,
+    "name": "QUILANDY",
+    "district": "Kozhikode"
+  },
+  "live_result": {
+    "status": "RESULT_DECLARED",
+    "total_electors": 213254,
+    "votes_polled": 169408,
+    "votes_counted": 153057,
+    "valid_votes": 151526,
+    "rounds_completed": 14,
+    "total_rounds": 14,
+    "last_updated": "2026-04-29T11:27:22.641741+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "K. Praveen Kumar",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 65236,
+      "percentage": 45.18,
+      "is_winner": true,
+      "is_leading": false
+    },
+    {
+      "name": "C. R. Praphul Krishnan",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 47915,
+      "percentage": 33.18,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. Dasan",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 28245,
+      "percentage": 19.56,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Praveen",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 1283,
+      "percentage": 0.89,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Musthafa PK (Padinjare Kuniyoth)",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 653,
+      "percentage": 0.45,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Praveen Kumar",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 547,
+      "percentage": 0.38,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Dasan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 528,
+      "percentage": 0.37,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Kanathil Jameela",
+      "party": "CPI(M)",
+      "votes": 75628,
+      "percentage": 46.66,
+      "is_winner": true
+    },
+    {
+      "candidate": "N. Subramaniyan",
+      "party": "INC",
+      "votes": 67156,
+      "percentage": 41.43,
+      "is_winner": false
+    },
+    {
+      "candidate": "N.P. Radhakrishnan",
+      "party": "BJP",
+      "votes": 17555,
+      "percentage": 10.83,
+      "is_winner": false
+    },
+    {
+      "candidate": "Jameela. P.P.",
+      "party": "IND",
+      "votes": 651,
+      "percentage": 0.4,
+      "is_winner": false
+    },
+    {
+      "candidate": "Subrahmanyan Kanaran",
+      "party": "IND",
+      "votes": 381,
+      "percentage": 0.24,
+      "is_winner": false
+    }
+  ]
+}

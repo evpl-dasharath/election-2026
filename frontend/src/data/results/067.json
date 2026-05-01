@@ -1,0 +1,113 @@
+{
+  "constituency": {
+    "id": 67,
+    "number": 67,
+    "name": "THRISSUR",
+    "district": "Thrissur"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 161225,
+    "votes_polled": 122047,
+    "votes_counted": 40315,
+    "valid_votes": 39911,
+    "rounds_completed": 5,
+    "total_rounds": 13,
+    "last_updated": "2026-04-29T11:27:22.874860+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Padmaja Venugopal",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 16483,
+      "percentage": 42.46,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Alankode Leelakrishnan",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 15283,
+      "percentage": 39.37,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Rajan Pallan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 5678,
+      "percentage": 14.63,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Rajan. M",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 494,
+      "percentage": 1.27,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Rosilin Chacko",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 336,
+      "percentage": 0.87,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Arshed Aziz",
+      "party": "CPIML Liberation",
+      "alliance": "OTH",
+      "votes": 314,
+      "percentage": 0.81,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Rani Anto",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 230,
+      "percentage": 0.59,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "P BALACHANDRAN",
+      "party": "CPI",
+      "votes": 44263,
+      "percentage": 34.25,
+      "is_winner": true
+    },
+    {
+      "candidate": "PADMAJA VENUGOPAL",
+      "party": "INC",
+      "votes": 43317,
+      "percentage": 33.52,
+      "is_winner": false
+    },
+    {
+      "candidate": "SURESH GOPI",
+      "party": "BJP",
+      "votes": 40457,
+      "percentage": 31.3,
+      "is_winner": false
+    },
+    {
+      "candidate": "AJITH MENON PONNEMKATTIL",
+      "party": "IND",
+      "votes": 252,
+      "percentage": 0.19,
+      "is_winner": false
+    }
+  ]
+}

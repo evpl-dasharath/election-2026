@@ -1,0 +1,111 @@
+{
+  "constituency": {
+    "id": 123,
+    "number": 123,
+    "name": "KUNDARA",
+    "district": "Kollam"
+  },
+  "live_result": {
+    "status": "NOT_STARTED",
+    "total_electors": 206464,
+    "votes_polled": 161537,
+    "votes_counted": 0,
+    "valid_votes": 0,
+    "rounds_completed": 0,
+    "total_rounds": 12,
+    "last_updated": "2026-04-29T11:27:23.121809+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "S. L. Sajikumar",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "P. C. Vishnunadh",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Robin Radhakrishnan (Robin RB)",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Lathika C",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Rahul R",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Riyas M",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "P.C.Vishnunadh",
+      "party": "INC",
+      "votes": 76341,
+      "percentage": 48.83,
+      "is_winner": true
+    },
+    {
+      "candidate": "J.Mercykutty Amma",
+      "party": "CPI(M)",
+      "votes": 71887,
+      "percentage": 45.98,
+      "is_winner": false
+    },
+    {
+      "candidate": "Vanaja Vidyadharan",
+      "party": "BDJS",
+      "votes": 6097,
+      "percentage": 3.9,
+      "is_winner": false
+    },
+    {
+      "candidate": "R.Rahul",
+      "party": "SUCI",
+      "votes": 459,
+      "percentage": 0.29,
+      "is_winner": false
+    },
+    {
+      "candidate": "Santhosh Adooran",
+      "party": "IND",
+      "votes": 260,
+      "percentage": 0.17,
+      "is_winner": false
+    }
+  ]
+}

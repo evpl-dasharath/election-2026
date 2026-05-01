@@ -1,0 +1,120 @@
+{
+  "constituency": {
+    "id": 70,
+    "number": 70,
+    "name": "IRINJALAKKUDA",
+    "district": "Thrissur"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 249241,
+    "votes_polled": 181333,
+    "votes_counted": 69545,
+    "valid_votes": 188766,
+    "rounds_completed": 7,
+    "total_rounds": 19,
+    "last_updated": "2026-04-30T12:02:08.312783+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Santhosh Cherkalam",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 23799,
+      "percentage": 12.61,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Dr. R. Bindu",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 14922,
+      "percentage": 7.91,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Thomas Unniyadan",
+      "party": "KEC",
+      "alliance": "UDF",
+      "votes": 7922,
+      "percentage": 4.2,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Dr. Shaju K Y (Kavungal)",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 6444,
+      "percentage": 3.41,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Thankamany Tharayil",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 5699,
+      "percentage": 3.02,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Dr. Anish",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 5210,
+      "percentage": 2.76,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ayyappan Manakkal",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 4282,
+      "percentage": 2.27,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Prof. R Bindu",
+      "party": "CPI(M)",
+      "votes": 62493,
+      "percentage": 40.27,
+      "is_winner": true
+    },
+    {
+      "candidate": "Adv. Thomas Unniyadan",
+      "party": "KEC",
+      "votes": 56544,
+      "percentage": 36.44,
+      "is_winner": false
+    },
+    {
+      "candidate": "Dr. Jacob Thomas",
+      "party": "BJP",
+      "votes": 34329,
+      "percentage": 22.12,
+      "is_winner": false
+    },
+    {
+      "candidate": "Vaxerin Pereppadan",
+      "party": "IND",
+      "votes": 536,
+      "percentage": 0.35,
+      "is_winner": false
+    },
+    {
+      "candidate": "Joshy Eluvathingal",
+      "party": "IND",
+      "votes": 305,
+      "percentage": 0.2,
+      "is_winner": false
+    }
+  ]
+}

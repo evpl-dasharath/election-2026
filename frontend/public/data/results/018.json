@@ -1,0 +1,122 @@
+{
+  "constituency": {
+    "id": 18,
+    "number": 18,
+    "name": "SULTHANBATHERY",
+    "district": "Wayanad"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 237992,
+    "votes_polled": 154420,
+    "votes_counted": 56950,
+    "valid_votes": 154579,
+    "rounds_completed": 7,
+    "total_rounds": 19,
+    "last_updated": "2026-04-30T12:04:24.313466+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "I. C. Balakrishnan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 20198,
+      "percentage": 13.07,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Balakrishnan Edakkal",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 9232,
+      "percentage": 5.97,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "A. S. Kavitha",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 6070,
+      "percentage": 3.93,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "V.A Ramesan",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 5359,
+      "percentage": 3.47,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Rajesh R M",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 5351,
+      "percentage": 3.46,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Prakrithi N V",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 5334,
+      "percentage": 3.45,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "M. S. Viswanathan",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 4303,
+      "percentage": 2.78,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Benadict",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 2550,
+      "percentage": 1.65,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "I.C BALAKRISHNAN",
+      "party": "INC",
+      "votes": 81077,
+      "percentage": 48.42,
+      "is_winner": true
+    },
+    {
+      "candidate": "M.S VISWANATHAN",
+      "party": "CPI(M)",
+      "votes": 69255,
+      "percentage": 41.36,
+      "is_winner": false
+    },
+    {
+      "candidate": "C.K JANU",
+      "party": "BJP",
+      "votes": 15198,
+      "percentage": 9.08,
+      "is_winner": false
+    },
+    {
+      "candidate": "ONDAN PANIYAN",
+      "party": "IND",
+      "votes": 742,
+      "percentage": 0.44,
+      "is_winner": false
+    }
+  ]
+}

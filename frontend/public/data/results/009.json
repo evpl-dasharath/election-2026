@@ -1,0 +1,111 @@
+{
+  "constituency": {
+    "id": 9,
+    "number": 9,
+    "name": "IRIKKUR",
+    "district": "Kannur"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 175014,
+    "votes_polled": 123891,
+    "votes_counted": 46804,
+    "valid_votes": 128712,
+    "rounds_completed": 8,
+    "total_rounds": 22,
+    "last_updated": "2026-04-30T12:01:41.313032+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Adv. Mathew Kunnappally",
+      "party": "KC(M)",
+      "alliance": "UDF",
+      "votes": 20556,
+      "percentage": 15.97,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Joseph P.V",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 13400,
+      "percentage": 10.41,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Sajeev Joseph",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 4262,
+      "percentage": 3.31,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "M. J. Mathew",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 3873,
+      "percentage": 3.01,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sreenath Padmanabhan",
+      "party": "TTP",
+      "alliance": "NDA",
+      "votes": 3166,
+      "percentage": 2.46,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Amal K T",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 2262,
+      "percentage": 1.76,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Adv. Sajeev Joseph",
+      "party": "INC",
+      "votes": 76764,
+      "percentage": 50.33,
+      "is_winner": true
+    },
+    {
+      "candidate": "SAJI KUTTIYANIMATTAM",
+      "party": "KC(M)",
+      "votes": 66754,
+      "percentage": 43.77,
+      "is_winner": false
+    },
+    {
+      "candidate": "ANIAMMA TEACHER",
+      "party": "BJP",
+      "votes": 7825,
+      "percentage": 5.13,
+      "is_winner": false
+    },
+    {
+      "candidate": "CHACKO KARIMBIL",
+      "party": "IND",
+      "votes": 311,
+      "percentage": 0.2,
+      "is_winner": false
+    },
+    {
+      "candidate": "SAJAN KUTTIYANIKKAL",
+      "party": "IND",
+      "votes": 275,
+      "percentage": 0.18,
+      "is_winner": false
+    }
+  ]
+}

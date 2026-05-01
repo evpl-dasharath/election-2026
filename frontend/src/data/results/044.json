@@ -1,0 +1,111 @@
+{
+  "constituency": {
+    "id": 44,
+    "number": 44,
+    "name": "TANUR",
+    "district": "Malappuram"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 214101,
+    "votes_polled": 171216,
+    "votes_counted": 150918,
+    "valid_votes": 149408,
+    "rounds_completed": 13,
+    "total_rounds": 14,
+    "last_updated": "2026-04-29T11:27:22.759980+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "P. K. Navas",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 62781,
+      "percentage": 42.25,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Mohamed Sameer T Thiruthiyil House",
+      "party": "IND (CPI(M))",
+      "alliance": "LDF",
+      "votes": 56286,
+      "percentage": 37.87,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Deepa Puzhakkal",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 27593,
+      "percentage": 18.57,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "P P Navas S/o Kunhimuhamed",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 1353,
+      "percentage": 0.91,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Muhammed Sameer",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 389,
+      "percentage": 0.26,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sameer T",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 211,
+      "percentage": 0.14,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "V.ABDURAHIMAN",
+      "party": "NSC",
+      "votes": 70704,
+      "percentage": 46.34,
+      "is_winner": true
+    },
+    {
+      "candidate": "P.K.FIROS",
+      "party": "IUML",
+      "votes": 69719,
+      "percentage": 45.7,
+      "is_winner": false
+    },
+    {
+      "candidate": "K.NARAYANAN MASTER",
+      "party": "BJP",
+      "votes": 10590,
+      "percentage": 6.94,
+      "is_winner": false
+    },
+    {
+      "candidate": "FIROZ S/o Kunhumarakkar",
+      "party": "IND",
+      "votes": 247,
+      "percentage": 0.16,
+      "is_winner": false
+    },
+    {
+      "candidate": "V.ABDURAHIMAN S/o Kathiyamu",
+      "party": "IND",
+      "votes": 224,
+      "percentage": 0.15,
+      "is_winner": false
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "constituency": {
+    "id": 55,
+    "number": 55,
+    "name": "MALAMPUZHA",
+    "district": "Palakkad"
+  },
+  "live_result": {
+    "status": "NOT_STARTED",
+    "total_electors": 195429,
+    "votes_polled": 159470,
+    "votes_counted": 0,
+    "valid_votes": 0,
+    "rounds_completed": 0,
+    "total_rounds": 13,
+    "last_updated": "2026-04-29T11:27:22.819014+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "A. Prabhakaran",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "A. Suresh",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "C. Krishnakumar",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Saji P J",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K Prasad",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ramnath C",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "A. PRABHAKARAN",
+      "party": "CPI(M)",
+      "votes": 75934,
+      "percentage": 46.41,
+      "is_winner": true
+    },
+    {
+      "candidate": "KRISHNAKUMAR.C",
+      "party": "BJP",
+      "votes": 50200,
+      "percentage": 30.68,
+      "is_winner": false
+    },
+    {
+      "candidate": "S. K. Ananthakrishnan",
+      "party": "INC",
+      "votes": 35444,
+      "percentage": 21.66,
+      "is_winner": false
+    },
+    {
+      "candidate": "K.PRASAD",
+      "party": "SUCI",
+      "votes": 555,
+      "percentage": 0.34,
+      "is_winner": false
+    },
+    {
+      "candidate": "ABDUL RAHEEM. S",
+      "party": "IND",
+      "votes": 418,
+      "percentage": 0.26,
+      "is_winner": false
+    }
+  ]
+}

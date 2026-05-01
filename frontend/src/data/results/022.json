@@ -1,0 +1,111 @@
+{
+  "constituency": {
+    "id": 22,
+    "number": 22,
+    "name": "NADAPURAM",
+    "district": "Kozhikode"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 233690,
+    "votes_polled": 185690,
+    "votes_counted": 71612,
+    "valid_votes": 70895,
+    "rounds_completed": 7,
+    "total_rounds": 14,
+    "last_updated": "2026-04-29T11:27:22.636950+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "C. P. Vipin Chandran",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 26745,
+      "percentage": 41.2,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "K. M. Abhijith",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 21521,
+      "percentage": 33.15,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. P. Vasantham",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 15392,
+      "percentage": 23.71,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Padmakumar",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 641,
+      "percentage": 0.99,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Abhijith, s/o Balan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 313,
+      "percentage": 0.48,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Vasantha",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 300,
+      "percentage": 0.46,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "E. K. VIJAYAN",
+      "party": "CPI",
+      "votes": 83293,
+      "percentage": 47.46,
+      "is_winner": true
+    },
+    {
+      "candidate": "ADV. K. PRAVEEN KUMAR",
+      "party": "INC",
+      "votes": 79257,
+      "percentage": 45.16,
+      "is_winner": false
+    },
+    {
+      "candidate": "M. P. RAJAN",
+      "party": "BJP",
+      "votes": 10538,
+      "percentage": 6.0,
+      "is_winner": false
+    },
+    {
+      "candidate": "K. K. NASAR MASTER",
+      "party": "SDPI",
+      "votes": 1676,
+      "percentage": 0.95,
+      "is_winner": false
+    },
+    {
+      "candidate": "T.PRAVEEN KUMAR S/O KANNAN",
+      "party": "IND",
+      "votes": 258,
+      "percentage": 0.15,
+      "is_winner": false
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "constituency": {
+    "id": 129,
+    "number": 129,
+    "name": "CHIRAYINKEEZHU",
+    "district": "Thiruvananthapuram"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 195296,
+    "votes_polled": 144772,
+    "votes_counted": 84562,
+    "valid_votes": 83716,
+    "rounds_completed": 10,
+    "total_rounds": 15,
+    "last_updated": "2026-04-29T11:27:23.149411+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Manoj B Edamana",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 33177,
+      "percentage": 41.7,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "B. S. Anoop",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 32491,
+      "percentage": 40.84,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ramya Haridas",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 13332,
+      "percentage": 16.76,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Anoop Alappuramkunnu",
+      "party": "Anna DHRM",
+      "alliance": "OTH",
+      "votes": 421,
+      "percentage": 0.53,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ramasamy Sasi",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 139,
+      "percentage": 0.17,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "V. Sasi",
+      "party": "CPI",
+      "votes": 62634,
+      "percentage": 43.17,
+      "is_winner": true
+    },
+    {
+      "candidate": "B. S. Anoop",
+      "party": "INC",
+      "votes": 48617,
+      "percentage": 33.51,
+      "is_winner": false
+    },
+    {
+      "candidate": "Ashanath G. S",
+      "party": "BJP",
+      "votes": 30986,
+      "percentage": 21.36,
+      "is_winner": false
+    },
+    {
+      "candidate": "Anil Mangalapuram",
+      "party": "BSP",
+      "votes": 1097,
+      "percentage": 0.76,
+      "is_winner": false
+    },
+    {
+      "candidate": "Advocate G. Anil Kumar",
+      "party": "WPOI",
+      "votes": 616,
+      "percentage": 0.42,
+      "is_winner": false
+    }
+  ]
+}

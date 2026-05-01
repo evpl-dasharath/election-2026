@@ -1,0 +1,156 @@
+{
+  "constituency": {
+    "id": 16,
+    "number": 16,
+    "name": "PERAVOOR",
+    "district": "Kannur"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 258771,
+    "votes_polled": 195128,
+    "votes_counted": 54544,
+    "valid_votes": 196359,
+    "rounds_completed": 5,
+    "total_rounds": 18,
+    "last_updated": "2026-04-30T12:09:46.312672+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Aruvikkal Krishnan",
+      "party": "CPIML Red Star",
+      "alliance": "OTH",
+      "votes": 17502,
+      "percentage": 8.91,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "C. Shylaja",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 6729,
+      "percentage": 3.43,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sunny",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 5934,
+      "percentage": 3.02,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. K. Shailaja",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 3907,
+      "percentage": 1.99,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Venugopalan. C",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 3802,
+      "percentage": 1.94,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sunny Joseph Muthukulathel",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 3663,
+      "percentage": 1.87,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Henstion George",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 3638,
+      "percentage": 1.85,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Narayana Kumar",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 3238,
+      "percentage": 1.65,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Sunny Joseph",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 2855,
+      "percentage": 1.45,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Paily Vathiatt",
+      "party": "BDJS",
+      "alliance": "NDA",
+      "votes": 2533,
+      "percentage": 1.29,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sailaja. A. V",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 2243,
+      "percentage": 1.14,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Adv. Sunny Joseph",
+      "party": "INC",
+      "votes": 66706,
+      "percentage": 46.93,
+      "is_winner": true
+    },
+    {
+      "candidate": "K V Sakkeer Hussain",
+      "party": "CPI(M)",
+      "votes": 63534,
+      "percentage": 44.7,
+      "is_winner": false
+    },
+    {
+      "candidate": "Smitha Jayamohan",
+      "party": "BJP",
+      "votes": 9155,
+      "percentage": 6.44,
+      "is_winner": false
+    },
+    {
+      "candidate": "A C Jalaluddeen",
+      "party": "SDPI",
+      "votes": 1541,
+      "percentage": 1.08,
+      "is_winner": false
+    },
+    {
+      "candidate": "Sakkeer Hussain S/o Hamsa",
+      "party": "IND",
+      "votes": 243,
+      "percentage": 0.17,
+      "is_winner": false
+    }
+  ]
+}

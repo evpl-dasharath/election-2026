@@ -1,0 +1,84 @@
+{
+  "constituency": {
+    "id": 28,
+    "number": 28,
+    "name": "KOZHIKODE SOUTH",
+    "district": "Kozhikode"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 155972,
+    "votes_polled": 126446,
+    "votes_counted": 83710,
+    "valid_votes": 82872,
+    "rounds_completed": 10,
+    "total_rounds": 16,
+    "last_updated": "2026-04-29T11:27:22.673430+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Adv. Fyzal Babu",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 33807,
+      "percentage": 43.71,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Ahamed Devarkovil",
+      "party": "INL",
+      "alliance": "LDF",
+      "votes": 26876,
+      "percentage": 34.75,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "T. Raneesh",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 16662,
+      "percentage": 21.54,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "AHAMMAD DEVARKOVIL",
+      "party": "INL",
+      "votes": 52557,
+      "percentage": 44.15,
+      "is_winner": true
+    },
+    {
+      "candidate": "ADV. NOORBEENA RASHEED",
+      "party": "IUML",
+      "votes": 40098,
+      "percentage": 33.68,
+      "is_winner": false
+    },
+    {
+      "candidate": "NAVYA HARIDAS",
+      "party": "BJP",
+      "votes": 24873,
+      "percentage": 20.89,
+      "is_winner": false
+    },
+    {
+      "candidate": "ADV. MUBEENA",
+      "party": "IND",
+      "votes": 513,
+      "percentage": 0.43,
+      "is_winner": false
+    },
+    {
+      "candidate": "P. HAREENDRANATH",
+      "party": "DSJP",
+      "votes": 410,
+      "percentage": 0.34,
+      "is_winner": false
+    }
+  ]
+}

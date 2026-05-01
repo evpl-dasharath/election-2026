@@ -1,0 +1,141 @@
+﻿Number,Constituency,District,UDF candidate|UDF candidate[3][4],Party,Votes,LDF candidate[5][6][7],Party,Votes,NDA candidate[8][9],Party,Votes,Winner,Margin,Winning party,Winning Alliance
+1,Manjeshwaram,Kasaragod,A. K. M. Ashraf,IUML,65758,V. V. Rameshan,CPI(M),"40,639",K. Surendran,BJP,65013,A. K. M. Ashraf,745,IUML,UDF
+2,Kasargod,Kasaragod,N. A. Nellikkunnu,IUML,63296,M. A. Latheef,INL,"28,323",K. Sreekanth,BJP,50395,N. A. Nellikkunnu,12901,IUML,UDF
+3,Udma,Kasaragod,Periya Balakrishnan,INC,65342,C. H. Kunhambu,CPI(M),"78,664",A. Velayudhan,BJP,20360,C. H. Kunhambu,13322,CPI(M),LDF
+4,Kanhangad,Kasaragod,P. V. Suresh,INC,57476,E. Chandrasekharan,CPI,"84,615",M. Balraj,BJP,21570,E. Chandrasekharan,27139,CPI,LDF
+5,Thrikkaripur,Kasaragod,M. P. Joseph,KC,60014,M. Rajagopal,CPI(M),"86,151",T. V. Shibin,BJP,10961,M. Rajagopal,26137,CPI(M),LDF
+6,Payyannur,Kannur,M. Pradeep Kumar,INC,43915,T. I. Madusoodhanan,CPI(M),93695,K. K. Sreedharan,BJP,11308,T. I. Madusoodhanan,49780,CPI(M),LDF
+7,Kalliasseri,Kannur,Brijesh Kumar,INC,43859,M. Vijin,CPI(M),"88,252",Arun Kaithapram,BJP,11365,M. Vijin,44393,CPI(M),LDF
+8,Thaliparamba,Kannur,Abdul Rasheed V. P.,INC,70181,M. V. Govindan,CPI(M),"92,870",Gangadharan A. P.,BJP,13058,M. V. Govindan,22689,CPI(M),LDF
+9,Irikkur,Kannur,Sajeev Joseph,INC,76764,Saji Kuttiyanimattom,KC(M),"66,754",Aniyamma Rajendran,BJP,7825,Sajeev Joseph,10010,INC,UDF
+10,Azhikode,Kannur,K. M. Shaji,IUML,59653,K. V. Sumesh,CPI(M),"65,794",K. Ranjith,BJP,15741,K. V. Sumesh,6141,CPI(M),LDF
+11,Kannur,Kannur,Satheeshan Pacheni,INC,58568,Kadannappalli Ramachandran,Con(S),"60,313",Archana Vandichal,BJP,11587,Kadannappalli Ramachandran,1745,Con(S),LDF
+12,Dharmadom,Kannur,C. Raghunath,INC,45399,Pinarayi Vijayan,CPI(M),"95,522",C. K. Padmanabhan,BJP,14623,Pinarayi Vijayan,50123,CPI(M),LDF
+13,Thalassery,Kannur,M. P. Aravindakshan,INC,45009,A. N. Shamseer,CPI(M),"81,810",No Candidate,NA,NA,A. N. Shamseer,36801,CPI(M),LDF
+14,Kuthuparamba,Kannur,Pottankandi Abdulla,IUML,61085,K. P. Mohanan,LJD,"70,626",C. Sadanandan Master,BJP,21212,K. P. Mohanan,9541,LJD,LDF
+15,Mattannur,Kannur,Illikkal Agasthy,RSP,35166,K. K. Shailaja,CPI(M),"96,129",Biju Elakkuzhi,BJP,18223,K. K. Shailaja,60963,CPI(M),LDF
+16,Peravoor,Kannur,Sunny Joseph,INC,66706,Sakeer Hussain,CPI(M),"63,534",Smitha Jayamohan,BJP,8943,Sunny Joseph,3172,INC,UDF
+17,Mananthavady (ST),Wayanad,P. K. Jayalakshmi,INC,64767,O. R. Kelu,CPI(M),"74,085",Mukundan Palliyara,BJP,13373,O. R. Kelu,9282,CPI(M),LDF
+18,Sulthanbathery (ST),Wayanad,I. C. Balakrishnan,INC,83002,M. S. Viswanathan,CPI(M),70894,C. K. Janu,JRS,15462,I. C. Balakrishnan,11822,INC,UDF
+19,Kalpetta,Wayanad,T. Siddique,INC,71859,M. V. Shreyams Kumar,LJD,"66,172",T. M. Subeesh,BJP,14358,T. Siddique,5470,INC,UDF
+20,Vatakara,Kozhikode,K. K. Rema,RMPI,65093,Manayath Chandran,LJD,"57,602",M. Rajesh Kumar,BJP,10225,K. K. Rema,7491,RMPI,UDF
+21,Kuttiady,Kozhikode,Parakkal Abdulla,IUML,79810,K. P. Kunhahammed Kutty,CPI(M),"80,143",P. P. Murali,BJP,9139,K. P. Kunhahammed Kutty,333,CPI(M),LDF
+22,Nadapuram,Kozhikode,K.Praveen Kumar,INC,76902,E. K. Vijayan,CPI,80287,M. P. Rajan,BJP,10290,E. K. Vijayan,3385,CPI,LDF
+23,Koyilandy,Kozhikode,N. Subramanian,INC,67156,Kanathil Jameela,CPI(M),"75,628",N. P. Radhakrishnan,BJP,17555,Kanathil Jameela,8472,CPI(M),LDF
+24,Perambra,Kozhikode,C. H. Ibrahimkutty,Ind.,63431,T. P. Ramakrishnan,CPI(M),"86,023",K. V. Sudheer,BJP,11165,T. P. Ramakrishnan,22592,CPI(M),LDF
+25,Balusseri (SC),Kozhikode,Dharmajan Bolgatty,INC,71467,K. M. Sachin Dev,CPI(M),"91,839",Libin Bhaskar,BJP,16490,K. M. Sachin Dev,20372,CPI(M),LDF
+26,Elathur,Kozhikode,Sulfikar Mayoori,Ind.,45137,A. K. Saseendran,NCP,"83,639",T. P. Jayachandran,BJP,32010,A. K. Saseendran,38502,NCP,LDF
+27,Kozhikode North,Kozhikode,K. M. Abhijith,INC,46196,Thottathil Raveendran,CPI(M),"59,124",M. T. Ramesh,BJP,30952,Thottathil Raveendran,12928,CPI(M),LDF
+28,KozhikodebSouth,Kozhikode,P. K. Noorbeena Rasheed,IUML,40098,Ahamed Devarkovil,INL,"52,557",Navya Haridas,BJP,24873,Ahamed Devarkovil,12459,INL,LDF
+29,Beypore,Kozhikode,P. M. Niyas,INC,53418,P. A. Mohammed Riyas,CPI(M),"82,165",K. P. Prakash Babu,BJP,26267,P. A. Mohammed Riyas,28747,CPI(M),LDF
+30,Kunnamangalam,Kozhikode,Dinesh Perumanna,Ind.,74862,P. T. A. Rahim,Ind.,"85,138",V. K. Sajeevan,BJP,27672,P. T. A. Rahim,10276,Ind.,LDF
+31,Koduvally,Kozhikode,M. K. Muneer,IUML,72336,Karat Razak,Ind.,"65,992",T. Balasoman,BJP,9498,M. K. Muneer,6344,IUML,UDF
+32,Thiruvambadi,Kozhikode,C. P. Cheriya Muhammed,IUML,63224,Linto Joseph,CPI(M),"67,867",Baby Ambat,BJP,7794,Linto Joseph,4643,CPI(M),LDF
+33,Kondotty,Malappuram,T. V. Ibrahim,IUML,80597,Sulaiman Haji,Ind.,"62,884",Sheeba Unnikrishnan,BJP,10723,T. V. Ibrahim,17713,IUML,UDF
+34,Eranad,Malappuram,P. K. Basheer,IUML,78076,K. T. Abdurahman,Ind.,"55,530",Dinesh,BJP,6683,P. K. Basheer,22546,IUML,UDF
+35,Nilambur,Malappuram,V. V. Prakash,INC,78527,P. V. Anvar,Ind.,"81,227",T. K. Ashok Kumar,BJP,8595,P. V. Anvar,2700,Ind.,LDF
+36,Wandoor (SC),Malappuram,A. P. Anil Kumar,INC,87415,P. Midhuna,CPI(M),71852,P. C. Vijayan,BJP,7057,A. P. Anil Kumar,15563,INC,UDF
+37,Manjeri,Malappuram,U. A. Latheef,IUML,78836,P. Dibona Nassar,CPI,"64,263",P. R. Rashmilnath,BJP,11350,U. A. Latheef,14573,IUML,UDF
+38,Perinthalmanna,Malappuram,Najeeb Kanthapuram,IUML,76530,K. P. Mustafa,Ind.,"76,492",Suchithra Mattada,BJP,8021,Najeeb Kanthapuram,38,IUML,UDF
+39,Mankada,Malappuram,Manjalamkuzhi Ali,IUML,83231,T. K. Rasheed Ali,CPI(M),"76,985",Sajesh Elayil,BJP,6641,Manjalamkuzhi Ali,6246,IUML,UDF
+40,Malappuram,Malappuram,P. Ubaidulla,IUML,93166,P. Abdurahman,CPI(M),"57,958",Sethumadhavan,BJP,5883,P. Ubaidulla,35208,IUML,UDF
+41,Vengara,Malappuram,P. K. Kunhalikutty,IUML,70193,P. Jiji,CPI(M),"39,671",Preman,BJP,5938,P. K. Kunhalikutty,30522,IUML,UDF
+42,Vallikunnu,Malappuram,P. Abdul Hameed,IUML,71823,A. P. Abdul Wahab,INL,"57,707",Peethambaran Palat,BJP,19853,P. Abdul Hameed,14116,IUML,UDF
+43,Tirurangadi,Malappuram,K. P. A. Majeed,IUML,73499,Niyas Pulikkalakath,Ind.,"63,921",Sathar Haji,BJP,8314,K. P. A. Majeed,9578,IUML,UDF
+44,Tanur,Malappuram,P. K. Firos,IUML,69719,V. Abdurahman,NSC,"70,704",Narayanan,BJP,10590,V. Abdurahman,985,NSC,LDF
+45,Tirur,Malappuram,Kurukkoli Moideen,IUML,85314,Ghafoor P. Lillis,CPI(M),"75,100",M. Abdul Salam,BJP,9097,Kurukkoli Moideen,7214,IUML,UDF
+46,Kottakkal,Malappuram,K. K. Abid Hussain Thangal,IUML,81700,N. A. Muhammad Kutty,NCP,"65,112",P. P. Ganesan,BJP,10796,K. K. Abid Hussain Thangal,16588,IUML,UDF
+47,Thavanur,Malappuram,Firoz Kunnumparambil,INC,67794,K. T. Jaleel,Ind.,"70,358",Ramesh Kottayipuram,BDJS,9914,K. T. Jaleel,2564,Ind.,LDF
+48,Ponnani,Malappuram,A. M. Rohit,INC,57625,P. Nandakumar,CPI(M),"74,668",Subrahmanian Chungappalli,BDJS,7419,P. Nandakumar,17043,CPI(M),LDF
+49,Thrithala,Palakkad,V. T. Balram,INC,66798,M. B. Rajesh,CPI(M),"69,814",Sanku T. Das,BJP,12851,M. B. Rajesh,3016,CPI(M),LDF
+50,Pattambi,Palakkad,Riyas Mukkoli,INC,57337,Muhammed Muhsin,CPI,"75,311",K. M. Haridas,BJP,14578,Muhammed Muhsin,17974,CPI,LDF
+51,Shornur,Palakkad,T. H. Feroz Babu,INC,37726,P. Mammikutty,CPI(M),"74,400",G. Sandeep Warrier,BJP,36973,P. Mammikutty,36674,CPI(M),LDF
+52,Ottappalam,Palakkad,P. Sarin,INC,59707,K. Premkumar,CPI(M),"74,859",P. Venugopal,BJP,25056,K. Premkumar,15152,CPI(M),LDF
+53,Kongad (SC),Palakkad,U. C. Raman,IUML,40662,K. Shanthakumari,CPI(M),67881,M. Suresh Babu,BJP,27661,K. Shanthakumari,27219,CPI(M),LDF
+54,Mannarkkad,Palakkad,N. Shamsudheen,IUML,71657,K. P. Suresh Raj,CPI,"65,787",B. Naseema,AIADMK,10376,N. Shamsudheen,5870,IUML,UDF
+55,Malampuzha,Palakkad,S. K. Anandakrishnan,INC,35444,A. Prabhakaran,CPI(M),"75,934",C. Krishnakumar,BJP,50200,A. Prabhakaran,25734,CPI(M),LDF
+56,Palakkad,Palakkad,Shafi Parambil,INC,54079,C. P. Pramod,CPI(M),"36,433",E. Sreedharan,BJP,50220,Shafi Parambil,3859,INC,UDF
+57,Tarur (SC),Palakkad,K. A. Sheeba,INC,43213,P. P. Sumod,CPI(M),"67,744",K. P. Jayaprakash,BJP,18465,P. P. Sumod,24531,CPI(M),LDF
+58,Chittur,Palakkad,Sumesh Achuthan,INC,50794,K. Krishnankutty,JD(S),"84,672",V. Natesan,BJP,14458,K. Krishnankutty,33878,JD(S),LDF
+59,Nenmara,Palakkad,C. N. Vijayakrishnan,CMP(J),51441,K. Babu,CPI(M),"80,145",A. N. Anurag,BDJS,16666,K. Babu,28074,CPI(M),LDF
+60,Alathur,Palakkad,Palayam Predeep,INC,40535,K. D. Prasenan,CPI(M),"74,653",Prashanth Sivan,BJP,18349,K. D. Prasenan,34118,CPI(M),LDF
+61,Chelakkara (SC),Thrissur,C. C. Sreekumar,INC,44015,K. Radhakrishnan,CPI(M),"83,415",Shajumon Vattekkad,BJP,24045,K. Radhakrishnan,39400,CPI(M),LDF
+62,Kunnamkulam,Thrissur,K. Jayasankar,INC,48901,A. C. Moideen,CPI(M),"75,532",K. K. Aneeshkumar,BJP,27833,A. C. Moideen,26631,CPI(M),LDF
+63,Guruvayoor,Thrissur,K. N. A. Khader,IUML,58804,N. K. Akbar,CPI(M),"77,072",Dileep Nair*,DSJP,6294,N. K. Akbar,18268,CPI(M),LDF
+64,Manalur,Thrissur,Vijay Hari,INC,48461,Murali Perunelly,CPI(M),"78,337",A. N. Radhakrishnan,BJP,36566,Murali Perunelly,29876,CPI(M),LDF
+65,Wadakkanchery,Thrissur,Anil Akkara,INC,65858,Xavier Chittilappilly,CPI(M),"81,026",T. S. Ullas Babu,BJP,21747,Xavier Chittilappilly,15168,CPI(M),LDF
+66,Ollur,Thrissur,Jose Valloor,INC,55151,K. Rajan,CPI,76657,B. Gopalakrishnan,BJP,22295,K. Rajan,21506,CPI,LDF
+67,Thrissur,Thrissur,Padmaja Venugopal,INC,43317,P. Balachandran,CPI,"44,263",Suresh Gopi,BJP,40457,P. Balachandran,946,CPI,LDF
+68,Nattika (SC),Thrissur,Sunil Lalur,INC,44499,C. C. Mukundan,CPI,"72,930",A. K. Lochanan,BJP,33716,C. C. Mukundan,28431,CPI,LDF
+69,Kaipamangalam,Thrissur,Sobha Subin,INC,50463,E. T. Taison,CPI,"73,161",C. D. Srilal,BDJS,9066,E. T. Taison,22698,CPI,LDF
+70,Irinjalakuda,Thrissur,Thomas Unniyadan,KC,56544,R. Bindu,CPI(M),"62,493",Jacob Thomas,BJP,34329,R. Bindu,5949,CPI(M),LDF
+71,Puthukkad,Thrissur,Sunil Anthikad,INC,46012,K. K. Ramachandran,CPI(M),"73,365",A. Nagesh,BJP,34893,K. K. Ramachandran,27353,CPI(M),LDF
+72,Chalakudy,Thrissur,T. J. Saneesh Kumar Joseph,INC,61888,Dennis Antony,KC(M),"60,831",Unnikrishnan,BDJS,17301,T. J. Saneesh Kumar Joseph,1057,INC,UDF
+73,Kodungallur,Thrissur,M. P. Jackson,INC,47564,V. R. Sunil Kumar,CPI,"71,457",Santhosh Chirakulam,BJP,28204,V. R. Sunil Kumar,23893,CPI,LDF
+74,Perumbavoor,Ernakulam,Eldhose Kunnappilly,INC,53484,Babu Joseph,KC(M),"50,585",T. P. Sindhu Mol,BJP,15135,Eldhose Kunnappilly,2899,INC,UDF
+75,Angamaly,Ernakulam,Roji M. John,INC,71562,Jose Thettayil,JD(S),"55,633",K. V. Sabu,BJP,8677,Roji M. John,15929,INC,UDF
+76,Aluva,Ernakulam,Anwar Sadath,INC,73703,Shelna Nishad,CPI(M),"54,817",M. N. Gopi,BJP,15893,Anwar Sadath,18886,INC,UDF
+77,Kalamassery,Ernakulam,V. E. Gafoor,IUML,61805,P. Rajeev,CPI(M),"77,141",P. S. Jayarajan,BDJS,11179,P. Rajeev,15336,CPI(M),LDF
+78,Paravur,Ernakulam,V. D. Satheesan,INC,82264,M. T. Nixon,CPI,"60,963",A. B. Jayaprakash,BDJS,12964,V. D. Satheesan,21301,INC,UDF
+79,Vypin,Ernakulam,Deepak Joy,INC,45657,K. N. Unnikrishnan,CPI(M),"53,858",K. S. Shyju,BJP,13540,K. N. Unnikrishnan,8201,CPI(M),LDF
+80,Kochi,Ernakulam,Tony Chammany,INC,40553,K. J. Maxi,CPI(M),54632,C.G. Rajagopal,BJP,10991,K. J. Maxi,14079,CPI(M),LDF
+81,Thripunithura,Ernakulam,K. Babu,INC,65875,M. Swaraj,CPI(M),"64,883",K. S. Radhakrishnan,BJP,23756,K. Babu,992,INC,UDF
+82,Ernakulam,Ernakulam,T. J. Vinod,INC,45390,Shaji George,Ind.,"34,960",Padmaja S. Menon,BJP,16043,T. J. Vinod,10970,INC,UDF
+83,Thrikkakara,Ernakulam,P. T. Thomas,INC,59839,J. Jacob,CPI(M),"45,510",S. Saji,BJP,15483,P. T. Thomas,14329,INC,UDF
+84,Kunnathunad (SC),Ernakulam,V. P. Sajeendran,INC,49636,P. V. Sreejin,CPI(M),"52,351",Renu Suresh,BJP,7218,P. V. Sreejin,2715,CPI(M),LDF
+85,Piravom,Ernakulam,Anoop Jacob,KC(J),85056,Sindhumol Jacob,KC(M),"59,692",M. A. Ashish,BJP,11021,Anoop Jacob,25364,KC(J),UDF
+86,Muvattupuzha,Ernakulam,Mathew Kuzhalnadan,INC,64425,Eldo Abraham,CPI,"58,264",Jiji Joseph,BJP,7527,Mathew Kuzhalnadan,6161,INC,UDF
+87,Kothamangalam,Ernakulam,Shibu Thekkumpuram,KC,57629,Antony John,CPI(M),"64,234",Shine K. Krishnan,BDJS,4638,Antony John,6605,CPI(M),LDF
+88,Devikulam (SC),Idukki,D. Kumar,INC,51201,A. Raja,CPI(M),"59,049",S. Ganeshan*,AIADMK,4717,A. Raja,7848,CPI(M),LDF
+89,Udumbanchola,Idukki,E. M. Augusthy,INC,39076,M. M. Mani,CPI(M),"77,381",Santhosh Madhavan,BDJS,7208,M. M. Mani,38305,CPI(M),LDF
+90,Thodupuzha,Idukki,P. J. Joseph,KC,67495,K. I. Antony,KC(M),"47,236",Shyam Raj P.,BJP,21263,P. J. Joseph,20259,KC,UDF
+91,Idukki,Idukki,Francis George,KC,56795,Roshy Augustine,KC(M),"62,368",Sangeetha Viswanathan,BDJS,9286,Roshy Augustine,5573,KC(M),LDF
+92,Peerumede,Idukki,Syriac Thomas,INC,58306,Vazhoor Soman,CPI,"60,141",Srinagari Rajan,BJP,7126,Vazhoor Soman,1835,CPI,LDF
+93,Pala,Kottayam,Mani C. Kappan,Ind.,69804,Jose K. Mani,KC(M),"54,418",Prameela Devi,BJP,10869,Mani C. Kappan,15386,Ind.,UDF
+94,Kaduthuruthy,Kottayam,Monce Joseph,KC,59666,Stephen George,KC(M),"55,410",Lijinlal G.,BJP,11670,Monce Joseph,4256,KC,UDF
+95,Vaikom (SC),Kottayam,P. R. Sona,INC,42266,C. K. Asha,CPI,71388,Ajitha Sabu,BDJS,11953,C. K. Asha,29122,CPI,LDF
+96,Ettumanoor,Kottayam,Pr INCe Lukose,KC,43986,V. N. Vasavan,CPI(M),"58,289",T. N. Harikumar,BJP,13746,V. N. Vasavan,14303,CPI(M),LDF
+97,Kottayam,Kottayam,Thiruvanchoor Radhakrishnan,INC,65401,K. Anilkumar,CPI(M),"46,658",Minerva Mohan,BJP,8611,Thiruvanchoor Radhakrishnan,18743,INC,UDF
+98,Puthuppally,Kottayam,Oommen Chandy,INC,63372,Jaick C. Thomas,CPI(M),"54,328",N. Hari,BJP,11694,Oommen Chandy,9044,INC,UDF
+99,Changanassery,Kottayam,V. J. Laly,KC,49366,Job Michael,KC(M),"55,425",G. Raman Nair,BJP,14491,Job Michael,6059,KC(M),LDF
+100,Kanjirappally,Kottayam,Joseph Vazhackan,INC,46596,N. Jayaraj,KC(M),"60,299",Alphons Kannanthanam,BJP,29157,N. Jayaraj,13703,KC(M),LDF
+101,Poonjar,Kottayam,Tomy Kallany,INC,34633,Sebastian Kulathunkal,KC(M),58668,M. P. Sen,BDJS,2965,Sebastian Kulathunkal,16817,KC(M),LDF
+102,Aroor,Alappuzha,Shanimol Usman,INC,66804,Daleema Jojo,CPI(M),"73,626",Aniyappan,BDJS,17215,Daleema Jojo,6802,CPI(M),LDF
+103,Cherthala,Alappuzha,S. Sarath,INC,77554,P. Prasad,CPI,"83,702",P. S. Jyothis,BDJS,14254,P. Prasad,6148,CPI,LDF
+104,Alappuzha,Alappuzha,K. S. Manoj,INC,61768,P. P. Chitharanjan,CPI(M),"73,412",R. Sandeep Vachaspathi,BJP,21650,P. P. Chitharanjan,11644,CPI(M),LDF
+105,Ambalappuzha,Alappuzha,M. Liju,INC,50240,H. Salam,CPI(M),"61,365",Anoop Antony Joseph,BJP,22389,H. Salam,11125,CPI(M),LDF
+106,Kuttanad,Alappuzha,Jacob Abraham,KC,51863,Thomas K. Thomas,NCP,"57,379",Thampi Mettuthara,BDJS,14946,Thomas K. Thomas,5516,NCP,LDF
+107,Haripad,Alappuzha,Ramesh Chennithala,INC,72768,R. Sajilal,CPI,"59,102",K. Soman,BJP,17890,Ramesh Chennithala,13666,INC,UDF
+108,Kayamkulam,Alappuzha,Aritha Babu,INC,71050,U. Prathibha,CPI(M),"77,348",Pradeep Lal,BDJS,11413,U. Prathibha,6298,CPI(M),LDF
+109,Mavelikkara (SC),Alappuzha,K. K. Shaju,INC,47026,M. S. Arun Kumar,CPI(M),"71,743",Sanju,BJP,30955,M. S. Arun Kumar,24717,CPI(M),LDF
+110,Chengannur,Alappuzha,M. Murali,INC,39309,Saji Cheriyan,CPI(M),"71,293",M. V. Gopakumar,BJP,34493,Saji Cheriyan,31984,CPI(M),LDF
+111,Thiruvalla,Pathanamthitta,Kunju Koshy Paul,KC,50757,Mathew T. Thomas,JD(S),62178,Ashokan Kulanada,BJP,22674,Mathew T. Thomas,11421,JD(S),LDF
+112,Ranni,Pathanamthitta,Ringoo Cherian,INC,43060,Pramod Narayan,KC(M),"44,774",Padmakumar K.,BDJS,16089,Pramod Narayan,1123,KC(M),LDF
+113,Aranmula,Pathanamthitta,K. Sivadasan Nair,INC,55947,Veena George,CPI(M),"74,950",Biju Mathew,BJP,29099,Veena George,19003,CPI(M),LDF
+114,Konni,Pathanamthitta,Robin Peter,INC,53810,K. U. Jenish Kumar,CPI(M),"62,318",K. Surendran,BJP,32811,K. U. Jenish Kumar,8508,CPI(M),LDF
+115,Adoor (SC),Pathanamthitta,M. G. Kannan,INC,51064,Chittayam Gopakumar,CPI,"54,026",Pandalam Prathapan,BJP,20105,Chittayam Gopakumar,2962,CPI,LDF
+116,Karunagapally,Kollam,C. R. Mahesh,INC,93932,R. Ramachandran,CPI,"64,836",Bitty Sudheer,BJP,12031,C. R. Mahesh,29096,INC,UDF
+117,Chavara,Kollam,Shibu Baby John,RSP,62186,Sujith Vijayanpillai,Ind.,"63,282",Vivek Gopan,BJP,14211,Sujith Vijayan,1096,Ind.,LDF
+118,Kunnathur (SC),Kollam,Ullas Kovoor,RSP,66646,Kovoor Kunjumon,Ind.[10],"69,436",Raji Prasad,BJP,21760,Kovoor Kunjumon,2790,Ind.[10],LDF
+119,Kottarakkara,Kollam,Resmi R.,INC,57956,K. N. Balagopal,CPI(M),"68,770",Vayakkal Soman,BJP,21223,K. N. Balagopal,10814,CPI(M),LDF
+120,Pathanapuram,Kollam,Jyothikumar Chamakkala,INC,52776,K. B. Ganesh Kumar,KC(B),"67,078",Jithin Dev,BJP,12364,K. B. Ganesh Kumar,14302,KC(B),LDF
+121,Punalur,Kollam,Abdul Rahman Randathani,IUML,43421,P. S. Supal,CPI,80428,Ayoor Murali,BJP,20069,P. S. Supal,37007,CPI,LDF
+122,Chadayamangalam,Kollam,M. M. Naseer,INC,53574,J. Chinchu Rani,CPI,"67,252",Vishnu Pattathanam,BJP,22238,J. Ch INChu Rani,13678,CPI,LDF
+123,Kundara,Kollam,P. C. Vishnunath,INC,76341,J. Mercykutty Amma,CPI(M),"71,887",Vanaja Vidyadharan,BDJS,6097,P. C. Vishnunath,4454,INC,UDF
+124,Kollam,Kollam,Bindhu Krishna,INC,56452,Mukesh,CPI(M),"58,524",M. Sunil,BJP,14252,Mukesh,2072,CPI(M),LDF
+125,Eravipuram,Kollam,Babu Divakaran,RSP,43452,M. Noushad,CPI(M),"71,573",Ranjith Raveendran,BDJS,8468,M. Noushad,28121,CPI(M),LDF
+126,Chathannoor,Kollam,Peethambara Kurup,INC,34280,G. S. Jayalal,CPI,"59,296",B. B. Gopakumar,BJP,42090,G. S. Jayalal,17206,CPI,LDF
+127,Varkala,Thiruvananthapuram,B. R. M. Shafeer,INC,50995,V. Joy,CPI(M),68816,Aji S. R. M.,BDJS,11214,V. Joy,17821,CPI(M),LDF
+128,Attingal (SC),Thiruvananthapuram,A. Sreedharan,RSP,36938,O. S. Ambika,CPI(M),"69,898",P. Sudheer,BJP,38262,O. S. Ambika,31636,CPI(M),LDF
+129,Chirayinkeezhu (SC),Thiruvananthapuram,Anup B.S.,INC,48617,V. Sasi,CPI,"62,634",Ashanath,BJP,30986,V. Sasi,14017,CPI,LDF
+130,Nedumangad,Thiruvananthapuram,P. S. Prasanth,INC,49433,G. R. Anil,CPI,"72,742",J. R. Padmakumar,BJP,26861,G. R. Anil,23309,CPI,LDF
+131,Vamanapuram,Thiruvananthapuram,Anad Jayan,INC,62895,D. K. Murali,CPI(M),"73,137",Thazhava Sahadevan,BDJS,5603,D. K. Murali,10242,CPI(M),LDF
+132,Kazhakoottam,Thiruvananthapuram,S. S. Lal,INC,32995,Kadakampally Surendran,CPI(M),"63,690",Shobha Surendran,BJP,40193,Kadakampally Surendran,23497,CPI(M),LDF
+133,Vattiyoorkavu,Thiruvananthapuram,Veena S. Nair,INC,35455,V. K. Prasanth,CPI(M),"61,111",V. V. Rajesh,BJP,39596,V. K. Prasanth,21515,CPI(M),LDF
+134,Thiruvananthapuram,Thiruvananthapuram,V. S. Sivakumar,INC,41659,Antony Raju,JKC,"48,748",Krishna Kumar,BJP,34996,Antony Raju,7089,JKC,LDF
+135,Nemom,Thiruvananthapuram,K. Muraleedharan,INC,36524,V. Sivankutty,CPI(M),"55,837",Kummanam Rajasekharan,BJP,51888,V. Sivankutty,3949,CPI(M),LDF
+136,Aruvikkara,Thiruvananthapuram,K. S. Sabarinathan,INC,61730,G. Stephen,CPI(M),"66,776",C. Sivankutty,BJP,15379,G. Stephen,5046,CPI(M),LDF
+137,Parassala,Thiruvananthapuram,Ansajitha Ressal,INC,52720,C. K. Hareendran,CPI(M),"78,548",Karamana Jayan,BJP,29850,C. K. Hareendran,25828,CPI(M),LDF
+138,Kattakada,Thiruvananthapuram,Malayainkeezhu Venugopal,INC,43062,I. B. Sathish,CPI(M),"66,293",P. K. Krishnadas,BJP,34642,I. B. Sathish,23231,CPI(M),LDF
+139,Kovalam,Thiruvananthapuram,M. Vinent,INC,74868,Neelalohithadasan Nadar,JD(S),63306,Vishnupuram Chandrasekharan,KKC,18664,M. Vincent,11562,INC,UDF
+140,Neyyattinkara,Thiruvananthapuram,R. Selvaraj,INC,51235,K. Ansalan,CPI(M),"65,497",Rajasekharan S Nair,BJP,21009,K. Ansalan,14262,CPI(M),LDF

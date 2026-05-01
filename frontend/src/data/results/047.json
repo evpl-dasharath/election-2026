@@ -1,0 +1,102 @@
+{
+  "constituency": {
+    "id": 47,
+    "number": 47,
+    "name": "THAVANUR",
+    "district": "Malappuram"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 208776,
+    "votes_polled": 162427,
+    "votes_counted": 94921,
+    "valid_votes": 93971,
+    "rounds_completed": 12,
+    "total_rounds": 16,
+    "last_updated": "2026-04-29T11:27:22.778218+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Dr. K. T. Jaleel",
+      "party": "IND (CPI(M))",
+      "alliance": "LDF",
+      "votes": 32288,
+      "percentage": 37.65,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Adv. V S Joy",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 31738,
+      "percentage": 37.01,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ravi Thelath",
+      "party": "BDJS",
+      "alliance": "NDA",
+      "votes": 20092,
+      "percentage": 23.43,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Abdul Jaleel",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 930,
+      "percentage": 1.08,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Abdul Jaleel K T S/o Moideen K T",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 717,
+      "percentage": 0.84,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "DR.K.T.JALEEL",
+      "party": "IND",
+      "votes": 70358,
+      "percentage": 46.46,
+      "is_winner": true
+    },
+    {
+      "candidate": "FIROS KUNNAMPARAMBIL",
+      "party": "INC",
+      "votes": 67794,
+      "percentage": 44.77,
+      "is_winner": false
+    },
+    {
+      "candidate": "RAMESH KOTTAYAPURATH",
+      "party": "BDJS",
+      "votes": 9914,
+      "percentage": 6.55,
+      "is_winner": false
+    },
+    {
+      "candidate": "HASSAN CHIYANOOR",
+      "party": "SDPI",
+      "votes": 1747,
+      "percentage": 1.15,
+      "is_winner": false
+    },
+    {
+      "candidate": "JALEEL S/O. MUHAMMAD KUTTY",
+      "party": "IND",
+      "votes": 308,
+      "percentage": 0.2,
+      "is_winner": false
+    }
+  ]
+}

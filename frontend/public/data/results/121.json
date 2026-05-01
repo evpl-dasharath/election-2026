@@ -1,0 +1,111 @@
+{
+  "constituency": {
+    "id": 121,
+    "number": 121,
+    "name": "PUNALUR",
+    "district": "Kollam"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 169666,
+    "votes_polled": 107547,
+    "votes_counted": 42500,
+    "valid_votes": 111563,
+    "rounds_completed": 8,
+    "total_rounds": 21,
+    "last_updated": "2026-04-30T12:08:27.312504+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Nedumoncavu Gopalakrishnan",
+      "party": "EPI",
+      "alliance": "OTH",
+      "votes": 19090,
+      "percentage": 17.11,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "K. Mahesh",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 8957,
+      "percentage": 8.03,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Jose Saranath",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 4652,
+      "percentage": 4.17,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "C. Ajaya Prasad",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 4179,
+      "percentage": 3.75,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Noushad Yusuf",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 3397,
+      "percentage": 3.04,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. B. Raghunathan Pillai",
+      "party": "TTP",
+      "alliance": "NDA",
+      "votes": 2454,
+      "percentage": 2.2,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "P S SUPAL",
+      "party": "CPI",
+      "votes": 80428,
+      "percentage": 54.99,
+      "is_winner": true
+    },
+    {
+      "candidate": "ABDURAHIMAN RANDATHANI",
+      "party": "IUML",
+      "votes": 43371,
+      "percentage": 29.66,
+      "is_winner": false
+    },
+    {
+      "candidate": "AYOOR MURALI",
+      "party": "BJP",
+      "votes": 20069,
+      "percentage": 13.72,
+      "is_winner": false
+    },
+    {
+      "candidate": "SHIBU M SKARIA",
+      "party": "IND",
+      "votes": 617,
+      "percentage": 0.42,
+      "is_winner": false
+    },
+    {
+      "candidate": "K MAHESH",
+      "party": "SUCI",
+      "votes": 407,
+      "percentage": 0.28,
+      "is_winner": false
+    }
+  ]
+}

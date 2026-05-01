@@ -1,0 +1,93 @@
+{
+  "constituency": {
+    "id": 112,
+    "number": 112,
+    "name": "RANNI",
+    "district": "Pathanamthitta"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 203506,
+    "votes_polled": 133532,
+    "votes_counted": 46009,
+    "valid_votes": 138028,
+    "rounds_completed": 7,
+    "total_rounds": 21,
+    "last_updated": "2026-04-30T12:06:09.312642+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Thomas K. Samuel",
+      "party": "TTP",
+      "alliance": "NDA",
+      "votes": 24885,
+      "percentage": 18.03,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Adv. Pramod Narayan",
+      "party": "KC(M)",
+      "alliance": "UDF",
+      "votes": 10957,
+      "percentage": 7.94,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Pazhakulam Madhu",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 6365,
+      "percentage": 4.61,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sreehari K P",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 4471,
+      "percentage": 3.24,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Adv. Pramod Narayan",
+      "party": "KC(M)",
+      "votes": 52669,
+      "percentage": 41.22,
+      "is_winner": true
+    },
+    {
+      "candidate": "Rinku Cherian",
+      "party": "INC",
+      "votes": 51384,
+      "percentage": 40.21,
+      "is_winner": false
+    },
+    {
+      "candidate": "K. Padmakumar",
+      "party": "BDJS",
+      "votes": 19587,
+      "percentage": 15.33,
+      "is_winner": false
+    },
+    {
+      "candidate": "Adv. Anumol N.",
+      "party": "BSP",
+      "votes": 1159,
+      "percentage": 0.91,
+      "is_winner": false
+    },
+    {
+      "candidate": "Asharaf Pezhumkattil",
+      "party": "SDPI",
+      "votes": 886,
+      "percentage": 0.69,
+      "is_winner": false
+    }
+  ]
+}

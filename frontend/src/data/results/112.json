@@ -1,0 +1,93 @@
+{
+  "constituency": {
+    "id": 112,
+    "number": 112,
+    "name": "RANNI",
+    "district": "Pathanamthitta"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 176015,
+    "votes_polled": 121415,
+    "votes_counted": 111428,
+    "valid_votes": 110313,
+    "rounds_completed": 13,
+    "total_rounds": 14,
+    "last_updated": "2026-04-29T11:27:23.076484+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Adv. Pramod Narayan",
+      "party": "KC(M)",
+      "alliance": "UDF",
+      "votes": 47252,
+      "percentage": 45.46,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Adv. Pazhakulam Madhu",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 39383,
+      "percentage": 37.89,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Thomas K. Samuel",
+      "party": "TTP",
+      "alliance": "NDA",
+      "votes": 16733,
+      "percentage": 16.1,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sreehari K P",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 583,
+      "percentage": 0.56,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Adv. Pramod Narayan",
+      "party": "KC(M)",
+      "votes": 52669,
+      "percentage": 41.22,
+      "is_winner": true
+    },
+    {
+      "candidate": "Rinku Cherian",
+      "party": "INC",
+      "votes": 51384,
+      "percentage": 40.21,
+      "is_winner": false
+    },
+    {
+      "candidate": "K. Padmakumar",
+      "party": "BDJS",
+      "votes": 19587,
+      "percentage": 15.33,
+      "is_winner": false
+    },
+    {
+      "candidate": "Adv. Anumol N.",
+      "party": "BSP",
+      "votes": 1159,
+      "percentage": 0.91,
+      "is_winner": false
+    },
+    {
+      "candidate": "Asharaf Pezhumkattil",
+      "party": "SDPI",
+      "votes": 886,
+      "percentage": 0.69,
+      "is_winner": false
+    }
+  ]
+}

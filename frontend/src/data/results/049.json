@@ -1,0 +1,138 @@
+{
+  "constituency": {
+    "id": 49,
+    "number": 49,
+    "name": "THRITHALA",
+    "district": "Palakkad"
+  },
+  "live_result": {
+    "status": "RESULT_DECLARED",
+    "total_electors": 203700,
+    "votes_polled": 159660,
+    "votes_counted": 139308,
+    "valid_votes": 137914,
+    "rounds_completed": 12,
+    "total_rounds": 12,
+    "last_updated": "2026-04-29T11:27:22.788609+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "M. B. Rajesh",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 59020,
+      "percentage": 44.33,
+      "is_winner": true,
+      "is_leading": false
+    },
+    {
+      "name": "V. Unnikrishnan Master",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 47518,
+      "percentage": 35.69,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "V. T. Balram",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 22811,
+      "percentage": 17.13,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Rajesh S/o Ramankutty",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 1341,
+      "percentage": 1.01,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Abbas",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 1229,
+      "percentage": 0.92,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv Keerthi Jayanandhan",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 581,
+      "percentage": 0.44,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "T T Balaraman",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 252,
+      "percentage": 0.19,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Balaraman",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 230,
+      "percentage": 0.17,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Shaheer Chalippuram",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 154,
+      "percentage": 0.12,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "M. B RAJESH",
+      "party": "CPI(M)",
+      "votes": 69814,
+      "percentage": 45.84,
+      "is_winner": true
+    },
+    {
+      "candidate": "V .T BALRAM",
+      "party": "INC",
+      "votes": 66798,
+      "percentage": 43.86,
+      "is_winner": false
+    },
+    {
+      "candidate": "ADV:SANKU T DAS",
+      "party": "BJP",
+      "votes": 12851,
+      "percentage": 8.44,
+      "is_winner": false
+    },
+    {
+      "candidate": "ABDUL NAZAR M K",
+      "party": "SDPI",
+      "votes": 1582,
+      "percentage": 1.04,
+      "is_winner": false
+    },
+    {
+      "candidate": "RAJAGOPAL THRITHALA",
+      "party": "BSP",
+      "votes": 333,
+      "percentage": 0.22,
+      "is_winner": false
+    }
+  ]
+}

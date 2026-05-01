@@ -1,0 +1,156 @@
+{
+  "constituency": {
+    "id": 134,
+    "number": 134,
+    "name": "THIRUVANANTHAPURAM",
+    "district": "Thiruvananthapuram"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 158545,
+    "votes_polled": 118734,
+    "votes_counted": 25526,
+    "valid_votes": 25270,
+    "rounds_completed": 3,
+    "total_rounds": 16,
+    "last_updated": "2026-04-29T11:27:23.176704+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Karamana Jayan",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 9580,
+      "percentage": 38.09,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Sudheer Karamana",
+      "party": "IND (CPI(M))",
+      "alliance": "LDF",
+      "votes": 8581,
+      "percentage": 34.12,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "C. P. John",
+      "party": "CMP",
+      "alliance": "UDF",
+      "votes": 4473,
+      "percentage": 17.79,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Manomohan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 482,
+      "percentage": 1.92,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "A Saboora",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 444,
+      "percentage": 1.77,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Sen",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 411,
+      "percentage": 1.63,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Karthika Devi M",
+      "party": "JRP",
+      "alliance": "OTH",
+      "votes": 342,
+      "percentage": 1.36,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "P. K. Pradeep Kumar",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 310,
+      "percentage": 1.23,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Suresh Kumar",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 235,
+      "percentage": 0.93,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Samin Sathyadas",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 179,
+      "percentage": 0.71,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Bindhu Menon L R",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 112,
+      "percentage": 0.45,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Adv.ANTONY RAJU",
+      "party": "JKC",
+      "votes": 48748,
+      "percentage": 38.01,
+      "is_winner": true
+    },
+    {
+      "candidate": "V .S .Sivakumar",
+      "party": "INC",
+      "votes": 41659,
+      "percentage": 32.49,
+      "is_winner": false
+    },
+    {
+      "candidate": "KRISHNAKUMAR G",
+      "party": "BJP",
+      "votes": 34996,
+      "percentage": 27.29,
+      "is_winner": false
+    },
+    {
+      "candidate": "ABHILASH VADAKKAN",
+      "party": "IND",
+      "votes": 436,
+      "percentage": 0.34,
+      "is_winner": false
+    },
+    {
+      "candidate": "A .Saboora",
+      "party": "SUCI",
+      "votes": 366,
+      "percentage": 0.29,
+      "is_winner": false
+    }
+  ]
+}

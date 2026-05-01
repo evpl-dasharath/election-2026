@@ -1,0 +1,111 @@
+{
+  "constituency": {
+    "id": 15,
+    "number": 15,
+    "name": "MATTANNUR",
+    "district": "Kannur"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 192591,
+    "votes_polled": 127071,
+    "votes_counted": 64212,
+    "valid_votes": 128424,
+    "rounds_completed": 12,
+    "total_rounds": 24,
+    "last_updated": "2026-04-30T12:00:08.312788+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Basheer Punnad",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 27742,
+      "percentage": 21.6,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Chandran Thillankeri",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 19995,
+      "percentage": 15.57,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Chandran Thengalath",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 6218,
+      "percentage": 4.84,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "V. K. Sanoj",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 4379,
+      "percentage": 3.41,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Biju Elakkuzhi",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 3711,
+      "percentage": 2.89,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sanoj",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 3363,
+      "percentage": 2.62,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "K K SHAILAJA TEACHER",
+      "party": "CPI(M)",
+      "votes": 96129,
+      "percentage": 61.97,
+      "is_winner": true
+    },
+    {
+      "candidate": "ILLIKKAL AUGUSTHY",
+      "party": "RSP",
+      "votes": 35166,
+      "percentage": 22.67,
+      "is_winner": false
+    },
+    {
+      "candidate": "BIJU ELAKKUZHI",
+      "party": "BJP",
+      "votes": 18223,
+      "percentage": 11.75,
+      "is_winner": false
+    },
+    {
+      "candidate": "RAFEEK KEECHERY",
+      "party": "SDPI",
+      "votes": 4201,
+      "percentage": 2.71,
+      "is_winner": false
+    },
+    {
+      "candidate": "AGUSTHY N A",
+      "party": "IND",
+      "votes": 619,
+      "percentage": 0.4,
+      "is_winner": false
+    }
+  ]
+}

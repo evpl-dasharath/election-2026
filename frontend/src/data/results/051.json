@@ -1,0 +1,93 @@
+{
+  "constituency": {
+    "id": 51,
+    "number": 51,
+    "name": "SHORNUR",
+    "district": "Palakkad"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 199620,
+    "votes_polled": 157340,
+    "votes_counted": 9395,
+    "valid_votes": 9301,
+    "rounds_completed": 1,
+    "total_rounds": 14,
+    "last_updated": "2026-04-29T11:27:22.801056+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "P. Mammikkutty",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 3798,
+      "percentage": 42.03,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "P. Harigovindan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 3052,
+      "percentage": 33.78,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Sanku T. Das",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 2036,
+      "percentage": 22.53,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Aboobacker",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 150,
+      "percentage": 1.66,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "P. MAMMIKUTTY",
+      "party": "CPI(M)",
+      "votes": 74400,
+      "percentage": 48.98,
+      "is_winner": true
+    },
+    {
+      "candidate": "FIROZ BABU.T.H",
+      "party": "INC",
+      "votes": 37726,
+      "percentage": 24.83,
+      "is_winner": false
+    },
+    {
+      "candidate": "SANDEEP VARIER",
+      "party": "BJP",
+      "votes": 36973,
+      "percentage": 24.34,
+      "is_winner": false
+    },
+    {
+      "candidate": "MUHAMMAD MUSTHAFA",
+      "party": "SDPI",
+      "votes": 1251,
+      "percentage": 0.82,
+      "is_winner": false
+    },
+    {
+      "candidate": "AYYAPPAN KUTTY. T.C.",
+      "party": "BSP",
+      "votes": 883,
+      "percentage": 0.58,
+      "is_winner": false
+    }
+  ]
+}

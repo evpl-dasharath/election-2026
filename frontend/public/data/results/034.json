@@ -1,0 +1,111 @@
+{
+  "constituency": {
+    "id": 34,
+    "number": 34,
+    "name": "ERANAD",
+    "district": "Malappuram"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 170561,
+    "votes_polled": 109454,
+    "votes_counted": 32801,
+    "valid_votes": 112463,
+    "rounds_completed": 7,
+    "total_rounds": 24,
+    "last_updated": "2026-04-30T12:09:51.321463+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Yusuf Chemmala",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 8395,
+      "percentage": 7.46,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "P. K. Basheer",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 7241,
+      "percentage": 6.44,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. N. Sreeprakash",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 4840,
+      "percentage": 4.3,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Shafeer Kizhisseri",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 4673,
+      "percentage": 4.16,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Mujeeb Rahman",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 4230,
+      "percentage": 3.76,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Krishnan Thachannan",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 3701,
+      "percentage": 3.29,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "P.K. Basheer",
+      "party": "IUML",
+      "votes": 78076,
+      "percentage": 54.49,
+      "is_winner": true
+    },
+    {
+      "candidate": "K.T. Abdurahiman",
+      "party": "IND",
+      "votes": 55530,
+      "percentage": 38.76,
+      "is_winner": false
+    },
+    {
+      "candidate": "Adv. C. Dinesh",
+      "party": "BJP",
+      "votes": 6683,
+      "percentage": 4.66,
+      "is_winner": false
+    },
+    {
+      "candidate": "Velayudhan",
+      "party": "BSP",
+      "votes": 1247,
+      "percentage": 0.87,
+      "is_winner": false
+    },
+    {
+      "candidate": "Adv. Sebastian",
+      "party": "IND",
+      "votes": 1100,
+      "percentage": 0.77,
+      "is_winner": false
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "constituency": {
+    "id": 82,
+    "number": 82,
+    "name": "ERANAKULAM",
+    "district": "Ernakulam"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 212262,
+    "votes_polled": 145306,
+    "votes_counted": 56460,
+    "valid_votes": 148209,
+    "rounds_completed": 8,
+    "total_rounds": 21,
+    "last_updated": "2026-04-30T12:01:31.312537+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Moses Henry Motha",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 24677,
+      "percentage": 16.65,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Ashokan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 9844,
+      "percentage": 6.64,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "T. J. Vinod",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 9439,
+      "percentage": 6.37,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "P.R. Sivasankar",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 7962,
+      "percentage": 5.37,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sabu George",
+      "party": "Indian Socialist Jan",
+      "alliance": "LDF",
+      "votes": 5269,
+      "percentage": 3.56,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "T. J. Vinod",
+      "party": "INC",
+      "votes": 45930,
+      "percentage": 41.72,
+      "is_winner": true
+    },
+    {
+      "candidate": "SHAJI GEORGE PRANATHA",
+      "party": "IND",
+      "votes": 34960,
+      "percentage": 31.75,
+      "is_winner": false
+    },
+    {
+      "candidate": "Padmaja S. Menon",
+      "party": "BJP",
+      "votes": 16043,
+      "percentage": 14.57,
+      "is_winner": false
+    },
+    {
+      "candidate": "Sujith C. Sukumaran",
+      "party": "IND",
+      "votes": 1042,
+      "percentage": 0.95,
+      "is_winner": false
+    },
+    {
+      "candidate": "Shaji George Plakkil",
+      "party": "IND",
+      "votes": 305,
+      "percentage": 0.28,
+      "is_winner": false
+    }
+  ]
+}

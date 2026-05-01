@@ -1,0 +1,86 @@
+{
+  "constituency": {
+    "id": 6,
+    "number": 6,
+    "name": "PAYYANNUR",
+    "district": "Kannur"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 249733,
+    "votes_polled": 167505,
+    "votes_counted": 31121,
+    "valid_votes": 171166,
+    "rounds_completed": 4,
+    "total_rounds": 22,
+    "last_updated": "2026-04-30T12:14:50.312622+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "V. Kunjikrishnan",
+      "party": "IND (RSP)",
+      "alliance": "UDF",
+      "votes": 14371,
+      "percentage": 8.4,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "A. P. Gangadharan",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 5944,
+      "percentage": 3.47,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sandeep V. K.",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 5035,
+      "percentage": 2.94,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "T. I. Madhusoodanan",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 4972,
+      "percentage": 2.9,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "T I MADHUSOODANAN",
+      "party": "CPI(M)",
+      "votes": 93695,
+      "percentage": 62.49,
+      "is_winner": true
+    },
+    {
+      "candidate": "M PRADEEP KUMAR",
+      "party": "INC",
+      "votes": 43915,
+      "percentage": 29.29,
+      "is_winner": false
+    },
+    {
+      "candidate": "Adv K K SREEDHARAN",
+      "party": "BJP",
+      "votes": 11308,
+      "percentage": 7.54,
+      "is_winner": false
+    },
+    {
+      "candidate": "ABHILASH K V",
+      "party": "IND",
+      "votes": 341,
+      "percentage": 0.23,
+      "is_winner": false
+    }
+  ]
+}

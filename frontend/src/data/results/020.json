@@ -1,0 +1,129 @@
+{
+  "constituency": {
+    "id": 20,
+    "number": 20,
+    "name": "VADAKARA",
+    "district": "Kozhikode"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 176832,
+    "votes_polled": 140599,
+    "votes_counted": 81048,
+    "valid_votes": 80237,
+    "rounds_completed": 8,
+    "total_rounds": 13,
+    "last_updated": "2026-04-29T11:27:22.626355+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "K. K. Rema",
+      "party": "RMPI",
+      "alliance": "UDF",
+      "votes": 27896,
+      "percentage": 71.21,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Adv. K. Dileep",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 9153,
+      "percentage": 23.36,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Rama T P W/o Ashokan P K",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 621,
+      "percentage": 1.59,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Shamseer Chombala",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 535,
+      "percentage": 1.37,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "M. K. Bhaskaran",
+      "party": "RJD",
+      "alliance": "OTH",
+      "votes": 337,
+      "percentage": 0.86,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ramakrishnan Vattakandi",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 329,
+      "percentage": 0.84,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Rama W/o Vijayan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 173,
+      "percentage": 0.44,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Bhaskaran K K S/o Kelappan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 133,
+      "percentage": 0.34,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "K.K.REMA",
+      "party": "RMPOI",
+      "votes": 65093,
+      "percentage": 47.63,
+      "is_winner": true
+    },
+    {
+      "candidate": "MANAYATH CHANDRAN",
+      "party": "LJD",
+      "votes": 57602,
+      "percentage": 42.15,
+      "is_winner": false
+    },
+    {
+      "candidate": "ADVOCATE M. RAJESH KUMAR",
+      "party": "BJP",
+      "votes": 10225,
+      "percentage": 7.48,
+      "is_winner": false
+    },
+    {
+      "candidate": "MUSTHAFA PALERI",
+      "party": "SDPI",
+      "votes": 2836,
+      "percentage": 2.08,
+      "is_winner": false
+    },
+    {
+      "candidate": "GANGADHARAN MADAPPALLY",
+      "party": "IND",
+      "votes": 186,
+      "percentage": 0.14,
+      "is_winner": false
+    }
+  ]
+}

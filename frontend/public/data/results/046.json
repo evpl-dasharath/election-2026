@@ -1,0 +1,111 @@
+{
+  "constituency": {
+    "id": 46,
+    "number": 46,
+    "name": "KOTTAKKAL",
+    "district": "Malappuram"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 206112,
+    "votes_polled": 149483,
+    "votes_counted": 38048,
+    "valid_votes": 152193,
+    "rounds_completed": 5,
+    "total_rounds": 20,
+    "last_updated": "2026-04-30T12:12:14.312610+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Mohamed Rafi",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 15987,
+      "percentage": 10.5,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Prof. K. K. Abid Hussain Thangal",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 10124,
+      "percentage": 6.65,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. Preethi",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 3296,
+      "percentage": 2.17,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Majeed Marakkara",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 3229,
+      "percentage": 2.12,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Preethi Kp",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 2827,
+      "percentage": 1.86,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Subrahmanian Chunkapally",
+      "party": "BDJS",
+      "alliance": "NDA",
+      "votes": 2650,
+      "percentage": 1.74,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "PROF. ABID HUSSAIN THANGAL",
+      "party": "IUML",
+      "votes": 81700,
+      "percentage": 51.08,
+      "is_winner": true
+    },
+    {
+      "candidate": "N. A. MUHAMMED KUTTY (MAMMUTY)",
+      "party": "NCP",
+      "votes": 65112,
+      "percentage": 40.71,
+      "is_winner": false
+    },
+    {
+      "candidate": "P. P. GANESAN",
+      "party": "BJP",
+      "votes": 10796,
+      "percentage": 6.75,
+      "is_winner": false
+    },
+    {
+      "candidate": "MOHAMED KUTTY",
+      "party": "IND",
+      "votes": 675,
+      "percentage": 0.42,
+      "is_winner": false
+    },
+    {
+      "candidate": "BINDHU DEVARAJAN",
+      "party": "IND",
+      "votes": 481,
+      "percentage": 0.3,
+      "is_winner": false
+    }
+  ]
+}

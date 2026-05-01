@@ -1,0 +1,111 @@
+{
+  "constituency": {
+    "id": 5,
+    "number": 5,
+    "name": "TRIKARIPUR",
+    "district": "Kasaragod"
+  },
+  "live_result": {
+    "status": "RESULT_DECLARED",
+    "total_electors": 210090,
+    "votes_polled": 167315,
+    "votes_counted": 108598,
+    "valid_votes": 107512,
+    "rounds_completed": 24,
+    "total_rounds": 15,
+    "last_updated": "2026-04-30T04:07:47.129423+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Ravi Kulangara",
+      "party": "TTP",
+      "alliance": "NDA",
+      "votes": 41212,
+      "percentage": 39.91,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "V. P. P. Mustafa",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 40052,
+      "percentage": 38.79,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sandeep Varier",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 20554,
+      "percentage": 19.91,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sandeep Elatt",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 645,
+      "percentage": 0.62,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Musthafa V P",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 606,
+      "percentage": 0.59,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Musthafa P P",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 193,
+      "percentage": 0.19,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "M RAJAGOPALAN",
+      "party": "CPI(M)",
+      "votes": 86151,
+      "percentage": 53.71,
+      "is_winner": true
+    },
+    {
+      "candidate": "M P JOSEPH",
+      "party": "KEC",
+      "votes": 60014,
+      "percentage": 37.41,
+      "is_winner": false
+    },
+    {
+      "candidate": "SHIBIN T V",
+      "party": "BJP",
+      "votes": 10961,
+      "percentage": 6.83,
+      "is_winner": false
+    },
+    {
+      "candidate": "LIYAKATHALI P",
+      "party": "SDPI",
+      "votes": 1211,
+      "percentage": 0.75,
+      "is_winner": false
+    },
+    {
+      "candidate": "T MAHESH MASTER",
+      "party": "WPOI",
+      "votes": 817,
+      "percentage": 0.51,
+      "is_winner": false
+    }
+  ]
+}

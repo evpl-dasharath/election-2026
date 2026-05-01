@@ -1,0 +1,147 @@
+{
+  "constituency": {
+    "id": 64,
+    "number": 64,
+    "name": "MANALUR",
+    "district": "Thrissur"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 248389,
+    "votes_polled": 184630,
+    "votes_counted": 49265,
+    "valid_votes": 188852,
+    "rounds_completed": 6,
+    "total_rounds": 23,
+    "last_updated": "2026-04-30T12:14:46.327863+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "T. N. Prathapan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 14972,
+      "percentage": 7.93,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Chandran P V",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 5309,
+      "percentage": 2.81,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Dileef Abdul Khader",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 4827,
+      "percentage": 2.56,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sujith",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 4749,
+      "percentage": 2.51,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Prathapan Divakaran",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 4220,
+      "percentage": 2.23,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. K. Aneesh Kumar",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 3945,
+      "percentage": 2.09,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Raveendranath K",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 3900,
+      "percentage": 2.07,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sivaprasad Gandhi K M",
+      "party": "IGP",
+      "alliance": "OTH",
+      "votes": 3776,
+      "percentage": 2.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "C. Ravindranath",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 2916,
+      "percentage": 1.54,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Unnikrishnan C. S.",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 1632,
+      "percentage": 0.86,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "MURALI PERUNELLY",
+      "party": "CPI(M)",
+      "votes": 78337,
+      "percentage": 46.77,
+      "is_winner": true
+    },
+    {
+      "candidate": "VIJAY HARI",
+      "party": "INC",
+      "votes": 48461,
+      "percentage": 28.93,
+      "is_winner": false
+    },
+    {
+      "candidate": "A.N. RADHAKRISHNAN",
+      "party": "BJP",
+      "votes": 36566,
+      "percentage": 21.83,
+      "is_winner": false
+    },
+    {
+      "candidate": "P.FAISAL IBRAHIM",
+      "party": "SDPI",
+      "votes": 2294,
+      "percentage": 1.37,
+      "is_winner": false
+    },
+    {
+      "candidate": "DEVARAJAN MOOKOLA",
+      "party": "IND",
+      "votes": 660,
+      "percentage": 0.39,
+      "is_winner": false
+    }
+  ]
+}

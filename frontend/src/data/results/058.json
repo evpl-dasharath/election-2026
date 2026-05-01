@@ -1,0 +1,111 @@
+{
+  "constituency": {
+    "id": 58,
+    "number": 58,
+    "name": "CHITTUR",
+    "district": "Palakkad"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 172015,
+    "votes_polled": 145576,
+    "votes_counted": 21719,
+    "valid_votes": 21501,
+    "rounds_completed": 2,
+    "total_rounds": 14,
+    "last_updated": "2026-04-29T11:27:22.830313+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Adv. Sumesh Achuthan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 9283,
+      "percentage": 43.18,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Pranesh Rajendran",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 8294,
+      "percentage": 38.58,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv V. Murugadas",
+      "party": "Indian Socialist Jan",
+      "alliance": "LDF",
+      "votes": 3616,
+      "percentage": 16.82,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sumesh C",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 308,
+      "percentage": 1.43,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Murugadas. P.  S/o Pazhaniappa Mudaliyaar",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "N S K Puram Sasikumar",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "K. KRISHNANKUTTY",
+      "party": "JD(S)",
+      "votes": 84672,
+      "percentage": 55.38,
+      "is_winner": true
+    },
+    {
+      "candidate": "Adv. SUMESH ACHUTHAN",
+      "party": "INC",
+      "votes": 50794,
+      "percentage": 33.22,
+      "is_winner": false
+    },
+    {
+      "candidate": "V. NATESAN",
+      "party": "BJP",
+      "votes": 14458,
+      "percentage": 9.46,
+      "is_winner": false
+    },
+    {
+      "candidate": "A. CHANDRAN",
+      "party": "BSP",
+      "votes": 918,
+      "percentage": 0.6,
+      "is_winner": false
+    },
+    {
+      "candidate": "PRAMEELA. K",
+      "party": "IND",
+      "votes": 552,
+      "percentage": 0.36,
+      "is_winner": false
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "constituency": {
+    "id": 39,
+    "number": 39,
+    "name": "MANKADA",
+    "district": "Malappuram"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 192411,
+    "votes_polled": 124440,
+    "votes_counted": 33819,
+    "valid_votes": 128513,
+    "rounds_completed": 5,
+    "total_rounds": 19,
+    "last_updated": "2026-04-30T12:10:13.316688+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Kunnath Mohamed S/o Ali Haji",
+      "party": "IND (CPI(M))",
+      "alliance": "LDF",
+      "votes": 15560,
+      "percentage": 12.11,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Lijoy Paul",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 13161,
+      "percentage": 10.24,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Kunnath Muhammed",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 2778,
+      "percentage": 2.16,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Manjalamkuzhi Ali",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 2360,
+      "percentage": 1.84,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "MANJALAMKUZHI ALI",
+      "party": "IUML",
+      "votes": 83231,
+      "percentage": 49.46,
+      "is_winner": true
+    },
+    {
+      "candidate": "Adv. T.K. RASHEEDALI",
+      "party": "CPI(M)",
+      "votes": 76985,
+      "percentage": 45.75,
+      "is_winner": false
+    },
+    {
+      "candidate": "SAJESH ELAYIL",
+      "party": "BJP",
+      "votes": 6641,
+      "percentage": 3.95,
+      "is_winner": false
+    },
+    {
+      "candidate": "ALI S/o MUSTHAFA",
+      "party": "IND",
+      "votes": 350,
+      "percentage": 0.21,
+      "is_winner": false
+    },
+    {
+      "candidate": "ALI S/o ALAVI HAJI",
+      "party": "IND",
+      "votes": 193,
+      "percentage": 0.11,
+      "is_winner": false
+    }
+  ]
+}

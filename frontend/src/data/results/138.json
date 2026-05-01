@@ -1,0 +1,102 @@
+{
+  "constituency": {
+    "id": 138,
+    "number": 138,
+    "name": "KATTAKKADA",
+    "district": "Thiruvananthapuram"
+  },
+  "live_result": {
+    "status": "NOT_STARTED",
+    "total_electors": 177094,
+    "votes_polled": 142950,
+    "votes_counted": 0,
+    "valid_votes": 0,
+    "rounds_completed": 0,
+    "total_rounds": 13,
+    "last_updated": "2026-04-29T11:27:23.206356+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Adv. I. B. Satheesh",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "M. R. Baiju",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "P. K. Krishnadas",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Jayakumar Theertham",
+      "party": "CPIML Liberation",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Nobil M. D",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Adv I B SATHEESH",
+      "party": "CPI(M)",
+      "votes": 66293,
+      "percentage": 45.49,
+      "is_winner": true
+    },
+    {
+      "candidate": "MALAYINKEEZHU VENUGOPAL",
+      "party": "INC",
+      "votes": 43062,
+      "percentage": 29.55,
+      "is_winner": false
+    },
+    {
+      "candidate": "P.K KRISHNADAS",
+      "party": "BJP",
+      "votes": 34642,
+      "percentage": 23.77,
+      "is_winner": false
+    },
+    {
+      "candidate": "KANDALA SURESH",
+      "party": "BSP",
+      "votes": 628,
+      "percentage": 0.43,
+      "is_winner": false
+    },
+    {
+      "candidate": "SREEKALA NADAR",
+      "party": "IND",
+      "votes": 266,
+      "percentage": 0.18,
+      "is_winner": false
+    }
+  ]
+}

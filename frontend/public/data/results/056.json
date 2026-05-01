@@ -1,0 +1,120 @@
+{
+  "constituency": {
+    "id": 56,
+    "number": 56,
+    "name": "PALAKKAD",
+    "district": "Palakkad"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 224942,
+    "votes_polled": 148080,
+    "votes_counted": 44636,
+    "valid_votes": 153039,
+    "rounds_completed": 7,
+    "total_rounds": 24,
+    "last_updated": "2026-04-30T12:09:08.312914+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Udayan Sukumaran",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 18195,
+      "percentage": 11.89,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Ramesh Pisharody",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 5349,
+      "percentage": 3.5,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Krishnankutty K",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 5286,
+      "percentage": 3.45,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Shamsudheen B",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 5189,
+      "percentage": 3.39,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "N. M. R. Razaq",
+      "party": "IND (CPI(M))",
+      "alliance": "LDF",
+      "votes": 5045,
+      "percentage": 3.3,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sobha Surendran",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 3690,
+      "percentage": 2.41,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Reghu M",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 3098,
+      "percentage": 2.02,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "SHAFI PARAMBIL",
+      "party": "INC",
+      "votes": 54079,
+      "percentage": 38.06,
+      "is_winner": true
+    },
+    {
+      "candidate": "E. SREEDHARAN",
+      "party": "BJP",
+      "votes": 50220,
+      "percentage": 35.34,
+      "is_winner": false
+    },
+    {
+      "candidate": "Adv. C.P. PROMOD",
+      "party": "CPI(M)",
+      "votes": 36433,
+      "percentage": 25.64,
+      "is_winner": false
+    },
+    {
+      "candidate": "E.T.K. VALSAN",
+      "party": "BSP",
+      "votes": 359,
+      "percentage": 0.25,
+      "is_winner": false
+    },
+    {
+      "candidate": "JAYAPRAKASH. J",
+      "party": "SMFB",
+      "votes": 221,
+      "percentage": 0.16,
+      "is_winner": false
+    }
+  ]
+}

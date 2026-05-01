@@ -1,0 +1,111 @@
+{
+  "constituency": {
+    "id": 59,
+    "number": 59,
+    "name": "NENMARA",
+    "district": "Palakkad"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 181690,
+    "votes_polled": 146987,
+    "votes_counted": 105220,
+    "valid_votes": 104167,
+    "rounds_completed": 11,
+    "total_rounds": 13,
+    "last_updated": "2026-04-29T11:27:22.836697+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "A. Thankappan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 42839,
+      "percentage": 41.36,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "K. Preman",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 34489,
+      "percentage": 33.3,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "A. N. Anurag",
+      "party": "BDJS",
+      "alliance": "NDA",
+      "votes": 24356,
+      "percentage": 23.52,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Anvar Sadiq",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 947,
+      "percentage": 0.91,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Radhakrishnan K",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 663,
+      "percentage": 0.64,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ramakrishna Sankaranarayanan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 272,
+      "percentage": 0.26,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "K. Babu",
+      "party": "CPI(M)",
+      "votes": 80145,
+      "percentage": 52.89,
+      "is_winner": true
+    },
+    {
+      "candidate": "C.N.Vijayakrishnan",
+      "party": "CMPKSC",
+      "votes": 51441,
+      "percentage": 33.95,
+      "is_winner": false
+    },
+    {
+      "candidate": "Anurag .A.N",
+      "party": "BDJS",
+      "votes": 16666,
+      "percentage": 11.0,
+      "is_winner": false
+    },
+    {
+      "candidate": "Prakash.C",
+      "party": "BSP",
+      "votes": 1350,
+      "percentage": 0.89,
+      "is_winner": false
+    },
+    {
+      "candidate": "Babu S/o Kunchu",
+      "party": "IND",
+      "votes": 863,
+      "percentage": 0.57,
+      "is_winner": false
+    }
+  ]
+}

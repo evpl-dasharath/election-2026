@@ -1,0 +1,104 @@
+{
+  "constituency": {
+    "id": 52,
+    "number": 52,
+    "name": "OTTAPALAM",
+    "district": "Palakkad"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 209627,
+    "votes_polled": 166318,
+    "votes_counted": 21714,
+    "valid_votes": 21496,
+    "rounds_completed": 2,
+    "total_rounds": 13,
+    "last_updated": "2026-04-29T11:27:22.804701+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "P. K. Sasi",
+      "party": "IND (INC)",
+      "alliance": "UDF",
+      "votes": 9504,
+      "percentage": 44.21,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Major Ravi",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 6885,
+      "percentage": 32.03,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. K. Premkumar",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 4704,
+      "percentage": 21.88,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K.P Rajeesh",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 403,
+      "percentage": 1.87,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Muhammed Asharaf V.H",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sasi P.K S/o Krishnankutty",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Adv. K. PREMKUMAR",
+      "party": "CPI(M)",
+      "votes": 74859,
+      "percentage": 46.45,
+      "is_winner": true
+    },
+    {
+      "candidate": "DOCTOR P. SARIN",
+      "party": "INC",
+      "votes": 59707,
+      "percentage": 37.05,
+      "is_winner": false
+    },
+    {
+      "candidate": "P. VENUGOPALAN",
+      "party": "BJP",
+      "votes": 25056,
+      "percentage": 15.55,
+      "is_winner": false
+    },
+    {
+      "candidate": "P.P. SIVAN",
+      "party": "BSP",
+      "votes": 672,
+      "percentage": 0.42,
+      "is_winner": false
+    }
+  ]
+}

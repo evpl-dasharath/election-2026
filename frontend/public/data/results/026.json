@@ -1,0 +1,129 @@
+{
+  "constituency": {
+    "id": 26,
+    "number": 26,
+    "name": "ELATHUR",
+    "district": "Kozhikode"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 206025,
+    "votes_polled": 144596,
+    "votes_counted": 39223,
+    "valid_votes": 150358,
+    "rounds_completed": 6,
+    "total_rounds": 23,
+    "last_updated": "2026-04-30T12:13:18.312602+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "A. K. Saseendran",
+      "party": "NCP(SP)",
+      "alliance": "LDF",
+      "votes": 7075,
+      "percentage": 4.71,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "V.K. Saseendran",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 6764,
+      "percentage": 4.5,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "P.K.Saseendran",
+      "party": "NCP",
+      "alliance": "LDF",
+      "votes": 5134,
+      "percentage": 3.41,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Abdul Basith Atholi",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 5061,
+      "percentage": 3.37,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "P.M.Sreekumar",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 5037,
+      "percentage": 3.35,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "T. Devadas",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 4738,
+      "percentage": 3.15,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Vidya Balakrishnan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 3238,
+      "percentage": 2.15,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv.Sumin.S.Nedungadan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 2167,
+      "percentage": 1.44,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "A .K Saseendran",
+      "party": "NCP",
+      "votes": 83639,
+      "percentage": 50.89,
+      "is_winner": true
+    },
+    {
+      "candidate": "Zulphikar Mayoori",
+      "party": "IND",
+      "votes": 45137,
+      "percentage": 27.46,
+      "is_winner": false
+    },
+    {
+      "candidate": "T P Jayachandran Master",
+      "party": "BJP",
+      "votes": 32010,
+      "percentage": 19.48,
+      "is_winner": false
+    },
+    {
+      "candidate": "TAHIR MOKKANDI",
+      "party": "WPOI",
+      "votes": 2000,
+      "percentage": 1.22,
+      "is_winner": false
+    },
+    {
+      "candidate": "RADHAKRISHNAN P K",
+      "party": "IND",
+      "votes": 580,
+      "percentage": 0.35,
+      "is_winner": false
+    }
+  ]
+}

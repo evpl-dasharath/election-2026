@@ -1,0 +1,93 @@
+{
+  "constituency": {
+    "id": 35,
+    "number": 35,
+    "name": "NILAMBUR",
+    "district": "Malappuram"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 162560,
+    "votes_polled": 121298,
+    "votes_counted": 41178,
+    "valid_votes": 123536,
+    "rounds_completed": 8,
+    "total_rounds": 24,
+    "last_updated": "2026-04-30T12:10:10.312520+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "U. Sharafali",
+      "party": "IND (CPI(M))",
+      "alliance": "LDF",
+      "votes": 20413,
+      "percentage": 16.52,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Gireesh Mekkad",
+      "party": "BDJS",
+      "alliance": "NDA",
+      "votes": 13588,
+      "percentage": 11.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Aryadan Shoukath",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 6497,
+      "percentage": 5.26,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Jaisal Maliyekkal",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 2695,
+      "percentage": 2.18,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "P.V. ANVAR",
+      "party": "IND",
+      "votes": 81227,
+      "percentage": 46.9,
+      "is_winner": true
+    },
+    {
+      "candidate": "ADV: V.V. PRAKASH",
+      "party": "INC",
+      "votes": 78527,
+      "percentage": 45.34,
+      "is_winner": false
+    },
+    {
+      "candidate": "ADV. T. K ASHOKKUMAR",
+      "party": "BJP",
+      "votes": 8595,
+      "percentage": 4.96,
+      "is_winner": false
+    },
+    {
+      "candidate": "K. BABU MANI",
+      "party": "SDPI",
+      "votes": 3281,
+      "percentage": 1.89,
+      "is_winner": false
+    },
+    {
+      "candidate": "SAJADURAHMAN.C.P",
+      "party": "IND",
+      "votes": 559,
+      "percentage": 0.32,
+      "is_winner": false
+    }
+  ]
+}

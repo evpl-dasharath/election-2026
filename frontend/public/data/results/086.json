@@ -1,0 +1,86 @@
+{
+  "constituency": {
+    "id": 86,
+    "number": 86,
+    "name": "MUVATTUPUZHA",
+    "district": "Ernakulam"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 204541,
+    "votes_polled": 137421,
+    "votes_counted": 46986,
+    "valid_votes": 140958,
+    "rounds_completed": 7,
+    "total_rounds": 21,
+    "last_updated": "2026-04-30T12:07:37.312845+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Dr. Mathew Kuzhalnadan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 23458,
+      "percentage": 16.64,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Sunny Kadoothazhe",
+      "party": "TTP",
+      "alliance": "NDA",
+      "votes": 9469,
+      "percentage": 6.72,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Roy Arakkal",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 8526,
+      "percentage": 6.05,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "N. Arun",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 5016,
+      "percentage": 3.56,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Dr. MATHEW KUZHALNADAN",
+      "party": "INC",
+      "votes": 64425,
+      "percentage": 44.63,
+      "is_winner": true
+    },
+    {
+      "candidate": "ELDHO ABRAHAM",
+      "party": "CPI",
+      "votes": 58264,
+      "percentage": 40.36,
+      "is_winner": false
+    },
+    {
+      "candidate": "JIJI JOSEPH",
+      "party": "BJP",
+      "votes": 7527,
+      "percentage": 5.21,
+      "is_winner": false
+    },
+    {
+      "candidate": "C. K. THAMPI",
+      "party": "SUCI",
+      "votes": 176,
+      "percentage": 0.12,
+      "is_winner": false
+    }
+  ]
+}

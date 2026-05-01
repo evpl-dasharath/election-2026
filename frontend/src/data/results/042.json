@@ -1,0 +1,104 @@
+{
+  "constituency": {
+    "id": 42,
+    "number": 42,
+    "name": "VALLIKKUNNU",
+    "district": "Malappuram"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 221036,
+    "votes_polled": 178862,
+    "votes_counted": 133232,
+    "valid_votes": 131899,
+    "rounds_completed": 10,
+    "total_rounds": 12,
+    "last_updated": "2026-04-29T11:27:22.750616+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "T. V. Ibrahim",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 58381,
+      "percentage": 45.0,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Adv. C. P. Musthafa",
+      "party": "IND (INL)",
+      "alliance": "LDF",
+      "votes": 44640,
+      "percentage": 34.41,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "M. Preman Master",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 25769,
+      "percentage": 19.86,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Abdul Azeez Kadalundi",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 329,
+      "percentage": 0.25,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Muhamed Musthafa Pamangadan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 309,
+      "percentage": 0.24,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Muhammed Aslam V P",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 298,
+      "percentage": 0.23,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "ABDUL HAMEED MASTER",
+      "party": "IUML",
+      "votes": 71823,
+      "percentage": 47.43,
+      "is_winner": true
+    },
+    {
+      "candidate": "Prof. A.P. ABDUL VAHAB",
+      "party": "INL",
+      "votes": 57707,
+      "percentage": 38.11,
+      "is_winner": false
+    },
+    {
+      "candidate": "PEETHAMBARAN PALAT",
+      "party": "BJP",
+      "votes": 19853,
+      "percentage": 13.11,
+      "is_winner": false
+    },
+    {
+      "candidate": "SASI KIZHAKKAN",
+      "party": "BSP",
+      "votes": 881,
+      "percentage": 0.58,
+      "is_winner": false
+    }
+  ]
+}

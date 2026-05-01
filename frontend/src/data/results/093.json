@@ -1,0 +1,120 @@
+{
+  "constituency": {
+    "id": 93,
+    "number": 93,
+    "name": "PALA",
+    "district": "Kottayam"
+  },
+  "live_result": {
+    "status": "RESULT_DECLARED",
+    "total_electors": 176585,
+    "votes_polled": 132562,
+    "votes_counted": 134950,
+    "valid_votes": 133600,
+    "rounds_completed": 13,
+    "total_rounds": 13,
+    "last_updated": "2026-04-29T11:27:22.981503+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Mani C. Kappan",
+      "party": "DCK",
+      "alliance": "UDF",
+      "votes": 57282,
+      "percentage": 44.35,
+      "is_winner": true,
+      "is_leading": false
+    },
+    {
+      "name": "Jose K. Mani",
+      "party": "KC(M)",
+      "alliance": "UDF",
+      "votes": 53024,
+      "percentage": 41.05,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Shone George",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 16206,
+      "percentage": 12.55,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Santhosh Nadoopparampil",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 1189,
+      "percentage": 0.92,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Rony Jose Nedumpallil",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 765,
+      "percentage": 0.59,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Santhosh Pulickal",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 371,
+      "percentage": 0.29,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "C G Babu",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 328,
+      "percentage": 0.25,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "MANI C KAPPEN",
+      "party": "IND",
+      "votes": 69804,
+      "percentage": 50.43,
+      "is_winner": true
+    },
+    {
+      "candidate": "JOSE K. MANI",
+      "party": "KC(M)",
+      "votes": 54426,
+      "percentage": 39.32,
+      "is_winner": false
+    },
+    {
+      "candidate": "PRAMEELADEVI .J",
+      "party": "BJP",
+      "votes": 10869,
+      "percentage": 7.85,
+      "is_winner": false
+    },
+    {
+      "candidate": "MANI C. KURIAKOSE",
+      "party": "IND",
+      "votes": 1098,
+      "percentage": 0.79,
+      "is_winner": false
+    },
+    {
+      "candidate": "SANTHOSH PULICKAL",
+      "party": "IND",
+      "votes": 444,
+      "percentage": 0.32,
+      "is_winner": false
+    }
+  ]
+}

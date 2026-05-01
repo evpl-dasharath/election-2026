@@ -1,0 +1,111 @@
+{
+  "constituency": {
+    "id": 107,
+    "number": 107,
+    "name": "HARIPAD",
+    "district": "Alappuzha"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 243748,
+    "votes_polled": 177778,
+    "votes_counted": 64081,
+    "valid_votes": 183090,
+    "rounds_completed": 7,
+    "total_rounds": 20,
+    "last_updated": "2026-04-30T12:03:59.320845+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "T. T. Jismon",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 18600,
+      "percentage": 10.16,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Ch. Ramesh",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 13817,
+      "percentage": 7.55,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ramesh Chennithala",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 11809,
+      "percentage": 6.45,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Vidhya V.P",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 9185,
+      "percentage": 5.02,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sandeep Vachaspati",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 7870,
+      "percentage": 4.3,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Soumya V.Sasidharan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 3934,
+      "percentage": 2.15,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "RAMESH CHENNITHALA",
+      "party": "INC",
+      "votes": 72768,
+      "percentage": 48.31,
+      "is_winner": true
+    },
+    {
+      "candidate": "Adv. R. SAJILAL",
+      "party": "CPI",
+      "votes": 59102,
+      "percentage": 39.24,
+      "is_winner": false
+    },
+    {
+      "candidate": "K. SOMAN",
+      "party": "BJP",
+      "votes": 17890,
+      "percentage": 11.88,
+      "is_winner": false
+    },
+    {
+      "candidate": "MADHU. T",
+      "party": "SUCI",
+      "votes": 204,
+      "percentage": 0.14,
+      "is_winner": false
+    },
+    {
+      "candidate": "Adv. NIYAZ BHARATI",
+      "party": "IND",
+      "votes": 123,
+      "percentage": 0.08,
+      "is_winner": false
+    }
+  ]
+}

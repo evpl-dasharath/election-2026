@@ -1,0 +1,102 @@
+{
+  "constituency": {
+    "id": 84,
+    "number": 84,
+    "name": "KUNNATHUNAD",
+    "district": "Ernakulam"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 188291,
+    "votes_polled": 158333,
+    "votes_counted": 136059,
+    "valid_votes": 134698,
+    "rounds_completed": 14,
+    "total_rounds": 16,
+    "last_updated": "2026-04-29T11:27:22.947021+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "V. P. Sajeendran",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 53825,
+      "percentage": 43.71,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Babu Divakaran",
+      "party": "TTP",
+      "alliance": "NDA",
+      "votes": 51473,
+      "percentage": 41.8,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. P. V. Sreenijin",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 17147,
+      "percentage": 13.93,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Manikuttan A. T.",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 443,
+      "percentage": 0.36,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Vazhakulam Bhasi",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 244,
+      "percentage": 0.2,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "ADV. P.V.SREENIJIN",
+      "party": "CPI(M)",
+      "votes": 52351,
+      "percentage": 33.79,
+      "is_winner": true
+    },
+    {
+      "candidate": "V.P.SAJEENDRAN",
+      "party": "INC",
+      "votes": 49636,
+      "percentage": 32.04,
+      "is_winner": false
+    },
+    {
+      "candidate": "RENU SURESH",
+      "party": "BJP",
+      "votes": 7218,
+      "percentage": 4.66,
+      "is_winner": false
+    },
+    {
+      "candidate": "KRISHNAN ERANHIKAL",
+      "party": "SDPI",
+      "votes": 1294,
+      "percentage": 0.84,
+      "is_winner": false
+    },
+    {
+      "candidate": "SUJITH.K.SURENDRAN",
+      "party": "IND",
+      "votes": 786,
+      "percentage": 0.51,
+      "is_winner": false
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "constituency": {
+    "id": 94,
+    "number": 94,
+    "name": "KADUTHURUTHY",
+    "district": "Kottayam"
+  },
+  "live_result": {
+    "status": "RESULT_DECLARED",
+    "total_electors": 175905,
+    "votes_polled": 121972,
+    "votes_counted": 142186,
+    "valid_votes": 140764,
+    "rounds_completed": 15,
+    "total_rounds": 15,
+    "last_updated": "2026-04-29T11:27:22.986607+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Nirmala Jimmy",
+      "party": "KC(M)",
+      "alliance": "UDF",
+      "votes": 62922,
+      "percentage": 45.31,
+      "is_winner": true,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Mons Joseph",
+      "party": "KEC",
+      "alliance": "UDF",
+      "votes": 51891,
+      "percentage": 37.37,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Suresh Ettikunnel",
+      "party": "BDJS",
+      "alliance": "NDA",
+      "votes": 19841,
+      "percentage": 14.29,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Dominic Simon",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 1326,
+      "percentage": 0.95,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "M.M.Scaria",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 1254,
+      "percentage": 0.9,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Indu",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 1023,
+      "percentage": 0.74,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Jijith K Joy",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 607,
+      "percentage": 0.44,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Adv. Mons Joseph",
+      "party": "KEC",
+      "votes": 59666,
+      "percentage": 45.4,
+      "is_winner": true
+    },
+    {
+      "candidate": "Stephen George",
+      "party": "KC(M)",
+      "votes": 55410,
+      "percentage": 42.17,
+      "is_winner": false
+    },
+    {
+      "candidate": "Ligin Lal",
+      "party": "BJP",
+      "votes": 11670,
+      "percentage": 8.88,
+      "is_winner": false
+    },
+    {
+      "candidate": "Vinod K Jose",
+      "party": "IND",
+      "votes": 2425,
+      "percentage": 1.85,
+      "is_winner": false
+    },
+    {
+      "candidate": "Adv. Anju Mathew",
+      "party": "BSP",
+      "votes": 1207,
+      "percentage": 0.92,
+      "is_winner": false
+    }
+  ]
+}

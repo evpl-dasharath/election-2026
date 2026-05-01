@@ -1,0 +1,120 @@
+{
+  "constituency": {
+    "id": 132,
+    "number": 132,
+    "name": "KAZHAKKOOTTAM",
+    "district": "Thiruvananthapuram"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 252895,
+    "votes_polled": 180546,
+    "votes_counted": 45445,
+    "valid_votes": 181783,
+    "rounds_completed": 5,
+    "total_rounds": 20,
+    "last_updated": "2026-04-30T12:11:04.312785+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "K. Surendran",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 23909,
+      "percentage": 13.15,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "T. S. Rajan",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 7712,
+      "percentage": 4.24,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv.  T. Sarathchandra Prasad",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 3346,
+      "percentage": 1.84,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sreekantan Nair V.",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 3243,
+      "percentage": 1.78,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Kadakampally Surendran",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 3047,
+      "percentage": 1.68,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Deebika Karimanal",
+      "party": "Anna DHRM",
+      "alliance": "OTH",
+      "votes": 2297,
+      "percentage": 1.26,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "V. Muraleedharan",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 2017,
+      "percentage": 1.11,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Kadakampally Surendran",
+      "party": "CPI(M)",
+      "votes": 63690,
+      "percentage": 46.04,
+      "is_winner": true
+    },
+    {
+      "candidate": "Sobha Surendran",
+      "party": "BJP",
+      "votes": 40193,
+      "percentage": 29.06,
+      "is_winner": false
+    },
+    {
+      "candidate": "Dr. S. S. Lal",
+      "party": "INC",
+      "votes": 32995,
+      "percentage": 23.85,
+      "is_winner": false
+    },
+    {
+      "candidate": "Kochumani",
+      "party": "BSP",
+      "votes": 377,
+      "percentage": 0.27,
+      "is_winner": false
+    },
+    {
+      "candidate": "V. Sasikumaran Nair",
+      "party": "IND",
+      "votes": 129,
+      "percentage": 0.09,
+      "is_winner": false
+    }
+  ]
+}

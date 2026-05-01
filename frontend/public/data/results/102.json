@@ -1,0 +1,111 @@
+{
+  "constituency": {
+    "id": 102,
+    "number": 102,
+    "name": "AROOR",
+    "district": "Alappuzha"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 229993,
+    "votes_polled": 152659,
+    "votes_counted": 49285,
+    "valid_votes": 154896,
+    "rounds_completed": 7,
+    "total_rounds": 22,
+    "last_updated": "2026-04-30T12:08:53.320579+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Vayalar Rajeevan",
+      "party": "BDP",
+      "alliance": "OTH",
+      "votes": 15146,
+      "percentage": 9.78,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "N.K. Sasikumar",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 13186,
+      "percentage": 8.51,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Shanimol Osman",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 6425,
+      "percentage": 4.15,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. P.S. Jyothis",
+      "party": "BDJS",
+      "alliance": "NDA",
+      "votes": 5862,
+      "percentage": 3.78,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Daleema Jojo",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 5139,
+      "percentage": 3.32,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Vipin",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 4612,
+      "percentage": 2.98,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "DALEEMA",
+      "party": "CPI(M)",
+      "votes": 75617,
+      "percentage": 45.97,
+      "is_winner": true
+    },
+    {
+      "candidate": "Adv. SHANIMOL OSMAN",
+      "party": "INC",
+      "votes": 68604,
+      "percentage": 41.71,
+      "is_winner": false
+    },
+    {
+      "candidate": "ANIYAPPAN",
+      "party": "BDJS",
+      "votes": 17479,
+      "percentage": 10.63,
+      "is_winner": false
+    },
+    {
+      "candidate": "RUGMA PRADEEP",
+      "party": "BSP",
+      "votes": 682,
+      "percentage": 0.41,
+      "is_winner": false
+    },
+    {
+      "candidate": "AMBIKA K N (PRIYANKA ANUP)",
+      "party": "DSJP",
+      "votes": 475,
+      "percentage": 0.29,
+      "is_winner": false
+    }
+  ]
+}

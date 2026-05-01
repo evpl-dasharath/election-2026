@@ -1,0 +1,111 @@
+{
+  "constituency": {
+    "id": 69,
+    "number": 69,
+    "name": "KAIPAMANGALAM",
+    "district": "Thrissur"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 166428,
+    "votes_polled": 122664,
+    "votes_counted": 27767,
+    "valid_votes": 127731,
+    "rounds_completed": 5,
+    "total_rounds": 23,
+    "last_updated": "2026-04-30T12:12:58.312752+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "T. M. Nazar",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 11555,
+      "percentage": 9.05,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "A.M. Muhammed Riyas",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 6787,
+      "percentage": 5.31,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. K. Valsaraj",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 2637,
+      "percentage": 2.06,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Jayan Eratt",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 2605,
+      "percentage": 2.04,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Athulya Ghosh",
+      "party": "BDJS",
+      "alliance": "NDA",
+      "votes": 2324,
+      "percentage": 1.82,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Manoj M.M.",
+      "party": "CPIML Red Star",
+      "alliance": "OTH",
+      "votes": 1320,
+      "percentage": 1.03,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "E T TAISON MASTER",
+      "party": "CPI",
+      "votes": 73161,
+      "percentage": 53.76,
+      "is_winner": true
+    },
+    {
+      "candidate": "SOBHA SUBIN",
+      "party": "INC",
+      "votes": 50463,
+      "percentage": 37.08,
+      "is_winner": false
+    },
+    {
+      "candidate": "C D SREELAL",
+      "party": "BDJS",
+      "votes": 9066,
+      "percentage": 6.66,
+      "is_winner": false
+    },
+    {
+      "candidate": "M K ASLAM",
+      "party": "WPOI",
+      "votes": 1671,
+      "percentage": 1.23,
+      "is_winner": false
+    },
+    {
+      "candidate": "M K SHAMEER",
+      "party": "SDPI",
+      "votes": 814,
+      "percentage": 0.6,
+      "is_winner": false
+    }
+  ]
+}

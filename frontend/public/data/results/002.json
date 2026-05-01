@@ -1,0 +1,102 @@
+{
+  "constituency": {
+    "id": 2,
+    "number": 2,
+    "name": "KASARAGOD",
+    "district": "Kasaragod"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 237236,
+    "votes_polled": 157536,
+    "votes_counted": 40267,
+    "valid_votes": 161070,
+    "rounds_completed": 5,
+    "total_rounds": 20,
+    "last_updated": "2026-04-30T12:14:20.312770+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Ashwini M.L.",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 19514,
+      "percentage": 12.12,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Shanavas A A",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 6692,
+      "percentage": 4.15,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Kallatra Mahin Haji",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 5891,
+      "percentage": 3.66,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Mohammed Ali Fathah B M",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 4525,
+      "percentage": 2.81,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Shanavas Padhoor",
+      "party": "IND (INL)",
+      "alliance": "LDF",
+      "votes": 3420,
+      "percentage": 2.12,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "N A NELLIKKUNNU",
+      "party": "IUML",
+      "votes": 63296,
+      "percentage": 43.8,
+      "is_winner": true
+    },
+    {
+      "candidate": "ADV K SHREEKANTH",
+      "party": "BJP",
+      "votes": 50395,
+      "percentage": 34.88,
+      "is_winner": false
+    },
+    {
+      "candidate": "M A LATHEEF",
+      "party": "INL",
+      "votes": 28323,
+      "percentage": 19.6,
+      "is_winner": false
+    },
+    {
+      "candidate": "VIJAYA K P",
+      "party": "BSP",
+      "votes": 679,
+      "percentage": 0.47,
+      "is_winner": false
+    },
+    {
+      "candidate": "RANJITH RAJ M",
+      "party": "ADHRMPI",
+      "votes": 555,
+      "percentage": 0.38,
+      "is_winner": false
+    }
+  ]
+}

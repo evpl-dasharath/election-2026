@@ -1,0 +1,93 @@
+{
+  "constituency": {
+    "id": 100,
+    "number": 100,
+    "name": "KANJIRAPPALLY",
+    "district": "Kottayam"
+  },
+  "live_result": {
+    "status": "RESULT_DECLARED",
+    "total_electors": 177500,
+    "votes_polled": 132965,
+    "votes_counted": 116959,
+    "valid_votes": 115789,
+    "rounds_completed": 15,
+    "total_rounds": 15,
+    "last_updated": "2026-04-29T11:27:23.020136+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Dr. N. Jayaraj",
+      "party": "KC(M)",
+      "alliance": "UDF",
+      "votes": 51202,
+      "percentage": 47.15,
+      "is_winner": true,
+      "is_leading": false
+    },
+    {
+      "name": "Prof. Rony K. Baby",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 38971,
+      "percentage": 35.89,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. George Kurian",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 18118,
+      "percentage": 16.69,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Thampi Kavumpadam",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 298,
+      "percentage": 0.27,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Dr.N.JAYARAJ",
+      "party": "KC(M)",
+      "votes": 60299,
+      "percentage": 43.79,
+      "is_winner": true
+    },
+    {
+      "candidate": "JOSEPH VAZHACKAN",
+      "party": "INC",
+      "votes": 46596,
+      "percentage": 33.84,
+      "is_winner": false
+    },
+    {
+      "candidate": "ALPHONS KANNANTHANAM",
+      "party": "BJP",
+      "votes": 29157,
+      "percentage": 21.17,
+      "is_winner": false
+    },
+    {
+      "candidate": "ASHIK M M",
+      "party": "BSP",
+      "votes": 727,
+      "percentage": 0.53,
+      "is_winner": false
+    },
+    {
+      "candidate": "MAYAMOL K P",
+      "party": "SUCI",
+      "votes": 300,
+      "percentage": 0.22,
+      "is_winner": false
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "constituency": {
+    "id": 50,
+    "number": 50,
+    "name": "PATTAMBI",
+    "district": "Palakkad"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 200026,
+    "votes_polled": 138550,
+    "votes_counted": 41125,
+    "valid_votes": 143940,
+    "rounds_completed": 6,
+    "total_rounds": 21,
+    "last_updated": "2026-04-30T12:07:34.313124+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "T. P. Shaji",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 22946,
+      "percentage": 15.94,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Muhammed Muhsin. M. K Manjerikunnath",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 4354,
+      "percentage": 3.02,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Haris Babu Pailippuram",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 4307,
+      "percentage": 2.99,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "S.P. Ameer Ali",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 3806,
+      "percentage": 2.64,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "shajimon",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 2620,
+      "percentage": 1.82,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Muhammad Muhsin",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 2045,
+      "percentage": 1.42,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. P. Manoj",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 2036,
+      "percentage": 1.41,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Muhammed Muhassin",
+      "party": "CPI",
+      "votes": 75311,
+      "percentage": 49.58,
+      "is_winner": true
+    },
+    {
+      "candidate": "Riyas Mukkoli",
+      "party": "INC",
+      "votes": 57337,
+      "percentage": 37.74,
+      "is_winner": false
+    },
+    {
+      "candidate": "K.M.Haridas",
+      "party": "BJP",
+      "votes": 14578,
+      "percentage": 9.6,
+      "is_winner": false
+    },
+    {
+      "candidate": "Ameer Ali .S.P",
+      "party": "SDPI",
+      "votes": 2975,
+      "percentage": 1.96,
+      "is_winner": false
+    },
+    {
+      "candidate": "S. Mujeeb Rehman",
+      "party": "WPOI",
+      "votes": 801,
+      "percentage": 0.53,
+      "is_winner": false
+    }
+  ]
+}

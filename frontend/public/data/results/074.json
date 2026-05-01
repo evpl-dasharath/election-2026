@@ -1,0 +1,111 @@
+{
+  "constituency": {
+    "id": 74,
+    "number": 74,
+    "name": "PERUMBAVOOR",
+    "district": "Ernakulam"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 245097,
+    "votes_polled": 164070,
+    "votes_counted": 44575,
+    "valid_votes": 170872,
+    "rounds_completed": 6,
+    "total_rounds": 23,
+    "last_updated": "2026-04-30T12:11:46.318238+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Manoj Moothedan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 22336,
+      "percentage": 13.07,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Adv. Prasanth",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 9420,
+      "percentage": 5.51,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Mohanan M A",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 4778,
+      "percentage": 2.8,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Jibi Pathikkal",
+      "party": "TTP",
+      "alliance": "NDA",
+      "votes": 2918,
+      "percentage": 1.71,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Basil Paul",
+      "party": "KC(M)",
+      "alliance": "UDF",
+      "votes": 2288,
+      "percentage": 1.34,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Eldho George",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 2236,
+      "percentage": 1.31,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Adv ELDOSE P KUNNAPILLIL",
+      "party": "INC",
+      "votes": 53484,
+      "percentage": 37.1,
+      "is_winner": true
+    },
+    {
+      "candidate": "BABU JOSEPH PERUMBAVOOR",
+      "party": "KC(M)",
+      "votes": 50585,
+      "percentage": 35.09,
+      "is_winner": false
+    },
+    {
+      "candidate": "Adv.T P SINDHUMOL",
+      "party": "BJP",
+      "votes": 15135,
+      "percentage": 10.5,
+      "is_winner": false
+    },
+    {
+      "candidate": "AJMAL K MUJEEB",
+      "party": "SDPI",
+      "votes": 2494,
+      "percentage": 1.73,
+      "is_winner": false
+    },
+    {
+      "candidate": "ARSHAD K M",
+      "party": "WPOI",
+      "votes": 1038,
+      "percentage": 0.72,
+      "is_winner": false
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "constituency": {
+    "id": 117,
+    "number": 117,
+    "name": "CHAVARA",
+    "district": "Kollam"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 174869,
+    "votes_polled": 110847,
+    "votes_counted": 35542,
+    "valid_votes": 112550,
+    "rounds_completed": 6,
+    "total_rounds": 19,
+    "last_updated": "2026-04-30T12:10:19.318622+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Shibu Baby John",
+      "party": "RSP",
+      "alliance": "UDF",
+      "votes": 16342,
+      "percentage": 14.52,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "K. R. Rajesh",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 12729,
+      "percentage": 11.31,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Dr. Sujith Vijayanpillai",
+      "party": "IND (CPI(M))",
+      "alliance": "LDF",
+      "votes": 6259,
+      "percentage": 5.56,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Dr.SUJITH VIJAYANPILLAI",
+      "party": "IND",
+      "votes": 63282,
+      "percentage": 44.29,
+      "is_winner": true
+    },
+    {
+      "candidate": "SHIBU BABY JOHN",
+      "party": "RSP",
+      "votes": 62186,
+      "percentage": 43.52,
+      "is_winner": false
+    },
+    {
+      "candidate": "VIVEK GOPAN",
+      "party": "BJP",
+      "votes": 14211,
+      "percentage": 9.95,
+      "is_winner": false
+    },
+    {
+      "candidate": "JOHNSON KANDACHIRA",
+      "party": "IND",
+      "votes": 1223,
+      "percentage": 0.86,
+      "is_winner": false
+    },
+    {
+      "candidate": "SUJITHMON",
+      "party": "IND",
+      "votes": 901,
+      "percentage": 0.63,
+      "is_winner": false
+    }
+  ]
+}

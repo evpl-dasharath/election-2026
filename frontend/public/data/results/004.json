@@ -1,0 +1,93 @@
+{
+  "constituency": {
+    "id": 4,
+    "number": 4,
+    "name": "KANHANGAD",
+    "district": "Kasaragod"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 166006,
+    "votes_polled": 117149,
+    "votes_counted": 44804,
+    "valid_votes": 121612,
+    "rounds_completed": 7,
+    "total_rounds": 19,
+    "last_updated": "2026-04-30T12:06:12.312363+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "B. Vijayakumar",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 18983,
+      "percentage": 15.61,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Govindan Pallikkappil",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 14749,
+      "percentage": 12.13,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "M. Balraj",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 4778,
+      "percentage": 3.93,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Shyji Ottapalli",
+      "party": "KEC",
+      "alliance": "UDF",
+      "votes": 4279,
+      "percentage": 3.52,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "E CHANDRASHEKARAN",
+      "party": "CPI",
+      "votes": 84615,
+      "percentage": 50.72,
+      "is_winner": true
+    },
+    {
+      "candidate": "P V SURESH",
+      "party": "INC",
+      "votes": 57476,
+      "percentage": 34.45,
+      "is_winner": false
+    },
+    {
+      "candidate": "BALRAJ",
+      "party": "BJP",
+      "votes": 21570,
+      "percentage": 12.93,
+      "is_winner": false
+    },
+    {
+      "candidate": "ABDUL SAMAD. T S/o T KUNHAMU HAJI",
+      "party": "SDPI",
+      "votes": 775,
+      "percentage": 0.46,
+      "is_winner": false
+    },
+    {
+      "candidate": "AUGUSTIN",
+      "party": "IND",
+      "votes": 532,
+      "percentage": 0.32,
+      "is_winner": false
+    }
+  ]
+}

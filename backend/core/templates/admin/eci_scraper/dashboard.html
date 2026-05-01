@@ -1,0 +1,179 @@
+{# backend/core/templates/admin/eci_scraper/dashboard.html #}
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block title %}ECI Scraper Dashboard{% endblock %}
+
+{% block extrahead %}
+{{ block.super }}
+<style>
+  .scraper-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:20px; }
+  .stat-cards { display:flex; gap:16px; margin-bottom:24px; flex-wrap:wrap; }
+  .stat-card { background:#fff; border:1px solid #ddd; border-radius:6px; padding:16px 24px; min-width:140px; text-align:center; }
+  .stat-card .num { font-size:2rem; font-weight:700; color:#417690; }
+  .stat-card .label { font-size:0.8rem; color:#666; text-transform:uppercase; letter-spacing:.05em; }
+  .mode-toggle { background:#f8f8f8; border:1px solid #ddd; border-radius:6px; padding:12px 16px; margin-bottom:20px; display:flex; align-items:center; gap:16px; }
+  .mode-toggle label { font-weight:600; }
+  table.scraper-table { width:100%; border-collapse:collapse; font-size:0.9rem; }
+  table.scraper-table th { background:#417690; color:#fff; padding:8px 12px; text-align:left; }
+  table.scraper-table td { padding:7px 12px; border-bottom:1px solid #eee; vertical-align:middle; }
+  table.scraper-table tr:hover td { background:#f5f9fc; }
+  .badge { display:inline-block; padding:2px 8px; border-radius:10px; font-size:0.75rem; font-weight:600; }
+  .badge-matched  { background:#d4edda; color:#155724; }
+  .badge-partial  { background:#fff3cd; color:#856404; }
+  .badge-pending  { background:#f8d7da; color:#721c24; }
+  .badge-none     { background:#e9ecef; color:#495057; }
+  .badge-final    { background:#cce5ff; color:#004085; }
+  .btn { display:inline-block; padding:5px 14px; border-radius:4px; border:none; cursor:pointer; font-size:0.85rem; font-weight:600; text-decoration:none; }
+  .btn-primary   { background:#417690; color:#fff; }
+  .btn-primary:hover { background:#2b5c72; color:#fff; }
+  .btn-warning   { background:#f0ad4e; color:#fff; }
+  .btn-sm        { padding:3px 10px; font-size:0.78rem; }
+  .btn-all       { background:#28a745; color:#fff; font-size:1rem; padding:8px 24px; border-radius:4px; cursor:pointer; border:none; font-weight:700; }
+  .btn-all:hover { background:#218838; }
+  .ac-form       { display:inline; }
+  .round-info    { font-size:0.8rem; color:#666; }
+</style>
+{% endblock %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+  <a href="{% url 'admin:index' %}">Home</a> › ECI Scraper
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="scraper-header">
+  <h1>🗳 ECI Results Scraper</h1>
+  <form method="post" action="{% url 'eci_scraper_run' %}">
+    {% csrf_token %}
+    <input type="hidden" name="ac_number" value="all">
+    <input type="hidden" name="test_mode" value="{{ use_test_mode|yesno:'1,0' }}">
+    <button type="submit" class="btn-all">
+      ⬇ Scrape All ({{ total }})
+    </button>
+  </form>
+  <form method="post" action="{% url 'eci_scraper_stop' %}" style="margin-left: 10px;">
+    {% csrf_token %}
+    <button type="submit" class="btn-all" style="background:#dc3545;">
+      ⏹ Stop Scrape
+    </button>
+  </form>
+</div>
+
+{# Summary stats #}
+<div class="stat-cards">
+  <div class="stat-card"><div class="num">{{ total }}</div><div class="label">Total ACs</div></div>
+  <div class="stat-card"><div class="num">{{ scraped }}</div><div class="label">Scraped</div></div>
+  <div class="stat-card"><div class="num">{{ pending_match }}</div><div class="label">Needs Matching</div></div>
+  <div class="stat-card"><div class="num">{{ committed }}</div><div class="label">Committed</div></div>
+</div>
+
+{# Mode toggle #}
+<div class="mode-toggle">
+  <label>Data Source:</label>
+  <form method="post" action="{% url 'eci_scraper_run' %}" style="display:inline">
+    {% csrf_token %}
+    <input type="hidden" name="ac_number" value="">
+    {% if use_test_mode %}
+      <span style="color:#856404; font-weight:600;">⚠️ TEST MODE — Bihar Nov 2025</span>
+      &nbsp;
+      <button type="submit" name="test_mode" value="0" class="btn btn-warning btn-sm">
+        Switch to Kerala 2026
+      </button>
+    {% else %}
+      <span style="color:#155724; font-weight:600;">✅ LIVE MODE — Kerala May 2026</span>
+      &nbsp;
+      <button type="submit" name="test_mode" value="1" class="btn btn-sm" style="background:#6c757d;color:#fff;">
+        Switch to Test (Bihar)
+      </button>
+    {% endif %}
+  </form>
+</div>
+
+{% if messages %}
+  {% for message in messages %}
+    <div class="alert" style="padding:10px 16px; margin-bottom:16px; border-radius:4px;
+      background:{% if message.tags == 'error' %}#f8d7da{% else %}#d4edda{% endif %};
+      color:{% if message.tags == 'error' %}#721c24{% else %}#155724{% endif %};">
+      {{ message }}
+    </div>
+  {% endfor %}
+{% endif %}
+
+{# Constituency table #}
+<table class="scraper-table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Constituency</th>
+      <th>District</th>
+      <th>Last Scraped</th>
+      <th>Round</th>
+      <th>Match Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for c in constituencies %}
+    <tr>
+      <td>{{ c.number }}</td>
+      <td><strong>{{ c.name }}</strong></td>
+      <td>{{ c.district.name }}</td>
+      <td>
+        {% if c.latest_scrape %}
+          <span title="{{ c.latest_scrape.scraped_at }}">
+            {{ c.latest_scrape.scraped_at|timesince }} ago
+          </span>
+        {% else %}
+          <span style="color:#aaa;">Never</span>
+        {% endif %}
+      </td>
+      <td>
+        {% if c.latest_scrape %}
+          <span class="round-info">
+            {{ c.latest_scrape.rounds_completed }}/{{ c.latest_scrape.total_rounds }}
+            {% if c.latest_scrape.is_final %}
+              <span class="badge badge-final">Final</span>
+            {% endif %}
+          </span>
+        {% else %}—{% endif %}
+      </td>
+      <td>
+        {% if c.latest_scrape %}
+          {% if c.latest_scrape.match_status == 'MATCHED' %}
+            <span class="badge badge-matched">✓ Matched</span>
+          {% elif c.latest_scrape.match_status == 'PARTIAL' %}
+            <span class="badge badge-partial">⚠ Partial</span>
+          {% elif c.latest_scrape.match_status == 'PENDING' %}
+            <span class="badge badge-pending">⏳ Pending</span>
+          {% else %}
+            <span class="badge badge-none">{{ c.latest_scrape.match_status }}</span>
+          {% endif %}
+        {% else %}
+          <span class="badge badge-none">–</span>
+        {% endif %}
+      </td>
+      <td>
+        {# Scrape button #}
+        <form method="post" action="{% url 'eci_scraper_run' %}" class="ac-form">
+          {% csrf_token %}
+          <input type="hidden" name="ac_number" value="{{ c.number }}">
+          <input type="hidden" name="test_mode" value="{{ use_test_mode|yesno:'1,0' }}">
+          <button type="submit" class="btn btn-primary btn-sm">⬇ Scrape</button>
+        </form>
+
+        {# Match / Review buttons #}
+        {% if c.latest_scrape %}
+          {% if c.latest_scrape.match_status == 'PENDING' or c.latest_scrape.match_status == 'PARTIAL' %}
+            &nbsp;<a href="{% url 'eci_scraper_match' c.latest_scrape.id %}" class="btn btn-warning btn-sm">⚡ Match</a>
+          {% elif c.latest_scrape.match_status == 'MATCHED' %}
+            &nbsp;<a href="{% url 'eci_scraper_commit' c.latest_scrape.id %}" class="btn btn-sm" style="background:#17a2b8;color:#fff;">✔ Commit</a>
+          {% endif %}
+        {% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

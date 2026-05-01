@@ -1,0 +1,111 @@
+{
+  "constituency": {
+    "id": 119,
+    "number": 119,
+    "name": "KOTTARAKKARA",
+    "district": "Kollam"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 193272,
+    "votes_polled": 145185,
+    "votes_counted": 75337,
+    "valid_votes": 74583,
+    "rounds_completed": 6,
+    "total_rounds": 12,
+    "last_updated": "2026-04-29T11:27:23.101386+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "R. Reshmi",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 33124,
+      "percentage": 44.85,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Adv. P. Aisha Potty",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 31499,
+      "percentage": 42.65,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. N. Balagopal",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 7756,
+      "percentage": 10.5,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Wilfred Zacharias",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 678,
+      "percentage": 0.92,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Mamachan D",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 464,
+      "percentage": 0.63,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "G Suresh",
+      "party": "EPI",
+      "alliance": "OTH",
+      "votes": 341,
+      "percentage": 0.46,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "K N BALAGOPAL",
+      "party": "CPI(M)",
+      "votes": 68770,
+      "percentage": 45.98,
+      "is_winner": true
+    },
+    {
+      "candidate": "R RESMI",
+      "party": "INC",
+      "votes": 57956,
+      "percentage": 38.75,
+      "is_winner": false
+    },
+    {
+      "candidate": "Adv. VAYAKKAL SOMAN",
+      "party": "BJP",
+      "votes": 21223,
+      "percentage": 14.19,
+      "is_winner": false
+    },
+    {
+      "candidate": "USHA KOTTARAKKARA",
+      "party": "ADHRMPI",
+      "votes": 460,
+      "percentage": 0.31,
+      "is_winner": false
+    },
+    {
+      "candidate": "MATHEWS K LUKOSE",
+      "party": "IND",
+      "votes": 136,
+      "percentage": 0.09,
+      "is_winner": false
+    }
+  ]
+}

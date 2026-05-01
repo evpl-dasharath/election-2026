@@ -1,0 +1,120 @@
+{
+  "constituency": {
+    "id": 85,
+    "number": 85,
+    "name": "PIRAVOM",
+    "district": "Ernakulam"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 235248,
+    "votes_polled": 153250,
+    "votes_counted": 41219,
+    "valid_votes": 158007,
+    "rounds_completed": 6,
+    "total_rounds": 23,
+    "last_updated": "2026-04-30T12:12:53.319294+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Renny Mathew",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 14105,
+      "percentage": 8.93,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "T C Ramanan",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 8520,
+      "percentage": 5.39,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Anoop Jacob",
+      "party": "KC(J)",
+      "alliance": "UDF",
+      "votes": 4664,
+      "percentage": 2.95,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Eldho Abraham",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 4357,
+      "percentage": 2.76,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sabu K Eramath",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 3964,
+      "percentage": 2.51,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Jibi Abraham",
+      "party": "TTP",
+      "alliance": "NDA",
+      "votes": 3792,
+      "percentage": 2.4,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sabu K Jacob",
+      "party": "KC(M)",
+      "alliance": "UDF",
+      "votes": 3320,
+      "percentage": 2.1,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "ANOOP JACOB",
+      "party": "KC(J)",
+      "votes": 85056,
+      "percentage": 53.8,
+      "is_winner": true
+    },
+    {
+      "candidate": "Dr. SINDHUMOL JACOB",
+      "party": "KC(M)",
+      "votes": 59692,
+      "percentage": 37.76,
+      "is_winner": false
+    },
+    {
+      "candidate": "M ASHISH",
+      "party": "BJP",
+      "votes": 11021,
+      "percentage": 6.97,
+      "is_winner": false
+    },
+    {
+      "candidate": "SINDHUMOL C",
+      "party": "IND",
+      "votes": 563,
+      "percentage": 0.36,
+      "is_winner": false
+    },
+    {
+      "candidate": "C N MUKUNDAN",
+      "party": "SUCI",
+      "votes": 454,
+      "percentage": 0.29,
+      "is_winner": false
+    }
+  ]
+}

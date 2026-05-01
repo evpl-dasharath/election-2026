@@ -1,0 +1,83 @@
+{# backend/core/templates/admin/eci_scraper/commit.html #}
+{% extends "admin/base_site.html" %}
+
+{% block title %}Commit Results — {{ raw.constituency.name }}{% endblock %}
+
+{% block extrahead %}
+{{ block.super }}
+<style>
+  .preview-table { width:100%; border-collapse:collapse; font-size:0.9rem; }
+  .preview-table th { background:#417690; color:#fff; padding:9px 14px; text-align:left; }
+  .preview-table td { padding:9px 14px; border-bottom:1px solid #eee; }
+  .winner-row td { background:#d4edda !important; font-weight:700; }
+  .arrow { color:#417690; font-size:1.2rem; }
+  .btn-commit { background:#28a745; color:#fff; font-size:1.1rem; padding:12px 36px; border:none; border-radius:4px; cursor:pointer; font-weight:700; }
+  .btn-commit:hover { background:#218838; }
+  .warning-box { background:#fff3cd; border:1px solid #ffc107; padding:12px 16px; border-radius:4px; margin-bottom:20px; }
+  .info-bar { background:#cce5ff; color:#004085; padding:10px 16px; border-radius:4px; margin-bottom:20px; }
+</style>
+{% endblock %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+  <a href="{% url 'admin:index' %}">Home</a> ›
+  <a href="{% url 'eci_scraper_dashboard' %}">ECI Scraper</a> ›
+  Commit — {{ raw.constituency.name }}
+</div>
+{% endblock %}
+
+{% block content %}
+<h1>✔ Commit Results — {{ raw.constituency.name }} (AC {{ raw.constituency.number }})</h1>
+
+<div class="info-bar">
+  Round <strong>{{ raw.rounds_completed }}/{{ raw.total_rounds }}</strong>
+  {% if raw.is_final %} — <strong>✅ FINAL RESULT — winners will be marked</strong>
+  {% else %} — <em>Intermediate count, winners not marked yet</em>{% endif %}
+  &nbsp;|&nbsp; Scraped: {{ raw.scraped_at|date:"d M Y, H:i" }}
+</div>
+
+<div class="warning-box">
+  ⚠️ This will <strong>overwrite vote counts</strong> in the Candidate table for
+  {{ raw.constituency.name }}. Make sure the matches look correct before proceeding.
+</div>
+
+<table class="preview-table">
+  <thead>
+    <tr>
+      <th>ECI Name</th>
+      <th></th>
+      <th>DB Candidate</th>
+      <th>Party</th>
+      <th>Votes</th>
+      <th>%</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for match in matches %}
+    <tr {% if match.eci_is_leading %}class="winner-row"{% endif %}>
+      <td>{{ match.eci_name }}</td>
+      <td class="arrow">→</td>
+      <td>{{ match.candidate.name }}</td>
+      <td>{{ match.candidate.party.code }}</td>
+      <td>{{ match.eci_total_votes|floatformat:0 }}</td>
+      <td>{{ match.eci_vote_percentage }}%</td>
+      <td>
+        {% if match.eci_is_leading %}
+          {% if raw.is_final %}🏆 Winner{% else %}▲ Leading{% endif %}
+        {% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<div style="margin-top:28px; display:flex; gap:16px; align-items:center;">
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn-commit">✔ Commit to Database</button>
+  </form>
+  <a href="{% url 'eci_scraper_match' raw.id %}" style="color:#666;">← Back to Matching</a>
+  <a href="{% url 'eci_scraper_dashboard' %}" style="color:#666;">← Dashboard</a>
+</div>
+{% endblock %}

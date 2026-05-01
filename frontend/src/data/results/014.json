@@ -1,0 +1,138 @@
+{
+  "constituency": {
+    "id": 14,
+    "number": 14,
+    "name": "KUTHUPARAMBA",
+    "district": "Kannur"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 205771,
+    "votes_polled": 161447,
+    "votes_counted": 86702,
+    "valid_votes": 85834,
+    "rounds_completed": 11,
+    "total_rounds": 16,
+    "last_updated": "2026-04-29T11:27:22.589521+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Adv. Shijilal",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 36172,
+      "percentage": 69.35,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Jayanthi Rajan",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 11555,
+      "percentage": 22.15,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Shahul Hameed",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 833,
+      "percentage": 1.6,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Rafeed AP",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 831,
+      "percentage": 1.59,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "M. Shylaja",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 691,
+      "percentage": 1.32,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Praveen Kumar",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 639,
+      "percentage": 1.23,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "P. K. Praveen",
+      "party": "RJD",
+      "alliance": "OTH",
+      "votes": 578,
+      "percentage": 1.11,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Jayanthi",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 498,
+      "percentage": 0.95,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. P. Mohanan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 361,
+      "percentage": 0.69,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "K.P. MOHANAN",
+      "party": "LJD",
+      "votes": 70626,
+      "percentage": 45.36,
+      "is_winner": true
+    },
+    {
+      "candidate": "POTTANKANDI ABDULLA",
+      "party": "IUML",
+      "votes": 61085,
+      "percentage": 39.23,
+      "is_winner": false
+    },
+    {
+      "candidate": "C. SADANANDAN MASTER",
+      "party": "BJP",
+      "votes": 21212,
+      "percentage": 13.62,
+      "is_winner": false
+    },
+    {
+      "candidate": "MOHANAN KUNHIPARAMBATH MEETHAL",
+      "party": "IND",
+      "votes": 1360,
+      "percentage": 0.87,
+      "is_winner": false
+    },
+    {
+      "candidate": "MOHANAN K.P. KAITHAVECHA PARAMBATH",
+      "party": "IND",
+      "votes": 543,
+      "percentage": 0.35,
+      "is_winner": false
+    }
+  ]
+}

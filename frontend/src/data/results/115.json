@@ -1,0 +1,93 @@
+{
+  "constituency": {
+    "id": 115,
+    "number": 115,
+    "name": "ADOOR",
+    "district": "Pathanamthitta"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 201200,
+    "votes_polled": 147882,
+    "votes_counted": 86160,
+    "valid_votes": 85298,
+    "rounds_completed": 10,
+    "total_rounds": 16,
+    "last_updated": "2026-04-29T11:27:23.085276+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Adv. Pandalam Prathapan",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 40324,
+      "percentage": 51.26,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Priji Sasidharan",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 26356,
+      "percentage": 33.5,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. C V  Santhakumar",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 11171,
+      "percentage": 14.2,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sivakumar C S",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 814,
+      "percentage": 1.03,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Chittayam Gopakumar",
+      "party": "CPI",
+      "votes": 66569,
+      "percentage": 42.83,
+      "is_winner": true
+    },
+    {
+      "candidate": "M. G. Kannan",
+      "party": "INC",
+      "votes": 63650,
+      "percentage": 40.96,
+      "is_winner": false
+    },
+    {
+      "candidate": "Adv. Pandalam Prathapan",
+      "party": "BJP",
+      "votes": 23980,
+      "percentage": 15.43,
+      "is_winner": false
+    },
+    {
+      "candidate": "R. Kannan S/o Rajan",
+      "party": "IND",
+      "votes": 218,
+      "percentage": 0.14,
+      "is_winner": false
+    },
+    {
+      "candidate": "Vipin Kanikonathu",
+      "party": "BSP",
+      "votes": 178,
+      "percentage": 0.11,
+      "is_winner": false
+    }
+  ]
+}

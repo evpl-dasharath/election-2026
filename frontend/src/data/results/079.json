@@ -1,0 +1,104 @@
+{
+  "constituency": {
+    "id": 79,
+    "number": 79,
+    "name": "VYPEN",
+    "district": "Ernakulam"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 161285,
+    "votes_polled": 129834,
+    "votes_counted": 69793,
+    "valid_votes": 69095,
+    "rounds_completed": 10,
+    "total_rounds": 16,
+    "last_updated": "2026-04-29T11:27:22.923204+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Anitha Thomas",
+      "party": "TTP",
+      "alliance": "NDA",
+      "votes": 26728,
+      "percentage": 40.22,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Adv. M. B. Shyni",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 25852,
+      "percentage": 38.9,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Tony Chammany",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 12687,
+      "percentage": 19.09,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sadasivan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 559,
+      "percentage": 0.84,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Mohandas PG",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 413,
+      "percentage": 0.62,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "T. C. Subrahmanyan",
+      "party": "CPIML Red Star",
+      "alliance": "OTH",
+      "votes": 214,
+      "percentage": 0.32,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "K.N. Unnikrishnan",
+      "party": "CPI(M)",
+      "votes": 53858,
+      "percentage": 41.24,
+      "is_winner": true
+    },
+    {
+      "candidate": "Deepak Joy",
+      "party": "INC",
+      "votes": 45657,
+      "percentage": 34.96,
+      "is_winner": false
+    },
+    {
+      "candidate": "Adv.K.S. Shaiju",
+      "party": "BJP",
+      "votes": 13540,
+      "percentage": 10.37,
+      "is_winner": false
+    },
+    {
+      "candidate": "Dr.M.K. Mukundan",
+      "party": "IND",
+      "votes": 309,
+      "percentage": 0.24,
+      "is_winner": false
+    }
+  ]
+}

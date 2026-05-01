@@ -1,0 +1,93 @@
+{
+  "constituency": {
+    "id": 62,
+    "number": 62,
+    "name": "KUNNAMKULAM",
+    "district": "Thrissur"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 201704,
+    "votes_polled": 146185,
+    "votes_counted": 61412,
+    "valid_votes": 150119,
+    "rounds_completed": 9,
+    "total_rounds": 22,
+    "last_updated": "2026-04-30T12:05:32.313424+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "A. C. Moytheen",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 37510,
+      "percentage": 24.99,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Rajeev K Sivaraman",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 11699,
+      "percentage": 7.79,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "P. T. Ajayamohan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 6886,
+      "percentage": 4.59,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Rijil K. R.",
+      "party": "BDJS",
+      "alliance": "NDA",
+      "votes": 4692,
+      "percentage": 3.13,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "A.C.MOIDEEN",
+      "party": "CPI(M)",
+      "votes": 75532,
+      "percentage": 48.78,
+      "is_winner": true
+    },
+    {
+      "candidate": "K.JAYASANKAR",
+      "party": "INC",
+      "votes": 48901,
+      "percentage": 31.58,
+      "is_winner": false
+    },
+    {
+      "candidate": "Adv. K.K.ANEESHKUMAR",
+      "party": "BJP",
+      "votes": 27833,
+      "percentage": 17.98,
+      "is_winner": false
+    },
+    {
+      "candidate": "V.S.ABOOBACKER",
+      "party": "SDPI",
+      "votes": 1241,
+      "percentage": 0.8,
+      "is_winner": false
+    },
+    {
+      "candidate": "MOIDEEN.K.M s/o MUHAMMED",
+      "party": "IND",
+      "votes": 380,
+      "percentage": 0.25,
+      "is_winner": false
+    }
+  ]
+}

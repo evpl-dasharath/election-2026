@@ -1,0 +1,102 @@
+{
+  "constituency": {
+    "id": 7,
+    "number": 7,
+    "name": "KALLIASSERI",
+    "district": "Kannur"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 201245,
+    "votes_polled": 131867,
+    "votes_counted": 49013,
+    "valid_votes": 134787,
+    "rounds_completed": 8,
+    "total_rounds": 22,
+    "last_updated": "2026-04-30T12:06:41.312591+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "K.K. Abdul Jabbar",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 16532,
+      "percentage": 12.27,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "A.V. Sanil Kumar",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 14786,
+      "percentage": 10.97,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "M. Vijin",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 7618,
+      "percentage": 5.65,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Rajeevan Kappacheri",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 5521,
+      "percentage": 4.1,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Rajeevan Kannoth S/o Kammaran",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 3618,
+      "percentage": 2.68,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "M VIJIN",
+      "party": "CPI(M)",
+      "votes": 88252,
+      "percentage": 60.62,
+      "is_winner": true
+    },
+    {
+      "candidate": "ADV. BRIJESH KUMAR",
+      "party": "INC",
+      "votes": 43859,
+      "percentage": 30.13,
+      "is_winner": false
+    },
+    {
+      "candidate": "ARUN KAITHAPRAM",
+      "party": "BJP",
+      "votes": 11365,
+      "percentage": 7.81,
+      "is_winner": false
+    },
+    {
+      "candidate": "FAIZAL MADAYI",
+      "party": "WPOI",
+      "votes": 1169,
+      "percentage": 0.8,
+      "is_winner": false
+    },
+    {
+      "candidate": "BRIJESHKUMAR M. S/o AMBU",
+      "party": "IND",
+      "votes": 274,
+      "percentage": 0.19,
+      "is_winner": false
+    }
+  ]
+}

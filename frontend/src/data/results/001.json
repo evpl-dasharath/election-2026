@@ -1,0 +1,156 @@
+{
+  "constituency": {
+    "id": 1,
+    "number": 1,
+    "name": "MANJESHWAR",
+    "district": "Kasaragod"
+  },
+  "live_result": {
+    "status": "RESULT_DECLARED",
+    "total_electors": 230113,
+    "votes_polled": 186483,
+    "votes_counted": 0,
+    "valid_votes": 0,
+    "rounds_completed": 32,
+    "total_rounds": 13,
+    "last_updated": "2026-04-30T04:06:15.520528+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "K. R. Jayananda",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 107730,
+      "percentage": 46.11,
+      "is_winner": true,
+      "is_leading": true
+    },
+    {
+      "name": "Gean Lavina Monteiro",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 106055,
+      "percentage": 45.39,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Abdul Latheef I",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 5312,
+      "percentage": 2.27,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Mohammed Ashraf K A",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 5312,
+      "percentage": 2.27,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. Surendran",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 2426,
+      "percentage": 1.04,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "John D' Souza",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 2303,
+      "percentage": 0.99,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "A. K. M. Ashraf",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 1852,
+      "percentage": 0.79,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sanjeeva",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 1852,
+      "percentage": 0.79,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "D Surendran Nair",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 1554,
+      "percentage": 0.67,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Kannur Abdulla Master",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Mohammed Ashraf",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "A K M ASHRAF",
+      "party": "IUML",
+      "votes": 65758,
+      "percentage": 38.14,
+      "is_winner": true
+    },
+    {
+      "candidate": "K SURENDRAN",
+      "party": "BJP",
+      "votes": 65013,
+      "percentage": 37.7,
+      "is_winner": false
+    },
+    {
+      "candidate": "V V RAMESHAN",
+      "party": "CPI(M)",
+      "votes": 40639,
+      "percentage": 23.57,
+      "is_winner": false
+    },
+    {
+      "candidate": "PRAVEEN KUMAR S",
+      "party": "ADHRMPI",
+      "votes": 251,
+      "percentage": 0.15,
+      "is_winner": false
+    },
+    {
+      "candidate": "SURENDRAN M S/o PADMAVATHI M",
+      "party": "IND",
+      "votes": 197,
+      "percentage": 0.11,
+      "is_winner": false
+    }
+  ]
+}

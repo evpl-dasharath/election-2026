@@ -1,0 +1,102 @@
+{
+  "constituency": {
+    "id": 92,
+    "number": 92,
+    "name": "PEERUMADE",
+    "district": "Idukki"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 156542,
+    "votes_polled": 121351,
+    "votes_counted": 79927,
+    "valid_votes": 79127,
+    "rounds_completed": 6,
+    "total_rounds": 12,
+    "last_updated": "2026-04-29T11:27:22.975742+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Adv. Syriac Thomas",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 34778,
+      "percentage": 43.95,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "V. Ratheesh",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 30852,
+      "percentage": 38.99,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. Salim Kumar",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 13497,
+      "percentage": 17.06,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Joseph Jacob",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K Murali",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "VAZHOOR SOMAN",
+      "party": "CPI",
+      "votes": 60141,
+      "percentage": 47.25,
+      "is_winner": true
+    },
+    {
+      "candidate": "Adv.SYRIAC THOMAS",
+      "party": "INC",
+      "votes": 58306,
+      "percentage": 45.81,
+      "is_winner": false
+    },
+    {
+      "candidate": "SREENAGARI RAJAN",
+      "party": "BJP",
+      "votes": 7126,
+      "percentage": 5.6,
+      "is_winner": false
+    },
+    {
+      "candidate": "BIJU MATTAPPALLY",
+      "party": "BSP",
+      "votes": 818,
+      "percentage": 0.64,
+      "is_winner": false
+    },
+    {
+      "candidate": "P.K GOPALAKRISHNAN",
+      "party": "IND",
+      "votes": 251,
+      "percentage": 0.2,
+      "is_winner": false
+    }
+  ]
+}

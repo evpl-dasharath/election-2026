@@ -1,0 +1,147 @@
+{
+  "constituency": {
+    "id": 135,
+    "number": 135,
+    "name": "NEMOM",
+    "district": "Thiruvananthapuram"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 171178,
+    "votes_polled": 138003,
+    "votes_counted": 28238,
+    "valid_votes": 27955,
+    "rounds_completed": 3,
+    "total_rounds": 12,
+    "last_updated": "2026-04-29T11:27:23.186675+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Rajeev Chandrasekhar",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 11159,
+      "percentage": 39.92,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Adv. KS Sabarinathan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 10096,
+      "percentage": 36.12,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "V. Shivankutty",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 5681,
+      "percentage": 20.32,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Vinu K",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 383,
+      "percentage": 1.37,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Kamaleswaram Hari",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 341,
+      "percentage": 1.22,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Subi S M",
+      "party": "TFIP",
+      "alliance": "OTH",
+      "votes": 295,
+      "percentage": 1.06,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Karamana Prasad",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Madanan S",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Rajeev Kumar G S",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sasikala",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "V.Sivankutty",
+      "party": "CPI(M)",
+      "votes": 55837,
+      "percentage": 38.24,
+      "is_winner": true
+    },
+    {
+      "candidate": "Kummanam Rajasekharan",
+      "party": "BJP",
+      "votes": 51888,
+      "percentage": 35.54,
+      "is_winner": false
+    },
+    {
+      "candidate": "K.Muraleedharan",
+      "party": "INC",
+      "votes": 36524,
+      "percentage": 25.01,
+      "is_winner": false
+    },
+    {
+      "candidate": "D.Vijayan",
+      "party": "BSP",
+      "votes": 356,
+      "percentage": 0.24,
+      "is_winner": false
+    },
+    {
+      "candidate": "Jain Wilson",
+      "party": "IND",
+      "votes": 165,
+      "percentage": 0.11,
+      "is_winner": false
+    }
+  ]
+}

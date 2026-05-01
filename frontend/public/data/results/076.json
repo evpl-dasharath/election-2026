@@ -1,0 +1,93 @@
+{
+  "constituency": {
+    "id": 76,
+    "number": 76,
+    "name": "ALUVA",
+    "district": "Ernakulam"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 173022,
+    "votes_polled": 134395,
+    "votes_counted": 50435,
+    "valid_votes": 134495,
+    "rounds_completed": 9,
+    "total_rounds": 24,
+    "last_updated": "2026-04-30T12:07:38.312750+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "M.A. Brahmaraj",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 30178,
+      "percentage": 22.44,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Anwar Sadath",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 11758,
+      "percentage": 8.74,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. A. M. Ariff",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 6933,
+      "percentage": 5.15,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Hakhikhath Hameed",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 2600,
+      "percentage": 1.93,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "ANWAR SADATH",
+      "party": "INC",
+      "votes": 73703,
+      "percentage": 49.0,
+      "is_winner": true
+    },
+    {
+      "candidate": "Ar SHELNA NISHAD",
+      "party": "IND",
+      "votes": 54817,
+      "percentage": 36.44,
+      "is_winner": false
+    },
+    {
+      "candidate": "M.N. GOPI",
+      "party": "BJP",
+      "votes": 15893,
+      "percentage": 10.57,
+      "is_winner": false
+    },
+    {
+      "candidate": "V.A RASHEED",
+      "party": "SDPI",
+      "votes": 2224,
+      "percentage": 1.48,
+      "is_winner": false
+    },
+    {
+      "candidate": "K.M. SHEFRIN",
+      "party": "WPOI",
+      "votes": 1713,
+      "percentage": 1.14,
+      "is_winner": false
+    }
+  ]
+}

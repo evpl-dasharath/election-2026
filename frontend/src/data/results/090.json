@@ -1,0 +1,129 @@
+{
+  "constituency": {
+    "id": 90,
+    "number": 90,
+    "name": "THODUPUZHA",
+    "district": "Idukki"
+  },
+  "live_result": {
+    "status": "RESULT_DECLARED",
+    "total_electors": 188495,
+    "votes_polled": 143199,
+    "votes_counted": 130097,
+    "valid_votes": 128796,
+    "rounds_completed": 16,
+    "total_rounds": 16,
+    "last_updated": "2026-04-29T11:27:22.966266+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Cyriac Chazhikadan",
+      "party": "KC(M)",
+      "alliance": "UDF",
+      "votes": 45655,
+      "percentage": 38.56,
+      "is_winner": true,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Roy A. Varikkad",
+      "party": "TTP",
+      "alliance": "NDA",
+      "votes": 43755,
+      "percentage": 36.95,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Apu John Joseph",
+      "party": "KEC",
+      "alliance": "UDF",
+      "votes": 25291,
+      "percentage": 21.36,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Afsal M. B",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 1112,
+      "percentage": 0.94,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Jomon John",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 965,
+      "percentage": 0.81,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ajay V Marar (ajay Unni)",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 936,
+      "percentage": 0.79,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Basil John",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 447,
+      "percentage": 0.38,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "P T Varghese",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 245,
+      "percentage": 0.21,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "P J JOSEPH",
+      "party": "KEC",
+      "votes": 67495,
+      "percentage": 48.63,
+      "is_winner": true
+    },
+    {
+      "candidate": "Prof. K I ANTONY",
+      "party": "KC(M)",
+      "votes": 47236,
+      "percentage": 34.03,
+      "is_winner": false
+    },
+    {
+      "candidate": "SHYAMRAJ P",
+      "party": "BJP",
+      "votes": 21263,
+      "percentage": 15.32,
+      "is_winner": false
+    },
+    {
+      "candidate": "LEETHESH P T",
+      "party": "BSP",
+      "votes": 934,
+      "percentage": 0.67,
+      "is_winner": false
+    },
+    {
+      "candidate": "M T THOMAS",
+      "party": "IND",
+      "votes": 562,
+      "percentage": 0.4,
+      "is_winner": false
+    }
+  ]
+}

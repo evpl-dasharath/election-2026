@@ -1,0 +1,113 @@
+{
+  "constituency": {
+    "id": 136,
+    "number": 136,
+    "name": "ARUVIKKARA",
+    "district": "Thiruvananthapuram"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 181308,
+    "votes_polled": 143414,
+    "votes_counted": 116826,
+    "valid_votes": 115657,
+    "rounds_completed": 13,
+    "total_rounds": 15,
+    "last_updated": "2026-04-29T11:27:23.193956+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Vivek Gopan",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 41746,
+      "percentage": 38.27,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "V. S. Sivakumar",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 39054,
+      "percentage": 35.8,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. G. Steephen",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 25682,
+      "percentage": 23.54,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "R. Steephen S/o Rafi",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 884,
+      "percentage": 0.81,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. S. Sivakumar S/o Sadasivan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 862,
+      "percentage": 0.79,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Santhosh Kumar. S",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 659,
+      "percentage": 0.6,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "V. S. Sivakumar S/o Sivadasan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 205,
+      "percentage": 0.19,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Adv. G. Steephen",
+      "party": "CPI(M)",
+      "votes": 66776,
+      "percentage": 45.83,
+      "is_winner": true
+    },
+    {
+      "candidate": "K. S. Sabarinadhan",
+      "party": "INC",
+      "votes": 61730,
+      "percentage": 42.37,
+      "is_winner": false
+    },
+    {
+      "candidate": "C. Sivankutty",
+      "party": "BJP",
+      "votes": 15379,
+      "percentage": 10.55,
+      "is_winner": false
+    },
+    {
+      "candidate": "Krishnankutty. M",
+      "party": "BSP",
+      "votes": 923,
+      "percentage": 0.63,
+      "is_winner": false
+    }
+  ]
+}

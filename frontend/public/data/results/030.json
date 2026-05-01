@@ -1,0 +1,138 @@
+{
+  "constituency": {
+    "id": 30,
+    "number": 30,
+    "name": "KUNNAMANGALAM",
+    "district": "Kozhikode"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 182241,
+    "votes_polled": 130324,
+    "votes_counted": 55601,
+    "valid_votes": 133443,
+    "rounds_completed": 10,
+    "total_rounds": 24,
+    "last_updated": "2026-04-30T12:01:07.312570+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Abdul Razak",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 19353,
+      "percentage": 14.5,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Adv. V. K. Sajeevan",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 6622,
+      "percentage": 4.96,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Raheem P",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 6174,
+      "percentage": 4.63,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Rahim",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 5728,
+      "percentage": 4.29,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. P.T.A Rahim",
+      "party": "IND (CPI(M))",
+      "alliance": "LDF",
+      "votes": 4929,
+      "percentage": 3.69,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "M. A. Razak Master",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 4764,
+      "percentage": 3.57,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Abdu Rasak",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 3682,
+      "percentage": 2.76,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Santhosh P T",
+      "party": "AIHCP",
+      "alliance": "OTH",
+      "votes": 3290,
+      "percentage": 2.47,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Mavoor Muhammed Ali",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 2825,
+      "percentage": 2.12,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "ADV. P. T. A RAHIM",
+      "party": "IND",
+      "votes": 85138,
+      "percentage": 43.93,
+      "is_winner": true
+    },
+    {
+      "candidate": "DINESH PERUMANNA",
+      "party": "IND",
+      "votes": 74862,
+      "percentage": 38.62,
+      "is_winner": false
+    },
+    {
+      "candidate": "ADV: V.K. SAJEEVAN",
+      "party": "BJP",
+      "votes": 27672,
+      "percentage": 14.28,
+      "is_winner": false
+    },
+    {
+      "candidate": "ABDUL VAHID",
+      "party": "SDPI",
+      "votes": 1299,
+      "percentage": 0.67,
+      "is_winner": false
+    },
+    {
+      "candidate": "E. P. ANWAR SADATH",
+      "party": "WPOI",
+      "votes": 1057,
+      "percentage": 0.55,
+      "is_winner": false
+    }
+  ]
+}

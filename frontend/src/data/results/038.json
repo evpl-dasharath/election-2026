@@ -1,0 +1,129 @@
+{
+  "constituency": {
+    "id": 38,
+    "number": 38,
+    "name": "PERINTHALMANNA",
+    "district": "Malappuram"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 229525,
+    "votes_polled": 184193,
+    "votes_counted": 58899,
+    "valid_votes": 58310,
+    "rounds_completed": 7,
+    "total_rounds": 14,
+    "last_updated": "2026-04-29T11:27:22.726562+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Najeeb Kanthapuram",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 22786,
+      "percentage": 39.08,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "V. P. Muhammad Haneefa",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 21431,
+      "percentage": 36.75,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. K.P. Baburaj",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 13253,
+      "percentage": 22.73,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Abdul Najeeb S/o Mohamed",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 327,
+      "percentage": 0.56,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Haneefa",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 327,
+      "percentage": 0.56,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Abdul Najeeb S/o Veerappu",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 186,
+      "percentage": 0.32,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Mohammed Haneefa P S/o Alavi",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Najeeb",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "NAJEEB KANTHAPURAM",
+      "party": "IUML",
+      "votes": 76530,
+      "percentage": 46.21,
+      "is_winner": true
+    },
+    {
+      "candidate": "K P M MUSTHAFA S/o MUHAMMEDALI HAJI",
+      "party": "IND",
+      "votes": 76492,
+      "percentage": 46.19,
+      "is_winner": false
+    },
+    {
+      "candidate": "SUCHITHRA",
+      "party": "BJP",
+      "votes": 8021,
+      "percentage": 4.84,
+      "is_winner": false
+    },
+    {
+      "candidate": "ADV ABDUL AFSAL P T",
+      "party": "IND",
+      "votes": 906,
+      "percentage": 0.55,
+      "is_winner": false
+    },
+    {
+      "candidate": "NAJEEB KUTTEERI",
+      "party": "IND",
+      "votes": 828,
+      "percentage": 0.5,
+      "is_winner": false
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "constituency": {
+    "id": 19,
+    "number": 19,
+    "name": "KALPETTA",
+    "district": "Wayanad"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 212881,
+    "votes_polled": 171049,
+    "votes_counted": 122548,
+    "valid_votes": 121322,
+    "rounds_completed": 8,
+    "total_rounds": 12,
+    "last_updated": "2026-04-29T11:27:22.619761+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Prasanth Malavayal",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 44499,
+      "percentage": 48.05,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "T. Siddique",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 43104,
+      "percentage": 46.54,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Rafeek C A",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 1133,
+      "percentage": 1.22,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "T K Ummer",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 995,
+      "percentage": 1.07,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "N Hamza",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 921,
+      "percentage": 0.99,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "V. K. Prakash",
+      "party": "CPIML Red Star",
+      "alliance": "OTH",
+      "votes": 865,
+      "percentage": 0.93,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Radhakrishnan M",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 568,
+      "percentage": 0.61,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sidheeque S/o Kunjammad",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 292,
+      "percentage": 0.32,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "P. K. Anil Kumar",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 234,
+      "percentage": 0.25,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Adv.T SIDDIQU",
+      "party": "INC",
+      "votes": 70252,
+      "percentage": 46.15,
+      "is_winner": true
+    },
+    {
+      "candidate": "M.V.SHREYAMSKUMAR",
+      "party": "LJD",
+      "votes": 64782,
+      "percentage": 42.56,
+      "is_winner": false
+    },
+    {
+      "candidate": "SUBEESH T M",
+      "party": "BJP",
+      "votes": 14113,
+      "percentage": 9.27,
+      "is_winner": false
+    },
+    {
+      "candidate": "ASWIN BHIMNATH",
+      "party": "BSP",
+      "votes": 928,
+      "percentage": 0.61,
+      "is_winner": false
+    },
+    {
+      "candidate": "T.SIDIQUE S/o ABDULLA",
+      "party": "IND",
+      "votes": 641,
+      "percentage": 0.42,
+      "is_winner": false
+    }
+  ]
+}

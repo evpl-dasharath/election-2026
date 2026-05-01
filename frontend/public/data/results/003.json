@@ -1,0 +1,111 @@
+{
+  "constituency": {
+    "id": 3,
+    "number": 3,
+    "name": "UDMA",
+    "district": "Kasaragod"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 239131,
+    "votes_polled": 157746,
+    "votes_counted": 51126,
+    "valid_votes": 161899,
+    "rounds_completed": 6,
+    "total_rounds": 19,
+    "last_updated": "2026-04-30T12:11:54.312663+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Kunhiraman",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 23952,
+      "percentage": 14.79,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Naseer",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 7752,
+      "percentage": 4.79,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Neelakantan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 7455,
+      "percentage": 4.6,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Kunhampu P P S/o Raman",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 5285,
+      "percentage": 3.26,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Manulal Meloth",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 3505,
+      "percentage": 2.16,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "C. H. Kunhambu",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 2943,
+      "percentage": 1.82,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "C H KUNHAMBU",
+      "party": "CPI(M)",
+      "votes": 78664,
+      "percentage": 47.58,
+      "is_winner": true
+    },
+    {
+      "candidate": "BALAKRISHNAN PERIYE",
+      "party": "INC",
+      "votes": 65342,
+      "percentage": 39.52,
+      "is_winner": false
+    },
+    {
+      "candidate": "A VELAYUDHAN",
+      "party": "BJP",
+      "votes": 20360,
+      "percentage": 12.31,
+      "is_winner": false
+    },
+    {
+      "candidate": "RAMESHAN K",
+      "party": "IND",
+      "votes": 207,
+      "percentage": 0.13,
+      "is_winner": false
+    },
+    {
+      "candidate": "KUNHAMBU K S/o Kuttappan K C",
+      "party": "IND",
+      "votes": 140,
+      "percentage": 0.08,
+      "is_winner": false
+    }
+  ]
+}

@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kerala Election Results 2026 — Live</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --udf: #1A8FE3;
+    --ldf: #D42B2B;
+    --nda: #F7921C;
+    --oth: #6B7280;
+    --bg: #F5F2EE;
+    --surface: #FDFCFB;
+    --ink: #1A1611;
+    --ink2: #5C5245;
+    --border: #E2DDD8;
+    --gold: #C8A84B;
+    --live-pulse: #22c55e;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  header {
+    background: var(--ink);
+    color: #fff;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    letter-spacing: -0.3px;
+  }
+
+  .logo span { color: var(--gold); }
+
+  .live-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(34,197,94,0.15);
+    border: 1px solid rgba(34,197,94,0.3);
+    color: var(--live-pulse);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+  }
+
+  .pulse {
+    width: 7px; height: 7px;
+    background: var(--live-pulse);
+    border-radius: 50%;
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.7); }
+  }
+
+  .header-nav { display: flex; gap: 4px; }
+
+  .nav-btn {
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.55);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .nav-btn:hover, .nav-btn.active {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+  }
+
+  .header-time {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+  }
+
+  /* HERO SUMMARY */
+  .hero {
+    background: var(--ink);
+    color: #fff;
+    padding: 28px 32px 32px;
+    border-bottom: 3px solid var(--gold);
+  }
+
+  .hero-headline {
+    font-family: 'DM Serif Display', serif;
+    font-size: 28px;
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+  }
+
+  .hero-sub {
+    color: rgba(255,255,255,0.5);
+    font-size: 13px;
+    margin-bottom: 28px;
+  }
+
+  .hero-sub strong { color: rgba(255,255,255,0.8); }
+
+  /* ALLIANCE BARS */
+  .alliance-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .alliance-card {
+    border-radius: 8px;
+    padding: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .alliance-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.12;
+  }
+
+  .alliance-card.udf { border-left: 4px solid var(--udf); background: rgba(26,143,227,0.08); }
+  .alliance-card.ldf { border-left: 4px solid var(--ldf); background: rgba(212,43,43,0.08); }
+  .alliance-card.nda { border-left: 4px solid var(--nda); background: rgba(247,146,28,0.08); }
+  .alliance-card.oth { border-left: 4px solid var(--oth); background: rgba(107,114,128,0.08); }
+
+  .ac-name {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    opacity: 0.7;
+  }
+
+  .ac-seats {
+    font-family: 'DM Serif Display', serif;
+    font-size: 42px;
+    line-height: 1;
+    margin-bottom: 2px;
+  }
+
+  .ac-seats.udf { color: #5CB8FF; }
+  .ac-seats.ldf { color: #FF7575; }
+  .ac-seats.nda { color: #FFB85C; }
+  .ac-seats.oth { color: #9CA3AF; }
+
+  .ac-meta {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+  }
+
+  /* SEAT BAR */
+  .seat-bar-wrap {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    margin-top: 4px;
+  }
+
+  .seat-bar {
+    flex: 1;
+    height: 10px;
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.07);
+  }
+
+  .bar-seg {
+    height: 100%;
+    transition: width 0.6s ease;
+  }
+
+  .bar-majority-line {
+    position: relative;
+    width: 1px;
+    height: 10px;
+    background: rgba(255,255,255,0.4);
+  }
+
+  .seat-bar-label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.4);
+    font-family: 'JetBrains Mono', monospace;
+    white-space: nowrap;
+  }
+
+  /* MAIN LAYOUT */
+  .main {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    height: calc(100vh - 56px - 132px);
+    min-height: 600px;
+  }
+
+  /* LEFT PANEL */
+  .left-panel {
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .panel-toolbar {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 8px 12px;
+  }
+
+  .search-bar input {
+    border: none;
+    background: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--ink);
+    width: 100%;
+    outline: none;
+  }
+
+  .search-icon { color: var(--ink2); font-size: 14px; }
+
+  .filter-pills {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .pill {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1.5px solid transparent;
+    transition: all 0.15s;
+  }
+
+  .pill.all { border-color: var(--ink); color: var(--ink); background: var(--ink); color: #fff; }
+  .pill.udf { border-color: var(--udf); color: var(--udf); }
+  .pill.udf.active, .pill.udf:hover { background: var(--udf); color: #fff; }
+  .pill.ldf { border-color: var(--ldf); color: var(--ldf); }
+  .pill.ldf.active, .pill.ldf:hover { background: var(--ldf); color: #fff; }
+  .pill.nda { border-color: var(--nda); color: var(--nda); }
+  .pill.nda.active, .pill.nda:hover { background: var(--nda); color: #fff; }
+
+  .const-list {
+    overflow-y: auto;
+    flex: 1;
+  }
+
+  .const-list::-webkit-scrollbar { width: 4px; }
+  .const-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+  .const-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.12s;
+    gap: 12px;
+  }
+
+  .const-item:hover { background: var(--bg); }
+  .const-item.active { background: #EEF6FF; border-left: 3px solid var(--udf); }
+  .const-item.active.ldf { background: #FEF0F0; border-left-color: var(--ldf); }
+  .const-item.active.nda { background: #FFF7ED; border-left-color: var(--nda); }
+
+  .const-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink2);
+    width: 22px;
+    flex-shrink: 0;
+  }
+
+  .const-info { flex: 1; min-width: 0; }
+
+  .const-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 2px;
+  }
+
+  .const-district {
+    font-size: 11px;
+    color: var(--ink2);
+  }
+
+  .const-right { text-align: right; flex-shrink: 0; }
+
+  .leading-party {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 3px;
+  }
+
+  .tag-udf { background: #DBEAFE; color: var(--udf); }
+  .tag-ldf { background: #FEE2E2; color: var(--ldf); }
+  .tag-nda { background: #FED7AA; color: #C2620A; }
+  .tag-oth { background: #F3F4F6; color: var(--oth); }
+
+  .status-dot {
+    display: inline-block;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    margin-right: 4px;
+  }
+
+  .dot-live { background: var(--live-pulse); animation: pulse 1.5s infinite; }
+  .dot-done { background: #6B7280; }
+  .dot-pending { background: #D1D5DB; }
+
+  .const-status { font-size: 10px; color: var(--ink2); }
+
+  /* RIGHT PANEL — Constituency Detail */
+  .right-panel {
+    overflow-y: auto;
+    background: var(--bg);
+  }
+
+  .right-panel::-webkit-scrollbar { width: 4px; }
+  .right-panel::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+  .detail-header {
+    background: var(--surface);
+    padding: 24px 28px 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .detail-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 26px;
+    letter-spacing: -0.3px;
+    margin-bottom: 4px;
+  }
+
+  .detail-meta { font-size: 13px; color: var(--ink2); display: flex; gap: 12px; }
+
+  .meta-chip {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 3px 9px;
+    font-size: 11px;
+    color: var(--ink2);
+    font-weight: 500;
+  }
+
+  .counting-info { text-align: right; }
+
+  .counting-pct {
+    font-family: 'DM Serif Display', serif;
+    font-size: 32px;
+    color: var(--ink);
+  }
+
+  .counting-label { font-size: 11px; color: var(--ink2); }
+
+  .progress-bar {
+    width: 140px;
+    height: 5px;
+    background: var(--border);
+    border-radius: 3px;
+    margin-top: 6px;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: var(--live-pulse);
+    border-radius: 3px;
+    transition: width 0.8s ease;
+  }
+
+  /* CANDIDATE RESULTS */
+  .section { padding: 20px 28px; }
+
+  .section-title {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ink2);
+    margin-bottom: 14px;
+  }
+
+  .candidate-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+    background: var(--surface);
+    border-radius: 10px;
+    margin-bottom: 8px;
+    border: 1.5px solid var(--border);
+    transition: border-color 0.15s;
+  }
+
+  .candidate-row.leading {
+    border-color: var(--ldf);
+    background: #FFF5F5;
+  }
+
+  .candidate-row.leading.udf-lead {
+    border-color: var(--udf);
+    background: #F0F8FF;
+  }
+
+  .party-dot {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    flex-shrink: 0;
+    color: #fff;
+    letter-spacing: 0.3px;
+  }
+
+  .cand-info { flex: 1; }
+
+  .cand-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .winner-badge {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: #15803D;
+    color: #fff;
+    padding: 2px 7px;
+    border-radius: 3px;
+  }
+
+  .leading-badge {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: #1D4ED8;
+    color: #fff;
+    padding: 2px 7px;
+    border-radius: 3px;
+  }
+
+  .cand-party { font-size: 11px; color: var(--ink2); margin-top: 2px; }
+
+  .cand-votes-wrap { text-align: right; min-width: 90px; }
+
+  .cand-votes {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: -0.5px;
+  }
+
+  .cand-pct { font-size: 11px; color: var(--ink2); }
+
+  .vote-bar-wrap { flex: 1; max-width: 200px; }
+
+  .vote-bar {
+    height: 6px;
+    background: var(--border);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .vote-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.8s ease;
+  }
+
+  /* HISTORICAL */
+  .hist-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .hist-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+  }
+
+  .hist-year {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--ink2);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .hist-winner {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+
+  .hist-party-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    font-size: 12px;
+  }
+
+  .hist-dot {
+    width: 10px; height: 10px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  .hist-margin {
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--ink2);
+    display: flex;
+    gap: 16px;
+  }
+
+  .hist-margin strong { color: var(--ink); }
+
+  /* RESPONSIVE BOTTOM BAR */
+  .bottom-ticker {
+    background: var(--ink);
+    color: rgba(255,255,255,0.6);
+    font-size: 12px;
+    padding: 8px 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    overflow: hidden;
+  }
+
+  .ticker-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+
+  .ticker-scroll {
+    display: flex;
+    gap: 32px;
+    animation: ticker 30s linear infinite;
+    white-space: nowrap;
+  }
+
+  @keyframes ticker {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  .ticker-item { color: rgba(255,255,255,0.5); }
+  .ticker-item strong { color: #fff; font-weight: 600; }
+
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 0 28px;
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-left">
+    <div class="logo">Kerala <span>Elections</span> 2026</div>
+    <div class="live-badge"><div class="pulse"></div> Live</div>
+  </div>
+  <div class="header-nav">
+    <button class="nav-btn active">State View</button>
+    <button class="nav-btn">District View</button>
+    <button class="nav-btn">Trends</button>
+    <button class="nav-btn">Historical</button>
+  </div>
+  <div class="header-time" id="clock">May 4, 2026 · 02:34 PM IST</div>
+</header>
+
+<!-- HERO SUMMARY -->
+<div class="hero">
+  <div class="hero-headline">LDF leads in Kerala Assembly Elections 2026</div>
+  <div class="hero-sub"><strong>87 of 140</strong> seats declared · Results updated 14 minutes ago</div>
+
+  <div class="alliance-grid">
+    <div class="alliance-card ldf">
+      <div class="ac-name">LDF</div>
+      <div class="ac-seats ldf">71</div>
+      <div class="ac-meta">Leading/Won · Majority: 71</div>
+    </div>
+    <div class="alliance-card udf">
+      <div class="ac-name">UDF</div>
+      <div class="ac-seats udf">54</div>
+      <div class="ac-meta">Leading/Won</div>
+    </div>
+    <div class="alliance-card nda">
+      <div class="ac-name">NDA</div>
+      <div class="ac-seats nda">9</div>
+      <div class="ac-meta">Leading/Won</div>
+    </div>
+    <div class="alliance-card oth">
+      <div class="ac-name">OTH</div>
+      <div class="ac-seats oth">6</div>
+      <div class="ac-meta">Leading/Won</div>
+    </div>
+  </div>
+
+  <div class="seat-bar-wrap">
+    <div class="seat-bar">
+      <div class="bar-seg" style="width:50.7%; background:var(--ldf);"></div>
+      <div class="bar-seg" style="width:38.6%; background:var(--udf);"></div>
+      <div class="bar-seg" style="width:6.4%; background:var(--nda);"></div>
+      <div class="bar-seg" style="width:4.3%; background:var(--oth);"></div>
+    </div>
+    <div class="seat-bar-label">71 needed for majority</div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+
+  <!-- LEFT: CONSTITUENCY LIST -->
+  <div class="left-panel">
+    <div class="panel-toolbar">
+      <div class="search-bar">
+        <span class="search-icon">⌕</span>
+        <input type="text" placeholder="Search constituency..." id="searchInput" oninput="filterList()">
+      </div>
+      <div class="filter-pills">
+        <div class="pill all" onclick="setFilter('all', this)">All 140</div>
+        <div class="pill ldf" onclick="setFilter('ldf', this)">LDF</div>
+        <div class="pill udf" onclick="setFilter('udf', this)">UDF</div>
+        <div class="pill nda" onclick="setFilter('nda', this)">NDA</div>
+      </div>
+    </div>
+
+    <div class="const-list" id="constList">
+      <!-- JS rendered -->
+    </div>
+  </div>
+
+  <!-- RIGHT: DETAIL -->
+  <div class="right-panel" id="detailPanel">
+    <div class="detail-header">
+      <div>
+        <div class="detail-title" id="d-name">Perumbavoor</div>
+        <div class="detail-meta">
+          <span class="meta-chip" id="d-district">Ernakulam District</span>
+          <span class="meta-chip" id="d-cat">GEN</span>
+          <span class="meta-chip" id="d-num"># 42</span>
+        </div>
+      </div>
+      <div class="counting-info">
+        <div class="counting-pct" id="d-counted">78%</div>
+        <div class="counting-label">votes counted</div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="d-progress" style="width:78%;"></div>
+        </div>
+        <div style="font-size:11px;color:var(--ink2);margin-top:4px;" id="d-rounds">Round 14 of 18</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Current Results</div>
+      <div id="candidatesSection"><!-- JS rendered --></div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+      <div class="section-title">Historical Comparison</div>
+      <div class="hist-grid">
+        <div class="hist-card">
+          <div class="hist-year">2021 Assembly</div>
+          <div class="hist-winner">P.V. Sreenijin</div>
+          <div style="font-size:12px;color:var(--ink2);">CPI(M) · LDF</div>
+          <div class="hist-party-row">
+            <div class="hist-dot" style="background:var(--ldf);"></div>
+            <span>51,340 votes · 48.2%</span>
+          </div>
+          <div class="hist-margin">
+            <span>Margin <strong>8,214</strong></span>
+            <span>Turnout <strong>77.4%</strong></span>
+          </div>
+        </div>
+        <div class="hist-card">
+          <div class="hist-year">2024 LS Segment</div>
+          <div class="hist-winner">Ernakulam</div>
+          <div style="font-size:12px;color:var(--ink2);">INC · UDF</div>
+          <div class="hist-party-row">
+            <div class="hist-dot" style="background:var(--udf);"></div>
+            <span>54,890 votes · 51.8%</span>
+          </div>
+          <div class="hist-margin">
+            <span>Lead <strong>6,102</strong></span>
+            <span>Turnout <strong>73.1%</strong></span>
+          </div>
+        </div>
+        <div class="hist-card">
+          <div class="hist-year">2019 LS Segment</div>
+          <div class="hist-winner">Ernakulam</div>
+          <div style="font-size:12px;color:var(--ink2);">INC · UDF</div>
+          <div class="hist-party-row">
+            <div class="hist-dot" style="background:var(--udf);"></div>
+            <span>52,107 votes · 50.1%</span>
+          </div>
+          <div class="hist-margin">
+            <span>Lead <strong>3,450</strong></span>
+            <span>Turnout <strong>71.8%</strong></span>
+          </div>
+        </div>
+        <div class="hist-card">
+          <div class="hist-year">Alliance Vote Share Trend</div>
+          <div style="margin-top:8px;">
+            <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:5px;">
+              <span style="color:var(--ldf);">LDF</span>
+              <span style="color:var(--ldf);font-weight:600;font-family:'JetBrains Mono',monospace;">48.2%</span>
+            </div>
+            <div style="height:5px;background:var(--border);border-radius:3px;overflow:hidden;margin-bottom:8px;">
+              <div style="height:100%;width:48.2%;background:var(--ldf);border-radius:3px;"></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:5px;">
+              <span style="color:var(--udf);">UDF</span>
+              <span style="color:var(--udf);font-weight:600;font-family:'JetBrains Mono',monospace;">39.5%</span>
+            </div>
+            <div style="height:5px;background:var(--border);border-radius:3px;overflow:hidden;margin-bottom:8px;">
+              <div style="height:100%;width:39.5%;background:var(--udf);border-radius:3px;"></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:5px;">
+              <span style="color:var(--nda);">NDA</span>
+              <span style="color:var(--nda);font-weight:600;font-family:'JetBrains Mono',monospace;">8.4%</span>
+            </div>
+            <div style="height:5px;background:var(--border);border-radius:3px;overflow:hidden;">
+              <div style="height:100%;width:8.4%;background:var(--nda);border-radius:3px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BOTTOM TICKER -->
+<div class="bottom-ticker">
+  <div class="ticker-label">Updates</div>
+  <div style="overflow:hidden;flex:1;">
+    <div class="ticker-scroll">
+      <span class="ticker-item"><strong>Thiruvananthapuram</strong> CPI(M) leading by 3,204 votes ·</span>
+      <span class="ticker-item"><strong>Kozhikode North</strong> INC declared winner ·</span>
+      <span class="ticker-item"><strong>Thrissur</strong> BJP leading by 892 votes ·</span>
+      <span class="ticker-item"><strong>Malappuram</strong> IUML declared winner ·</span>
+      <span class="ticker-item"><strong>Kannur</strong> CPI(M) declared winner ·</span>
+      <span class="ticker-item"><strong>Pathanamthitta</strong> INC leading by 1,104 votes ·</span>
+      <span class="ticker-item"><strong>Thiruvananthapuram</strong> CPI(M) leading by 3,204 votes ·</span>
+      <span class="ticker-item"><strong>Kozhikode North</strong> INC declared winner ·</span>
+      <span class="ticker-item"><strong>Thrissur</strong> BJP leading by 892 votes ·</span>
+      <span class="ticker-item"><strong>Malappuram</strong> IUML declared winner ·</span>
+      <span class="ticker-item"><strong>Kannur</strong> CPI(M) declared winner ·</span>
+      <span class="ticker-item"><strong>Pathanamthitta</strong> INC leading by 1,104 votes ·</span>
+    </div>
+  </div>
+</div>
+
+<script>
+const constituencies = [
+  { num: 1,  name: 'Manjeshwar',       district: 'Kasaragod',        alliance: 'ldf', party: 'CPI(M)', leading: 'T. Sidhdique',     votes: 48200, status: 'done', counted: 100 },
+  { num: 2,  name: 'Kasaragod',        district: 'Kasaragod',        alliance: 'udf', party: 'INC',    leading: 'Rajmohan Unnithan', votes: 51300, status: 'done', counted: 100 },
+  { num: 3,  name: 'Udma',             district: 'Kasaragod',        alliance: 'ldf', party: 'CPI(M)', leading: 'K.V. Sumesh',      votes: 44100, status: 'live', counted: 82 },
+  { num: 4,  name: 'Kanhangad',        district: 'Kasaragod',        alliance: 'nda', party: 'BJP',    leading: 'K. Surendran',     votes: 39800, status: 'live', counted: 91 },
+  { num: 5,  name: 'Trikaripur',       district: 'Kasaragod',        alliance: 'ldf', party: 'CPI',    leading: 'P. Jayarajan',     votes: 46500, status: 'done', counted: 100 },
+  { num: 6,  name: 'Payyannur',        district: 'Kannur',           alliance: 'ldf', party: 'CPI(M)', leading: 'E.P. Jayarajan',   votes: 52100, status: 'live', counted: 76 },
+  { num: 7,  name: 'Kalliasseri',      district: 'Kannur',           alliance: 'udf', party: 'INC',    leading: 'K.K. Lathika',     votes: 44300, status: 'live', counted: 88 },
+  { num: 8,  name: 'Thalassery',       district: 'Kannur',           alliance: 'ldf', party: 'CPI(M)', leading: 'A.N. Shamseer',    votes: 56700, status: 'done', counted: 100 },
+  { num: 9,  name: 'Kuthuparamba',     district: 'Kannur',           alliance: 'ldf', party: 'CPI(M)', leading: 'Saji Cherian',     votes: 49200, status: 'pending', counted: 0 },
+  { num: 10, name: 'Mananthavady',     district: 'Wayanad',          alliance: 'udf', party: 'IUML',   leading: 'M.K. Muneer',      votes: 41800, status: 'live', counted: 65 },
+  { num: 42, name: 'Perumbavoor',      district: 'Ernakulam',        alliance: 'ldf', party: 'CPI(M)', leading: 'P.V. Sreenijin',   votes: 53200, status: 'live', counted: 78 },
+  { num: 43, name: 'Angamaly',         district: 'Ernakulam',        alliance: 'udf', party: 'KC(M)',  leading: 'Roji M. John',     votes: 38900, status: 'live', counted: 84 },
+  { num: 70, name: 'Thrissur',         district: 'Thrissur',         alliance: 'nda', party: 'BJP',    leading: 'Suresh Gopi',      votes: 47300, status: 'live', counted: 92 },
+  { num: 71, name: 'Nattika',          district: 'Thrissur',         alliance: 'ldf', party: 'CPI(M)', leading: 'C. Raveendranath', votes: 44100, status: 'pending', counted: 0 },
+  { num: 99, name: 'Nemom',            district: 'Thiruvananthapuram', alliance: 'nda', party: 'BJP',  leading: 'O. Rajagopal',     votes: 42000, status: 'done', counted: 100 },
+  { num:140, name: 'Neyyattinkara',    district: 'Thiruvananthapuram', alliance: 'ldf', party: 'CPI',  leading: 'G. Sudhakaran',    votes: 39800, status: 'live', counted: 70 },
+];
+
+const candidatesData = {
+  42: [
+    { name: 'P.V. Sreenijin',   party: 'CPI(M)', alliance: 'ldf', color: '#D42B2B', votes: 53200, pct: 46.1, leading: true },
+    { name: 'Hibi Eden',        party: 'INC',    alliance: 'udf', color: '#1A8FE3', votes: 44870, pct: 38.9, leading: false },
+    { name: 'A.N. Radhakrishnan', party: 'BJP',  alliance: 'nda', color: '#F7921C', votes: 12340, pct: 10.7, leading: false },
+    { name: 'John K. Thomas',   party: 'IND',    alliance: 'oth', color: '#6B7280', votes: 4890,  pct: 4.3,  leading: false },
+  ]
+};
+
+let activeConst = 42;
+let activeFilter = 'all';
+
+function setFilter(f, el) {
+  activeFilter = f;
+  document.querySelectorAll('.pill').forEach(p => p.classList.remove('all'));
+  el.classList.add('all');
+  renderList();
+}
+
+function filterList() { renderList(); }
+
+function renderList() {
+  const q = document.getElementById('searchInput').value.toLowerCase();
+  const list = document.getElementById('constList');
+  let html = '';
+
+  const filtered = constituencies.filter(c => {
+    const matchFilter = activeFilter === 'all' || c.alliance === activeFilter;
+    const matchQ = !q || c.name.toLowerCase().includes(q) || c.district.toLowerCase().includes(q);
+    return matchFilter && matchQ;
+  });
+
+  filtered.forEach(c => {
+    const isActive = c.num === activeConst;
+    const dotClass = c.status === 'live' ? 'dot-live' : c.status === 'done' ? 'dot-done' : 'dot-pending';
+    const statusLabel = c.status === 'live' ? 'Counting' : c.status === 'done' ? 'Declared' : 'Awaited';
+    const tagClass = `tag-${c.alliance}`;
+
+    html += `
+      <div class="const-item ${isActive ? 'active ' + c.alliance : ''}" onclick="selectConst(${c.num})">
+        <div class="const-num">${String(c.num).padStart(3,'0')}</div>
+        <div class="const-info">
+          <div class="const-name">${c.name}</div>
+          <div class="const-district">${c.district}</div>
+        </div>
+        <div class="const-right">
+          <div class="leading-party ${tagClass}">${c.party}</div>
+          <div class="const-status">
+            <span class="status-dot ${dotClass}"></span>${statusLabel}
+          </div>
+        </div>
+      </div>
+    `;
+  });
+
+  list.innerHTML = html || '<div style="padding:24px;text-align:center;color:var(--ink2);font-size:13px;">No results found</div>';
+}
+
+function selectConst(num) {
+  activeConst = num;
+  const c = constituencies.find(x => x.num === num);
+  if (!c) return;
+
+  document.getElementById('d-name').textContent = c.name;
+  document.getElementById('d-district').textContent = c.district + ' District';
+  document.getElementById('d-num').textContent = '# ' + c.num;
+  document.getElementById('d-counted').textContent = c.counted + '%';
+  document.getElementById('d-progress').style.width = c.counted + '%';
+  document.getElementById('d-rounds').textContent = c.status === 'pending' ? 'Not started' : c.status === 'done' ? 'All rounds complete' : `Round ${Math.floor(c.counted/6)} of 18`;
+
+  const cands = candidatesData[num] || [
+    { name: c.leading,        party: c.party,   alliance: c.alliance, color: allianceColor(c.alliance), votes: c.votes, pct: 48.2, leading: true },
+    { name: 'Opposition Cand.', party: 'INC',   alliance: 'udf',      color: '#1A8FE3', votes: Math.floor(c.votes * 0.78), pct: 37.6, leading: false },
+    { name: 'NDA Candidate',  party: 'BJP',     alliance: 'nda',      color: '#F7921C', votes: Math.floor(c.votes * 0.22), pct: 10.7, leading: false },
+  ];
+
+  const maxVotes = Math.max(...cands.map(x => x.votes));
+  let html = '';
+  cands.forEach(cd => {
+    const barW = Math.round((cd.votes / maxVotes) * 100);
+    const badge = cd.leading ? (c.status === 'done' ? '<span class="winner-badge">✓ Winner</span>' : '<span class="leading-badge">▲ Leading</span>') : '';
+    html += `
+      <div class="candidate-row ${cd.leading ? (cd.alliance === 'ldf' ? 'leading' : 'leading udf-lead') : ''}">
+        <div class="party-dot" style="background:${cd.color};">${cd.party.replace('(M)','').replace('(J)','').substring(0,3)}</div>
+        <div class="cand-info">
+          <div class="cand-name">${cd.name} ${badge}</div>
+          <div class="cand-party">${cd.party} · ${cd.alliance.toUpperCase()}</div>
+        </div>
+        <div class="vote-bar-wrap">
+          <div style="font-size:10px;color:var(--ink2);margin-bottom:3px;font-family:'JetBrains Mono',monospace;">${cd.pct}%</div>
+          <div class="vote-bar"><div class="vote-bar-fill" style="width:${barW}%;background:${cd.color};"></div></div>
+        </div>
+        <div class="cand-votes-wrap">
+          <div class="cand-votes">${cd.votes.toLocaleString('en-IN')}</div>
+          <div class="cand-pct">votes</div>
+        </div>
+      </div>
+    `;
+  });
+
+  document.getElementById('candidatesSection').innerHTML = html;
+  renderList();
+}
+
+function allianceColor(a) {
+  return { ldf: '#D42B2B', udf: '#1A8FE3', nda: '#F7921C', oth: '#6B7280' }[a] || '#6B7280';
+}
+
+// Clock
+function updateClock() {
+  const now = new Date();
+  const opts = { day:'numeric', month:'long', year:'numeric', hour:'2-digit', minute:'2-digit', timeZone:'Asia/Kolkata' };
+  document.getElementById('clock').textContent = now.toLocaleString('en-IN', opts) + ' IST';
+}
+setInterval(updateClock, 30000);
+
+// Init
+renderList();
+selectConst(42);
+</script>
+</body>
+</html>

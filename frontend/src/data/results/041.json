@@ -1,0 +1,111 @@
+{
+  "constituency": {
+    "id": 41,
+    "number": 41,
+    "name": "VENGARA",
+    "district": "Malappuram"
+  },
+  "live_result": {
+    "status": "RESULT_DECLARED",
+    "total_electors": 211630,
+    "votes_polled": 168944,
+    "votes_counted": 106785,
+    "valid_votes": 105717,
+    "rounds_completed": 13,
+    "total_rounds": 13,
+    "last_updated": "2026-04-29T11:27:22.744143+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Muhammad Sabah Kundupuzhakkal",
+      "party": "IND (CPI(M))",
+      "alliance": "LDF",
+      "votes": 46534,
+      "percentage": 44.04,
+      "is_winner": true,
+      "is_leading": false
+    },
+    {
+      "name": "Jayakrishnan V.N.",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 32718,
+      "percentage": 30.96,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. M. Shaji",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 24317,
+      "percentage": 23.01,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Abdul Rafeeq Chemban",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 1041,
+      "percentage": 0.99,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "U.P. Shaji",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 576,
+      "percentage": 0.55,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K.M.Shaji Shymalayam",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 485,
+      "percentage": 0.46,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "P.K KUNJHALIKUTTY",
+      "party": "IUML",
+      "votes": 70381,
+      "percentage": 53.5,
+      "is_winner": true
+    },
+    {
+      "candidate": "P. JIJI",
+      "party": "CPI(M)",
+      "votes": 39785,
+      "percentage": 30.24,
+      "is_winner": false
+    },
+    {
+      "candidate": "SABAH KUNDUPUZHAKKAL",
+      "party": "IND",
+      "votes": 11255,
+      "percentage": 8.56,
+      "is_winner": false
+    },
+    {
+      "candidate": "PREMAN MASTER",
+      "party": "BJP",
+      "votes": 5968,
+      "percentage": 4.54,
+      "is_winner": false
+    },
+    {
+      "candidate": "E.K. KUNHAHAMEDKUTTY MASTER",
+      "party": "WPOI",
+      "votes": 2051,
+      "percentage": 1.56,
+      "is_winner": false
+    }
+  ]
+}

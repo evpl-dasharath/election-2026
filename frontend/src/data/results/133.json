@@ -1,0 +1,129 @@
+{
+  "constituency": {
+    "id": 133,
+    "number": 133,
+    "name": "VATTIYOORKAVU",
+    "district": "Thiruvananthapuram"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 165272,
+    "votes_polled": 127127,
+    "votes_counted": 133234,
+    "valid_votes": 131901,
+    "rounds_completed": 14,
+    "total_rounds": 16,
+    "last_updated": "2026-04-29T11:27:23.171420+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "K. Muraleedharan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 52916,
+      "percentage": 40.12,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Adv. V.K Prasanth",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 46237,
+      "percentage": 35.05,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "R. Sreelekha",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 31629,
+      "percentage": 23.98,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sreekantan Nair V",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 823,
+      "percentage": 0.62,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Emil B.S",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 296,
+      "percentage": 0.22,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Muralidharan. P S/o. K. Ponnan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "N. Murali",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Prasanth. K S/o. Karunakaran.C",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Adv.V.K.PRASANTH",
+      "party": "CPI(M)",
+      "votes": 61111,
+      "percentage": 44.4,
+      "is_winner": true
+    },
+    {
+      "candidate": "Adv.V.V.RAJESH",
+      "party": "BJP",
+      "votes": 39596,
+      "percentage": 28.77,
+      "is_winner": false
+    },
+    {
+      "candidate": "Adv.VEENA.S.NAIR",
+      "party": "INC",
+      "votes": 35455,
+      "percentage": 25.76,
+      "is_winner": false
+    },
+    {
+      "candidate": "N.MURALI",
+      "party": "BSP",
+      "votes": 419,
+      "percentage": 0.3,
+      "is_winner": false
+    },
+    {
+      "candidate": "A.SHYJU",
+      "party": "SUCI",
+      "votes": 201,
+      "percentage": 0.15,
+      "is_winner": false
+    }
+  ]
+}

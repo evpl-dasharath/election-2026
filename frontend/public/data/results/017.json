@@ -1,0 +1,84 @@
+{
+  "constituency": {
+    "id": 17,
+    "number": 17,
+    "name": "MANANTHAVADY",
+    "district": "Wayanad"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 231066,
+    "votes_polled": 145855,
+    "votes_counted": 68683,
+    "valid_votes": 149854,
+    "rounds_completed": 11,
+    "total_rounds": 24,
+    "last_updated": "2026-04-30T12:03:03.312606+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "P. Shyam Raj",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 38346,
+      "percentage": 25.59,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Usha M A",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 24172,
+      "percentage": 16.13,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "O. R. Kelu",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 6919,
+      "percentage": 4.62,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "O.R.KELU",
+      "party": "CPI(M)",
+      "votes": 72536,
+      "percentage": 47.54,
+      "is_winner": true
+    },
+    {
+      "candidate": "P.K.Jayalakshmi",
+      "party": "INC",
+      "votes": 63254,
+      "percentage": 41.46,
+      "is_winner": false
+    },
+    {
+      "candidate": "Palliyara Mukundan",
+      "party": "BJP",
+      "votes": 13142,
+      "percentage": 8.61,
+      "is_winner": false
+    },
+    {
+      "candidate": "Babitha Sreenu",
+      "party": "SDPI",
+      "votes": 1992,
+      "percentage": 1.31,
+      "is_winner": false
+    },
+    {
+      "candidate": "Lakshmi",
+      "party": "IND",
+      "votes": 382,
+      "percentage": 0.25,
+      "is_winner": false
+    }
+  ]
+}

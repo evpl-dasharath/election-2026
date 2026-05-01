@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #F5F2EE;
+    color: #1A1611;
+    @apply min-h-screen font-sans;
+  }
+}
+
+@layer components {
+  /* Alliance Cards */
+  .alliance-card {
+    @apply rounded-lg p-4 relative overflow-hidden;
+  }
+  .alliance-card::before {
+    content: '';
+    @apply absolute inset-0 opacity-10;
+  }
+  .alliance-card.udf { border-left: 4px solid #1A8FE3; background-color: rgb(26 143 227 / 0.1); }
+  .alliance-card.ldf { border-left: 4px solid #D42B2B; background-color: rgb(212 43 43 / 0.1); }
+  .alliance-card.nda { border-left: 4px solid #F7921C; background-color: rgb(247 146 28 / 0.1); }
+  .alliance-card.oth { border-left: 4px solid #6B7280; background-color: rgb(107 114 128 / 0.1); }
+
+  /* Live Pulse */
+  .pulse {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 9999px;
+    background-color: #22c55e;
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.7); }
+  }
+
+  /* Custom Scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #E2DDD8;
+    border-radius: 4px;
+  }
+
+  /* Ticker Animation */
+  .ticker-scroll {
+    display: flex;
+    gap: 32px;
+    animation: ticker 30s linear infinite;
+    white-space: nowrap;
+  }
+  
+  @keyframes ticker {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* Region block */
+  .region-block {
+    @apply flex-1 rounded-xl p-4 cursor-pointer border-2 border-transparent transition-all duration-200;
+    min-width: 180px;
+  }
+  .region-block:hover {
+    @apply shadow-md;
+    transform: translateY(-1px);
+  }
+  .region-block.active {
+    @apply border-ink shadow-lg;
+  }
+
+  /* District tab */
+  .district-tab {
+    @apply text-[12px] font-semibold px-3.5 py-1.5 rounded-full border border-pageborder 
+           whitespace-nowrap transition-all duration-150 cursor-pointer;
+    background: transparent;
+    color: #5C5245;
+  }
+  .district-tab:hover {
+    @apply bg-ink/5;
+  }
+  .district-tab.active {
+    @apply bg-ink text-white border-ink;
+  }
+
+  /* Constituency compact card */
+  .const-card {
+    @apply bg-surface rounded-xl border border-pageborder p-4 cursor-pointer transition-all duration-200;
+  }
+  .const-card:hover {
+    @apply shadow-md border-ink/20;
+    transform: translateY(-1px);
+  }
+  .const-card.state-not-started {
+    @apply opacity-60;
+  }
+  .const-card.state-close {
+    border-left: 4px solid #F59E0B;
+  }
+  .const-card.state-won-ldf {
+    border-left: 4px solid #D42B2B;
+  }
+  .const-card.state-won-udf {
+    border-left: 4px solid #1A8FE3;
+  }
+  .const-card.state-won-nda {
+    border-left: 4px solid #F7921C;
+  }
+  .const-card.state-won-oth {
+    border-left: 4px solid #6B7280;
+  }
+}

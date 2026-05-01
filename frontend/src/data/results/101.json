@@ -1,0 +1,120 @@
+{
+  "constituency": {
+    "id": 101,
+    "number": 101,
+    "name": "POONJAR",
+    "district": "Kottayam"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 184665,
+    "votes_polled": 142173,
+    "votes_counted": 22435,
+    "valid_votes": 22210,
+    "rounds_completed": 2,
+    "total_rounds": 14,
+    "last_updated": "2026-04-29T11:27:23.024082+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "P. C. George",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 8688,
+      "percentage": 39.84,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Adv. Sebastian Kulathunkal",
+      "party": "KC(M)",
+      "alliance": "UDF",
+      "votes": 7352,
+      "percentage": 33.72,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Sebastian M.J",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 4493,
+      "percentage": 20.6,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Santhosh Joseph",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 450,
+      "percentage": 2.06,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Shiny A C",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 365,
+      "percentage": 1.67,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Mayamol K P",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 355,
+      "percentage": 1.63,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Abhiram Babu",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 103,
+      "percentage": 0.47,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Adv. Sebastian Kulathunkal",
+      "party": "KC(M)",
+      "votes": 58668,
+      "percentage": 41.94,
+      "is_winner": true
+    },
+    {
+      "candidate": "P.C.George Plathottam",
+      "party": "KJPS",
+      "votes": 41851,
+      "percentage": 29.92,
+      "is_winner": false
+    },
+    {
+      "candidate": "Adv. Tomy Kallany",
+      "party": "INC",
+      "votes": 34633,
+      "percentage": 24.76,
+      "is_winner": false
+    },
+    {
+      "candidate": "M. P. Sen",
+      "party": "BDJS",
+      "votes": 2965,
+      "percentage": 2.12,
+      "is_winner": false
+    },
+    {
+      "candidate": "Ancy George",
+      "party": "BSP",
+      "votes": 596,
+      "percentage": 0.43,
+      "is_winner": false
+    }
+  ]
+}

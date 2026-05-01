@@ -1,0 +1,111 @@
+{
+  "constituency": {
+    "id": 63,
+    "number": 63,
+    "name": "GURUVAYOOR",
+    "district": "Thrissur"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 217711,
+    "votes_polled": 140618,
+    "votes_counted": 31638,
+    "valid_votes": 142374,
+    "rounds_completed": 4,
+    "total_rounds": 18,
+    "last_updated": "2026-04-30T12:14:25.312660+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "N. K. Akbar",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 10275,
+      "percentage": 7.22,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Pauly Francis Guruvayur",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 4887,
+      "percentage": 3.43,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "C. R. Unnikrishnan",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 4887,
+      "percentage": 3.43,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K.V. Abdul Nasar Paroor",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 4707,
+      "percentage": 3.31,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "C. H. Rasheed",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 4668,
+      "percentage": 3.28,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "B. Gopalakrishnan",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 1687,
+      "percentage": 1.18,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "N.K.AKBAR",
+      "party": "CPI(M)",
+      "votes": 77072,
+      "percentage": 52.52,
+      "is_winner": true
+    },
+    {
+      "candidate": "Adv.K N A KHADER",
+      "party": "IUML",
+      "votes": 58804,
+      "percentage": 40.07,
+      "is_winner": false
+    },
+    {
+      "candidate": "DILEEP NAIR",
+      "party": "DSJP",
+      "votes": 6294,
+      "percentage": 4.29,
+      "is_winner": false
+    },
+    {
+      "candidate": "ASHARAF VADAKKOOT",
+      "party": "SDPI",
+      "votes": 2889,
+      "percentage": 1.97,
+      "is_winner": false
+    },
+    {
+      "candidate": "ANTONY",
+      "party": "IND",
+      "votes": 392,
+      "percentage": 0.27,
+      "is_winner": false
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "constituency": {
+    "id": 103,
+    "number": 103,
+    "name": "CHERTHALA",
+    "district": "Alappuzha"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 181241,
+    "votes_polled": 133310,
+    "votes_counted": 56967,
+    "valid_votes": 136721,
+    "rounds_completed": 10,
+    "total_rounds": 24,
+    "last_updated": "2026-04-30T12:02:37.313253+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "A.P. Prasad S/o Purushothaman",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 16049,
+      "percentage": 11.74,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Rajendra Prasad S/o Prabhakaran",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 15838,
+      "percentage": 11.58,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "P. Prasad",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 6942,
+      "percentage": 5.08,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Nandakumar",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 6151,
+      "percentage": 4.5,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Sonnymon K. Mathew",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 5175,
+      "percentage": 3.79,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. R. Rajendra Prasad",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 4022,
+      "percentage": 2.94,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Anandaraj T. P",
+      "party": "BDJS",
+      "alliance": "NDA",
+      "votes": 3522,
+      "percentage": 2.58,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "P PRASAD",
+      "party": "CPI",
+      "votes": 83702,
+      "percentage": 47.0,
+      "is_winner": true
+    },
+    {
+      "candidate": "ADV.S SARATH",
+      "party": "INC",
+      "votes": 77554,
+      "percentage": 43.55,
+      "is_winner": false
+    },
+    {
+      "candidate": "ADV.P S JYOTHIS",
+      "party": "BDJS",
+      "votes": 14562,
+      "percentage": 8.18,
+      "is_winner": false
+    },
+    {
+      "candidate": "VAYALAR JAYAKUMAR",
+      "party": "BSP",
+      "votes": 613,
+      "percentage": 0.34,
+      "is_winner": false
+    },
+    {
+      "candidate": "SARATH S KANNATTUVELI",
+      "party": "IND",
+      "votes": 501,
+      "percentage": 0.28,
+      "is_winner": false
+    }
+  ]
+}

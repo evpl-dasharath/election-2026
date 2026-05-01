@@ -1,0 +1,120 @@
+{
+  "constituency": {
+    "id": 120,
+    "number": 120,
+    "name": "PATHANAPURAM",
+    "district": "Kollam"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 179783,
+    "votes_polled": 135142,
+    "votes_counted": 75581,
+    "valid_votes": 74825,
+    "rounds_completed": 7,
+    "total_rounds": 13,
+    "last_updated": "2026-04-29T11:27:23.106472+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Anil Pilla",
+      "party": "TTP",
+      "alliance": "NDA",
+      "votes": 33746,
+      "percentage": 45.12,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "K. B. Ganesh Kumar",
+      "party": "KC(B)",
+      "alliance": "LDF",
+      "votes": 22969,
+      "percentage": 30.71,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Jyothikumar chamakkala",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 16171,
+      "percentage": 21.62,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Aneesh Aneesh",
+      "party": "Anna DHRM",
+      "alliance": "OTH",
+      "votes": 743,
+      "percentage": 0.99,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Genash Kumar",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 678,
+      "percentage": 0.91,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Jyothish Kumar M",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 285,
+      "percentage": 0.38,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Vipinkumar V",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 203,
+      "percentage": 0.27,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "K.B. GANESH KUMAR",
+      "party": "KC(B)",
+      "votes": 67276,
+      "percentage": 49.09,
+      "is_winner": true
+    },
+    {
+      "candidate": "JYOTHIKUMAR CHAMAKKALA",
+      "party": "INC",
+      "votes": 52940,
+      "percentage": 38.63,
+      "is_winner": false
+    },
+    {
+      "candidate": "V.S. JITHIN DEV",
+      "party": "BJP",
+      "votes": 12398,
+      "percentage": 9.05,
+      "is_winner": false
+    },
+    {
+      "candidate": "P. KRISHNAMMAL",
+      "party": "MCPI",
+      "votes": 2091,
+      "percentage": 1.53,
+      "is_winner": false
+    },
+    {
+      "candidate": "ADV. FAIZY. M. PASHA",
+      "party": "SDPI",
+      "votes": 1192,
+      "percentage": 0.87,
+      "is_winner": false
+    }
+  ]
+}

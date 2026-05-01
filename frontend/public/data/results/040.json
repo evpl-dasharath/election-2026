@@ -1,0 +1,129 @@
+{
+  "constituency": {
+    "id": 40,
+    "number": 40,
+    "name": "MALAPPURAM",
+    "district": "Malappuram"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 258032,
+    "votes_polled": 186980,
+    "votes_counted": 70401,
+    "valid_votes": 191090,
+    "rounds_completed": 7,
+    "total_rounds": 19,
+    "last_updated": "2026-04-30T12:01:37.313251+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "P. K. Kunhalikutty",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 23533,
+      "percentage": 12.32,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Abdul Gafoor Master O.P.K",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 17803,
+      "percentage": 9.32,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ashwathy Gupatha Kumar",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 6416,
+      "percentage": 3.36,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Abdulsalam.K.P",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 6347,
+      "percentage": 3.32,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Aboobacker K.P. (Kundupuzhakkal)",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 5228,
+      "percentage": 2.74,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sreedharan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 3934,
+      "percentage": 2.06,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. T. Mujeeb",
+      "party": "NCP(SP)",
+      "alliance": "LDF",
+      "votes": 3724,
+      "percentage": 1.95,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Sadiq Naduthodi",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 3016,
+      "percentage": 1.58,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "P. UBAIDULLA",
+      "party": "IUML",
+      "votes": 93166,
+      "percentage": 57.57,
+      "is_winner": true
+    },
+    {
+      "candidate": "PALOLI ABDURAHIMAN",
+      "party": "CPI(M)",
+      "votes": 57958,
+      "percentage": 35.82,
+      "is_winner": false
+    },
+    {
+      "candidate": "AREEKKAD SETHUMADHAVAN",
+      "party": "BJP",
+      "votes": 5883,
+      "percentage": 3.64,
+      "is_winner": false
+    },
+    {
+      "candidate": "E.C. AYISHA",
+      "party": "WPOI",
+      "votes": 3194,
+      "percentage": 1.97,
+      "is_winner": false
+    },
+    {
+      "candidate": "PRASOBH .T",
+      "party": "BSP",
+      "votes": 321,
+      "percentage": 0.2,
+      "is_winner": false
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "constituency": {
+    "id": 21,
+    "number": 21,
+    "name": "KUTTIADI",
+    "district": "Kozhikode"
+  },
+  "live_result": {
+    "status": "RESULT_DECLARED",
+    "total_electors": 215940,
+    "votes_polled": 175040,
+    "votes_counted": 134530,
+    "valid_votes": 133184,
+    "rounds_completed": 12,
+    "total_rounds": 12,
+    "last_updated": "2026-04-29T11:27:22.632307+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "K. P. Kunhammad Kutti Master",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 53845,
+      "percentage": 43.88,
+      "is_winner": true,
+      "is_leading": false
+    },
+    {
+      "name": "Parakkal Abdulla",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 49855,
+      "percentage": 40.63,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ramadas Manaleri",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 17892,
+      "percentage": 14.58,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Abdulla",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 960,
+      "percentage": 0.78,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Kunhammadkutty",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 157,
+      "percentage": 0.13,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "K P KUNHAMMED KUTTI MASTER",
+      "party": "CPI(M)",
+      "votes": 80143,
+      "percentage": 47.2,
+      "is_winner": true
+    },
+    {
+      "candidate": "PARAKKAL ABDULLA",
+      "party": "IUML",
+      "votes": 79810,
+      "percentage": 47.01,
+      "is_winner": false
+    },
+    {
+      "candidate": "P P MURALI MASTER",
+      "party": "BJP",
+      "votes": 9139,
+      "percentage": 5.38,
+      "is_winner": false
+    },
+    {
+      "candidate": "SURESH BABU M K",
+      "party": "IND",
+      "votes": 128,
+      "percentage": 0.08,
+      "is_winner": false
+    },
+    {
+      "candidate": "V P PRATHEESH",
+      "party": "IND",
+      "votes": 108,
+      "percentage": 0.06,
+      "is_winner": false
+    }
+  ]
+}

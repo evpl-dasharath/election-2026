@@ -1,0 +1,129 @@
+{
+  "constituency": {
+    "id": 29,
+    "number": 29,
+    "name": "BEYPORE",
+    "district": "Kozhikode"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 218558,
+    "votes_polled": 183086,
+    "votes_counted": 59719,
+    "valid_votes": 59121,
+    "rounds_completed": 7,
+    "total_rounds": 14,
+    "last_updated": "2026-04-29T11:27:22.676810+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Muhammad Riyas",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 25912,
+      "percentage": 43.83,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "P. V. Anvar",
+      "party": "AITC",
+      "alliance": "UDF",
+      "votes": 25566,
+      "percentage": 43.24,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. K. P. Prakash Babu",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 6624,
+      "percentage": 11.2,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Anver S/o Moideenkoya",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 324,
+      "percentage": 0.55,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Anver S/o Sulaikha K P",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 271,
+      "percentage": 0.46,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Anver S/o Enunni",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 246,
+      "percentage": 0.42,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Anwar Ali Hassan S/o Kuttyhassan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 155,
+      "percentage": 0.26,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Muhammed Riyas P.C S/o Ahammedkutty .P C",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 23,
+      "percentage": 0.04,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Adv. P. A MOHAMED RIYAS",
+      "party": "CPI(M)",
+      "votes": 82165,
+      "percentage": 49.73,
+      "is_winner": true
+    },
+    {
+      "candidate": "Adv. P. M NIYAS",
+      "party": "INC",
+      "votes": 53418,
+      "percentage": 32.33,
+      "is_winner": false
+    },
+    {
+      "candidate": "Adv. PRAKASHBABU",
+      "party": "BJP",
+      "votes": 26267,
+      "percentage": 15.9,
+      "is_winner": false
+    },
+    {
+      "candidate": "JAMAL CHALIYAM",
+      "party": "SDPI",
+      "votes": 2029,
+      "percentage": 1.23,
+      "is_winner": false
+    },
+    {
+      "candidate": "ABDUL GAFOOR K. K",
+      "party": "BSP",
+      "votes": 272,
+      "percentage": 0.16,
+      "is_winner": false
+    }
+  ]
+}

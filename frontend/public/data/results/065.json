@@ -1,0 +1,95 @@
+{
+  "constituency": {
+    "id": 65,
+    "number": 65,
+    "name": "WADAKKANCHERY",
+    "district": "Thrissur"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 218153,
+    "votes_polled": 141718,
+    "votes_counted": 37747,
+    "valid_votes": 144698,
+    "rounds_completed": 6,
+    "total_rounds": 23,
+    "last_updated": "2026-04-30T12:13:24.312627+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Jithin Sadanananthan",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 13385,
+      "percentage": 9.25,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Xeviyar Chittilappally",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 8715,
+      "percentage": 6.02,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. T.S. Ullas Babu",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 5752,
+      "percentage": 3.98,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Subramanian Penakam",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 5378,
+      "percentage": 3.72,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "P N Vaisakh",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 5169,
+      "percentage": 3.57,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Xavier Chittilappilly",
+      "party": "CPI(M)",
+      "votes": 81026,
+      "percentage": 47.7,
+      "is_winner": true
+    },
+    {
+      "candidate": "Anil Akkara",
+      "party": "INC",
+      "votes": 65858,
+      "percentage": 38.77,
+      "is_winner": false
+    },
+    {
+      "candidate": "T.S Ullas Babu",
+      "party": "BJP",
+      "votes": 21747,
+      "percentage": 12.8,
+      "is_winner": false
+    },
+    {
+      "candidate": "Haji Aboobaker Kundukadan",
+      "party": "IND",
+      "votes": 388,
+      "percentage": 0.23,
+      "is_winner": false
+    }
+  ]
+}
