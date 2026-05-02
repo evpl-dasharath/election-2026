@@ -9,19 +9,19 @@
     "status": "IN_PROGRESS",
     "total_electors": 169150,
     "votes_polled": 110847,
-    "votes_counted": 44920,
+    "votes_counted": 4991,
     "valid_votes": 114797,
-    "rounds_completed": 9,
+    "rounds_completed": 1,
     "total_rounds": 23,
-    "last_updated": "2026-04-30T12:08:14.312799+00:00"
+    "last_updated": "2026-05-01T02:05:22.184578+00:00"
   },
   "candidates_2026": [
     {
       "name": "K.V. Prasanna Kumar",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 21860,
-      "percentage": 19.04,
+      "votes": 2432,
+      "percentage": 2.12,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "M T Chandran",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 11859,
-      "percentage": 10.33,
+      "votes": 1168,
+      "percentage": 1.02,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "K. M. Febin",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 3868,
-      "percentage": 3.37,
+      "votes": 482,
+      "percentage": 0.42,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "B Febin S/o Balan K.C.",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 3267,
-      "percentage": 2.85,
+      "votes": 376,
+      "percentage": 0.33,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "T. M. Sasi",
       "party": "CPI(M)",
       "alliance": "LDF",
-      "votes": 3130,
-      "percentage": 2.73,
+      "votes": 348,
+      "percentage": 0.3,
       "is_winner": false,
       "is_leading": false
     }

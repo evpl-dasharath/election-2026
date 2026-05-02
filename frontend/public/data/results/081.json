@@ -9,19 +9,19 @@
     "status": "IN_PROGRESS",
     "total_electors": 179442,
     "votes_polled": 112373,
-    "votes_counted": 44377,
+    "votes_counted": 5547,
     "valid_votes": 116492,
-    "rounds_completed": 8,
+    "rounds_completed": 1,
     "total_rounds": 21,
-    "last_updated": "2026-04-30T12:05:40.313248+00:00"
+    "last_updated": "2026-05-01T02:02:48.184262+00:00"
   },
   "candidates_2026": [
     {
       "name": "Sandeep Rajendraprasad",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 15350,
-      "percentage": 13.18,
+      "votes": 1779,
+      "percentage": 1.53,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Satheesan",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 7397,
-      "percentage": 6.35,
+      "votes": 1050,
+      "percentage": 0.9,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,17 +38,8 @@
       "name": "K. N. Unnikrishnan",
       "party": "CPI(M)",
       "alliance": "LDF",
-      "votes": 4593,
-      "percentage": 3.94,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Rajkumar",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 3625,
-      "percentage": 3.11,
+      "votes": 552,
+      "percentage": 0.47,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +47,17 @@
       "name": "Karthikeyan",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 3460,
-      "percentage": 2.97,
+      "votes": 429,
+      "percentage": 0.37,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Rajkumar",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 409,
+      "percentage": 0.35,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Anjali .P. V",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 3392,
-      "percentage": 2.91,
+      "votes": 383,
+      "percentage": 0.33,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "Deepak Joy",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 2907,
-      "percentage": 2.5,
+      "votes": 351,
+      "percentage": 0.3,
       "is_winner": false,
       "is_leading": false
     },
@@ -83,8 +83,8 @@
       "name": "Thomas Paul",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 2311,
-      "percentage": 1.98,
+      "votes": 306,
+      "percentage": 0.26,
       "is_winner": false,
       "is_leading": false
     },
@@ -92,8 +92,8 @@
       "name": "Unnikrishnan K N",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 1973,
-      "percentage": 1.69,
+      "votes": 232,
+      "percentage": 0.2,
       "is_winner": false,
       "is_leading": false
     }

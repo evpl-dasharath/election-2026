@@ -5,32 +5,14 @@
     "name": "CHAVARA",
     "district": "Kollam"
   },
-  "live_result": {
-    "status": "IN_PROGRESS",
-    "total_electors": 174869,
-    "votes_polled": 110847,
-    "votes_counted": 35542,
-    "valid_votes": 112550,
-    "rounds_completed": 6,
-    "total_rounds": 19,
-    "last_updated": "2026-04-30T12:10:19.318622+00:00"
-  },
+  "live_result": null,
   "candidates_2026": [
     {
       "name": "Shibu Baby John",
       "party": "RSP",
       "alliance": "UDF",
-      "votes": 16342,
-      "percentage": 14.52,
-      "is_winner": false,
-      "is_leading": true
-    },
-    {
-      "name": "K. R. Rajesh",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 12729,
-      "percentage": 11.31,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +20,17 @@
       "name": "Dr. Sujith Vijayanpillai",
       "party": "IND (CPI(M))",
       "alliance": "LDF",
-      "votes": 6259,
-      "percentage": 5.56,
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. R. Rajesh",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     }

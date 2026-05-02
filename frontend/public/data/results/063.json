@@ -5,32 +5,14 @@
     "name": "GURUVAYOOR",
     "district": "Thrissur"
   },
-  "live_result": {
-    "status": "IN_PROGRESS",
-    "total_electors": 217711,
-    "votes_polled": 140618,
-    "votes_counted": 31638,
-    "valid_votes": 142374,
-    "rounds_completed": 4,
-    "total_rounds": 18,
-    "last_updated": "2026-04-30T12:14:25.312660+00:00"
-  },
+  "live_result": null,
   "candidates_2026": [
-    {
-      "name": "N. K. Akbar",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 10275,
-      "percentage": 7.22,
-      "is_winner": false,
-      "is_leading": true
-    },
     {
       "name": "Pauly Francis Guruvayur",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 4887,
-      "percentage": 3.43,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,17 +20,8 @@
       "name": "C. R. Unnikrishnan",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 4887,
-      "percentage": 3.43,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "K.V. Abdul Nasar Paroor",
-      "party": "SDPI",
-      "alliance": "OTH",
-      "votes": 4707,
-      "percentage": 3.31,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +29,8 @@
       "name": "C. H. Rasheed",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 4668,
-      "percentage": 3.28,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +38,26 @@
       "name": "B. Gopalakrishnan",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 1687,
-      "percentage": 1.18,
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "N. K. Akbar",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K.V. Abdul Nasar Paroor",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     }

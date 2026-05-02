@@ -9,37 +9,28 @@
     "status": "IN_PROGRESS",
     "total_electors": 180676,
     "votes_polled": 126656,
-    "votes_counted": 44075,
+    "votes_counted": 5509,
     "valid_votes": 126716,
-    "rounds_completed": 8,
+    "rounds_completed": 1,
     "total_rounds": 23,
-    "last_updated": "2026-04-30T12:09:19.312927+00:00"
+    "last_updated": "2026-05-01T02:06:27.184513+00:00"
   },
   "candidates_2026": [
     {
-      "name": "Bhaskaran K K S/o Kelappan",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 13184,
-      "percentage": 10.4,
+      "name": "K. K. Rema",
+      "party": "RMPI",
+      "alliance": "UDF",
+      "votes": 1568,
+      "percentage": 1.24,
       "is_winner": false,
       "is_leading": true
-    },
-    {
-      "name": "Adv. K. Dileep",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 9149,
-      "percentage": 7.22,
-      "is_winner": false,
-      "is_leading": false
     },
     {
       "name": "Rama T P W/o Ashokan P K",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 4807,
-      "percentage": 3.79,
+      "votes": 1203,
+      "percentage": 0.95,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,17 +38,17 @@
       "name": "Shamseer Chombala",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 4142,
-      "percentage": 3.27,
+      "votes": 578,
+      "percentage": 0.46,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Ramakrishnan Vattakandi",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 3685,
-      "percentage": 2.91,
+      "name": "M. K. Bhaskaran",
+      "party": "RJD",
+      "alliance": "LDF",
+      "votes": 524,
+      "percentage": 0.41,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,26 +56,35 @@
       "name": "Rama W/o Vijayan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 3322,
-      "percentage": 2.62,
+      "votes": 473,
+      "percentage": 0.37,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "K. K. Rema",
-      "party": "RMPI",
-      "alliance": "UDF",
-      "votes": 3308,
-      "percentage": 2.61,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "M. K. Bhaskaran",
-      "party": "RJD",
+      "name": "Bhaskaran K K S/o Kelappan",
+      "party": "IND",
       "alliance": "OTH",
-      "votes": 3039,
-      "percentage": 2.4,
+      "votes": 427,
+      "percentage": 0.34,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. K. Dileep",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 395,
+      "percentage": 0.31,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ramakrishnan Vattakandi",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 380,
+      "percentage": 0.3,
       "is_winner": false,
       "is_leading": false
     }

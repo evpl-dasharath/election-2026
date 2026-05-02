@@ -5,32 +5,14 @@
     "name": "NILAMBUR",
     "district": "Malappuram"
   },
-  "live_result": {
-    "status": "IN_PROGRESS",
-    "total_electors": 162560,
-    "votes_polled": 121298,
-    "votes_counted": 41178,
-    "valid_votes": 123536,
-    "rounds_completed": 8,
-    "total_rounds": 24,
-    "last_updated": "2026-04-30T12:10:10.312520+00:00"
-  },
+  "live_result": null,
   "candidates_2026": [
     {
-      "name": "U. Sharafali",
-      "party": "IND (CPI(M))",
-      "alliance": "LDF",
-      "votes": 20413,
-      "percentage": 16.52,
-      "is_winner": false,
-      "is_leading": true
-    },
-    {
-      "name": "Gireesh Mekkad",
-      "party": "BDJS",
-      "alliance": "NDA",
-      "votes": 13588,
-      "percentage": 11.0,
+      "name": "Jaisal Maliyekkal",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,17 +20,26 @@
       "name": "Aryadan Shoukath",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 6497,
-      "percentage": 5.26,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Jaisal Maliyekkal",
-      "party": "AAP",
-      "alliance": "OTH",
-      "votes": 2695,
-      "percentage": 2.18,
+      "name": "U. Sharafali",
+      "party": "IND (CPI(M))",
+      "alliance": "LDF",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Gireesh Mekkad",
+      "party": "BDJS",
+      "alliance": "NDA",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     }

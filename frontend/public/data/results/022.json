@@ -9,19 +9,19 @@
     "status": "IN_PROGRESS",
     "total_electors": 203719,
     "votes_polled": 150892,
-    "votes_counted": 55408,
+    "votes_counted": 6926,
     "valid_votes": 152372,
-    "rounds_completed": 8,
+    "rounds_completed": 1,
     "total_rounds": 22,
-    "last_updated": "2026-04-30T12:09:18.312712+00:00"
+    "last_updated": "2026-05-01T02:06:26.184318+00:00"
   },
   "candidates_2026": [
     {
       "name": "C. P. Vipin Chandran",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 23636,
-      "percentage": 15.51,
+      "votes": 2993,
+      "percentage": 1.96,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "K. M. Abhijith",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 10867,
-      "percentage": 7.13,
+      "votes": 1527,
+      "percentage": 1.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,17 +38,8 @@
       "name": "Adv. P. Vasantham",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 6390,
-      "percentage": 4.19,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Abhijith, s/o Balan",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 4998,
-      "percentage": 3.28,
+      "votes": 836,
+      "percentage": 0.55,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +47,17 @@
       "name": "Padmakumar",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 4956,
-      "percentage": 3.25,
+      "votes": 693,
+      "percentage": 0.45,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Abhijith, s/o Balan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 555,
+      "percentage": 0.36,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Vasantha",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 2742,
-      "percentage": 1.8,
+      "votes": 318,
+      "percentage": 0.21,
       "is_winner": false,
       "is_leading": false
     }

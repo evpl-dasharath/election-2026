@@ -9,64 +9,28 @@
     "status": "IN_PROGRESS",
     "total_electors": 180218,
     "votes_polled": 117564,
-    "votes_counted": 44787,
+    "votes_counted": 4976,
     "valid_votes": 119433,
-    "rounds_completed": 9,
+    "rounds_completed": 1,
     "total_rounds": 24,
-    "last_updated": "2026-04-30T12:07:32.313214+00:00"
+    "last_updated": "2026-05-01T02:04:40.184756+00:00"
   },
   "candidates_2026": [
-    {
-      "name": "P. C. George",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 19950,
-      "percentage": 16.7,
-      "is_winner": false,
-      "is_leading": true
-    },
-    {
-      "name": "Santhosh Joseph",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 6304,
-      "percentage": 5.28,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Adv. Sebastian Kulathunkal",
-      "party": "KC(M)",
-      "alliance": "UDF",
-      "votes": 4547,
-      "percentage": 3.81,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Adv. Sebastian M.J",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 4294,
-      "percentage": 3.6,
-      "is_winner": false,
-      "is_leading": false
-    },
     {
       "name": "Abhiram Babu",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 3710,
-      "percentage": 3.11,
+      "votes": 2026,
+      "percentage": 1.7,
       "is_winner": false,
-      "is_leading": false
+      "is_leading": true
     },
     {
-      "name": "Shiny A C",
-      "party": "BSP",
-      "alliance": "OTH",
-      "votes": 3292,
-      "percentage": 2.76,
+      "name": "P. C. George",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 713,
+      "percentage": 0.6,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +38,44 @@
       "name": "Mayamol K P",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 3201,
-      "percentage": 2.68,
+      "votes": 524,
+      "percentage": 0.44,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Sebastian Kulathunkal",
+      "party": "KC(M)",
+      "alliance": "LDF",
+      "votes": 467,
+      "percentage": 0.39,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Shiny A C",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 431,
+      "percentage": 0.36,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Sebastian M.J",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 347,
+      "percentage": 0.29,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Santhosh Joseph",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 329,
+      "percentage": 0.28,
       "is_winner": false,
       "is_leading": false
     }

@@ -5,41 +5,14 @@
     "name": "KAZHAKKOOTTAM",
     "district": "Thiruvananthapuram"
   },
-  "live_result": {
-    "status": "IN_PROGRESS",
-    "total_electors": 252895,
-    "votes_polled": 180546,
-    "votes_counted": 45445,
-    "valid_votes": 181783,
-    "rounds_completed": 5,
-    "total_rounds": 20,
-    "last_updated": "2026-04-30T12:11:04.312785+00:00"
-  },
+  "live_result": null,
   "candidates_2026": [
     {
-      "name": "K. Surendran",
-      "party": "IND",
+      "name": "Deebika Karimanal",
+      "party": "Anna DHRM",
       "alliance": "OTH",
-      "votes": 23909,
-      "percentage": 13.15,
-      "is_winner": false,
-      "is_leading": true
-    },
-    {
-      "name": "T. S. Rajan",
-      "party": "BSP",
-      "alliance": "OTH",
-      "votes": 7712,
-      "percentage": 4.24,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Adv.  T. Sarathchandra Prasad",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 3346,
-      "percentage": 1.84,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,26 +20,35 @@
       "name": "Sreekantan Nair V.",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 3243,
-      "percentage": 1.78,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Kadakampally Surendran",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 3047,
-      "percentage": 1.68,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Deebika Karimanal",
-      "party": "Anna DHRM",
+      "name": "T. S. Rajan",
+      "party": "BSP",
       "alliance": "OTH",
-      "votes": 2297,
-      "percentage": 1.26,
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. Surendran",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv.  T. Sarathchandra Prasad",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +56,17 @@
       "name": "V. Muraleedharan",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 2017,
-      "percentage": 1.11,
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Kadakampally Surendran",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     }

@@ -9,19 +9,19 @@
     "status": "IN_PROGRESS",
     "total_electors": 204374,
     "votes_polled": 149519,
-    "votes_counted": 66032,
+    "votes_counted": 22010,
     "valid_votes": 154075,
-    "rounds_completed": 9,
+    "rounds_completed": 3,
     "total_rounds": 21,
-    "last_updated": "2026-04-30T12:00:30.312999+00:00"
+    "last_updated": "2026-05-01T01:57:38.184904+00:00"
   },
   "candidates_2026": [
     {
       "name": "Saji Cherian",
       "party": "CPI(M)",
       "alliance": "LDF",
-      "votes": 33223,
-      "percentage": 21.56,
+      "votes": 11325,
+      "percentage": 7.35,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Adv. Abi Kuriakose",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 15572,
-      "percentage": 10.11,
+      "votes": 4917,
+      "percentage": 3.19,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "B. Praneesh",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 9840,
-      "percentage": 6.39,
+      "votes": 3367,
+      "percentage": 2.19,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "M. V. Gopakumar",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 7358,
-      "percentage": 4.78,
+      "votes": 2522,
+      "percentage": 1.64,
       "is_winner": false,
       "is_leading": false
     }

@@ -9,37 +9,28 @@
     "status": "IN_PROGRESS",
     "total_electors": 163761,
     "votes_polled": 111990,
-    "votes_counted": 38713,
+    "votes_counted": 6452,
     "valid_votes": 116139,
-    "rounds_completed": 6,
+    "rounds_completed": 1,
     "total_rounds": 18,
-    "last_updated": "2026-04-30T12:04:00.313033+00:00"
+    "last_updated": "2026-05-01T02:01:08.184284+00:00"
   },
   "candidates_2026": [
-    {
-      "name": "Deepa Puzhakkal",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 11128,
-      "percentage": 9.58,
-      "is_winner": false,
-      "is_leading": true
-    },
     {
       "name": "Muhammed Sameer",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 10823,
-      "percentage": 9.32,
+      "votes": 1928,
+      "percentage": 1.66,
       "is_winner": false,
-      "is_leading": false
+      "is_leading": true
     },
     {
-      "name": "Sameer T",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 5154,
-      "percentage": 4.44,
+      "name": "P. K. Navas",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 1719,
+      "percentage": 1.48,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,17 +38,8 @@
       "name": "Mohamed Sameer T Thiruthiyil House",
       "party": "IND (CPI(M))",
       "alliance": "LDF",
-      "votes": 4166,
-      "percentage": 3.59,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "P. K. Navas",
-      "party": "IUML",
-      "alliance": "UDF",
-      "votes": 3487,
-      "percentage": 3.0,
+      "votes": 757,
+      "percentage": 0.65,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +47,26 @@
       "name": "P P Navas S/o Kunhimuhamed",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 3394,
-      "percentage": 2.92,
+      "votes": 748,
+      "percentage": 0.64,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Deepa Puzhakkal",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 607,
+      "percentage": 0.52,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sameer T",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 580,
+      "percentage": 0.5,
       "is_winner": false,
       "is_leading": false
     }

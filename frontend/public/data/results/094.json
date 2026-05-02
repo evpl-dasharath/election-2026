@@ -9,19 +9,19 @@
     "status": "IN_PROGRESS",
     "total_electors": 244278,
     "votes_polled": 176358,
-    "votes_counted": 62322,
+    "votes_counted": 8903,
     "valid_votes": 178064,
-    "rounds_completed": 7,
+    "rounds_completed": 1,
     "total_rounds": 20,
-    "last_updated": "2026-04-30T12:07:45.312721+00:00"
+    "last_updated": "2026-05-01T02:04:53.185408+00:00"
   },
   "candidates_2026": [
     {
       "name": "Suresh Ettikunnel",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 22883,
-      "percentage": 12.85,
+      "votes": 3158,
+      "percentage": 1.77,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "M.M.Scaria",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 8797,
-      "percentage": 4.94,
+      "votes": 1261,
+      "percentage": 0.71,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,17 +38,17 @@
       "name": "Adv. Mons Joseph",
       "party": "KEC",
       "alliance": "UDF",
-      "votes": 8498,
-      "percentage": 4.77,
+      "votes": 1147,
+      "percentage": 0.64,
       "is_winner": false,
       "is_leading": false
     },
     {
       "name": "Nirmala Jimmy",
       "party": "KC(M)",
-      "alliance": "UDF",
-      "votes": 7334,
-      "percentage": 4.12,
+      "alliance": "LDF",
+      "votes": 980,
+      "percentage": 0.55,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Indu",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 6198,
-      "percentage": 3.48,
+      "votes": 891,
+      "percentage": 0.5,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Jijith K Joy",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 5063,
-      "percentage": 2.84,
+      "votes": 763,
+      "percentage": 0.43,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "Dominic Simon",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 3868,
-      "percentage": 2.17,
+      "votes": 566,
+      "percentage": 0.32,
       "is_winner": false,
       "is_leading": false
     }

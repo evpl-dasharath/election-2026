@@ -5,95 +5,14 @@
     "name": "PERAMBRA",
     "district": "Kozhikode"
   },
-  "live_result": {
-    "status": "IN_PROGRESS",
-    "total_electors": 180257,
-    "votes_polled": 136990,
-    "votes_counted": 39636,
-    "valid_votes": 138727,
-    "rounds_completed": 6,
-    "total_rounds": 21,
-    "last_updated": "2026-04-30T12:14:46.312591+00:00"
-  },
+  "live_result": null,
   "candidates_2026": [
     {
       "name": "Fathimathu Ruksana.P",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 8082,
-      "percentage": 5.83,
-      "is_winner": false,
-      "is_leading": true
-    },
-    {
-      "name": "K. Ramakrishnan",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 7043,
-      "percentage": 5.08,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Ranjith Malayil",
-      "party": "AAP",
-      "alliance": "OTH",
-      "votes": 4271,
-      "percentage": 3.08,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "T.M Ramakrishnan",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 3952,
-      "percentage": 2.85,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "T. P. Ramakrishnan",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 3918,
-      "percentage": 2.82,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Akhil Kumar A.M",
-      "party": "CPIML Red Star",
-      "alliance": "OTH",
-      "votes": 3604,
-      "percentage": 2.6,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Fathima Nasri.V",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 2853,
-      "percentage": 2.06,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Adv. Fathima Thahiliya",
-      "party": "IUML",
-      "alliance": "UDF",
-      "votes": 2323,
-      "percentage": 1.67,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "M. Mohanan Master",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 2076,
-      "percentage": 1.5,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -101,8 +20,80 @@
       "name": "P.K Biju Master",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 1993,
-      "percentage": 1.44,
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ranjith Malayil",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "T.M Ramakrishnan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Fathima Nasri.V",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Akhil Kumar A.M",
+      "party": "CPIML Red Star",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Fathima Thahiliya",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "M. Mohanan Master",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "T. P. Ramakrishnan",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. Ramakrishnan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     }

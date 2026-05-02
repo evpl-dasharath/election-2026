@@ -5,77 +5,14 @@
     "name": "KUTHUPARAMBA",
     "district": "Kannur"
   },
-  "live_result": {
-    "status": "IN_PROGRESS",
-    "total_electors": 177342,
-    "votes_polled": 128742,
-    "votes_counted": 32864,
-    "valid_votes": 131458,
-    "rounds_completed": 6,
-    "total_rounds": 24,
-    "last_updated": "2026-04-30T12:14:35.312557+00:00"
-  },
+  "live_result": null,
   "candidates_2026": [
-    {
-      "name": "Adv. Shijilal",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 10400,
-      "percentage": 7.91,
-      "is_winner": false,
-      "is_leading": true
-    },
     {
       "name": "Jayanthi Rajan",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 7238,
-      "percentage": 5.51,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "P. K. Praveen",
-      "party": "RJD",
-      "alliance": "OTH",
-      "votes": 2662,
-      "percentage": 2.02,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Rafeed AP",
-      "party": "AAP",
-      "alliance": "OTH",
-      "votes": 2499,
-      "percentage": 1.9,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "K. P. Mohanan",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 2224,
-      "percentage": 1.69,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Jayanthi",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 2151,
-      "percentage": 1.64,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "M. Shylaja",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 2125,
-      "percentage": 1.62,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -83,8 +20,26 @@
       "name": "Shahul Hameed",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 1707,
-      "percentage": 1.3,
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Rafeed AP",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "M. Shylaja",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -92,8 +47,44 @@
       "name": "Praveen Kumar",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 1402,
-      "percentage": 1.07,
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "P. K. Praveen",
+      "party": "RJD",
+      "alliance": "LDF",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Jayanthi",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. P. Mohanan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Shijilal",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     }

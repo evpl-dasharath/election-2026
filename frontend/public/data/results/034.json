@@ -5,41 +5,14 @@
     "name": "ERANAD",
     "district": "Malappuram"
   },
-  "live_result": {
-    "status": "IN_PROGRESS",
-    "total_electors": 170561,
-    "votes_polled": 109454,
-    "votes_counted": 32801,
-    "valid_votes": 112463,
-    "rounds_completed": 7,
-    "total_rounds": 24,
-    "last_updated": "2026-04-30T12:09:51.321463+00:00"
-  },
+  "live_result": null,
   "candidates_2026": [
-    {
-      "name": "Yusuf Chemmala",
-      "party": "SDPI",
-      "alliance": "OTH",
-      "votes": 8395,
-      "percentage": 7.46,
-      "is_winner": false,
-      "is_leading": true
-    },
     {
       "name": "P. K. Basheer",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 7241,
-      "percentage": 6.44,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Adv. N. Sreeprakash",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 4840,
-      "percentage": 4.3,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,17 +20,26 @@
       "name": "Adv. Shafeer Kizhisseri",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 4673,
-      "percentage": 4.16,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Mujeeb Rahman",
-      "party": "IND",
+      "name": "Adv. N. Sreeprakash",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Yusuf Chemmala",
+      "party": "SDPI",
       "alliance": "OTH",
-      "votes": 4230,
-      "percentage": 3.76,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +47,17 @@
       "name": "Krishnan Thachannan",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 3701,
-      "percentage": 3.29,
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Mujeeb Rahman",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     }

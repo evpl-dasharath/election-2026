@@ -9,19 +9,19 @@
     "status": "IN_PROGRESS",
     "total_electors": 173022,
     "votes_polled": 134395,
-    "votes_counted": 50435,
+    "votes_counted": 5603,
     "valid_votes": 134495,
-    "rounds_completed": 9,
+    "rounds_completed": 1,
     "total_rounds": 24,
-    "last_updated": "2026-04-30T12:07:38.312750+00:00"
+    "last_updated": "2026-05-01T02:04:46.185013+00:00"
   },
   "candidates_2026": [
     {
       "name": "M.A. Brahmaraj",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 30178,
-      "percentage": 22.44,
+      "votes": 3110,
+      "percentage": 2.31,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Anwar Sadath",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 11758,
-      "percentage": 8.74,
+      "votes": 1377,
+      "percentage": 1.02,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Adv. A. M. Ariff",
       "party": "CPI(M)",
       "alliance": "LDF",
-      "votes": 6933,
-      "percentage": 5.15,
+      "votes": 720,
+      "percentage": 0.54,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Hakhikhath Hameed",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 2600,
-      "percentage": 1.93,
+      "votes": 295,
+      "percentage": 0.22,
       "is_winner": false,
       "is_leading": false
     }

@@ -9,19 +9,19 @@
     "status": "IN_PROGRESS",
     "total_electors": 229993,
     "votes_polled": 152659,
-    "votes_counted": 49285,
+    "votes_counted": 7040,
     "valid_votes": 154896,
-    "rounds_completed": 7,
+    "rounds_completed": 1,
     "total_rounds": 22,
-    "last_updated": "2026-04-30T12:08:53.320579+00:00"
+    "last_updated": "2026-05-01T02:06:01.191822+00:00"
   },
   "candidates_2026": [
     {
       "name": "Vayalar Rajeevan",
       "party": "BDP",
       "alliance": "OTH",
-      "votes": 15146,
-      "percentage": 9.78,
+      "votes": 1960,
+      "percentage": 1.27,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "N.K. Sasikumar",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 13186,
-      "percentage": 8.51,
+      "votes": 1776,
+      "percentage": 1.15,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Adv. Shanimol Osman",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 6425,
-      "percentage": 4.15,
+      "votes": 918,
+      "percentage": 0.59,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Adv. P.S. Jyothis",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 5862,
-      "percentage": 3.78,
+      "votes": 807,
+      "percentage": 0.52,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Daleema Jojo",
       "party": "CPI(M)",
       "alliance": "LDF",
-      "votes": 5139,
-      "percentage": 3.32,
+      "votes": 757,
+      "percentage": 0.49,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Vipin",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 4612,
-      "percentage": 2.98,
+      "votes": 658,
+      "percentage": 0.42,
       "is_winner": false,
       "is_leading": false
     }

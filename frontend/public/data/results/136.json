@@ -9,19 +9,19 @@
     "status": "IN_PROGRESS",
     "total_electors": 197721,
     "votes_polled": 125104,
-    "votes_counted": 45187,
+    "votes_counted": 11296,
     "valid_votes": 129915,
-    "rounds_completed": 8,
+    "rounds_completed": 2,
     "total_rounds": 23,
-    "last_updated": "2026-04-30T12:04:15.312667+00:00"
+    "last_updated": "2026-05-01T02:01:23.184695+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. G. Steephen",
       "party": "CPI(M)",
       "alliance": "LDF",
-      "votes": 14456,
-      "percentage": 11.13,
+      "votes": 3512,
+      "percentage": 2.7,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Santhosh Kumar. S",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 12265,
-      "percentage": 9.44,
+      "votes": 2947,
+      "percentage": 2.27,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Adv. S. Sivakumar S/o Sadasivan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 4427,
-      "percentage": 3.41,
+      "votes": 1123,
+      "percentage": 0.86,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "R. Steephen S/o Rafi",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 4053,
-      "percentage": 3.12,
+      "votes": 1068,
+      "percentage": 0.82,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Vivek Gopan",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 3652,
-      "percentage": 2.81,
+      "votes": 984,
+      "percentage": 0.76,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "V. S. Sivakumar",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 2692,
-      "percentage": 2.07,
+      "votes": 727,
+      "percentage": 0.56,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "V. S. Sivakumar S/o Sivadasan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 2324,
-      "percentage": 1.79,
+      "votes": 619,
+      "percentage": 0.48,
       "is_winner": false,
       "is_leading": false
     }

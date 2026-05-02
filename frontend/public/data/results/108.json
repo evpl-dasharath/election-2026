@@ -9,19 +9,19 @@
     "status": "IN_PROGRESS",
     "total_electors": 214600,
     "votes_polled": 142967,
-    "votes_counted": 49729,
+    "votes_counted": 6216,
     "valid_votes": 142971,
-    "rounds_completed": 8,
+    "rounds_completed": 1,
     "total_rounds": 23,
-    "last_updated": "2026-04-30T12:06:29.312611+00:00"
+    "last_updated": "2026-05-01T02:03:37.184898+00:00"
   },
   "candidates_2026": [
     {
       "name": "Thambi Mettuthara",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 23039,
-      "percentage": 16.11,
+      "votes": 2960,
+      "percentage": 2.07,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Adv. M. Liju",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 19712,
-      "percentage": 13.79,
+      "votes": 2542,
+      "percentage": 1.78,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Adv. U. Prathibha",
       "party": "CPI(M)",
       "alliance": "LDF",
-      "votes": 6565,
-      "percentage": 4.59,
+      "votes": 905,
+      "percentage": 0.63,
       "is_winner": false,
       "is_leading": false
     }

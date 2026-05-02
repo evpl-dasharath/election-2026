@@ -5,68 +5,14 @@
     "name": "PATHANAPURAM",
     "district": "Kollam"
   },
-  "live_result": {
-    "status": "IN_PROGRESS",
-    "total_electors": 224752,
-    "votes_polled": 140090,
-    "votes_counted": 27555,
-    "valid_votes": 144668,
-    "rounds_completed": 4,
-    "total_rounds": 21,
-    "last_updated": "2026-04-30T12:13:56.328995+00:00"
-  },
+  "live_result": null,
   "candidates_2026": [
-    {
-      "name": "Jyothish Kumar M",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 6744,
-      "percentage": 4.66,
-      "is_winner": false,
-      "is_leading": true
-    },
-    {
-      "name": "Vipinkumar V",
-      "party": "BSP",
-      "alliance": "OTH",
-      "votes": 5551,
-      "percentage": 3.84,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Jyothikumar chamakkala",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 3700,
-      "percentage": 2.56,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Genash Kumar",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 3299,
-      "percentage": 2.28,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Aneesh Aneesh",
-      "party": "Anna DHRM",
-      "alliance": "OTH",
-      "votes": 2943,
-      "percentage": 2.03,
-      "is_winner": false,
-      "is_leading": false
-    },
     {
       "name": "K. B. Ganesh Kumar",
       "party": "KC(B)",
       "alliance": "LDF",
-      "votes": 2833,
-      "percentage": 1.96,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +20,53 @@
       "name": "Anil Pilla",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 2318,
-      "percentage": 1.6,
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Jyothikumar chamakkala",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Aneesh Aneesh",
+      "party": "Anna DHRM",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Genash Kumar",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Jyothish Kumar M",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Vipinkumar V",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     }

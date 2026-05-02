@@ -9,28 +9,28 @@
     "status": "IN_PROGRESS",
     "total_electors": 189571,
     "votes_polled": 140630,
-    "votes_counted": 50140,
+    "votes_counted": 12535,
     "valid_votes": 144153,
-    "rounds_completed": 8,
+    "rounds_completed": 2,
     "total_rounds": 23,
-    "last_updated": "2026-04-30T12:04:21.313023+00:00"
+    "last_updated": "2026-05-01T02:01:29.184610+00:00"
   },
   "candidates_2026": [
     {
       "name": "M S Asokan Mangalappilly",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 13504,
-      "percentage": 9.37,
+      "votes": 3565,
+      "percentage": 2.47,
       "is_winner": false,
       "is_leading": true
     },
     {
       "name": "Adv Biju Chirayath",
       "party": "KC(M)",
-      "alliance": "UDF",
-      "votes": 13038,
-      "percentage": 9.04,
+      "alliance": "LDF",
+      "votes": 3441,
+      "percentage": 2.39,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Adv. Charlypaul",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 6102,
-      "percentage": 4.23,
+      "votes": 1517,
+      "percentage": 1.05,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "T. J. Saneesh Kumar Joseph",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 5802,
-      "percentage": 4.02,
+      "votes": 1393,
+      "percentage": 0.97,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Arun Edathadan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 5214,
-      "percentage": 3.62,
+      "votes": 1340,
+      "percentage": 0.93,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "A D Biju",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 4903,
-      "percentage": 3.4,
+      "votes": 1331,
+      "percentage": 0.92,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "Wilson Kallen",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 1990,
-      "percentage": 1.38,
+      "votes": 463,
+      "percentage": 0.32,
       "is_winner": false,
       "is_leading": false
     }

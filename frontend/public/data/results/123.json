@@ -5,41 +5,14 @@
     "name": "KUNDARA",
     "district": "Kollam"
   },
-  "live_result": {
-    "status": "IN_PROGRESS",
-    "total_electors": 241922,
-    "votes_polled": 163096,
-    "votes_counted": 45857,
-    "valid_votes": 165086,
-    "rounds_completed": 5,
-    "total_rounds": 18,
-    "last_updated": "2026-04-30T12:13:58.312872+00:00"
-  },
+  "live_result": null,
   "candidates_2026": [
     {
-      "name": "Riyas M",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 19047,
-      "percentage": 11.54,
-      "is_winner": false,
-      "is_leading": true
-    },
-    {
-      "name": "Rahul R",
-      "party": "SUCI",
-      "alliance": "OTH",
-      "votes": 8562,
-      "percentage": 5.19,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Lathika C",
-      "party": "BSP",
-      "alliance": "OTH",
-      "votes": 6544,
-      "percentage": 3.96,
+      "name": "P. C. Vishnunadh",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,17 +20,8 @@
       "name": "S. L. Sajikumar",
       "party": "CPI(M)",
       "alliance": "LDF",
-      "votes": 4272,
-      "percentage": 2.59,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "P. C. Vishnunadh",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 4139,
-      "percentage": 2.51,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +29,35 @@
       "name": "Robin Radhakrishnan (Robin RB)",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 2700,
-      "percentage": 1.64,
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Lathika C",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Rahul R",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Riyas M",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     }

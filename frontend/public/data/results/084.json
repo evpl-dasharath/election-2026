@@ -5,32 +5,14 @@
     "name": "KUNNATHUNAD",
     "district": "Ernakulam"
   },
-  "live_result": {
-    "status": "IN_PROGRESS",
-    "total_electors": 166743,
-    "votes_polled": 124578,
-    "votes_counted": 35922,
-    "valid_votes": 129321,
-    "rounds_completed": 5,
-    "total_rounds": 18,
-    "last_updated": "2026-04-30T12:12:53.312441+00:00"
-  },
+  "live_result": null,
   "candidates_2026": [
-    {
-      "name": "Adv. P. V. Sreenijin",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 13468,
-      "percentage": 10.41,
-      "is_winner": false,
-      "is_leading": true
-    },
     {
       "name": "V. P. Sajeendran",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 11451,
-      "percentage": 8.85,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,17 +20,17 @@
       "name": "Babu Divakaran",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 4266,
-      "percentage": 3.3,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Vazhakulam Bhasi",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 4060,
-      "percentage": 3.14,
+      "name": "Adv. P. V. Sreenijin",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +38,17 @@
       "name": "Manikuttan A. T.",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 2690,
-      "percentage": 2.08,
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Vazhakulam Bhasi",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     }

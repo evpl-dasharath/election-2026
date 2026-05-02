@@ -5,50 +5,14 @@
     "name": "KASARAGOD",
     "district": "Kasaragod"
   },
-  "live_result": {
-    "status": "IN_PROGRESS",
-    "total_electors": 237236,
-    "votes_polled": 157536,
-    "votes_counted": 40267,
-    "valid_votes": 161070,
-    "rounds_completed": 5,
-    "total_rounds": 20,
-    "last_updated": "2026-04-30T12:14:20.312770+00:00"
-  },
+  "live_result": null,
   "candidates_2026": [
-    {
-      "name": "Ashwini M.L.",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 19514,
-      "percentage": 12.12,
-      "is_winner": false,
-      "is_leading": true
-    },
-    {
-      "name": "Shanavas A A",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 6692,
-      "percentage": 4.15,
-      "is_winner": false,
-      "is_leading": false
-    },
     {
       "name": "Kallatra Mahin Haji",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 5891,
-      "percentage": 3.66,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Mohammed Ali Fathah B M",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 4525,
-      "percentage": 2.81,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +20,35 @@
       "name": "Shanavas Padhoor",
       "party": "IND (INL)",
       "alliance": "LDF",
-      "votes": 3420,
-      "percentage": 2.12,
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Mohammed Ali Fathah B M",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Shanavas A A",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ashwini M.L.",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     }

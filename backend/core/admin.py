@@ -1,8 +1,9 @@
 from django.contrib import admin
 from core.models import (
     District, Constituency, Party, Candidate, LiveResult,
-    HistoricalResult2021, ConstituencyMeta2021, ParliamentResult, DataSnapshot,
-    ECIScrapeRaw, ECICandidateMatch,
+    HistoricalResult2021, HistoricalResult2016, HistoricalResult2016Full,
+    HistoricalResult2011, ConstituencyMeta2021, ParliamentResult, DataSnapshot,
+    ECIScrapeRaw, ECICandidateMatch, PartyAllianceYear,
 )
 
 
@@ -136,6 +137,41 @@ class ECICandidateMatchAdmin(admin.ModelAdmin):
     list_filter = ['is_confirmed', 'is_nota', 'constituency__district']
     search_fields = ['eci_name', 'eci_party', 'constituency__name']
     ordering = ['-eci_total_votes']
+
+
+@admin.register(HistoricalResult2016)
+class HistoricalResult2016Admin(admin.ModelAdmin):
+    list_display = ['constituency', 'winner_candidate', 'winner_party', 'winner_alliance', 'margin']
+    list_filter = ['constituency__district', 'winner_alliance']
+    search_fields = ['winner_candidate', 'winner_party', 'constituency__name']
+    ordering = ['constituency__number']
+
+
+@admin.register(HistoricalResult2016Full)
+class HistoricalResult2016FullAdmin(admin.ModelAdmin):
+    list_display = ['constituency', 'candidate_name', 'party_code', 'total_votes', 'vote_percentage', 'is_winner']
+    list_filter = ['constituency__district', 'is_winner']
+    search_fields = ['candidate_name', 'party_code', 'constituency__name']
+    ordering = ['constituency__number', '-total_votes']
+    list_editable = ['party_code']
+
+
+@admin.register(HistoricalResult2011)
+class HistoricalResult2011Admin(admin.ModelAdmin):
+    list_display = ['constituency', 'candidate_name', 'party_code', 'total_votes', 'vote_percentage', 'is_winner']
+    list_filter = ['constituency__district', 'is_winner']
+    search_fields = ['candidate_name', 'party_code', 'constituency__name']
+    ordering = ['constituency__number', '-total_votes']
+    list_editable = ['party_code']
+
+
+@admin.register(PartyAllianceYear)
+class PartyAllianceYearAdmin(admin.ModelAdmin):
+    list_display = ['party_code', 'canonical_code', 'alliance', 'election_year', 'election_type', 'color_code']
+    list_filter = ['election_year', 'election_type', 'alliance']
+    search_fields = ['party_code', 'canonical_code']
+    ordering = ['election_year', 'alliance', 'party_code']
+    list_editable = ['alliance', 'canonical_code', 'color_code']
 
 
 # Customize admin site

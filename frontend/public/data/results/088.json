@@ -9,46 +9,28 @@
     "status": "IN_PROGRESS",
     "total_electors": 214287,
     "votes_polled": 141239,
-    "votes_counted": 72669,
+    "votes_counted": 26425,
     "valid_votes": 145338,
-    "rounds_completed": 11,
+    "rounds_completed": 4,
     "total_rounds": 22,
-    "last_updated": "2026-04-30T12:00:49.313193+00:00"
+    "last_updated": "2026-05-01T01:57:57.185023+00:00"
   },
   "candidates_2026": [
     {
       "name": "Selvi",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 25972,
-      "percentage": 17.87,
+      "votes": 9057,
+      "percentage": 6.23,
       "is_winner": false,
       "is_leading": true
     },
     {
-      "name": "Chelladurai .M",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 17871,
-      "percentage": 12.3,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Rajendran .V. B",
-      "party": "BSP",
-      "alliance": "OTH",
-      "votes": 9689,
-      "percentage": 6.67,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Adv. A. Raja",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 9596,
-      "percentage": 6.6,
+      "name": "F. Raja",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 6736,
+      "percentage": 4.63,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,17 +38,35 @@
       "name": "S. Rajendran",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 6633,
-      "percentage": 4.56,
+      "votes": 3886,
+      "percentage": 2.67,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "F. Raja",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 4614,
-      "percentage": 3.17,
+      "name": "Rajendran .V. B",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 3291,
+      "percentage": 2.26,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Chelladurai .M",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 2297,
+      "percentage": 1.58,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. A. Raja",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 1893,
+      "percentage": 1.3,
       "is_winner": false,
       "is_leading": false
     }

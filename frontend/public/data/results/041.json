@@ -9,46 +9,37 @@
     "status": "IN_PROGRESS",
     "total_electors": 199529,
     "votes_polled": 148744,
-    "votes_counted": 50483,
+    "votes_counted": 6310,
     "valid_votes": 151450,
-    "rounds_completed": 8,
+    "rounds_completed": 1,
     "total_rounds": 24,
-    "last_updated": "2026-04-30T12:07:03.312656+00:00"
+    "last_updated": "2026-05-01T02:04:11.184646+00:00"
   },
   "candidates_2026": [
     {
-      "name": "K. M. Shaji",
-      "party": "IUML",
-      "alliance": "UDF",
-      "votes": 26335,
-      "percentage": 17.39,
+      "name": "Jayakrishnan V.N.",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 3136,
+      "percentage": 2.07,
       "is_winner": false,
       "is_leading": true
-    },
-    {
-      "name": "Muhammad Sabah Kundupuzhakkal",
-      "party": "IND (CPI(M))",
-      "alliance": "LDF",
-      "votes": 10782,
-      "percentage": 7.12,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Abdul Rafeeq Chemban",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 5324,
-      "percentage": 3.52,
-      "is_winner": false,
-      "is_leading": false
     },
     {
       "name": "K.M.Shaji Shymalayam",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 3613,
-      "percentage": 2.39,
+      "votes": 1272,
+      "percentage": 0.84,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. M. Shaji",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 610,
+      "percentage": 0.4,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,17 +47,26 @@
       "name": "U.P. Shaji",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 3469,
-      "percentage": 2.29,
+      "votes": 466,
+      "percentage": 0.31,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Jayakrishnan V.N.",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 2577,
-      "percentage": 1.7,
+      "name": "Abdul Rafeeq Chemban",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 448,
+      "percentage": 0.3,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Muhammad Sabah Kundupuzhakkal",
+      "party": "IND (CPI(M))",
+      "alliance": "LDF",
+      "votes": 319,
+      "percentage": 0.21,
       "is_winner": false,
       "is_leading": false
     }

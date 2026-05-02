@@ -9,19 +9,19 @@
     "status": "IN_PROGRESS",
     "total_electors": 192591,
     "votes_polled": 127071,
-    "votes_counted": 64212,
+    "votes_counted": 21404,
     "valid_votes": 128424,
-    "rounds_completed": 12,
+    "rounds_completed": 4,
     "total_rounds": 24,
-    "last_updated": "2026-04-30T12:00:08.312788+00:00"
+    "last_updated": "2026-05-01T01:57:16.184491+00:00"
   },
   "candidates_2026": [
     {
       "name": "Basheer Punnad",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 27742,
-      "percentage": 21.6,
+      "votes": 8294,
+      "percentage": 6.46,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Chandran Thillankeri",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 19995,
-      "percentage": 15.57,
+      "votes": 6802,
+      "percentage": 5.3,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Chandran Thengalath",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 6218,
-      "percentage": 4.84,
+      "votes": 1894,
+      "percentage": 1.47,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,17 +47,8 @@
       "name": "V. K. Sanoj",
       "party": "CPI(M)",
       "alliance": "LDF",
-      "votes": 4379,
-      "percentage": 3.41,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Biju Elakkuzhi",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 3711,
-      "percentage": 2.89,
+      "votes": 1395,
+      "percentage": 1.09,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +56,17 @@
       "name": "Sanoj",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 3363,
-      "percentage": 2.62,
+      "votes": 1257,
+      "percentage": 0.98,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Biju Elakkuzhi",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 1227,
+      "percentage": 0.96,
       "is_winner": false,
       "is_leading": false
     }

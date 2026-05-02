@@ -5,77 +5,14 @@
     "name": "THIRUVANANTHAPURAM",
     "district": "Thiruvananthapuram"
   },
-  "live_result": {
-    "status": "IN_PROGRESS",
-    "total_electors": 186724,
-    "votes_polled": 128257,
-    "votes_counted": 32557,
-    "valid_votes": 130231,
-    "rounds_completed": 5,
-    "total_rounds": 20,
-    "last_updated": "2026-04-30T12:11:25.312621+00:00"
-  },
+  "live_result": null,
   "candidates_2026": [
-    {
-      "name": "C. P. John",
-      "party": "CMP",
-      "alliance": "UDF",
-      "votes": 12554,
-      "percentage": 9.64,
-      "is_winner": false,
-      "is_leading": true
-    },
-    {
-      "name": "P. K. Pradeep Kumar",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 3620,
-      "percentage": 2.78,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Sudheer Karamana",
-      "party": "IND (CPI(M))",
-      "alliance": "LDF",
-      "votes": 2524,
-      "percentage": 1.94,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Karamana Jayan",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 2179,
-      "percentage": 1.67,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Manomohan",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 2177,
-      "percentage": 1.67,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Suresh Kumar",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 1962,
-      "percentage": 1.51,
-      "is_winner": false,
-      "is_leading": false
-    },
     {
       "name": "Samin Sathyadas",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 1871,
-      "percentage": 1.44,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -83,26 +20,44 @@
       "name": "Bindhu Menon L R",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 1548,
-      "percentage": 1.19,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Karthika Devi M",
-      "party": "JRP",
-      "alliance": "OTH",
-      "votes": 1251,
-      "percentage": 0.96,
+      "name": "Karamana Jayan",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Adv. Sen",
-      "party": "BSP",
+      "name": "Sudheer Karamana",
+      "party": "IND (CPI(M))",
+      "alliance": "LDF",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "C. P. John",
+      "party": "CMP",
+      "alliance": "UDF",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Manomohan",
+      "party": "IND",
       "alliance": "OTH",
-      "votes": 1195,
-      "percentage": 0.92,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -110,8 +65,44 @@
       "name": "A Saboora",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 998,
-      "percentage": 0.77,
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Sen",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Karthika Devi M",
+      "party": "JRP",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "P. K. Pradeep Kumar",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Suresh Kumar",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     }

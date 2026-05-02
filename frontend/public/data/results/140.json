@@ -9,19 +9,19 @@
     "status": "IN_PROGRESS",
     "total_electors": 164910,
     "votes_polled": 104536,
-    "votes_counted": 38456,
+    "votes_counted": 4807,
     "valid_votes": 105756,
-    "rounds_completed": 8,
+    "rounds_completed": 1,
     "total_rounds": 22,
-    "last_updated": "2026-04-30T12:07:52.313002+00:00"
+    "last_updated": "2026-05-01T02:05:00.184305+00:00"
   },
   "candidates_2026": [
     {
       "name": "Surendranathan. K",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 24289,
-      "percentage": 22.97,
+      "votes": 3127,
+      "percentage": 2.96,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Bibin S.B",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 4711,
-      "percentage": 4.45,
+      "votes": 591,
+      "percentage": 0.56,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "S. Rajasekharan Nair",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 4297,
-      "percentage": 4.06,
+      "votes": 538,
+      "percentage": 0.51,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "N. Sakthan",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 3381,
-      "percentage": 3.2,
+      "votes": 411,
+      "percentage": 0.39,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "K. Ansalan",
       "party": "CPI(M)",
       "alliance": "LDF",
-      "votes": 1881,
-      "percentage": 1.78,
+      "votes": 238,
+      "percentage": 0.23,
       "is_winner": false,
       "is_leading": false
     }

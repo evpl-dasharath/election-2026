@@ -9,19 +9,19 @@
     "status": "IN_PROGRESS",
     "total_electors": 253000,
     "votes_polled": 160293,
-    "votes_counted": 68425,
+    "votes_counted": 20527,
     "valid_votes": 164220,
-    "rounds_completed": 10,
+    "rounds_completed": 3,
     "total_rounds": 24,
-    "last_updated": "2026-04-30T12:02:15.312803+00:00"
+    "last_updated": "2026-05-01T01:59:23.184793+00:00"
   },
   "candidates_2026": [
     {
       "name": "K. N. Balagopal",
       "party": "CPI(M)",
       "alliance": "LDF",
-      "votes": 23362,
-      "percentage": 14.23,
+      "votes": 6617,
+      "percentage": 4.03,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Mamachan D",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 22191,
-      "percentage": 13.51,
+      "votes": 6374,
+      "percentage": 3.88,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Adv. P. Aisha Potty",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 7072,
-      "percentage": 4.31,
+      "votes": 1924,
+      "percentage": 1.17,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,17 +47,8 @@
       "name": "Wilfred Zacharias",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 5870,
-      "percentage": 3.57,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "R. Reshmi",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 5255,
-      "percentage": 3.2,
+      "votes": 1805,
+      "percentage": 1.1,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +56,17 @@
       "name": "G Suresh",
       "party": "EPI",
       "alliance": "OTH",
-      "votes": 5221,
-      "percentage": 3.18,
+      "votes": 1728,
+      "percentage": 1.05,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "R. Reshmi",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 1555,
+      "percentage": 0.95,
       "is_winner": false,
       "is_leading": false
     }

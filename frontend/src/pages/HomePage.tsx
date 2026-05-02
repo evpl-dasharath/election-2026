@@ -170,9 +170,9 @@ export default function HomePage() {
       <GlobalHeader />
 
       {/* ── HERO SUMMARY ── */}
-      <div className="bg-surface px-8 pt-6 pb-5 border-b border-pageborder shrink-0">
-        <div className="mb-5">
-          <div className="font-sans text-[26px] font-bold tracking-tight mb-1">2026 Assembly Results</div>
+      <div className="bg-surface px-4 md:px-8 pt-4 md:pt-6 pb-4 md:pb-5 border-b border-pageborder shrink-0">
+        <div className="mb-4 md:mb-5">
+          <div className="font-sans text-[22px] md:text-[26px] font-bold tracking-tight mb-1">2026 Assembly Results</div>
           <div className="text-[16px] text-ink2">
             <span className={`font-bold ${statusLabel.color}`}>{statusLabel.text}</span>
             <span className="text-pageborder mx-3">|</span>
@@ -189,7 +189,7 @@ export default function HomePage() {
               { label: 'UDF', seats: udfSeats, color: ALLIANCE_COLORS.UDF },
               { label: 'NDA', seats: ndaSeats, color: ALLIANCE_COLORS.NDA },
             ].map((a, i) => (
-              <div key={a.label} className={`px-8 ${i < 2 ? 'border-r border-pageborder' : ''}`}>
+              <div key={a.label} className={`px-5 md:px-8 ${i < 2 ? 'border-r border-pageborder' : ''}`}>
                 <div className="w-2.5 h-2.5 mb-2" style={{ backgroundColor: a.color }} />
                 <div className="text-[13px] font-semibold mb-0.5" style={{ color: a.color }}>{a.label}</div>
                 <div className="flex items-baseline gap-1.5">
@@ -201,7 +201,7 @@ export default function HomePage() {
 
             {/* OTH block — only shown when > 0 */}
             {othSeats > 0 && (
-              <div className="px-8 border-r border-pageborder">
+              <div className="px-5 md:px-8 border-r border-pageborder">
                 <div className="w-2.5 h-2.5 mb-2" style={{ backgroundColor: ALLIANCE_COLORS.OTH }} />
                 <div className="text-[13px] font-semibold mb-0.5" style={{ color: ALLIANCE_COLORS.OTH }}>OTH</div>
                 <div className="flex items-baseline gap-1.5">
@@ -213,7 +213,7 @@ export default function HomePage() {
 
             {/* IND block — only shown when > 0 */}
             {indSeats > 0 && (
-              <div className="px-8 border-r border-pageborder">
+              <div className="px-5 md:px-8 border-r border-pageborder">
                 <div className="w-2.5 h-2.5 mb-2" style={{ backgroundColor: PURE_IND_COLOR }} />
                 <div className="text-[13px] font-semibold mb-0.5" style={{ color: PURE_IND_COLOR }}>IND</div>
                 <div className="flex items-baseline gap-1.5">
@@ -227,7 +227,7 @@ export default function HomePage() {
             {[...partyBreakdown].sort((a, b) => b.count - a.count).slice(0, 6).map((p, idx, arr) => {
               const pc = p.partyColor;
               return (
-                <div key={p.party} className={`px-8 ${idx < arr.length - 1 ? 'border-r border-pageborder' : ''}`}>
+                <div key={p.party} className={`px-5 md:px-8 ${idx < arr.length - 1 ? 'border-r border-pageborder' : ''}`}>
                   <div className="w-2.5 h-2.5 mb-2" style={{ backgroundColor: pc }} />
                   <div className="text-[13px] font-semibold text-ink mb-0.5" style={{ color: pc }}>{p.party}</div>
                   <div className="flex items-baseline gap-1.5">
@@ -291,8 +291,8 @@ export default function HomePage() {
       </div>
 
       {/* ── REGIONAL SUMMARY PANEL ── */}
-      <div className="bg-surface px-8 py-2 border-b border-pageborder">
-        <div className="grid grid-cols-4 gap-2">
+      <div className="bg-surface px-4 md:px-8 py-2 border-b border-pageborder">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2">
           {REGION_META.map(rm => {
             const t = regionTally(constituencies, rm.key);
             const alliances = [
@@ -332,8 +332,8 @@ export default function HomePage() {
       </div>
 
       {/* ── DISTRICT FILTER TABS + SEARCH ── */}
-      <div className="bg-surface px-8 py-3 border-b border-pageborder flex items-center gap-3">
-        <div className="flex gap-2 overflow-x-auto custom-scrollbar flex-1 pb-1">
+      <div className="bg-surface px-4 md:px-8 py-3 border-b border-pageborder flex flex-col md:flex-row md:items-center gap-3">
+        <div className="flex gap-2 overflow-x-auto custom-scrollbar w-full md:flex-1 pb-1">
           <button
             className={`district-tab ${!activeDistrict && !activeRegion ? 'active' : ''}`}
             onClick={() => { setActiveDistrict(null); setActiveRegion(null); }}
@@ -350,7 +350,7 @@ export default function HomePage() {
             );
           })}
         </div>
-        <div className="flex items-center gap-2 bg-pagebg border border-pageborder rounded-md px-3 py-1.5 shrink-0 w-[220px]">
+        <div className="flex items-center gap-2 bg-pagebg border border-pageborder rounded-md px-3 py-1.5 shrink-0 w-full md:w-[220px]">
           <span className="text-ink2 text-sm">⌕</span>
           <input
             type="text"
@@ -363,7 +363,7 @@ export default function HomePage() {
       </div>
 
       {/* ── RESULT TYPE FILTER ── */}
-      <div className="bg-surface px-8 py-2 border-b border-pageborder flex items-center gap-3 overflow-x-auto custom-scrollbar">
+      <div className="bg-surface px-4 md:px-8 py-2 border-b border-pageborder flex items-center gap-3 overflow-x-auto custom-scrollbar">
         <span className="text-[10px] font-bold tracking-widest uppercase text-ink2 shrink-0">In Play</span>
 
         {(['LDF', 'UDF', 'NDA'] as const).map((al, gi) => {
@@ -425,13 +425,13 @@ export default function HomePage() {
       </div>
 
       {/* ── CONSTITUENCY CARD GRID ── */}
-      <div className="flex-1 overflow-y-auto custom-scrollbar px-6 py-4">
+      <div className="flex-1 overflow-y-auto custom-scrollbar px-4 md:px-6 py-4">
         {loadingConst ? (
           <div className="text-center text-ink2 py-16">Loading constituencies...</div>
         ) : filteredConstituencies.length === 0 ? (
           <div className="text-center text-ink2 py-16 text-[14px]">No constituencies match your filters</div>
         ) : (
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '12px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 300px), 1fr))', gap: '12px' }}>
             {filteredConstituencies.map(c => (
               <ConstituencyCard key={c.id} c={c} onClick={() => navigate(`/constituency/${c.id}`)} />
             ))}
@@ -440,7 +440,7 @@ export default function HomePage() {
       </div>
 
       {/* ── BOTTOM TICKER ── */}
-      <div className="bg-ink text-white/60 text-[12px] py-2 px-8 flex items-center gap-4 border-t border-white/5 overflow-hidden shrink-0">
+      <div className="bg-ink text-white/60 text-[12px] py-2 px-4 md:px-8 flex items-center gap-4 border-t border-white/5 overflow-hidden shrink-0">
         <div className="text-[10px] font-bold tracking-widest uppercase text-gold shrink-0">Updates</div>
         <div className="overflow-hidden flex-1">
           <div className="ticker-scroll">

@@ -5,50 +5,23 @@
     "name": "NENMARA",
     "district": "Palakkad"
   },
-  "live_result": {
-    "status": "IN_PROGRESS",
-    "total_electors": 180181,
-    "votes_polled": 125218,
-    "votes_counted": 34878,
-    "valid_votes": 127887,
-    "rounds_completed": 6,
-    "total_rounds": 22,
-    "last_updated": "2026-04-30T12:12:37.313001+00:00"
-  },
+  "live_result": null,
   "candidates_2026": [
     {
-      "name": "Ramakrishna Sankaranarayanan",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 15375,
-      "percentage": 12.02,
+      "name": "A. Thankappan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "K. Preman",
       "party": "CPI(M)",
       "alliance": "LDF",
-      "votes": 7891,
-      "percentage": 6.17,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Anvar Sadiq",
-      "party": "SDPI",
-      "alliance": "OTH",
-      "votes": 3359,
-      "percentage": 2.63,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "A. Thankappan",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 3247,
-      "percentage": 2.54,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +29,26 @@
       "name": "A. N. Anurag",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 2116,
-      "percentage": 1.65,
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Anvar Sadiq",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ramakrishna Sankaranarayanan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +56,8 @@
       "name": "Radhakrishnan K",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 1990,
-      "percentage": 1.56,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     }

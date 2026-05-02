@@ -5,59 +5,23 @@
     "name": "KOTTAKKAL",
     "district": "Malappuram"
   },
-  "live_result": {
-    "status": "IN_PROGRESS",
-    "total_electors": 206112,
-    "votes_polled": 149483,
-    "votes_counted": 38048,
-    "valid_votes": 152193,
-    "rounds_completed": 5,
-    "total_rounds": 20,
-    "last_updated": "2026-04-30T12:12:14.312610+00:00"
-  },
+  "live_result": null,
   "candidates_2026": [
     {
-      "name": "Mohamed Rafi",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 15987,
-      "percentage": 10.5,
+      "name": "K. Preethi",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Prof. K. K. Abid Hussain Thangal",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 10124,
-      "percentage": 6.65,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "K. Preethi",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 3296,
-      "percentage": 2.17,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Adv. Majeed Marakkara",
-      "party": "SDPI",
-      "alliance": "OTH",
-      "votes": 3229,
-      "percentage": 2.12,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Preethi Kp",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 2827,
-      "percentage": 1.86,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +29,35 @@
       "name": "Subrahmanian Chunkapally",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 2650,
-      "percentage": 1.74,
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Majeed Marakkara",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Preethi Kp",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Mohamed Rafi",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     }

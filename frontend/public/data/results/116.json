@@ -9,19 +9,19 @@
     "status": "IN_PROGRESS",
     "total_electors": 210181,
     "votes_polled": 156858,
-    "votes_counted": 63568,
+    "votes_counted": 14126,
     "valid_votes": 162454,
-    "rounds_completed": 9,
+    "rounds_completed": 2,
     "total_rounds": 23,
-    "last_updated": "2026-04-30T12:04:38.314109+00:00"
+    "last_updated": "2026-05-01T02:01:46.184239+00:00"
   },
   "candidates_2026": [
     {
       "name": "C. R. Mahesh",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 20668,
-      "percentage": 12.72,
+      "votes": 5210,
+      "percentage": 3.21,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,17 +29,8 @@
       "name": "Adv.M.S. Thara",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 14971,
-      "percentage": 9.22,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Twinkle Prabhakaran",
-      "party": "SUCI",
-      "alliance": "OTH",
-      "votes": 9393,
-      "percentage": 5.78,
+      "votes": 3452,
+      "percentage": 2.12,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +38,8 @@
       "name": "V. S. Jithin Dev",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 8849,
-      "percentage": 5.45,
+      "votes": 1980,
+      "percentage": 1.22,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +47,17 @@
       "name": "Latheef",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 8464,
-      "percentage": 5.21,
+      "votes": 1884,
+      "percentage": 1.16,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Twinkle Prabhakaran",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 1883,
+      "percentage": 1.16,
       "is_winner": false,
       "is_leading": false
     }

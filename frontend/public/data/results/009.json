@@ -9,19 +9,19 @@
     "status": "IN_PROGRESS",
     "total_electors": 175014,
     "votes_polled": 123891,
-    "votes_counted": 46804,
+    "votes_counted": 17551,
     "valid_votes": 128712,
-    "rounds_completed": 8,
+    "rounds_completed": 3,
     "total_rounds": 22,
-    "last_updated": "2026-04-30T12:01:41.313032+00:00"
+    "last_updated": "2026-05-01T01:58:49.184796+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. Mathew Kunnappally",
       "party": "KC(M)",
-      "alliance": "UDF",
-      "votes": 20556,
-      "percentage": 15.97,
+      "alliance": "LDF",
+      "votes": 8132,
+      "percentage": 6.32,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Joseph P.V",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 13400,
-      "percentage": 10.41,
+      "votes": 4588,
+      "percentage": 3.56,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Adv. Sajeev Joseph",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 4262,
-      "percentage": 3.31,
+      "votes": 1562,
+      "percentage": 1.21,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "M. J. Mathew",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 3873,
-      "percentage": 3.01,
+      "votes": 1412,
+      "percentage": 1.1,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Sreenath Padmanabhan",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 3166,
-      "percentage": 2.46,
+      "votes": 1137,
+      "percentage": 0.88,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Amal K T",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 2262,
-      "percentage": 1.76,
+      "votes": 849,
+      "percentage": 0.66,
       "is_winner": false,
       "is_leading": false
     }

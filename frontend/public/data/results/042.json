@@ -9,37 +9,28 @@
     "status": "IN_PROGRESS",
     "total_electors": 173833,
     "votes_polled": 117127,
-    "votes_counted": 40601,
+    "votes_counted": 5075,
     "valid_votes": 121803,
-    "rounds_completed": 8,
+    "rounds_completed": 1,
     "total_rounds": 24,
-    "last_updated": "2026-04-30T12:08:08.312619+00:00"
+    "last_updated": "2026-05-01T02:05:16.184109+00:00"
   },
   "candidates_2026": [
     {
-      "name": "Muhammed Aslam V P",
+      "name": "Muhamed Musthafa Pamangadan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 16008,
-      "percentage": 13.14,
+      "votes": 2108,
+      "percentage": 1.73,
       "is_winner": false,
       "is_leading": true
-    },
-    {
-      "name": "M. Preman Master",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 11333,
-      "percentage": 9.3,
-      "is_winner": false,
-      "is_leading": false
     },
     {
       "name": "Adv. C. P. Musthafa",
       "party": "IND (INL)",
       "alliance": "LDF",
-      "votes": 5353,
-      "percentage": 4.39,
+      "votes": 1267,
+      "percentage": 1.04,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,17 +38,17 @@
       "name": "T. V. Ibrahim",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 3029,
-      "percentage": 2.49,
+      "votes": 616,
+      "percentage": 0.51,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Muhamed Musthafa Pamangadan",
+      "name": "Muhammed Aslam V P",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 2554,
-      "percentage": 2.1,
+      "votes": 409,
+      "percentage": 0.34,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +56,17 @@
       "name": "Abdul Azeez Kadalundi",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 2417,
-      "percentage": 1.98,
+      "votes": 300,
+      "percentage": 0.25,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "M. Preman Master",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 285,
+      "percentage": 0.23,
       "is_winner": false,
       "is_leading": false
     }

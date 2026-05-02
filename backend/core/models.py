@@ -288,6 +288,70 @@ class HistoricalResult2016Full(models.Model):
         return f"{self.constituency.name} - {self.candidate_name} ({self.party_code}) {mark}"
 
 
+class HistoricalResult2011(models.Model):
+    """2011 LA election results — individual candidate records."""
+    constituency = models.ForeignKey(Constituency, on_delete=models.CASCADE, related_name='results_2011')
+
+    serial_no = models.IntegerField(null=True, blank=True)
+    candidate_name = models.CharField(max_length=200)
+    sex = models.CharField(max_length=10, blank=True)
+    age = models.IntegerField(null=True, blank=True)
+    category = models.CharField(max_length=20, blank=True)
+
+    party_code = models.CharField(max_length=50)
+    party_symbol = models.CharField(max_length=200, blank=True)
+
+    general_votes = models.IntegerField(default=0)
+    postal_votes = models.IntegerField(default=0)
+    total_votes = models.IntegerField(default=0)
+    vote_percentage = models.DecimalField(max_digits=5, decimal_places=2, default=0)
+
+    total_electors = models.IntegerField(default=0)
+
+    is_winner = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ['constituency__number', '-total_votes']
+        verbose_name = '2011 LA Result'
+        verbose_name_plural = '2011 LA Results'
+
+    def __str__(self):
+        mark = '✓' if self.is_winner else ''
+        return f'{self.constituency.name} - {self.candidate_name} ({self.party_code}) {mark}'
+
+
+class HistoricalResult2006(models.Model):
+    """2006 LA election results — individual candidate records."""
+    constituency = models.ForeignKey(Constituency, on_delete=models.CASCADE, related_name='results_2006')
+
+    serial_no = models.IntegerField(null=True, blank=True)
+    candidate_name = models.CharField(max_length=200)
+    sex = models.CharField(max_length=10, blank=True)
+    age = models.IntegerField(null=True, blank=True)
+    category = models.CharField(max_length=20, blank=True)
+
+    party_code = models.CharField(max_length=50)
+    party_symbol = models.CharField(max_length=200, blank=True)
+
+    general_votes = models.IntegerField(default=0)
+    postal_votes = models.IntegerField(default=0)
+    total_votes = models.IntegerField(default=0)
+    vote_percentage = models.DecimalField(max_digits=5, decimal_places=2, default=0)
+
+    total_electors = models.IntegerField(default=0)
+
+    is_winner = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ['constituency__number', '-total_votes']
+        verbose_name = '2006 LA Result'
+        verbose_name_plural = '2006 LA Results'
+
+    def __str__(self):
+        mark = '✓' if self.is_winner else ''
+        return f'{self.constituency.name} - {self.candidate_name} ({self.party_code}) {mark}'
+
+
 class ParliamentResult(models.Model):
     """Parliament election results at AC level (2019 & 2024)"""
     ELECTION_YEAR_CHOICES = [

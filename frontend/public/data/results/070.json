@@ -9,46 +9,28 @@
     "status": "IN_PROGRESS",
     "total_electors": 249241,
     "votes_polled": 181333,
-    "votes_counted": 69545,
+    "votes_counted": 19870,
     "valid_votes": 188766,
-    "rounds_completed": 7,
+    "rounds_completed": 2,
     "total_rounds": 19,
-    "last_updated": "2026-04-30T12:02:08.312783+00:00"
+    "last_updated": "2026-05-01T01:59:16.184555+00:00"
   },
   "candidates_2026": [
     {
-      "name": "Santhosh Cherkalam",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 23799,
-      "percentage": 12.61,
+      "name": "Dr. Anish",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 6817,
+      "percentage": 3.61,
       "is_winner": false,
       "is_leading": true
-    },
-    {
-      "name": "Dr. R. Bindu",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 14922,
-      "percentage": 7.91,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Adv. Thomas Unniyadan",
-      "party": "KEC",
-      "alliance": "UDF",
-      "votes": 7922,
-      "percentage": 4.2,
-      "is_winner": false,
-      "is_leading": false
     },
     {
       "name": "Dr. Shaju K Y (Kavungal)",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 6444,
-      "percentage": 3.41,
+      "votes": 4268,
+      "percentage": 2.26,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,17 +38,8 @@
       "name": "Thankamany Tharayil",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 5699,
-      "percentage": 3.02,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Dr. Anish",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 5210,
-      "percentage": 2.76,
+      "votes": 2121,
+      "percentage": 1.12,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +47,35 @@
       "name": "Ayyappan Manakkal",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 4282,
-      "percentage": 2.27,
+      "votes": 2076,
+      "percentage": 1.1,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Dr. R. Bindu",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 1801,
+      "percentage": 0.95,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Thomas Unniyadan",
+      "party": "KEC",
+      "alliance": "UDF",
+      "votes": 1506,
+      "percentage": 0.8,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Santhosh Cherkalam",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 1360,
+      "percentage": 0.72,
       "is_winner": false,
       "is_leading": false
     }

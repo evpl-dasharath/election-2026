@@ -9,19 +9,19 @@
     "status": "IN_PROGRESS",
     "total_electors": 217963,
     "votes_polled": 165436,
-    "votes_counted": 50235,
+    "votes_counted": 8372,
     "valid_votes": 167450,
-    "rounds_completed": 6,
+    "rounds_completed": 1,
     "total_rounds": 20,
-    "last_updated": "2026-04-30T12:06:54.312667+00:00"
+    "last_updated": "2026-05-01T02:04:02.184651+00:00"
   },
   "candidates_2026": [
     {
-      "name": "C. Krishnakumar",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 23159,
-      "percentage": 13.83,
+      "name": "A. Suresh",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 3958,
+      "percentage": 2.36,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,17 @@
       "name": "Ramnath C",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 12196,
-      "percentage": 7.28,
+      "votes": 1931,
+      "percentage": 1.15,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "C. Krishnakumar",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 758,
+      "percentage": 0.45,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,17 +47,8 @@
       "name": "Saji P J",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 4757,
-      "percentage": 2.84,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "A. Suresh",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 4611,
-      "percentage": 2.75,
+      "votes": 718,
+      "percentage": 0.43,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "A. Prabhakaran",
       "party": "CPI(M)",
       "alliance": "LDF",
-      "votes": 3144,
-      "percentage": 1.88,
+      "votes": 484,
+      "percentage": 0.29,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "K Prasad",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 2643,
-      "percentage": 1.58,
+      "votes": 448,
+      "percentage": 0.27,
       "is_winner": false,
       "is_leading": false
     }

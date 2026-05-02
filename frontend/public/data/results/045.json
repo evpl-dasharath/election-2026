@@ -9,64 +9,37 @@
     "status": "IN_PROGRESS",
     "total_electors": 213271,
     "votes_polled": 147848,
-    "votes_counted": 45981,
+    "votes_counted": 6568,
     "valid_votes": 151081,
-    "rounds_completed": 7,
+    "rounds_completed": 1,
     "total_rounds": 23,
-    "last_updated": "2026-04-30T12:09:16.312586+00:00"
+    "last_updated": "2026-05-01T02:06:24.184809+00:00"
   },
   "candidates_2026": [
-    {
-      "name": "Abdurahiman S/o Kunjeen",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 10288,
-      "percentage": 6.81,
-      "is_winner": false,
-      "is_leading": true
-    },
-    {
-      "name": "Siyad Koodiyath",
-      "party": "SP (I)",
-      "alliance": "OTH",
-      "votes": 9393,
-      "percentage": 6.22,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "K. Narayanan Master",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 4651,
-      "percentage": 3.08,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Dr.S.Aleena",
-      "party": "SUCI",
-      "alliance": "OTH",
-      "votes": 4642,
-      "percentage": 3.07,
-      "is_winner": false,
-      "is_leading": false
-    },
     {
       "name": "Kurukkoli Moideen",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 4363,
-      "percentage": 2.89,
+      "votes": 1411,
+      "percentage": 0.93,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Moideen Koomulli Parambil",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 1264,
+      "percentage": 0.84,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "V. Abdurahiman",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 3935,
-      "percentage": 2.6,
+      "name": "Abdurahiman S/o Kunjeen",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 683,
+      "percentage": 0.45,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,17 +47,26 @@
       "name": "Kabeer Shameer Kuttoor",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 3731,
-      "percentage": 2.47,
+      "votes": 624,
+      "percentage": 0.41,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Moideen Koomulli Parambil",
-      "party": "IND",
+      "name": "Dr.S.Aleena",
+      "party": "SUCI",
       "alliance": "OTH",
-      "votes": 2995,
-      "percentage": 1.98,
+      "votes": 594,
+      "percentage": 0.39,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Siyad Koodiyath",
+      "party": "SP (I)",
+      "alliance": "OTH",
+      "votes": 555,
+      "percentage": 0.37,
       "is_winner": false,
       "is_leading": false
     },
@@ -92,8 +74,26 @@
       "name": "V. Abdurahman",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 2643,
-      "percentage": 1.75,
+      "votes": 529,
+      "percentage": 0.35,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "V. Abdurahiman",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 443,
+      "percentage": 0.29,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. Narayanan Master",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 364,
+      "percentage": 0.24,
       "is_winner": false,
       "is_leading": false
     }

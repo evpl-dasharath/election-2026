@@ -75,11 +75,11 @@ export default function GlobalHeader() {
   return (
     <header className="bg-ink text-white shrink-0 sticky top-0 z-50 border-b border-white/10">
       {/* ── Row 1: Logo | Pills | Nav + Time ──────────────── */}
-      <div className="px-6 h-12 flex items-center justify-between gap-4">
+      <div className="px-3 md:px-6 py-2 md:py-0 min-h-[3rem] md:h-12 flex flex-wrap md:flex-nowrap items-center justify-between gap-y-2 gap-x-4">
 
         {/* Left: logo + live pill */}
-        <div className="flex items-center gap-2.5 w-[200px] shrink-0">
-          <div className="font-serif text-[17px] tracking-tight whitespace-nowrap">
+        <div className="flex items-center gap-2 md:gap-2.5 shrink-0 md:w-[200px]">
+          <div className="font-serif text-[15px] md:text-[17px] tracking-tight whitespace-nowrap">
             Kerala <span className="text-gold">Elections</span> 2026
           </div>
           <button
@@ -101,7 +101,7 @@ export default function GlobalHeader() {
         </div>
 
         {/* Center: alliance pills */}
-        <div className="flex items-center gap-2 flex-1 justify-center">
+        <div className="flex items-center gap-2 w-full md:w-auto md:flex-1 justify-start md:justify-center overflow-x-auto custom-scrollbar order-3 md:order-2 pb-1 md:pb-0">
           {allPills.map(({ id, won, lead, color }) => {
             const total = won + lead;
             return (
@@ -128,8 +128,8 @@ export default function GlobalHeader() {
         </div>
 
         {/* Right: nav + time */}
-        <div className="flex items-center justify-end gap-5 w-[200px] shrink-0">
-          <div className="flex gap-4">
+        <div className="flex items-center justify-end gap-3 md:gap-5 shrink-0 md:w-[200px] order-2 md:order-3">
+          <div className="flex gap-3 md:gap-4">
             <span
               className={`text-[11px] font-medium cursor-pointer hover:text-white/80 transition-colors ${location.pathname === '/' ? 'text-white' : 'text-white/45'}`}
               onClick={() => navigate('/')}
@@ -138,6 +138,10 @@ export default function GlobalHeader() {
               className={`text-[11px] font-medium cursor-pointer hover:text-white/80 transition-colors ${location.pathname.startsWith('/constituency') ? 'text-white' : 'text-white/45'}`}
               onClick={() => { if (!location.pathname.startsWith('/constituency')) navigate('/constituency/1'); }}
             >Constituency</span>
+            <span
+              className={`text-[11px] font-medium cursor-pointer hover:text-white/80 transition-colors ${location.pathname === '/history' ? 'text-white' : 'text-white/45'}`}
+              onClick={() => navigate('/history')}
+            >History</span>
           </div>
           <div className="font-mono text-[10px] text-white/35">
             {time.toLocaleString('en-IN', { hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Kolkata' })} IST
@@ -146,7 +150,7 @@ export default function GlobalHeader() {
       </div>
 
       {/* ── Row 2: Seat totals + progress ─────────────────── */}
-      <div className="px-6 h-7 flex items-center justify-center gap-6 border-t border-white/8 bg-white/3">
+      <div className="px-3 md:px-6 py-1 md:py-0 min-h-[1.75rem] md:h-7 flex flex-wrap md:flex-nowrap items-center justify-center gap-x-4 md:gap-x-6 gap-y-1 border-t border-white/8 bg-white/3">
         {[
           { label: 'Declared', value: declared, color: 'text-white/70' },
           { label: 'Counting', value: counting, color: 'text-amber-400/80' },

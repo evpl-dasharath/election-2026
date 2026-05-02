@@ -5,41 +5,14 @@
     "name": "KUNNATHUR",
     "district": "Kollam"
   },
-  "live_result": {
-    "status": "IN_PROGRESS",
-    "total_electors": 250961,
-    "votes_polled": 186787,
-    "votes_counted": 57844,
-    "valid_votes": 192815,
-    "rounds_completed": 6,
-    "total_rounds": 20,
-    "last_updated": "2026-04-30T12:11:16.312563+00:00"
-  },
+  "live_result": null,
   "candidates_2026": [
     {
-      "name": "Sasidharan",
-      "party": "SUCI",
-      "alliance": "OTH",
-      "votes": 25646,
-      "percentage": 13.3,
-      "is_winner": false,
-      "is_leading": true
-    },
-    {
-      "name": "Ullas Kovoor",
-      "party": "RSP",
-      "alliance": "UDF",
-      "votes": 16616,
-      "percentage": 8.62,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Manthara Velayudhan",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 7073,
-      "percentage": 3.67,
+      "name": "Raji Prasad",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,17 +20,35 @@
       "name": "Kovoor Kunjumon",
       "party": "RSP(L)",
       "alliance": "LDF",
-      "votes": 6710,
-      "percentage": 3.48,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Raji Prasad",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 3078,
-      "percentage": 1.6,
+      "name": "Ullas Kovoor",
+      "party": "RSP",
+      "alliance": "UDF",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Manthara Velayudhan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sasidharan",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     }

@@ -9,19 +9,19 @@
     "status": "IN_PROGRESS",
     "total_electors": 207953,
     "votes_polled": 147449,
-    "votes_counted": 49514,
+    "votes_counted": 16504,
     "valid_votes": 148544,
-    "rounds_completed": 6,
+    "rounds_completed": 2,
     "total_rounds": 18,
-    "last_updated": "2026-04-30T12:02:17.313099+00:00"
+    "last_updated": "2026-05-01T01:59:25.184124+00:00"
   },
   "candidates_2026": [
     {
       "name": "Anifa V K",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 25373,
-      "percentage": 17.08,
+      "votes": 7533,
+      "percentage": 5.07,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,17 +29,8 @@
       "name": "A. Nagesh",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 6798,
-      "percentage": 4.58,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "K. K. Ramachandran",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 5355,
-      "percentage": 3.6,
+      "votes": 2437,
+      "percentage": 1.64,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +38,17 @@
       "name": "K. M. Babu Raj",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 5032,
-      "percentage": 3.39,
+      "votes": 1746,
+      "percentage": 1.18,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. K. Ramachandran",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 1740,
+      "percentage": 1.17,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "P C Pushpakaran",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 4736,
-      "percentage": 3.19,
+      "votes": 1685,
+      "percentage": 1.13,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Jayakrishnan P N",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 3670,
-      "percentage": 2.47,
+      "votes": 1284,
+      "percentage": 0.86,
       "is_winner": false,
       "is_leading": false
     }

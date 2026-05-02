@@ -9,37 +9,37 @@
     "status": "IN_PROGRESS",
     "total_electors": 204541,
     "votes_polled": 137421,
-    "votes_counted": 46986,
+    "votes_counted": 6712,
     "valid_votes": 140958,
-    "rounds_completed": 7,
+    "rounds_completed": 1,
     "total_rounds": 21,
-    "last_updated": "2026-04-30T12:07:37.312845+00:00"
+    "last_updated": "2026-05-01T02:04:45.184236+00:00"
   },
   "candidates_2026": [
     {
       "name": "Dr. Mathew Kuzhalnadan",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 23458,
-      "percentage": 16.64,
+      "votes": 3450,
+      "percentage": 2.45,
       "is_winner": false,
       "is_leading": true
-    },
-    {
-      "name": "Sunny Kadoothazhe",
-      "party": "TTP",
-      "alliance": "NDA",
-      "votes": 9469,
-      "percentage": 6.72,
-      "is_winner": false,
-      "is_leading": false
     },
     {
       "name": "Roy Arakkal",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 8526,
-      "percentage": 6.05,
+      "votes": 1298,
+      "percentage": 0.92,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sunny Kadoothazhe",
+      "party": "TTP",
+      "alliance": "NDA",
+      "votes": 1212,
+      "percentage": 0.86,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "N. Arun",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 5016,
-      "percentage": 3.56,
+      "votes": 707,
+      "percentage": 0.5,
       "is_winner": false,
       "is_leading": false
     }

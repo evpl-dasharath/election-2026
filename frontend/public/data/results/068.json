@@ -5,41 +5,32 @@
     "name": "NATTIKA",
     "district": "Thrissur"
   },
-  "live_result": {
-    "status": "IN_PROGRESS",
-    "total_electors": 209986,
-    "votes_polled": 150098,
-    "votes_counted": 32870,
-    "valid_votes": 151204,
-    "rounds_completed": 5,
-    "total_rounds": 23,
-    "last_updated": "2026-04-30T12:13:09.319463+00:00"
-  },
+  "live_result": null,
   "candidates_2026": [
+    {
+      "name": "Adv. Sunil Lalur",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
     {
       "name": "Geetha Gopi",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 17258,
-      "percentage": 11.41,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "C. C. Mukundan",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 12969,
-      "percentage": 8.58,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Adv. Sunil Lalur",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 4439,
-      "percentage": 2.94,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     }

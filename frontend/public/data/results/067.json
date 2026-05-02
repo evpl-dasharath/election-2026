@@ -9,55 +9,28 @@
     "status": "IN_PROGRESS",
     "total_electors": 197700,
     "votes_polled": 143939,
-    "votes_counted": 62263,
+    "votes_counted": 20754,
     "valid_votes": 145282,
-    "rounds_completed": 9,
+    "rounds_completed": 3,
     "total_rounds": 21,
-    "last_updated": "2026-04-30T12:01:42.313193+00:00"
+    "last_updated": "2026-05-01T01:58:50.184985+00:00"
   },
   "candidates_2026": [
     {
-      "name": "Rani Anto",
-      "party": "AAP",
-      "alliance": "OTH",
-      "votes": 18076,
-      "percentage": 12.44,
+      "name": "Padmaja Venugopal",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 5825,
+      "percentage": 4.01,
       "is_winner": false,
       "is_leading": true
-    },
-    {
-      "name": "Rajan Pallan",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 13599,
-      "percentage": 9.36,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Rosilin Chacko",
-      "party": "BSP",
-      "alliance": "OTH",
-      "votes": 7822,
-      "percentage": 5.38,
-      "is_winner": false,
-      "is_leading": false
     },
     {
       "name": "Rajan. M",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 6743,
-      "percentage": 4.64,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Alankode Leelakrishnan",
-      "party": "CPI",
-      "alliance": "LDF",
-      "votes": 6336,
-      "percentage": 4.36,
+      "votes": 4319,
+      "percentage": 2.97,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,17 +38,44 @@
       "name": "Arshed Aziz",
       "party": "CPIML Liberation",
       "alliance": "OTH",
-      "votes": 6307,
-      "percentage": 4.34,
+      "votes": 2414,
+      "percentage": 1.66,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Padmaja Venugopal",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 4679,
-      "percentage": 3.22,
+      "name": "Rosilin Chacko",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 2352,
+      "percentage": 1.62,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Rajan Pallan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 2205,
+      "percentage": 1.52,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Rani Anto",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 1970,
+      "percentage": 1.36,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Alankode Leelakrishnan",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 1517,
+      "percentage": 1.04,
       "is_winner": false,
       "is_leading": false
     }

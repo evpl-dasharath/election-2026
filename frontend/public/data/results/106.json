@@ -9,64 +9,28 @@
     "status": "IN_PROGRESS",
     "total_electors": 259462,
     "votes_polled": 190476,
-    "votes_counted": 74543,
+    "votes_counted": 21298,
     "valid_votes": 191684,
-    "rounds_completed": 7,
+    "rounds_completed": 2,
     "total_rounds": 18,
-    "last_updated": "2026-04-30T12:03:57.312757+00:00"
+    "last_updated": "2026-05-01T02:01:05.184677+00:00"
   },
   "candidates_2026": [
-    {
-      "name": "Joemon Joseph Srampickal A. P. J. Juman V. S.",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 20628,
-      "percentage": 10.76,
-      "is_winner": false,
-      "is_leading": true
-    },
-    {
-      "name": "Reji Cheriyan",
-      "party": "KEC",
-      "alliance": "UDF",
-      "votes": 12716,
-      "percentage": 6.63,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Jaisappan Mathai",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 9610,
-      "percentage": 5.01,
-      "is_winner": false,
-      "is_leading": false
-    },
     {
       "name": "Renju T. R.",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 7714,
-      "percentage": 4.02,
+      "votes": 5954,
+      "percentage": 3.11,
       "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Joseph Mathew",
-      "party": "AAP",
-      "alliance": "OTH",
-      "votes": 7424,
-      "percentage": 3.87,
-      "is_winner": false,
-      "is_leading": false
+      "is_leading": true
     },
     {
       "name": "Thomas K. Thomas",
       "party": "NCP(SP)",
       "alliance": "LDF",
-      "votes": 6725,
-      "percentage": 3.51,
+      "votes": 4002,
+      "percentage": 2.09,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +38,35 @@
       "name": "P.K. Sasi",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 5558,
-      "percentage": 2.9,
+      "votes": 2760,
+      "percentage": 1.44,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Jaisappan Mathai",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 2289,
+      "percentage": 1.19,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Joemon Joseph Srampickal A. P. J. Juman V. S.",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 2214,
+      "percentage": 1.16,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Joseph Mathew",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 2009,
+      "percentage": 1.05,
       "is_winner": false,
       "is_leading": false
     },
@@ -83,8 +74,17 @@
       "name": "Santhosh Santhy",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 4090,
-      "percentage": 2.13,
+      "votes": 1589,
+      "percentage": 0.83,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Reji Cheriyan",
+      "party": "KEC",
+      "alliance": "UDF",
+      "votes": 1133,
+      "percentage": 0.59,
       "is_winner": false,
       "is_leading": false
     }

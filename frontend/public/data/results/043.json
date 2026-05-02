@@ -9,19 +9,19 @@
     "status": "IN_PROGRESS",
     "total_electors": 217091,
     "votes_polled": 161000,
-    "votes_counted": 57055,
+    "votes_counted": 7131,
     "valid_votes": 164034,
-    "rounds_completed": 8,
+    "rounds_completed": 1,
     "total_rounds": 23,
-    "last_updated": "2026-04-30T12:06:21.312940+00:00"
+    "last_updated": "2026-05-01T02:03:29.184173+00:00"
   },
   "candidates_2026": [
     {
       "name": "Hameed V",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 35044,
-      "percentage": 21.36,
+      "votes": 4170,
+      "percentage": 2.54,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Ajit Koladi",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 9779,
-      "percentage": 5.96,
+      "votes": 1320,
+      "percentage": 0.8,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "P. M. A. Sameer",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 5447,
-      "percentage": 3.32,
+      "votes": 676,
+      "percentage": 0.41,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Moosa Jarathingal",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 4011,
-      "percentage": 2.45,
+      "votes": 478,
+      "percentage": 0.29,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Riju C. Raghav",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 3808,
-      "percentage": 2.32,
+      "votes": 437,
+      "percentage": 0.27,
       "is_winner": false,
       "is_leading": false
     }

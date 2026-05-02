@@ -9,19 +9,19 @@
     "status": "IN_PROGRESS",
     "total_electors": 218893,
     "votes_polled": 165947,
-    "votes_counted": 70666,
+    "votes_counted": 8833,
     "valid_votes": 167834,
-    "rounds_completed": 8,
+    "rounds_completed": 1,
     "total_rounds": 19,
-    "last_updated": "2026-04-30T12:06:28.320115+00:00"
+    "last_updated": "2026-05-01T02:03:36.193421+00:00"
   },
   "candidates_2026": [
     {
       "name": "A. D. Thomas",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 18351,
-      "percentage": 10.93,
+      "votes": 2377,
+      "percentage": 1.42,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Alleppey Sugunan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 16207,
-      "percentage": 9.66,
+      "votes": 1955,
+      "percentage": 1.16,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,17 +38,8 @@
       "name": "M.J. Job",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 12072,
-      "percentage": 7.19,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Joseph Chacko",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 8761,
-      "percentage": 5.22,
+      "votes": 1691,
+      "percentage": 1.01,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +47,17 @@
       "name": "P. P. Chitharanjan",
       "party": "CPI(M)",
       "alliance": "LDF",
-      "votes": 7800,
-      "percentage": 4.65,
+      "votes": 1017,
+      "percentage": 0.61,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Joseph Chacko",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 989,
+      "percentage": 0.59,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Jyothi Abraham",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 7272,
-      "percentage": 4.33,
+      "votes": 909,
+      "percentage": 0.54,
       "is_winner": false,
       "is_leading": false
     }

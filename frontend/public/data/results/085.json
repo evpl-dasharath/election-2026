@@ -5,59 +5,14 @@
     "name": "PIRAVOM",
     "district": "Ernakulam"
   },
-  "live_result": {
-    "status": "IN_PROGRESS",
-    "total_electors": 235248,
-    "votes_polled": 153250,
-    "votes_counted": 41219,
-    "valid_votes": 158007,
-    "rounds_completed": 6,
-    "total_rounds": 23,
-    "last_updated": "2026-04-30T12:12:53.319294+00:00"
-  },
+  "live_result": null,
   "candidates_2026": [
     {
-      "name": "Renny Mathew",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 14105,
-      "percentage": 8.93,
-      "is_winner": false,
-      "is_leading": true
-    },
-    {
-      "name": "T C Ramanan",
-      "party": "SUCI",
-      "alliance": "OTH",
-      "votes": 8520,
-      "percentage": 5.39,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Anoop Jacob",
-      "party": "KC(J)",
-      "alliance": "UDF",
-      "votes": 4664,
-      "percentage": 2.95,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Eldho Abraham",
-      "party": "AAP",
-      "alliance": "OTH",
-      "votes": 4357,
-      "percentage": 2.76,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Sabu K Eramath",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 3964,
-      "percentage": 2.51,
+      "name": "Sabu K Jacob",
+      "party": "KC(M)",
+      "alliance": "LDF",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,17 +20,53 @@
       "name": "Jibi Abraham",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 3792,
-      "percentage": 2.4,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Sabu K Jacob",
-      "party": "KC(M)",
+      "name": "Anoop Jacob",
+      "party": "KC(J)",
       "alliance": "UDF",
-      "votes": 3320,
-      "percentage": 2.1,
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sabu K Eramath",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Eldho Abraham",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Renny Mathew",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "T C Ramanan",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     }

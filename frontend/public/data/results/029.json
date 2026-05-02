@@ -9,28 +9,28 @@
     "status": "IN_PROGRESS",
     "total_electors": 247153,
     "votes_polled": 190442,
-    "votes_counted": 52013,
+    "votes_counted": 8668,
     "valid_votes": 190715,
-    "rounds_completed": 6,
+    "rounds_completed": 1,
     "total_rounds": 22,
-    "last_updated": "2026-04-30T12:07:57.312490+00:00"
+    "last_updated": "2026-05-01T02:05:05.184565+00:00"
   },
   "candidates_2026": [
-    {
-      "name": "Anwar Ali Hassan S/o Kuttyhassan",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 10288,
-      "percentage": 5.39,
-      "is_winner": false,
-      "is_leading": true
-    },
     {
       "name": "Anver S/o Moideenkoya",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 10062,
-      "percentage": 5.28,
+      "votes": 1854,
+      "percentage": 0.97,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Anwar Ali Hassan S/o Kuttyhassan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 1716,
+      "percentage": 0.9,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "P. V. Anvar",
       "party": "AITC",
       "alliance": "UDF",
-      "votes": 6940,
-      "percentage": 3.64,
+      "votes": 1097,
+      "percentage": 0.58,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Muhammad Riyas",
       "party": "CPI(M)",
       "alliance": "LDF",
-      "votes": 5936,
-      "percentage": 3.11,
+      "votes": 917,
+      "percentage": 0.48,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Adv. K. P. Prakash Babu",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 5297,
-      "percentage": 2.78,
+      "votes": 879,
+      "percentage": 0.46,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Anver S/o Enunni",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 4832,
-      "percentage": 2.53,
+      "votes": 871,
+      "percentage": 0.46,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "Anver S/o Sulaikha K P",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 4671,
-      "percentage": 2.45,
+      "votes": 728,
+      "percentage": 0.38,
       "is_winner": false,
       "is_leading": false
     },
@@ -83,8 +83,8 @@
       "name": "Muhammed Riyas P.C S/o Ahammedkutty .P C",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 4050,
-      "percentage": 2.12,
+      "votes": 620,
+      "percentage": 0.33,
       "is_winner": false,
       "is_leading": false
     }

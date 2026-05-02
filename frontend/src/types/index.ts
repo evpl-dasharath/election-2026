@@ -94,6 +94,16 @@ export interface Historical2021Candidate {
   color_code: string;
 }
 
+export interface Historical2011Candidate {
+  candidate: string;
+  party: string;
+  votes: number;
+  percentage: number;
+  is_winner: boolean;
+  alliance: Alliance;
+  color_code: string;
+}
+
 export interface Historical2016Candidate {
   candidate: string;
   party: string;
@@ -102,6 +112,12 @@ export interface Historical2016Candidate {
   is_winner: boolean;
   alliance: Alliance;
   color_code: string;
+}
+
+export interface Historical2011 {
+  margin: number;
+  alliance_shares: Record<Alliance, number>;
+  candidates: Historical2011Candidate[];
 }
 
 export interface Historical2016 {
@@ -149,6 +165,7 @@ export interface HistoricalComparison {
     candidates: Historical2021Candidate[];
   };
   la_2016: Historical2016 | null;
+  la_2011: Historical2011 | null;
   ls_2019: ParliamentResult | null;
   ls_2024: ParliamentResult | null;
 }

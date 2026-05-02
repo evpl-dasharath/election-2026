@@ -9,64 +9,37 @@
     "status": "IN_PROGRESS",
     "total_electors": 239129,
     "votes_polled": 160964,
-    "votes_counted": 46121,
+    "votes_counted": 7686,
     "valid_votes": 161424,
-    "rounds_completed": 6,
+    "rounds_completed": 1,
     "total_rounds": 21,
-    "last_updated": "2026-04-30T12:08:44.313041+00:00"
+    "last_updated": "2026-05-01T02:05:52.184835+00:00"
   },
   "candidates_2026": [
-    {
-      "name": "Aboobacker S/o Ayisha",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 14183,
-      "percentage": 8.79,
-      "is_winner": false,
-      "is_leading": true
-    },
-    {
-      "name": "Manzil Aboobacker",
-      "party": "CPI",
-      "alliance": "LDF",
-      "votes": 12797,
-      "percentage": 7.93,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Shamsudheen S/o Muhammed",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 4727,
-      "percentage": 2.93,
-      "is_winner": false,
-      "is_leading": false
-    },
     {
       "name": "Isaac Varghese",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 4576,
-      "percentage": 2.83,
+      "votes": 2287,
+      "percentage": 1.42,
       "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Shamsudheen S/o Ummer",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 3729,
-      "percentage": 2.31,
-      "is_winner": false,
-      "is_leading": false
+      "is_leading": true
     },
     {
       "name": "Ashitha Najeeb",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 3683,
-      "percentage": 2.28,
+      "votes": 2201,
+      "percentage": 1.36,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Aboobacker S/o Ayisha",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 839,
+      "percentage": 0.52,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +47,35 @@
       "name": "Adv. N. Samsudheen",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 2059,
-      "percentage": 1.28,
+      "votes": 766,
+      "percentage": 0.47,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Shamsudheen S/o Muhammed",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 606,
+      "percentage": 0.38,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Manzil Aboobacker",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 559,
+      "percentage": 0.35,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Shamsudheen S/o Ummer",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 335,
+      "percentage": 0.21,
       "is_winner": false,
       "is_leading": false
     }

@@ -9,19 +9,19 @@
     "status": "IN_PROGRESS",
     "total_electors": 173178,
     "votes_polled": 124086,
-    "votes_counted": 50939,
+    "votes_counted": 6367,
     "valid_votes": 127349,
-    "rounds_completed": 8,
+    "rounds_completed": 1,
     "total_rounds": 20,
-    "last_updated": "2026-04-30T12:05:21.318194+00:00"
+    "last_updated": "2026-05-01T02:02:29.188934+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. Jayakumar Theertham",
       "party": "CPIML Liberation",
       "alliance": "OTH",
-      "votes": 17460,
-      "percentage": 13.71,
+      "votes": 2042,
+      "percentage": 1.6,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Nobil M. D",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 16305,
-      "percentage": 12.8,
+      "votes": 1917,
+      "percentage": 1.51,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Adv. I. B. Satheesh",
       "party": "CPI(M)",
       "alliance": "LDF",
-      "votes": 7629,
-      "percentage": 5.99,
+      "votes": 949,
+      "percentage": 0.75,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "P. K. Krishnadas",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 7459,
-      "percentage": 5.86,
+      "votes": 895,
+      "percentage": 0.7,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "M. R. Baiju",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 3053,
-      "percentage": 2.4,
+      "votes": 421,
+      "percentage": 0.33,
       "is_winner": false,
       "is_leading": false
     }

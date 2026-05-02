@@ -5,32 +5,14 @@
     "name": "ERAVIPURAM",
     "district": "Kollam"
   },
-  "live_result": {
-    "status": "IN_PROGRESS",
-    "total_electors": 192096,
-    "votes_polled": 142896,
-    "votes_counted": 28916,
-    "valid_votes": 144582,
-    "rounds_completed": 4,
-    "total_rounds": 20,
-    "last_updated": "2026-04-30T12:14:35.328630+00:00"
-  },
+  "live_result": null,
   "candidates_2026": [
     {
-      "name": "Noushad A   S/o.Aliyaru Kunju",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 9902,
-      "percentage": 6.85,
-      "is_winner": false,
-      "is_leading": true
-    },
-    {
-      "name": "Firoz  S  R",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 8571,
-      "percentage": 5.93,
+      "name": "Saji D. Anand",
+      "party": "BDJS",
+      "alliance": "NDA",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +20,8 @@
       "name": "Adv. Vishnu Mohan",
       "party": "RSP",
       "alliance": "UDF",
-      "votes": 5209,
-      "percentage": 3.6,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,17 +29,26 @@
       "name": "M. Noushad",
       "party": "CPI(M)",
       "alliance": "LDF",
-      "votes": 3105,
-      "percentage": 2.15,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Saji D. Anand",
-      "party": "BDJS",
-      "alliance": "NDA",
-      "votes": 2372,
-      "percentage": 1.64,
+      "name": "Noushad A   S/o.Aliyaru Kunju",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Firoz  S  R",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     }

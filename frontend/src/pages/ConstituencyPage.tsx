@@ -9,6 +9,9 @@ import {
 } from '../hooks/useElectionData';
 import GlobalHeader from '../components/GlobalHeader';
 import { partyAbbr } from '../utils/partyAbbr';
+import {
+  LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Legend
+} from 'recharts';
 
 // ── Design tokens ─────────────────────────────────────────────
 const AC: Record<string, string> = {
@@ -111,16 +114,55 @@ export default function ConstituencyPage() {
   // Swing — must be before any early return (Rules of Hooks)
   const swingData = useMemo(() => {
     if (!historical?.la_2021 || candidates_2026_safe.length === 0) return null;
+    const has2011 = !!(historical.la_2011?.alliance_shares);
     const has2016 = !!(historical.la_2016?.alliance_shares);
     return (['LDF', 'UDF', 'NDA', 'OTH'] as const).map(al => {
       const v26raw = candidates_2026_safe.filter(cd => cd.alliance === al).reduce((s, cd) => s + cd.percentage, 0);
       const v21raw = historical.la_2021.alliance_shares?.[al] ?? 0;
       const v16raw = has2016 ? (historical.la_2016!.alliance_shares?.[al] ?? 0) : null;
+      const v11raw = has2011 ? (historical.la_2011!.alliance_shares?.[al] ?? 0) : null;
       const swing2126 = v26raw - v21raw;
       const swing1621 = v16raw !== null ? v21raw - v16raw : null;
-      return { alliance: al, v16: v16raw, v21: v21raw, v26: v26raw, swing2126, swing1621, has2016 };
+      return { alliance: al, v11: v11raw, v16: v16raw, v21: v21raw, v26: v26raw, swing2126, swing1621, has2016, has2011 };
     });
   }, [historical, candidates_2026_safe]);
+
+  // Chart data formatting
+  const chartData = useMemo(() => {
+    if (!swingData) return [];
+    
+    // 2026 only becomes part of the chart after counting is done 100%
+    const is2026Final = constituency?.live_result?.status === 'RESULT_DECLARED';
+    
+    // We want data in the format: { year: '2011', LDF: 45, UDF: 40, NDA: 5 }
+    const years = ['2011', '2016', '2021', '2026'];
+    const data = years.map(yr => {
+      // Skip 2026 entirely if not final
+      if (yr === '2026' && !is2026Final) return null;
+
+      const point: any = { year: yr };
+      let hasData = false;
+      
+      swingData.forEach(({ alliance, v11, v16, v21, v26 }) => {
+        // Remove 'OTH' from the trajectory chart
+        if (alliance === 'OTH') return;
+        
+        let val = null;
+        if (yr === '2011') val = v11;
+        if (yr === '2016') val = v16;
+        if (yr === '2021') val = v21;
+        if (yr === '2026') val = v26;
+        
+        if (val !== null) {
+          point[alliance] = val;
+          hasData = true;
+        }
+      });
+      return hasData ? point : null;
+    }).filter(Boolean);
+    
+    return data;
+  }, [swingData, constituency]);
 
   // ── Background prefetch ────────────────────────────────────────────────────
   // Prefetch next constituency immediately; then prefetch all others quietly.
@@ -221,10 +263,10 @@ export default function ConstituencyPage() {
       <GlobalHeader />
 
       {/* ── BODY ─────────────────────────────────────────────── */}
-      <div style={{ flex: 1, display: 'grid', gridTemplateColumns: '300px 1fr', minHeight: 0 }}>
+      <div className="flex-1 flex flex-col md:grid md:grid-cols-[300px_1fr] min-h-0">
 
         {/* ══ SIDEBAR ══════════════════════════════════════════ */}
-        <div style={{ background: '#FDFCFB', borderRight: '1px solid #E2DDD8', display: 'flex', flexDirection: 'column', overflow: 'hidden', position: 'sticky', top: 56, height: 'calc(100vh - 56px)' }}>
+        <div className="hidden md:flex flex-col bg-[#FDFCFB] border-r border-[#E2DDD8] overflow-hidden sticky top-[56px] h-[calc(100vh-56px)]">
 
           {/* Toolbar */}
           <div style={{ padding: '12px 14px', borderBottom: '1px solid #E2DDD8', flexShrink: 0 }}>
@@ -300,7 +342,7 @@ export default function ConstituencyPage() {
         <div style={{ overflowY: 'auto', background: '#F5F2EE' }}>
 
           {/* ── HERO ──────────────────────────────────────────── */}
-          <div style={{ background: leader ? (ABG[leader.alliance] || '#FDFCFB') : '#FDFCFB', borderBottom: `3px solid ${leader ? ac(leader.alliance) : '#E2DDD8'}`, padding: '24px 32px' }}>
+          <div className="px-4 md:px-8 py-5 md:py-6" style={{ background: leader ? (ABG[leader.alliance] || '#FDFCFB') : '#FDFCFB', borderBottom: `3px solid ${leader ? ac(leader.alliance) : '#E2DDD8'}` }}>
 
             {/* Inline prev / next nav */}
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
@@ -407,7 +449,7 @@ export default function ConstituencyPage() {
 
           {/* ── COUNTING STATS ────────────────────────────────── */}
           {live_result && (
-            <div style={{ background: '#FDFCFB', borderBottom: '1px solid #E2DDD8', padding: '13px 32px', display: 'flex', gap: 28, flexWrap: 'wrap' }}>
+            <div className="px-4 md:px-8 py-3 md:py-4" style={{ background: '#FDFCFB', borderBottom: '1px solid #E2DDD8', display: 'flex', gap: 28, flexWrap: 'wrap' }}>
               {([['Total Electors', live_result.total_electors], ['Votes Polled', live_result.votes_polled], ['Votes Counted', live_result.votes_counted], ['Valid Votes', live_result.valid_votes]] as [string, number][]).map(([label, value]) => (
                 <div key={label}>
                   <div style={{ fontSize: 10, fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#5C5245', marginBottom: 2 }}>{label}</div>
@@ -418,7 +460,7 @@ export default function ConstituencyPage() {
           )}
 
           {/* ── CANDIDATE RESULTS ─────────────────────────────── */}
-          <div style={{ padding: '22px 32px' }}>
+          <div className="px-4 md:px-8 py-5 md:py-6">
             <SectionTitle>Current Results</SectionTitle>
             {candidates_2026.length === 0 ? (
               <p style={{ color: '#5C5245', fontSize: 13 }}>No candidate data available yet</p>
@@ -468,161 +510,68 @@ export default function ConstituencyPage() {
           </div>
 
           {/* ── SWING ANALYSIS ────────────────────────────────── */}
-          {swingData && (
-            <div style={{ padding: '0 32px 22px' }}>
+          {swingData && chartData.length > 0 && (
+            <div className="px-4 md:px-8 pb-5 md:pb-6">
               <Divider />
-              <SectionTitle>Vote Share Swing — 2016 / 2021 / 2026</SectionTitle>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, alignItems: 'stretch' }}>
-
-                {/* LEFT: Table — fixed layout, tight columns */}
-                <div style={{ background: '#FDFCFB', border: '1px solid #E2DDD8', borderRadius: 10, overflow: 'hidden' }}>
-                  <table style={{ width: '100%', borderCollapse: 'collapse', tableLayout: 'fixed' }}>
-                    <colgroup>
-                      <col style={{ width: '28%' }} />
-                      <col style={{ width: '24%' }} />
-                      <col style={{ width: '24%' }} />
-                      <col style={{ width: '24%' }} />
-                    </colgroup>
-                    <thead>
-                      <tr style={{ borderBottom: '2px solid #E2DDD8', background: '#F5F2EE' }}>
-                        <th style={{ padding: '8px 12px', textAlign: 'left', fontSize: 10, fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#5C5245' }}>Alliance</th>
-                        <th style={{ padding: '8px 8px', textAlign: 'right', fontSize: 10, fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#5C5245' }}>2016</th>
-                        <th style={{ padding: '8px 8px', textAlign: 'right', fontSize: 10, fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#5C5245' }}>2021</th>
-                        <th style={{ padding: '8px 8px', textAlign: 'right', fontSize: 10, fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#5C5245', borderLeft: '1px solid #E2DDD8' }}>2026</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {swingData.map(({ alliance, v16, v21, v26, swing2126, swing1621, has2016: h16 }) => {
-                        const clr = ac(alliance);
-                        const isZero = v21 < 0.05 && v26 < 0.05 && (v16 === null || v16 < 0.05);
-                        if (isZero) return null;
-                        // Shared cell style for all 3 years — uniform look
-                        const numStyle: React.CSSProperties = {
-                          fontFamily: "'JetBrains Mono',monospace",
-                          fontSize: 18, fontWeight: 700,
-                          color: '#1A1611', letterSpacing: '-0.5px',
-                        };
-                        const pctStyle: React.CSSProperties = { fontSize: 11, fontWeight: 400 };
-                        return (
-                          <tr key={alliance} style={{ borderBottom: '1px solid #F5F2EE' }}>
-                            <td style={{ padding: '8px 12px' }}>
-                              <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                                <div style={{ width: 10, height: 10, borderRadius: 2, background: clr, flexShrink: 0 }} />
-                                <span style={{ fontWeight: 700, fontSize: 13, color: '#1A1611' }}>{alliance}</span>
-                              </div>
-                            </td>
-
-                            {/* 2016 — same style as 2021; placeholder chip always shown */}
-                            <td style={{ padding: '8px 8px', textAlign: 'right' }}>
-                              <div style={{ display: 'inline-flex', flexDirection: 'column', alignItems: 'flex-end', gap: 4 }}>
-                                {h16 && v16 !== null && v16 > 0.05
-                                  ? <span style={numStyle}>{v16.toFixed(1)}<span style={pctStyle}>%</span></span>
-                                  : <span style={{ color: '#D1D5DB', fontSize: 14 }}>—</span>
-                                }
-                                {/* Always show a placeholder to keep row height uniform */}
-                                <span style={{ display: 'inline-flex', alignItems: 'center', background: '#F3F4F6', color: '#D1D5DB', fontSize: 10, fontFamily: "'JetBrains Mono',monospace", padding: '2px 6px', borderRadius: 4, whiteSpace: 'nowrap' }}>
-                                  — base
-                                </span>
-                              </div>
-                            </td>
-
-                            {/* 2021 */}
-                            <td style={{ padding: '8px 8px', textAlign: 'right' }}>
-                              <div style={{ display: 'inline-flex', flexDirection: 'column', alignItems: 'flex-end', gap: 4 }}>
-                                {v21 > 0.05
-                                  ? <span style={numStyle}>{v21.toFixed(1)}<span style={pctStyle}>%</span></span>
-                                  : <span style={{ color: '#D1D5DB', fontSize: 14 }}>—</span>
-                                }
-                                {h16 && swing1621 !== null && Math.abs(swing1621) >= 0.1
-                                  ? <SwingChip value={swing1621} label="vs '16" />
-                                  : <span style={{ display: 'inline-flex', alignItems: 'center', background: '#F3F4F6', color: '#D1D5DB', fontSize: 10, fontFamily: "'JetBrains Mono',monospace", padding: '2px 6px', borderRadius: 4, whiteSpace: 'nowrap' }}>— no chg</span>
-                                }
-                              </div>
-                            </td>
-
-                            {/* 2026 — only revealed once 100% counted (RESULT_DECLARED) */}
-                            <td style={{ padding: '8px 8px', textAlign: 'right', borderLeft: '1px solid #E2DDD8' }}>
-                              <div style={{ display: 'inline-flex', flexDirection: 'column', alignItems: 'flex-end', gap: 4 }}>
-                                {is2026Final && v26 > 0.05
-                                  ? <span style={numStyle}>{v26.toFixed(1)}<span style={pctStyle}>%</span></span>
-                                  : <span style={{ color: '#D1D5DB', fontSize: 14 }}>—</span>
-                                }
-                                {is2026Final && Math.abs(swing2126) >= 0.1
-                                  ? <SwingChip value={swing2126} label="vs '21" />
-                                  : <span style={{ display: 'inline-flex', alignItems: 'center', background: '#F3F4F6', color: '#D1D5DB', fontSize: 10, fontFamily: "'JetBrains Mono',monospace", padding: '2px 6px', borderRadius: 4, whiteSpace: 'nowrap' }}>{is2026Final ? '— no chg' : '— pending'}</span>
-                                }
-                              </div>
-                            </td>
-                          </tr>
-                        );
-                      })}
-                    </tbody>
-                  </table>
-                </div>
-
-                {/* RIGHT: Vertical stacked columns — fills full height of table */}
-                <div style={{ background: '#FDFCFB', border: '1px solid #E2DDD8', borderRadius: 10, padding: '12px 10px 10px', overflow: 'hidden', display: 'flex', flexDirection: 'column', height: '100%', boxSizing: 'border-box' }}>
-                  <div style={{ display: 'flex', gap: 8, alignItems: 'stretch', flex: 1, minHeight: 0 }}>
-                    {(['2016', '2021', '2026'] as const).map(yr => {
-                      const has16 = swingData[0]?.has2016;
-                      if (yr === '2016' && !has16) return null;
-                      // 2026 bar: only show real data if fully declared; else show grey placeholder
-                      const showData = yr !== '2026' || is2026Final;
-                      const yData = showData
-                        ? swingData.map(({ alliance, v16, v21, v26 }) => ({
-                            alliance,
-                            value: yr === '2016' ? (v16 ?? 0) : yr === '2021' ? v21 : v26,
-                            color: ac(alliance),
-                          })).filter(d => d.value > 0.05)
-                        : [];
-                      const total = yData.reduce((s, d) => s + d.value, 0);
+              <SectionTitle>Vote Share Trajectory</SectionTitle>
+              <div style={{ background: '#FDFCFB', border: '1px solid #E2DDD8', borderRadius: 10, padding: '20px', height: 350 }}>
+                <ResponsiveContainer width="100%" height="100%">
+                  <LineChart data={chartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+                    <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#E2DDD8" />
+                    <XAxis 
+                      dataKey="year" 
+                      axisLine={false} 
+                      tickLine={false} 
+                      tick={{ fontSize: 12, fill: '#5C5245', fontWeight: 600 }} 
+                      dy={10}
+                    />
+                    <YAxis 
+                      axisLine={false} 
+                      tickLine={false} 
+                      tick={{ fontSize: 12, fill: '#9CA3AF' }} 
+                      tickFormatter={val => `${val}%`}
+                      domain={[
+                        (dataMin: number) => Math.max(0, Math.floor(dataMin / 5) * 5), 
+                        (dataMax: number) => Math.ceil(dataMax / 5) * 5
+                      ]}
+                    />
+                    <Tooltip 
+                      contentStyle={{ background: '#FDFCFB', border: '1px solid #E2DDD8', borderRadius: 8, boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }}
+                      itemStyle={{ fontSize: 13, fontWeight: 600 }}
+                      labelStyle={{ fontSize: 11, fontWeight: 700, color: '#9CA3AF', marginBottom: 4 }}
+                      formatter={(value: number) => [`${value.toFixed(1)}%`]}
+                    />
+                    <Legend 
+                      iconType="circle" 
+                      wrapperStyle={{ fontSize: 12, fontWeight: 600, color: '#5C5245' }}
+                    />
+                    {swingData.map(({ alliance, v11, v16, v21, v26 }) => {
+                      if (alliance === 'OTH') return null;
+                      // Only render lines for alliances that have some data > 1%
+                      if ((v11 ?? 0) < 1 && (v16 ?? 0) < 1 && (v21 ?? 0) < 1 && (v26 ?? 0) < 1) return null;
+                      
                       return (
-                        <div key={yr} style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
-                          {/* Label on top — same style as table column header */}
-                          <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase' as const, color: yr === '2026' ? '#1A1611' : '#9CA3AF', textAlign: 'center', marginBottom: 5 }}>
-                            {yr}{yr === '2026' && !is2026Final && <span style={{ fontSize: 7, color: '#D1D5DB', marginLeft: 2, textTransform: 'none' as const, letterSpacing: 0 }}>pending</span>}
-                          </div>
-                          {/* Stacked bar */}
-                          <div style={{ flex: 1, display: 'flex', flexDirection: 'column', borderRadius: 4, overflow: 'hidden' }}>
-                            {showData && yData.map(({ alliance, value, color }) => (
-                              <div
-                                key={alliance}
-                                style={{
-                                  height: `${(value / Math.max(total, 100)) * 100}%`,
-                                  background: color,
-                                  minHeight: value > 0.5 ? 2 : 0,
-                                  transition: 'height 0.6s ease',
-                                }}
-                                title={`${alliance} ${yr}: ${value.toFixed(1)}%`}
-                              />
-                            ))}
-                            {/* Grey remainder or full grey if pending */}
-                            {(!showData || total < 98) && (
-                              <div style={{ flex: 1, background: '#E2DDD8', opacity: showData ? 0.35 : 0.6 }} />
-                            )}
-                          </div>
-                        </div>
+                        <Line
+                          key={alliance}
+                          type="monotone"
+                          dataKey={alliance}
+                          stroke={ac(alliance)}
+                          strokeWidth={3}
+                          dot={{ r: 4, strokeWidth: 2, fill: '#FDFCFB' }}
+                          activeDot={{ r: 6, strokeWidth: 0, fill: ac(alliance) }}
+                          connectNulls
+                        />
                       );
                     })}
-                  </div>
-                  {/* Legend */}
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px 8px', marginTop: 8 }}>
-                    {swingData.filter(d => d.v21 > 0.05 || d.v26 > 0.05).map(({ alliance }) => (
-                      <div key={alliance} style={{ display: 'flex', alignItems: 'center', gap: 3 }}>
-                        <div style={{ width: 7, height: 7, borderRadius: 2, background: ac(alliance) }} />
-                        <span style={{ fontSize: 8, fontWeight: 700, color: ac(alliance) }}>{alliance}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
+                  </LineChart>
+                </ResponsiveContainer>
               </div>
             </div>
           )}
 
           {/* ── 2021 RESULTS ──────────────────────────────────── */}
           {!histLoading && historical?.la_2021 && (
-            <div style={{ padding: '0 32px 22px' }}>
+            <div className="px-4 md:px-8 pb-5 md:pb-6">
               <Divider />
               <SectionTitle>2021 Assembly Election</SectionTitle>
               <HistoricalCandidateTable
@@ -635,12 +584,25 @@ export default function ConstituencyPage() {
 
           {/* ── 2016 RESULTS ──────────────────────────────────── */}
           {!histLoading && historical?.la_2016 && (
-            <div style={{ padding: '0 32px 22px' }}>
+            <div className="px-4 md:px-8 pb-5 md:pb-6">
               <Divider />
               <SectionTitle>2016 Assembly Election</SectionTitle>
               <HistoricalCandidateTable
                 candidates={historical.la_2016.candidates}
                 margin={historical.la_2016.margin}
+                prevCandidates={historical.la_2011?.candidates ?? null}
+              />
+            </div>
+          )}
+
+          {/* ── 2011 RESULTS ──────────────────────────────────── */}
+          {!histLoading && historical?.la_2011 && (
+            <div className="px-4 md:px-8 pb-5 md:pb-6">
+              <Divider />
+              <SectionTitle>2011 Assembly Election</SectionTitle>
+              <HistoricalCandidateTable
+                candidates={historical.la_2011.candidates}
+                margin={historical.la_2011.margin}
                 prevCandidates={null}
               />
             </div>
@@ -648,7 +610,7 @@ export default function ConstituencyPage() {
 
           {/* ── PARLIAMENT CONTEXT (collapsible) ──────────────── */}
           {!histLoading && historical && (historical.ls_2024 || historical.ls_2019) && (
-            <div style={{ padding: '0 32px 24px' }}>
+            <div className="px-4 md:px-8 pb-6 md:pb-8">
               <button
                 onClick={() => setParliamentOpen(v => !v)}
                 style={{ background: '#FDFCFB', border: '1px solid #E2DDD8', borderRadius: 8, padding: '10px 16px', cursor: 'pointer', width: '100%', textAlign: 'left', fontFamily: "'DM Sans',sans-serif", fontSize: 12, fontWeight: 600, color: '#5C5245', letterSpacing: '1.5px', textTransform: 'uppercase', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}

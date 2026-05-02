@@ -9,37 +9,28 @@
     "status": "IN_PROGRESS",
     "total_electors": 176551,
     "votes_polled": 126941,
-    "votes_counted": 35766,
+    "votes_counted": 7153,
     "valid_votes": 128758,
-    "rounds_completed": 5,
+    "rounds_completed": 1,
     "total_rounds": 18,
-    "last_updated": "2026-04-30T12:09:43.312954+00:00"
+    "last_updated": "2026-05-01T02:06:51.184554+00:00"
   },
   "candidates_2026": [
     {
-      "name": "Noushadali",
+      "name": "Sakkeer S/o Muhammed",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 10883,
-      "percentage": 8.45,
+      "votes": 2253,
+      "percentage": 1.75,
       "is_winner": false,
       "is_leading": true
-    },
-    {
-      "name": "K. P. Noushad Ali",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 9458,
-      "percentage": 7.35,
-      "is_winner": false,
-      "is_leading": false
     },
     {
       "name": "Anvar Pazhanji",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 4570,
-      "percentage": 3.55,
+      "votes": 1796,
+      "percentage": 1.39,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,35 +38,8 @@
       "name": "Sageer M.K",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 2930,
-      "percentage": 2.28,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Sakkeer S/o Muhammed",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 2437,
-      "percentage": 1.89,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Sakkeer S/o Illyas",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 2324,
-      "percentage": 1.8,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "E. Maneesh",
-      "party": "BDJS",
-      "alliance": "NDA",
-      "votes": 1915,
-      "percentage": 1.49,
+      "votes": 895,
+      "percentage": 0.7,
       "is_winner": false,
       "is_leading": false
     },
@@ -83,8 +47,44 @@
       "name": "Adv. M. K. Sakeer",
       "party": "CPI(M)",
       "alliance": "LDF",
-      "votes": 1615,
-      "percentage": 1.25,
+      "votes": 570,
+      "percentage": 0.44,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sakkeer S/o Illyas",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 536,
+      "percentage": 0.42,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "E. Maneesh",
+      "party": "BDJS",
+      "alliance": "NDA",
+      "votes": 489,
+      "percentage": 0.38,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Noushadali",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 335,
+      "percentage": 0.26,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. P. Noushad Ali",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 296,
+      "percentage": 0.23,
       "is_winner": false,
       "is_leading": false
     }

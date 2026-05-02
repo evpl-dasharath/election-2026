@@ -5,32 +5,32 @@
     "name": "AMBALAPUZHA",
     "district": "Alappuzha"
   },
-  "live_result": {
-    "status": "IN_PROGRESS",
-    "total_electors": 209140,
-    "votes_polled": 136592,
-    "votes_counted": 46808,
-    "valid_votes": 140424,
-    "rounds_completed": 7,
-    "total_rounds": 21,
-    "last_updated": "2026-04-30T12:11:45.312598+00:00"
-  },
+  "live_result": null,
   "candidates_2026": [
+    {
+      "name": "G. Sudhakaran",
+      "party": "IND (INC)",
+      "alliance": "UDF",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
     {
       "name": "H. Salam",
       "party": "CPI(M)",
       "alliance": "LDF",
-      "votes": 19596,
-      "percentage": 13.95,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Arun Anirudhan",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 14281,
-      "percentage": 10.17,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,17 +38,8 @@
       "name": "Johnson Mathew",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 8523,
-      "percentage": 6.07,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "G. Sudhakaran",
-      "party": "IND (INC)",
-      "alliance": "UDF",
-      "votes": 6359,
-      "percentage": 4.53,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     }

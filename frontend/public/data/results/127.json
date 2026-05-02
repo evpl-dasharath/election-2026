@@ -9,46 +9,37 @@
     "status": "IN_PROGRESS",
     "total_electors": 166632,
     "votes_polled": 111361,
-    "votes_counted": 44105,
+    "votes_counted": 18902,
     "valid_votes": 113414,
-    "rounds_completed": 7,
+    "rounds_completed": 3,
     "total_rounds": 18,
-    "last_updated": "2026-04-30T12:01:25.312778+00:00"
+    "last_updated": "2026-05-01T01:58:33.185064+00:00"
   },
   "candidates_2026": [
+    {
+      "name": "Vinod Elakamon",
+      "party": "Anna DHRM",
+      "alliance": "OTH",
+      "votes": 5315,
+      "percentage": 4.69,
+      "is_winner": false,
+      "is_leading": true
+    },
     {
       "name": "Vivekanandan K",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 11627,
-      "percentage": 10.25,
+      "votes": 3999,
+      "percentage": 3.53,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Harikrishnan S G",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 10260,
-      "percentage": 9.05,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Adv. Smitha Sundaresan",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 4544,
-      "percentage": 4.01,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Vinod Elakamon",
-      "party": "Anna DHRM",
-      "alliance": "OTH",
-      "votes": 3757,
-      "percentage": 3.31,
+      "votes": 1895,
+      "percentage": 1.67,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +47,8 @@
       "name": "Raju S Kottarakonam",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 3635,
-      "percentage": 3.21,
+      "votes": 1688,
+      "percentage": 1.49,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +56,8 @@
       "name": "Varkala Kahar",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 2969,
-      "percentage": 2.62,
+      "votes": 1661,
+      "percentage": 1.46,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,17 +65,8 @@
       "name": "M. K. Kannan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 2893,
-      "percentage": 2.55,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "S\u00e4ju",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 2654,
-      "percentage": 2.34,
+      "votes": 1345,
+      "percentage": 1.19,
       "is_winner": false,
       "is_leading": false
     },
@@ -92,8 +74,26 @@
       "name": "Adv. V Joy",
       "party": "CPI(M)",
       "alliance": "LDF",
-      "votes": 2350,
-      "percentage": 2.07,
+      "votes": 1258,
+      "percentage": 1.11,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "S\u00e4ju",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 1107,
+      "percentage": 0.98,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Smitha Sundaresan",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 984,
+      "percentage": 0.87,
       "is_winner": false,
       "is_leading": false
     }

@@ -16,6 +16,7 @@ const JSON_BASE_PATH = '/data';
 let _summaryCache: StateSummary | null = null;
 let _constituenciesCache: ConstituencyListItem[] | null = null;
 let _partiesCache: Party[] | null = null;
+let _allHistoricalCache: unknown[] | null = null;
 const _constituencyDetailCache: Record<number, ConstituencyDetail> = {};
 const _historicalCache: Record<number, HistoricalComparison> = {};
 
@@ -28,6 +29,7 @@ export function clearElectionDataCache() {
   _summaryCache = null;
   _constituenciesCache = null;
   _partiesCache = null;
+  _allHistoricalCache = null;
   Object.keys(_constituencyDetailCache).forEach(k => delete _constituencyDetailCache[+k]);
   Object.keys(_historicalCache).forEach(k => delete _historicalCache[+k]);
   _refreshCallbacks.forEach(cb => cb());
@@ -287,4 +289,53 @@ export function useRefreshData() {
   const [refreshKey, setRefreshKey] = useState(0);
   const refresh = () => setRefreshKey(prev => prev + 1);
   return { refreshKey, refresh };
+}
+
+// ─── useAllHistorical ─────────────────────────────────────────────────────────
+// Returns all 140 constituencies with la_2011 / la_2016 / la_2021 winner summaries.
+// Backed by GET /api/history/all/ (Option A — single bulk request, cached).
+export function useAllHistorical() {
+  const [data, setData] = useState<unknown[]>(_allHistoricalCache ?? []);
+  const [loading, setLoading] = useState(_allHistoricalCache === null);
+  const [error, setError] = useState<string | null>(null);
+  const [trigger, setTrigger] = useState(0);
+
+  useEffect(() => {
+    const cb = () => setTrigger(t => t + 1);
+    _refreshCallbacks.add(cb);
+    return () => { _refreshCallbacks.delete(cb); };
+  }, []);
+
+  useEffect(() => {
+    if (_allHistoricalCache !== null) {
+      setData(_allHistoricalCache);
+      setLoading(false);
+      return;
+    }
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        let json: unknown[];
+        if (USE_API) {
+          const res = await fetch(`${API_BASE_URL}/history/all/`);
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          json = await res.json();
+        } else {
+          // Static fallback: expects /data/history_all.json
+          const res = await fetch(`${JSON_BASE_PATH}/history_all.json`);
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          json = await res.json();
+        }
+        _allHistoricalCache = json;
+        setData(json);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Failed to fetch historical data');
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, [trigger]);
+
+  return { data, loading, error };
 }

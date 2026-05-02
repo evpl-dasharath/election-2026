@@ -9,55 +9,37 @@
     "status": "IN_PROGRESS",
     "total_electors": 187460,
     "votes_polled": 135155,
-    "votes_counted": 47847,
+    "votes_counted": 5980,
     "valid_votes": 137562,
-    "rounds_completed": 8,
+    "rounds_completed": 1,
     "total_rounds": 23,
-    "last_updated": "2026-04-30T12:09:23.313212+00:00"
+    "last_updated": "2026-05-01T02:06:31.184373+00:00"
   },
   "candidates_2026": [
-    {
-      "name": "Sandeep Elatt",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 18800,
-      "percentage": 13.67,
-      "is_winner": false,
-      "is_leading": true
-    },
     {
       "name": "Musthafa P P",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 10201,
-      "percentage": 7.42,
+      "votes": 2331,
+      "percentage": 1.69,
       "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Ravi Kulangara",
-      "party": "TTP",
-      "alliance": "NDA",
-      "votes": 5250,
-      "percentage": 3.82,
-      "is_winner": false,
-      "is_leading": false
+      "is_leading": true
     },
     {
       "name": "V. P. P. Mustafa",
       "party": "CPI(M)",
       "alliance": "LDF",
-      "votes": 5152,
-      "percentage": 3.75,
+      "votes": 1295,
+      "percentage": 0.94,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Musthafa V P",
+      "name": "Sandeep Elatt",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 4540,
-      "percentage": 3.3,
+      "votes": 656,
+      "percentage": 0.48,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +47,26 @@
       "name": "Sandeep Varier",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 2683,
-      "percentage": 1.95,
+      "votes": 648,
+      "percentage": 0.47,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ravi Kulangara",
+      "party": "TTP",
+      "alliance": "NDA",
+      "votes": 583,
+      "percentage": 0.42,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Musthafa V P",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 328,
+      "percentage": 0.24,
       "is_winner": false,
       "is_leading": false
     }

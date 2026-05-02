@@ -97,6 +97,128 @@ LA_2021 = [
 
 
 # ---------------------------------------------------------------------------
+# 2006 Kerala Legislative Assembly election
+# Source: Wikipedia alliance declarations
+#
+# Key differences from later years:
+#   RSP      = LDF (4 seats, Kovoor Kunjumon). Switches to UDF from 2011 onward.
+#   KEC      = LDF  — Kerala Congress (Joseph), P. J. Joseph, 6 seats
+#   KCS      = LDF  — Kerala Congress (Secular), P. C. George, 1 seat
+#   KEC(B)   = UDF  — Kerala Congress (B), R. Balakrishna Pillai, 2 seats
+#              (Switches to LDF from 2016 onward)
+#   MUL      = UDF  — alias for IUML (Muslim League Kerala State Committee)
+#   CMPKSC   = UDF  — Communist Marxist Party (C. P. John faction)
+#   DIC      = UDF  — Democratic Indira Congress (Karunakaran)
+#   RSPK(B)  = UDF  — RSP (Baby John faction)
+#   INL      = LDF  — Indian National League (3 seats)
+#   C(S)     = LDF  — Congress (Secular), Kadannappalli Ramachandran
+#   NCP      = LDF  — Nationalist Congress Party (2 seats)
+#   JPSS     = UDF  — Janathipathiya Samrakshana Samithy, K. R. Gouri Amma
+# ---------------------------------------------------------------------------
+LA_2006 = [
+    # LDF -------------------------------------------------------------------
+    ('CPI(M)',   '',         'LDF', '#ED1E26'),   # 85 seats
+    ('CPI',      '',         'LDF', '#FF4444'),   # 24 seats
+    ('JD(S)',    '',         'LDF', '#006400'),   # 8 seats (Mathew T. Thomas)
+    ('KEC',      '',         'LDF', '#1E90FF'),   # Kerala Congress (Joseph) — P.J. Joseph, 6 seats
+    ('NCP',      '',         'LDF', '#00BFFF'),   # 2 seats
+    ('C(S)',     '',         'LDF', '#87CEEB'),   # Congress (Secular) — Kadannappalli, 1 seat
+    ('KCS',      '',         'LDF', '#7B68EE'),   # Kerala Congress (Secular) — P.C. George, 1 seat
+    ('INL',      '',         'LDF', '#2E8B57'),   # Indian National League, 3 seats
+    ('RSP',      '',         'LDF', '#FF6347'),   # Revolutionary Socialist Party — LDF in 2006 (4 seats)
+
+    # UDF -------------------------------------------------------------------
+    ('INC',      '',         'UDF', '#19AAED'),   # 77 seats
+    ('MUL',      'IUML',     'UDF', '#0F8A3C'),   # Muslim League Kerala State Committee = IUML, 21 seats
+    ('DIC',      '',         'UDF', '#9370DB'),   # Democratic Indira Congress (Karunakaran), 18 seats
+    ('KEC(M)',   '',         'UDF', '#3399FF'),   # Kerala Congress (Mani) — K.M. Mani, 11 seats
+    ('JPSS',     '',         'UDF', '#FF8C00'),   # Janathipathiya Samrakshana Samithy — K.R. Gouri Amma, 5 seats
+    ('CMPKSC',   '',         'UDF', '#6495ED'),   # Communist Marxist Party (C.P. John), 3 seats
+    ('KEC(B)',   '',         'UDF', '#A0522D'),   # Kerala Congress (B) — R. Balakrishna Pillai, 2 seats
+    ('RSPK(B)',  '',         'UDF', '#CD5C5C'),   # RSP (Baby John faction), 1 seat
+
+    # NDA -------------------------------------------------------------------
+    ('BJP',      '',         'NDA', '#FF9933'),   # 140 seats (contested alone)
+
+    # OTH -------------------------------------------------------------------
+    ('IND',      '',         'OTH', '#808080'),
+    ('BSP',      '',         'OTH', '#00008B'),
+    ('AIADMK',   '',         'OTH', '#D4AC0D'),
+    ('LJP',      '',         'OTH', '#808080'),   # Lok Jan Party
+    ('RJD',      '',         'OTH', '#336699'),   # Rashtriya Janata Dal
+    ('JD(U)',    '',         'OTH', '#808080'),   # Janata Dal (United) — no Kerala coalition 2006
+    ('SLAP',     '',         'OTH', '#808080'),
+    ('SWJP',     '',         'OTH', '#808080'),
+    ('UIPP',     '',         'OTH', '#808080'),
+]
+
+
+# ---------------------------------------------------------------------------
+# 2011 Kerala Legislative Assembly election
+# Source: Wikipedia alliance declarations
+#
+# Key differences from 2006:
+#   RSP      = UDF  — A. A. Aziz faction, 4 seats (switched from LDF)
+#   KRSP     = UDF  — RSP (Baby John faction), 1 seat (Shibu Baby John)
+#   CPM      = LDF  — CSV uses 'CPM' for CPI(M)
+#   SJD      = UDF  — Socialist Janata (Democratic), M. P. Veerendra Kumar, 6 seats
+#                      DIFFERENT party from JD(S) which is still LDF
+#   JD(S)    = LDF  — Janata Dal (Secular), Mathew T. Thomas, 5 seats
+#   KEC(B)   = UDF  — still R. Balakrishna Pillai (switches to LDF only in 2016)
+#   KC(AMG)  = LDF  — Kerala Congress (Anti-merger Group), 3 seats
+#   MUL      = UDF  — IUML alias
+#   KEC(M)   = UDF  — Kerala Congress (Mani), K. M. Mani, 15 seats (UDF in 2011)
+#   CMPKSC   = UDF  — C. P. John faction, 3 seats
+#   JPSS     = UDF  — K. R. Gouri Amma, 4 seats
+#   KEC(J)   = UDF  — Kerala Congress (Jacob), T. M. Jacob, 3 seats
+# ---------------------------------------------------------------------------
+LA_2011 = [
+    # LDF -------------------------------------------------------------------
+    ('CPI(M)',   '',         'LDF', '#ED1E26'),   # 93 seats
+    ('CPM',     'CPI(M)',   'LDF', '#ED1E26'),   # CSV alias for CPI(M)
+    ('CPI',      '',         'LDF', '#FF4444'),   # 27 seats
+    ('JD(S)',    '',         'LDF', '#006400'),   # Janata Dal (Secular) — Mathew T. Thomas, 5 seats
+    ('NCP',      '',         'LDF', '#00BFFF'),   # 4 seats
+    ('INL',      '',         'LDF', '#2E8B57'),   # Indian National League, 3 seats
+    ('KC(AMG)', '',          'LDF', '#8B6914'),   # Kerala Congress (Anti-merger Group), 3 seats
+    ('C(S)',     '',         'LDF', '#87CEEB'),   # Congress (Secular) — Kadannappalli, 1 seat
+    ('CON(S)',  'C(S)',      'LDF', '#87CEEB'),   # alias
+
+    # UDF -------------------------------------------------------------------
+    ('INC',      '',         'UDF', '#19AAED'),   # 82 seats
+    ('MUL',      'IUML',     'UDF', '#0F8A3C'),   # Muslim League Kerala State Committee = IUML, 24 seats
+    ('KEC(M)',   '',         'UDF', '#3399FF'),   # Kerala Congress (Mani) — K.M. Mani, 15 seats
+    ('SJD',      '',         'UDF', '#6B8E23'),   # Socialist Janata (Democratic) — M.P. Veerendra Kumar, 6 seats
+    ('JPSS',     '',         'UDF', '#FF8C00'),   # Janathipathiya Samrakshana Samithy — K.R. Gouri Amma, 4 seats
+    ('RSP',      '',         'UDF', '#FF6347'),   # Revolutionary Socialist Party (A.A. Aziz), 4 seats
+    ('CMPKSC',   '',         'UDF', '#6495ED'),   # Communist Marxist Party (C.P. John), 3 seats
+    ('KEC(J)',   '',         'UDF', '#5F9EA0'),   # Kerala Congress (Jacob) — T.M. Jacob, 3 seats
+    ('KC(J)',   'KEC(J)',    'UDF', '#5F9EA0'),   # alias
+    ('KEC(B)',   '',         'UDF', '#A0522D'),   # Kerala Congress (B) — R. Balakrishna Pillai, 2 seats
+    ('KRSP',     '',         'UDF', '#CD5C5C'),   # RSP (Baby John / Shibu Baby John), 1 seat
+
+    # NDA -------------------------------------------------------------------
+    ('BJP',      '',         'NDA', '#FF9933'),   # 139 seats
+    ('JD(U)',    '',         'NDA', '#FFA500'),   # 1 seat
+
+    # OTH -------------------------------------------------------------------
+    ('IND',      '',         'OTH', '#808080'),
+    ('BSP',      '',         'OTH', '#00008B'),
+    ('SDPI',     '',         'OTH', '#4B0082'),
+    ('SHS',      '',         'OTH', '#FF6600'),   # Shiv Sena (44 seats, no coalition)
+    ('SUCI',     '',         'OTH', '#B22222'),   # Socialist Unity Centre of India
+    ('AIADMK',   '',         'OTH', '#D4AC0D'),
+    ('PDP',      '',         'OTH', '#8B0000'),   # Peoples Democratic Party
+    ('CPI(ML)(L)', '',       'OTH', '#CC0000'),
+    ('LJP',      '',         'OTH', '#808080'),
+    ('SLAP',     '',         'OTH', '#808080'),
+    ('SWJP',     '',         'OTH', '#808080'),
+    ('KJ',       '',         'OTH', '#808080'),
+    ('DPSP',     '',         'OTH', '#808080'),
+]
+
+
+# ---------------------------------------------------------------------------
 # 2016 Kerala Legislative Assembly election
 # Source: Wikipedia / ECI alliance declarations + Detailed Results.xlsx
 # LUF (Left United Front: RMP, SUCI, MCPI-U) is NOT counted as an alliance — OTH
@@ -241,8 +363,10 @@ LA_2026 = [
 
 
 DATASETS = {
-    (2021, 'LA'): LA_2021,
+    (2006, 'LA'): LA_2006,
+    (2011, 'LA'): LA_2011,
     (2016, 'LA'): LA_2016,
+    (2021, 'LA'): LA_2021,
     (2026, 'LA'): LA_2026,
 }
 

@@ -9,46 +9,28 @@
     "status": "IN_PROGRESS",
     "total_electors": 223532,
     "votes_polled": 144092,
-    "votes_counted": 55946,
+    "votes_counted": 20980,
     "valid_votes": 146860,
-    "rounds_completed": 8,
+    "rounds_completed": 3,
     "total_rounds": 21,
-    "last_updated": "2026-04-30T12:01:53.312777+00:00"
+    "last_updated": "2026-05-01T01:59:01.184868+00:00"
   },
   "candidates_2026": [
-    {
-      "name": "Adv. Sumesh Achuthan",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 31462,
-      "percentage": 21.42,
-      "is_winner": false,
-      "is_leading": true
-    },
-    {
-      "name": "Pranesh Rajendran",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 12393,
-      "percentage": 8.44,
-      "is_winner": false,
-      "is_leading": false
-    },
     {
       "name": "Murugadas. P.  S/o Pazhaniappa Mudaliyaar",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 4167,
-      "percentage": 2.84,
+      "votes": 11901,
+      "percentage": 8.1,
       "is_winner": false,
-      "is_leading": false
+      "is_leading": true
     },
     {
       "name": "N S K Puram Sasikumar",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 4124,
-      "percentage": 2.81,
+      "votes": 4462,
+      "percentage": 3.04,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +38,8 @@
       "name": "Adv V. Murugadas",
       "party": "Indian Socialist Jan",
       "alliance": "LDF",
-      "votes": 2723,
-      "percentage": 1.85,
+      "votes": 1539,
+      "percentage": 1.05,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +47,26 @@
       "name": "Sumesh C",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 2393,
-      "percentage": 1.63,
+      "votes": 1409,
+      "percentage": 0.96,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Sumesh Achuthan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 1083,
+      "percentage": 0.74,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Pranesh Rajendran",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 889,
+      "percentage": 0.61,
       "is_winner": false,
       "is_leading": false
     }

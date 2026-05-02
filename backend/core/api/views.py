@@ -1,10 +1,11 @@
 from rest_framework import viewsets, status
 from rest_framework.decorators import action, api_view
 from rest_framework.response import Response
-from django.db.models import Sum, Count, Q
+from django.db.models import Sum, Count, Q, Prefetch
 from core.models import (
     District, Constituency, Party, Candidate, LiveResult,
     HistoricalResult2021, HistoricalResult2016, HistoricalResult2016Full,
+    HistoricalResult2011, ConstituencyMeta2021,
     ParliamentResult, PartyAllianceYear
 )
 from core.api.serializers import (
@@ -136,7 +137,8 @@ def historical_comparison(request, constituency_number):
         }
         shares_2016: dict = {'LDF': 0.0, 'UDF': 0.0, 'NDA': 0.0, 'OTH': 0.0}
         for r in constituency.results_2016_full.all():
-            al = alliance_map_2016.get(r.party_code, {}).get('alliance', 'OTH')
+            al = (CONSTITUENCY_2016_OVERRIDE.get(constituency.number, {}).get(r.party_code)
+                  or alliance_map_2016.get(r.party_code, {}).get('alliance', 'OTH'))
             bucket = al if al in shares_2016 else 'OTH'
             shares_2016[bucket] += float(r.vote_percentage)
 
@@ -184,6 +186,36 @@ def historical_comparison(request, constituency_number):
         bucket = al if al in shares_2021 else 'OTH'
         shares_2021[bucket] += float(r.vote_percentage)
 
+    # 2011 LA results
+    alliance_map_2011 = {
+        r.party_code: {'alliance': r.alliance, 'color_code': r.color_code}
+        for r in PartyAllianceYear.objects.filter(election_year=2011, election_type='LA')
+    }
+    results_2011 = list(constituency.results_2011.order_by('-total_votes'))
+    la_2011 = None
+    if results_2011:
+        shares_2011: dict = {'LDF': 0.0, 'UDF': 0.0, 'NDA': 0.0, 'OTH': 0.0}
+        for r in results_2011:
+            al = alliance_map_2011.get(r.party_code, {}).get('alliance', 'OTH')
+            bucket = al if al in shares_2011 else 'OTH'
+            shares_2011[bucket] += float(r.vote_percentage)
+        
+        la_2011 = {
+            'margin': results_2011[0].total_votes - results_2011[1].total_votes if len(results_2011) > 1 else None,
+            'alliance_shares': {k: round(v, 2) for k, v in shares_2011.items()},
+            'candidates': [
+                {
+                    'candidate': r.candidate_name,
+                    'party': r.party_code,
+                    'votes': r.total_votes,
+                    'percentage': float(r.vote_percentage),
+                    'is_winner': r.is_winner,
+                    'alliance': alliance_map_2011.get(r.party_code, {}).get('alliance', 'OTH'),
+                    'color_code': alliance_map_2011.get(r.party_code, {}).get('color_code', '#808080'),
+                } for r in results_2011 if r.party_code != 'NOTA'
+            ]
+        }
+
     return Response({
         'constituency': {
             'number': constituency.number,
@@ -208,6 +240,143 @@ def historical_comparison(request, constituency_number):
             ],
         },
         'la_2016': la_2016,
+        'la_2011': la_2011,
         'ls_2019': ParliamentResultSerializer(ls_2019).data if ls_2019 else None,
         'ls_2024': ParliamentResultSerializer(ls_2024).data if ls_2024 else None,
     })
+
+
+@api_view(['GET'])
+def history_all(request):
+    """
+    Bulk historical endpoint — returns all 140 constituencies with
+    la_2011, la_2016, la_2021 winner/margin/alliance summary.
+    GET /api/history/all/
+
+    Shape matches ConstituencyHistory in HistoryPage.tsx:
+      { constituency_number, constituency_name, district,
+        la_2011: { winner, winner_party, winner_alliance, margin } | null,
+        la_2016: { ... } | null,
+        la_2021: { ... } | null }
+    """
+    # ── Build alliance lookup maps once ──────────────────────────────────
+    def _alliance_map(year):
+        return {
+            r.party_code: r.alliance
+            for r in PartyAllianceYear.objects.filter(election_year=year, election_type='LA')
+        }
+
+    am2011 = _alliance_map(2011)
+    am2016 = _alliance_map(2016)
+    am2021 = _alliance_map(2021)
+
+    # ── Prefetch all historical data in bulk (3 queries total) ──────────
+    constituencies = (
+        Constituency.objects
+        .select_related('district', 'meta_2021')
+        .prefetch_related(
+            Prefetch('results_2011', queryset=HistoricalResult2011.objects.order_by('-total_votes')),
+            Prefetch('results_2016', queryset=HistoricalResult2016.objects.all()),
+            Prefetch('results_2021', queryset=HistoricalResult2021.objects.order_by('-total_votes')),
+            'parliament_results'
+        )
+        .order_by('number')
+    )
+
+    # 2016 override (Chavara factional CMP)
+    OVERRIDE_2016 = {
+        117: {'CMPKSC': 'LDF'},
+    }
+
+    def _winner_alliance(party_code, alliance_map, const_number=None, year_override=None):
+        if year_override and const_number in year_override:
+            overridden = year_override[const_number].get(party_code)
+            if overridden:
+                return overridden
+        return alliance_map.get(party_code, 'OTH')
+
+    results = []
+    for c in constituencies:
+        district_name = c.district.name
+
+        # ── 2011 ─────────────────────────────────────────────────────────
+        r11_list = list(c.results_2011.all())
+        la_2011 = None
+        if r11_list:
+            winner_r11 = next((r for r in r11_list if r.is_winner), r11_list[0])
+            margin_11 = (
+                r11_list[0].total_votes - r11_list[1].total_votes
+                if len(r11_list) > 1 else None
+            )
+            la_2011 = {
+                'winner': winner_r11.candidate_name,
+                'winner_party': winner_r11.party_code,
+                'winner_alliance': _winner_alliance(winner_r11.party_code, am2011),
+                'margin': margin_11,
+            }
+
+        # ── 2016 ─────────────────────────────────────────────────────────
+        r16 = list(c.results_2016.all())
+        la_2016 = None
+        if r16:
+            r = r16[0]
+            la_2016 = {
+                'winner': r.winner_candidate,
+                'winner_party': r.winner_party,
+                'winner_alliance': _winner_alliance(
+                    r.winner_party, am2016, c.number, OVERRIDE_2016
+                ) or r.winner_alliance,
+                'margin': r.margin,
+            }
+
+        # ── 2021 ─────────────────────────────────────────────────────────
+        meta21 = getattr(c, 'meta_2021', None)
+        r21_list = list(c.results_2021.all())
+        la_2021 = None
+        if meta21 and meta21.winner_name:
+            margin_21 = (
+                r21_list[0].total_votes - r21_list[1].total_votes
+                if len(r21_list) > 1 else meta21.margin
+            )
+            la_2021 = {
+                'winner': meta21.winner_name,
+                'winner_party': meta21.winner_party,
+                'winner_alliance': _winner_alliance(meta21.winner_party, am2021),
+                'margin': margin_21,
+            }
+
+        # ── LS 2019 / 2024 ───────────────────────────────────────────────
+        parliament_results = list(c.parliament_results.all())
+        ls_2019_obj = next((r for r in parliament_results if r.year == 2019), None)
+        ls_2024_obj = next((r for r in parliament_results if r.year == 2024), None)
+        
+        ls_2019 = None
+        if ls_2019_obj:
+            ls_2019 = {
+                'winner': '',
+                'winner_party': '',
+                'winner_alliance': ls_2019_obj.lead_alliance,
+                'margin': ls_2019_obj.margin,
+            }
+            
+        ls_2024 = None
+        if ls_2024_obj:
+            ls_2024 = {
+                'winner': '',
+                'winner_party': '',
+                'winner_alliance': ls_2024_obj.lead_alliance,
+                'margin': ls_2024_obj.margin,
+            }
+
+        results.append({
+            'constituency_number': c.number,
+            'constituency_name': c.name,
+            'district': district_name,
+            'la_2011': la_2011,
+            'la_2016': la_2016,
+            'la_2021': la_2021,
+            'ls_2019': ls_2019,
+            'ls_2024': ls_2024,
+        })
+
+    return Response(results)

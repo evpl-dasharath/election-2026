@@ -5,50 +5,32 @@
     "name": "KALAMASSERY",
     "district": "Ernakulam"
   },
-  "live_result": {
-    "status": "IN_PROGRESS",
-    "total_electors": 246870,
-    "votes_polled": 159943,
-    "votes_counted": 49598,
-    "valid_votes": 165327,
-    "rounds_completed": 6,
-    "total_rounds": 20,
-    "last_updated": "2026-04-30T12:13:05.312523+00:00"
-  },
+  "live_result": null,
   "candidates_2026": [
     {
-      "name": "P. Rajeev",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 15126,
-      "percentage": 9.15,
+      "name": "M. P. Binu",
+      "party": "BDJS",
+      "alliance": "NDA",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Adv. V. E. Abdul Gafoor",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 9922,
-      "percentage": 6.0,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Shamsu T.K",
-      "party": "AAP",
-      "alliance": "OTH",
-      "votes": 5573,
-      "percentage": 3.37,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "A Rajeena",
-      "party": "SUCI",
-      "alliance": "OTH",
-      "votes": 4812,
-      "percentage": 2.91,
+      "name": "P. Rajeev",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,17 +38,8 @@
       "name": "Rajeev S/o Vareed",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 4491,
-      "percentage": 2.72,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Ajmal K Mujeeb",
-      "party": "SDPI",
-      "alliance": "OTH",
-      "votes": 3841,
-      "percentage": 2.32,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,17 +47,35 @@
       "name": "Siyad V A",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 2660,
-      "percentage": 1.61,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "M. P. Binu",
-      "party": "BDJS",
-      "alliance": "NDA",
-      "votes": 2076,
-      "percentage": 1.26,
+      "name": "A Rajeena",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ajmal K Mujeeb",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Shamsu T.K",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     }

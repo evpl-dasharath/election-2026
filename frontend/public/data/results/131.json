@@ -9,19 +9,19 @@
     "status": "IN_PROGRESS",
     "total_electors": 228069,
     "votes_polled": 156179,
-    "votes_counted": 51085,
+    "votes_counted": 7297,
     "valid_votes": 160555,
-    "rounds_completed": 7,
+    "rounds_completed": 1,
     "total_rounds": 22,
-    "last_updated": "2026-04-30T12:08:58.325662+00:00"
+    "last_updated": "2026-05-01T02:06:06.195298+00:00"
   },
   "candidates_2026": [
     {
       "name": "Vipinlal V A",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 28023,
-      "percentage": 17.45,
+      "votes": 3878,
+      "percentage": 2.42,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "D. K. Murali",
       "party": "CPI(M)",
       "alliance": "LDF",
-      "votes": 8715,
-      "percentage": 5.43,
+      "votes": 1142,
+      "percentage": 0.71,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Muraleedharan G Nair",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 4617,
-      "percentage": 2.88,
+      "votes": 678,
+      "percentage": 0.42,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Venu Karanavar",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 4243,
-      "percentage": 2.64,
+      "votes": 630,
+      "percentage": 0.39,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Sudheer Sha Palode",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 4029,
-      "percentage": 2.51,
+      "votes": 550,
+      "percentage": 0.34,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Ratheesh R",
       "party": "Anna DHRM",
       "alliance": "OTH",
-      "votes": 2730,
-      "percentage": 1.7,
+      "votes": 394,
+      "percentage": 0.25,
       "is_winner": false,
       "is_leading": false
     }

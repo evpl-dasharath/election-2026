@@ -9,46 +9,28 @@
     "status": "IN_PROGRESS",
     "total_electors": 191385,
     "votes_polled": 119774,
-    "votes_counted": 37211,
+    "votes_counted": 6201,
     "valid_votes": 124038,
-    "rounds_completed": 6,
+    "rounds_completed": 1,
     "total_rounds": 20,
-    "last_updated": "2026-04-30T12:08:53.312812+00:00"
+    "last_updated": "2026-05-01T02:06:01.184901+00:00"
   },
   "candidates_2026": [
     {
-      "name": "C. Raghunath",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 16036,
-      "percentage": 12.93,
+      "name": "T.K. Mohanan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 2570,
+      "percentage": 2.07,
       "is_winner": false,
       "is_leading": true
     },
     {
-      "name": "Suresh Kumar",
-      "party": "BJKP",
-      "alliance": "OTH",
-      "votes": 8258,
-      "percentage": 6.66,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Adv. T. O. Mohanan",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 3776,
-      "percentage": 3.04,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Kadannappalli Ramachandran",
-      "party": "CONG(S)",
-      "alliance": "LDF",
-      "votes": 3514,
-      "percentage": 2.83,
+      "name": "C. Raghunath",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 1344,
+      "percentage": 1.08,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,17 +38,8 @@
       "name": "M.K. Shahazad",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 2785,
-      "percentage": 2.25,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "T.K. Mohanan",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 1571,
-      "percentage": 1.27,
+      "votes": 627,
+      "percentage": 0.51,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +47,35 @@
       "name": "Ramachandran Kuniyil",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 1492,
-      "percentage": 1.2,
+      "votes": 573,
+      "percentage": 0.46,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Kadannappalli Ramachandran",
+      "party": "CONG(S)",
+      "alliance": "LDF",
+      "votes": 413,
+      "percentage": 0.33,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Suresh Kumar",
+      "party": "BJKP",
+      "alliance": "OTH",
+      "votes": 275,
+      "percentage": 0.22,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. T. O. Mohanan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 264,
+      "percentage": 0.21,
       "is_winner": false,
       "is_leading": false
     }

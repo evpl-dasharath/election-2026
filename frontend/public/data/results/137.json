@@ -5,59 +5,14 @@
     "name": "PARASSALA",
     "district": "Thiruvananthapuram"
   },
-  "live_result": {
-    "status": "IN_PROGRESS",
-    "total_electors": 222793,
-    "votes_polled": 146295,
-    "votes_counted": 37315,
-    "valid_votes": 149261,
-    "rounds_completed": 5,
-    "total_rounds": 20,
-    "last_updated": "2026-04-30T12:12:07.325506+00:00"
-  },
+  "live_result": null,
   "candidates_2026": [
-    {
-      "name": "S Robinson E Nadar",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 9410,
-      "percentage": 6.3,
-      "is_winner": false,
-      "is_leading": true
-    },
-    {
-      "name": "Deepumon N",
-      "party": "AAP",
-      "alliance": "OTH",
-      "votes": 8907,
-      "percentage": 5.97,
-      "is_winner": false,
-      "is_leading": false
-    },
     {
       "name": "Adv. Gireesh Neyyar",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 4556,
-      "percentage": 3.05,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "C. K. Hareendran",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 3669,
-      "percentage": 2.46,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Adv. Dhanuvachapuram Thankachan",
-      "party": "BSP",
-      "alliance": "OTH",
-      "votes": 2714,
-      "percentage": 1.82,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +20,26 @@
       "name": "Neyyattinkara Sanal",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 2658,
-      "percentage": 1.78,
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "C. K. Hareendran",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "S Robinson E Nadar",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +47,26 @@
       "name": "Simiyon L P",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 2086,
-      "percentage": 1.4,
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Deepumon N",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Dhanuvachapuram Thankachan",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -83,8 +74,8 @@
       "name": "Shaju Paliyodu",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 2047,
-      "percentage": 1.37,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     }

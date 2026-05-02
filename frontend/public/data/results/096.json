@@ -5,41 +5,14 @@
     "name": "ETTUMANOOR",
     "district": "Kottayam"
   },
-  "live_result": {
-    "status": "IN_PROGRESS",
-    "total_electors": 184672,
-    "votes_polled": 124749,
-    "votes_counted": 33290,
-    "valid_votes": 126502,
-    "rounds_completed": 5,
-    "total_rounds": 19,
-    "last_updated": "2026-04-30T12:11:57.312773+00:00"
-  },
+  "live_result": null,
   "candidates_2026": [
-    {
-      "name": "Athira D. Nair",
-      "party": "TTP",
-      "alliance": "NDA",
-      "votes": 12957,
-      "percentage": 10.24,
-      "is_winner": false,
-      "is_leading": true
-    },
     {
       "name": "Binoy Joseph Kulathunkal",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 7066,
-      "percentage": 5.59,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Nattakam Suresh",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 5472,
-      "percentage": 4.33,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,17 +20,8 @@
       "name": "Raj Mohan Vettikulangara Unni",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 2480,
-      "percentage": 1.96,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "V. N. Vasavan",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 2280,
-      "percentage": 1.8,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +29,35 @@
       "name": "Ashna Thambi",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 2236,
-      "percentage": 1.77,
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "V. N. Vasavan",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Nattakam Suresh",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Athira D. Nair",
+      "party": "TTP",
+      "alliance": "NDA",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     }

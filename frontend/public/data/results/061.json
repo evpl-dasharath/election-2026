@@ -9,19 +9,19 @@
     "status": "IN_PROGRESS",
     "total_electors": 218529,
     "votes_polled": 151647,
-    "votes_counted": 65139,
+    "votes_counted": 6513,
     "valid_votes": 156335,
-    "rounds_completed": 10,
+    "rounds_completed": 1,
     "total_rounds": 24,
-    "last_updated": "2026-04-30T12:06:53.320406+00:00"
+    "last_updated": "2026-05-01T02:04:01.190047+00:00"
   },
   "candidates_2026": [
     {
       "name": "K. Balakrishnan",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 31655,
-      "percentage": 20.25,
+      "votes": 3137,
+      "percentage": 2.01,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Sivan Veettikkunnu",
       "party": "IND (IUML)",
       "alliance": "UDF",
-      "votes": 12864,
-      "percentage": 8.23,
+      "votes": 1314,
+      "percentage": 0.84,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "P. R. Vinod Kumar",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 7382,
-      "percentage": 4.72,
+      "votes": 773,
+      "percentage": 0.49,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "K V Subramaniyan",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 6257,
-      "percentage": 4.0,
+      "votes": 671,
+      "percentage": 0.43,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "U. R. Pradeep",
       "party": "CPI(M)",
       "alliance": "LDF",
-      "votes": 5823,
-      "percentage": 3.72,
+      "votes": 579,
+      "percentage": 0.37,
       "is_winner": false,
       "is_leading": false
     }

@@ -5,50 +5,14 @@
     "name": "VYPEN",
     "district": "Ernakulam"
   },
-  "live_result": {
-    "status": "IN_PROGRESS",
-    "total_electors": 194782,
-    "votes_polled": 121227,
-    "votes_counted": 28019,
-    "valid_votes": 126089,
-    "rounds_completed": 4,
-    "total_rounds": 18,
-    "last_updated": "2026-04-30T12:12:17.317726+00:00"
-  },
+  "live_result": null,
   "candidates_2026": [
     {
       "name": "Anitha Thomas",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 11742,
-      "percentage": 9.31,
-      "is_winner": false,
-      "is_leading": true
-    },
-    {
-      "name": "Sadasivan",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 6880,
-      "percentage": 5.46,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Mohandas PG",
-      "party": "AAP",
-      "alliance": "OTH",
-      "votes": 2917,
-      "percentage": 2.31,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Tony Chammany",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 2762,
-      "percentage": 2.19,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +20,35 @@
       "name": "Adv. M. B. Shyni",
       "party": "CPI(M)",
       "alliance": "LDF",
-      "votes": 2276,
-      "percentage": 1.81,
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Tony Chammany",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sadasivan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Mohandas PG",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +56,8 @@
       "name": "T. C. Subrahmanyan",
       "party": "CPIML Red Star",
       "alliance": "OTH",
-      "votes": 2131,
-      "percentage": 1.69,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     }

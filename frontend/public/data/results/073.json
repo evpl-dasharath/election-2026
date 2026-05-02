@@ -5,50 +5,14 @@
     "name": "KODUNGALLUR",
     "district": "Thrissur"
   },
-  "live_result": {
-    "status": "IN_PROGRESS",
-    "total_electors": 209941,
-    "votes_polled": 152677,
-    "votes_counted": 45295,
-    "valid_votes": 158534,
-    "rounds_completed": 6,
-    "total_rounds": 21,
-    "last_updated": "2026-04-30T12:11:50.312823+00:00"
-  },
+  "live_result": null,
   "candidates_2026": [
-    {
-      "name": "Nandagopan Vellathadi",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 24491,
-      "percentage": 15.45,
-      "is_winner": false,
-      "is_leading": true
-    },
-    {
-      "name": "Adv. O J Janeesh",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 6430,
-      "percentage": 4.06,
-      "is_winner": false,
-      "is_leading": false
-    },
     {
       "name": "Adv. V R Sunil Kumar",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 5351,
-      "percentage": 3.38,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Ravi A K",
-      "party": "BSP",
-      "alliance": "OTH",
-      "votes": 4032,
-      "percentage": 2.54,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +20,17 @@
       "name": "Dr. Varghese George",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 2838,
-      "percentage": 1.79,
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. O J Janeesh",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +38,26 @@
       "name": "Dr. K.M Francis Roy",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 2101,
-      "percentage": 1.33,
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Nandagopan Vellathadi",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ravi A K",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     }

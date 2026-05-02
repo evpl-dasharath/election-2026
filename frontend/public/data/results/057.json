@@ -9,19 +9,19 @@
     "status": "IN_PROGRESS",
     "total_electors": 214165,
     "votes_polled": 134861,
-    "votes_counted": 41607,
+    "votes_counted": 6934,
     "valid_votes": 138690,
-    "rounds_completed": 6,
+    "rounds_completed": 1,
     "total_rounds": 20,
-    "last_updated": "2026-04-30T12:07:21.312666+00:00"
+    "last_updated": "2026-05-01T02:04:29.185063+00:00"
   },
   "candidates_2026": [
     {
       "name": "K. C. Subramanian",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 19073,
-      "percentage": 13.75,
+      "votes": 3497,
+      "percentage": 2.52,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Narayanankutty  K T",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 9649,
-      "percentage": 6.96,
+      "votes": 1685,
+      "percentage": 1.21,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "P. P. Sumod",
       "party": "CPI(M)",
       "alliance": "LDF",
-      "votes": 5759,
-      "percentage": 4.15,
+      "votes": 1009,
+      "percentage": 0.73,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Suresh Babu",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 5424,
-      "percentage": 3.91,
+      "votes": 859,
+      "percentage": 0.62,
       "is_winner": false,
       "is_leading": false
     }

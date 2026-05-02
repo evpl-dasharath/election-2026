@@ -9,19 +9,19 @@
     "status": "IN_PROGRESS",
     "total_electors": 246662,
     "votes_polled": 184295,
-    "votes_counted": 61874,
+    "votes_counted": 7734,
     "valid_votes": 185624,
-    "rounds_completed": 8,
+    "rounds_completed": 1,
     "total_rounds": 24,
-    "last_updated": "2026-04-30T12:09:35.318764+00:00"
+    "last_updated": "2026-05-01T02:06:43.189602+00:00"
   },
   "candidates_2026": [
     {
       "name": "P. K. Sasi",
       "party": "IND (INC)",
       "alliance": "UDF",
-      "votes": 28878,
-      "percentage": 15.56,
+      "votes": 3420,
+      "percentage": 1.84,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,17 +29,8 @@
       "name": "Major Ravi",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 11946,
-      "percentage": 6.44,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Adv. K. Premkumar",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 6037,
-      "percentage": 3.25,
+      "votes": 1513,
+      "percentage": 0.82,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,17 +38,17 @@
       "name": "Muhammed Asharaf V.H",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 5946,
-      "percentage": 3.2,
+      "votes": 713,
+      "percentage": 0.38,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "K.P Rajeesh",
-      "party": "BSP",
-      "alliance": "OTH",
-      "votes": 5100,
-      "percentage": 2.75,
+      "name": "Adv. K. Premkumar",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 692,
+      "percentage": 0.37,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +56,17 @@
       "name": "Sasi P.K S/o Krishnankutty",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 4707,
-      "percentage": 2.54,
+      "votes": 661,
+      "percentage": 0.36,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K.P Rajeesh",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 637,
+      "percentage": 0.34,
       "is_winner": false,
       "is_leading": false
     }

@@ -9,19 +9,19 @@
     "status": "IN_PROGRESS",
     "total_electors": 228347,
     "votes_polled": 153650,
-    "votes_counted": 51928,
+    "votes_counted": 8654,
     "valid_votes": 155784,
-    "rounds_completed": 6,
+    "rounds_completed": 1,
     "total_rounds": 18,
-    "last_updated": "2026-04-30T12:05:22.312581+00:00"
+    "last_updated": "2026-05-01T02:02:30.184140+00:00"
   },
   "candidates_2026": [
     {
       "name": "Mohammed Shiyas",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 25742,
-      "percentage": 16.52,
+      "votes": 4149,
+      "percentage": 2.66,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Aneesh Mattancherry",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 13676,
-      "percentage": 8.78,
+      "votes": 2334,
+      "percentage": 1.5,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Ajeesh P.E",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 7102,
-      "percentage": 4.56,
+      "votes": 1186,
+      "percentage": 0.76,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Adv. Xavier Joolappan",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 3931,
-      "percentage": 2.52,
+      "votes": 641,
+      "percentage": 0.41,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "K. J. Maxi",
       "party": "CPI(M)",
       "alliance": "LDF",
-      "votes": 2212,
-      "percentage": 1.42,
+      "votes": 388,
+      "percentage": 0.25,
       "is_winner": false,
       "is_leading": false
     }

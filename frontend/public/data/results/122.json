@@ -9,46 +9,28 @@
     "status": "IN_PROGRESS",
     "total_electors": 176274,
     "votes_polled": 122125,
-    "votes_counted": 51382,
+    "votes_counted": 11418,
     "valid_votes": 125601,
-    "rounds_completed": 9,
+    "rounds_completed": 2,
     "total_rounds": 22,
-    "last_updated": "2026-04-30T12:04:34.325783+00:00"
+    "last_updated": "2026-05-01T02:01:42.189083+00:00"
   },
   "candidates_2026": [
     {
-      "name": "J. Chinchu Rani",
-      "party": "CPI",
-      "alliance": "LDF",
-      "votes": 23105,
-      "percentage": 18.4,
+      "name": "R. S. Arun Raj",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 5658,
+      "percentage": 4.5,
       "is_winner": false,
       "is_leading": true
-    },
-    {
-      "name": "M. M. Naseer",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 10175,
-      "percentage": 8.1,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "G. Jayan Moonlight Chithara",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 6345,
-      "percentage": 5.05,
-      "is_winner": false,
-      "is_leading": false
     },
     {
       "name": "Sharafath Mallam",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 4898,
-      "percentage": 3.9,
+      "votes": 2287,
+      "percentage": 1.82,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,17 +38,35 @@
       "name": "Aji Kadasseri",
       "party": "Anna DHRM",
       "alliance": "OTH",
-      "votes": 3272,
-      "percentage": 2.61,
+      "votes": 1444,
+      "percentage": 1.15,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "R. S. Arun Raj",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 2874,
-      "percentage": 2.29,
+      "name": "G. Jayan Moonlight Chithara",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 1043,
+      "percentage": 0.83,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "J. Chinchu Rani",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 736,
+      "percentage": 0.59,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "M. M. Naseer",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 712,
+      "percentage": 0.57,
       "is_winner": false,
       "is_leading": false
     }

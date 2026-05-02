@@ -5,68 +5,14 @@
     "name": "AZHIKODE",
     "district": "Kannur"
   },
-  "live_result": {
-    "status": "IN_PROGRESS",
-    "total_electors": 199117,
-    "votes_polled": 149242,
-    "votes_counted": 37724,
-    "valid_votes": 150897,
-    "rounds_completed": 6,
-    "total_rounds": 24,
-    "last_updated": "2026-04-30T12:13:39.312622+00:00"
-  },
+  "live_result": null,
   "candidates_2026": [
-    {
-      "name": "K. K. Vinod Kumar",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 10313,
-      "percentage": 6.83,
-      "is_winner": false,
-      "is_leading": true
-    },
     {
       "name": "Sumesh. T. P",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 6570,
-      "percentage": 4.35,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Sumesh Kumar. K",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 4455,
-      "percentage": 2.95,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Adv.  Kareem Cheleri",
-      "party": "IUML",
-      "alliance": "UDF",
-      "votes": 4401,
-      "percentage": 2.92,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "K. V. Sumesh",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 4099,
-      "percentage": 2.72,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Reshmi Ravi",
-      "party": "SUCI",
-      "alliance": "OTH",
-      "votes": 2548,
-      "percentage": 1.69,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +20,17 @@
       "name": "Kareem Chandroth",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 2168,
-      "percentage": 1.44,
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Reshmi Ravi",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -83,8 +38,44 @@
       "name": "Abdul Kareem. V. V",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 1958,
-      "percentage": 1.3,
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv.  Kareem Cheleri",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. V. Sumesh",
+      "party": "CPI(M)",
+      "alliance": "LDF",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sumesh Kumar. K",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. K. Vinod Kumar",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     }
