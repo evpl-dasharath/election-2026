@@ -61,10 +61,17 @@ function classifyForAlliance(
   const m16 = r16?.margin ?? 0;
   const m21 = r21?.margin ?? 0;
 
-  // Stronghold / Fragile: won all 3
+  // Stronghold / Fragile / Leaning: won all 3
   if (w11 && w16 && w21) {
     const tightCount = (m11 < TIGHT_MARGIN ? 1 : 0) + (m16 < TIGHT_MARGIN ? 1 : 0) + (m21 < TIGHT_MARGIN ? 1 : 0);
-    return tightCount >= 2 ? 'Fragile' : 'Stronghold';
+    if (tightCount >= 2) return 'Fragile';
+
+    const hugeCount = (m11 >= 15000 ? 1 : 0) + (m16 >= 15000 ? 1 : 0) + (m21 >= 15000 ? 1 : 0);
+    const noSmall = m11 >= 5000 && m16 >= 5000 && m21 >= 5000;
+    
+    if (hugeCount >= 2 && noSmall) return 'Stronghold';
+    
+    return 'Leaning';
   }
 
   // Leaning: won last 2 (✗✓✓)
@@ -338,9 +345,9 @@ export default function HistoryPage() {
           {/* ── Classification legend ── */}
           <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', marginBottom: 16 }}>
             {([
-              { cls: 'Stronghold', desc: 'Won all 3 (2011–21), all margins ≥2,000', al: 'LDF' },
-              { cls: 'Fragile', desc: 'Won all 3 but ≥1 win was tight (<2,000)', al: 'UDF' },
-              { cls: 'Leaning', desc: '✗✓✓ or ✓✗✓ with large bookend wins', al: 'UDF' },
+              { cls: 'Stronghold', desc: 'Won all 3 (2011–21), ≥15k margin twice, never <5k', al: 'LDF' },
+              { cls: 'Fragile', desc: 'Won all 3 but ≥2 wins were tight (<2,000)', al: 'UDF' },
+              { cls: 'Leaning', desc: 'Won all 3 (moderate margins), won last 2, or strong bounce-back', al: 'UDF' },
               { cls: 'Swing', desc: 'Seat changed hands — no clear owner across 3 elections', al: null },
             ] as const).map(({ cls, desc, al }) => (
               <div key={cls} style={{ display: 'flex', alignItems: 'center', gap: 6 }}>

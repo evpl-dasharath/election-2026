@@ -254,17 +254,6 @@ def scraper_run(request):
             "message": "Scraping all constituencies in background. Poll /api/scraper/status/ for progress.",
         })
 
-@api_view(["POST"])
-@permission_classes([AllowAny])
-def scraper_stop(request):
-    """
-    POST /api/scraper/stop/
-    Signals the background scrape thread to stop.
-    """
-    from django.core.cache import cache
-    cache.set("stop_scrape", True, 3600)
-    return Response({"status": "stopped", "message": "Scrape stopping..."})
-
     # Single AC
     try:
         ac_number = int(ac_param)
@@ -287,6 +276,18 @@ def scraper_stop(request):
         "status": "scraped",
         "scrape": _serialize_scrape(raw),
     })
+
+
+@api_view(["POST"])
+@permission_classes([AllowAny])
+def scraper_stop(request):
+    """
+    POST /api/scraper/stop/
+    Signals the background scrape thread to stop.
+    """
+    from django.core.cache import cache
+    cache.set("stop_scrape", True, 3600)
+    return Response({"status": "stopped", "message": "Scrape stopping..."})
 
 
 @api_view(["GET"])

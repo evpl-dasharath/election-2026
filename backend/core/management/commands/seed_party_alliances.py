@@ -23,7 +23,7 @@ from core.models import PartyAllianceYear
 LA_2021 = [
     # LDF -------------------------------------------------------------------
     ('CPI(M)',   '',        'LDF', '#ED1E26'),   # Communist Party of India (Marxist)
-    ('CPIM',    'CPI(M)',  'LDF', '#ED1E26'),   # CPI(M) without parens - CSV alias
+    ('CPIM',    '',        'OTH', '#808080'),   # NOT CPI(M) — obscure fringe party (Rajesh Appatt etc.)
     ('CPI',      '',        'LDF', '#FF4444'),   # Communist Party of India
     ('KEC(M)',   '',        'LDF', '#8B4513'),   # Kerala Congress (M) - Jose K. Mani faction
     ('KC(M)',   'KEC(M)',  'LDF', '#8B4513'),   # alias used in some CSVs
@@ -52,6 +52,7 @@ LA_2021 = [
     ('RMPI',     '',        'UDF', '#DC143C'),   # Revolutionary Marxist Party of India - N. Venu
     ('RMPOI',  'RMPI',    'UDF', '#DC143C'),   # typo/variant in 2021 CSV (e.g. K.K.REMA, Vadakara)
     ('RMP',    'RMPI',    'UDF', '#DC143C'),   # shorter alias
+    ('KDP',      '',        'UDF', '#4B9CD3'),   # Kerala Democratic Party (Elathur 2021 - Zulphikar Mayoori)
 
     # NDA -------------------------------------------------------------------
     ('BJP',      '',        'NDA', '#FF9933'),   # Bharatiya Janata Party - 113 seats
@@ -61,9 +62,15 @@ LA_2021 = [
     ('KKC',      '',        'NDA', '#CD853F'),   # Kerala Kanavu Congress (Vishnupuram Chandrasekharan) - 1 seat
     ('JRP',      '',        'NDA', '#B8860B'),   # Janadhipathya Rashtriya Party - C.K.Janu - 1 seat
 
+    ('NSC',      '',        'LDF', '#6B8E23'),   # National Secular Congress (V.Abdurahiman) - LDF ally (Tanur 2021)
+
     # OTH -------------------------------------------------------------------
     ('IND',      '',        'OTH', '#808080'),
-    ('SDPI',     '',        'OTH', '#4B0082'),
+    # Alliance-backed independents (pseudo-codes used for specific known IND candidates)
+    ('IND-LDF',  '',        'LDF', '#ED1E26'),   # LDF-backed independent
+    ('IND-UDF',  '',        'UDF', '#19AAED'),   # UDF-backed independent
+    ('IND-NDA',  '',        'NDA', '#FF9933'),   # NDA-backed independent
+    ('IND (CPI(M))', '', 'LDF', '#ED1E26'),      # IND with CPI(M) backing (e.g. Chavara 2021)
     ('WPI',      '',        'OTH', '#800080'),
     ('WPOI',   'WPI',     'OTH', '#800080'),   # WPI alias in 2021 CSV
     ('BSP',      '',        'OTH', '#00008B'),
@@ -86,7 +93,6 @@ LA_2021 = [
     ('KLJP',     '',        'OTH', '#808080'),
     ('MCPI',     '',        'OTH', '#808080'),
     ('NALAP',    '',        'OTH', '#808080'),
-    ('NSC',      '',        'OTH', '#808080'),
     ('NWLBRP',   '',        'OTH', '#808080'),
     ('RPI(A)',   '',        'OTH', '#808080'),
     ('SDC',      '',        'OTH', '#808080'),
@@ -190,7 +196,7 @@ LA_2011 = [
     ('KEC(M)',   '',         'UDF', '#3399FF'),   # Kerala Congress (Mani) — K.M. Mani, 15 seats
     ('SJD',      '',         'UDF', '#6B8E23'),   # Socialist Janata (Democratic) — M.P. Veerendra Kumar, 6 seats
     ('JPSS',     '',         'UDF', '#FF8C00'),   # Janathipathiya Samrakshana Samithy — K.R. Gouri Amma, 4 seats
-    ('RSP',      '',         'UDF', '#FF6347'),   # Revolutionary Socialist Party (A.A. Aziz), 4 seats
+    ('RSP',      '',         'LDF', '#FF6347'),   # Revolutionary Socialist Party — LDF until March 2014 (left LDF 2014, 4 seats)
     ('CMPKSC',   '',         'UDF', '#6495ED'),   # Communist Marxist Party (C.P. John), 3 seats
     ('KEC(J)',   '',         'UDF', '#5F9EA0'),   # Kerala Congress (Jacob) — T.M. Jacob, 3 seats
     ('KC(J)',   'KEC(J)',    'UDF', '#5F9EA0'),   # alias
@@ -203,6 +209,10 @@ LA_2011 = [
 
     # OTH -------------------------------------------------------------------
     ('IND',      '',         'OTH', '#808080'),
+    # Alliance-backed independents
+    ('IND-LDF',  '',         'LDF', '#ED1E26'),   # LDF-backed independent
+    ('IND-UDF',  '',         'UDF', '#19AAED'),   # UDF-backed independent
+    ('IND-NDA',  '',         'NDA', '#FF9933'),   # NDA-backed independent (e.g. CK Janu style, won't apply to 2011 but kept for consistency)
     ('BSP',      '',         'OTH', '#00008B'),
     ('SDPI',     '',         'OTH', '#4B0082'),
     ('SHS',      '',         'OTH', '#FF6600'),   # Shiv Sena (44 seats, no coalition)
@@ -227,7 +237,7 @@ LA_2016 = [
     # LDF -------------------------------------------------------------------
     ('CPI(M)',   '',        'LDF', '#ED1E26'),   # Communist Party of India (Marxist) - 90 seats
     ('CPM',    'CPI(M)',   'LDF', '#ED1E26'),   # ECI xlsx alias
-    ('CPIM',   'CPI(M)',   'LDF', '#ED1E26'),   # another xlsx alias
+    ('CPIM',   '',         'OTH', '#808080'),   # NOT CPI(M) — obscure fringe party in 2016
     ('CPI',      '',        'LDF', '#FF4444'),   # Communist Party of India - 25 seats
     ('JD(S)',    '',        'LDF', '#006400'),   # Janata Dal (Secular) - 5 seats (LDF in 2016)
     ('KEC(B)',   '',        'LDF', '#A0522D'),   # Kerala Congress (B) - R. Balakrishna Pillai - 1 seat
@@ -272,6 +282,11 @@ LA_2016 = [
 
     # OTH (includes LUF parties — LUF is NOT counted as a front, per policy) ------
     ('IND',      '',        'OTH', '#808080'),   # Independents
+    # Alliance-backed independents (pseudo-codes used for specific known IND candidates)
+    ('IND-LDF',  '',        'LDF', '#ED1E26'),   # LDF-backed independent
+    ('IND-UDF',  '',        'UDF', '#19AAED'),   # UDF-backed independent
+    ('IND-NDA',  '',        'NDA', '#FF9933'),   # NDA-backed independent
+    ('IND (CPI(M))', '', 'LDF', '#ED1E26'),      # IND with CPI(M) backing (e.g. Koduvally 2016)
     ('SDPI',     '',        'OTH', '#4B0082'),   # Social Democratic Party of India
     ('BSP',      '',        'OTH', '#00008B'),   # Bahujan Samaj Party
     ('PDP',      '',        'OTH', '#8B0000'),   # Peoples Democratic Party (Abdul Nasar Madani)

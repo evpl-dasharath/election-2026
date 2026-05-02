@@ -22,6 +22,18 @@ YEAR_MODEL_MAP = {
     2011: HistoricalResult2011,
 }
 
+# ---------------------------------------------------------------------------
+# Candidate-level party overrides
+# These are known alliance-backed independents where the party code 'IND'
+# would incorrectly classify them as OTH. Keyed by (year, constituency_no,
+# candidate_name_fragment). The value is the override party_code.
+# ---------------------------------------------------------------------------
+CANDIDATE_OVERRIDES: dict[tuple, str] = {
+    # 2011 — IND winners backed by LDF (no LDF candidate ran in those seats)
+    (2011, 30, 'RAHIM'):  'IND-LDF',   # ADV.P.T.A.RAHIM, Kunnamangalam
+    (2011, 47, 'JALEEL'): 'IND-LDF',   # DR.K.T. JALEEL, Thavanur
+}
+
 
 class Command(BaseCommand):
     help = 'Import 2006 or 2011 LA election results from a candidate-level CSV'
@@ -93,6 +105,14 @@ class Command(BaseCommand):
                 if party_code == 'NOTA':
                     skipped += 1
                     continue
+
+                # Apply candidate-level overrides for known alliance-backed independents
+                if party_code == 'IND':
+                    candidate_name = row.get('candidate_name', '').strip().upper()
+                    for (oy, ono, fragment), override in CANDIDATE_OVERRIDES.items():
+                        if oy == year and ono == const_no and fragment in candidate_name:
+                            party_code = override
+                            break
 
                 # --- numeric fields ---
                 def safe_int(val, default=0):
