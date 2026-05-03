@@ -380,3 +380,112 @@ def history_all(request):
         })
 
     return Response(results)
+
+@api_view(['GET'])
+def alliance_detail(request, alliance_code):
+    """
+    Get detailed breakdown for an alliance
+    GET /api/alliance/{alliance_code}/
+    """
+    if alliance_code not in ['LDF', 'UDF', 'NDA', 'OTH']:
+        return Response({'error': 'Invalid alliance code'}, status=404)
+
+    parties_in_alliance = PartyAllianceYear.objects.filter(
+        election_year=2026, election_type='LA', alliance=alliance_code
+    ).values_list('party_code', flat=True)
+
+    # 1. Total valid votes across the state (for vote share percentage)
+    total_valid_votes = Candidate.objects.aggregate(t=Sum('votes'))['t'] or 0
+
+    # 2. Total votes for the alliance
+    alliance_votes = Candidate.objects.filter(
+        party__code__in=parties_in_alliance
+    ).aggregate(t=Sum('votes'))['t'] or 0
+
+    vote_share = (alliance_votes / total_valid_votes * 100) if total_valid_votes > 0 else 0
+
+    # 3. Component parties breakdown
+    parties_data = []
+    alliance_candidates = Candidate.objects.filter(
+        party__code__in=parties_in_alliance
+    ).select_related('party')
+
+    # Group by party
+    party_stats = {}
+    for c in alliance_candidates:
+        pc = c.party.code
+        if pc not in party_stats:
+            party_stats[pc] = {
+                'code': pc,
+                'name': c.party.full_name,
+                'color': c.party.color_code,
+                'contested': 0,
+                'won': 0,
+                'leading': 0,
+                'votes': 0,
+            }
+        
+        party_stats[pc]['contested'] += 1
+        if c.is_winner:
+            party_stats[pc]['won'] += 1
+        elif c.is_leading:
+            party_stats[pc]['leading'] += 1
+        party_stats[pc]['votes'] += c.votes
+
+    for p in party_stats.values():
+        p['vote_share'] = (p['votes'] / total_valid_votes * 100) if total_valid_votes > 0 else 0
+        parties_data.append(p)
+
+    # Sort parties by seats won/leading, then votes
+    parties_data.sort(key=lambda x: (x['won'] + x['leading'], x['votes']), reverse=True)
+
+    total_won = sum(p['won'] for p in parties_data)
+    total_leading = sum(p['leading'] for p in parties_data)
+
+    return Response({
+        'alliance': alliance_code,
+        'seats_won': total_won,
+        'seats_leading': total_leading,
+        'total_votes': alliance_votes,
+        'vote_share': vote_share,
+        'parties': parties_data,
+    })
+
+
+@api_view(['GET'])
+def party_detail(request, party_code):
+    """
+    Get detailed breakdown for a specific party
+    GET /api/party/{party_code}/
+    """
+    try:
+        party = Party.objects.get(code=party_code)
+    except Party.DoesNotExist:
+        return Response({'error': 'Party not found'}, status=404)
+
+    total_valid_votes = Candidate.objects.aggregate(t=Sum('votes'))['t'] or 0
+
+    candidates = Candidate.objects.filter(party=party).select_related('constituency')
+    party_votes = candidates.aggregate(t=Sum('votes'))['t'] or 0
+    vote_share = (party_votes / total_valid_votes * 100) if total_valid_votes > 0 else 0
+
+    # Get alliance for the year 2026
+    pay = PartyAllianceYear.objects.filter(party_code=party_code, election_year=2026, election_type='LA').first()
+    alliance = pay.alliance if pay else party.alliance
+
+    # Seats breakdown
+    won = candidates.filter(is_winner=True).count()
+    leading = candidates.filter(is_leading=True).count()
+    contested = candidates.count()
+
+    return Response({
+        'code': party.code,
+        'full_name': party.full_name,
+        'alliance': alliance,
+        'color_code': party.color_code,
+        'seats_contested': contested,
+        'seats_won': won,
+        'seats_leading': leading,
+        'total_votes': party_votes,
+        'vote_share': vote_share,
+    })

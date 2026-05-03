@@ -4,6 +4,7 @@ from core.models import (
     HistoricalResult2021, ConstituencyMeta2021, ParliamentResult,
     PartyAllianceYear
 )
+from django.db import models
 
 # Pre-load alliance maps once at import time for O(1) lookups
 # These are refreshed on server restart; call _refresh_alliance_cache() after DB changes.
@@ -43,9 +44,20 @@ class DistrictSerializer(serializers.ModelSerializer):
 
 
 class PartySerializer(serializers.ModelSerializer):
+    seats_contested = serializers.SerializerMethodField()
+    seats_leading_or_won = serializers.SerializerMethodField()
+
     class Meta:
         model = Party
-        fields = ['code', 'full_name', 'alliance', 'color_code']
+        fields = ['code', 'full_name', 'alliance', 'color_code', 'seats_contested', 'seats_leading_or_won']
+
+    def get_seats_contested(self, obj):
+        return obj.candidates_2026.count()
+
+    def get_seats_leading_or_won(self, obj):
+        return obj.candidates_2026.filter(
+            models.Q(is_winner=True) | models.Q(is_leading=True)
+        ).count()
 
 
 class CandidateSerializer(serializers.ModelSerializer):

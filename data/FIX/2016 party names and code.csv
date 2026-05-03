@@ -1,0 +1,40 @@
+﻿Party Type,Party Name,Party Abbreviation
+N,Bharatiya Janata Party,BJP
+N,Bahujan Samaj Party,BSP
+N,Communist Party of India,CPI
+N,Communist Party of India  (Marxist),CPM
+N,Indian National Congress,INC
+N,Nationalist Congress Party,NCP
+O,All India Anna Dravida Munnetra Kazhagam,ADMK
+O,Janata Dal  (United),JD(U)
+O,Shivsena,SHS
+O,Samajwadi Party,SP
+S,Indian Union Muslim League,IUML
+S,Janata Dal  (Secular),JD(S)
+S,Kerala Congress  (M),KEC(M)
+S,Revolutionary Socialist Party,RSP
+U,Akhila Kerala Trinamool Party,AKTP
+U,Ambedkarite Party of India,APoI
+U,Bharath Dharma Jana Sena,BDJS
+U,Congress  (Secular),C(S)
+U,Communist Marxist Party Kerala State Committee,CMPKSC
+U,Communist Party of India  (Marxist-Leninist)  (Liberation),CPI(ML)(L)
+U,Communist Party of India (Marxist-Leninist) Red Star,CPIM
+U,Indian Gandhiyan Party,igp
+U,Indian National League,INL
+U,Kerala Congress Secular,KCS
+U,Kerala Congress (Skariah Thomas),KCST
+U,Kerala Congress,KEC
+U,Kerala Congress (B),KEC(B)
+U,Kerala Congress  (Jacob),KEC(J)
+U,Kerala Janatha Party,KLJP
+U,Marxist Communist Party of India (United),MCPI
+U,National Secular Conference,NSC
+U,Peoples Democratic Party,PDP
+U,Peoples Green Party,PpGP
+U,Socialistic Democratic Party,SDP
+U,SOCIAL DEMOCRATIC PARTY OF INDIA,SDPI
+U,SOCIALIST UNITY CENTRE OF INDIA (COMMUNIST),SUCI
+U,Welfare Party Of India,WPOI
+Z,Independent,IND
+Z1,None of the Above,NOTA

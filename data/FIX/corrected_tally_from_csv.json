@@ -1,0 +1,91 @@
+{
+  "2011": {
+    "UDF": {
+      "IUML": 23,
+      "INC": 81,
+      "KC_M": 15,
+      "SJD": 6,
+      "KC_J": 3,
+      "CMP": 2,
+      "JSS": 4,
+      "RSP_BJ": 1,
+      "RSP": 4,
+      "KC_B": 2,
+      "IND": 3
+    },
+    "LDF": {
+      "CPI_M": 84,
+      "INL": 2,
+      "CPI": 27,
+      "JD_S": 5,
+      "NCP": 4,
+      "KC_AMG": 2,
+      "IND": 16
+    },
+    "NDA": {
+      "BJP": 138,
+      "JD_U": 1,
+      "IND": 1
+    }
+  },
+  "2016": {
+    "UDF": {
+      "IUML": 23,
+      "INC": 87,
+      "KC_M": 15,
+      "JD_U": 7,
+      "CMP": 2,
+      "RSP": 5,
+      "KC_J": 1,
+      "IND": 1
+    },
+    "LDF": {
+      "CPI_M": 84,
+      "INL": 3,
+      "CPI": 25,
+      "CON_S": 1,
+      "JD_S": 5,
+      "NCP": 4,
+      "NSC": 2,
+      "KC_KST": 1,
+      "KC_B": 1,
+      "IND": 14
+    },
+    "NDA": {
+      "BJP": 98,
+      "BDJS": 36,
+      "IND": 6
+    }
+  },
+  "2021": {
+    "UDF": {
+      "IUML": 25,
+      "INC": 93,
+      "KEC": 10,
+      "RSP": 5,
+      "RMPI": 1,
+      "CMP": 1,
+      "KC_J": 1,
+      "IND": 4
+    },
+    "LDF": {
+      "CPI_M": 75,
+      "INL": 3,
+      "CPI": 23,
+      "KC_M": 12,
+      "CON_S": 1,
+      "NCP": 3,
+      "JD_S": 4,
+      "RJD": 2,
+      "KC_B": 1,
+      "JKC": 1,
+      "IND": 17
+    },
+    "NDA": {
+      "BJP": 115,
+      "BDJS": 21,
+      "AIADMK": 1,
+      "IND": 3
+    }
+  }
+}

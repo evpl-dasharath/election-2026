@@ -1,0 +1,43 @@
+party_id,full_name,also_known_as,alliance_2011,alliance_2016,alliance_2021,alliance_2026,notes
+INC,Indian National Congress,"Indian National Congress (Indira); Congress (I)",UDF,UDF,UDF,UDF,Core UDF party across all elections
+IUML,Indian Union Muslim League,Muslim League Kerala State Committee,UDF,UDF,UDF,UDF,Core UDF party across all elections
+KC_M,Kerala Congress (Mani),"KEC(M); KC(M)",UDF,UDF,LDF,LDF,Expelled from UDF after 2016; joined LDF under Jose K. Mani for 2021
+RSP,Revolutionary Socialist Party,RSP India; Shibu Baby John faction,UDF,UDF,UDF,UDF,Consistently in UDF
+RSP_BJ,Revolutionary Socialist Party (Baby John),,UDF,,,,Contested separately in 2011 under UDF; later merged into RSP mainstream
+KC_J,Kerala Congress (Jacob),"KEC(J); KC(J)",UDF,UDF,UDF,UDF,Consistently in UDF under Anoop Jacob
+KC_B,Kerala Congress (Balakrishna Pillai),"KC(B); KEC(B)",UDF,LDF,LDF,LDF,Was in UDF in 2011; switched to LDF by 2016. Led by K.B. Ganesh Kumar in 2026
+SJD,Socialist Janata (Democratic) Party,,UDF,,,,UDF in 2011 under M.P. Veerendra Kumar; JD(U) took its place in UDF for 2016
+JSS,Janathipathiya Samrakshana Samithy (Gouri/Rajan Babu faction),,UDF,LDF,,UDF,In UDF 2011; LDF 2016; absent 2021; Rajan Babu faction back in UDF 2026
+JSS_THAMARAKSHAN,Janathipathiya Samrakshana Samithy (Thamarakshan faction),,,,, NDA,Split faction; joined NDA January 2026
+CMP,Communist Marxist Party (C.P. John),,UDF,UDF,UDF,UDF,C.P. John faction consistently in UDF
+CMA,Communist Marxist Party (Aravindakshan),,,LDF,,,Aravindakshan faction in LDF 2016 only
+JD_U,Janata Dal (United),,NDA,UDF,,,In NDA 2011 (1 seat); switched to UDF 2016; absent by 2021
+JD_S,Janata Dal (Secular),JDS,LDF,LDF,LDF,,Kerala unit merged into ISJD in January 2026
+ISJD,Indian Socialist Janata Dal,,,,, LDF,Formed by merger of JD(S) Kerala unit in January 2026; led by Mathew T. Thomas
+CPI_M,Communist Party of India (Marxist),"CPI(M); CPIM",LDF,LDF,LDF,LDF,Lead party of LDF across all elections
+CPI,Communist Party of India,,LDF,LDF,LDF,LDF,Core LDF party across all elections
+NCP,Nationalist Congress Party,NCP (Sharadchandra Pawar),LDF,LDF,LDF,LDF,Consistently in LDF
+INL,Indian National League,,LDF,LDF,LDF,LDF,In LDF in 2011; LDF in 2016; formally back in LDF before 2021
+KC_AMG,Kerala Congress (Anti-merger Group),,LDF,,,,LDF in 2011 only
+CON_S,Congress (Secular),"C(S); Cong(S)",LDF,LDF,LDF,LDF,Led by Kadannappalli Ramachandran; consistently in LDF
+NSC,National Secular Conference,,,LDF,,,LDF in 2016 (Tanur and Tirur)
+RSP_L,Revolutionary Socialist Party (Leninist),,,LDF,,,LDF in 2016 only
+KC_KST,Kerala Congress (Skaria Thomas),,,LDF,,,LDF in 2016 only
+JKC,Janadhipathya Kerala Congress,,,LDF,LDF,LDF,Led by Francis George 2016; K.C. Joseph 2021/2026
+BJP,Bharatiya Janata Party,,NDA,NDA,NDA,NDA,Lead party of NDA across all elections
+BDJS,Bharath Dharma Jana Sena,,,NDA,NDA,NDA,Joined NDA in 2016 under Thushar Vellappally; stayed
+KC_T,Kerala Congress (Thomas),"KEC(T); KEC NDA",, NDA,,,P.C. Thomas led this party in NDA 2016; merged into KEC (P.J. Joseph) before 2021
+JRS,Janadhipathya Rashtriya Sabha,,,NDA,,, NDA,In NDA 2016 and 2026; C.K. Janu
+AIADMK,All India Anna Dravida Munnetra Kazhagam,,NONE,NONE,NDA,NDA,Contested independently in 2011/2016; formally joined NDA Kerala for 2021
+KKC,Kerala Kamaraj Congress,,,,NDA,NDA,Led by Vishnupuram Chandrasekharan
+DSJP,Democratic Social Justice Party,,,,NDA,,NDA gave support in Guruvayur 2021 as BJP nomination was rejected
+KEC,Kerala Congress,"Kerala Congress (P.J. Joseph faction)",,, UDF,UDF,Formed by P.J. Joseph faction after KC(M) left UDF; P.C. Thomas's faction merged in
+NCK,Nationalist Congress Kerala,,,,UDF,,Formed by Mani C. Kappan after NCP expulsion; 2 seats in UDF 2021; became KDP
+KDP,Kerala Democratic Party,,,,, UDF,Successor to NCK; led by Mani C. Kappan
+RMPI,Revolutionary Marxist Party of India,,,UDF,UDF,UDF,Led by N. Venu; won Vadakara in 2021
+RJD,Rashtriya Janata Dal,Loktantrik Janata Dal (Kerala),,,LDF,LDF,Led by M.V. Shreyams Kumar; joined LDF before 2021
+AITC,All India Trinamool Congress,"Trinamool Congress; TMC",,,,UDF,P.V. Anvar (former LDF Independent) joined TMC; in UDF 2026
+AIFB,All India Forward Bloc,,,,, UDF,Led by Manoj Mathew; joined UDF for 2026
+AAP,Aam Aadmi Party,,,,, NONE,Contesting all 140 seats independently in 2026
+TTP,Twenty20 Party / Twenty20 Kizhakkambalam,,,, NONE,NDA,Independent 2021; joined NDA 2026
+KJP_S,Kerala Janapaksham (Secular),,,,NONE,,P.C. George; independent 2021 (Poonjar); no alliance affiliation

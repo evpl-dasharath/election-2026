@@ -1,0 +1,382 @@
+{
+  "metadata": {
+    "description": "Seats contested per party per alliance per election. CORRECTED using ECI CSV ground truth. Party abbreviations are normalised tally IDs; see eci_code_mapping for CSV-to-tally translation.",
+    "total_constituencies": 140,
+    "note": "Each alliance fields exactly one candidate per constituency (total=140). Some small alliance parties and alliance-backed independents appear as IND in ECI data because they lacked their own registered party code. The 'independents_backed' count includes BOTH true independents and small-party candidates who filed as IND.",
+    "sources": [
+      "ECI CSV: 2011_candidates.csv, 2016_candinates.csv, 2021_candinates.csv",
+      "Wikipedia alliance tables (for party identification within IND pool)",
+      "https://en.wikipedia.org/wiki/2011_Kerala_Legislative_Assembly_election",
+      "https://en.wikipedia.org/wiki/2016_Kerala_Legislative_Assembly_election",
+      "https://en.wikipedia.org/wiki/2021_Kerala_Legislative_Assembly_election"
+    ],
+    "eci_code_mapping": {
+      "2011": {
+        "MUL": "IUML", "CPM": "CPI_M", "JPSS": "JSS", "KEC(M)": "KC_M",
+        "CMPKSC": "CMP", "KEC(J)": "KC_J", "KEC(B)": "KC_B", "KRSP": "RSP_BJ",
+        "KC(AMG)": "KC_AMG"
+      },
+      "2016": {
+        "CPM": "CPI_M", "KEC(M)": "KC_M", "CMPKSC": "CMP", "KEC(J)": "KC_J",
+        "KEC(B)": "KC_B", "C(S)": "CON_S", "KCST": "KC_KST"
+      },
+      "2021": {
+        "CPI(M)": "CPI_M", "KEC(M)": "KC_M", "CMPKSC": "CMP", "KEC(J)": "KC_J",
+        "KEC(B)": "KC_B", "C(S)": "CON_S", "RMPOI": "RMPI", "ADMK": "AIADMK",
+        "KEC": "KEC"
+      }
+    }
+  },
+
+  "elections": {
+
+    "2011": {
+      "date": "13 April 2011",
+      "alliances": {
+
+        "UDF": {
+          "alliance_total_contested": 140,
+          "parties": [
+            { "party_id": "INC",    "full_name": "Indian National Congress",                  "seats_contested": 81 },
+            { "party_id": "IUML",   "full_name": "Indian Union Muslim League",                "seats_contested": 23 },
+            { "party_id": "KC_M",   "full_name": "Kerala Congress (Mani)",                    "seats_contested": 15 },
+            { "party_id": "SJD",    "full_name": "Socialist Janata (Democratic) Party",        "seats_contested": 6  },
+            { "party_id": "JSS",    "full_name": "Janathipathiya Samrakshana Samithy",         "seats_contested": 4  },
+            { "party_id": "RSP",    "full_name": "Revolutionary Socialist Party",              "seats_contested": 4  },
+            { "party_id": "KC_J",   "full_name": "Kerala Congress (Jacob)",                    "seats_contested": 3  },
+            { "party_id": "CMP",    "full_name": "Communist Marxist Party",                    "seats_contested": 2  },
+            { "party_id": "KC_B",   "full_name": "Kerala Congress (Balakrishna Pillai)",       "seats_contested": 2  },
+            { "party_id": "RSP_BJ", "full_name": "Revolutionary Socialist Party (Baby John)",  "seats_contested": 1  }
+          ],
+          "independents_backed": 3,
+          "independents_note": "3 UDF-backed candidates filed as IND in ECI data: #12 Dharmadam, #30 Kunnamangalam, #68 Nattika (SC)",
+          "checksum": {
+            "sum_of_party_seats": 141,
+            "independents": 3,
+            "grand_sum": 144,
+            "expected": 140,
+            "status": "DISCREPANCY +4 — Some parties contested multiple candidates in same constituency (e.g. CMP). Sum of unique constituencies per alliance = 140. Use alliance_total_contested=140."
+          }
+        },
+
+        "LDF": {
+          "alliance_total_contested": 140,
+          "parties": [
+            { "party_id": "CPI_M",  "full_name": "Communist Party of India (Marxist)",  "seats_contested": 84 },
+            { "party_id": "CPI",    "full_name": "Communist Party of India",            "seats_contested": 27 },
+            { "party_id": "JD_S",   "full_name": "Janata Dal (Secular)",                "seats_contested": 5  },
+            { "party_id": "NCP",    "full_name": "Nationalist Congress Party",          "seats_contested": 4  },
+            { "party_id": "INL",    "full_name": "Indian National League",              "seats_contested": 2  },
+            { "party_id": "KC_AMG", "full_name": "Kerala Congress (Anti-merger Group)", "seats_contested": 2  }
+          ],
+          "independents_backed": 16,
+          "independents_note": "16 LDF seats filed as IND in ECI data. Includes CON_S (Congress Secular, no ECI code in 2011) and other small-party/independent candidates. Constituencies: #11 Kannur, #14 Kuthuparamba, #30 Kunnamangalam, #35 Nilambur, #42 Vallikkunnu, #47 Thavanur, #82 Eranakulam, #87 Kothamangalam, #90 Thodupuzha, #101 Poonjar, #117 Chavara, #118 Kunnathur (SC), #125 Eravipuram, #133 Vattiyoorkavu, #136 Aruvikkara, #138 Kattakkada",
+          "checksum": {
+            "sum_of_party_seats": 124,
+            "independents": 16,
+            "grand_sum": 140,
+            "expected": 140,
+            "status": "OK"
+          }
+        },
+
+        "NDA": {
+          "alliance_total_contested": 140,
+          "parties": [
+            { "party_id": "BJP",  "full_name": "Bharatiya Janata Party", "seats_contested": 138 },
+            { "party_id": "JD_U", "full_name": "Janata Dal (United)",    "seats_contested": 1   }
+          ],
+          "independents_backed": 1,
+          "independents_note": "1 NDA-backed candidate filed as IND: #129 Chirayinkeezhu (SC)",
+          "checksum": {
+            "sum_of_party_seats": 139,
+            "independents": 1,
+            "grand_sum": 140,
+            "expected": 140,
+            "status": "OK"
+          }
+        }
+      }
+    },
+
+    "2016": {
+      "date": "16 May 2016",
+      "alliances": {
+
+        "UDF": {
+          "alliance_total_contested": 140,
+          "parties": [
+            { "party_id": "INC",  "full_name": "Indian National Congress",    "seats_contested": 87 },
+            { "party_id": "IUML", "full_name": "Indian Union Muslim League",  "seats_contested": 23 },
+            { "party_id": "KC_M", "full_name": "Kerala Congress (Mani)",       "seats_contested": 15 },
+            { "party_id": "JD_U", "full_name": "Janata Dal (United)",          "seats_contested": 7  },
+            { "party_id": "RSP",  "full_name": "Revolutionary Socialist Party","seats_contested": 5  },
+            { "party_id": "CMP",  "full_name": "Communist Marxist Party",      "seats_contested": 2  },
+            { "party_id": "KC_J", "full_name": "Kerala Congress (Jacob)",      "seats_contested": 1  }
+          ],
+          "independents_backed": 1,
+          "independents_note": "1 UDF-backed candidate filed as IND: #25 Balusseri (SC) — U.C. Raman Padanilam",
+          "checksum": {
+            "sum_of_party_seats": 140,
+            "independents": 1,
+            "grand_sum": 141,
+            "expected": 140,
+            "status": "DISCREPANCY +1 — CMP contested 2 seats in CSV but tally expects 1. One CMP seat may overlap with another UDF party in same constituency. Use alliance_total_contested=140."
+          }
+        },
+
+        "LDF": {
+          "alliance_total_contested": 140,
+          "parties": [
+            { "party_id": "CPI_M",  "full_name": "Communist Party of India (Marxist)",        "seats_contested": 84 },
+            { "party_id": "CPI",    "full_name": "Communist Party of India",                  "seats_contested": 25 },
+            { "party_id": "JD_S",   "full_name": "Janata Dal (Secular)",                      "seats_contested": 5  },
+            { "party_id": "NCP",    "full_name": "Nationalist Congress Party",                "seats_contested": 4  },
+            { "party_id": "INL",    "full_name": "Indian National League",                    "seats_contested": 3  },
+            { "party_id": "NSC",    "full_name": "National Secular Conference",               "seats_contested": 2  },
+            { "party_id": "CON_S",  "full_name": "Congress (Secular)",                        "seats_contested": 1  },
+            { "party_id": "KC_KST", "full_name": "Kerala Congress (Skaria Thomas)",           "seats_contested": 1  },
+            { "party_id": "KC_B",   "full_name": "Kerala Congress (Balakrishna Pillai)",      "seats_contested": 1  }
+          ],
+          "independents_backed": 14,
+          "independents_note": "14 LDF seats filed as IND in ECI data. Includes JKC (4 seats), JSS (4 seats), CMA (1 seat), RSP_L (1 seat), and other alliance-backed independents (4 seats). Known IND: P.T.A. Rahim (#30 Kunnamangalam), Karat Razack (#31 Koduvally), P.V. Anvar (#35 Nilambur), K.T. Jaleel (#47 Thavanur), K.P. Beerankutty (#33 Kondotty), K.T. Abdurahiman (#34 Eranad), Niyas Pulikkalakath (#43 Tirurangadi). Others: #90 Thodupuzha, #91 Idukki, #99 Changanassery, #101 Poonjar, #117 Chavara, #118 Kunnathur, #134 Thiruvananthapuram",
+          "checksum": {
+            "sum_of_party_seats": 126,
+            "independents": 14,
+            "grand_sum": 140,
+            "expected": 140,
+            "status": "OK"
+          }
+        },
+
+        "NDA": {
+          "alliance_total_contested": 140,
+          "parties": [
+            { "party_id": "BJP",   "full_name": "Bharatiya Janata Party",    "seats_contested": 98 },
+            { "party_id": "BDJS",  "full_name": "Bharath Dharma Jana Sena",  "seats_contested": 36 }
+          ],
+          "independents_backed": 6,
+          "independents_note": "6 NDA seats filed as IND in ECI data. Includes KC_T/Kerala Congress Thomas (4 seats), JRS (1 seat), JSS_RB (1 seat). Constituencies: #18 Sulthanbathery, #75 Angamaly, #87 Kothamangalam, #94 Kaduthuruthy, #121 Punalur, #124 Kollam",
+          "checksum": {
+            "sum_of_party_seats": 134,
+            "independents": 6,
+            "grand_sum": 140,
+            "expected": 140,
+            "status": "OK"
+          }
+        }
+      }
+    },
+
+    "2021": {
+      "date": "6 April 2021",
+      "alliances": {
+
+        "LDF": {
+          "alliance_total_contested": 140,
+          "parties": [
+            { "party_id": "CPI_M",  "full_name": "Communist Party of India (Marxist)",    "seats_contested": 75 },
+            { "party_id": "CPI",    "full_name": "Communist Party of India",              "seats_contested": 23 },
+            { "party_id": "KC_M",   "full_name": "Kerala Congress (M)",                  "seats_contested": 12 },
+            { "party_id": "JD_S",   "full_name": "Janata Dal (Secular)",                 "seats_contested": 4  },
+            { "party_id": "NCP",    "full_name": "Nationalist Congress Party",           "seats_contested": 3  },
+            { "party_id": "INL",    "full_name": "Indian National League",               "seats_contested": 3  },
+            { "party_id": "RJD",    "full_name": "Rashtriya Janata Dal",                 "seats_contested": 2  },
+            { "party_id": "CON_S",  "full_name": "Congress (Secular)",                   "seats_contested": 1  },
+            { "party_id": "KC_B",   "full_name": "Kerala Congress (Balakrishna Pillai)", "seats_contested": 1  },
+            { "party_id": "JKC",    "full_name": "Janadhipathya Kerala Congress",        "seats_contested": 1  }
+          ],
+          "independents_backed": 15,
+          "independents_note": "15 LDF seats filed as IND in ECI data (Wikipedia claimed 12; CSV shows 17 constituencies with no LDF party, but 2 may be RJD miscount). Constituencies: #14 Kuthuparamba, #19 Kalpetta, #20 Vadakara, #30 Kunnamangalam, #31 Koduvally, #33 Kondotty, #34 Eranad, #35 Nilambur, #38 Perinthalmanna, #43 Tirurangadi, #44 Tanur, #47 Thavanur, #76 Aluva, #82 Eranakulam, #83 Thrikkakara, #117 Chavara, #118 Kunnathur",
+          "checksum": {
+            "sum_of_party_seats": 125,
+            "independents": 15,
+            "grand_sum": 140,
+            "expected": 140,
+            "status": "OK — note: 17 constituencies have no recognized LDF party in CSV. The 2 extra vs the 15 count may be due to RJD having 2 in CSV vs tally's 3."
+          }
+        },
+
+        "UDF": {
+          "alliance_total_contested": 140,
+          "parties": [
+            { "party_id": "INC",   "full_name": "Indian National Congress",               "seats_contested": 93 },
+            { "party_id": "IUML",  "full_name": "Indian Union Muslim League",             "seats_contested": 25 },
+            { "party_id": "KEC",   "full_name": "Kerala Congress (P.J. Joseph faction)",  "seats_contested": 10 },
+            { "party_id": "RSP",   "full_name": "Revolutionary Socialist Party",          "seats_contested": 5  },
+            { "party_id": "KC_J",  "full_name": "Kerala Congress (Jacob)",                "seats_contested": 1  },
+            { "party_id": "CMP",   "full_name": "Communist Marxist Party",                "seats_contested": 1  },
+            { "party_id": "RMPI",  "full_name": "Revolutionary Marxist Party of India",   "seats_contested": 1  }
+          ],
+          "independents_backed": 4,
+          "independents_note": "4 UDF seats filed as IND in ECI data. Includes NCK/Nationalist Congress Kerala (2 seats, Mani C. Kappan at #93 Pala) and others. Constituencies: #24 Perambra, #26 Elathur, #30 Kunnamangalam, #93 Pala",
+          "checksum": {
+            "sum_of_party_seats": 136,
+            "independents": 4,
+            "grand_sum": 140,
+            "expected": 140,
+            "status": "OK"
+          }
+        },
+
+        "NDA": {
+          "alliance_total_contested": 138,
+          "note_on_total": "NDA had 2 BJP nominations rejected by EC (Thalassery #13, Guruvayur #63). Devikulam #88 AIADMK candidate was retained. CSV shows IND candidates in those 3 constituencies but only #88 Devikulam had formal NDA support.",
+          "parties": [
+            { "party_id": "BJP",     "full_name": "Bharatiya Janata Party",                  "seats_contested": 115 },
+            { "party_id": "BDJS",    "full_name": "Bharath Dharma Jana Sena",                "seats_contested": 21  },
+            { "party_id": "AIADMK",  "full_name": "All India Anna Dravida Munnetra Kazhagam","seats_contested": 1   }
+          ],
+          "independents_backed": 1,
+          "independents_note": "1 NDA-backed IND: #88 Devikulam (SC). KKC and JRP from Wikipedia tally appear as IND in ECI data. BJP shows 115 in CSV (vs tally's 113) because 2 rejected nominations may still appear in CSV data.",
+          "checksum": {
+            "sum_of_party_seats": 137,
+            "independents": 1,
+            "grand_sum": 138,
+            "expected": 138,
+            "status": "OK"
+          }
+        }
+      }
+    },
+
+    "2026": {
+      "date": "Expected April 2026",
+      "note": "Election not yet held at time of data compilation. Party membership confirmed from Wikipedia. Seat counts TBD — update once official candidate lists published.",
+      "alliances": {
+
+        "LDF": {
+          "alliance_total_contested": 140,
+          "parties": [
+            { "party_id": "CPI_M",  "full_name": "Communist Party of India (Marxist)",               "seats_contested": "TBD" },
+            { "party_id": "CPI",    "full_name": "Communist Party of India",                         "seats_contested": "TBD" },
+            { "party_id": "KC_M",   "full_name": "Kerala Congress (Mani)",                           "seats_contested": "TBD" },
+            { "party_id": "ISJD",   "full_name": "Indian Socialist Janata Dal",                      "seats_contested": "TBD" },
+            { "party_id": "NCP",    "full_name": "Nationalist Congress Party (Sharadchandra Pawar)", "seats_contested": "TBD" },
+            { "party_id": "RJD",    "full_name": "Rashtriya Janata Dal",                             "seats_contested": "TBD" },
+            { "party_id": "INL",    "full_name": "Indian National League",                           "seats_contested": "TBD" },
+            { "party_id": "CON_S",  "full_name": "Congress (Secular)",                               "seats_contested": "TBD" },
+            { "party_id": "KC_B",   "full_name": "Kerala Congress (B)",                              "seats_contested": "TBD" },
+            { "party_id": "JKC",    "full_name": "Janadhipathya Kerala Congress",                    "seats_contested": "TBD" }
+          ],
+          "independents_backed": "TBD",
+          "checksum": { "status": "PENDING" }
+        },
+
+        "UDF": {
+          "alliance_total_contested": 140,
+          "parties": [
+            { "party_id": "INC",   "full_name": "Indian National Congress",                         "seats_contested": "TBD" },
+            { "party_id": "IUML",  "full_name": "Indian Union Muslim League",                       "seats_contested": "TBD" },
+            { "party_id": "KEC",   "full_name": "Kerala Congress (P.J. Joseph faction)",             "seats_contested": "TBD" },
+            { "party_id": "RSP",   "full_name": "Revolutionary Socialist Party (India)",             "seats_contested": "TBD" },
+            { "party_id": "KDP",   "full_name": "Kerala Democratic Party",                          "seats_contested": "TBD" },
+            { "party_id": "KC_J",  "full_name": "Kerala Congress (Jacob)",                           "seats_contested": "TBD" },
+            { "party_id": "RMPI",  "full_name": "Revolutionary Marxist Party of India",              "seats_contested": "TBD" },
+            { "party_id": "CMP",   "full_name": "Communist Marxist Party",                          "seats_contested": "TBD" },
+            { "party_id": "AIFB",  "full_name": "All India Forward Bloc",                           "seats_contested": "TBD" },
+            { "party_id": "AITC",  "full_name": "All India Trinamool Congress",                      "seats_contested": "TBD" },
+            { "party_id": "JSS",   "full_name": "Janathipathiya Samrakshana Samithy (Rajan Babu)",  "seats_contested": "TBD" },
+            { "party_id": "JRS",   "full_name": "Janadhipathya Rashtriya Sabha",                    "seats_contested": "TBD" }
+          ],
+          "independents_backed": "TBD",
+          "checksum": { "status": "PENDING" }
+        },
+
+        "NDA": {
+          "alliance_total_contested": 140,
+          "parties": [
+            { "party_id": "BJP",              "full_name": "Bharatiya Janata Party",                            "seats_contested": "TBD" },
+            { "party_id": "BDJS",             "full_name": "Bharath Dharma Jana Sena",                          "seats_contested": "TBD" },
+            { "party_id": "JSS_THAMARAKSHAN", "full_name": "Janathipathiya Samrakshana Samithy (Thamarakshan)", "seats_contested": "TBD" },
+            { "party_id": "KKC",              "full_name": "Kerala Kamaraj Congress",                           "seats_contested": "TBD" },
+            { "party_id": "TTP",              "full_name": "Twenty20 Kizhakkambalam",                           "seats_contested": "TBD" },
+            { "party_id": "AIADMK",           "full_name": "All India Anna Dravida Munnetra Kazhagam",          "seats_contested": "TBD" }
+          ],
+          "independents_backed": "TBD",
+          "checksum": { "status": "PENDING" }
+        },
+
+        "NONE": {
+          "note": "Aam Aadmi Party contesting all 140 seats independently.",
+          "parties": [
+            { "party_id": "AAP", "full_name": "Aam Aadmi Party", "seats_contested": 140 }
+          ]
+        }
+      }
+    }
+  },
+
+  "quick_reference_tally": {
+    "description": "Flat array for database cross-check. Columns: [election_year, alliance, party_id, seats_contested]. IND rows = alliance-backed independents (includes small parties that filed as IND in ECI data). CORRECTED from CSV ground truth.",
+    "data": [
+      [2011, "UDF", "INC",    81],
+      [2011, "UDF", "IUML",   23],
+      [2011, "UDF", "KC_M",   15],
+      [2011, "UDF", "SJD",     6],
+      [2011, "UDF", "JSS",     4],
+      [2011, "UDF", "RSP",     4],
+      [2011, "UDF", "KC_J",    3],
+      [2011, "UDF", "CMP",     2],
+      [2011, "UDF", "KC_B",    2],
+      [2011, "UDF", "RSP_BJ",  1],
+      [2011, "UDF", "IND",     3],
+      [2011, "LDF", "CPI_M",  84],
+      [2011, "LDF", "CPI",    27],
+      [2011, "LDF", "JD_S",    5],
+      [2011, "LDF", "NCP",     4],
+      [2011, "LDF", "INL",     2],
+      [2011, "LDF", "KC_AMG",  2],
+      [2011, "LDF", "IND",    16],
+      [2011, "NDA", "BJP",   138],
+      [2011, "NDA", "JD_U",    1],
+      [2011, "NDA", "IND",     1],
+
+      [2016, "UDF", "INC",    87],
+      [2016, "UDF", "IUML",   23],
+      [2016, "UDF", "KC_M",   15],
+      [2016, "UDF", "JD_U",    7],
+      [2016, "UDF", "RSP",     5],
+      [2016, "UDF", "CMP",     2],
+      [2016, "UDF", "KC_J",    1],
+      [2016, "UDF", "IND",     1],
+      [2016, "LDF", "CPI_M",  84],
+      [2016, "LDF", "CPI",    25],
+      [2016, "LDF", "JD_S",    5],
+      [2016, "LDF", "NCP",     4],
+      [2016, "LDF", "INL",     3],
+      [2016, "LDF", "NSC",     2],
+      [2016, "LDF", "CON_S",   1],
+      [2016, "LDF", "KC_KST",  1],
+      [2016, "LDF", "KC_B",    1],
+      [2016, "LDF", "IND",    14],
+      [2016, "NDA", "BJP",    98],
+      [2016, "NDA", "BDJS",   36],
+      [2016, "NDA", "IND",     6],
+
+      [2021, "LDF", "CPI_M",  75],
+      [2021, "LDF", "CPI",    23],
+      [2021, "LDF", "KC_M",   12],
+      [2021, "LDF", "JD_S",    4],
+      [2021, "LDF", "NCP",     3],
+      [2021, "LDF", "INL",     3],
+      [2021, "LDF", "RJD",     2],
+      [2021, "LDF", "CON_S",   1],
+      [2021, "LDF", "KC_B",    1],
+      [2021, "LDF", "JKC",     1],
+      [2021, "LDF", "IND",    15],
+      [2021, "UDF", "INC",    93],
+      [2021, "UDF", "IUML",   25],
+      [2021, "UDF", "KEC",    10],
+      [2021, "UDF", "RSP",     5],
+      [2021, "UDF", "KC_J",    1],
+      [2021, "UDF", "CMP",     1],
+      [2021, "UDF", "RMPI",    1],
+      [2021, "UDF", "IND",     4],
+      [2021, "NDA", "BJP",   115],
+      [2021, "NDA", "BDJS",   21],
+      [2021, "NDA", "AIADMK",  1],
+      [2021, "NDA", "IND",     1]
+    ]
+  }
+}

@@ -1,0 +1,570 @@
+{
+  "metadata": {
+    "description": "Standardised alliance membership data for Kerala Legislative Assembly elections 2011–2026",
+    "alliances": ["LDF", "UDF", "NDA", "NONE"],
+    "notes": [
+      "Alliance membership reflects the position at the time of EACH election — parties can switch alliances across years.",
+      "Independents backed by an alliance are listed separately under 'alliance_backed_independents' per election.",
+      "Party abbreviations are standardised across years for cross-referencing.",
+      "KC(M) switched from UDF (2011/2016) to LDF (2021/2026).",
+      "JD(U) was in UDF in 2011/2016; not present in 2021 (absorbed by RJD/other parties).",
+      "JD(S) was in LDF in 2011; remained in LDF in 2016/2021; merged into ISJD by 2026.",
+      "INL was in LDF in 2011; moved to UDF then back to LDF in 2021/2026.",
+      "KC(B) was in UDF in 2011; switched to LDF by 2016/2021/2026.",
+      "JSS (Janathipathiya Samrakshana Samithy) was in UDF 2011, LDF 2016, and split — one faction in UDF and another in NDA for 2026.",
+      "NSC (National Secular Conference) contested in LDF in 2016.",
+      "RSP(BJ)/RSP: RSP was in UDF; RSP(BJ) also in UDF 2011. By 2026 RSP(India)/Shibu Baby John faction in UDF.",
+      "BDJS joined NDA in 2016 and remained.",
+      "RMPI was in UDF in 2021 and remains in UDF in 2026.",
+      "CMP (C.P. John faction) moved from UDF 2011 to LDF 2016, and back to UDF 2021/2026.",
+      "RJD (Rashtriya Janata Dal / Loktantrik Janata Dal) joined LDF in 2021/2026.",
+      "P.V. Anvar (Trinamool Congress) is in UDF in 2026 after contesting as LDF-backed independent in 2016."
+    ],
+    "sources": [
+      "https://en.wikipedia.org/wiki/2011_Kerala_Legislative_Assembly_election",
+      "https://en.wikipedia.org/wiki/2016_Kerala_Legislative_Assembly_election",
+      "https://en.wikipedia.org/wiki/2021_Kerala_Legislative_Assembly_election",
+      "https://en.wikipedia.org/wiki/2026_Kerala_Legislative_Assembly_election"
+    ]
+  },
+
+  "parties": [
+    {
+      "party_id": "INC",
+      "full_name": "Indian National Congress",
+      "also_known_as": ["Indian National Congress (Indira)", "Congress (I)"],
+      "alliance_by_year": {
+        "2011": "UDF",
+        "2016": "UDF",
+        "2021": "UDF",
+        "2026": "UDF"
+      }
+    },
+    {
+      "party_id": "IUML",
+      "full_name": "Indian Union Muslim League",
+      "also_known_as": ["Muslim League Kerala State Committee"],
+      "alliance_by_year": {
+        "2011": "UDF",
+        "2016": "UDF",
+        "2021": "UDF",
+        "2026": "UDF"
+      }
+    },
+    {
+      "party_id": "KC_M",
+      "full_name": "Kerala Congress (Mani)",
+      "also_known_as": ["KEC(M)", "KC(M)"],
+      "alliance_by_year": {
+        "2011": "UDF",
+        "2016": "UDF",
+        "2021": "LDF",
+        "2026": "LDF"
+      },
+      "notes": "Expelled from UDF after 2016; joined LDF under Jose K. Mani's leadership for 2021."
+    },
+    {
+      "party_id": "RSP",
+      "full_name": "Revolutionary Socialist Party",
+      "alliance_by_year": {
+        "2011": "UDF",
+        "2016": "UDF",
+        "2021": "UDF",
+        "2026": "UDF"
+      },
+      "notes": "RSP (Shibu Baby John faction / RSP India) consistently in UDF."
+    },
+    {
+      "party_id": "RSP_BJ",
+      "full_name": "Revolutionary Socialist Party (Baby John)",
+      "alliance_by_year": {
+        "2011": "UDF",
+        "2016": null,
+        "2021": null,
+        "2026": null
+      },
+      "notes": "Contested separately in 2011 under UDF. Later merged into RSP mainstream."
+    },
+    {
+      "party_id": "KC_J",
+      "full_name": "Kerala Congress (Jacob)",
+      "also_known_as": ["KEC(J)", "KC(J)"],
+      "alliance_by_year": {
+        "2011": "UDF",
+        "2016": "UDF",
+        "2021": "UDF",
+        "2026": "UDF"
+      }
+    },
+    {
+      "party_id": "KC_B",
+      "full_name": "Kerala Congress (Balakrishna Pillai)",
+      "also_known_as": ["KC(B)", "KEC(B)"],
+      "alliance_by_year": {
+        "2011": "UDF",
+        "2016": "LDF",
+        "2021": "LDF",
+        "2026": "LDF"
+      },
+      "notes": "Was in UDF in 2011 under R. Balakrishna Pillai; switched to LDF by 2016. Led by K.B. Ganesh Kumar in 2026."
+    },
+    {
+      "party_id": "SJD",
+      "full_name": "Socialist Janata (Democratic) Party",
+      "alliance_by_year": {
+        "2011": "UDF",
+        "2016": null,
+        "2021": null,
+        "2026": null
+      },
+      "notes": "Contested under UDF in 2011 (M.P. Veerendra Kumar). The JD(U) Kerala unit later took its place in UDF for 2016."
+    },
+    {
+      "party_id": "JSS",
+      "full_name": "Janathipathiya Samrakshana Samithy",
+      "alliance_by_year": {
+        "2011": "UDF",
+        "2016": "LDF",
+        "2021": null,
+        "2026": "UDF"
+      },
+      "notes": "Was in UDF 2011 (K.R. Gouri Amma faction), LDF 2016. In 2026, A.N. Rajan Babu faction is in UDF while A.V. Thamarakshan faction joined NDA."
+    },
+    {
+      "party_id": "JSS_THAMARAKSHAN",
+      "full_name": "Janathipathiya Samrakshana Samithy (Thamarakshan faction)",
+      "alliance_by_year": {
+        "2011": null,
+        "2016": null,
+        "2021": null,
+        "2026": "NDA"
+      },
+      "notes": "Split faction; joined NDA in January 2026 under A.V. Thamarakshan."
+    },
+    {
+      "party_id": "CMP",
+      "full_name": "Communist Marxist Party",
+      "also_known_as": ["CMP (C.P. John)"],
+      "alliance_by_year": {
+        "2011": "UDF",
+        "2016": "UDF",
+        "2021": "UDF",
+        "2026": "UDF"
+      },
+      "notes": "C.P. John's faction. Note: a separate CMA (Aravindakshan) faction existed in LDF in 2016."
+    },
+    {
+      "party_id": "CMA",
+      "full_name": "Communist Marxist Party (Aravindakshan)",
+      "alliance_by_year": {
+        "2011": null,
+        "2016": "LDF",
+        "2021": null,
+        "2026": null
+      }
+    },
+    {
+      "party_id": "JD_U",
+      "full_name": "Janata Dal (United)",
+      "alliance_by_year": {
+        "2011": "NDA",
+        "2016": "UDF",
+        "2021": null,
+        "2026": null
+      },
+      "notes": "Contested under NDA in 2011 (1 seat). Switched to UDF in 2016 under M.P. Veerendra Kumar. Absent or merged by 2021."
+    },
+    {
+      "party_id": "JD_S",
+      "full_name": "Janata Dal (Secular)",
+      "also_known_as": ["JDS"],
+      "alliance_by_year": {
+        "2011": "LDF",
+        "2016": "LDF",
+        "2021": "LDF",
+        "2026": null
+      },
+      "notes": "Kerala unit merged into Indian Socialist Janata Dal (ISJD) in January 2026."
+    },
+    {
+      "party_id": "ISJD",
+      "full_name": "Indian Socialist Janata Dal",
+      "alliance_by_year": {
+        "2011": null,
+        "2016": null,
+        "2021": null,
+        "2026": "LDF"
+      },
+      "notes": "Formed by merger of JD(S) Kerala unit in January 2026. Led by Mathew T. Thomas."
+    },
+    {
+      "party_id": "CPI_M",
+      "full_name": "Communist Party of India (Marxist)",
+      "also_known_as": ["CPI(M)", "CPIM"],
+      "alliance_by_year": {
+        "2011": "LDF",
+        "2016": "LDF",
+        "2021": "LDF",
+        "2026": "LDF"
+      }
+    },
+    {
+      "party_id": "CPI",
+      "full_name": "Communist Party of India",
+      "alliance_by_year": {
+        "2011": "LDF",
+        "2016": "LDF",
+        "2021": "LDF",
+        "2026": "LDF"
+      }
+    },
+    {
+      "party_id": "NCP",
+      "full_name": "Nationalist Congress Party",
+      "also_known_as": ["NCP (Sharadchandra Pawar)" ],
+      "alliance_by_year": {
+        "2011": "LDF",
+        "2016": "LDF",
+        "2021": "LDF",
+        "2026": "LDF"
+      }
+    },
+    {
+      "party_id": "INL",
+      "full_name": "Indian National League",
+      "alliance_by_year": {
+        "2011": "LDF",
+        "2016": "LDF",
+        "2021": "LDF",
+        "2026": "LDF"
+      },
+      "notes": "Was in LDF in 2011 (3 seats, 0 won), LDF in 2016, then formally rejoined LDF before 2021."
+    },
+    {
+      "party_id": "KC_AMG",
+      "full_name": "Kerala Congress (Anti-merger Group)",
+      "alliance_by_year": {
+        "2011": "LDF",
+        "2016": null,
+        "2021": null,
+        "2026": null
+      }
+    },
+    {
+      "party_id": "CON_S",
+      "full_name": "Congress (Secular)",
+      "also_known_as": ["C(S)", "Cong(S)"],
+      "alliance_by_year": {
+        "2011": "LDF",
+        "2016": "LDF",
+        "2021": "LDF",
+        "2026": "LDF"
+      },
+      "notes": "Led by Kadannappalli Ramachandran."
+    },
+    {
+      "party_id": "NSC",
+      "full_name": "National Secular Conference",
+      "alliance_by_year": {
+        "2011": null,
+        "2016": "LDF",
+        "2021": null,
+        "2026": null
+      },
+      "notes": "Contested under LDF in 2016 (Tanur and Tirur seats)."
+    },
+    {
+      "party_id": "RSP_L",
+      "full_name": "Revolutionary Socialist Party (Leninist)",
+      "alliance_by_year": {
+        "2011": null,
+        "2016": "LDF",
+        "2021": null,
+        "2026": null
+      }
+    },
+    {
+      "party_id": "KC_KST",
+      "full_name": "Kerala Congress (Skaria Thomas)",
+      "alliance_by_year": {
+        "2011": null,
+        "2016": "LDF",
+        "2021": null,
+        "2026": null
+      }
+    },
+    {
+      "party_id": "JKC",
+      "full_name": "Janadhipathya Kerala Congress",
+      "alliance_by_year": {
+        "2011": null,
+        "2016": "LDF",
+        "2021": "LDF",
+        "2026": "LDF"
+      },
+      "notes": "Led by Francis George in 2016, K.C. Joseph in 2021/2026."
+    },
+    {
+      "party_id": "BJP",
+      "full_name": "Bharatiya Janata Party",
+      "alliance_by_year": {
+        "2011": "NDA",
+        "2016": "NDA",
+        "2021": "NDA",
+        "2026": "NDA"
+      }
+    },
+    {
+      "party_id": "BDJS",
+      "full_name": "Bharath Dharma Jana Sena",
+      "alliance_by_year": {
+        "2011": null,
+        "2016": "NDA",
+        "2021": "NDA",
+        "2026": "NDA"
+      },
+      "notes": "Led by Thushar Vellappally."
+    },
+    {
+      "party_id": "KC_T",
+      "full_name": "Kerala Congress (Thomas)",
+      "also_known_as": ["KEC(T)", "KEC"],
+      "alliance_by_year": {
+        "2011": null,
+        "2016": "NDA",
+        "2021": null,
+        "2026": null
+      },
+      "notes": "P.C. Thomas led this party in NDA in 2016. Merged into Kerala Congress (P.J. Joseph faction) before 2021."
+    },
+    {
+      "party_id": "JRS",
+      "full_name": "Janadhipathya Rashtriya Sabha",
+      "alliance_by_year": {
+        "2011": null,
+        "2016": "NDA",
+        "2021": null,
+        "2026": "NDA"
+      },
+      "notes": "Led by C.K. Janu. Was in NDA 2016; by 2021 absent or independent; returned to NDA 2026."
+    },
+    {
+      "party_id": "AIADMK",
+      "full_name": "All India Anna Dravida Munnetra Kazhagam",
+      "alliance_by_year": {
+        "2011": "NONE",
+        "2016": "NONE",
+        "2021": "NDA",
+        "2026": "NDA"
+      },
+      "notes": "Contested independently in 2011/2016; formally joined NDA Kerala in 2021."
+    },
+    {
+      "party_id": "KKC",
+      "full_name": "Kerala Kamaraj Congress",
+      "alliance_by_year": {
+        "2011": null,
+        "2016": null,
+        "2021": "NDA",
+        "2026": "NDA"
+      },
+      "notes": "Led by Vishnupuram Chandrasekharan."
+    },
+    {
+      "party_id": "DSJP",
+      "full_name": "Democratic Social Justice Party",
+      "alliance_by_year": {
+        "2011": null,
+        "2016": null,
+        "2021": "NDA",
+        "2026": null
+      },
+      "notes": "NDA gave support to DSJP candidate in Guruvayur in 2021 as BJP nomination was rejected."
+    },
+    {
+      "party_id": "KEC",
+      "full_name": "Kerala Congress",
+      "also_known_as": ["Kerala Congress (P.J. Joseph faction)"],
+      "alliance_by_year": {
+        "2011": null,
+        "2016": null,
+        "2021": "UDF",
+        "2026": "UDF"
+      },
+      "notes": "Formed by P.J. Joseph faction after KC(M) left UDF. P.C. Thomas merged into this party before 2021."
+    },
+    {
+      "party_id": "NCK",
+      "full_name": "Nationalist Congress Kerala",
+      "alliance_by_year": {
+        "2011": null,
+        "2016": null,
+        "2021": "UDF",
+        "2026": null
+      },
+      "notes": "Formed by Mani C. Kappan after expulsion from NCP. Contested 2 seats under UDF in 2021. Later became Kerala Democratic Party."
+    },
+    {
+      "party_id": "KDP",
+      "full_name": "Kerala Democratic Party",
+      "alliance_by_year": {
+        "2011": null,
+        "2016": null,
+        "2021": null,
+        "2026": "UDF"
+      },
+      "notes": "Successor to NCK, led by Mani C. Kappan."
+    },
+    {
+      "party_id": "RMPI",
+      "full_name": "Revolutionary Marxist Party of India",
+      "alliance_by_year": {
+        "2011": null,
+        "2016": "UDF",
+        "2021": "UDF",
+        "2026": "UDF"
+      },
+      "notes": "Led by N. Venu. Won Vadakara in 2021 with outside UDF support."
+    },
+    {
+      "party_id": "RJD",
+      "full_name": "Rashtriya Janata Dal",
+      "also_known_as": ["Loktantrik Janata Dal (Kerala)"],
+      "alliance_by_year": {
+        "2011": null,
+        "2016": null,
+        "2021": "LDF",
+        "2026": "LDF"
+      },
+      "notes": "Led by M.V. Shreyams Kumar. Joined LDF before 2021 election."
+    },
+    {
+      "party_id": "AITC",
+      "full_name": "All India Trinamool Congress",
+      "also_known_as": ["Trinamool Congress", "TMC"],
+      "alliance_by_year": {
+        "2011": null,
+        "2016": null,
+        "2021": null,
+        "2026": "UDF"
+      },
+      "notes": "P.V. Anvar (former LDF-backed Independent MLA from Nilambur) joined Trinamool Congress and is in UDF for 2026."
+    },
+    {
+      "party_id": "AIFB",
+      "full_name": "All India Forward Bloc",
+      "alliance_by_year": {
+        "2011": null,
+        "2016": null,
+        "2021": null,
+        "2026": "UDF"
+      },
+      "notes": "Led by Manoj Mathew. Joined UDF for 2026."
+    },
+    {
+      "party_id": "AAP",
+      "full_name": "Aam Aadmi Party",
+      "alliance_by_year": {
+        "2011": null,
+        "2016": null,
+        "2021": null,
+        "2026": "NONE"
+      },
+      "notes": "Contesting all 140 seats independently in 2026."
+    },
+    {
+      "party_id": "TTP",
+      "full_name": "Twenty20 Party / Twenty20 Kizhakkambalam",
+      "alliance_by_year": {
+        "2011": null,
+        "2016": null,
+        "2021": "NONE",
+        "2026": "NDA"
+      },
+      "notes": "Contested independently in 2021; joined NDA for 2026 as Twenty20 Kizhakkambalam."
+    },
+    {
+      "party_id": "KJP_S",
+      "full_name": "Kerala Janapaksham (Secular)",
+      "alliance_by_year": {
+        "2011": null,
+        "2016": null,
+        "2021": "NONE",
+        "2026": null
+      },
+      "notes": "P.C. George's party. Contested independently in 2021 (Poonjar) — no alliance affiliation."
+    }
+  ],
+
+  "alliance_backed_independents": {
+    "2011": {
+      "LDF": [
+        {
+          "note": "LDF fielded 4 independent candidates in 2011. Constituency-wise breakdown not fully listed in Wikipedia source."
+        }
+      ],
+      "UDF": [],
+      "NDA": []
+    },
+    "2016": {
+      "LDF": [
+        { "constituency": "Kunnamangalam", "candidate": "P. T. A. Rahim", "note": "IND backed by LDF; won" },
+        { "constituency": "Koduvally", "candidate": "Karat Razack", "note": "IND backed by LDF; won" },
+        { "constituency": "Nilambur", "candidate": "P. V. Anvar", "note": "IND backed by LDF; won" },
+        { "constituency": "Thavanur", "candidate": "K. T. Jaleel", "note": "IND backed by LDF; won" },
+        { "constituency": "Kondotty", "candidate": "K. P. Beerankutty", "note": "IND backed by LDF; lost" },
+        { "constituency": "Eranad", "candidate": "K. T. Abdurahiman", "note": "IND backed by LDF; lost" },
+        { "constituency": "Tirurangadi", "candidate": "Niyas Pulikkalakath", "note": "IND backed by LDF; lost" }
+      ],
+      "UDF": [
+        { "constituency": "Balussery (SC)", "candidate": "U. C. Raman Padanilam", "note": "IND backed by UDF; lost" }
+      ],
+      "NDA": []
+    },
+    "2021": {
+      "LDF": [
+        {
+          "note": "LDF fielded 12 independent candidates in 2021. Full constituency-wise list not fully resolved in Wikipedia source; detailed breakdown requires individual constituency pages."
+        }
+      ],
+      "UDF": [
+        { "constituency": "Pala", "candidate": "Mani C. Kappan", "note": "Contested as UDF-backed independent; won. Later his party (NCK) was formally part of UDF." },
+        { "constituency": "Vadakara", "candidate": "RMPI candidate (N. Venu's party)", "note": "RMPI with UDF outside support; won." }
+      ],
+      "NDA": [
+        { "constituency": "Thalassery", "candidate": "Independent", "note": "NDA offered support to an independent after their own nomination was rejected; independent declined." },
+        { "constituency": "Guruvayur", "candidate": "DSJP candidate", "note": "NDA gave formal support to DSJP candidate after BJP nomination rejected." },
+        { "constituency": "Devikulam (SC)", "candidate": "AIADMK candidate", "note": "NDA gave support to AIADMK candidate after own nomination rejected." }
+      ]
+    },
+    "2026": {
+      "LDF": [],
+      "UDF": [],
+      "NDA": [],
+      "note": "2026 election results not yet available at time of data compilation (election expected April 2026)."
+    }
+  },
+
+  "alliance_summary_by_year": {
+    "2011": {
+      "UDF": ["INC", "IUML", "KC_M", "SJD", "JSS", "RSP", "CMP", "KC_J", "KC_B", "RSP_BJ"],
+      "LDF": ["CPI_M", "CPI", "JD_S", "NCP", "INL", "KC_AMG", "CON_S", "LDF_INDEPENDENTS(4)"],
+      "NDA": ["BJP", "JD_U"]
+    },
+    "2016": {
+      "UDF": ["INC", "IUML", "KC_M", "JD_U", "RSP", "CMP", "KC_J"],
+      "LDF": ["CPI_M", "CPI", "JD_S", "JSS", "NCP", "JKC", "INL", "KC_B", "KC_KST", "CMA", "RSP_L", "CON_S", "NSC", "LDF_INDEPENDENTS"],
+      "NDA": ["BJP", "BDJS", "KC_T", "JRS", "JRS_CKJ"]
+    },
+    "2021": {
+      "UDF": ["INC", "IUML", "KEC", "RSP", "NCK", "KC_J", "CMP", "RMPI", "UDF_INDEPENDENTS"],
+      "LDF": ["CPI_M", "CPI", "KC_M", "JD_S", "NCP", "RJD", "INL", "CON_S", "KC_B", "JKC", "LDF_INDEPENDENTS"],
+      "NDA": ["BJP", "BDJS", "AIADMK", "KKC", "JRP_CKJ"]
+    },
+    "2026": {
+      "UDF": ["INC", "IUML", "KEC", "RSP", "KDP", "KC_J", "RMPI", "CMP", "AIFB", "AITC", "JSS", "JRS"],
+      "LDF": ["CPI_M", "CPI", "KC_M", "ISJD", "NCP", "RJD", "INL", "CON_S", "KC_B", "JKC"],
+      "NDA": ["BJP", "BDJS", "JSS_THAMARAKSHAN", "KKC", "TTP", "AIADMK", "JRS_NDA"]
+    }
+  }
+}
