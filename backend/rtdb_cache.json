@@ -1,6 +1,6 @@
 {
   "meta": {
-    "timestamp": "2026-05-04T11:33:15.796665+00:00",
+    "timestamp": "2026-05-04T11:33:18.916590+00:00",
     "total_constituencies": 140,
     "results_declared": 4,
     "counting_in_progress": 136,
@@ -896,6 +896,171 @@
           "name": "NOTA",
           "party": "NOTA",
           "votes": 490
+        }
+      ]
+    },
+    "42": {
+      "status": "IN_PROGRESS",
+      "rounds_completed": 0,
+      "total_rounds": 0,
+      "total_electors": 221036,
+      "votes_polled": 178862,
+      "last_updated": "2026-05-04T11:33:18.196214+00:00",
+      "candidates": [
+        {
+          "name": "T. V. Ibrahim",
+          "party": "IUML",
+          "votes": 100718
+        },
+        {
+          "name": "Adv. C. P. Musthafa",
+          "party": "IND_LDF",
+          "votes": 49429
+        },
+        {
+          "name": "M. Preman Master",
+          "party": "BJP",
+          "votes": 23283
+        },
+        {
+          "name": "Muhamed Musthafa Pamangadan",
+          "party": "IND",
+          "votes": 3698
+        },
+        {
+          "name": "Abdul Azeez Kadalundi",
+          "party": "AAP",
+          "votes": 1575
+        },
+        {
+          "name": "Muhammed Aslam V P",
+          "party": "IND",
+          "votes": 1058
+        },
+        {
+          "name": "NOTA",
+          "party": "NOTA",
+          "votes": 1261
+        }
+      ]
+    },
+    "37": {
+      "status": "IN_PROGRESS",
+      "rounds_completed": 0,
+      "total_rounds": 0,
+      "total_electors": 227762,
+      "votes_polled": 187949,
+      "last_updated": "2026-05-04T11:33:18.607924+00:00",
+      "candidates": [
+        {
+          "name": "Adv. M. Rahmathulla",
+          "party": "IUML",
+          "votes": 113622
+        },
+        {
+          "name": "V. M. Mustafa",
+          "party": "IND_LDF",
+          "votes": 55735
+        },
+        {
+          "name": "Pathmasree M.",
+          "party": "BJP",
+          "votes": 13423
+        },
+        {
+          "name": "Adv. PPA Sageer",
+          "party": "AAP",
+          "votes": 2222
+        },
+        {
+          "name": "Bipin Benson Joseph",
+          "party": "IND",
+          "votes": 1698
+        },
+        {
+          "name": "NOTA",
+          "party": "NOTA",
+          "votes": 3319
+        }
+      ]
+    },
+    "39": {
+      "status": "IN_PROGRESS",
+      "rounds_completed": 0,
+      "total_rounds": 0,
+      "total_electors": 230838,
+      "votes_polled": 185362,
+      "last_updated": "2026-05-04T11:33:20.164989+00:00",
+      "candidates": [
+        {
+          "name": "Manjalamkuzhi Ali",
+          "party": "IUML",
+          "votes": 110692
+        },
+        {
+          "name": "Kunnath Mohamed S/o Ali Haji",
+          "party": "IND_LDF",
+          "votes": 65083
+        },
+        {
+          "name": "Lijoy Paul",
+          "party": "BJP",
+          "votes": 9933
+        },
+        {
+          "name": "Kunnath Muhammed",
+          "party": "IND",
+          "votes": 663
+        },
+        {
+          "name": "NOTA",
+          "party": "NOTA",
+          "votes": 1315
+        }
+      ]
+    },
+    "46": {
+      "status": "IN_PROGRESS",
+      "rounds_completed": 0,
+      "total_rounds": 0,
+      "total_electors": 243014,
+      "votes_polled": 189380,
+      "last_updated": "2026-05-04T11:33:20.398900+00:00",
+      "candidates": [
+        {
+          "name": "Prof. K. K. Abid Hussain Thangal",
+          "party": "IUML",
+          "votes": 96174
+        },
+        {
+          "name": "K. Preethi",
+          "party": "CPI_M",
+          "votes": 44393
+        },
+        {
+          "name": "Subrahmanian Chunkapally",
+          "party": "BDJS",
+          "votes": 8105
+        },
+        {
+          "name": "Adv. Majeed Marakkara",
+          "party": "SDPI",
+          "votes": 3741
+        },
+        {
+          "name": "Preethi Kp",
+          "party": "IND",
+          "votes": 528
+        },
+        {
+          "name": "Mohamed Rafi",
+          "party": "IND",
+          "votes": 401
+        },
+        {
+          "name": "NOTA",
+          "party": "NOTA",
+          "votes": 1019
         }
       ]
     }
