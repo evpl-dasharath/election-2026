@@ -13,15 +13,15 @@
     "valid_votes": 29912,
     "rounds_completed": 14,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:49.167007+00:00"
+    "last_updated": "2026-05-04T08:33:58.795230+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. Thomas Unniyadan",
       "party": "KEC",
       "alliance": "UDF",
-      "votes": 55637,
-      "percentage": 42.57,
+      "votes": 56829,
+      "percentage": 42.61,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Dr. R. Bindu",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 48738,
-      "percentage": 37.29,
+      "votes": 49759,
+      "percentage": 37.31,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Santhosh Cherkalam",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 24009,
-      "percentage": 18.37,
+      "votes": 24399,
+      "percentage": 18.3,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Thankamany Tharayil",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 761,
-      "percentage": 0.58,
+      "votes": 784,
+      "percentage": 0.59,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "Dr. Shaju K Y (Kavungal)",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 513,
+      "votes": 525,
       "percentage": 0.39,
       "is_winner": false,
       "is_leading": false
@@ -65,7 +65,7 @@
       "name": "Dr. Anish",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 226,
+      "votes": 233,
       "percentage": 0.17,
       "is_winner": false,
       "is_leading": false
@@ -74,7 +74,7 @@
       "name": "Ayyappan Manakkal",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 83,
+      "votes": 85,
       "percentage": 0.06,
       "is_winner": false,
       "is_leading": false

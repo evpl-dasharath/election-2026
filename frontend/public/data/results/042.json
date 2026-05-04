@@ -11,17 +11,17 @@
     "votes_polled": 178862,
     "votes_counted": 8705,
     "valid_votes": 8705,
-    "rounds_completed": 10,
+    "rounds_completed": 12,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:36:49.092785+00:00"
+    "last_updated": "2026-05-04T08:35:02.509710+00:00"
   },
   "candidates_2026": [
     {
       "name": "T. V. Ibrahim",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 65084,
-      "percentage": 57.99,
+      "votes": 73374,
+      "percentage": 54.44,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Adv. C. P. Musthafa",
       "party": "IND_LDF",
       "alliance": "LDF",
-      "votes": 27941,
-      "percentage": 24.89,
+      "votes": 36074,
+      "percentage": 26.77,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "M. Preman Master",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 14123,
-      "percentage": 12.58,
+      "votes": 19419,
+      "percentage": 14.41,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Muhamed Musthafa Pamangadan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 2486,
-      "percentage": 2.21,
+      "votes": 2734,
+      "percentage": 2.03,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "Abdul Azeez Kadalundi",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 1058,
+      "votes": 1271,
       "percentage": 0.94,
       "is_winner": false,
       "is_leading": false
@@ -65,8 +65,8 @@
       "name": "Muhammed Aslam V P",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 733,
-      "percentage": 0.65,
+      "votes": 889,
+      "percentage": 0.66,
       "is_winner": false,
       "is_leading": false
     }

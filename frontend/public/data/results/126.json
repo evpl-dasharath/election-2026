@@ -11,17 +11,17 @@
     "votes_polled": 134325,
     "votes_counted": 9521,
     "valid_votes": 9521,
-    "rounds_completed": 9,
+    "rounds_completed": 12,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:54.621404+00:00"
+    "last_updated": "2026-05-04T08:34:30.321628+00:00"
   },
   "candidates_2026": [
     {
       "name": "B. B. Gopakumar",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 29950,
-      "percentage": 35.95,
+      "votes": 41875,
+      "percentage": 36.87,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Adv. R.Rajendran",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 29128,
-      "percentage": 34.97,
+      "votes": 39979,
+      "percentage": 35.2,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Sooraj Ravi",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 23207,
-      "percentage": 27.86,
+      "votes": 30257,
+      "percentage": 26.64,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Arun A",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 387,
-      "percentage": 0.46,
+      "votes": 511,
+      "percentage": 0.45,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Sindhu Puthenkulam",
       "party": "Anna DHRM",
       "alliance": "OTH",
-      "votes": 202,
-      "percentage": 0.24,
+      "votes": 356,
+      "percentage": 0.31,
       "is_winner": false,
       "is_leading": false
     }

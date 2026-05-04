@@ -13,15 +13,15 @@
     "valid_votes": 7280,
     "rounds_completed": 13,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:35:16.709483+00:00"
+    "last_updated": "2026-05-04T08:34:07.640983+00:00"
   },
   "candidates_2026": [
     {
       "name": "T. J. Vinod",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 54078,
-      "percentage": 56.47,
+      "votes": 54838,
+      "percentage": 56.53,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Sabu George",
       "party": "ISJD",
       "alliance": "LDF",
-      "votes": 22350,
-      "percentage": 23.34,
+      "votes": 22582,
+      "percentage": 23.28,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "P.R. Sivasankar",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 17454,
-      "percentage": 18.23,
+      "votes": 17672,
+      "percentage": 18.22,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Moses Henry Motha",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 688,
-      "percentage": 0.72,
+      "votes": 706,
+      "percentage": 0.73,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "Ashokan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 247,
+      "votes": 251,
       "percentage": 0.26,
       "is_winner": false,
       "is_leading": false

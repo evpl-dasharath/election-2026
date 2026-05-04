@@ -11,17 +11,17 @@
     "votes_polled": 143781,
     "votes_counted": 14173,
     "valid_votes": 14173,
-    "rounds_completed": 8,
+    "rounds_completed": 9,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:37.427970+00:00"
+    "last_updated": "2026-05-04T08:33:59.162335+00:00"
   },
   "candidates_2026": [
     {
       "name": "Ramesh Pisharody",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 49321,
-      "percentage": 44.31,
+      "votes": 54482,
+      "percentage": 43.63,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Sobha Surendran",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 38504,
-      "percentage": 34.59,
+      "votes": 42020,
+      "percentage": 33.65,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "N. M. R. Razaq",
       "party": "IND_LDF",
       "alliance": "LDF",
-      "votes": 22177,
-      "percentage": 19.92,
+      "votes": 26828,
+      "percentage": 21.49,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Udayan Sukumaran",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 226,
-      "percentage": 0.2,
+      "votes": 271,
+      "percentage": 0.22,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Krishnankutty K",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 224,
-      "percentage": 0.2,
+      "votes": 268,
+      "percentage": 0.21,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Shamsudheen B",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 135,
-      "percentage": 0.12,
+      "votes": 160,
+      "percentage": 0.13,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "Reghu M",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 114,
-      "percentage": 0.1,
+      "votes": 147,
+      "percentage": 0.12,
       "is_winner": false,
       "is_leading": false
     }

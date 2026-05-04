@@ -11,17 +11,17 @@
     "votes_polled": 138003,
     "votes_counted": 7618,
     "valid_votes": 7618,
-    "rounds_completed": 8,
+    "rounds_completed": 11,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:48.433035+00:00"
+    "last_updated": "2026-05-04T08:34:30.357409+00:00"
   },
   "candidates_2026": [
     {
       "name": "Rajeev Chandrasekhar",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 25274,
-      "percentage": 42.29,
+      "votes": 32884,
+      "percentage": 39.55,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "V. Shivankutty",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 20932,
-      "percentage": 35.03,
+      "votes": 30733,
+      "percentage": 36.96,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Adv. KS Sabarinathan",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 13038,
-      "percentage": 21.82,
+      "votes": 18845,
+      "percentage": 22.66,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Vinu K",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 75,
-      "percentage": 0.13,
+      "votes": 98,
+      "percentage": 0.12,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "Karamana Prasad",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 62,
+      "votes": 87,
       "percentage": 0.1,
       "is_winner": false,
       "is_leading": false
@@ -65,7 +65,7 @@
       "name": "Kamaleswaram Hari",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 29,
+      "votes": 44,
       "percentage": 0.05,
       "is_winner": false,
       "is_leading": false
@@ -74,7 +74,7 @@
       "name": "Rajeev Kumar G S",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 27,
+      "votes": 39,
       "percentage": 0.05,
       "is_winner": false,
       "is_leading": false
@@ -83,7 +83,7 @@
       "name": "Subi S M",
       "party": "TFIP",
       "alliance": "OTH",
-      "votes": 26,
+      "votes": 36,
       "percentage": 0.04,
       "is_winner": false,
       "is_leading": false
@@ -92,7 +92,7 @@
       "name": "Sasikala",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 15,
+      "votes": 25,
       "percentage": 0.03,
       "is_winner": false,
       "is_leading": false
@@ -101,7 +101,7 @@
       "name": "Madanan S",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 14,
+      "votes": 20,
       "percentage": 0.02,
       "is_winner": false,
       "is_leading": false

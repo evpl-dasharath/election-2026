@@ -11,17 +11,17 @@
     "votes_polled": 201034,
     "votes_counted": 10984,
     "valid_votes": 10984,
-    "rounds_completed": 10,
+    "rounds_completed": 14,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:36:46.690855+00:00"
+    "last_updated": "2026-05-04T08:34:59.775316+00:00"
   },
   "candidates_2026": [
     {
       "name": "A. P. Anil Kumar",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 65206,
-      "percentage": 58.6,
+      "votes": 93120,
+      "percentage": 59.5,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Dr. K.K Damodaran",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 40678,
-      "percentage": 36.56,
+      "votes": 56407,
+      "percentage": 36.04,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "E. P. Kumaradas",
       "party": "IND_NDA",
       "alliance": "NDA",
-      "votes": 3739,
-      "percentage": 3.36,
+      "votes": 4719,
+      "percentage": 3.02,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Anilkumar S/o Kuttan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 735,
-      "percentage": 0.66,
+      "votes": 986,
+      "percentage": 0.63,
       "is_winner": false,
       "is_leading": false
     }

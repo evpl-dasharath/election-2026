@@ -11,17 +11,17 @@
     "votes_polled": 178399,
     "votes_counted": 11019,
     "valid_votes": 11019,
-    "rounds_completed": 11,
+    "rounds_completed": 15,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:36:24.422051+00:00"
+    "last_updated": "2026-05-04T08:34:48.647395+00:00"
   },
   "candidates_2026": [
     {
       "name": "Neelakantan",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 54437,
-      "percentage": 48.28,
+      "votes": 70793,
+      "percentage": 44.69,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "C. H. Kunhambu",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 40571,
-      "percentage": 35.99,
+      "votes": 63488,
+      "percentage": 40.08,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Manulal Meloth",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 17150,
-      "percentage": 15.21,
+      "votes": 23306,
+      "percentage": 14.71,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Kunhampu P P S/o Raman",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 121,
-      "percentage": 0.11,
+      "votes": 166,
+      "percentage": 0.1,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "Kunhiraman",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 90,
+      "votes": 119,
       "percentage": 0.08,
       "is_winner": false,
       "is_leading": false
@@ -65,8 +65,8 @@
       "name": "Naseer",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 74,
-      "percentage": 0.07,
+      "votes": 90,
+      "percentage": 0.06,
       "is_winner": false,
       "is_leading": false
     }

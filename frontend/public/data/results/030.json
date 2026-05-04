@@ -11,17 +11,17 @@
     "votes_polled": 205271,
     "votes_counted": 11457,
     "valid_votes": 11457,
-    "rounds_completed": 9,
+    "rounds_completed": 12,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:36:43.067920+00:00"
+    "last_updated": "2026-05-04T08:34:58.476515+00:00"
   },
   "candidates_2026": [
     {
       "name": "M. A. Razak Master",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 46136,
-      "percentage": 44.82,
+      "votes": 61772,
+      "percentage": 45.2,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Adv. P.T.A Rahim",
       "party": "IND_LDF",
       "alliance": "LDF",
-      "votes": 37417,
-      "percentage": 36.35,
+      "votes": 50182,
+      "percentage": 36.72,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Adv. V. K. Sajeevan",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 17181,
-      "percentage": 16.69,
+      "votes": 21852,
+      "percentage": 15.99,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,7 +47,7 @@
       "name": "Rahim",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 941,
+      "votes": 1247,
       "percentage": 0.91,
       "is_winner": false,
       "is_leading": false
@@ -56,8 +56,8 @@
       "name": "Abdu Rasak",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 281,
-      "percentage": 0.27,
+      "votes": 377,
+      "percentage": 0.28,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,17 +65,8 @@
       "name": "Santhosh P T",
       "party": "AIHCP",
       "alliance": "OTH",
-      "votes": 153,
-      "percentage": 0.15,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Raheem P",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 107,
-      "percentage": 0.1,
+      "votes": 172,
+      "percentage": 0.13,
       "is_winner": false,
       "is_leading": false
     },
@@ -83,7 +74,7 @@
       "name": "Abdul Razak",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 102,
+      "votes": 140,
       "percentage": 0.1,
       "is_winner": false,
       "is_leading": false
@@ -92,7 +83,16 @@
       "name": "Mavoor Muhammed Ali",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 95,
+      "votes": 138,
+      "percentage": 0.1,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Raheem P",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 129,
       "percentage": 0.09,
       "is_winner": false,
       "is_leading": false

@@ -11,17 +11,17 @@
     "votes_polled": 161447,
     "votes_counted": 10349,
     "valid_votes": 10349,
-    "rounds_completed": 10,
+    "rounds_completed": 13,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:36:38.201039+00:00"
+    "last_updated": "2026-05-04T08:34:49.904275+00:00"
   },
   "candidates_2026": [
     {
       "name": "P. K. Praveen",
       "party": "RJD",
       "alliance": "LDF",
-      "votes": 49492,
-      "percentage": 46.66,
+      "votes": 60545,
+      "percentage": 44.33,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Jayanthi Rajan",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 40234,
-      "percentage": 37.93,
+      "votes": 54166,
+      "percentage": 39.66,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Adv. Shijilal",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 14632,
-      "percentage": 13.79,
+      "votes": 19819,
+      "percentage": 14.51,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Jayanthi",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 475,
-      "percentage": 0.45,
+      "votes": 574,
+      "percentage": 0.42,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Praveen Kumar",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 399,
-      "percentage": 0.38,
+      "votes": 488,
+      "percentage": 0.36,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Rafeed AP",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 185,
-      "percentage": 0.17,
+      "votes": 220,
+      "percentage": 0.16,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,17 +74,8 @@
       "name": "K. P. Mohanan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 122,
-      "percentage": 0.12,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "M. Shylaja",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 88,
-      "percentage": 0.08,
+      "votes": 146,
+      "percentage": 0.11,
       "is_winner": false,
       "is_leading": false
     },
@@ -92,7 +83,16 @@
       "name": "Shahul Hameed",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 81,
+      "votes": 103,
+      "percentage": 0.08,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "M. Shylaja",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 103,
       "percentage": 0.08,
       "is_winner": false,
       "is_leading": false

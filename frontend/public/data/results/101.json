@@ -11,17 +11,17 @@
     "votes_polled": 142173,
     "votes_counted": 13092,
     "valid_votes": 13092,
-    "rounds_completed": 10,
+    "rounds_completed": 12,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:31.398934+00:00"
+    "last_updated": "2026-05-04T08:34:13.081593+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. Sebastian M.J",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 36694,
-      "percentage": 39.68,
+      "votes": 43799,
+      "percentage": 39.35,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Adv. Sebastian Kulathunkal",
       "party": "KC_M",
       "alliance": "LDF",
-      "votes": 32464,
-      "percentage": 35.1,
+      "votes": 38817,
+      "percentage": 34.88,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "P. C. George",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 22474,
-      "percentage": 24.3,
+      "votes": 27550,
+      "percentage": 24.75,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Shiny A C",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 286,
-      "percentage": 0.31,
+      "votes": 434,
+      "percentage": 0.39,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "Abhiram Babu",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 129,
+      "votes": 155,
       "percentage": 0.14,
       "is_winner": false,
       "is_leading": false
@@ -65,7 +65,7 @@
       "name": "Mayamol K P",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 71,
+      "votes": 94,
       "percentage": 0.08,
       "is_winner": false,
       "is_leading": false
@@ -74,7 +74,7 @@
       "name": "Santhosh Joseph",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 47,
+      "votes": 57,
       "percentage": 0.05,
       "is_winner": false,
       "is_leading": false

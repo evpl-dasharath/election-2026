@@ -11,17 +11,17 @@
     "votes_polled": 144772,
     "votes_counted": 17965,
     "valid_votes": 17965,
-    "rounds_completed": 10,
+    "rounds_completed": 14,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:41.438371+00:00"
+    "last_updated": "2026-05-04T08:34:27.495720+00:00"
   },
   "candidates_2026": [
     {
       "name": "Manoj B Edamana",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 35552,
-      "percentage": 37.57,
+      "votes": 50290,
+      "percentage": 37.6,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Ramya Haridas",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 33529,
-      "percentage": 35.44,
+      "votes": 50287,
+      "percentage": 37.6,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,17 +38,8 @@
       "name": "B. S. Anoop",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 23903,
-      "percentage": 25.26,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Anoop Alappuramkunnu",
-      "party": "Anna DHRM",
-      "alliance": "OTH",
-      "votes": 485,
-      "percentage": 0.51,
+      "votes": 30944,
+      "percentage": 23.14,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +47,17 @@
       "name": "Ramasamy Sasi",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 484,
-      "percentage": 0.51,
+      "votes": 694,
+      "percentage": 0.52,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Anoop Alappuramkunnu",
+      "party": "Anna DHRM",
+      "alliance": "OTH",
+      "votes": 588,
+      "percentage": 0.44,
       "is_winner": false,
       "is_leading": false
     }

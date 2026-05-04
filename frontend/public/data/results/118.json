@@ -11,17 +11,17 @@
     "votes_polled": 160050,
     "votes_counted": 17305,
     "valid_votes": 17305,
-    "rounds_completed": 11,
+    "rounds_completed": 14,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:41.486442+00:00"
+    "last_updated": "2026-05-04T08:34:24.756545+00:00"
   },
   "candidates_2026": [
     {
       "name": "Ullas Kovoor",
       "party": "RSP",
       "alliance": "UDF",
-      "votes": 56258,
-      "percentage": 50.2,
+      "votes": 70425,
+      "percentage": 50.06,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Kovoor Kunjumon",
       "party": "RSP(L)",
       "alliance": "OTH",
-      "votes": 38011,
-      "percentage": 33.92,
+      "votes": 48155,
+      "percentage": 34.23,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Raji Prasad",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 16758,
-      "percentage": 14.95,
+      "votes": 20802,
+      "percentage": 14.79,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Manthara Velayudhan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 264,
-      "percentage": 0.24,
+      "votes": 323,
+      "percentage": 0.23,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "Sasidharan",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 225,
+      "votes": 278,
       "percentage": 0.2,
       "is_winner": false,
       "is_leading": false

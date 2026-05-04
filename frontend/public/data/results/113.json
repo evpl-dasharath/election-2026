@@ -11,17 +11,17 @@
     "votes_polled": 153845,
     "votes_counted": 8304,
     "valid_votes": 8304,
-    "rounds_completed": 12,
+    "rounds_completed": 16,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:35:37.282225+00:00"
+    "last_updated": "2026-05-04T08:34:20.178248+00:00"
   },
   "candidates_2026": [
     {
       "name": "Abin Varkey",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 39841,
-      "percentage": 43.12,
+      "votes": 53930,
+      "percentage": 43.45,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Veena George",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 29882,
-      "percentage": 32.34,
+      "votes": 40666,
+      "percentage": 32.77,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Kummanam Rajasekharan",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 21957,
-      "percentage": 23.76,
+      "votes": 28554,
+      "percentage": 23.01,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Prabhakaran V R",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 209,
-      "percentage": 0.23,
+      "votes": 257,
+      "percentage": 0.21,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Radhamani",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 114,
-      "percentage": 0.12,
+      "votes": 158,
+      "percentage": 0.13,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Omalloor Ramachandran",
       "party": "API",
       "alliance": "OTH",
-      "votes": 48,
-      "percentage": 0.05,
+      "votes": 77,
+      "percentage": 0.06,
       "is_winner": false,
       "is_leading": false
     },

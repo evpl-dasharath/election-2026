@@ -11,17 +11,17 @@
     "votes_polled": 135391,
     "votes_counted": 8577,
     "valid_votes": 8577,
-    "rounds_completed": 11,
+    "rounds_completed": 14,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:08.224324+00:00"
+    "last_updated": "2026-05-04T08:34:09.042521+00:00"
   },
   "candidates_2026": [
     {
       "name": "T. J. Saneesh Kumar Joseph",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 48542,
-      "percentage": 50.09,
+      "votes": 63061,
+      "percentage": 51.38,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Adv Biju Chirayath",
       "party": "KC_M",
       "alliance": "LDF",
-      "votes": 34775,
-      "percentage": 35.89,
+      "votes": 42962,
+      "percentage": 35.01,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Adv. Charlypaul",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 11742,
-      "percentage": 12.12,
+      "votes": 14408,
+      "percentage": 11.74,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "M S Asokan Mangalappilly",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 476,
-      "percentage": 0.49,
+      "votes": 577,
+      "percentage": 0.47,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "Wilson Kallen",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 354,
+      "votes": 451,
       "percentage": 0.37,
       "is_winner": false,
       "is_leading": false
@@ -65,8 +65,8 @@
       "name": "Arun Edathadan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 227,
-      "percentage": 0.23,
+      "votes": 272,
+      "percentage": 0.22,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,7 +74,7 @@
       "name": "A D Biju",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 158,
+      "votes": 195,
       "percentage": 0.16,
       "is_winner": false,
       "is_leading": false

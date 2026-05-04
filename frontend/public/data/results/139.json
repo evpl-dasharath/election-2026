@@ -11,17 +11,17 @@
     "votes_polled": 151986,
     "votes_counted": 8037,
     "valid_votes": 8037,
-    "rounds_completed": 10,
+    "rounds_completed": 13,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:54.536382+00:00"
+    "last_updated": "2026-05-04T08:34:31.224757+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. M. Vincent",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 37365,
-      "percentage": 47.76,
+      "votes": 49944,
+      "percentage": 48.79,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Bhagat Rufus",
       "party": "IND_LDF",
       "alliance": "LDF",
-      "votes": 23354,
-      "percentage": 29.85,
+      "votes": 30966,
+      "percentage": 30.25,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "T. N. Suresh",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 15860,
-      "percentage": 20.27,
+      "votes": 19292,
+      "percentage": 18.85,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,7 +47,7 @@
       "name": "Manoj S.P",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 311,
+      "votes": 407,
       "percentage": 0.4,
       "is_winner": false,
       "is_leading": false
@@ -56,7 +56,7 @@
       "name": "Kattachalkuzhi.M.Sugathan",
       "party": "SRP",
       "alliance": "OTH",
-      "votes": 254,
+      "votes": 324,
       "percentage": 0.32,
       "is_winner": false,
       "is_leading": false
@@ -65,8 +65,8 @@
       "name": "N.Jayarajan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 244,
-      "percentage": 0.31,
+      "votes": 303,
+      "percentage": 0.3,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "Adv. Sabu.S.Philip",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 178,
-      "percentage": 0.23,
+      "votes": 248,
+      "percentage": 0.24,
       "is_winner": false,
       "is_leading": false
     },
@@ -83,8 +83,8 @@
       "name": "Venganoor Ashokan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 105,
-      "percentage": 0.13,
+      "votes": 125,
+      "percentage": 0.12,
       "is_winner": false,
       "is_leading": false
     },
@@ -92,8 +92,8 @@
       "name": "Kiran S Pillai",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 57,
-      "percentage": 0.07,
+      "votes": 79,
+      "percentage": 0.08,
       "is_winner": false,
       "is_leading": false
     }

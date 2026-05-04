@@ -11,17 +11,17 @@
     "votes_polled": 160463,
     "votes_counted": 10075,
     "valid_votes": 10075,
-    "rounds_completed": 8,
+    "rounds_completed": 11,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:05.834162+00:00"
+    "last_updated": "2026-05-04T08:34:04.118942+00:00"
   },
   "candidates_2026": [
     {
       "name": "C. H. Rasheed",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 33124,
-      "percentage": 42.2,
+      "votes": 42678,
+      "percentage": 40.01,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "N. K. Akbar",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 31196,
-      "percentage": 39.75,
+      "votes": 42667,
+      "percentage": 40.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "B. Gopalakrishnan",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 12616,
-      "percentage": 16.07,
+      "votes": 19303,
+      "percentage": 18.1,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "K.V. Abdul Nasar Paroor",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 998,
-      "percentage": 1.27,
+      "votes": 1100,
+      "percentage": 1.03,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Pauly Francis Guruvayur",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 188,
-      "percentage": 0.24,
+      "votes": 348,
+      "percentage": 0.33,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,7 +65,7 @@
       "name": "C. R. Unnikrishnan",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 99,
+      "votes": 137,
       "percentage": 0.13,
       "is_winner": false,
       "is_leading": false

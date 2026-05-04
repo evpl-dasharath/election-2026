@@ -11,17 +11,17 @@
     "votes_polled": 143199,
     "votes_counted": 9405,
     "valid_votes": 9405,
-    "rounds_completed": 14,
+    "rounds_completed": 15,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:16.284541+00:00"
+    "last_updated": "2026-05-04T08:34:11.040655+00:00"
   },
   "candidates_2026": [
     {
       "name": "Apu John Joseph",
       "party": "KEC",
       "alliance": "UDF",
-      "votes": 72293,
-      "percentage": 58.33,
+      "votes": 76870,
+      "percentage": 58.14,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Cyriac Chazhikadan",
       "party": "KC_M",
       "alliance": "LDF",
-      "votes": 33595,
-      "percentage": 27.1,
+      "votes": 36150,
+      "percentage": 27.34,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Adv. Roy A. Varikkad",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 10988,
-      "percentage": 8.87,
+      "votes": 11664,
+      "percentage": 8.82,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Ajay V Marar (ajay Unni)",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 2250,
-      "percentage": 1.82,
+      "votes": 2396,
+      "percentage": 1.81,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Adv. Basil John",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 2171,
-      "percentage": 1.75,
+      "votes": 2391,
+      "percentage": 1.81,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Afsal M. B",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 1464,
-      "percentage": 1.18,
+      "votes": 1487,
+      "percentage": 1.12,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,7 +74,7 @@
       "name": "Jomon John",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 213,
+      "votes": 228,
       "percentage": 0.17,
       "is_winner": false,
       "is_leading": false
@@ -83,8 +83,8 @@
       "name": "P T Varghese",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 192,
-      "percentage": 0.15,
+      "votes": 206,
+      "percentage": 0.16,
       "is_winner": false,
       "is_leading": false
     }

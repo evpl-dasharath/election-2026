@@ -11,17 +11,17 @@
     "votes_polled": 159660,
     "votes_counted": 10312,
     "valid_votes": 10312,
-    "rounds_completed": 8,
+    "rounds_completed": 11,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:00.006247+00:00"
+    "last_updated": "2026-05-04T08:35:04.963311+00:00"
   },
   "candidates_2026": [
     {
       "name": "V. T. Balram",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 39975,
-      "percentage": 49.67,
+      "votes": 57471,
+      "percentage": 50.23,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "M. B. Rajesh",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 32587,
-      "percentage": 40.49,
+      "votes": 46236,
+      "percentage": 40.41,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "V. Unnikrishnan Master",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 6596,
-      "percentage": 8.2,
+      "votes": 8981,
+      "percentage": 7.85,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Shaheer Chalippuram",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 917,
-      "percentage": 1.14,
+      "votes": 1128,
+      "percentage": 0.99,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "Adv Keerthi Jayanandhan",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 97,
+      "votes": 133,
       "percentage": 0.12,
       "is_winner": false,
       "is_leading": false
@@ -65,7 +65,16 @@
       "name": "T T Balaraman",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 42,
+      "votes": 61,
+      "percentage": 0.05,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Balaraman",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 53,
       "percentage": 0.05,
       "is_winner": false,
       "is_leading": false
@@ -74,16 +83,7 @@
       "name": "Rajesh S/o Ramankutty",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 33,
-      "percentage": 0.04,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Balaraman",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 32,
+      "votes": 45,
       "percentage": 0.04,
       "is_winner": false,
       "is_leading": false
@@ -92,8 +92,8 @@
       "name": "Abbas",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 26,
-      "percentage": 0.03,
+      "votes": 43,
+      "percentage": 0.04,
       "is_winner": false,
       "is_leading": false
     }

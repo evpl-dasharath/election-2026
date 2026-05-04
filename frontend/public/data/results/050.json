@@ -6,31 +6,31 @@
     "district": "Palakkad"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 210790,
     "votes_polled": 166081,
     "votes_counted": 11107,
     "valid_votes": 11107,
-    "rounds_completed": 12,
+    "rounds_completed": 15,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:36:58.858347+00:00"
+    "last_updated": "2026-05-04T08:31:04.706148+00:00"
   },
   "candidates_2026": [
     {
       "name": "Muhammad Muhsin",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 63123,
-      "percentage": 47.19,
-      "is_winner": false,
-      "is_leading": true
+      "votes": 80062,
+      "percentage": 47.25,
+      "is_winner": true,
+      "is_leading": false
     },
     {
       "name": "T. P. Shaji",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 56235,
-      "percentage": 42.04,
+      "votes": 70620,
+      "percentage": 41.68,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Adv. P. Manoj",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 12007,
-      "percentage": 8.98,
+      "votes": 15282,
+      "percentage": 9.02,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "S.P. Ameer Ali",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 1670,
-      "percentage": 1.25,
+      "votes": 2582,
+      "percentage": 1.52,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "Muhammed Muhsin. M. K Manjerikunnath",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 122,
+      "votes": 152,
       "percentage": 0.09,
       "is_winner": false,
       "is_leading": false
@@ -65,7 +65,7 @@
       "name": "Haris Babu Pailippuram",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 81,
+      "votes": 104,
       "percentage": 0.06,
       "is_winner": false,
       "is_leading": false
@@ -74,7 +74,7 @@
       "name": "shajimon",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 61,
+      "votes": 86,
       "percentage": 0.05,
       "is_winner": false,
       "is_leading": false

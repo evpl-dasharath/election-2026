@@ -11,17 +11,17 @@
     "votes_polled": 139611,
     "votes_counted": 6806,
     "valid_votes": 6806,
-    "rounds_completed": 13,
+    "rounds_completed": 15,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:27.735925+00:00"
+    "last_updated": "2026-05-04T08:34:19.343499+00:00"
   },
   "candidates_2026": [
     {
       "name": "M. S. Arun Kumar",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 52526,
-      "percentage": 47.39,
+      "votes": 61021,
+      "percentage": 47.07,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Adv. Muthara Raj",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 39588,
-      "percentage": 35.72,
+      "votes": 46730,
+      "percentage": 36.05,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Ajimon",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 18066,
-      "percentage": 16.3,
+      "votes": 21117,
+      "percentage": 16.29,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,7 +47,7 @@
       "name": "SURESH NOORANAD",
       "party": "API",
       "alliance": "OTH",
-      "votes": 206,
+      "votes": 252,
       "percentage": 0.19,
       "is_winner": false,
       "is_leading": false

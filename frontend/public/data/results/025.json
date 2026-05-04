@@ -11,17 +11,17 @@
     "votes_polled": 187136,
     "votes_counted": 9909,
     "valid_votes": 9909,
-    "rounds_completed": 15,
+    "rounds_completed": 17,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:36:43.321633+00:00"
+    "last_updated": "2026-05-04T08:34:58.744861+00:00"
   },
   "candidates_2026": [
     {
       "name": "V. T. Sooraj",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 74105,
-      "percentage": 48.74,
+      "votes": 87907,
+      "percentage": 49.55,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Adv. K.M. Sachindev",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 63338,
-      "percentage": 41.66,
+      "votes": 72444,
+      "percentage": 40.84,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "C. P. Sateeshan",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 13779,
-      "percentage": 9.06,
+      "votes": 16108,
+      "percentage": 9.08,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Sooraj K S/o Asokan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 226,
-      "percentage": 0.15,
+      "votes": 255,
+      "percentage": 0.14,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "Abhijith",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 188,
+      "votes": 216,
       "percentage": 0.12,
       "is_winner": false,
       "is_leading": false

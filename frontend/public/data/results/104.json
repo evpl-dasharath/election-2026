@@ -11,17 +11,17 @@
     "votes_polled": 155979,
     "votes_counted": 10396,
     "valid_votes": 10396,
-    "rounds_completed": 11,
+    "rounds_completed": 14,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:18.825813+00:00"
+    "last_updated": "2026-05-04T08:34:19.022904+00:00"
   },
   "candidates_2026": [
     {
       "name": "A. D. Thomas",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 56357,
-      "percentage": 50.04,
+      "votes": 70863,
+      "percentage": 50.32,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "P. P. Chitharanjan",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 44617,
-      "percentage": 39.62,
+      "votes": 54828,
+      "percentage": 38.94,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "M.J. Job",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 10830,
-      "percentage": 9.62,
+      "votes": 14091,
+      "percentage": 10.01,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,7 +47,7 @@
       "name": "Joseph Chacko",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 112,
+      "votes": 139,
       "percentage": 0.1,
       "is_winner": false,
       "is_leading": false
@@ -56,7 +56,7 @@
       "name": "Alleppey Sugunan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 94,
+      "votes": 110,
       "percentage": 0.08,
       "is_winner": false,
       "is_leading": false
@@ -65,7 +65,7 @@
       "name": "Jyothi Abraham",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 65,
+      "votes": 86,
       "percentage": 0.06,
       "is_winner": false,
       "is_leading": false

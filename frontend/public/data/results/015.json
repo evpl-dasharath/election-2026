@@ -11,17 +11,17 @@
     "votes_polled": 165893,
     "votes_counted": 11948,
     "valid_votes": 11948,
-    "rounds_completed": 10,
+    "rounds_completed": 13,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:36:38.165012+00:00"
+    "last_updated": "2026-05-04T08:34:52.592540+00:00"
   },
   "candidates_2026": [
     {
       "name": "V. K. Sanoj",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 54941,
-      "percentage": 46.75,
+      "votes": 72486,
+      "percentage": 47.98,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Chandran Thillankeri",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 48449,
-      "percentage": 41.23,
+      "votes": 59686,
+      "percentage": 39.51,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Biju Elakkuzhi",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 11749,
-      "percentage": 10.0,
+      "votes": 15822,
+      "percentage": 10.47,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Basheer Punnad",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 1612,
-      "percentage": 1.37,
+      "votes": 2089,
+      "percentage": 1.38,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "Sanoj",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 138,
+      "votes": 186,
       "percentage": 0.12,
       "is_winner": false,
       "is_leading": false
@@ -65,7 +65,7 @@
       "name": "Chandran Thengalath",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 109,
+      "votes": 135,
       "percentage": 0.09,
       "is_winner": false,
       "is_leading": false

@@ -11,17 +11,17 @@
     "votes_polled": 136370,
     "votes_counted": 0,
     "valid_votes": 0,
-    "rounds_completed": 11,
+    "rounds_completed": 12,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:18.931413+00:00"
+    "last_updated": "2026-05-04T08:34:13.046081+00:00"
   },
   "candidates_2026": [
     {
       "name": "Shibu Thekkumpuram",
       "party": "KEC",
       "alliance": "UDF",
-      "votes": 56857,
-      "percentage": 52.44,
+      "votes": 63130,
+      "percentage": 52.92,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Antony John",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 44438,
-      "percentage": 40.99,
+      "votes": 48577,
+      "percentage": 40.72,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Aji Narayanan",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 5614,
-      "percentage": 5.18,
+      "votes": 5851,
+      "percentage": 4.9,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Roy Arackal",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 503,
-      "percentage": 0.46,
+      "votes": 659,
+      "percentage": 0.55,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Shibu Kallekkattu",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 224,
-      "percentage": 0.21,
+      "votes": 244,
+      "percentage": 0.2,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Shibu Chalakattu",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 148,
-      "percentage": 0.14,
+      "votes": 161,
+      "percentage": 0.13,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "Finto Xavier",
       "party": "RJP",
       "alliance": "OTH",
-      "votes": 117,
-      "percentage": 0.11,
+      "votes": 123,
+      "percentage": 0.1,
       "is_winner": false,
       "is_leading": false
     }

@@ -11,17 +11,17 @@
     "votes_polled": 127127,
     "votes_counted": 7074,
     "valid_votes": 7074,
-    "rounds_completed": 10,
+    "rounds_completed": 13,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:49.247868+00:00"
+    "last_updated": "2026-05-04T08:34:28.844968+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. V.K Prasanth",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 25167,
-      "percentage": 34.66,
+      "votes": 32662,
+      "percentage": 34.3,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "K. Muraleedharan",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 24959,
-      "percentage": 34.38,
+      "votes": 32652,
+      "percentage": 34.29,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "R. Sreelekha",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 21749,
-      "percentage": 29.96,
+      "votes": 28972,
+      "percentage": 30.42,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "N. Murali",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 182,
-      "percentage": 0.25,
+      "votes": 221,
+      "percentage": 0.23,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Prasanth. K S/o. Karunakaran.C",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 75,
-      "percentage": 0.1,
+      "votes": 104,
+      "percentage": 0.11,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,7 +65,7 @@
       "name": "Emil B.S",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 63,
+      "votes": 89,
       "percentage": 0.09,
       "is_winner": false,
       "is_leading": false
@@ -74,7 +74,7 @@
       "name": "Sreekantan Nair V",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 36,
+      "votes": 51,
       "percentage": 0.05,
       "is_winner": false,
       "is_leading": false
@@ -83,8 +83,8 @@
       "name": "Muralidharan. P S/o. K. Ponnan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 34,
-      "percentage": 0.05,
+      "votes": 38,
+      "percentage": 0.04,
       "is_winner": false,
       "is_leading": false
     }

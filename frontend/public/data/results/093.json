@@ -11,17 +11,17 @@
     "votes_polled": 132562,
     "votes_counted": 7499,
     "valid_votes": 7499,
-    "rounds_completed": 12,
+    "rounds_completed": 14,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:22.078778+00:00"
+    "last_updated": "2026-05-04T08:34:12.973986+00:00"
   },
   "candidates_2026": [
     {
       "name": "Mani C. Kappan",
       "party": "KDP",
       "alliance": "UDF",
-      "votes": 37824,
-      "percentage": 37.95,
+      "votes": 45287,
+      "percentage": 37.22,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Jose K. Mani",
       "party": "KC_M",
       "alliance": "LDF",
-      "votes": 34930,
-      "percentage": 35.05,
+      "votes": 43213,
+      "percentage": 35.52,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Shone George",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 25462,
-      "percentage": 25.55,
+      "votes": 31423,
+      "percentage": 25.83,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Adv. Rony Jose Nedumpallil",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 415,
-      "percentage": 0.42,
+      "votes": 468,
+      "percentage": 0.38,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "C G Babu",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 234,
-      "percentage": 0.23,
+      "votes": 286,
+      "percentage": 0.24,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,7 +65,7 @@
       "name": "Santhosh Pulickal",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 203,
+      "votes": 249,
       "percentage": 0.2,
       "is_winner": false,
       "is_leading": false
@@ -74,8 +74,8 @@
       "name": "Santhosh Nadoopparampil",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 171,
-      "percentage": 0.17,
+      "votes": 219,
+      "percentage": 0.18,
       "is_winner": false,
       "is_leading": false
     }

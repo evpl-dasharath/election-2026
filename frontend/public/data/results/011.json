@@ -11,17 +11,17 @@
     "votes_polled": 138125,
     "votes_counted": 22168,
     "valid_votes": 22168,
-    "rounds_completed": 10,
+    "rounds_completed": 11,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:36:34.240733+00:00"
+    "last_updated": "2026-05-04T08:34:52.574028+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. T. O. Mohanan",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 55587,
-      "percentage": 51.41,
+      "votes": 59819,
+      "percentage": 50.7,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Kadannappalli Ramachandran",
       "party": "CON_S",
       "alliance": "LDF",
-      "votes": 39177,
-      "percentage": 36.24,
+      "votes": 43117,
+      "percentage": 36.55,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "C. Raghunath",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 12136,
-      "percentage": 11.22,
+      "votes": 13683,
+      "percentage": 11.6,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "T.K. Mohanan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 210,
-      "percentage": 0.19,
+      "votes": 231,
+      "percentage": 0.2,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Suresh Kumar",
       "party": "BJKP",
       "alliance": "OTH",
-      "votes": 189,
-      "percentage": 0.17,
+      "votes": 212,
+      "percentage": 0.18,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "M.K. Shahazad",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 167,
-      "percentage": 0.15,
+      "votes": 186,
+      "percentage": 0.16,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "Ramachandran Kuniyil",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 144,
-      "percentage": 0.13,
+      "votes": 162,
+      "percentage": 0.14,
       "is_winner": false,
       "is_leading": false
     }

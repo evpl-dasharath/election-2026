@@ -11,26 +11,26 @@
     "votes_polled": 118734,
     "votes_counted": 6007,
     "valid_votes": 6007,
-    "rounds_completed": 12,
+    "rounds_completed": 15,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:59.687824+00:00"
+    "last_updated": "2026-05-04T08:34:26.649064+00:00"
   },
   "candidates_2026": [
-    {
-      "name": "Karamana Jayan",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 25931,
-      "percentage": 34.26,
-      "is_winner": false,
-      "is_leading": true
-    },
     {
       "name": "C. P. John",
       "party": "CMP",
       "alliance": "UDF",
-      "votes": 25866,
-      "percentage": 34.17,
+      "votes": 34163,
+      "percentage": 34.57,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Karamana Jayan",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 33839,
+      "percentage": 34.25,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Sudheer Karamana",
       "party": "IND_LDF",
       "alliance": "LDF",
-      "votes": 21507,
-      "percentage": 28.42,
+      "votes": 27616,
+      "percentage": 27.95,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,7 +47,7 @@
       "name": "Suresh Kumar",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 447,
+      "votes": 579,
       "percentage": 0.59,
       "is_winner": false,
       "is_leading": false
@@ -56,8 +56,8 @@
       "name": "Samin Sathyadas",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 353,
-      "percentage": 0.47,
+      "votes": 458,
+      "percentage": 0.46,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Adv. Sen",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 305,
-      "percentage": 0.4,
+      "votes": 382,
+      "percentage": 0.39,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "P. K. Pradeep Kumar",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 249,
-      "percentage": 0.33,
+      "votes": 348,
+      "percentage": 0.35,
       "is_winner": false,
       "is_leading": false
     },
@@ -83,7 +83,16 @@
       "name": "Manomohan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 126,
+      "votes": 186,
+      "percentage": 0.19,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "A Saboora",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 171,
       "percentage": 0.17,
       "is_winner": false,
       "is_leading": false
@@ -92,17 +101,8 @@
       "name": "Karthika Devi M",
       "party": "JRP",
       "alliance": "OTH",
-      "votes": 114,
-      "percentage": 0.15,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "A Saboora",
-      "party": "SUCI",
-      "alliance": "OTH",
-      "votes": 113,
-      "percentage": 0.15,
+      "votes": 171,
+      "percentage": 0.17,
       "is_winner": false,
       "is_leading": false
     },
@@ -110,8 +110,8 @@
       "name": "Bindhu Menon L R",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 88,
-      "percentage": 0.12,
+      "votes": 124,
+      "percentage": 0.13,
       "is_winner": false,
       "is_leading": false
     }

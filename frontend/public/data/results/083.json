@@ -11,17 +11,17 @@
     "votes_polled": 139081,
     "votes_counted": 6702,
     "valid_votes": 6702,
-    "rounds_completed": 14,
+    "rounds_completed": 17,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:14.996951+00:00"
+    "last_updated": "2026-05-04T08:34:09.327184+00:00"
   },
   "candidates_2026": [
     {
       "name": "Uma Thomas",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 61428,
-      "percentage": 59.46,
+      "votes": 74962,
+      "percentage": 59.5,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Adv. Pushpa das",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 23280,
-      "percentage": 22.53,
+      "votes": 29239,
+      "percentage": 23.21,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Akhil Raj (Akhil Marar)",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 16728,
-      "percentage": 16.19,
+      "votes": 19518,
+      "percentage": 15.49,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Jose George",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 455,
-      "percentage": 0.44,
+      "votes": 539,
+      "percentage": 0.43,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Aloysius Kollannur",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 385,
-      "percentage": 0.37,
+      "votes": 498,
+      "percentage": 0.4,
       "is_winner": false,
       "is_leading": false
     }

@@ -11,17 +11,17 @@
     "votes_polled": 160707,
     "votes_counted": 0,
     "valid_votes": 0,
-    "rounds_completed": 8,
+    "rounds_completed": 11,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:36:53.458405+00:00"
+    "last_updated": "2026-05-04T08:35:05.043554+00:00"
   },
   "candidates_2026": [
     {
       "name": "K. P. Noushad Ali",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 39587,
-      "percentage": 47.91,
+      "votes": 55486,
+      "percentage": 48.97,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Adv. M. K. Sakeer",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 35435,
-      "percentage": 42.89,
+      "votes": 47272,
+      "percentage": 41.72,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "E. Maneesh",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 5699,
-      "percentage": 6.9,
+      "votes": 7939,
+      "percentage": 7.01,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Anvar Pazhanji",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 1064,
-      "percentage": 1.29,
+      "votes": 1418,
+      "percentage": 1.25,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Noushadali",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 166,
-      "percentage": 0.2,
+      "votes": 234,
+      "percentage": 0.21,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Sakkeer S/o Muhammed",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 142,
-      "percentage": 0.17,
+      "votes": 199,
+      "percentage": 0.18,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "Sageer M.K",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 115,
-      "percentage": 0.14,
+      "votes": 144,
+      "percentage": 0.13,
       "is_winner": false,
       "is_leading": false
     },
@@ -83,8 +83,8 @@
       "name": "Sakkeer S/o Illyas",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 72,
-      "percentage": 0.09,
+      "votes": 113,
+      "percentage": 0.1,
       "is_winner": false,
       "is_leading": false
     }

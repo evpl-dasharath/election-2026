@@ -11,26 +11,26 @@
     "votes_polled": 145185,
     "votes_counted": 10161,
     "valid_votes": 10161,
-    "rounds_completed": 7,
+    "rounds_completed": 9,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:35:40.581492+00:00"
+    "last_updated": "2026-05-04T08:34:27.123642+00:00"
   },
   "candidates_2026": [
-    {
-      "name": "Adv. P. Aisha Potty",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 29095,
-      "percentage": 41.86,
-      "is_winner": false,
-      "is_leading": true
-    },
     {
       "name": "K. N. Balagopal",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 28850,
-      "percentage": 41.51,
+      "votes": 38197,
+      "percentage": 42.47,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Adv. P. Aisha Potty",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 37729,
+      "percentage": 41.95,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "R. Reshmi",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 10953,
-      "percentage": 15.76,
+      "votes": 13246,
+      "percentage": 14.73,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Mamachan D",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 135,
-      "percentage": 0.19,
+      "votes": 176,
+      "percentage": 0.2,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Wilfred Zacharias",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 105,
-      "percentage": 0.15,
+      "votes": 130,
+      "percentage": 0.14,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,7 +65,7 @@
       "name": "G Suresh",
       "party": "EPI",
       "alliance": "OTH",
-      "votes": 63,
+      "votes": 78,
       "percentage": 0.09,
       "is_winner": false,
       "is_leading": false

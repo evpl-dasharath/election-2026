@@ -6,31 +6,31 @@
     "district": "Wayanad"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 212881,
     "votes_polled": 171049,
     "votes_counted": 10867,
     "valid_votes": 10867,
-    "rounds_completed": 14,
+    "rounds_completed": 17,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:36:40.581586+00:00"
+    "last_updated": "2026-05-04T08:11:47.704909+00:00"
   },
   "candidates_2026": [
     {
       "name": "T. Siddique",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 83238,
-      "percentage": 56.05,
-      "is_winner": false,
-      "is_leading": true
+      "votes": 97379,
+      "percentage": 56.15,
+      "is_winner": true,
+      "is_leading": false
     },
     {
       "name": "P. K. Anil Kumar",
       "party": "RJD",
       "alliance": "LDF",
-      "votes": 44769,
-      "percentage": 30.15,
+      "votes": 52348,
+      "percentage": 30.18,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Prasanth Malavayal",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 16718,
-      "percentage": 11.26,
+      "votes": 19175,
+      "percentage": 11.06,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Rafeek C A",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 757,
-      "percentage": 0.51,
+      "votes": 867,
+      "percentage": 0.5,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "N Hamza",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 539,
-      "percentage": 0.36,
+      "votes": 801,
+      "percentage": 0.46,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,7 +65,7 @@
       "name": "Radhakrishnan M",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 390,
+      "votes": 446,
       "percentage": 0.26,
       "is_winner": false,
       "is_leading": false
@@ -74,8 +74,8 @@
       "name": "Sidheeque S/o Kunjammad",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 325,
-      "percentage": 0.22,
+      "votes": 360,
+      "percentage": 0.21,
       "is_winner": false,
       "is_leading": false
     },
@@ -83,8 +83,8 @@
       "name": "P. K. Anil Kumar",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 285,
-      "percentage": 0.19,
+      "votes": 347,
+      "percentage": 0.2,
       "is_winner": false,
       "is_leading": false
     },
@@ -92,8 +92,8 @@
       "name": "V. K. Prakash",
       "party": "CPI_ML_RS",
       "alliance": "OTH",
-      "votes": 269,
-      "percentage": 0.18,
+      "votes": 325,
+      "percentage": 0.19,
       "is_winner": false,
       "is_leading": false
     },
@@ -101,8 +101,8 @@
       "name": "T K Ummer",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 238,
-      "percentage": 0.16,
+      "votes": 256,
+      "percentage": 0.15,
       "is_winner": false,
       "is_leading": false
     }

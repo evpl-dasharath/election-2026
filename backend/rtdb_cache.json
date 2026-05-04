@@ -1,672 +1,903 @@
 {
   "meta": {
-    "timestamp": "2026-05-04T07:45:07.142273+00:00",
+    "timestamp": "2026-05-04T11:33:15.796665+00:00",
     "total_constituencies": 140,
-    "results_declared": 6,
-    "counting_in_progress": 134,
+    "results_declared": 4,
+    "counting_in_progress": 136,
     "not_started": 0,
     "alliance_summary": {
       "UDF": {
-        "won": 2,
-        "leading": 100,
+        "won": 3,
+        "leading": 99,
         "trailing": 0,
-        "vote_share": 46.61746470587442
+        "vote_share": 46.794605343163354
       },
       "LDF": {
-        "won": 4,
-        "leading": 31,
+        "won": 1,
+        "leading": 34,
         "trailing": 0,
-        "vote_share": 36.98960639780659
+        "vote_share": 36.9155842124378
       },
       "NDA": {
         "won": 0,
         "leading": 3,
         "trailing": 0,
-        "vote_share": 14.536888989636083
+        "vote_share": 14.295054300224194
       },
       "OTH": {
         "won": 0,
         "leading": 0,
         "trailing": 0,
-        "vote_share": 1.856039906682912
+        "vote_share": 1.9947561441746573
       }
     },
     "ind_summary": {
       "won": 0,
       "leading": 0
     },
-    "total_votes_counted": 14822580,
+    "total_votes_counted": 21416302,
     "total_votes_polled": 21225079
   },
   "live": {
-    "109": {
+    "10": {
       "status": "IN_PROGRESS",
-      "rounds_completed": 13,
-      "total_rounds": 17,
-      "total_electors": 192435,
-      "votes_polled": 139611,
-      "last_updated": "2026-05-04T07:44:16.610187+00:00",
+      "rounds_completed": 0,
+      "total_rounds": 0,
+      "total_electors": 188250,
+      "votes_polled": 146289,
+      "last_updated": "2026-05-04T11:33:02.065116+00:00",
       "candidates": [
         {
-          "name": "M. S. Arun Kumar",
+          "name": "K. V. Sumesh",
           "party": "CPI_M",
-          "votes": 52526
+          "votes": 64951
         },
         {
-          "name": "Adv. Muthara Raj",
-          "party": "INC",
-          "votes": 39588
+          "name": "Adv.  Kareem Cheleri",
+          "party": "IUML",
+          "votes": 64602
         },
         {
-          "name": "Ajimon",
+          "name": "K. K. Vinod Kumar",
           "party": "BJP",
-          "votes": 18066
+          "votes": 17476
         },
         {
-          "name": "SURESH NOORANAD",
-          "party": "API",
-          "votes": 206
+          "name": "Abdul Kareem. V. V",
+          "party": "IND",
+          "votes": 235
+        },
+        {
+          "name": "Reshmi Ravi",
+          "party": "SUCI",
+          "votes": 227
+        },
+        {
+          "name": "Sumesh. T. P",
+          "party": "IND",
+          "votes": 124
+        },
+        {
+          "name": "Kareem Chandroth",
+          "party": "IND",
+          "votes": 115
+        },
+        {
+          "name": "Sumesh Kumar. K",
+          "party": "IND",
+          "votes": 106
+        },
+        {
+          "name": "NOTA",
+          "party": "NOTA",
+          "votes": 576
         }
       ]
     },
-    "111": {
+    "12": {
       "status": "IN_PROGRESS",
-      "rounds_completed": 12,
-      "total_rounds": 18,
-      "total_electors": 198395,
-      "votes_polled": 137825,
-      "last_updated": "2026-05-04T07:44:22.761566+00:00",
+      "rounds_completed": 0,
+      "total_rounds": 0,
+      "total_electors": 206000,
+      "votes_polled": 167766,
+      "last_updated": "2026-05-04T11:33:03.219350+00:00",
       "candidates": [
         {
-          "name": "Adv. Varghese Mammen",
-          "party": "KEC",
-          "votes": 36735
+          "name": "Pinarayi Vijayan",
+          "party": "CPI_M",
+          "votes": 85614
         },
         {
-          "name": "Anoop Antony",
+          "name": "Adv. V.P Abdul Rasheed",
+          "party": "INC",
+          "votes": 66367
+        },
+        {
+          "name": "K. Ranjith",
           "party": "BJP",
-          "votes": 28014
+          "votes": 18555
         },
         {
-          "name": "Mathew T. Thomas",
-          "party": "ISJD",
-          "votes": 27553
-        },
-        {
-          "name": "Ramesh Chathenkary",
-          "party": "BSP",
-          "votes": 727
-        },
-        {
-          "name": "Thomas Mammen",
+          "name": "Vadi Hareendran",
           "party": "IND",
-          "votes": 384
+          "votes": 193
         },
         {
-          "name": "Aju Alex",
+          "name": "Vijayan A.M S/o Kunhiraman",
           "party": "IND",
-          "votes": 163
+          "votes": 117
         },
         {
-          "name": "Zeen Thomas",
-          "party": "IND",
-          "votes": 84
+          "name": "NOTA",
+          "party": "NOTA",
+          "votes": 813
         }
       ]
     },
-    "122": {
+    "9": {
       "status": "IN_PROGRESS",
-      "rounds_completed": 9,
-      "total_rounds": 15,
-      "total_electors": 201716,
-      "votes_polled": 150137,
-      "last_updated": "2026-05-04T07:44:29.897659+00:00",
+      "rounds_completed": 0,
+      "total_rounds": 0,
+      "total_electors": 199326,
+      "votes_polled": 148139,
+      "last_updated": "2026-05-04T11:33:03.887942+00:00",
       "candidates": [
         {
-          "name": "M. M. Naseer",
+          "name": "Adv. Sajeev Joseph",
           "party": "INC",
-          "votes": 40228
+          "votes": 90895
         },
         {
-          "name": "J. Chinchu Rani",
-          "party": "CPI",
-          "votes": 37253
+          "name": "Adv. Mathew Kunnappally",
+          "party": "KC_M",
+          "votes": 48469
         },
         {
-          "name": "R. S. Arun Raj",
-          "party": "BJP",
-          "votes": 12934
-        },
-        {
-          "name": "Sharafath Mallam",
-          "party": "SDPI",
-          "votes": 1053
-        },
-        {
-          "name": "Aji Kadasseri",
-          "party": "Anna DHRM",
-          "votes": 254
-        },
-        {
-          "name": "G. Jayan Moonlight Chithara",
-          "party": "IND",
-          "votes": 126
-        }
-      ]
-    },
-    "120": {
-      "status": "IN_PROGRESS",
-      "rounds_completed": 11,
-      "total_rounds": 14,
-      "total_electors": 179783,
-      "votes_polled": 135142,
-      "last_updated": "2026-05-04T07:44:30.467533+00:00",
-      "candidates": [
-        {
-          "name": "Jyothikumar chamakkala",
-          "party": "INC",
-          "votes": 52298
-        },
-        {
-          "name": "K. B. Ganesh Kumar",
-          "party": "KC_B",
-          "votes": 46613
-        },
-        {
-          "name": "Anil Pilla",
+          "name": "Sreenath Padmanabhan",
           "party": "TTP",
-          "votes": 5240
+          "votes": 9617
         },
         {
-          "name": "Vipinkumar V",
-          "party": "BSP",
-          "votes": 441
+          "name": "Joseph P.V",
+          "party": "AAP",
+          "votes": 1151
         },
         {
-          "name": "Genash Kumar",
+          "name": "M. J. Mathew",
+          "party": "SDPI",
+          "votes": 417
+        },
+        {
+          "name": "Amal K T",
           "party": "IND",
-          "votes": 428
+          "votes": 299
         },
         {
-          "name": "Aneesh Aneesh",
-          "party": "Anna DHRM",
-          "votes": 226
+          "name": "NOTA",
+          "party": "NOTA",
+          "votes": 797
+        }
+      ]
+    },
+    "16": {
+      "status": "IN_PROGRESS",
+      "rounds_completed": 0,
+      "total_rounds": 0,
+      "total_electors": 182384,
+      "votes_polled": 144265,
+      "last_updated": "2026-05-04T11:33:04.799612+00:00",
+      "candidates": [
+        {
+          "name": "Adv. Sunny Joseph",
+          "party": "INC",
+          "votes": 76140
         },
         {
-          "name": "Jyothish Kumar M",
+          "name": "K. K. Shailaja",
+          "party": "CPI_M",
+          "votes": 61687
+        },
+        {
+          "name": "Paily Vathiatt",
+          "party": "BDJS",
+          "votes": 8020
+        },
+        {
+          "name": "Adv. Henstion George",
+          "party": "AAP",
+          "votes": 431
+        },
+        {
+          "name": "Sunny Joseph Muthukulathel",
+          "party": "IND",
+          "votes": 191
+        },
+        {
+          "name": "Sailaja. A. V",
+          "party": "IND",
+          "votes": 109
+        },
+        {
+          "name": "Aruvikkal Krishnan",
+          "party": "CPI_ML_RS",
+          "votes": 86
+        },
+        {
+          "name": "C. Shylaja",
+          "party": "IND",
+          "votes": 68
+        },
+        {
+          "name": "Sunny",
+          "party": "IND",
+          "votes": 66
+        },
+        {
+          "name": "Narayana Kumar",
+          "party": "IND",
+          "votes": 45
+        },
+        {
+          "name": "Venugopalan. C",
+          "party": "IND",
+          "votes": 26
+        },
+        {
+          "name": "NOTA",
+          "party": "NOTA",
+          "votes": 375
+        }
+      ]
+    },
+    "18": {
+      "status": "IN_PROGRESS",
+      "rounds_completed": 0,
+      "total_rounds": 0,
+      "total_electors": 225329,
+      "votes_polled": 173976,
+      "last_updated": "2026-05-04T11:33:05.894041+00:00",
+      "candidates": [
+        {
+          "name": "I. C. Balakrishnan",
+          "party": "INC",
+          "votes": 78936
+        },
+        {
+          "name": "M. S. Viswanathan",
+          "party": "CPI_M",
+          "votes": 62339
+        },
+        {
+          "name": "A. S. Kavitha",
+          "party": "BJP",
+          "votes": 31308
+        },
+        {
+          "name": "Prakrithi N V",
+          "party": "AAP",
+          "votes": 1781
+        },
+        {
+          "name": "Benadict",
+          "party": "BSP",
+          "votes": 447
+        },
+        {
+          "name": "V.A Ramesan",
+          "party": "SUCI",
+          "votes": 275
+        },
+        {
+          "name": "Balakrishnan Edakkal",
+          "party": "IND",
+          "votes": 212
+        },
+        {
+          "name": "Rajesh R M",
           "party": "IND",
           "votes": 198
+        },
+        {
+          "name": "NOTA",
+          "party": "NOTA",
+          "votes": 1442
         }
       ]
     },
-    "136": {
+    "15": {
       "status": "IN_PROGRESS",
-      "rounds_completed": 12,
-      "total_rounds": 20,
-      "total_electors": 181308,
-      "votes_polled": 143414,
-      "last_updated": "2026-05-04T07:44:33.840881+00:00",
+      "rounds_completed": 0,
+      "total_rounds": 0,
+      "total_electors": 201719,
+      "votes_polled": 165893,
+      "last_updated": "2026-05-04T11:33:06.491220+00:00",
       "candidates": [
         {
-          "name": "Adv. G. Steephen",
+          "name": "V. K. Sanoj",
           "party": "CPI_M",
-          "votes": 36797
+          "votes": 81456
         },
         {
-          "name": "V. S. Sivakumar",
+          "name": "Chandran Thillankeri",
           "party": "INC",
-          "votes": 34595
+          "votes": 67288
         },
         {
-          "name": "Vivek Gopan",
+          "name": "Biju Elakkuzhi",
           "party": "BJP",
-          "votes": 14914
+          "votes": 17815
         },
         {
-          "name": "Santhosh Kumar. S",
-          "party": "BSP",
-          "votes": 332
-        },
-        {
-          "name": "V. S. Sivakumar S/o Sivadasan",
-          "party": "IND",
-          "votes": 186
-        },
-        {
-          "name": "R. Steephen S/o Rafi",
-          "party": "IND",
-          "votes": 160
-        },
-        {
-          "name": "Adv. S. Sivakumar S/o Sadasivan",
-          "party": "IND",
-          "votes": 70
-        }
-      ]
-    },
-    "117": {
-      "status": "IN_PROGRESS",
-      "rounds_completed": 12,
-      "total_rounds": 14,
-      "total_electors": 178798,
-      "votes_polled": 139337,
-      "last_updated": "2026-05-04T07:44:34.934362+00:00",
-      "candidates": [
-        {
-          "name": "Shibu Baby John",
-          "party": "RSP",
-          "votes": 67998
-        },
-        {
-          "name": "Dr. Sujith Vijayanpillai",
-          "party": "IND_LDF",
-          "votes": 50005
-        },
-        {
-          "name": "K. R. Rajesh",
-          "party": "BJP",
-          "votes": 9011
-        }
-      ]
-    },
-    "119": {
-      "status": "IN_PROGRESS",
-      "rounds_completed": 7,
-      "total_rounds": 15,
-      "total_electors": 193272,
-      "votes_polled": 145185,
-      "last_updated": "2026-05-04T07:44:35.974450+00:00",
-      "candidates": [
-        {
-          "name": "Adv. P. Aisha Potty",
-          "party": "INC",
-          "votes": 29095
-        },
-        {
-          "name": "K. N. Balagopal",
-          "party": "CPI_M",
-          "votes": 28850
-        },
-        {
-          "name": "R. Reshmi",
-          "party": "BJP",
-          "votes": 10953
-        },
-        {
-          "name": "Mamachan D",
-          "party": "AAP",
-          "votes": 135
-        },
-        {
-          "name": "Wilfred Zacharias",
-          "party": "BSP",
-          "votes": 105
-        },
-        {
-          "name": "G Suresh",
-          "party": "EPI",
-          "votes": 63
-        }
-      ]
-    },
-    "126": {
-      "status": "IN_PROGRESS",
-      "rounds_completed": 9,
-      "total_rounds": 16,
-      "total_electors": 177000,
-      "votes_polled": 134325,
-      "last_updated": "2026-05-04T07:44:39.671748+00:00",
-      "candidates": [
-        {
-          "name": "B. B. Gopakumar",
-          "party": "BJP",
-          "votes": 29950
-        },
-        {
-          "name": "Adv. R.Rajendran",
-          "party": "CPI",
-          "votes": 29128
-        },
-        {
-          "name": "Sooraj Ravi",
-          "party": "INC",
-          "votes": 23207
-        },
-        {
-          "name": "Arun A",
-          "party": "AAP",
-          "votes": 387
-        },
-        {
-          "name": "Sindhu Puthenkulam",
-          "party": "Anna DHRM",
-          "votes": 202
-        }
-      ]
-    },
-    "123": {
-      "status": "IN_PROGRESS",
-      "rounds_completed": 12,
-      "total_rounds": 17,
-      "total_electors": 206464,
-      "votes_polled": 161537,
-      "last_updated": "2026-05-04T07:44:40.872052+00:00",
-      "candidates": [
-        {
-          "name": "P. C. Vishnunadh",
-          "party": "INC",
-          "votes": 62564
-        },
-        {
-          "name": "S. L. Sajikumar",
-          "party": "CPI_M",
-          "votes": 38597
-        },
-        {
-          "name": "Robin Radhakrishnan (Robin RB)",
-          "party": "BJP",
-          "votes": 14392
-        },
-        {
-          "name": "Riyas M",
-          "party": "IND",
-          "votes": 405
-        },
-        {
-          "name": "Lathika C",
-          "party": "BSP",
-          "votes": 395
-        },
-        {
-          "name": "Rahul R",
-          "party": "SUCI",
-          "votes": 214
-        }
-      ]
-    },
-    "128": {
-      "status": "IN_PROGRESS",
-      "rounds_completed": 11,
-      "total_rounds": 16,
-      "total_electors": 197945,
-      "votes_polled": 146122,
-      "last_updated": "2026-05-04T07:44:42.699471+00:00",
-      "candidates": [
-        {
-          "name": "O. S. Ambika",
-          "party": "CPI_M",
-          "votes": 43504
-        },
-        {
-          "name": "P. Sudheer",
-          "party": "BJP",
-          "votes": 31730
-        },
-        {
-          "name": "Santhosh Bhadran",
-          "party": "RSP",
-          "votes": 29913
-        },
-        {
-          "name": "Jayarajan M",
+          "name": "Basheer Punnad",
           "party": "SDPI",
-          "votes": 889
+          "votes": 2171
         },
         {
-          "name": "S. Sujithra",
-          "party": "BSP",
-          "votes": 682
+          "name": "Sanoj",
+          "party": "IND",
+          "votes": 210
         },
         {
-          "name": "Sunitha Kilimanoor",
-          "party": "Anna DHRM",
-          "votes": 306
+          "name": "Chandran Thengalath",
+          "party": "IND",
+          "votes": 147
+        },
+        {
+          "name": "NOTA",
+          "party": "NOTA",
+          "votes": 771
         }
       ]
     },
-    "132": {
+    "22": {
       "status": "IN_PROGRESS",
-      "rounds_completed": 9,
-      "total_rounds": 18,
-      "total_electors": 164561,
-      "votes_polled": 129377,
-      "last_updated": "2026-05-04T07:44:46.252277+00:00",
+      "rounds_completed": 0,
+      "total_rounds": 0,
+      "total_electors": 233690,
+      "votes_polled": 185690,
+      "last_updated": "2026-05-04T11:33:07.532296+00:00",
       "candidates": [
         {
-          "name": "Kadakampally Surendran",
-          "party": "CPI_M",
-          "votes": 23757
-        },
-        {
-          "name": "V. Muraleedharan",
-          "party": "BJP",
-          "votes": 22511
-        },
-        {
-          "name": "Adv.  T. Sarathchandra Prasad",
+          "name": "K. M. Abhijith",
           "party": "INC",
-          "votes": 18006
+          "votes": 99763
         },
         {
-          "name": "T. S. Rajan",
-          "party": "BSP",
-          "votes": 151
-        },
-        {
-          "name": "Deebika Karimanal",
-          "party": "Anna DHRM",
-          "votes": 149
-        },
-        {
-          "name": "K. Surendran",
-          "party": "IND",
-          "votes": 50
-        },
-        {
-          "name": "Sreekantan Nair V.",
-          "party": "IND",
-          "votes": 32
-        }
-      ]
-    },
-    "121": {
-      "status": "IN_PROGRESS",
-      "rounds_completed": 14,
-      "total_rounds": 17,
-      "total_electors": 197346,
-      "votes_polled": 140095,
-      "last_updated": "2026-05-04T07:44:49.099655+00:00",
-      "candidates": [
-        {
-          "name": "C. Ajaya Prasad",
+          "name": "Adv. P. Vasantham",
           "party": "CPI",
-          "votes": 63371
+          "votes": 76163
         },
         {
-          "name": "Noushad Yusuf",
-          "party": "IUML",
-          "votes": 42256
-        },
-        {
-          "name": "Adv. B. Raghunathan Pillai",
-          "party": "TTP",
-          "votes": 13926
-        },
-        {
-          "name": "Nedumoncavu Gopalakrishnan",
-          "party": "EPI",
-          "votes": 1390
-        },
-        {
-          "name": "Jose Saranath",
-          "party": "BSP",
-          "votes": 1205
-        },
-        {
-          "name": "K. Mahesh",
-          "party": "SUCI",
-          "votes": 471
-        }
-      ]
-    },
-    "125": {
-      "status": "IN_PROGRESS",
-      "rounds_completed": 12,
-      "total_rounds": 14,
-      "total_electors": 168865,
-      "votes_polled": 130583,
-      "last_updated": "2026-05-04T07:44:53.300527+00:00",
-      "candidates": [
-        {
-          "name": "Adv. Vishnu Mohan",
-          "party": "RSP",
-          "votes": 56962
-        },
-        {
-          "name": "M. Noushad",
-          "party": "CPI_M",
-          "votes": 48242
-        },
-        {
-          "name": "Saji D. Anand",
-          "party": "BDJS",
-          "votes": 9230
-        },
-        {
-          "name": "Firoz  S  R",
-          "party": "IND",
-          "votes": 525
-        },
-        {
-          "name": "Noushad A   S/o.Aliyaru Kunju",
-          "party": "IND",
-          "votes": 377
-        }
-      ]
-    },
-    "138": {
-      "status": "IN_PROGRESS",
-      "rounds_completed": 8,
-      "total_rounds": 16,
-      "total_electors": 177094,
-      "votes_polled": 142950,
-      "last_updated": "2026-05-04T07:44:55.015922+00:00",
-      "candidates": [
-        {
-          "name": "M. R. Baiju",
-          "party": "INC",
-          "votes": 30172
-        },
-        {
-          "name": "Adv. I. B. Satheesh",
-          "party": "CPI_M",
-          "votes": 23918
-        },
-        {
-          "name": "P. K. Krishnadas",
+          "name": "C. P. Vipin Chandran",
           "party": "BJP",
-          "votes": 18486
+          "votes": 11506
         },
         {
-          "name": "Nobil M. D",
-          "party": "BSP",
+          "name": "Vasantha",
+          "party": "IND",
+          "votes": 314
+        },
+        {
+          "name": "Padmakumar",
+          "party": "IND",
+          "votes": 269
+        },
+        {
+          "name": "Abhijith, s/o Balan",
+          "party": "IND",
+          "votes": 218
+        },
+        {
+          "name": "K. M. Abhijith",
+          "party": "IND",
+          "votes": 207
+        },
+        {
+          "name": "NOTA",
+          "party": "NOTA",
+          "votes": 272
+        }
+      ]
+    },
+    "19": {
+      "status": "IN_PROGRESS",
+      "rounds_completed": 0,
+      "total_rounds": 0,
+      "total_electors": 212881,
+      "votes_polled": 171049,
+      "last_updated": "2026-05-04T11:33:09.071041+00:00",
+      "candidates": [
+        {
+          "name": "T. Siddique",
+          "party": "INC",
+          "votes": 97379
+        },
+        {
+          "name": "P. K. Anil Kumar",
+          "party": "RJD",
+          "votes": 52348
+        },
+        {
+          "name": "Prasanth Malavayal",
+          "party": "BJP",
+          "votes": 19175
+        },
+        {
+          "name": "Rafeek C A",
+          "party": "AAP",
+          "votes": 867
+        },
+        {
+          "name": "N Hamza",
+          "party": "SDPI",
+          "votes": 801
+        },
+        {
+          "name": "Radhakrishnan M",
+          "party": "IND",
+          "votes": 446
+        },
+        {
+          "name": "Sidheeque S/o Kunjammad",
+          "party": "IND",
+          "votes": 360
+        },
+        {
+          "name": "P. K. Anil Kumar",
+          "party": "IND",
+          "votes": 347
+        },
+        {
+          "name": "V. K. Prakash",
+          "party": "CPI_ML_RS",
+          "votes": 325
+        },
+        {
+          "name": "T K Ummer",
+          "party": "IND",
+          "votes": 256
+        },
+        {
+          "name": "NOTA",
+          "party": "NOTA",
+          "votes": 1137
+        }
+      ]
+    },
+    "21": {
+      "status": "IN_PROGRESS",
+      "rounds_completed": 0,
+      "total_rounds": 0,
+      "total_electors": 215940,
+      "votes_polled": 175040,
+      "last_updated": "2026-05-04T11:33:09.709086+00:00",
+      "candidates": [
+        {
+          "name": "Parakkal Abdulla",
+          "party": "IUML",
+          "votes": 88197
+        },
+        {
+          "name": "K. P. Kunhammad Kutti Master",
+          "party": "CPI_M",
+          "votes": 77275
+        },
+        {
+          "name": "Ramadas Manaleri",
+          "party": "BJP",
+          "votes": 12035
+        },
+        {
+          "name": "Kunhammadkutty",
+          "party": "IND",
+          "votes": 114
+        },
+        {
+          "name": "Abdulla",
+          "party": "IND",
+          "votes": 95
+        },
+        {
+          "name": "NOTA",
+          "party": "NOTA",
+          "votes": 390
+        }
+      ]
+    },
+    "23": {
+      "status": "IN_PROGRESS",
+      "rounds_completed": 0,
+      "total_rounds": 0,
+      "total_electors": 213254,
+      "votes_polled": 169408,
+      "last_updated": "2026-05-04T11:33:10.100435+00:00",
+      "candidates": [
+        {
+          "name": "K. Praveen Kumar",
+          "party": "INC",
+          "votes": 79913
+        },
+        {
+          "name": "K. Dasan",
+          "party": "CPI_M",
+          "votes": 67843
+        },
+        {
+          "name": "C. R. Praphul Krishnan",
+          "party": "BJP",
+          "votes": 23545
+        },
+        {
+          "name": "Praveen",
+          "party": "IND",
+          "votes": 198
+        },
+        {
+          "name": "Musthafa PK (Padinjare Kuniyoth)",
+          "party": "AAP",
+          "votes": 193
+        },
+        {
+          "name": "Praveen Kumar",
+          "party": "IND",
+          "votes": 192
+        },
+        {
+          "name": "Dasan",
+          "party": "IND",
+          "votes": 99
+        },
+        {
+          "name": "NOTA",
+          "party": "NOTA",
+          "votes": 442
+        }
+      ]
+    },
+    "20": {
+      "status": "IN_PROGRESS",
+      "rounds_completed": 0,
+      "total_rounds": 0,
+      "total_electors": 176832,
+      "votes_polled": 140599,
+      "last_updated": "2026-05-04T11:33:10.429044+00:00",
+      "candidates": [
+        {
+          "name": "K. K. Rema",
+          "party": "RMPI",
+          "votes": 70117
+        },
+        {
+          "name": "M. K. Bhaskaran",
+          "party": "RJD",
+          "votes": 55255
+        },
+        {
+          "name": "Adv. K. Dileep",
+          "party": "BJP",
+          "votes": 14295
+        },
+        {
+          "name": "Shamseer Chombala",
+          "party": "SDPI",
+          "votes": 2477
+        },
+        {
+          "name": "Rama T P W/o Ashokan P K",
+          "party": "IND",
           "votes": 200
         },
         {
-          "name": "Adv. Jayakumar Theertham",
-          "party": "CPI_ML_L",
-          "votes": 127
+          "name": "Bhaskaran K K S/o Kelappan",
+          "party": "IND",
+          "votes": 185
+        },
+        {
+          "name": "Rama W/o Vijayan",
+          "party": "IND",
+          "votes": 162
+        },
+        {
+          "name": "Ramakrishnan Vattakandi",
+          "party": "IND",
+          "votes": 94
+        },
+        {
+          "name": "NOTA",
+          "party": "NOTA",
+          "votes": 394
         }
       ]
     },
-    "129": {
+    "30": {
       "status": "IN_PROGRESS",
-      "rounds_completed": 10,
-      "total_rounds": 16,
-      "total_electors": 195296,
-      "votes_polled": 144772,
-      "last_updated": "2026-05-04T07:45:03.874495+00:00",
+      "rounds_completed": 0,
+      "total_rounds": 0,
+      "total_electors": 241980,
+      "votes_polled": 205271,
+      "last_updated": "2026-05-04T11:33:12.272021+00:00",
       "candidates": [
         {
-          "name": "Manoj B Edamana",
-          "party": "CPI",
-          "votes": 35552
+          "name": "M. A. Razak Master",
+          "party": "IUML",
+          "votes": 91598
         },
         {
-          "name": "Ramya Haridas",
-          "party": "INC",
-          "votes": 33529
+          "name": "Adv. P.T.A Rahim",
+          "party": "IND_LDF",
+          "votes": 78285
         },
         {
-          "name": "B. S. Anoop",
+          "name": "Adv. V. K. Sajeevan",
           "party": "BJP",
-          "votes": 23903
+          "votes": 34435
         },
         {
-          "name": "Anoop Alappuramkunnu",
-          "party": "Anna DHRM",
-          "votes": 485
+          "name": "Rahim",
+          "party": "IND",
+          "votes": 2110
         },
         {
-          "name": "Ramasamy Sasi",
-          "party": "BSP",
-          "votes": 484
-        }
-      ]
-    },
-    "127": {
-      "status": "IN_PROGRESS",
-      "rounds_completed": 11,
-      "total_rounds": 17,
-      "total_electors": 183280,
-      "votes_polled": 135553,
-      "last_updated": "2026-05-04T07:45:04.942045+00:00",
-      "candidates": [
-        {
-          "name": "Adv. V Joy",
-          "party": "CPI_M",
-          "votes": 36388
+          "name": "Abdu Rasak",
+          "party": "IND",
+          "votes": 567
         },
         {
-          "name": "Varkala Kahar",
-          "party": "INC",
-          "votes": 34935
+          "name": "Santhosh P T",
+          "party": "AIHCP",
+          "votes": 276
         },
         {
-          "name": "Adv. Smitha Sundaresan",
-          "party": "BJP",
-          "votes": 17373
+          "name": "Abdul Razak",
+          "party": "IND",
+          "votes": 227
         },
         {
-          "name": "Raju S Kottarakonam",
-          "party": "BSP",
-          "votes": 712
+          "name": "Mavoor Muhammed Ali",
+          "party": "IND",
+          "votes": 205
         },
         {
-          "name": "Vinod Elakamon",
-          "party": "Anna DHRM",
+          "name": "Raheem P",
+          "party": "IND",
           "votes": 202
         },
         {
-          "name": "Harikrishnan S G",
-          "party": "IND",
-          "votes": 73
-        },
-        {
-          "name": "S\u00e4ju",
-          "party": "IND",
-          "votes": 41
-        },
-        {
-          "name": "Vivekanandan K",
-          "party": "IND",
-          "votes": 22
-        },
-        {
-          "name": "M. K. Kannan",
-          "party": "IND",
-          "votes": 22
+          "name": "NOTA",
+          "party": "NOTA",
+          "votes": 1044
         }
       ]
     },
-    "
+    "25": {
+      "status": "IN_PROGRESS",
+      "rounds_completed": 0,
+      "total_rounds": 0,
+      "total_electors": 228689,
+      "votes_polled": 187136,
+      "last_updated": "2026-05-04T11:33:12.551078+00:00",
+      "candidates": [
+        {
+          "name": "V. T. Sooraj",
+          "party": "INC",
+          "votes": 94804
+        },
+        {
+          "name": "Adv. K.M. Sachindev",
+          "party": "CPI_M",
+          "votes": 77824
+        },
+        {
+          "name": "C. P. Sateeshan",
+          "party": "BJP",
+          "votes": 17669
+        },
+        {
+          "name": "Sooraj K S/o Asokan",
+          "party": "IND",
+          "votes": 272
+        },
+        {
+          "name": "Abhijith",
+          "party": "IND",
+          "votes": 230
+        },
+        {
+          "name": "NOTA",
+          "party": "NOTA",
+          "votes": 516
+        }
+      ]
+    },
+    "29": {
+      "status": "IN_PROGRESS",
+      "rounds_completed": 0,
+      "total_rounds": 0,
+      "total_electors": 218558,
+      "votes_polled": 183086,
+      "last_updated": "2026-05-04T11:33:13.647715+00:00",
+      "candidates": [
+        {
+          "name": "Muhammad Riyas",
+          "party": "CPI_M",
+          "votes": 81849
+        },
+        {
+          "name": "P. V. Anvar",
+          "party": "AITC",
+          "votes": 74362
+        },
+        {
+          "name": "Adv. K. P. Prakash Babu",
+          "party": "BJP",
+          "votes": 26543
+        },
+        {
+          "name": "Anver S/o Moideenkoya",
+          "party": "IND",
+          "votes": 538
+        },
+        {
+          "name": "Anver S/o Enunni",
+          "party": "IND",
+          "votes": 448
+        },
+        {
+          "name": "Anver S/o Sulaikha K P",
+          "party": "IND",
+          "votes": 318
+        },
+        {
+          "name": "Muhammed Riyas P.C S/o Ahammedkutty .P C",
+          "party": "IND",
+          "votes": 308
+        },
+        {
+          "name": "Anwar Ali Hassan S/o Kuttyhassan",
+          "party": "IND",
+          "votes": 201
+        },
+        {
+          "name": "NOTA",
+          "party": "NOTA",
+          "votes": 583
+        }
+      ]
+    },
+    "26": {
+      "status": "IN_PROGRESS",
+      "rounds_completed": 0,
+      "total_rounds": 0,
+      "total_electors": 211105,
+      "votes_polled": 174056,
+      "last_updated": "2026-05-04T11:33:14.317785+00:00",
+      "candidates": [
+        {
+          "name": "Adv. Vidya Balakrishnan",
+          "party": "INC",
+          "votes": 77662
+        },
+        {
+          "name": "A. K. Saseendran",
+          "party": "NCP(SP)",
+          "votes": 65500
+        },
+        {
+          "name": "T. Devadas",
+          "party": "BJP",
+          "votes": 31510
+        },
+        {
+          "name": "V.K. Saseendran",
+          "party": "IND",
+          "votes": 726
+        },
+        {
+          "name": "P.K.Saseendran",
+          "party": "NCP",
+          "votes": 692
+        },
+        {
+          "name": "P.M.Sreekumar",
+          "party": "SUCI",
+          "votes": 481
+        },
+        {
+          "name": "Abdul Basith Atholi",
+          "party": "AAP",
+          "votes": 348
+        },
+        {
+          "name": "Adv.Sumin.S.Nedungadan",
+          "party": "IND",
+          "votes": 117
+        },
+        {
+          "name": "NOTA",
+          "party": "NOTA",
+          "votes": 729
+        }
+      ]
+    },
+    "31": {
+      "status": "IN_PROGRESS",
+      "rounds_completed": 0,
+      "total_rounds": 0,
+      "total_electors": 201668,
+      "votes_polled": 163310,
+      "last_updated": "2026-05-04T11:33:15.364180+00:00",
+      "candidates": [
+        {
+          "name": "P. K. Firos",
+          "party": "IUML",
+          "votes": 95164
+        },
+        {
+          "name": "Saleem Madavoor",
+          "party": "IND_LDF",
+          "votes": 58482
+        },
+        {
+          "name": "Giri Pambanal",
+          "party": "BDJS",
+          "votes": 9832
+        },
+        {
+          "name": "Sunil Mannath",
+          "party": "RPI (A)",
+          "votes": 397
+        },
+        {
+          "name": "Firose K C S/o Moitheenkutty",
+          "party": "IND",
+          "votes": 298
+        },
+        {
+          "name": "Bavan Kutty K M",
+          "party": "AAP",
+          "votes": 286
+        },
+        {
+          "name": "Abdul Shukoor",
+          "party": "IND",
+          "votes": 212
+        },
+        {
+          "name": "Firose S/o Aboobacker Musaliar",
+          "party": "IND",
+          "votes": 185
+        },
+        {
+          "name": "Lakshmanan K P Thamarassery",
+          "party": "IND",
+          "votes": 184
+        },
+        {
+          "name": "Saleem Muttanchery",
+          "party": "IND",
+          "votes": 142
+        },
+        {
+          "name": "Saleem C K",
+          "party": "IND",
+          "votes": 121
+        },
+        {
+          "name": "Sajir K",
+          "party": "IND",
+          "votes": 107
+        },
+        {
+          "name": "Shaheeda C P",
+          "party": "IND",
+          "votes": 88
+        },
+        {
+          "name": "NOTA",
+          "party": "NOTA",
+          "votes": 490
+        }
+      ]
+    }
+  }
+}

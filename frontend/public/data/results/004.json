@@ -6,31 +6,31 @@
     "district": "Kasaragod"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 223980,
     "votes_polled": 173002,
     "votes_counted": 20247,
     "valid_votes": 20247,
-    "rounds_completed": 16,
+    "rounds_completed": 19,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:36:23.315742+00:00"
+    "last_updated": "2026-05-04T08:26:42.506825+00:00"
   },
   "candidates_2026": [
     {
       "name": "Govindan Pallikkappil",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 71721,
-      "percentage": 44.56,
-      "is_winner": false,
-      "is_leading": true
+      "votes": 79920,
+      "percentage": 45.47,
+      "is_winner": true,
+      "is_leading": false
     },
     {
       "name": "Shyji Ottapalli",
       "party": "KEC",
       "alliance": "UDF",
-      "votes": 60238,
-      "percentage": 37.42,
+      "votes": 64604,
+      "percentage": 36.75,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "M. Balraj",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 25217,
-      "percentage": 15.67,
+      "votes": 27063,
+      "percentage": 15.4,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "B. Vijayakumar",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 2832,
-      "percentage": 1.76,
+      "votes": 3132,
+      "percentage": 1.78,
       "is_winner": false,
       "is_leading": false
     }

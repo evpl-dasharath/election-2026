@@ -11,17 +11,17 @@
     "votes_polled": 128859,
     "votes_counted": 0,
     "valid_votes": 0,
-    "rounds_completed": 7,
+    "rounds_completed": 8,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:13.088365+00:00"
+    "last_updated": "2026-05-04T08:34:07.139320+00:00"
   },
   "candidates_2026": [
     {
       "name": "Roji M. John",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 34712,
-      "percentage": 61.14,
+      "votes": 39121,
+      "percentage": 59.72,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Saju Paul",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 17807,
-      "percentage": 31.36,
+      "votes": 21194,
+      "percentage": 32.35,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Promy Kuriakose",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 3771,
-      "percentage": 6.64,
+      "votes": 4621,
+      "percentage": 7.05,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Joby Paul Uppan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 82,
-      "percentage": 0.14,
+      "votes": 86,
+      "percentage": 0.13,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "P V Rajeesh",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 57,
+      "votes": 68,
       "percentage": 0.1,
       "is_winner": false,
       "is_leading": false
@@ -65,7 +65,7 @@
       "name": "Suphil Sebastian",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 49,
+      "votes": 57,
       "percentage": 0.09,
       "is_winner": false,
       "is_leading": false
@@ -74,8 +74,8 @@
       "name": "Subran",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 38,
-      "percentage": 0.07,
+      "votes": 42,
+      "percentage": 0.06,
       "is_winner": false,
       "is_leading": false
     }

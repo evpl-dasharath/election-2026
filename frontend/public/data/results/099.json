@@ -6,31 +6,31 @@
     "district": "Kottayam"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 162885,
     "votes_polled": 119166,
     "votes_counted": 8226,
     "valid_votes": 8226,
-    "rounds_completed": 13,
+    "rounds_completed": 15,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:29.931644+00:00"
+    "last_updated": "2026-05-04T08:21:53.464443+00:00"
   },
   "candidates_2026": [
     {
       "name": "Vinu Job",
       "party": "KEC",
       "alliance": "UDF",
-      "votes": 49518,
-      "percentage": 46.2,
-      "is_winner": false,
-      "is_leading": true
+      "votes": 55991,
+      "percentage": 46.22,
+      "is_winner": true,
+      "is_leading": false
     },
     {
       "name": "Adv. Job Maichil",
       "party": "KC_M",
       "alliance": "LDF",
-      "votes": 42040,
-      "percentage": 39.22,
+      "votes": 47623,
+      "percentage": 39.31,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "B. Radhakrishna Menon",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 13221,
-      "percentage": 12.33,
+      "votes": 14803,
+      "percentage": 12.22,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,7 +47,7 @@
       "name": "Usha Johnson",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 781,
+      "votes": 883,
       "percentage": 0.73,
       "is_winner": false,
       "is_leading": false
@@ -56,8 +56,8 @@
       "name": "Althaf Hassan",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 444,
-      "percentage": 0.41,
+      "votes": 564,
+      "percentage": 0.47,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Aravind V",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 320,
-      "percentage": 0.3,
+      "votes": 331,
+      "percentage": 0.27,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "Prof. Dr. Saju Kannanthara",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 236,
-      "percentage": 0.22,
+      "votes": 256,
+      "percentage": 0.21,
       "is_winner": false,
       "is_leading": false
     },
@@ -83,8 +83,8 @@
       "name": "Dr.Kalki P",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 58,
-      "percentage": 0.05,
+      "votes": 67,
+      "percentage": 0.06,
       "is_winner": false,
       "is_leading": false
     },
@@ -92,7 +92,7 @@
       "name": "Joemon Joseph Srampickal A P J Juman V S",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 53,
+      "votes": 57,
       "percentage": 0.05,
       "is_winner": false,
       "is_leading": false
@@ -101,7 +101,7 @@
       "name": "Jose Joseph",
       "party": "JRP",
       "alliance": "OTH",
-      "votes": 39,
+      "votes": 43,
       "percentage": 0.04,
       "is_winner": false,
       "is_leading": false

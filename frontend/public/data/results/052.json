@@ -6,49 +6,40 @@
     "district": "Palakkad"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 209627,
     "votes_polled": 166318,
     "votes_counted": 25254,
     "valid_votes": 25254,
-    "rounds_completed": 12,
+    "rounds_completed": 14,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:36:59.387448+00:00"
+    "last_updated": "2026-05-04T07:48:57.606088+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. K. Premkumar",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 68517,
-      "percentage": 45.2,
-      "is_winner": false,
-      "is_leading": true
-    },
-    {
-      "name": "Major Ravi",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 41001,
-      "percentage": 27.05,
-      "is_winner": false,
+      "votes": 74890,
+      "percentage": 44.36,
+      "is_winner": true,
       "is_leading": false
     },
     {
       "name": "P. K. Sasi",
       "party": "IND_UDF",
       "alliance": "UDF",
-      "votes": 38773,
-      "percentage": 25.58,
+      "votes": 47980,
+      "percentage": 28.42,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "K.P Rajeesh",
-      "party": "BSP",
-      "alliance": "OTH",
-      "votes": 931,
-      "percentage": 0.61,
+      "name": "Major Ravi",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 42303,
+      "percentage": 25.06,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +47,17 @@
       "name": "Sasi P.K S/o Krishnankutty",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 921,
-      "percentage": 0.61,
+      "votes": 1045,
+      "percentage": 0.62,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K.P Rajeesh",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 1012,
+      "percentage": 0.6,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Muhammed Asharaf V.H",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 417,
-      "percentage": 0.28,
+      "votes": 453,
+      "percentage": 0.27,
       "is_winner": false,
       "is_leading": false
     }

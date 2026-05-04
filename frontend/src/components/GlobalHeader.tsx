@@ -6,7 +6,7 @@ import { ALLIANCE_COLORS, PURE_IND_COLOR } from '../utils/colorUtils';
 // ─── Election Day Config ──────────────────────────────────────────────────────
 // Election day: May 4, 2026 at 8:00 AM IST
 const ELECTION_DAY = new Date('2026-05-04T02:30:00Z'); // 8:00 AM IST = 2:30 AM UTC
-const STALE_WARN_MS  = 10 * 60 * 1000; // 10 minutes
+const STALE_WARN_MS = 10 * 60 * 1000; // 10 minutes
 const STALE_ERROR_MS = 20 * 60 * 1000; // 20 minutes
 
 function isElectionDay(): boolean {
@@ -14,8 +14,8 @@ function isElectionDay(): boolean {
 }
 
 export default function GlobalHeader() {
-  const navigate  = useNavigate();
-  const location  = useLocation();
+  const navigate = useNavigate();
+  const location = useLocation();
   const { data: summary } = useStateSummary();
   const lastRtdbUpdate = useLastRtdbUpdate();
   const { source: dataSource, cachedAt } = useDataSource();
@@ -23,9 +23,8 @@ export default function GlobalHeader() {
   const [time, setTime] = useState(new Date());
   const [staleness, setStaleness] = useState<'ok' | 'warn' | 'error'>('ok');
   const [isRefreshing, setIsRefresh] = useState(false);
-  const [cacheAge, setCacheAge] = useState<string | null>(null); // human-readable age of cached data
+  const [cacheAge, setCacheAge] = useState<string | null>(null);
 
-  // Helper: format milliseconds as human-readable relative time
   function formatAge(ms: number): string {
     const sec = Math.floor(ms / 1000);
     if (sec < 60) return `${sec}s ago`;
@@ -35,7 +34,6 @@ export default function GlobalHeader() {
     return `${hrs}h ${min % 60}m ago`;
   }
 
-  // Clock + staleness + cache-age ticker
   useEffect(() => {
     const t = setInterval(() => {
       setTime(new Date());
@@ -47,14 +45,12 @@ export default function GlobalHeader() {
       } else {
         setStaleness('ok');
       }
-      // Update cache-age display every tick
       if (cachedAt !== null && dataSource === 'cached-json') {
         setCacheAge(formatAge(Date.now() - cachedAt));
       } else {
         setCacheAge(null);
       }
     }, 1000);
-    // Compute immediately on mount/change
     if (cachedAt !== null && dataSource === 'cached-json') {
       setCacheAge(formatAge(Date.now() - cachedAt));
     } else {
@@ -69,38 +65,30 @@ export default function GlobalHeader() {
     setTimeout(() => setIsRefresh(false), 800);
   }, []);
 
-  // Alliance tallies
-  const ldfWon     = summary?.alliance_summary.LDF.won     || 0;
+  const ldfWon = summary?.alliance_summary.LDF.won || 0;
   const ldfLeading = summary?.alliance_summary.LDF.leading || 0;
-  const ldfShare   = summary?.alliance_summary.LDF.vote_share || 0;
-  
-  const udfWon     = summary?.alliance_summary.UDF.won     || 0;
+  const ldfShare = summary?.alliance_summary.LDF.vote_share || 0;
+  const udfWon = summary?.alliance_summary.UDF.won || 0;
   const udfLeading = summary?.alliance_summary.UDF.leading || 0;
-  const udfShare   = summary?.alliance_summary.UDF.vote_share || 0;
-  
-  const ndaWon     = summary?.alliance_summary.NDA.won     || 0;
+  const udfShare = summary?.alliance_summary.UDF.vote_share || 0;
+  const ndaWon = summary?.alliance_summary.NDA.won || 0;
   const ndaLeading = summary?.alliance_summary.NDA.leading || 0;
-  const ndaShare   = summary?.alliance_summary.NDA.vote_share || 0;
-  
-  const othWon     = summary?.alliance_summary.OTH?.won     || 0;
+  const ndaShare = summary?.alliance_summary.NDA.vote_share || 0;
+  const othWon = summary?.alliance_summary.OTH?.won || 0;
   const othLeading = summary?.alliance_summary.OTH?.leading || 0;
-  const othShare   = summary?.alliance_summary.OTH?.vote_share || 0;
-  
-  const indWon     = summary?.ind_summary?.won     || 0;
+  const othShare = summary?.alliance_summary.OTH?.vote_share || 0;
+  const indWon = summary?.ind_summary?.won || 0;
   const indLeading = summary?.ind_summary?.leading || 0;
-
-  const othOnlyWon     = Math.max(0, othWon     - indWon);
+  const othOnlyWon = Math.max(0, othWon - indWon);
   const othOnlyLeading = Math.max(0, othLeading - indLeading);
 
-  const declared = summary?.results_declared     || 0;
-  const pending  = 140 - declared - (summary?.counting_in_progress || 0);
-  // Overall counting progress: total votes counted vs total votes polled
+  const declared = summary?.results_declared || 0;
+  const pending = 140 - declared - (summary?.counting_in_progress || 0);
   const totalCounted = summary?.total_votes_counted || 0;
-  const totalPolled  = summary?.total_votes_polled  || 0;
-  const votePct      = totalPolled > 0 ? Math.round((totalCounted / totalPolled) * 100) : 0;
-  // Declared seats progress (for the white segment)
-  const declaredPct  = Math.round((declared / 140) * 100);
-  const counting     = summary?.counting_in_progress || 0;
+  const totalPolled = summary?.total_votes_polled || 0;
+  const votePct = totalPolled > 0 ? Math.round((totalCounted / totalPolled) * 100) : 0;
+  const declaredPct = Math.round((declared / 140) * 100);
+  const counting = summary?.counting_in_progress || 0;
 
   const mainPills = [
     { id: 'LDF', won: ldfWon, lead: ldfLeading, share: ldfShare, color: ALLIANCE_COLORS.LDF },
@@ -119,7 +107,6 @@ export default function GlobalHeader() {
 
   const allPills = [...mainPills, ...conditionalPills];
 
-  // Staleness banner message (only on election day when data is stale)
   const staleBanner = staleness !== 'ok' && isElectionDay() ? (
     <div
       className="text-center text-[11px] font-semibold py-1 px-4"
@@ -135,7 +122,6 @@ export default function GlobalHeader() {
     </div>
   ) : null;
 
-  // Cached-data banner: shown when Firebase is unavailable and we're serving static JSON
   const cachedBanner = dataSource === 'cached-json' ? (
     <div
       className="text-center text-[11px] font-semibold py-1 px-4 flex items-center justify-center gap-2"
@@ -145,7 +131,6 @@ export default function GlobalHeader() {
         borderBottom: '1px solid rgba(251,146,60,0.22)',
       }}
     >
-      {/* Pulsing dot */}
       <span
         style={{
           display: 'inline-block',
@@ -171,7 +156,6 @@ export default function GlobalHeader() {
     </div>
   ) : null;
 
-  // Status badge: "IN DEV" before election day, live status indicators on election day
   const StatusBadge = () => {
     if (!isElectionDay()) {
       return (
@@ -184,7 +168,6 @@ export default function GlobalHeader() {
         </div>
       );
     }
-
     if (isRefreshing) {
       return (
         <button
@@ -195,7 +178,6 @@ export default function GlobalHeader() {
         </button>
       );
     }
-
     if (staleness === 'error') {
       return (
         <button
@@ -229,9 +211,37 @@ export default function GlobalHeader() {
     );
   };
 
+  // ─── Nav entries ─────────────────────────────────────────────────────────────
+  const navItems = [
+    {
+      label: 'State',
+      active: location.pathname === '/',
+      onClick: () => navigate('/'),
+    },
+    {
+      label: 'Constituency',
+      active: location.pathname.startsWith('/constituency'),
+      onClick: () => { if (!location.pathname.startsWith('/constituency')) navigate('/constituency/1'); },
+    },
+    {
+      label: 'Alliances',
+      active: location.pathname.startsWith('/alliance'),
+      onClick: () => navigate('/alliance/ldf'),
+    },
+    {
+      label: 'Parties',
+      active: location.pathname.startsWith('/party'),
+      onClick: () => navigate('/party'),
+    },
+    {
+      label: 'History',
+      active: location.pathname === '/history',
+      onClick: () => navigate('/history'),
+    },
+  ];
+
   return (
     <header className="bg-ink text-white shrink-0 sticky top-0 z-50 border-b border-white/10">
-      {/* Inject cachedPulse keyframe once */}
       <style>{`
         @keyframes cachedPulse {
           0%, 100% { opacity: 1; transform: scale(1); }
@@ -287,21 +297,19 @@ export default function GlobalHeader() {
 
         {/* Right: nav + time */}
         <div className="flex items-center justify-end gap-3 md:gap-5 shrink-0 md:w-[200px] order-2 md:order-3">
-          <div className="flex gap-3 md:gap-4">
-            <span
-              className={`text-[11px] font-medium cursor-pointer hover:text-white/80 transition-colors ${location.pathname === '/' ? 'text-white' : 'text-white/45'}`}
-              onClick={() => navigate('/')}
-            >State</span>
-            <span
-              className={`text-[11px] font-medium cursor-pointer hover:text-white/80 transition-colors ${location.pathname.startsWith('/constituency') ? 'text-white' : 'text-white/45'}`}
-              onClick={() => { if (!location.pathname.startsWith('/constituency')) navigate('/constituency/1'); }}
-            >Constituency</span>
-            <span
-              className={`text-[11px] font-medium cursor-pointer hover:text-white/80 transition-colors ${location.pathname === '/history' ? 'text-white' : 'text-white/45'}`}
-              onClick={() => navigate('/history')}
-            >History</span>
+          {/* Nav — scrollable on mobile so all 5 entries fit */}
+          <div className="flex gap-3 md:gap-4 overflow-x-auto custom-scrollbar">
+            {navItems.map(({ label, active, onClick }) => (
+              <span
+                key={label}
+                onClick={onClick}
+                className={`text-[11px] font-medium cursor-pointer hover:text-white/80 transition-colors whitespace-nowrap ${active ? 'text-white' : 'text-white/45'}`}
+              >
+                {label}
+              </span>
+            ))}
           </div>
-          <div className="font-mono text-[10px] text-white/35">
+          <div className="font-mono text-[10px] text-white/35 shrink-0">
             {time.toLocaleString('en-IN', { hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Kolkata' })} IST
           </div>
         </div>
@@ -312,14 +320,13 @@ export default function GlobalHeader() {
         {[
           { label: 'Declared', value: declared, color: 'text-white/70' },
           { label: 'Counting', value: counting, color: 'text-amber-400/80' },
-          { label: 'Pending',  value: pending,  color: 'text-white/30' },
+          { label: 'Pending', value: pending, color: 'text-white/30' },
         ].map(({ label, value, color }) => (
           <span key={label} className="flex items-baseline gap-1.5">
             <span className={`font-mono font-bold text-[13px] ${color}`}>{value}</span>
             <span className="text-[9px] text-white/30 uppercase tracking-wider">{label}</span>
           </span>
         ))}
-        {/* Progress bar: votes counted / votes polled — only shown once polling data arrives */}
         {totalPolled > 0 && (
           <>
             <span className="text-white/15 text-[10px]">|</span>
@@ -335,7 +342,6 @@ export default function GlobalHeader() {
             </div>
           </>
         )}
-        {/* Fallback: show declared seats progress bar when no vote-level data yet */}
         {totalPolled === 0 && declared > 0 && (
           <>
             <span className="text-white/15 text-[10px]">|</span>
@@ -350,9 +356,7 @@ export default function GlobalHeader() {
             </div>
           </>
         )}
-
       </div>
-
     </header>
   );
 }

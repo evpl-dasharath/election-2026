@@ -11,17 +11,17 @@
     "votes_polled": 126537,
     "votes_counted": 7988,
     "valid_votes": 7988,
-    "rounds_completed": 13,
+    "rounds_completed": 14,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:19.427337+00:00"
+    "last_updated": "2026-05-04T08:34:09.810348+00:00"
   },
   "candidates_2026": [
     {
       "name": "Roy K. Paulose",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 60122,
-      "percentage": 55.18,
+      "votes": 66139,
+      "percentage": 54.91,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Roshi Augustine",
       "party": "KC_M",
       "alliance": "LDF",
-      "votes": 39518,
-      "percentage": 36.27,
+      "votes": 43921,
+      "percentage": 36.47,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Adv. Pradeesh Prabha",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 7844,
-      "percentage": 7.2,
+      "votes": 8783,
+      "percentage": 7.29,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Shijo Antony",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 845,
-      "percentage": 0.78,
+      "votes": 913,
+      "percentage": 0.76,
       "is_winner": false,
       "is_leading": false
     }

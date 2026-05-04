@@ -11,17 +11,17 @@
     "votes_polled": 196280,
     "votes_counted": 10934,
     "valid_votes": 10934,
-    "rounds_completed": 7,
+    "rounds_completed": 8,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:36:57.561999+00:00"
+    "last_updated": "2026-05-04T08:35:03.711150+00:00"
   },
   "candidates_2026": [
     {
       "name": "Kurukkoli Moideen",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 42433,
-      "percentage": 54.62,
+      "votes": 49060,
+      "percentage": 54.73,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "V. Abdurahiman",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 31859,
-      "percentage": 41.01,
+      "votes": 36742,
+      "percentage": 40.99,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "K. Narayanan Master",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 2703,
-      "percentage": 3.48,
+      "votes": 3034,
+      "percentage": 3.38,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Kabeer Shameer Kuttoor",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 128,
-      "percentage": 0.16,
+      "votes": 148,
+      "percentage": 0.17,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Moideen Koomulli Parambil",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 114,
-      "percentage": 0.15,
+      "votes": 139,
+      "percentage": 0.16,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Dr.S.Aleena",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 71,
-      "percentage": 0.09,
+      "votes": 88,
+      "percentage": 0.1,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,7 +74,7 @@
       "name": "Siyad Koodiyath",
       "party": "SP (I)",
       "alliance": "OTH",
-      "votes": 64,
+      "votes": 76,
       "percentage": 0.08,
       "is_winner": false,
       "is_leading": false
@@ -83,8 +83,8 @@
       "name": "Abdurahiman S/o Kunjeen",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 40,
-      "percentage": 0.05,
+      "votes": 52,
+      "percentage": 0.06,
       "is_winner": false,
       "is_leading": false
     },
@@ -92,7 +92,7 @@
       "name": "V. Abdurahman",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 23,
+      "votes": 27,
       "percentage": 0.03,
       "is_winner": false,
       "is_leading": false

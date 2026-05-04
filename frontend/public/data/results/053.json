@@ -11,17 +11,17 @@
     "votes_polled": 145406,
     "votes_counted": 16120,
     "valid_votes": 16120,
-    "rounds_completed": 7,
+    "rounds_completed": 8,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:01.484163+00:00"
+    "last_updated": "2026-05-04T08:35:06.666833+00:00"
   },
   "candidates_2026": [
     {
       "name": "K. A. Thulasi",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 50347,
-      "percentage": 45.03,
+      "votes": 56363,
+      "percentage": 43.46,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "K. Shanthakumari",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 44625,
-      "percentage": 39.91,
+      "votes": 52113,
+      "percentage": 40.19,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Renu Suresh",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 15550,
-      "percentage": 13.91,
+      "votes": 19598,
+      "percentage": 15.11,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Guruvayoorappan P E",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 539,
-      "percentage": 0.48,
+      "votes": 689,
+      "percentage": 0.53,
       "is_winner": false,
       "is_leading": false
     }

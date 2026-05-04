@@ -11,17 +11,17 @@
     "votes_polled": 157073,
     "votes_counted": 10409,
     "valid_votes": 10409,
-    "rounds_completed": 10,
+    "rounds_completed": 12,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:10.205481+00:00"
+    "last_updated": "2026-05-04T08:34:03.185483+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. V. D. Satheesan",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 46954,
-      "percentage": 47.37,
+      "votes": 56255,
+      "percentage": 47.4,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "E. T. Taison Master",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 37913,
-      "percentage": 38.25,
+      "votes": 44879,
+      "percentage": 37.81,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Vathsala Prasanna Kumar",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 12766,
-      "percentage": 12.88,
+      "votes": 15631,
+      "percentage": 13.17,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "V.M. Faisal",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 487,
-      "percentage": 0.49,
+      "votes": 738,
+      "percentage": 0.62,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "P.K.Rajesh",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 195,
-      "percentage": 0.2,
+      "votes": 245,
+      "percentage": 0.21,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,7 +65,7 @@
       "name": "K.B.Satheesan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 120,
+      "votes": 141,
       "percentage": 0.12,
       "is_winner": false,
       "is_leading": false
@@ -74,8 +74,8 @@
       "name": "G.Gokuldev",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 105,
-      "percentage": 0.11,
+      "votes": 120,
+      "percentage": 0.1,
       "is_winner": false,
       "is_leading": false
     }

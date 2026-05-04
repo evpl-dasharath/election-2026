@@ -6,31 +6,31 @@
     "district": "Idukki"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 150303,
     "votes_polled": 119505,
     "votes_counted": 24525,
     "valid_votes": 24525,
-    "rounds_completed": 13,
+    "rounds_completed": 15,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:18.481203+00:00"
+    "last_updated": "2026-05-04T08:17:47.672587+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. Senapathi Venu",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 57667,
-      "percentage": 52.89,
-      "is_winner": false,
-      "is_leading": true
+      "votes": 64916,
+      "percentage": 53.49,
+      "is_winner": true,
+      "is_leading": false
     },
     {
       "name": "K. K. Jayachandran",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 41062,
-      "percentage": 37.66,
+      "votes": 44895,
+      "percentage": 36.99,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Adv. Sangeetha Viswanadhan",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 9037,
-      "percentage": 8.29,
+      "votes": 10157,
+      "percentage": 8.37,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,7 +47,7 @@
       "name": "P.K. Sajeevan",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 633,
+      "votes": 702,
       "percentage": 0.58,
       "is_winner": false,
       "is_leading": false

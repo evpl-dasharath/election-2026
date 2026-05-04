@@ -11,17 +11,17 @@
     "votes_polled": 151841,
     "votes_counted": 20639,
     "valid_votes": 20639,
-    "rounds_completed": 12,
+    "rounds_completed": 13,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:44.421559+00:00"
+    "last_updated": "2026-05-04T08:35:08.611208+00:00"
   },
   "candidates_2026": [
     {
       "name": "A. C. Moytheen",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 56662,
-      "percentage": 45.87,
+      "votes": 62123,
+      "percentage": 45.76,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "P. T. Ajayamohan",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 51243,
-      "percentage": 41.48,
+      "votes": 56535,
+      "percentage": 41.64,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Rijil K. R.",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 13991,
-      "percentage": 11.33,
+      "votes": 15238,
+      "percentage": 11.22,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Rajeev K Sivaraman",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 784,
-      "percentage": 0.63,
+      "votes": 912,
+      "percentage": 0.67,
       "is_winner": false,
       "is_leading": false
     }

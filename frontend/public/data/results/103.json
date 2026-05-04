@@ -11,17 +11,17 @@
     "votes_polled": 169077,
     "votes_counted": 12016,
     "valid_votes": 12016,
-    "rounds_completed": 11,
+    "rounds_completed": 13,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:31.330092+00:00"
+    "last_updated": "2026-05-04T08:34:20.148418+00:00"
   },
   "candidates_2026": [
     {
       "name": "P. Prasad",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 53364,
-      "percentage": 46.86,
+      "votes": 64207,
+      "percentage": 47.25,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "K. R. Rajendra Prasad",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 46277,
-      "percentage": 40.64,
+      "votes": 54826,
+      "percentage": 40.34,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Adv. Anandaraj T. P",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 12747,
-      "percentage": 11.19,
+      "votes": 15093,
+      "percentage": 11.11,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Nandakumar",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 279,
-      "percentage": 0.24,
+      "votes": 342,
+      "percentage": 0.25,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "A.P. Prasad S/o Purushothaman",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 230,
+      "votes": 276,
       "percentage": 0.2,
       "is_winner": false,
       "is_leading": false
@@ -65,7 +65,7 @@
       "name": "Rajendra Prasad S/o Prabhakaran",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 164,
+      "votes": 197,
       "percentage": 0.14,
       "is_winner": false,
       "is_leading": false
@@ -74,7 +74,7 @@
       "name": "Adv. Sonnymon K. Mathew",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 133,
+      "votes": 157,
       "percentage": 0.12,
       "is_winner": false,
       "is_leading": false

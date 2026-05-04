@@ -11,17 +11,17 @@
     "votes_polled": 184193,
     "votes_counted": 9834,
     "valid_votes": 9834,
-    "rounds_completed": 12,
+    "rounds_completed": 17,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:36:50.867815+00:00"
+    "last_updated": "2026-05-04T08:35:01.119145+00:00"
   },
   "candidates_2026": [
     {
       "name": "Najeeb Kanthapuram",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 64576,
-      "percentage": 58.93,
+      "votes": 89649,
+      "percentage": 57.38,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "V. P. Muhammad Haneefa",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 39962,
-      "percentage": 36.47,
+      "votes": 59621,
+      "percentage": 38.16,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Adv. K.P. Baburaj",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 4087,
-      "percentage": 3.73,
+      "votes": 5690,
+      "percentage": 3.64,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Abdul Najeeb S/o Mohamed",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 155,
-      "percentage": 0.14,
+      "votes": 207,
+      "percentage": 0.13,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Mohammed Haneefa P S/o Alavi",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 140,
-      "percentage": 0.13,
+      "votes": 189,
+      "percentage": 0.12,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Haneefa",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 133,
-      "percentage": 0.12,
+      "votes": 171,
+      "percentage": 0.11,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "Najeeb",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 72,
-      "percentage": 0.07,
+      "votes": 101,
+      "percentage": 0.06,
       "is_winner": false,
       "is_leading": false
     },
@@ -83,7 +83,7 @@
       "name": "Abdul Najeeb S/o Veerappu",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 35,
+      "votes": 49,
       "percentage": 0.03,
       "is_winner": false,
       "is_leading": false

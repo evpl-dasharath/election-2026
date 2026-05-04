@@ -522,9 +522,11 @@ def scraper_commit(request, scrape_id):
 
         live.rounds_completed = raw.rounds_completed
         live.status = "RESULT_DECLARED" if raw.is_final else "IN_PROGRESS"
-        
-        # Calculate total counted votes
-        total_counted = sum(match.eci_total_votes for match in matches if match.candidate)
+
+        # Include NOTA in total_counted so the denominator is accurate
+        nota_match = raw.matches.filter(is_nota=True).first()
+        nota_votes = nota_match.eci_total_votes if nota_match else 0
+        total_counted = sum(match.eci_total_votes for match in matches if match.candidate) + nota_votes
         live.votes_counted = total_counted
         live.valid_votes = total_counted
         live.save()
@@ -532,7 +534,7 @@ def scraper_commit(request, scrape_id):
         raw.match_status = "MATCHED"
         raw.save()
 
-        # Push to RTDB
+        # Push to RTDB — include NOTA so the frontend denominator is correct
         from firebase_rtdb import push_constituency, update_rtdb_meta
         rtdb_candidates = [
             {
@@ -542,6 +544,9 @@ def scraper_commit(request, scrape_id):
             }
             for c in Candidate.objects.filter(constituency=raw.constituency).select_related("party").order_by('-votes')
         ]
+        if nota_votes > 0:
+            rtdb_candidates.append({"name": "NOTA", "party": "NOTA", "votes": nota_votes})
+
         rtdb_data = {
             "status": live.status,
             "rounds_completed": live.rounds_completed,

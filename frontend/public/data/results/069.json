@@ -11,17 +11,17 @@
     "votes_polled": 140819,
     "votes_counted": 9609,
     "valid_votes": 9609,
-    "rounds_completed": 12,
+    "rounds_completed": 13,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:09.166469+00:00"
+    "last_updated": "2026-05-04T08:34:02.718571+00:00"
   },
   "candidates_2026": [
     {
       "name": "K. K. Valsaraj",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 55461,
-      "percentage": 45.71,
+      "votes": 60894,
+      "percentage": 45.77,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "T. M. Nazar",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 46336,
-      "percentage": 38.19,
+      "votes": 51355,
+      "percentage": 38.6,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Athulya Ghosh",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 17667,
-      "percentage": 14.56,
+      "votes": 18745,
+      "percentage": 14.09,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,7 +47,7 @@
       "name": "Jayan Eratt",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 556,
+      "votes": 609,
       "percentage": 0.46,
       "is_winner": false,
       "is_leading": false
@@ -56,7 +56,7 @@
       "name": "A.M. Muhammed Riyas",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 423,
+      "votes": 470,
       "percentage": 0.35,
       "is_winner": false,
       "is_leading": false
@@ -65,7 +65,7 @@
       "name": "Manoj M.M.",
       "party": "CPI_ML_RS",
       "alliance": "OTH",
-      "votes": 293,
+      "votes": 315,
       "percentage": 0.24,
       "is_winner": false,
       "is_leading": false

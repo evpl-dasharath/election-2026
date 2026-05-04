@@ -11,17 +11,17 @@
     "votes_polled": 140095,
     "votes_counted": 8411,
     "valid_votes": 8411,
-    "rounds_completed": 14,
+    "rounds_completed": 16,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:39.219836+00:00"
+    "last_updated": "2026-05-04T08:34:20.326042+00:00"
   },
   "candidates_2026": [
     {
       "name": "C. Ajaya Prasad",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 63371,
-      "percentage": 51.21,
+      "votes": 71645,
+      "percentage": 50.53,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Noushad Yusuf",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 42256,
-      "percentage": 34.15,
+      "votes": 50143,
+      "percentage": 35.36,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Adv. B. Raghunathan Pillai",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 13926,
-      "percentage": 11.25,
+      "votes": 15247,
+      "percentage": 10.75,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Nedumoncavu Gopalakrishnan",
       "party": "EPI",
       "alliance": "OTH",
-      "votes": 1390,
-      "percentage": 1.12,
+      "votes": 1525,
+      "percentage": 1.08,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Jose Saranath",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 1205,
-      "percentage": 0.97,
+      "votes": 1410,
+      "percentage": 0.99,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "K. Mahesh",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 471,
-      "percentage": 0.38,
+      "votes": 556,
+      "percentage": 0.39,
       "is_winner": false,
       "is_leading": false
     }

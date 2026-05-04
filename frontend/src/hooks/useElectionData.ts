@@ -182,7 +182,7 @@ export function useStateSummary() {
   }, []);
 
   useEffect(() => {
-    let unsubscribe = () => {};
+    let unsubscribe = () => { };
 
     const fetchStaticData = async (markAsCached = true) => {
       try {
@@ -252,7 +252,7 @@ export function useConstituencies() {
   }, []);
 
   useEffect(() => {
-    let unsubscribe = () => {};
+    let unsubscribe = () => { };
 
     const fetchAndListen = async () => {
       try {
@@ -272,11 +272,11 @@ export function useConstituencies() {
 
         // Ensure parties cache for live candidate alliance/color lookup
         if (!_partiesCache) {
-           const pres = await fetch(USE_API ? `${API_BASE_URL}/parties/` : `${JSON_BASE_PATH}/parties.json`);
-           const praw = await pres.json();
-           _partiesCache = praw.results || praw;
+          const pres = await fetch(USE_API ? `${API_BASE_URL}/parties/` : `${JSON_BASE_PATH}/parties.json`);
+          const praw = await pres.json();
+          _partiesCache = praw.results || praw;
         }
-        
+
         // The JSON snapshot now contains real vote data exported at deploy time.
         // Keep it as-is — RTDB will override it once connected.
         // (No longer zeroing status/leader/runner_up here.)
@@ -296,74 +296,84 @@ export function useConstituencies() {
             _setDataSource('live');
 
             const merged = _constituenciesCache!.map(c => {
-               const liveAc = liveData[c.number];
-               if (liveAc) {
-                 // Clone, preserving all original fields (region, district, sitting_alliance, etc.)
-                 const totalVotesForItem = (liveAc.candidates || [])
-                   .reduce((s: number, cc: any) => s + (cc.votes || 0), 0);
-                 const newC: ConstituencyListItem = {
-                   ...c,
-                   status: liveAc.status,
-                   votes_counted: totalVotesForItem,
-                   // votes_polled & total_electors are STATIC (polling-day data).
-                   // c already has them from constituencies.json — do NOT override from RTDB.
-                   rounds_completed: liveAc.rounds_completed ?? 0,
-                   total_rounds: liveAc.total_rounds ?? 0,
-                 };
+              const liveAc = liveData[c.number];
+              if (liveAc) {
+                // Clone, preserving all original fields (region, district, sitting_alliance, etc.)
+                const totalVotesForItem = (liveAc.candidates || [])
+                  .reduce((s: number, cc: any) => s + (cc.votes || 0), 0);
+                const newC: ConstituencyListItem = {
+                  ...c,
+                  status: liveAc.status,
+                  votes_counted: totalVotesForItem,
+                  // votes_polled: use the higher of stored polling-day figure or actual counted
+                  // (ECI/DB mismatch means counted can exceed stored polled)
+                  votes_polled: Math.max(c.votes_polled || 0, totalVotesForItem),
+                  rounds_completed: liveAc.rounds_completed ?? 0,
+                  total_rounds: liveAc.total_rounds ?? 0,
+                };
 
-                 if (liveAc.status === 'NOT_STARTED') {
-                   newC.leader = null;
-                   newC.runner_up = null;
-                 } else if (liveAc.candidates && liveAc.candidates.length > 0) {
-                   const sorted = [...liveAc.candidates].sort((a: any, b: any) => b.votes - a.votes);
-                   
-                   const getPartyInfo = (pCode: string) => {
-                      const p = _partiesCache?.find(x => x.code === pCode);
-                      return { alliance: p?.alliance || 'OTH', color: p?.color_code || p?.color || '#999999' };
-                   };
+                if (liveAc.status === 'NOT_STARTED') {
+                  newC.leader = null;
+                  newC.runner_up = null;
+                } else if (liveAc.candidates && liveAc.candidates.length > 0) {
+                  const sorted = [...liveAc.candidates].sort((a: any, b: any) => b.votes - a.votes);
 
-                   const totalVotesCounted = sorted.reduce((s: number, c: any) => s + c.votes, 0);
-                   // Use votes_polled (polling-day total) as denominator for vote share.
-                   // Fall back to currently counted votes only if votes_polled is unavailable.
-                   const voteShareDenominator = (newC.votes_polled && newC.votes_polled > 0)
-                     ? newC.votes_polled
-                     : 0;
+                  const getPartyInfo = (pCode: string) => {
+                    const p = _partiesCache?.find(x => x.code === pCode);
+                    return { alliance: p?.alliance || 'OTH', color: p?.color_code || p?.color || '#999999' };
+                  };
 
-                   // Only show a leader/runner-up once at least 1 vote has been counted
-                   if (totalVotesCounted > 0 && sorted.length > 0) {
-                     const pInfo = getPartyInfo(sorted[0].party);
-                     newC.leader = {
-                       name: sorted[0].name,
-                       party: sorted[0].party,
-                       votes: sorted[0].votes,
-                       percentage: (sorted[0].votes / voteShareDenominator) * 100,
-                       alliance: pInfo.alliance,
-                       party_color: pInfo.color
-                     };
-                   } else {
-                     newC.leader = null;
-                   }
-                   if (totalVotesCounted > 0 && sorted.length > 1 && sorted[1].votes > 0) {
-                     const pInfo = getPartyInfo(sorted[1].party);
-                     newC.runner_up = {
-                       name: sorted[1].name,
-                       party: sorted[1].party,
-                       votes: sorted[1].votes,
-                       percentage: (sorted[1].votes / voteShareDenominator) * 100,
-                       alliance: pInfo.alliance,
-                       party_color: pInfo.color
-                     };
-                   } else {
-                     newC.runner_up = null;
-                   }
-                 } else {
-                   // candidates array is empty — awaited
-                   newC.leader = null;
-                   newC.runner_up = null;
-                 }
-                 return newC;
-               }
-               return c;
+                  const totalVotesCounted = sorted.reduce((s: number, c: any) => s + c.votes, 0);
+                  // Use votes_polled as denominator if available AND >= total counted.
+                  // If votes_polled < total counted (DB/ECI mismatch) fall back to
+                  // totalVotesCounted so percentages never exceed 100%.
+                  // NOTA is included in totalVotesCounted for an accurate denominator.
+                  const voteShareDenominator = (
+                    newC.votes_polled && newC.votes_polled > 0 && newC.votes_polled >= totalVotesCounted
+                      ? newC.votes_polled
+                      : totalVotesCounted > 0 ? totalVotesCounted : 0
+                  );
+
+                  // Exclude NOTA from leader/runner-up consideration
+                  const nonNota = sorted.filter(
+                    (c: any) => c.party !== 'NOTA' && c.name?.toUpperCase() !== 'NOTA'
+                  );
+
+                  // Only show a leader/runner-up once at least 1 vote has been counted
+                  if (totalVotesCounted > 0 && nonNota.length > 0) {
+                    const pInfo = getPartyInfo(nonNota[0].party);
+                    newC.leader = {
+                      name: nonNota[0].name,
+                      party: nonNota[0].party,
+                      votes: nonNota[0].votes,
+                      percentage: voteShareDenominator > 0 ? (nonNota[0].votes / voteShareDenominator) * 100 : 0,
+                      alliance: pInfo.alliance,
+                      party_color: pInfo.color
+                    };
+                  } else {
+                    newC.leader = null;
+                  }
+                  if (totalVotesCounted > 0 && nonNota.length > 1 && nonNota[1].votes > 0) {
+                    const pInfo = getPartyInfo(nonNota[1].party);
+                    newC.runner_up = {
+                      name: nonNota[1].name,
+                      party: nonNota[1].party,
+                      votes: nonNota[1].votes,
+                      percentage: voteShareDenominator > 0 ? (nonNota[1].votes / voteShareDenominator) * 100 : 0,
+                      alliance: pInfo.alliance,
+                      party_color: pInfo.color
+                    };
+                  } else {
+                    newC.runner_up = null;
+                  }
+                } else {
+                  // candidates array is empty — awaited
+                  newC.leader = null;
+                  newC.runner_up = null;
+                }
+                return newC;
+              }
+              return c;
             });
             setData(merged);
           } else {
@@ -380,7 +390,7 @@ export function useConstituencies() {
         setLoading(false);
       }
     };
-    
+
     fetchAndListen();
     return () => unsubscribe();
   }, [trigger]);
@@ -406,41 +416,41 @@ export function useConstituencyDetail(constituencyId: number | null) {
 
   useEffect(() => {
     if (!constituencyId) { setData(null); return; }
-    
-    let unsubscribe = () => {};
+
+    let unsubscribe = () => { };
 
     const fetchAndListen = async () => {
       try {
         setLoading(true);
         let baseJson: ConstituencyDetail;
         let staticListItem: ConstituencyListItem | undefined;
-        
+
         if (_constituencyDetailCache[constituencyId]) {
-           baseJson = _constituencyDetailCache[constituencyId];
-           // Also try to get static values from list cache
-           staticListItem = _constituenciesCache?.find(c => c.id === constituencyId);
+          baseJson = _constituencyDetailCache[constituencyId];
+          // Also try to get static values from list cache
+          staticListItem = _constituenciesCache?.find(c => c.id === constituencyId);
         } else {
-           if (USE_API) {
-             const res = await fetch(`${API_BASE_URL}/constituencies/${constituencyId}/`);
-             baseJson = await res.json();
-           } else {
-             const listRes = await fetch(`${JSON_BASE_PATH}/constituencies.json`);
-             const list: ConstituencyListItem[] = await listRes.json();
-             const constituency = list.find(c => c.id === constituencyId);
-             if (!constituency) throw new Error('Constituency not found');
-             staticListItem = constituency; // capture for static fields below
-             const res = await fetch(
-               `${JSON_BASE_PATH}/results/${constituency.number.toString().padStart(3, '0')}.json`
-             );
-             baseJson = await res.json();
-           }
-           _constituencyDetailCache[constituencyId] = baseJson;
+          if (USE_API) {
+            const res = await fetch(`${API_BASE_URL}/constituencies/${constituencyId}/`);
+            baseJson = await res.json();
+          } else {
+            const listRes = await fetch(`${JSON_BASE_PATH}/constituencies.json`);
+            const list: ConstituencyListItem[] = await listRes.json();
+            const constituency = list.find(c => c.id === constituencyId);
+            if (!constituency) throw new Error('Constituency not found');
+            staticListItem = constituency; // capture for static fields below
+            const res = await fetch(
+              `${JSON_BASE_PATH}/results/${constituency.number.toString().padStart(3, '0')}.json`
+            );
+            baseJson = await res.json();
+          }
+          _constituencyDetailCache[constituencyId] = baseJson;
         }
 
         if (!_partiesCache) {
-           const pres = await fetch(USE_API ? `${API_BASE_URL}/parties/` : `${JSON_BASE_PATH}/parties.json`);
-           const praw = await pres.json();
-           _partiesCache = praw.results || praw;
+          const pres = await fetch(USE_API ? `${API_BASE_URL}/parties/` : `${JSON_BASE_PATH}/parties.json`);
+          const praw = await pres.json();
+          _partiesCache = praw.results || praw;
         }
 
         setData(baseJson);
@@ -449,71 +459,83 @@ export function useConstituencyDetail(constituencyId: number | null) {
         const acNumber = baseJson.constituency.number;
         const liveRef = ref(db, `live/${acNumber}`);
         unsubscribe = onValue(liveRef, (snapshot) => {
-           if (snapshot.exists()) {
-             const liveAc = snapshot.val();
-             _notifyStale(Date.now());
-             
-             const getPartyInfo = (pCode: string) => {
-                const p = _partiesCache?.find(x => x.code === pCode);
-                return { alliance: p?.alliance || 'OTH', color: p?.color_code || p?.color || '#999999' };
-             };
+          if (snapshot.exists()) {
+            const liveAc = snapshot.val();
+            _notifyStale(Date.now());
 
-             const sortedLiveCands = [...(liveAc.candidates || [])].sort((a: any, b: any) => b.votes - a.votes);
-             const totalVotesCounted = sortedLiveCands.reduce((sum: number, c: any) => sum + c.votes, 0);
-             // Use votes_polled (polling-day total) as denominator for vote share.
-             // Priority: staticListItem.votes_polled > baseJson.live_result.votes_polled > RTDB > counted votes
-             const voteShareDenominator = (
-               (staticListItem?.votes_polled && staticListItem.votes_polled > 0) ? staticListItem.votes_polled
-               : (baseJson.live_result?.votes_polled && baseJson.live_result.votes_polled > 0) ? baseJson.live_result.votes_polled
-               : (liveAc.votes_polled && liveAc.votes_polled > 0) ? liveAc.votes_polled
-               : 0
-             );
+            const getPartyInfo = (pCode: string) => {
+              const p = _partiesCache?.find(x => x.code === pCode);
+              return { alliance: p?.alliance || 'OTH', color: p?.color_code || p?.color || '#999999' };
+            };
 
-             const mergedCands = sortedLiveCands.map((c: any, index: number) => {
-                const pInfo = getPartyInfo(c.party);
-                return {
-                  name: c.name,
-                  party: c.party,
-                  alliance: pInfo.alliance,
-                  votes: c.votes,
-                  percentage: voteShareDenominator > 0 ? (c.votes / voteShareDenominator) * 100 : 0,
-                  is_winner: liveAc.status === 'RESULT_DECLARED' && index === 0 && c.votes > 0,
-                  is_leading: liveAc.status === 'IN_PROGRESS' && index === 0 && c.votes > 0,
-                  party_color: pInfo.color
-                };
-             });
+            const sortedLiveCands = [...(liveAc.candidates || [])].sort((a: any, b: any) => b.votes - a.votes);
+            const totalVotesCounted = sortedLiveCands.reduce((sum: number, c: any) => sum + c.votes, 0);
+            // Resolve votes_polled from the most-trusted source
+            const resolvedVotesPolled =
+              (staticListItem?.votes_polled && staticListItem.votes_polled > 0) ? staticListItem.votes_polled
+              : (baseJson.live_result?.votes_polled && baseJson.live_result.votes_polled > 0) ? baseJson.live_result.votes_polled
+              : (liveAc.votes_polled && liveAc.votes_polled > 0) ? liveAc.votes_polled
+              : 0;
+            // If votes_polled < total counted (DB/ECI mismatch), use totalVotesCounted
+            // so individual percentages never exceed 100%.
+            // NOTA is included in totalVotesCounted for an accurate denominator.
+            const voteShareDenominator =
+              resolvedVotesPolled > 0 && resolvedVotesPolled >= totalVotesCounted
+                ? resolvedVotesPolled
+                : totalVotesCounted > 0 ? totalVotesCounted : 0;
 
-               const mergedLiveResult = {
-                 status: liveAc.status,
-                 // total_electors & votes_polled are STATIC (polling-day data).
-                 // Priority: staticListItem (from constituencies.json) > baseJson.live_result > RTDB
-                 // staticListItem is always populated in prod JSON path (from the list fetch above).
-                 total_electors: staticListItem?.total_electors
-                   || baseJson.live_result?.total_electors
-                   || liveAc.total_electors
-                   || 0,
-                 votes_polled: staticListItem?.votes_polled
-                   || baseJson.live_result?.votes_polled
-                   || liveAc.votes_polled
-                   || 0,
-                 // votes_counted & valid_votes come from ECI counting feed
-                 votes_counted: totalVotesCounted,
-                 valid_votes: totalVotesCounted,
-                 rejected_votes: liveAc.rejected_votes || baseJson.live_result?.rejected_votes || 0,
-                 rounds_completed: liveAc.rounds_completed || 0,
-                 total_rounds: liveAc.total_rounds || 0,
-                 last_updated: liveAc.last_updated || null
-               };
+            // Identify the top non-NOTA candidate for winner/leading flags
+            const topNonNota = sortedLiveCands.find(
+              (c: any) => c.party !== 'NOTA' && c.name?.toUpperCase() !== 'NOTA'
+            );
 
-             const merged: ConstituencyDetail = {
-               ...baseJson,
-               live_result: mergedLiveResult,
-               candidates_2026: mergedCands
-             };
-             // Update cache so navigating back doesn't show stale data
-             _constituencyDetailCache[constituencyId] = merged;
-             setData(merged);
-           }
+            const mergedCands = sortedLiveCands.map((c: any) => {
+              const pInfo = getPartyInfo(c.party);
+              const isNota = c.party === 'NOTA' || c.name?.toUpperCase() === 'NOTA';
+              return {
+                name: c.name,
+                party: c.party,
+                alliance: pInfo.alliance,
+                votes: c.votes,
+                percentage: voteShareDenominator > 0 ? (c.votes / voteShareDenominator) * 100 : 0,
+                is_winner: !isNota && liveAc.status === 'RESULT_DECLARED' && c === topNonNota && c.votes > 0,
+                is_leading: !isNota && liveAc.status === 'IN_PROGRESS' && c === topNonNota && c.votes > 0,
+                party_color: pInfo.color
+              };
+            });
+
+            const mergedLiveResult = {
+              status: liveAc.status,
+              total_electors: staticListItem?.total_electors
+                || baseJson.live_result?.total_electors
+                || liveAc.total_electors
+                || 0,
+              // votes_polled: use max(stored, counted) to handle ECI/DB mismatch
+              // so bar never exceeds 100% and percentage denominator is always valid
+              votes_polled: Math.max(
+                staticListItem?.votes_polled || 0,
+                baseJson.live_result?.votes_polled || 0,
+                liveAc.votes_polled || 0,
+                totalVotesCounted
+              ),
+              // votes_counted & valid_votes come from ECI counting feed
+              votes_counted: totalVotesCounted,
+              valid_votes: totalVotesCounted,
+              rejected_votes: liveAc.rejected_votes || baseJson.live_result?.rejected_votes || 0,
+              rounds_completed: liveAc.rounds_completed || 0,
+              total_rounds: liveAc.total_rounds || 0,
+              last_updated: liveAc.last_updated || null
+            };
+
+            const merged: ConstituencyDetail = {
+              ...baseJson,
+              live_result: mergedLiveResult,
+              candidates_2026: mergedCands
+            };
+            // Update cache so navigating back doesn't show stale data
+            _constituencyDetailCache[constituencyId] = merged;
+            setData(merged);
+          }
         });
 
       } catch (err) {
@@ -521,7 +543,7 @@ export function useConstituencyDetail(constituencyId: number | null) {
         setLoading(false);
       }
     };
-    
+
     fetchAndListen();
     return () => unsubscribe();
   }, [constituencyId, trigger]);
@@ -666,6 +688,126 @@ export function useAllHistorical() {
     };
     fetchData();
   }, [trigger]);
+
+  return { data, loading, error };
+}
+
+
+// ─────────────────────────────────────────────────────────────────────────────
+// APPEND TO BOTTOM OF useElectionData.ts
+// ─────────────────────────────────────────────────────────────────────────────
+// Also add to the top-level import in useElectionData.ts:
+//   import type { AllianceSummary, PartyDetailFull } from '../types';
+// And add two module-level caches after _historicalCache:
+//   const _allianceCache: Record<string, AllianceSummary> = {};
+//   const _partyDetailCache: Record<string, PartyDetailFull> = {};
+// And in clearElectionDataCache(), add:
+//   Object.keys(_allianceCache).forEach(k => delete _allianceCache[k]);
+//   Object.keys(_partyDetailCache).forEach(k => delete _partyDetailCache[k]);
+// ─────────────────────────────────────────────────────────────────────────────
+
+export function useAllianceSummary(code: string | null) {
+  const [data, setData] = useState<AllianceSummary | null>(
+    code ? (_allianceCache[code] ?? null) : null
+  );
+  const [loading, setLoading] = useState<boolean>(
+    code !== null && !_allianceCache[code ?? '']
+  );
+  const [error, setError] = useState<string | null>(null);
+  const [trigger, setTrigger] = useState(0);
+
+  useEffect(() => {
+    const cb = () => setTrigger(t => t + 1);
+    _refreshCallbacks.add(cb);
+    return () => { _refreshCallbacks.delete(cb); };
+  }, []);
+
+  useEffect(() => {
+    if (!code) { setData(null); setLoading(false); return; }
+
+    if (_allianceCache[code]) {
+      setData(_allianceCache[code]);
+      setLoading(false);
+      return;
+    }
+
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        let json: AllianceSummary;
+        if (USE_API) {
+          const res = await fetch(`${API_BASE_URL}/alliance/${code}/`);
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          json = await res.json();
+        } else {
+          const res = await fetch(`${JSON_BASE_PATH}/alliance_${code.toLowerCase()}.json`);
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          json = await res.json();
+        }
+        _allianceCache[code] = json;
+        setData(json);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Failed to fetch alliance data');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [code, trigger]);
+
+  return { data, loading, error };
+}
+
+export function usePartyDetail(code: string | null) {
+  const [data, setData] = useState<PartyDetailFull | null>(
+    code ? (_partyDetailCache[code] ?? null) : null
+  );
+  const [loading, setLoading] = useState<boolean>(
+    code !== null && !_partyDetailCache[code ?? '']
+  );
+  const [error, setError] = useState<string | null>(null);
+  const [trigger, setTrigger] = useState(0);
+
+  useEffect(() => {
+    const cb = () => setTrigger(t => t + 1);
+    _refreshCallbacks.add(cb);
+    return () => { _refreshCallbacks.delete(cb); };
+  }, []);
+
+  useEffect(() => {
+    if (!code) { setData(null); setLoading(false); return; }
+
+    if (_partyDetailCache[code]) {
+      setData(_partyDetailCache[code]);
+      setLoading(false);
+      return;
+    }
+
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        let json: PartyDetailFull;
+        if (USE_API) {
+          const res = await fetch(`${API_BASE_URL}/party/${code}/`);
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          json = await res.json();
+        } else {
+          const res = await fetch(`${JSON_BASE_PATH}/party_${code.toLowerCase()}.json`);
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          json = await res.json();
+        }
+        _partyDetailCache[code] = json;
+        setData(json);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Failed to fetch party data');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [code, trigger]);
 
   return { data, loading, error };
 }

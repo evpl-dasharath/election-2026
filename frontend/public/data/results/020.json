@@ -11,17 +11,17 @@
     "votes_polled": 140599,
     "votes_counted": 22690,
     "valid_votes": 22690,
-    "rounds_completed": 12,
+    "rounds_completed": 14,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:36:41.741074+00:00"
+    "last_updated": "2026-05-04T08:34:58.203325+00:00"
   },
   "candidates_2026": [
     {
       "name": "K. K. Rema",
       "party": "RMPI",
       "alliance": "UDF",
-      "votes": 61527,
-      "percentage": 49.04,
+      "votes": 69725,
+      "percentage": 48.96,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "M. K. Bhaskaran",
       "party": "RJD",
       "alliance": "LDF",
-      "votes": 48548,
-      "percentage": 38.69,
+      "votes": 54931,
+      "percentage": 38.58,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Adv. K. Dileep",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 12271,
-      "percentage": 9.78,
+      "votes": 14240,
+      "percentage": 10.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Shamseer Chombala",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 2250,
-      "percentage": 1.79,
+      "votes": 2472,
+      "percentage": 1.74,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "Rama T P W/o Ashokan P K",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 172,
+      "votes": 200,
       "percentage": 0.14,
       "is_winner": false,
       "is_leading": false
@@ -65,7 +65,7 @@
       "name": "Bhaskaran K K S/o Kelappan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 165,
+      "votes": 185,
       "percentage": 0.13,
       "is_winner": false,
       "is_leading": false
@@ -74,7 +74,7 @@
       "name": "Rama W/o Vijayan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 134,
+      "votes": 160,
       "percentage": 0.11,
       "is_winner": false,
       "is_leading": false
@@ -83,8 +83,8 @@
       "name": "Ramakrishnan Vattakandi",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 78,
-      "percentage": 0.06,
+      "votes": 93,
+      "percentage": 0.07,
       "is_winner": false,
       "is_leading": false
     }

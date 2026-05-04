@@ -224,3 +224,51 @@ export interface AdminUpdatePayload {
     total_rounds: number;
   };
 }
+
+// ─── Alliance & Party page types ──────────────────────────────────────────────
+
+export interface PartyInAlliance {
+  code: string;
+  name: string;
+  color: string;
+  contested: number;
+  won: number;
+  leading: number;
+  vote_share: number;
+  vote_share_2021_pct: number;
+}
+
+export interface AllianceSummary {
+  alliance: string;
+  seats_won: number;
+  seats_leading: number;
+  seats_trailing: number;
+  seats_contested: number;
+  total_votes: number;
+  vote_share: number;
+  vote_share_2021_pct: number;
+  best_margin: { constituency: string; margin: number } | null;
+  worst_margin: { constituency: string; margin: number } | null;
+  seat_movement: { gained: number; held: number; lost: number };
+  swing_analysis: {
+    gained_from: { LDF: number; UDF: number; NDA: number; OTH: number };
+    lost_to: { LDF: number; UDF: number; NDA: number; OTH: number };
+  };
+  parties: PartyInAlliance[];
+  constituencies: (ConstituencyListItem & { competing: boolean })[];
+}
+
+export interface PartyDetailFull {
+  code: string;
+  full_name: string;
+  alliance: string;
+  color_code: string;
+  seats_contested: number;
+  seats_won: number;
+  seats_leading: number;
+  total_votes: number;
+  vote_share: number;
+  vote_share_2021_pct: number;
+  constituencies: ConstituencyListItem[];
+}
+

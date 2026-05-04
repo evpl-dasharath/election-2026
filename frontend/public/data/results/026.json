@@ -11,17 +11,17 @@
     "votes_polled": 174056,
     "votes_counted": 11947,
     "valid_votes": 11947,
-    "rounds_completed": 9,
+    "rounds_completed": 12,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:36:44.308137+00:00"
+    "last_updated": "2026-05-04T08:35:01.609499+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. Vidya Balakrishnan",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 46737,
-      "percentage": 44.67,
+      "votes": 60999,
+      "percentage": 42.78,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "A. K. Saseendran",
       "party": "NCP(SP)",
       "alliance": "OTH",
-      "votes": 37629,
-      "percentage": 35.96,
+      "votes": 52902,
+      "percentage": 37.1,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "T. Devadas",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 18527,
-      "percentage": 17.71,
+      "votes": 26226,
+      "percentage": 18.39,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "V.K. Saseendran",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 404,
-      "percentage": 0.39,
+      "votes": 573,
+      "percentage": 0.4,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "P.K.Saseendran",
       "party": "NCP",
       "alliance": "LDF",
-      "votes": 375,
-      "percentage": 0.36,
+      "votes": 550,
+      "percentage": 0.39,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "P.M.Sreekumar",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 289,
-      "percentage": 0.28,
+      "votes": 392,
+      "percentage": 0.27,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,7 +74,7 @@
       "name": "Abdul Basith Atholi",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 197,
+      "votes": 277,
       "percentage": 0.19,
       "is_winner": false,
       "is_leading": false
@@ -83,7 +83,7 @@
       "name": "Adv.Sumin.S.Nedungadan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 64,
+      "votes": 89,
       "percentage": 0.06,
       "is_winner": false,
       "is_leading": false

@@ -11,17 +11,17 @@
     "votes_polled": 110781,
     "votes_counted": 8183,
     "valid_votes": 8183,
-    "rounds_completed": 9,
+    "rounds_completed": 12,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:35:24.541651+00:00"
+    "last_updated": "2026-05-04T08:34:13.256747+00:00"
   },
   "candidates_2026": [
     {
       "name": "F. Raja",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 26090,
-      "percentage": 43.07,
+      "votes": 38335,
+      "percentage": 44.92,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Adv. A. Raja",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 25439,
-      "percentage": 42.0,
+      "votes": 34701,
+      "percentage": 40.66,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "S. Rajendran",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 8419,
-      "percentage": 13.9,
+      "votes": 11401,
+      "percentage": 13.36,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Selvi",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 147,
-      "percentage": 0.24,
+      "votes": 162,
+      "percentage": 0.19,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Rajendran .V. B",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 100,
-      "percentage": 0.17,
+      "votes": 155,
+      "percentage": 0.18,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Chelladurai .M",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 44,
-      "percentage": 0.07,
+      "votes": 70,
+      "percentage": 0.08,
       "is_winner": false,
       "is_leading": false
     }

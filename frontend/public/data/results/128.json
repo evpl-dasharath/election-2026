@@ -11,17 +11,17 @@
     "votes_polled": 146122,
     "votes_counted": 19010,
     "valid_votes": 19010,
-    "rounds_completed": 11,
+    "rounds_completed": 12,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:53.843638+00:00"
+    "last_updated": "2026-05-04T08:34:23.847862+00:00"
   },
   "candidates_2026": [
     {
       "name": "O. S. Ambika",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 43504,
-      "percentage": 40.31,
+      "votes": 46348,
+      "percentage": 39.88,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "P. Sudheer",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 31730,
-      "percentage": 29.4,
+      "votes": 34841,
+      "percentage": 29.98,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Santhosh Bhadran",
       "party": "RSP",
       "alliance": "UDF",
-      "votes": 29913,
-      "percentage": 27.72,
+      "votes": 32092,
+      "percentage": 27.61,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Jayarajan M",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 889,
-      "percentage": 0.82,
+      "votes": 910,
+      "percentage": 0.78,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "S. Sujithra",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 682,
-      "percentage": 0.63,
+      "votes": 722,
+      "percentage": 0.62,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,7 +65,7 @@
       "name": "Sunitha Kilimanoor",
       "party": "Anna DHRM",
       "alliance": "OTH",
-      "votes": 306,
+      "votes": 326,
       "percentage": 0.28,
       "is_winner": false,
       "is_leading": false

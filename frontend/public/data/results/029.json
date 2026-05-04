@@ -11,17 +11,17 @@
     "votes_polled": 183086,
     "votes_counted": 11805,
     "valid_votes": 11805,
-    "rounds_completed": 9,
+    "rounds_completed": 13,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:36:46.796769+00:00"
+    "last_updated": "2026-05-04T08:34:55.659209+00:00"
   },
   "candidates_2026": [
     {
       "name": "Muhammad Riyas",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 48665,
-      "percentage": 45.24,
+      "votes": 66995,
+      "percentage": 43.61,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "P. V. Anvar",
       "party": "AITC",
       "alliance": "UDF",
-      "votes": 40661,
-      "percentage": 37.8,
+      "votes": 62112,
+      "percentage": 40.44,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Adv. K. P. Prakash Babu",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 16731,
-      "percentage": 15.56,
+      "votes": 22485,
+      "percentage": 14.64,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Anver S/o Moideenkoya",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 355,
-      "percentage": 0.33,
+      "votes": 454,
+      "percentage": 0.3,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Anver S/o Enunni",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 287,
-      "percentage": 0.27,
+      "votes": 378,
+      "percentage": 0.25,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Anver S/o Sulaikha K P",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 192,
-      "percentage": 0.18,
+      "votes": 257,
+      "percentage": 0.17,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,7 +74,7 @@
       "name": "Muhammed Riyas P.C S/o Ahammedkutty .P C",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 186,
+      "votes": 255,
       "percentage": 0.17,
       "is_winner": false,
       "is_leading": false
@@ -83,7 +83,7 @@
       "name": "Anwar Ali Hassan S/o Kuttyhassan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 112,
+      "votes": 159,
       "percentage": 0.1,
       "is_winner": false,
       "is_leading": false

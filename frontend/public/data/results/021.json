@@ -11,17 +11,17 @@
     "votes_polled": 175040,
     "votes_counted": 9943,
     "valid_votes": 9943,
-    "rounds_completed": 10,
+    "rounds_completed": 13,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:36:40.685271+00:00"
+    "last_updated": "2026-05-04T08:34:54.062227+00:00"
   },
   "candidates_2026": [
     {
       "name": "Parakkal Abdulla",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 53090,
-      "percentage": 49.4,
+      "votes": 72308,
+      "percentage": 49.74,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "K. P. Kunhammad Kutti Master",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 45997,
-      "percentage": 42.8,
+      "votes": 62712,
+      "percentage": 43.14,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Ramadas Manaleri",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 8007,
-      "percentage": 7.45,
+      "votes": 9892,
+      "percentage": 6.8,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,7 +47,7 @@
       "name": "Kunhammadkutty",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 65,
+      "votes": 85,
       "percentage": 0.06,
       "is_winner": false,
       "is_leading": false
@@ -56,8 +56,8 @@
       "name": "Abdulla",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 62,
-      "percentage": 0.06,
+      "votes": 77,
+      "percentage": 0.05,
       "is_winner": false,
       "is_leading": false
     }

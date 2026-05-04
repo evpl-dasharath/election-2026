@@ -47,9 +47,15 @@ function sDotColor(s: string) {
   if (s === 'IN_PROGRESS') return '#22c55e';
   return '#D1D5DB';
 }
-function cPct(live: { rounds_completed: number; total_rounds: number } | null | undefined) {
-  if (!live || live.total_rounds === 0) return 0;
-  return Math.round((live.rounds_completed / live.total_rounds) * 100);
+function cPct(live: { rounds_completed: number; total_rounds: number; votes_counted?: number; votes_polled?: number } | null | undefined) {
+  if (!live) return 0;
+  // Prefer rounds-based when available
+  if (live.total_rounds > 0) return Math.round((live.rounds_completed / live.total_rounds) * 100);
+  // Fall back to votes-based (handles constituencies where round info is missing)
+  const counted = live.votes_counted ?? 0;
+  const polled = live.votes_polled ?? 0;
+  if (counted > 0 && polled > 0) return Math.min(100, Math.round((counted / polled) * 100));
+  return 0;
 }
 function rLabel(live: { rounds_completed: number; total_rounds: number; status: string } | null | undefined) {
   if (!live) return 'Awaited';

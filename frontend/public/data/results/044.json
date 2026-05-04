@@ -11,17 +11,17 @@
     "votes_polled": 171216,
     "votes_counted": 22381,
     "valid_votes": 22381,
-    "rounds_completed": 9,
+    "rounds_completed": 10,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:36:54.911249+00:00"
+    "last_updated": "2026-05-04T08:35:03.650897+00:00"
   },
   "candidates_2026": [
     {
       "name": "P. K. Navas",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 52907,
-      "percentage": 52.34,
+      "votes": 59289,
+      "percentage": 52.42,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Mohamed Sameer T Thiruthiyil House",
       "party": "IND_LDF",
       "alliance": "LDF",
-      "votes": 36812,
-      "percentage": 36.42,
+      "votes": 41309,
+      "percentage": 36.53,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Deepa Puzhakkal",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 10327,
-      "percentage": 10.22,
+      "votes": 11335,
+      "percentage": 10.02,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "P P Navas S/o Kunhimuhamed",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 257,
-      "percentage": 0.25,
+      "votes": 293,
+      "percentage": 0.26,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "Muhammed Sameer",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 221,
+      "votes": 245,
       "percentage": 0.22,
       "is_winner": false,
       "is_leading": false
@@ -65,8 +65,8 @@
       "name": "Sameer T",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 209,
-      "percentage": 0.21,
+      "votes": 226,
+      "percentage": 0.2,
       "is_winner": false,
       "is_leading": false
     }

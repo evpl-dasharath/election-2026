@@ -11,17 +11,17 @@
     "votes_polled": 126446,
     "votes_counted": 6635,
     "valid_votes": 6635,
-    "rounds_completed": 8,
+    "rounds_completed": 10,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:36:43.217289+00:00"
+    "last_updated": "2026-05-04T08:34:56.712029+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. Fyzal Babu",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 31083,
-      "percentage": 38.04,
+      "votes": 42281,
+      "percentage": 40.52,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Ahamed Devarkovil",
       "party": "INL",
       "alliance": "LDF",
-      "votes": 26197,
-      "percentage": 32.06,
+      "votes": 34184,
+      "percentage": 32.76,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "T. Raneesh",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 23870,
-      "percentage": 29.21,
+      "votes": 27196,
+      "percentage": 26.06,
       "is_winner": false,
       "is_leading": false
     }

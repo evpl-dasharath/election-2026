@@ -6,31 +6,31 @@
     "district": "Kottayam"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 170254,
     "votes_polled": 125545,
     "votes_counted": 16312,
     "valid_votes": 16312,
-    "rounds_completed": 13,
+    "rounds_completed": 15,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:15.081285+00:00"
+    "last_updated": "2026-05-04T07:58:50.181308+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. Chandy Oommen",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 76973,
-      "percentage": 65.49,
-      "is_winner": false,
-      "is_leading": true
+      "votes": 84031,
+      "percentage": 65.56,
+      "is_winner": true,
+      "is_leading": false
     },
     {
       "name": "K. M. Radhakrishnan",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 28498,
-      "percentage": 24.25,
+      "votes": 31124,
+      "percentage": 24.28,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Raveendranath Vakathanam",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 10698,
-      "percentage": 9.1,
+      "votes": 11544,
+      "percentage": 9.01,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Paul P Chacko",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 591,
-      "percentage": 0.5,
+      "votes": 663,
+      "percentage": 0.52,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "Sabu Mylakkadan",
       "party": "JRP",
       "alliance": "OTH",
-      "votes": 117,
+      "votes": 122,
       "percentage": 0.1,
       "is_winner": false,
       "is_leading": false
@@ -65,7 +65,7 @@
       "name": "Rijomon Mathew",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 75,
+      "votes": 83,
       "percentage": 0.06,
       "is_winner": false,
       "is_leading": false

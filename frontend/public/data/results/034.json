@@ -11,17 +11,17 @@
     "votes_polled": 166170,
     "votes_counted": 17191,
     "valid_votes": 17191,
-    "rounds_completed": 14,
+    "rounds_completed": 16,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:36:47.740002+00:00"
+    "last_updated": "2026-05-04T08:35:04.321780+00:00"
   },
   "candidates_2026": [
     {
       "name": "P. K. Basheer",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 76229,
-      "percentage": 58.0,
+      "votes": 87911,
+      "percentage": 58.33,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Adv. Shafeer Kizhisseri",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 44726,
-      "percentage": 34.03,
+      "votes": 51139,
+      "percentage": 33.93,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Adv. N. Sreeprakash",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 7154,
-      "percentage": 5.44,
+      "votes": 7944,
+      "percentage": 5.27,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Yusuf Chemmala",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 2001,
-      "percentage": 1.52,
+      "votes": 2249,
+      "percentage": 1.49,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "Krishnan Thachannan",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 377,
+      "votes": 430,
       "percentage": 0.29,
       "is_winner": false,
       "is_leading": false
@@ -65,8 +65,8 @@
       "name": "Mujeeb Rahman",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 142,
-      "percentage": 0.11,
+      "votes": 158,
+      "percentage": 0.1,
       "is_winner": false,
       "is_leading": false
     }

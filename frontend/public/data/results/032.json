@@ -6,31 +6,31 @@
     "district": "Kozhikode"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 191954,
     "votes_polled": 154235,
     "votes_counted": 22095,
     "valid_votes": 22095,
-    "rounds_completed": 13,
+    "rounds_completed": 15,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:36:47.623058+00:00"
+    "last_updated": "2026-05-04T08:20:52.654728+00:00"
   },
   "candidates_2026": [
     {
       "name": "C. K. Kasim",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 64964,
-      "percentage": 48.47,
-      "is_winner": false,
-      "is_leading": true
+      "votes": 77140,
+      "percentage": 49.23,
+      "is_winner": true,
+      "is_leading": false
     },
     {
       "name": "Linto Joseph",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 60732,
-      "percentage": 45.31,
+      "votes": 70399,
+      "percentage": 44.93,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Sunny Thomas",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 6746,
-      "percentage": 5.03,
+      "votes": 7380,
+      "percentage": 4.71,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Sunny V Joseph",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 749,
-      "percentage": 0.56,
+      "votes": 812,
+      "percentage": 0.52,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "Muhammed Kasim",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 162,
+      "votes": 186,
       "percentage": 0.12,
       "is_winner": false,
       "is_leading": false
@@ -65,8 +65,8 @@
       "name": "Dr. Wilson Rockey",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 150,
-      "percentage": 0.11,
+      "votes": 164,
+      "percentage": 0.1,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "P K Kasim  S/o Abdullakkutty Haji",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 129,
-      "percentage": 0.1,
+      "votes": 141,
+      "percentage": 0.09,
       "is_winner": false,
       "is_leading": false
     }

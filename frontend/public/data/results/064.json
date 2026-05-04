@@ -11,26 +11,26 @@
     "votes_polled": 168686,
     "votes_counted": 0,
     "valid_votes": 0,
-    "rounds_completed": 7,
+    "rounds_completed": 10,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:04.438441+00:00"
+    "last_updated": "2026-05-04T08:34:03.872639+00:00"
   },
   "candidates_2026": [
-    {
-      "name": "C. Ravindranath",
-      "party": "CPI_M",
-      "alliance": "LDF",
-      "votes": 27688,
-      "percentage": 39.28,
-      "is_winner": false,
-      "is_leading": true
-    },
     {
       "name": "T. N. Prathapan",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 26746,
-      "percentage": 37.94,
+      "votes": 38971,
+      "percentage": 38.81,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "C. Ravindranath",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 37660,
+      "percentage": 37.5,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "K. K. Aneesh Kumar",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 14933,
-      "percentage": 21.18,
+      "votes": 22061,
+      "percentage": 21.97,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Dileef Abdul Khader",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 475,
-      "percentage": 0.67,
+      "votes": 819,
+      "percentage": 0.82,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Unnikrishnan C. S.",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 112,
-      "percentage": 0.16,
+      "votes": 169,
+      "percentage": 0.17,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Raveendranath K",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 80,
-      "percentage": 0.11,
+      "votes": 119,
+      "percentage": 0.12,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,7 +74,7 @@
       "name": "Prathapan Divakaran",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 80,
+      "votes": 108,
       "percentage": 0.11,
       "is_winner": false,
       "is_leading": false
@@ -83,7 +83,7 @@
       "name": "Sivaprasad Gandhi K M",
       "party": "IGP",
       "alliance": "OTH",
-      "votes": 47,
+      "votes": 71,
       "percentage": 0.07,
       "is_winner": false,
       "is_leading": false
@@ -92,8 +92,8 @@
       "name": "Chandran P V",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 30,
-      "percentage": 0.04,
+      "votes": 46,
+      "percentage": 0.05,
       "is_winner": false,
       "is_leading": false
     },
@@ -101,8 +101,8 @@
       "name": "Sujith",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 28,
-      "percentage": 0.04,
+      "votes": 35,
+      "percentage": 0.03,
       "is_winner": false,
       "is_leading": false
     }

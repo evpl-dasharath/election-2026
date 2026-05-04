@@ -1,129 +1,262 @@
-# Standardise Parties & Alliances with FK-based Schema
+# Alliance & Party Pages — Implementation Plan
+## Kerala Elections 2026 · kl-2026.web.app
 
-## Problem
-The database currently stores party identifiers as **free-text CharField strings** (`party_code`) across all historical result models (2006, 2011, 2016, 2021) and uses string-based lookups in `PartyAllianceYear`. This causes:
-- Multiple spellings for the same party (`CPI(M)` vs `CPM` vs `CPIM`)
-- Alliance lookups rely on fragile string matching
-- No referential integrity — typos or unknown codes silently go to `OTH`
+---
 
-## Proposed New Schema
+## Background
 
-### New: `Alliance` model
-A small lookup table with exactly 4 rows: `UDF`, `LDF`, `NDA`, `OTH`.
+The spec (`ALLIANCE_PARTY_IMPLEMENTATION_PLAN.md`) adds two new top-level pages to the dashboard:
 
-```python
-class Alliance(models.Model):
-    code = models.CharField(max_length=3, unique=True)  # UDF, LDF, NDA, OTH
-    full_name = models.CharField(max_length=100)
-    color_code = models.CharField(max_length=7, default='#808080')
-```
+- **`/alliance/:code`** — Full-width page for LDF / UDF / NDA aggregates: seat movement, swing analysis, party vote-share table, filterable constituency cards, historical stub.
+- **`/party/:code`** — Two-panel page (sidebar + main) for individual party stats and constituency cards, mirroring the ConstituencyPage layout.
 
-### Modified: `Party` model
-- `alliance` CharField → FK to `Alliance` (the 2026 default)
-- `code` remains the **canonical** identifier (e.g. `CPI_M`, `IUML`, `INC`)
+### Current State
+| Item | Status |
+|---|---|
+| `seatClassification.ts` utility | ✅ Already extracted |
+| `GET /api/alliance/:code/` | ✅ Exists — needs fields added |
+| `GET /api/party/:code/` | ✅ Exists — needs constituencies list added |
+| `GET /api/parties/` | ✅ Exists with `seats_contested`, `seats_leading_or_won` |
+| `useAllHistorical()` hook | ✅ Exists |
+| `useConstituencies()` hook | ✅ Exists |
+| Nav entries for Alliance / Parties | ❌ Missing |
+| Routes for `/alliance` / `/party` | ❌ Missing |
+| `AlliancePage.tsx` | ❌ Missing |
+| `PartyPage.tsx` | ❌ Missing |
+| New shared components | ❌ Missing |
+| `useAllianceSummary` / `usePartyDetail` hooks | ❌ Missing |
 
-### New: `PartyAlias` model
-Maps ECI CSV abbreviations (per year) to canonical `Party` FK. Replaces the old string-based code resolution.
-
-```python
-class PartyAlias(models.Model):
-    alias_code = models.CharField(max_length=50)    # e.g. "CPM", "MUL", "KEC(M)"
-    party = models.ForeignKey(Party)                 # -> canonical Party
-    election_year = models.IntegerField(null=True)   # null = all years
-```
-
-### Modified: `PartyAllianceYear`
-- `party_code` CharField → FK to `Party`
-- `canonical_code` removed (redundant with FK)
-- `alliance` CharField → FK to `Alliance`
-
-### Modified: Historical Result Models (2006, 2011, 2016Full, 2021)
-- `party_code` CharField → FK to `Party` (named `party`)
-- Old `party_code` kept temporarily as `party_code_legacy` for data migration
-
-### `Candidate` (2026) — No change needed
-Already uses FK to `Party`.
+---
 
 ## Proposed Changes
 
-### Models
-
-#### [MODIFY] [models.py](file:///c:/Users/everl/Desktop/Other_projects/election-2026/backend/core/models.py)
-1. Add `Alliance` model
-2. Add `PartyAlias` model  
-3. Modify `Party.alliance` → FK to `Alliance`
-4. Modify `PartyAllianceYear` → FK to both `Party` and `Alliance`
-5. Add `party` FK field to `HistoricalResult2011`, `HistoricalResult2016Full`, `HistoricalResult2021`, `HistoricalResult2006`
-6. Keep `party_code` as `party_code_legacy` (read-only backup during migration)
-
 ---
 
-### Data Migration
-
-#### [NEW] `migrate_to_fk.py` management command
-1. Create `Alliance` rows (UDF, LDF, NDA, OTH)
-2. Standardise `Party` table — one canonical entry per real party with normalised `code` (e.g. `CPI_M` not `CPI(M)`)
-3. Create `PartyAlias` entries mapping every ECI code variant to its canonical `Party`
-4. Populate `PartyAllianceYear` with FK references
-5. Update all historical result rows: resolve `party_code_legacy` → `Party` FK via aliases
-6. Validate: ensure zero NULL `party` FK values remain
-
----
-
-### API Layer
-
-#### [MODIFY] [serializers.py](file:///c:/Users/everl/Desktop/Other_projects/election-2026/backend/core/api/serializers.py)
-- `get_alliance()` → use `PartyAllianceYear.party.code` + `PartyAllianceYear.alliance.code` (FK lookups)
-- `CandidateSerializer` → `party_code` already comes from `party.code`, no change
-- Historical serializers → use `result.party.code` instead of `result.party_code`
+### Backend — Extend existing endpoints
 
 #### [MODIFY] [views.py](file:///c:/Users/everl/Desktop/Other_projects/election-2026/backend/core/api/views.py)
-- Replace all `r.party_code` references with `r.party.code`
-- Replace string-based alliance maps with FK joins
-- Remove `CONSTITUENCY_2016_OVERRIDE` dict — encode this in `PartyAllianceYear` as a per-constituency override or handle via `PartyAlias`
+
+**`alliance_detail` view** currently returns `alliance`, `seats_won`, `seats_leading`, `total_votes`, `vote_share`, `parties`. Needs additional fields:
+
+- `seats_trailing` — contested seats where the alliance candidate is neither winning nor leading
+- `seats_contested` — total seats the alliance is contesting
+- `best_margin` / `worst_margin` — top/bottom constituency margins (from live 2026 candidates)
+- `seat_movement` — `gained`, `held`, `lost` counts vs. 2021 sitting data
+- `swing_analysis` — gains from / losses to each other alliance
+- Per-party entries need `seats_contested`, `seats_leading_or_won` split into `won`+`leading`, and `vote_share_2021_pct`
+- `constituencies` — full `ConstituencyListItem`-equivalent for all 140 seats so the frontend can filter them
+
+**`party_detail` view** currently returns basic stats but no `constituencies` list. Needs:
+
+- `constituencies` — list of `ConstituencyListItem`-equivalent for seats the party is contesting
+- `vote_share_2021_pct` — party vote share in the 2021 election
+
+> [!NOTE]
+> `vote_share_2021_pct` for alliances and parties requires summing `HistoricalResult2021.vote_percentage` grouped by party/alliance — the data is already in the DB.
 
 ---
 
-### Seed / Import Commands
+### Frontend — New hooks
 
-#### [MODIFY] [seed_master_data.py](file:///c:/Users/everl/Desktop/Other_projects/election-2026/backend/core/management/commands/seed_master_data.py)
-- Create `Alliance` objects first
-- Update `Party` creation to use FK to `Alliance`
+#### [MODIFY] [useElectionData.ts](file:///c:/Users/everl/Desktop/Other_projects/election-2026/frontend/src/hooks/useElectionData.ts)
 
-#### [MODIFY] [seed_party_alliances.py](file:///c:/Users/everl/Desktop/Other_projects/election-2026/backend/core/management/commands/seed_party_alliances.py)
-- Rewrite to use FK-based `PartyAllianceYear` + `PartyAlias`
+Add two new hooks at the bottom of the file:
 
-#### [MODIFY] Import commands (import_historical_candidates.py, import_2016_results.py, etc.)
-- Resolve party codes via `PartyAlias` → `Party` FK during import
+```ts
+export function useAllianceSummary(code: string | null)
+export function usePartyDetail(code: string | null)
+```
+
+Both follow the existing `USE_API` / `JSON_BASE_PATH` dual-mode pattern. In prod (static JSON mode) they will fall back to `/data/alliance_{ldf|udf|nda}.json` — these files will be generated by the existing `scraper_deploy` export path (separate concern, not blocking for dev).
 
 ---
 
-### Admin
+### Frontend — New shared components
 
-#### [MODIFY] [admin.py](file:///c:/Users/everl/Desktop/Other_projects/election-2026/backend/core/admin.py)
-- Register `Alliance` and `PartyAlias` models
-- Update inline displays
+All new components go in `frontend/src/components/`.
+
+#### [NEW] AllianceTabs.tsx
+LDF / UDF / NDA tab switcher. Active tab uses filled alliance colour. Clicking calls `navigate('/alliance/:code')`.
+
+#### [NEW] SeatMovementStrip.tsx
+Three-column `Gained | Held | Lost` stat strip, styled with alliance colour accent. Accepts props for counts.
+
+#### [NEW] PartyPerformanceTable.tsx
+Reusable table for party-wise breakdown. Used in Alliance Page sections 2 and 4. Clicking a row navigates to `/party/:code`. Columns configurable via props (section 2 = Gained/Held/Lost; section 4 = Avg Vote%/vs 2021/Share▲▼).
+
+#### [NEW] NamedFilterBar.tsx
+Horizontal scrollable row of pre-built story filter chips (Strongholds under pressure, Swing seats won, etc.). Selecting a chip propagates the equivalent raw filter state upward.
+
+#### [NEW] RawFilterChips.tsx
+Combinable filter chips grouped by category (Seat Profile / 2026 Outcome / Margin / Vote Movement). Accepts active state and onChange handler.
+
+---
+
+### Frontend — New pages
+
+#### [NEW] AlliancePage.tsx
+**Route:** `/alliance/:code` (with redirect from `/alliance` → `/alliance/ldf`)
+
+Full-width layout, 6 sections stacked vertically:
+
+1. **Header** — Alliance name, color dot, aggregate seat stats, vote share vs 2021. `AllianceTabs` top-right.
+2. **Seat Movement Strip** — `SeatMovementStrip` + `PartyPerformanceTable` (Gained/Held/Lost columns).
+3. **Swing Analysis** — Inline stat row: seats gained from / lost to each other alliance, colour-coded.
+4. **Party Vote Share Performance** — `PartyPerformanceTable` (Avg Vote%, vs 2021, Share▲/▼ columns).
+5. **Constituency Cards** — `NamedFilterBar` (row 1) + `RawFilterChips` (row 2) + filterable grid reusing existing `ConstituencyCard` rendering from `HomePage`. Sort: By margin / By number / By swing.
+6. **Historical Table** — Gated behind `resultsFinalized` flag. Placeholder shown during live counting.
+
+Data source: `useAllianceSummary(code)` + `useConstituencies()` (for the full 140-seat card grid with filtering).
+
+> [!IMPORTANT]
+> The seat classification for each card (Stronghold/Fragile/Leaning/Swing/Opponent's) comes from `classifyForAlliance()` applied to the `useAllHistorical()` data, scoped to the current alliance. This is the same computation as HistoryPage — no duplication.
+
+#### [NEW] PartyPage.tsx
+**Route:** `/party/:code`
+
+Two-panel layout identical to `ConstituencyPage`:
+- **Sidebar (300 px)** — Search box, alliance filter chips (All/LDF/UDF/NDA), scrollable party list. Each row: party code, full name, alliance dot, seat count. Active party: alliance-colour left border. Data: `useParties()`.
+- **Main panel** — Party header (name, alliance, seats stats, vote share), filter chips scoped to this party's seats, constituency card grid, historical performance table stub.
+
+Data source: `usePartyDetail(code)` for header stats + party-scoped constituency list.
+
+---
+
+### Frontend — Routing + nav
+
+#### [MODIFY] [App.tsx](file:///c:/Users/everl/Desktop/Other_projects/election-2026/frontend/src/App.tsx)
+
+```tsx
+<Route path="/alliance" element={<Navigate to="/alliance/ldf" replace />} />
+<Route path="/alliance/:code" element={<AlliancePage />} />
+<Route path="/party/:code" element={<PartyPage />} />
+```
+
+#### [MODIFY] [GlobalHeader.tsx](file:///c:/Users/everl/Desktop/Other_projects/election-2026/frontend/src/components/GlobalHeader.tsx)
+
+Add **Alliances** and **Parties** nav entries to the right-side nav strip, between Constituency and History:
+
+```
+State | Constituency | Alliances | Parties | History
+```
+
+Active state: `location.pathname.startsWith('/alliance')` and `.startsWith('/party')`.
+
+---
+
+### Frontend — New types
+
+#### [MODIFY] [types/index.ts](file:///c:/Users/everl/Desktop/Other_projects/election-2026/frontend/src/types/index.ts)
+
+Add:
+
+```ts
+export interface AllianceSummary {
+  alliance: string;
+  seats_won: number;
+  seats_leading: number;
+  seats_trailing: number;
+  seats_contested: number;
+  total_votes: number;
+  vote_share: number;
+  vote_share_2021_pct?: number;
+  best_margin?: { constituency: string; margin: number };
+  worst_margin?: { constituency: string; margin: number };
+  seat_movement: { gained: number; held: number; lost: number };
+  swing_analysis: {
+    gained_from: { UDF?: number; NDA?: number; OTH?: number };
+    lost_to: { UDF?: number; NDA?: number; OTH?: number };
+  };
+  parties: PartyInAlliance[];
+  constituencies: ConstituencyListItem[];
+}
+
+export interface PartyInAlliance {
+  code: string;
+  name: string;
+  color: string;
+  seats_contested: number;
+  won: number;
+  leading: number;
+  vote_share: number;
+  vote_share_2021_pct?: number;
+}
+
+export interface PartyDetailFull {
+  code: string;
+  full_name: string;
+  alliance: string;
+  color_code: string;
+  seats_contested: number;
+  seats_won: number;
+  seats_leading: number;
+  total_votes: number;
+  vote_share: number;
+  vote_share_2021_pct?: number;
+  constituencies: ConstituencyListItem[];
+}
+```
+
+---
 
 ## Open Questions
 
 > [!IMPORTANT]
-> **Canonical party codes**: Should we use underscore-based codes (`CPI_M`, `KC_M`) matching the tally JSON, or keep parenthesised codes (`CPI(M)`, `KC(M)`) matching how they're commonly written? Underscore codes are safer for URLs/lookups but less readable. **I recommend underscore codes** to match the tally we just corrected.
+> **Q1 — Seat classification scope for Alliance page cards:**
+> The plan says constituency cards on the Alliance page show the seat's classification *relative to the current alliance*. Should a Swing seat (no clear owner) that the alliance is currently winning be shown in the card grid, and if so, with what badge? Current `classifySeat()` returns `ownerAlliance: null` for Swing/Opponent's seats.
 
 > [!IMPORTANT]
-> **Party code for IND with alliance backing**: Alliance-backed independents (e.g. `IND-LDF`) — should these be stored as party=`IND` with the alliance FK on `PartyAllianceYear` set to `LDF`? Or should we create separate party entries like `IND_LDF`, `IND_UDF`? **I recommend** keeping a single `IND` party and tracking alliance backing purely through `PartyAllianceYear` per-year entries.
+> **Q2 — "All 140" vs "contested only" in Alliance card grid:**
+> Should Section 5 show all 140 constituencies (with "not contesting" indicator for seats outside this alliance) or only the seats this alliance is contesting? The spec says "full ConstituencyListItem for all 140" in the API, but the card grid context implies scoping.
 
-> [!WARNING]
-> **Destructive migration**: This will require re-seeding all historical data. The existing DB data will need to be re-imported after the schema change. Are you OK with wiping and re-importing? Or do you need an in-place data migration that preserves existing rows?
+> [!IMPORTANT]
+> **Q3 — Static JSON fallback for new endpoints:**
+> The deploy script (`scraper_deploy`) currently exports `constituencies.json`, `parties.json`, `meta.json`. Should `alliance_ldf.json`, `alliance_udf.json`, `alliance_nda.json`, and per-party JSONs be added to the deploy export? This affects whether the Alliance/Party pages work in production when Firebase is down.
+
+> [!NOTE]
+> **Q4 — `resultsFinalized` flag:**
+> The plan gates the Historical Table (Section 6) on a `resultsFinalized` flag. This flag doesn't currently exist. Simplest approach: derive it from `summary.results_declared === 140`. Do you want a dedicated admin toggle instead?
+
+---
+
+## Build Order
+
+### Phase 1 — Backend + types + hooks
+1. Extend `alliance_detail` view with seat movement, swing analysis, constituencies list, and `vote_share_2021_pct`
+2. Extend `party_detail` view with constituencies list and `vote_share_2021_pct`
+3. Add `AllianceSummary`, `PartyInAlliance`, `PartyDetailFull` types to `types/index.ts`
+4. Add `useAllianceSummary` and `usePartyDetail` hooks to `useElectionData.ts`
+
+### Phase 2 — Shared components
+5. `AllianceTabs.tsx`
+6. `SeatMovementStrip.tsx`
+7. `PartyPerformanceTable.tsx`
+8. `NamedFilterBar.tsx` + `RawFilterChips.tsx`
+
+### Phase 3 — Pages + routing
+9. `AlliancePage.tsx` (Sections 1–6)
+10. `PartyPage.tsx` (sidebar + main panel)
+11. Add routes to `App.tsx`
+12. Add nav entries to `GlobalHeader.tsx`
+
+### Phase 4 — Polish
+- Context-aware card display per named filter (e.g. Strongholds under pressure → show 2021 vs 2026 margin side-by-side)
+- Wave annotation `↑ vs '11 UDF wave` on relevant cards
+- Mobile sidebar collapse for PartyPage
+- Loading skeletons for all new sections
+
+---
 
 ## Verification Plan
 
-### Automated Tests
-1. Run `python manage.py migrate` — confirm no errors
-2. Run the new `migrate_to_fk` command — confirm all historical rows get a valid `party` FK
-3. Query: `HistoricalResult2021.objects.filter(party__isnull=True).count()` should be 0
-4. Run `python manage.py runserver` and hit `/api/historical/1/` — confirm response shape is unchanged
-5. Cross-check party counts against the corrected tally JSON
+### Automated
+- TypeScript build must pass (`npm run build` in `/frontend`)
+- Backend dev server must serve the new endpoint fields without 500s
 
-### Manual Verification
-- Check the admin panel for Alliance, Party, PartyAlias tables
-- Verify the frontend HistoryPage still renders correctly
+### Manual
+- Navigate to `/alliance/ldf`, `/alliance/udf`, `/alliance/nda` — each shows correct aggregate stats
+- Click a party row → navigates to `/party/CPM`, etc.
+- Filter chips on Alliance page correctly filter the constituency card grid
+- `/party/:code` sidebar: search, alliance filter, and party list all work
+- GlobalHeader nav shows Alliances + Parties entries, active state highlights correctly
+- `/alliance` (no code) redirects to `/alliance/ldf`

@@ -11,17 +11,17 @@
     "votes_polled": 162195,
     "votes_counted": 9308,
     "valid_votes": 9308,
-    "rounds_completed": 11,
+    "rounds_completed": 14,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:36:39.372120+00:00"
+    "last_updated": "2026-05-04T08:34:55.501658+00:00"
   },
   "candidates_2026": [
     {
       "name": "Usha M A",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 45982,
-      "percentage": 44.37,
+      "votes": 61658,
+      "percentage": 46.24,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "O. R. Kelu",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 44102,
-      "percentage": 42.55,
+      "votes": 55200,
+      "percentage": 41.4,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "P. Shyam Raj",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 12932,
-      "percentage": 12.48,
+      "votes": 15680,
+      "percentage": 11.76,
       "is_winner": false,
       "is_leading": false
     }

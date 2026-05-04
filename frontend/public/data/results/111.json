@@ -11,17 +11,17 @@
     "votes_polled": 137825,
     "votes_counted": 0,
     "valid_votes": 0,
-    "rounds_completed": 11,
+    "rounds_completed": 15,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:22.288897+00:00"
+    "last_updated": "2026-05-04T08:34:21.545657+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. Varghese Mammen",
       "party": "KEC",
       "alliance": "UDF",
-      "votes": 33963,
-      "percentage": 39.05,
+      "votes": 44803,
+      "percentage": 37.31,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Anoop Antony",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 26079,
-      "percentage": 29.99,
+      "votes": 37662,
+      "percentage": 31.36,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Mathew T. Thomas",
       "party": "ISJD",
       "alliance": "LDF",
-      "votes": 25304,
-      "percentage": 29.1,
+      "votes": 35543,
+      "percentage": 29.59,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Ramesh Chathenkary",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 666,
-      "percentage": 0.77,
+      "votes": 865,
+      "percentage": 0.72,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Thomas Mammen",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 363,
-      "percentage": 0.42,
+      "votes": 463,
+      "percentage": 0.39,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Aju Alex",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 152,
-      "percentage": 0.17,
+      "votes": 190,
+      "percentage": 0.16,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,7 +74,7 @@
       "name": "Zeen Thomas",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 77,
+      "votes": 111,
       "percentage": 0.09,
       "is_winner": false,
       "is_leading": false

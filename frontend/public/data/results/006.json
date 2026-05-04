@@ -6,31 +6,31 @@
     "district": "Kannur"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 188935,
     "votes_polled": 152224,
     "votes_counted": 15860,
     "valid_votes": 15860,
-    "rounds_completed": 12,
+    "rounds_completed": 14,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:36:23.641654+00:00"
+    "last_updated": "2026-05-04T08:13:41.713803+00:00"
   },
   "candidates_2026": [
     {
       "name": "V. Kunjikrishnan",
       "party": "IND_UDF",
       "alliance": "UDF",
-      "votes": 65805,
-      "percentage": 48.6,
-      "is_winner": false,
-      "is_leading": true
+      "votes": 76640,
+      "percentage": 49.14,
+      "is_winner": true,
+      "is_leading": false
     },
     {
       "name": "T. I. Madhusoodanan",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 61054,
-      "percentage": 45.09,
+      "votes": 69153,
+      "percentage": 44.34,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "A. P. Gangadharan",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 7013,
-      "percentage": 5.18,
+      "votes": 8432,
+      "percentage": 5.41,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Sandeep V. K.",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 481,
-      "percentage": 0.36,
+      "votes": 552,
+      "percentage": 0.35,
       "is_winner": false,
       "is_leading": false
     }

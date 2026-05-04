@@ -11,17 +11,17 @@
     "votes_polled": 121415,
     "votes_counted": 6538,
     "valid_votes": 6538,
-    "rounds_completed": 6,
+    "rounds_completed": 9,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:37:36.143872+00:00"
+    "last_updated": "2026-05-04T08:34:24.561449+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. Pazhakulam Madhu",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 19477,
-      "percentage": 44.56,
+      "votes": 29595,
+      "percentage": 46.54,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Adv. Pramod Narayan",
       "party": "KC_M",
       "alliance": "LDF",
-      "votes": 18510,
-      "percentage": 42.35,
+      "votes": 26370,
+      "percentage": 41.47,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Thomas K. Samuel",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 5415,
-      "percentage": 12.39,
+      "votes": 7208,
+      "percentage": 11.34,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Sreehari K P",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 123,
-      "percentage": 0.28,
+      "votes": 155,
+      "percentage": 0.24,
       "is_winner": false,
       "is_leading": false
     }

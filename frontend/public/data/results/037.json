@@ -11,17 +11,17 @@
     "votes_polled": 187949,
     "votes_counted": 6256,
     "valid_votes": 6256,
-    "rounds_completed": 11,
+    "rounds_completed": 16,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:36:51.737581+00:00"
+    "last_updated": "2026-05-04T08:34:59.047988+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. M. Rahmathulla",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 61184,
-      "percentage": 59.1,
+      "votes": 88084,
+      "percentage": 58.77,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "V. M. Mustafa",
       "party": "IND_LDF",
       "alliance": "LDF",
-      "votes": 30694,
-      "percentage": 29.65,
+      "votes": 44762,
+      "percentage": 29.87,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Pathmasree M.",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 7796,
-      "percentage": 7.53,
+      "votes": 11269,
+      "percentage": 7.52,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Adv. PPA Sageer",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 1154,
-      "percentage": 1.11,
+      "votes": 1719,
+      "percentage": 1.15,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Bipin Benson Joseph",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 891,
-      "percentage": 0.86,
+      "votes": 1316,
+      "percentage": 0.88,
       "is_winner": false,
       "is_leading": false
     }
