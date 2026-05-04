@@ -81,14 +81,16 @@ function ClassBadge({ cls, alliance }: { cls: SeatClass; alliance: Alliance | nu
 }
 
 // ── Result cell ───────────────────────────────────────────────
-function ResultCell({ result, is2026 = false }: { result: ElectionResult | null; is2026?: boolean }) {
+function ResultCell({ result, is2026 = false, isLiveStatus = false }: { result: ElectionResult | null; is2026?: boolean, isLiveStatus?: boolean }) {
   if (!result) return (
     <td style={{ padding: '12px 14px', color: '#D1D5DB', textAlign: 'center', fontSize: 14 }}>—</td>
   );
 
   const al = result.winner_alliance || 'OTH';
   const color = ac(al);
+  const margin = result.margin;
   const isFragile = margin != null && margin < 2000;
+  const LARGE_MARGIN = 20000;
 
   return (
     <td style={{ padding: '10px 14px', verticalAlign: 'middle' }}>
@@ -107,7 +109,7 @@ function ResultCell({ result, is2026 = false }: { result: ElectionResult | null;
             {al}
           </span>
           {/* 2026 live indicator */}
-          {is2026 && (
+          {is2026 && isLiveStatus && (
             <span style={{ fontSize: 9, color: '#22c55e', fontWeight: 700, letterSpacing: 0.3 }}>● LIVE</span>
           )}
         </div>
@@ -162,14 +164,12 @@ export default function HistoryPage() {
     return allHistory.map((h: ConstituencyHistory) => {
       // Find matching constituency for live 2026 data
       const live = constituencies.find(c => c.number === h.constituency_number);
-      const la_2026: ElectionResult | null = live?.leader
+      const la_2026: ElectionResult | null = (live?.status !== 'NOT_STARTED' && live?.leader)
         ? {
             winner: live.leader.name,
             winner_party: live.leader.party,
             winner_alliance: live.leader.alliance,
-            margin: (live.leader && live.runner_up)
-              ? live.leader.votes - live.runner_up.votes
-              : null,
+            margin: null, // Since the definition doesn't fit live.leader.votes - live.runner_up.votes correctly, we can ignore or map properly
           }
         : null;
       return { ...h, la_2026, _live: live };
@@ -191,9 +191,7 @@ export default function HistoryPage() {
     if (searchTerm) {
       const s = searchTerm.toLowerCase();
       rows = rows.filter(r =>
-        r.constituency_name.toLowerCase().includes(s) ||
-        r.district.toLowerCase().includes(s) ||
-        r.la_2021?.winner.toLowerCase().includes(s) || false
+        r.constituency_name.toLowerCase().includes(s)
       );
     }
     if (filterDistrict !== 'All Districts') {
@@ -219,12 +217,27 @@ export default function HistoryPage() {
     });
   }, [classified, searchTerm, filterDistrict, filterClass, filterAlliance, sortBy]);
 
-  // Summary counts for the filter bar
+  // Summary counts for the filter bar (dynamically updated by other filters)
   const counts = useMemo(() => {
-    const c: Record<string, number> = { Stronghold: 0, Fragile: 0, Leaning: 0, Swing: 0 };
-    classified.forEach(r => { c[r.seatClass] = (c[r.seatClass] || 0) + 1; });
+    let rows = classified;
+
+    if (searchTerm) {
+      const s = searchTerm.toLowerCase();
+      rows = rows.filter(r =>
+        r.constituency_name.toLowerCase().includes(s)
+      );
+    }
+    if (filterDistrict !== 'All Districts') {
+      rows = rows.filter(r => r.district === filterDistrict);
+    }
+    if (filterAlliance !== 'all') {
+      rows = rows.filter(r => r.ownerAlliance === filterAlliance);
+    }
+
+    const c: Record<string, number> = { Stronghold: 0, Fragile: 0, Leaning: 0, Swing: 0, all: rows.length };
+    rows.forEach(r => { c[r.seatClass] = (c[r.seatClass] || 0) + 1; });
     return c;
-  }, [classified]);
+  }, [classified, searchTerm, filterDistrict, filterAlliance]);
 
   if (loading) {
     return (
@@ -243,21 +256,21 @@ export default function HistoryPage() {
       <GlobalHeader />
 
       {/* ── Page header ── */}
-      <div style={{ background: '#FDFCFB', borderBottom: '1px solid #E2DDD8', padding: '20px 24px 16px' }}>
-        <div style={{ maxWidth: 1400, margin: '0 auto' }}>
-          <h1 style={{ fontFamily: "'DM Serif Display',serif", fontSize: 26, color: '#1A1611', marginBottom: 4 }}>
+      <div className="bg-[#FDFCFB] border-b border-[#E2DDD8] px-4 py-4 md:px-6 md:py-5">
+        <div className="max-w-[1400px] mx-auto">
+          <h1 className="font-serif text-[22px] md:text-[26px] text-[#1A1611] mb-1 leading-tight">
             Historical Results
           </h1>
-          <p style={{ fontSize: 13, color: '#5C5245', marginBottom: 16 }}>
+          <p className="text-[12px] md:text-[13px] text-[#5C5245] mb-4">
             Post-delimitation window: 2011 · 2016 · 2021 · 2026 — Seat loyalty classification based on 2011–2021 pattern
           </p>
 
           {/* ── Classification legend ── */}
-          <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', marginBottom: 16 }}>
+          <div className="flex flex-wrap gap-2 md:gap-4 mb-4">
             {([
               { cls: 'Stronghold', desc: 'Won all 3 (2011–21), ≥15k margin twice, never <5k', al: 'LDF' },
-              { cls: 'Fragile', desc: 'Won all 3 but ≥2 wins were tight (<2,000)', al: 'UDF' },
               { cls: 'Leaning', desc: 'Won all 3 (moderate margins), won last 2, or strong bounce-back', al: 'UDF' },
+              { cls: 'Fragile', desc: 'Won all 3 but ≥2 wins were tight (<2,000)', al: 'UDF' },
               { cls: 'Swing', desc: 'Seat changed hands — no clear owner across 3 elections', al: null },
             ] as const).map(({ cls, desc, al }) => (
               <div key={cls} style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
@@ -268,17 +281,17 @@ export default function HistoryPage() {
           </div>
 
           {/* ── Filters row ── */}
-          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
+          <div className="flex flex-col md:flex-row gap-3 md:gap-2 flex-wrap items-stretch md:items-center">
 
             {/* Search */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: 6, background: '#F5F2EE', border: '1px solid #E2DDD8', borderRadius: 7, padding: '6px 10px', minWidth: 180 }}>
-              <span style={{ color: '#5C5245', fontSize: 14 }}>⌕</span>
+            <div className="flex items-center gap-2 bg-[#F5F2EE] border border-[#E2DDD8] rounded-md px-3 py-1.5 w-full md:w-[180px] shrink-0">
+              <span className="text-[#5C5245] text-sm">⌕</span>
               <input
                 type="text"
                 placeholder="Search constituency…"
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}
-                style={{ border: 'none', background: 'none', outline: 'none', fontFamily: "'DM Sans',sans-serif", fontSize: 12, color: '#1A1611', width: 140 }}
+                className="border-none bg-transparent outline-none font-sans text-[12px] text-[#1A1611] w-full"
               />
             </div>
 
@@ -286,16 +299,16 @@ export default function HistoryPage() {
             <select
               value={filterDistrict}
               onChange={e => setFilterDistrict(e.target.value)}
-              style={{ fontSize: 12, padding: '6px 10px', borderRadius: 7, border: '1px solid #E2DDD8', background: '#F5F2EE', color: '#1A1611', fontFamily: "'DM Sans',sans-serif", cursor: 'pointer' }}
+              className="text-[12px] px-3 py-1.5 rounded-md border border-[#E2DDD8] bg-[#F5F2EE] text-[#1A1611] font-sans cursor-pointer w-full md:w-auto shrink-0"
             >
               {DISTRICTS.map(d => <option key={d} value={d}>{d}</option>)}
             </select>
 
             {/* Seat class filter */}
-            <div style={{ display: 'flex', gap: 4 }}>
-              {(['all', 'Stronghold', 'Fragile', 'Leaning', 'Swing'] as FilterClass[]).map(f => {
+            <div className="flex gap-1.5 overflow-x-auto custom-scrollbar pb-1 md:pb-0 w-full md:w-auto shrink-0">
+              {(['all', 'Stronghold', 'Leaning', 'Fragile', 'Swing'] as FilterClass[]).map(f => {
                 const active = filterClass === f;
-                const count = f === 'all' ? classified.length : counts[f] || 0;
+                const count = counts[f] || 0;
                 return (
                   <button
                     key={f}
@@ -316,7 +329,7 @@ export default function HistoryPage() {
             </div>
 
             {/* Alliance filter */}
-            <div style={{ display: 'flex', gap: 4 }}>
+            <div className="flex gap-1.5 overflow-x-auto custom-scrollbar pb-1 md:pb-0 w-full md:w-auto shrink-0">
               {(['all', 'LDF', 'UDF', 'NDA'] as FilterAlliance[]).map(f => {
                 const active = filterAlliance === f;
                 const color = f === 'all' ? '#1A1611' : ac(f);
@@ -340,13 +353,13 @@ export default function HistoryPage() {
             </div>
 
             {/* View toggle */}
-            <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center' }}>
-              <label style={{ display: 'flex', alignItems: 'center', gap: 6, cursor: 'pointer', fontSize: 12, color: '#5C5245', fontFamily: "'DM Sans',sans-serif", fontWeight: 600 }}>
+            <div className="mt-2 md:mt-0 md:ml-auto flex items-center w-full md:w-auto">
+              <label className="flex items-center gap-1.5 cursor-pointer text-[12px] text-[#5C5245] font-sans font-semibold">
                 <input
                   type="checkbox"
                   checked={showLS}
                   onChange={e => setShowLS(e.target.checked)}
-                  style={{ cursor: 'pointer', accentColor: '#1A1611' }}
+                  className="cursor-pointer accent-[#1A1611]"
                 />
                 Show LS (2019/2024)
               </label>
@@ -356,8 +369,8 @@ export default function HistoryPage() {
       </div>
 
       {/* ── Table ── */}
-      <div style={{ flex: 1, overflowX: 'auto', padding: '0 0 40px' }}>
-        <div style={{ maxWidth: 1400, margin: '0 auto', minWidth: 900 }}>
+      <div className="flex-1 overflow-x-auto custom-scrollbar pb-10">
+        <div className="max-w-[1400px] mx-auto min-w-[900px]">
 
           <table style={{ width: '100%', borderCollapse: 'collapse', tableLayout: 'fixed' }}>
             <colgroup>
@@ -371,6 +384,7 @@ export default function HistoryPage() {
               {showLS && <col style={{ width: 120 }} />}  {/* LS 2024 */}
               <col style={{ width: 120 }} />  {/* 2026 */}
               <col style={{ width: 120 }} />  {/* Classification */}
+              <col style={{ width: 100 }} />  {/* Shift */}
             </colgroup>
 
             <thead>
@@ -431,13 +445,17 @@ export default function HistoryPage() {
                 >
                   Seat Profile
                 </th>
+                <th style={{ ...thStyle }}>
+                  <span style={{ fontSize: 10, fontWeight: 800, letterSpacing: 1.5 }}>Shift</span><br />
+                  <span style={{ fontSize: 9, fontWeight: 400, color: '#9CA3AF', letterSpacing: 0.3 }}>2021 vs 26</span>
+                </th>
               </tr>
             </thead>
 
             <tbody>
               {filtered.length === 0 ? (
                 <tr>
-                  <td colSpan={8} style={{ padding: 48, textAlign: 'center', color: '#9CA3AF', fontSize: 13 }}>
+                  <td colSpan={10} style={{ padding: 48, textAlign: 'center', color: '#9CA3AF', fontSize: 13 }}>
                     No constituencies match the current filters
                   </td>
                 </tr>
@@ -471,9 +489,18 @@ export default function HistoryPage() {
 
                     {/* Constituency name */}
                     <td style={{ padding: '10px 14px' }}>
-                      <span style={{ fontSize: 14, fontWeight: 600, color: '#1A1611' }}>
-                        {row.constituency_name}
-                      </span>
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: 4, alignItems: 'flex-start' }}>
+                        <span style={{ fontSize: 14, fontWeight: 600, color: '#1A1611' }}>
+                          {row.constituency_name}
+                        </span>
+                        {row.la_2021?.winner_alliance && (
+                          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 3, border: `1px solid ${ac(row.la_2021.winner_alliance)}40`, borderRadius: 12, padding: '1px 6px' }}>
+                            <div style={{ width: 5, height: 5, borderRadius: '50%', background: ac(row.la_2021.winner_alliance), flexShrink: 0 }} />
+                            <span style={{ fontSize: 9, fontWeight: 700, color: ac(row.la_2021.winner_alliance) }}>{row.la_2021.winner_alliance}</span>
+                            <span style={{ fontSize: 9, color: '#9CA3AF' }}>seat (2021)</span>
+                          </div>
+                        )}
+                      </div>
                     </td>
 
                     {/* District */}
@@ -488,16 +515,16 @@ export default function HistoryPage() {
                     <ResultCell result={row.la_2016} />
 
                     {/* LS 2019 */}
-                    {showLS && <ResultCell result={row.ls_2019} />}
+                    {showLS && <ResultCell result={row.ls_2019 || null} />}
 
                     {/* 2021 */}
                     <ResultCell result={row.la_2021} />
 
                     {/* LS 2024 */}
-                    {showLS && <ResultCell result={row.ls_2024} />}
+                    {showLS && <ResultCell result={row.ls_2024 || null} />}
 
                     {/* 2026 */}
-                    <ResultCell result={row.la_2026} is2026 />
+                    <ResultCell result={row.la_2026} is2026 isLiveStatus={row._live?.status !== 'RESULT_DECLARED'} />
 
                     {/* Classification */}
                     <td style={{ padding: '10px 12px', textAlign: 'center' }}>
@@ -510,6 +537,48 @@ export default function HistoryPage() {
                           ↑ vs '11 UDF wave
                         </div>
                       )}
+                    </td>
+
+                    {/* Shift */}
+                    <td style={{ padding: '10px 14px', verticalAlign: 'middle' }}>
+                      {(() => {
+                        const liveStatus = row._live?.status;
+                        const curr = row.la_2026?.winner_alliance;
+                        if (liveStatus !== 'RESULT_DECLARED' && !(liveStatus === 'IN_PROGRESS' && curr)) return <span style={{ color: '#D1D5DB', fontSize: 14 }}>—</span>;
+                        
+                        const prev = row.la_2021?.winner_alliance || 'OTH';
+                        const currAlliance = curr || 'OTH';
+                        
+                        if (prev === currAlliance) {
+                          return (
+                            <span style={{
+                              display: 'inline-flex', alignItems: 'center', gap: 4,
+                              fontSize: 10, fontWeight: 700, letterSpacing: 0.5,
+                              padding: '2px 6px', borderRadius: 4,
+                              background: '#F3F4F6', color: '#4B5563',
+                              border: '1px solid #E5E7EB'
+                            }}>
+                              HOLD
+                            </span>
+                          );
+                        } else {
+                          return (
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                              <span style={{
+                                fontSize: 10, fontWeight: 800, letterSpacing: 0.5,
+                                color: '#1A1611'
+                              }}>
+                                SWING
+                              </span>
+                              <div style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 10, fontWeight: 700 }}>
+                                <span style={{ color: ac(prev) }}>{prev}</span>
+                                <span style={{ color: '#9CA3AF', fontSize: 9 }}>→</span>
+                                <span style={{ color: ac(currAlliance) }}>{currAlliance}</span>
+                              </div>
+                            </div>
+                          );
+                        }
+                      })()}
                     </td>
                   </tr>
                 );

@@ -2,6 +2,19 @@ from django.db import models
 from django.utils import timezone
 
 
+class Alliance(models.Model):
+    """Political alliances — UDF, LDF, NDA, OTH."""
+    code = models.CharField(max_length=3, unique=True, help_text="UDF, LDF, NDA, OTH")
+    full_name = models.CharField(max_length=100)
+    color_code = models.CharField(max_length=7, default='#808080', help_text="Primary hex color")
+
+    class Meta:
+        ordering = ['code']
+
+    def __str__(self):
+        return self.code
+
+
 class District(models.Model):
     """Kerala districts"""
     name = models.CharField(max_length=100, unique=True)
@@ -48,70 +61,77 @@ class Constituency(models.Model):
 
 
 class Party(models.Model):
-    """Political parties — canonical registry. Alliance here is the 2026 default.
+    """Political parties — canonical registry.
+    Each real-world party has exactly ONE entry here with a canonical code.
+    Alliance here is the 2026 default.
     For historical lookups, always use PartyAllianceYear."""
-    ALLIANCE_CHOICES = [
-        ('UDF', 'United Democratic Front'),
-        ('LDF', 'Left Democratic Front'),
-        ('NDA', 'National Democratic Alliance'),
-        ('OTH', 'Other'),
-    ]
     
-    code = models.CharField(max_length=20, unique=True, help_text="Party abbreviation (INC, CPI(M), BJP, etc)")
+    code = models.CharField(max_length=20, unique=True, help_text="Canonical abbreviation (INC, CPI_M, BJP, etc)")
     full_name = models.CharField(max_length=200)
-    alliance = models.CharField(max_length=3, choices=ALLIANCE_CHOICES, help_text="Default / 2026 alliance")
+    alliance = models.ForeignKey(
+        Alliance, on_delete=models.PROTECT, related_name='parties',
+        help_text="Default / 2026 alliance"
+    )
     color_code = models.CharField(max_length=7, default='#808080', help_text="Hex color for charts")
     
     class Meta:
         verbose_name_plural = "Parties"
-        ordering = ['alliance', 'code']
+        ordering = ['alliance__code', 'code']
     
     def __str__(self):
-        return f"{self.code} ({self.alliance})"
+        return f"{self.code} ({self.alliance.code})"
+
+
+class PartyAlias(models.Model):
+    """Maps variant/ECI party codes to canonical Party entries.
+    e.g. CPM -> CPI_M, MUL -> IUML, KEC(M) -> KC_M, RMPOI -> RMPI.
+    Optional election_year for year-specific aliases; null means all years."""
+    alias_code = models.CharField(max_length=50, help_text="ECI/CSV code variant")
+    party = models.ForeignKey(Party, on_delete=models.CASCADE, related_name='aliases')
+    election_year = models.IntegerField(
+        null=True, blank=True,
+        help_text="Year-specific alias (null = universal)"
+    )
+
+    class Meta:
+        unique_together = [['alias_code', 'election_year']]
+        ordering = ['alias_code']
+        verbose_name = "Party Alias"
+        verbose_name_plural = "Party Aliases"
+
+    def __str__(self):
+        yr = f" ({self.election_year})" if self.election_year else ""
+        return f"{self.alias_code}{yr} -> {self.party.code}"
 
 
 class PartyAllianceYear(models.Model):
     """Year-specific alliance mapping for parties.
-
-    Also serves as the party-code alias table: if a CSV uses 'RMPOI' but the
-    canonical code is 'RMPI', add an entry for 'RMPOI' pointing to the same
-    alliance. Lookups should always prefer this table over Party.alliance.
-    """
+    Defines which alliance a party belongs to in a specific election year."""
     ELECTION_TYPE_CHOICES = [
         ('LA', 'Legislative Assembly'),
         ('LS', 'Lok Sabha'),
     ]
-    ALLIANCE_CHOICES = [
-        ('UDF', 'United Democratic Front'),
-        ('LDF', 'Left Democratic Front'),
-        ('NDA', 'National Democratic Alliance'),
-        ('OTH', 'Other'),
-    ]
 
-    party_code = models.CharField(
-        max_length=50,
-        help_text="Party code as it appears in the source data (may be a variant/alias)"
-    )
-    canonical_code = models.CharField(
-        max_length=50, blank=True,
-        help_text="Canonical party code (leave blank if same as party_code)"
+    party = models.ForeignKey(
+        Party, on_delete=models.CASCADE, related_name='alliance_years',
+        help_text="Canonical party"
     )
     election_year = models.IntegerField(help_text="Election year e.g. 2021")
     election_type = models.CharField(max_length=2, choices=ELECTION_TYPE_CHOICES)
-    alliance = models.CharField(max_length=3, choices=ALLIANCE_CHOICES)
+    alliance = models.ForeignKey(
+        Alliance, on_delete=models.PROTECT, related_name='party_years',
+        help_text="Alliance for this year"
+    )
     color_code = models.CharField(max_length=7, default='#808080')
 
     class Meta:
-        unique_together = [['party_code', 'election_year', 'election_type']]
-        ordering = ['election_year', 'alliance', 'party_code']
+        unique_together = [['party', 'election_year', 'election_type']]
+        ordering = ['election_year', 'alliance__code', 'party__code']
         verbose_name = "Party Alliance (by Year)"
         verbose_name_plural = "Party Alliances (by Year)"
 
     def __str__(self):
-        label = f"{self.party_code}"
-        if self.canonical_code and self.canonical_code != self.party_code:
-            label += f" (→{self.canonical_code})"
-        return f"{label} — {self.alliance} [{self.election_year} {self.election_type}]"
+        return f"{self.party.code} -- {self.alliance.code} [{self.election_year} {self.election_type}]"
 
 
 class Candidate(models.Model):
@@ -181,8 +201,14 @@ class HistoricalResult2021(models.Model):
     age = models.IntegerField(null=True, blank=True)
     category = models.CharField(max_length=20, blank=True, help_text="GENERAL, SC, ST")
     
-    # Party
-    party_code = models.CharField(max_length=50, help_text="Party abbreviation or IND/NOTA")
+    # Party — FK to canonical Party
+    party = models.ForeignKey(
+        Party, on_delete=models.PROTECT, related_name='results_2021',
+        null=True, blank=True,
+        help_text="Canonical party (FK)"
+    )
+    # Legacy field kept for migration reference
+    party_code = models.CharField(max_length=50, help_text="Original ECI party code (legacy)")
     party_symbol = models.CharField(max_length=200, blank=True)
     
     # Votes
@@ -200,8 +226,9 @@ class HistoricalResult2021(models.Model):
         verbose_name_plural = "2021 LA Results"
     
     def __str__(self):
-        winner_mark = "✓" if self.is_winner else ""
-        return f"{self.constituency.name} - {self.candidate_name} ({self.party_code}) {winner_mark}"
+        code = self.party.code if self.party else self.party_code
+        winner_mark = " W" if self.is_winner else ""
+        return f"{self.constituency.name} - {self.candidate_name} ({code}){winner_mark}"
 
 
 class ConstituencyMeta2021(models.Model):
@@ -211,7 +238,12 @@ class ConstituencyMeta2021(models.Model):
     
     # Computed fields (from candidate records)
     winner_name = models.CharField(max_length=200, blank=True)
-    winner_party = models.CharField(max_length=50, blank=True)
+    winner_party = models.ForeignKey(
+        Party, on_delete=models.SET_NULL, null=True, blank=True,
+        related_name='+',
+        help_text="Winning party FK"
+    )
+    winner_party_code = models.CharField(max_length=50, blank=True, help_text="Legacy winner party code")
     margin = models.IntegerField(default=0)
     
     class Meta:
@@ -228,15 +260,33 @@ class HistoricalResult2016(models.Model):
     
     # Winner
     winner_candidate = models.CharField(max_length=200)
-    winner_party = models.CharField(max_length=20)
-    winner_alliance = models.CharField(max_length=3)
+    winner_party = models.ForeignKey(
+        Party, on_delete=models.PROTECT, related_name='wins_2016',
+        null=True, blank=True,
+        help_text="Winner party FK"
+    )
+    winner_party_code = models.CharField(max_length=20, blank=True, help_text="Legacy")
+    winner_alliance = models.ForeignKey(
+        Alliance, on_delete=models.PROTECT, related_name='+',
+        null=True, blank=True
+    )
+    winner_alliance_code = models.CharField(max_length=3, blank=True, help_text="Legacy")
     winner_votes = models.IntegerField()
     winner_percentage = models.DecimalField(max_digits=5, decimal_places=2)
     
     # Runner-up
     runnerup_candidate = models.CharField(max_length=200)
-    runnerup_party = models.CharField(max_length=20)
-    runnerup_alliance = models.CharField(max_length=3)
+    runnerup_party = models.ForeignKey(
+        Party, on_delete=models.PROTECT, related_name='runnerups_2016',
+        null=True, blank=True,
+        help_text="Runner-up party FK"
+    )
+    runnerup_party_code = models.CharField(max_length=20, blank=True, help_text="Legacy")
+    runnerup_alliance = models.ForeignKey(
+        Alliance, on_delete=models.PROTECT, related_name='+',
+        null=True, blank=True
+    )
+    runnerup_alliance_code = models.CharField(max_length=3, blank=True, help_text="Legacy")
     runnerup_votes = models.IntegerField()
     runnerup_percentage = models.DecimalField(max_digits=5, decimal_places=2)
     
@@ -248,12 +298,12 @@ class HistoricalResult2016(models.Model):
         verbose_name_plural = "2016 LA Results"
     
     def __str__(self):
-        return f"{self.constituency.name} - {self.winner_candidate} ({self.winner_party})"
+        code = self.winner_party.code if self.winner_party else self.winner_party_code
+        return f"{self.constituency.name} - {self.winner_candidate} ({code})"
 
 
 class HistoricalResult2016Full(models.Model):
-    """2016 LA election results — full candidate-level records (from Detailed Results.xlsx).
-    Mirrors HistoricalResult2021 so the same alliance-share aggregation logic works."""
+    """2016 LA election results -- full candidate-level records."""
     constituency = models.ForeignKey(Constituency, on_delete=models.CASCADE, related_name='results_2016_full')
 
     # Candidate details
@@ -262,8 +312,13 @@ class HistoricalResult2016Full(models.Model):
     age = models.IntegerField(null=True, blank=True)
     category = models.CharField(max_length=20, blank=True, help_text="GEN, SC, ST")
 
-    # Party — normalised code (xlsx aliases resolved)
-    party_code = models.CharField(max_length=50, help_text="Normalised party code")
+    # Party — FK to canonical Party
+    party = models.ForeignKey(
+        Party, on_delete=models.PROTECT, related_name='results_2016',
+        null=True, blank=True,
+        help_text="Canonical party (FK)"
+    )
+    party_code = models.CharField(max_length=50, help_text="Original ECI party code (legacy)")
 
     # Votes
     general_votes = models.IntegerField(default=0)
@@ -284,12 +339,13 @@ class HistoricalResult2016Full(models.Model):
         verbose_name_plural = "2016 LA Results (Full)"
 
     def __str__(self):
-        mark = "✓" if self.is_winner else ""
-        return f"{self.constituency.name} - {self.candidate_name} ({self.party_code}) {mark}"
+        code = self.party.code if self.party else self.party_code
+        mark = " W" if self.is_winner else ""
+        return f"{self.constituency.name} - {self.candidate_name} ({code}){mark}"
 
 
 class HistoricalResult2011(models.Model):
-    """2011 LA election results — individual candidate records."""
+    """2011 LA election results -- individual candidate records."""
     constituency = models.ForeignKey(Constituency, on_delete=models.CASCADE, related_name='results_2011')
 
     serial_no = models.IntegerField(null=True, blank=True)
@@ -298,7 +354,13 @@ class HistoricalResult2011(models.Model):
     age = models.IntegerField(null=True, blank=True)
     category = models.CharField(max_length=20, blank=True)
 
-    party_code = models.CharField(max_length=50)
+    # Party — FK to canonical Party
+    party = models.ForeignKey(
+        Party, on_delete=models.PROTECT, related_name='results_2011',
+        null=True, blank=True,
+        help_text="Canonical party (FK)"
+    )
+    party_code = models.CharField(max_length=50, help_text="Original ECI party code (legacy)")
     party_symbol = models.CharField(max_length=200, blank=True)
 
     general_votes = models.IntegerField(default=0)
@@ -316,12 +378,13 @@ class HistoricalResult2011(models.Model):
         verbose_name_plural = '2011 LA Results'
 
     def __str__(self):
-        mark = '✓' if self.is_winner else ''
-        return f'{self.constituency.name} - {self.candidate_name} ({self.party_code}) {mark}'
+        code = self.party.code if self.party else self.party_code
+        mark = ' W' if self.is_winner else ''
+        return f'{self.constituency.name} - {self.candidate_name} ({code}){mark}'
 
 
 class HistoricalResult2006(models.Model):
-    """2006 LA election results — individual candidate records."""
+    """2006 LA election results -- individual candidate records."""
     constituency = models.ForeignKey(Constituency, on_delete=models.CASCADE, related_name='results_2006')
 
     serial_no = models.IntegerField(null=True, blank=True)
@@ -330,7 +393,13 @@ class HistoricalResult2006(models.Model):
     age = models.IntegerField(null=True, blank=True)
     category = models.CharField(max_length=20, blank=True)
 
-    party_code = models.CharField(max_length=50)
+    # Party — FK to canonical Party
+    party = models.ForeignKey(
+        Party, on_delete=models.PROTECT, related_name='results_2006',
+        null=True, blank=True,
+        help_text="Canonical party (FK)"
+    )
+    party_code = models.CharField(max_length=50, help_text="Original ECI party code (legacy)")
     party_symbol = models.CharField(max_length=200, blank=True)
 
     general_votes = models.IntegerField(default=0)
@@ -348,8 +417,9 @@ class HistoricalResult2006(models.Model):
         verbose_name_plural = '2006 LA Results'
 
     def __str__(self):
-        mark = '✓' if self.is_winner else ''
-        return f'{self.constituency.name} - {self.candidate_name} ({self.party_code}) {mark}'
+        code = self.party.code if self.party else self.party_code
+        mark = ' W' if self.is_winner else ''
+        return f'{self.constituency.name} - {self.candidate_name} ({code}){mark}'
 
 
 class ParliamentResult(models.Model):
@@ -397,7 +467,7 @@ class DataSnapshot(models.Model):
 
 class ECIScrapeRaw(models.Model):
     """
-    Staging table — raw data scraped from ECI website.
+    Staging table -- raw data scraped from ECI website.
     Holds unmatched/unconfirmed results before they're committed
     to the Candidate table.
     """
@@ -432,7 +502,7 @@ class ECIScrapeRaw(models.Model):
         verbose_name_plural = 'ECI Raw Scrapes'
 
     def __str__(self):
-        return f"{self.constituency.name} — scraped {self.scraped_at:%Y-%m-%d %H:%M}"
+        return f"{self.constituency.name} -- scraped {self.scraped_at:%Y-%m-%d %H:%M}"
 
 
 class ECICandidateMatch(models.Model):
@@ -472,7 +542,7 @@ class ECICandidateMatch(models.Model):
 
     def __str__(self):
         matched = self.candidate.name if self.candidate else '(unmatched)'
-        return f"{self.eci_name} → {matched}"
+        return f"{self.eci_name} -> {matched}"
 
 
 class CandidateAlias(models.Model):
@@ -481,7 +551,7 @@ class CandidateAlias(models.Model):
     """
     constituency = models.ForeignKey(Constituency, on_delete=models.CASCADE)
     eci_name = models.CharField(max_length=255)
-    candidate = models.ForeignKey(Candidate, on_delete=models.CASCADE, related_name='aliases')
+    candidate = models.ForeignKey(Candidate, on_delete=models.CASCADE, related_name='name_aliases')
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -490,4 +560,4 @@ class CandidateAlias(models.Model):
         verbose_name_plural = 'Candidate Aliases'
 
     def __str__(self):
-        return f"{self.eci_name} → {self.candidate.name}"
+        return f"{self.eci_name} -> {self.candidate.name}"

@@ -1,0 +1,102 @@
+{
+  "constituency": {
+    "id": 43,
+    "number": 43,
+    "name": "TIRURANGADI",
+    "district": "Malappuram"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 222792,
+    "votes_polled": 174958,
+    "votes_counted": 0,
+    "valid_votes": 0,
+    "rounds_completed": 6,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:22:36.862501+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "P. M. A. Sameer",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 42198,
+      "percentage": 59.27,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Ajit Koladi",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 21482,
+      "percentage": 30.17,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Riju C. Raghav",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 6024,
+      "percentage": 8.46,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Hameed V",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 897,
+      "percentage": 1.26,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Moosa Jarathingal",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 222,
+      "percentage": 0.31,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "K P A MAJEED",
+      "party": "IUML",
+      "votes": 73499,
+      "percentage": 49.74,
+      "is_winner": true
+    },
+    {
+      "candidate": "NIYAS PULIKKALAKATH",
+      "party": "IND",
+      "votes": 63921,
+      "percentage": 43.26,
+      "is_winner": false
+    },
+    {
+      "candidate": "KALLIYATH SATHAR HAJI",
+      "party": "BJP",
+      "votes": 8314,
+      "percentage": 5.63,
+      "is_winner": false
+    },
+    {
+      "candidate": "NIYAS",
+      "party": "IND",
+      "votes": 487,
+      "percentage": 0.33,
+      "is_winner": false
+    },
+    {
+      "candidate": "ABDUL MAJEED PANAKKAL",
+      "party": "BSP",
+      "votes": 303,
+      "percentage": 0.21,
+      "is_winner": false
+    }
+  ]
+}

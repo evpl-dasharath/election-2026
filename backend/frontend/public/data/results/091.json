@@ -1,0 +1,93 @@
+{
+  "constituency": {
+    "id": 91,
+    "number": 91,
+    "name": "IDUKKI",
+    "district": "Idukki"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 167822,
+    "votes_polled": 126537,
+    "votes_counted": 7988,
+    "valid_votes": 7988,
+    "rounds_completed": 13,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:23:33.706201+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Roy K. Paulose",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 60122,
+      "percentage": 55.18,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Roshi Augustine",
+      "party": "KC_M",
+      "alliance": "LDF",
+      "votes": 39518,
+      "percentage": 36.27,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Pradeesh Prabha",
+      "party": "BDJS",
+      "alliance": "NDA",
+      "votes": 7844,
+      "percentage": 7.2,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Shijo Antony",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 845,
+      "percentage": 0.78,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "ROSHY AUGUSTINE",
+      "party": "KEC(M)",
+      "votes": 62368,
+      "percentage": 47.48,
+      "is_winner": true
+    },
+    {
+      "candidate": "ADV. K FRANCIS GEORGE",
+      "party": "KEC",
+      "votes": 56795,
+      "percentage": 43.24,
+      "is_winner": false
+    },
+    {
+      "candidate": "ADV. SANGEETHA VISWANATHAN",
+      "party": "BDJS",
+      "votes": 9286,
+      "percentage": 7.07,
+      "is_winner": false
+    },
+    {
+      "candidate": "BABU VARGHESE VATTOLI",
+      "party": "BSP",
+      "votes": 1106,
+      "percentage": 0.84,
+      "is_winner": false
+    },
+    {
+      "candidate": "BIJEESH THOMAS",
+      "party": "IND",
+      "votes": 610,
+      "percentage": 0.46,
+      "is_winner": false
+    }
+  ]
+}

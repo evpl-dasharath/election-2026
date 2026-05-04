@@ -6,18 +6,34 @@ from core.models import (
     District, Constituency, Party, Candidate, LiveResult,
     HistoricalResult2021, HistoricalResult2016, HistoricalResult2016Full,
     HistoricalResult2011, ConstituencyMeta2021,
-    ParliamentResult, PartyAllianceYear
+    ParliamentResult, PartyAllianceYear, Alliance
 )
 from core.api.serializers import (
     DistrictSerializer, ConstituencyListSerializer, ConstituencyDetailSerializer,
     PartySerializer, ParliamentResultSerializer
 )
 
-# Constituency-specific alliance overrides for 2016 ECI data
-# where the same party code was reused for different factional parties.
-CONSTITUENCY_2016_OVERRIDE: dict[int, dict[str, str]] = {
-    117: {'CMPKSC': 'LDF'},  # Chavara: CMP(Aravindakshan) → LDF
-}
+
+def _build_alliance_map(year, etype='LA'):
+    """Build {party_code: {'alliance': alliance_code, 'color_code': hex}} for a given year."""
+    return {
+        r.party.code: {'alliance': r.alliance.code, 'color_code': r.color_code}
+        for r in PartyAllianceYear.objects.select_related('party', 'alliance').filter(
+            election_year=year, election_type=etype
+        )
+    }
+
+
+def _party_alliance(party_code, alliance_map):
+    """Get alliance code for a party code from a pre-built map."""
+    entry = alliance_map.get(party_code)
+    return entry['alliance'] if entry else 'OTH'
+
+
+def _party_color(party_code, alliance_map):
+    """Get color code for a party code from a pre-built map."""
+    entry = alliance_map.get(party_code)
+    return entry['color_code'] if entry else '#808080'
 
 
 class ConstituencyViewSet(viewsets.ReadOnlyModelViewSet):
@@ -27,7 +43,8 @@ class ConstituencyViewSet(viewsets.ReadOnlyModelViewSet):
     Detail view: full data including candidates and historical results
     """
     queryset = Constituency.objects.select_related('district').prefetch_related(
-        'candidates_2026', 'candidates_2026__party', 'live_results', 'results_2021'
+        'candidates_2026', 'candidates_2026__party', 'candidates_2026__party__alliance',
+        'live_results', 'results_2021', 'results_2021__party'
     ).all()
     
     def get_serializer_class(self):
@@ -50,7 +67,7 @@ class ConstituencyViewSet(viewsets.ReadOnlyModelViewSet):
 
 class PartyViewSet(viewsets.ReadOnlyModelViewSet):
     """API endpoint for parties"""
-    queryset = Party.objects.all()
+    queryset = Party.objects.select_related('alliance').all()
     serializer_class = PartySerializer
 
 
@@ -67,7 +84,7 @@ def state_summary(request):
     GET /api/summary/
     """
     live_results = LiveResult.objects.all()
-    candidates = Candidate.objects.select_related('party')
+    candidates = Candidate.objects.select_related('party', 'party__alliance')
     
     # Count seats by alliance; also track pure IND (party code exactly 'IND') separately
     alliance_seats = {
@@ -79,10 +96,10 @@ def state_summary(request):
     ind_summary = {'won': 0, 'leading': 0}
 
     for constituency in Constituency.objects.all():
-        top_candidates = constituency.candidates_2026.select_related('party').order_by('-votes')[:2]
+        top_candidates = constituency.candidates_2026.select_related('party', 'party__alliance').order_by('-votes')[:2]
         if top_candidates:
             leader = top_candidates[0]
-            alliance = leader.party.alliance
+            alliance = leader.party.alliance.code
             party_code = leader.party.code
 
             result = constituency.live_results.first()
@@ -95,6 +112,20 @@ def state_summary(request):
                 if party_code == 'IND':
                     ind_summary['leading'] += 1
 
+    total_votes_counted = candidates.aggregate(Sum('votes'))['votes__sum'] or 0
+
+    # Aggregate votes per alliance
+    for c in candidates:
+        alliance = c.party.alliance.code if c.party and c.party.alliance else 'OTH'
+        bucket = alliance if alliance in alliance_seats else 'OTH'
+        alliance_seats[bucket]['votes'] = alliance_seats[bucket].get('votes', 0) + c.votes
+
+    # Calculate vote share
+    for al in alliance_seats:
+        votes = alliance_seats[al].get('votes', 0)
+        alliance_seats[al]['vote_share'] = (votes / total_votes_counted * 100) if total_votes_counted > 0 else 0
+        alliance_seats[al].pop('votes', None)
+
     return Response({
         'total_constituencies': 140,
         'results_declared': live_results.filter(status='RESULT_DECLARED').count(),
@@ -102,7 +133,8 @@ def state_summary(request):
         'not_started': live_results.filter(status='NOT_STARTED').count(),
         'alliance_summary': alliance_seats,
         'ind_summary': ind_summary,
-        'total_votes_counted': candidates.aggregate(Sum('votes'))['votes__sum'] or 0,
+        'total_votes_counted': total_votes_counted,
+        'total_votes_polled': live_results.aggregate(Sum('votes_polled'))['votes_polled__sum'] or 0,
     })
 
 
@@ -117,43 +149,43 @@ def historical_comparison(request, constituency_number):
     except Constituency.DoesNotExist:
         return Response({'error': 'Constituency not found'}, status=404)
     
-    # 2021 LA results — all candidates
-    results_2021 = constituency.results_2021.order_by('-total_votes')
+    # 2021 LA results -- all candidates
+    results_2021 = constituency.results_2021.select_related('party').order_by('-total_votes')
     meta_2021 = constituency.meta_2021 if hasattr(constituency, 'meta_2021') else None
     
     # Parliament results
     ls_2019 = ParliamentResult.objects.filter(year=2019, constituency=constituency).first()
     ls_2024 = ParliamentResult.objects.filter(year=2024, constituency=constituency).first()
     
-    # 2016 LA results — winner + runner-up summary
-    result_2016 = constituency.results_2016.first()
+    # 2016 LA results -- winner + runner-up summary
+    result_2016 = constituency.results_2016.select_related('winner_party', 'winner_alliance').first()
     la_2016 = None
     if result_2016:
-        # Build alliance-level vote-share aggregates from ALL 2016 candidates
-        # (uses HistoricalResult2016Full which has every candidate from the xlsx)
-        alliance_map_2016 = {
-            r.party_code: {'alliance': r.alliance, 'color_code': r.color_code}
-            for r in PartyAllianceYear.objects.filter(election_year=2016, election_type='LA')
-        }
-        shares_2016: dict = {'LDF': 0.0, 'UDF': 0.0, 'NDA': 0.0, 'OTH': 0.0}
-        for r in constituency.results_2016_full.all():
-            al = (CONSTITUENCY_2016_OVERRIDE.get(constituency.number, {}).get(r.party_code)
-                  or alliance_map_2016.get(r.party_code, {}).get('alliance', 'OTH'))
+        am2016 = _build_alliance_map(2016)
+        shares_2016 = {'LDF': 0.0, 'UDF': 0.0, 'NDA': 0.0, 'OTH': 0.0}
+        results_2016_full = list(
+            constituency.results_2016_full.select_related('party').order_by('-total_votes')
+        )
+        for r in results_2016_full:
+            pc = r.party.code if r.party else r.party_code
+            al = _party_alliance(pc, am2016)
             bucket = al if al in shares_2016 else 'OTH'
             shares_2016[bucket] += float(r.vote_percentage)
 
-        # All 2016 candidates for the card list
-        results_2016_full = list(constituency.results_2016_full.order_by('-total_votes'))
+        wp = result_2016.winner_party
+        wa = result_2016.winner_alliance
+        rp = result_2016.runnerup_party
+        ra = result_2016.runnerup_alliance
 
         la_2016 = {
             'winner_candidate':    result_2016.winner_candidate,
-            'winner_party':        result_2016.winner_party,
-            'winner_alliance':     result_2016.winner_alliance,
+            'winner_party':        wp.code if wp else result_2016.winner_party_code,
+            'winner_alliance':     wa.code if wa else result_2016.winner_alliance_code,
             'winner_votes':        result_2016.winner_votes,
             'winner_percentage':   float(result_2016.winner_percentage),
             'runnerup_candidate':  result_2016.runnerup_candidate,
-            'runnerup_party':      result_2016.runnerup_party,
-            'runnerup_alliance':   result_2016.runnerup_alliance,
+            'runnerup_party':      rp.code if rp else result_2016.runnerup_party_code,
+            'runnerup_alliance':   ra.code if ra else result_2016.runnerup_alliance_code,
             'runnerup_votes':      result_2016.runnerup_votes,
             'runnerup_percentage': float(result_2016.runnerup_percentage),
             'margin':              result_2016.margin,
@@ -161,42 +193,36 @@ def historical_comparison(request, constituency_number):
             'candidates': [
                 {
                     'candidate': r.candidate_name,
-                    'party': r.party_code,
+                    'party': r.party.code if r.party else r.party_code,
                     'votes': r.total_votes,
                     'percentage': float(r.vote_percentage),
                     'is_winner': r.is_winner,
-                    'alliance': CONSTITUENCY_2016_OVERRIDE.get(constituency.number, {}).get(r.party_code)
-                               or alliance_map_2016.get(r.party_code, {}).get('alliance', 'OTH'),
-                    'color_code': alliance_map_2016.get(r.party_code, {}).get('color_code', '#808080'),
-                } for r in results_2016_full if r.party_code != 'NOTA'
+                    'alliance': _party_alliance(r.party.code if r.party else r.party_code, am2016),
+                    'color_code': _party_color(r.party.code if r.party else r.party_code, am2016),
+                } for r in results_2016_full
+                if (r.party.code if r.party else r.party_code) != 'NOTA'
             ],
         }
 
-    # Build year-specific alliance lookup from PartyAllianceYear table
-    alliance_map_2021 = {
-        r.party_code: {'alliance': r.alliance, 'color_code': r.color_code}
-        for r in PartyAllianceYear.objects.filter(election_year=2021, election_type='LA')
-    }
-
-    # 2021 alliance-level vote-share aggregates (all candidates, not just top-5)
-    all_2021 = constituency.results_2021.all()
-    shares_2021: dict = {'LDF': 0.0, 'UDF': 0.0, 'NDA': 0.0, 'OTH': 0.0}
+    # 2021
+    am2021 = _build_alliance_map(2021)
+    all_2021 = constituency.results_2021.select_related('party').all()
+    shares_2021 = {'LDF': 0.0, 'UDF': 0.0, 'NDA': 0.0, 'OTH': 0.0}
     for r in all_2021:
-        al = alliance_map_2021.get(r.party_code, {}).get('alliance', 'OTH')
+        pc = r.party.code if r.party else r.party_code
+        al = _party_alliance(pc, am2021)
         bucket = al if al in shares_2021 else 'OTH'
         shares_2021[bucket] += float(r.vote_percentage)
 
-    # 2011 LA results
-    alliance_map_2011 = {
-        r.party_code: {'alliance': r.alliance, 'color_code': r.color_code}
-        for r in PartyAllianceYear.objects.filter(election_year=2011, election_type='LA')
-    }
-    results_2011 = list(constituency.results_2011.order_by('-total_votes'))
+    # 2011
+    am2011 = _build_alliance_map(2011)
+    results_2011 = list(constituency.results_2011.select_related('party').order_by('-total_votes'))
     la_2011 = None
     if results_2011:
-        shares_2011: dict = {'LDF': 0.0, 'UDF': 0.0, 'NDA': 0.0, 'OTH': 0.0}
+        shares_2011 = {'LDF': 0.0, 'UDF': 0.0, 'NDA': 0.0, 'OTH': 0.0}
         for r in results_2011:
-            al = alliance_map_2011.get(r.party_code, {}).get('alliance', 'OTH')
+            pc = r.party.code if r.party else r.party_code
+            al = _party_alliance(pc, am2011)
             bucket = al if al in shares_2011 else 'OTH'
             shares_2011[bucket] += float(r.vote_percentage)
         
@@ -206,13 +232,14 @@ def historical_comparison(request, constituency_number):
             'candidates': [
                 {
                     'candidate': r.candidate_name,
-                    'party': r.party_code,
+                    'party': r.party.code if r.party else r.party_code,
                     'votes': r.total_votes,
                     'percentage': float(r.vote_percentage),
                     'is_winner': r.is_winner,
-                    'alliance': alliance_map_2011.get(r.party_code, {}).get('alliance', 'OTH'),
-                    'color_code': alliance_map_2011.get(r.party_code, {}).get('color_code', '#808080'),
-                } for r in results_2011 if r.party_code != 'NOTA'
+                    'alliance': _party_alliance(r.party.code if r.party else r.party_code, am2011),
+                    'color_code': _party_color(r.party.code if r.party else r.party_code, am2011),
+                } for r in results_2011
+                if (r.party.code if r.party else r.party_code) != 'NOTA'
             ]
         }
 
@@ -224,18 +251,18 @@ def historical_comparison(request, constituency_number):
         },
         'la_2021': {
             'winner': meta_2021.winner_name if meta_2021 else None,
-            'party': meta_2021.winner_party if meta_2021 else None,
+            'party': meta_2021.winner_party.code if meta_2021 and meta_2021.winner_party else None,
             'margin': meta_2021.margin if meta_2021 else None,
             'alliance_shares': {k: round(v, 2) for k, v in shares_2021.items()},
             'candidates': [
                 {
                     'candidate': r.candidate_name,
-                    'party': r.party_code,
+                    'party': r.party.code if r.party else r.party_code,
                     'votes': r.total_votes,
                     'percentage': float(r.vote_percentage),
                     'is_winner': r.is_winner,
-                    'alliance': alliance_map_2021.get(r.party_code, {}).get('alliance', 'OTH'),
-                    'color_code': alliance_map_2021.get(r.party_code, {}).get('color_code', '#808080'),
+                    'alliance': _party_alliance(r.party.code if r.party else r.party_code, am2021),
+                    'color_code': _party_color(r.party.code if r.party else r.party_code, am2021),
                 } for r in results_2021
             ],
         },
@@ -249,87 +276,59 @@ def historical_comparison(request, constituency_number):
 @api_view(['GET'])
 def history_all(request):
     """
-    Bulk historical endpoint — returns all 140 constituencies with
+    Bulk historical endpoint -- returns all 140 constituencies with
     la_2011, la_2016, la_2021 winner/margin/alliance summary.
     GET /api/history/all/
-
-    Shape matches ConstituencyHistory in HistoryPage.tsx:
-      { constituency_number, constituency_name, district,
-        la_2011: { winner, winner_party, winner_alliance, margin } | null,
-        la_2016: { ... } | null,
-        la_2021: { ... } | null }
     """
-    # ── Build alliance lookup maps once ──────────────────────────────────
-    def _alliance_map(year):
-        return {
-            r.party_code: r.alliance
-            for r in PartyAllianceYear.objects.filter(election_year=year, election_type='LA')
-        }
+    am2011 = _build_alliance_map(2011)
+    am2016 = _build_alliance_map(2016)
+    am2021 = _build_alliance_map(2021)
 
-    am2011 = _alliance_map(2011)
-    am2016 = _alliance_map(2016)
-    am2021 = _alliance_map(2021)
-
-    # ── Prefetch all historical data in bulk (3 queries total) ──────────
     constituencies = (
         Constituency.objects
-        .select_related('district', 'meta_2021')
+        .select_related('district', 'meta_2021', 'meta_2021__winner_party')
         .prefetch_related(
-            Prefetch('results_2011', queryset=HistoricalResult2011.objects.order_by('-total_votes')),
-            Prefetch('results_2016', queryset=HistoricalResult2016.objects.all()),
-            Prefetch('results_2021', queryset=HistoricalResult2021.objects.order_by('-total_votes')),
+            Prefetch('results_2011', queryset=HistoricalResult2011.objects.select_related('party').order_by('-total_votes')),
+            Prefetch('results_2016', queryset=HistoricalResult2016.objects.select_related('winner_party', 'winner_alliance')),
+            Prefetch('results_2021', queryset=HistoricalResult2021.objects.select_related('party').order_by('-total_votes')),
             'parliament_results'
         )
         .order_by('number')
     )
 
-    # 2016 override (Chavara factional CMP)
-    OVERRIDE_2016 = {
-        117: {'CMPKSC': 'LDF'},
-    }
-
-    def _winner_alliance(party_code, alliance_map, const_number=None, year_override=None):
-        if year_override and const_number in year_override:
-            overridden = year_override[const_number].get(party_code)
-            if overridden:
-                return overridden
-        return alliance_map.get(party_code, 'OTH')
-
     results = []
     for c in constituencies:
-        district_name = c.district.name
-
-        # ── 2011 ─────────────────────────────────────────────────────────
+        # 2011
         r11_list = list(c.results_2011.all())
         la_2011 = None
         if r11_list:
             winner_r11 = next((r for r in r11_list if r.is_winner), r11_list[0])
+            pc = winner_r11.party.code if winner_r11.party else winner_r11.party_code
             margin_11 = (
                 r11_list[0].total_votes - r11_list[1].total_votes
                 if len(r11_list) > 1 else None
             )
             la_2011 = {
                 'winner': winner_r11.candidate_name,
-                'winner_party': winner_r11.party_code,
-                'winner_alliance': _winner_alliance(winner_r11.party_code, am2011),
+                'winner_party': pc,
+                'winner_alliance': _party_alliance(pc, am2011),
                 'margin': margin_11,
             }
 
-        # ── 2016 ─────────────────────────────────────────────────────────
+        # 2016
         r16 = list(c.results_2016.all())
         la_2016 = None
         if r16:
             r = r16[0]
+            wp_code = r.winner_party.code if r.winner_party else r.winner_party_code
             la_2016 = {
                 'winner': r.winner_candidate,
-                'winner_party': r.winner_party,
-                'winner_alliance': _winner_alliance(
-                    r.winner_party, am2016, c.number, OVERRIDE_2016
-                ) or r.winner_alliance,
+                'winner_party': wp_code,
+                'winner_alliance': _party_alliance(wp_code, am2016),
                 'margin': r.margin,
             }
 
-        # ── 2021 ─────────────────────────────────────────────────────────
+        # 2021
         meta21 = getattr(c, 'meta_2021', None)
         r21_list = list(c.results_2021.all())
         la_2021 = None
@@ -338,40 +337,35 @@ def history_all(request):
                 r21_list[0].total_votes - r21_list[1].total_votes
                 if len(r21_list) > 1 else meta21.margin
             )
+            wp_code = meta21.winner_party.code if meta21.winner_party else meta21.winner_party_code
             la_2021 = {
                 'winner': meta21.winner_name,
-                'winner_party': meta21.winner_party,
-                'winner_alliance': _winner_alliance(meta21.winner_party, am2021),
+                'winner_party': wp_code,
+                'winner_alliance': _party_alliance(wp_code, am2021),
                 'margin': margin_21,
             }
 
-        # ── LS 2019 / 2024 ───────────────────────────────────────────────
+        # LS 2019 / 2024
         parliament_results = list(c.parliament_results.all())
         ls_2019_obj = next((r for r in parliament_results if r.year == 2019), None)
         ls_2024_obj = next((r for r in parliament_results if r.year == 2024), None)
         
-        ls_2019 = None
-        if ls_2019_obj:
-            ls_2019 = {
-                'winner': '',
-                'winner_party': '',
-                'winner_alliance': ls_2019_obj.lead_alliance,
-                'margin': ls_2019_obj.margin,
-            }
+        ls_2019 = {
+            'winner': '', 'winner_party': '',
+            'winner_alliance': ls_2019_obj.lead_alliance,
+            'margin': ls_2019_obj.margin,
+        } if ls_2019_obj else None
             
-        ls_2024 = None
-        if ls_2024_obj:
-            ls_2024 = {
-                'winner': '',
-                'winner_party': '',
-                'winner_alliance': ls_2024_obj.lead_alliance,
-                'margin': ls_2024_obj.margin,
-            }
+        ls_2024 = {
+            'winner': '', 'winner_party': '',
+            'winner_alliance': ls_2024_obj.lead_alliance,
+            'margin': ls_2024_obj.margin,
+        } if ls_2024_obj else None
 
         results.append({
             'constituency_number': c.number,
             'constituency_name': c.name,
-            'district': district_name,
+            'district': c.district.name,
             'la_2011': la_2011,
             'la_2016': la_2016,
             'la_2021': la_2021,
@@ -390,16 +384,16 @@ def alliance_detail(request, alliance_code):
     if alliance_code not in ['LDF', 'UDF', 'NDA', 'OTH']:
         return Response({'error': 'Invalid alliance code'}, status=404)
 
-    parties_in_alliance = PartyAllianceYear.objects.filter(
-        election_year=2026, election_type='LA', alliance=alliance_code
-    ).values_list('party_code', flat=True)
+    party_ids = PartyAllianceYear.objects.filter(
+        election_year=2026, election_type='LA', alliance__code=alliance_code
+    ).values_list('party_id', flat=True)
 
     # 1. Total valid votes across the state (for vote share percentage)
     total_valid_votes = Candidate.objects.aggregate(t=Sum('votes'))['t'] or 0
 
     # 2. Total votes for the alliance
     alliance_votes = Candidate.objects.filter(
-        party__code__in=parties_in_alliance
+        party_id__in=party_ids
     ).aggregate(t=Sum('votes'))['t'] or 0
 
     vote_share = (alliance_votes / total_valid_votes * 100) if total_valid_votes > 0 else 0
@@ -407,8 +401,8 @@ def alliance_detail(request, alliance_code):
     # 3. Component parties breakdown
     parties_data = []
     alliance_candidates = Candidate.objects.filter(
-        party__code__in=parties_in_alliance
-    ).select_related('party')
+        party_id__in=party_ids
+    ).select_related('party', 'party__alliance')
 
     # Group by party
     party_stats = {}
@@ -459,7 +453,7 @@ def party_detail(request, party_code):
     GET /api/party/{party_code}/
     """
     try:
-        party = Party.objects.get(code=party_code)
+        party = Party.objects.select_related('alliance').get(code=party_code)
     except Party.DoesNotExist:
         return Response({'error': 'Party not found'}, status=404)
 
@@ -470,8 +464,10 @@ def party_detail(request, party_code):
     vote_share = (party_votes / total_valid_votes * 100) if total_valid_votes > 0 else 0
 
     # Get alliance for the year 2026
-    pay = PartyAllianceYear.objects.filter(party_code=party_code, election_year=2026, election_type='LA').first()
-    alliance = pay.alliance if pay else party.alliance
+    pay = PartyAllianceYear.objects.select_related('alliance').filter(
+        party=party, election_year=2026, election_type='LA'
+    ).first()
+    alliance = pay.alliance.code if pay else party.alliance.code
 
     # Seats breakdown
     won = candidates.filter(is_winner=True).count()

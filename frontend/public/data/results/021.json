@@ -2,35 +2,44 @@
   "constituency": {
     "id": 21,
     "number": 21,
-    "name": "KUTTIADI",
+    "name": "KUTTIADY",
     "district": "Kozhikode"
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 195697,
-    "votes_polled": 131491,
-    "votes_counted": 26593,
-    "valid_votes": 132965,
-    "rounds_completed": 4,
-    "total_rounds": 20,
-    "last_updated": "2026-05-01T01:57:46.184691+00:00"
+    "total_electors": 215940,
+    "votes_polled": 175040,
+    "votes_counted": 9943,
+    "valid_votes": 9943,
+    "rounds_completed": 10,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:36:40.685271+00:00"
   },
   "candidates_2026": [
-    {
-      "name": "Ramadas Manaleri",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 12363,
-      "percentage": 9.3,
-      "is_winner": false,
-      "is_leading": true
-    },
     {
       "name": "Parakkal Abdulla",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 5462,
-      "percentage": 4.11,
+      "votes": 53090,
+      "percentage": 49.4,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "K. P. Kunhammad Kutti Master",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 45997,
+      "percentage": 42.8,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ramadas Manaleri",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 8007,
+      "percentage": 7.45,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +47,8 @@
       "name": "Kunhammadkutty",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 3840,
-      "percentage": 2.89,
+      "votes": 65,
+      "percentage": 0.06,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,17 +56,8 @@
       "name": "Abdulla",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 3195,
-      "percentage": 2.4,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "K. P. Kunhammad Kutti Master",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 2494,
-      "percentage": 1.88,
+      "votes": 62,
+      "percentage": 0.06,
       "is_winner": false,
       "is_leading": false
     }

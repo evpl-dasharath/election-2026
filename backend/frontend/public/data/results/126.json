@@ -1,0 +1,102 @@
+{
+  "constituency": {
+    "id": 126,
+    "number": 126,
+    "name": "CHATHANNOOR",
+    "district": "Kollam"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 177000,
+    "votes_polled": 134325,
+    "votes_counted": 9521,
+    "valid_votes": 9521,
+    "rounds_completed": 8,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:23:53.134845+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "B. B. Gopakumar",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 26209,
+      "percentage": 35.28,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Adv. R.Rajendran",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 25947,
+      "percentage": 34.92,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sooraj Ravi",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 21222,
+      "percentage": 28.56,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Arun A",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 357,
+      "percentage": 0.48,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sindhu Puthenkulam",
+      "party": "Anna DHRM",
+      "alliance": "OTH",
+      "votes": 177,
+      "percentage": 0.24,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "G.S. JAYALAL",
+      "party": "CPI",
+      "votes": 59296,
+      "percentage": 43.12,
+      "is_winner": true
+    },
+    {
+      "candidate": "B. B. GOPAKUMAR",
+      "party": "BJP",
+      "votes": 42090,
+      "percentage": 30.61,
+      "is_winner": false
+    },
+    {
+      "candidate": "N. PEETHAMBARAKURUP",
+      "party": "INC",
+      "votes": 34280,
+      "percentage": 24.93,
+      "is_winner": false
+    },
+    {
+      "candidate": "SHANMUGHAN PARAVUR",
+      "party": "ADHRMPI",
+      "votes": 524,
+      "percentage": 0.38,
+      "is_winner": false
+    },
+    {
+      "candidate": "SUNU BHASKARAN",
+      "party": "BSP",
+      "votes": 364,
+      "percentage": 0.26,
+      "is_winner": false
+    }
+  ]
+}

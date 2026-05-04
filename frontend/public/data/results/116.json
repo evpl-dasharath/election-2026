@@ -2,26 +2,26 @@
   "constituency": {
     "id": 116,
     "number": 116,
-    "name": "KARUNAGAPPALLY",
+    "name": "KARUNAGAPALLY",
     "district": "Kollam"
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 210181,
-    "votes_polled": 156858,
-    "votes_counted": 14126,
-    "valid_votes": 162454,
-    "rounds_completed": 2,
-    "total_rounds": 23,
-    "last_updated": "2026-05-01T02:01:46.184239+00:00"
+    "total_electors": 214513,
+    "votes_polled": 169079,
+    "votes_counted": 10417,
+    "valid_votes": 10417,
+    "rounds_completed": 10,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:40.790617+00:00"
   },
   "candidates_2026": [
     {
       "name": "C. R. Mahesh",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 5210,
-      "percentage": 3.21,
+      "votes": 51641,
+      "percentage": 47.83,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Adv.M.S. Thara",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 3452,
-      "percentage": 2.12,
+      "votes": 34117,
+      "percentage": 31.6,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "V. S. Jithin Dev",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 1980,
-      "percentage": 1.22,
+      "votes": 21066,
+      "percentage": 19.51,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Latheef",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 1884,
-      "percentage": 1.16,
+      "votes": 629,
+      "percentage": 0.58,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Twinkle Prabhakaran",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 1883,
-      "percentage": 1.16,
+      "votes": 180,
+      "percentage": 0.17,
       "is_winner": false,
       "is_leading": false
     }

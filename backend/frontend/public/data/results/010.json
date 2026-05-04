@@ -1,0 +1,129 @@
+{
+  "constituency": {
+    "id": 10,
+    "number": 10,
+    "name": "AZHIKODE",
+    "district": "Kannur"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 188250,
+    "votes_polled": 146289,
+    "votes_counted": 12159,
+    "valid_votes": 12159,
+    "rounds_completed": 9,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:22:04.595263+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "K. V. Sumesh",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 47464,
+      "percentage": 46.66,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Adv.  Kareem Cheleri",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 42744,
+      "percentage": 42.02,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. K. Vinod Kumar",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 10600,
+      "percentage": 10.42,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Reshmi Ravi",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 155,
+      "percentage": 0.15,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Abdul Kareem. V. V",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 154,
+      "percentage": 0.15,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sumesh. T. P",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 80,
+      "percentage": 0.08,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Kareem Chandroth",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 75,
+      "percentage": 0.07,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sumesh Kumar. K",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 68,
+      "percentage": 0.07,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "K V Sumesh",
+      "party": "CPI(M)",
+      "votes": 65794,
+      "percentage": 45.41,
+      "is_winner": true
+    },
+    {
+      "candidate": "K M Shaji",
+      "party": "IUML",
+      "votes": 59653,
+      "percentage": 41.17,
+      "is_winner": false
+    },
+    {
+      "candidate": "K Ranjith",
+      "party": "BJP",
+      "votes": 15741,
+      "percentage": 10.86,
+      "is_winner": false
+    },
+    {
+      "candidate": "ABDUL JABBAR K K",
+      "party": "SDPI",
+      "votes": 2357,
+      "percentage": 1.63,
+      "is_winner": false
+    },
+    {
+      "candidate": "K M SHAJI (MAMBA)",
+      "party": "IND",
+      "votes": 277,
+      "percentage": 0.19,
+      "is_winner": false
+    }
+  ]
+}

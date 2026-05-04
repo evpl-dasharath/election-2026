@@ -1,0 +1,111 @@
+{
+  "constituency": {
+    "id": 128,
+    "number": 128,
+    "name": "ATTINGAL",
+    "district": "Thiruvananthapuram"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 197945,
+    "votes_polled": 146122,
+    "votes_counted": 19010,
+    "valid_votes": 19010,
+    "rounds_completed": 10,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:23:48.381159+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "O. S. Ambika",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 39701,
+      "percentage": 40.55,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "P. Sudheer",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 28519,
+      "percentage": 29.13,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Santhosh Bhadran",
+      "party": "RSP",
+      "alliance": "UDF",
+      "votes": 27114,
+      "percentage": 27.69,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Jayarajan M",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 846,
+      "percentage": 0.86,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "S. Sujithra",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 636,
+      "percentage": 0.65,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sunitha Kilimanoor",
+      "party": "Anna DHRM",
+      "alliance": "OTH",
+      "votes": 278,
+      "percentage": 0.28,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "O S AMBIKA",
+      "party": "CPI(M)",
+      "votes": 69898,
+      "percentage": 47.35,
+      "is_winner": true
+    },
+    {
+      "candidate": "ADV. P SUDHEER",
+      "party": "BJP",
+      "votes": 38262,
+      "percentage": 25.92,
+      "is_winner": false
+    },
+    {
+      "candidate": "ADV. A SREEDHARAN",
+      "party": "RSP",
+      "votes": 36938,
+      "percentage": 25.02,
+      "is_winner": false
+    },
+    {
+      "candidate": "VIPINLAL VIDHYADHARAN",
+      "party": "BSP",
+      "votes": 927,
+      "percentage": 0.63,
+      "is_winner": false
+    },
+    {
+      "candidate": "ASHA PRAKASH",
+      "party": "ADHRMPI",
+      "votes": 339,
+      "percentage": 0.23,
+      "is_winner": false
+    }
+  ]
+}

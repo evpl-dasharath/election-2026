@@ -7,30 +7,30 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 218893,
-    "votes_polled": 165947,
-    "votes_counted": 8833,
-    "valid_votes": 167834,
-    "rounds_completed": 1,
-    "total_rounds": 19,
-    "last_updated": "2026-05-01T02:03:36.193421+00:00"
+    "total_electors": 191880,
+    "votes_polled": 155979,
+    "votes_counted": 10396,
+    "valid_votes": 10396,
+    "rounds_completed": 11,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:18.825813+00:00"
   },
   "candidates_2026": [
     {
       "name": "A. D. Thomas",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 2377,
-      "percentage": 1.42,
+      "votes": 56357,
+      "percentage": 50.04,
       "is_winner": false,
       "is_leading": true
     },
     {
-      "name": "Alleppey Sugunan",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 1955,
-      "percentage": 1.16,
+      "name": "P. P. Chitharanjan",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 44617,
+      "percentage": 39.62,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,17 +38,8 @@
       "name": "M.J. Job",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 1691,
-      "percentage": 1.01,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "P. P. Chitharanjan",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 1017,
-      "percentage": 0.61,
+      "votes": 10830,
+      "percentage": 9.62,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +47,17 @@
       "name": "Joseph Chacko",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 989,
-      "percentage": 0.59,
+      "votes": 112,
+      "percentage": 0.1,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Alleppey Sugunan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 94,
+      "percentage": 0.08,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Jyothi Abraham",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 909,
-      "percentage": 0.54,
+      "votes": 65,
+      "percentage": 0.06,
       "is_winner": false,
       "is_leading": false
     }

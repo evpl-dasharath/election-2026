@@ -7,48 +7,39 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 180218,
-    "votes_polled": 117564,
-    "votes_counted": 4976,
-    "valid_votes": 119433,
-    "rounds_completed": 1,
-    "total_rounds": 24,
-    "last_updated": "2026-05-01T02:04:40.184756+00:00"
+    "total_electors": 184665,
+    "votes_polled": 142173,
+    "votes_counted": 13092,
+    "valid_votes": 13092,
+    "rounds_completed": 10,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:31.398934+00:00"
   },
   "candidates_2026": [
     {
-      "name": "Abhiram Babu",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 2026,
-      "percentage": 1.7,
+      "name": "Adv. Sebastian M.J",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 36694,
+      "percentage": 39.68,
       "is_winner": false,
       "is_leading": true
+    },
+    {
+      "name": "Adv. Sebastian Kulathunkal",
+      "party": "KC_M",
+      "alliance": "LDF",
+      "votes": 32464,
+      "percentage": 35.1,
+      "is_winner": false,
+      "is_leading": false
     },
     {
       "name": "P. C. George",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 713,
-      "percentage": 0.6,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Mayamol K P",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 524,
-      "percentage": 0.44,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Adv. Sebastian Kulathunkal",
-      "party": "KC(M)",
-      "alliance": "LDF",
-      "votes": 467,
-      "percentage": 0.39,
+      "votes": 22474,
+      "percentage": 24.3,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,17 +47,26 @@
       "name": "Shiny A C",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 431,
-      "percentage": 0.36,
+      "votes": 286,
+      "percentage": 0.31,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Adv. Sebastian M.J",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 347,
-      "percentage": 0.29,
+      "name": "Abhiram Babu",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 129,
+      "percentage": 0.14,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Mayamol K P",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 71,
+      "percentage": 0.08,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "Santhosh Joseph",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 329,
-      "percentage": 0.28,
+      "votes": 47,
+      "percentage": 0.05,
       "is_winner": false,
       "is_leading": false
     }
@@ -83,7 +83,7 @@
   "results_2021": [
     {
       "candidate": "Adv. Sebastian Kulathunkal",
-      "party": "KC(M)",
+      "party": "KEC(M)",
       "votes": 58668,
       "percentage": 41.94,
       "is_winner": true

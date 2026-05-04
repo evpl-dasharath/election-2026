@@ -1,0 +1,120 @@
+{
+  "constituency": {
+    "id": 13,
+    "number": 13,
+    "name": "THALASSERY",
+    "district": "Kannur"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 185841,
+    "votes_polled": 141852,
+    "votes_counted": 21371,
+    "valid_votes": 21371,
+    "rounds_completed": 9,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:22:06.725082+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Karayi Rajan",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 44013,
+      "percentage": 47.37,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "K. P. Saju",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 29776,
+      "percentage": 32.04,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "O. Nidheesh",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 17279,
+      "percentage": 18.59,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "A.C. Jalaluddin",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 1093,
+      "percentage": 1.18,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Saju V P",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 167,
+      "percentage": 0.18,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Rajan O P",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 59,
+      "percentage": 0.06,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "V. P. Rajan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 55,
+      "percentage": 0.06,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Adv. A. N. SHAMSEER",
+      "party": "CPI(M)",
+      "votes": 81810,
+      "percentage": 61.52,
+      "is_winner": true
+    },
+    {
+      "candidate": "M. P. ARAVINDAKSHAN",
+      "party": "INC",
+      "votes": 45009,
+      "percentage": 33.84,
+      "is_winner": false
+    },
+    {
+      "candidate": "SHAMSEER IBRAHIM",
+      "party": "WPOI",
+      "votes": 1963,
+      "percentage": 1.48,
+      "is_winner": false
+    },
+    {
+      "candidate": "C. O. T. NASEER",
+      "party": "IND",
+      "votes": 1163,
+      "percentage": 0.87,
+      "is_winner": false
+    },
+    {
+      "candidate": "ARAVINDHAKSHAN S/o KAUSU",
+      "party": "IND",
+      "votes": 533,
+      "percentage": 0.4,
+      "is_winner": false
+    }
+  ]
+}

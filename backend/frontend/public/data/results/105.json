@@ -1,0 +1,93 @@
+{
+  "constituency": {
+    "id": 105,
+    "number": 105,
+    "name": "AMBALAPPUZHA",
+    "district": "Alappuzha"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 171203,
+    "votes_polled": 138246,
+    "votes_counted": 0,
+    "valid_votes": 0,
+    "rounds_completed": 7,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:23:55.045622+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "G. Sudhakaran",
+      "party": "IND_UDF",
+      "alliance": "UDF",
+      "votes": 35714,
+      "percentage": 53.35,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "H. Salam",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 22972,
+      "percentage": 34.32,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Arun Anirudhan",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 7256,
+      "percentage": 10.84,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Johnson Mathew",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 496,
+      "percentage": 0.74,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "H.Salam",
+      "party": "CPI(M)",
+      "votes": 61365,
+      "percentage": 44.79,
+      "is_winner": true
+    },
+    {
+      "candidate": "Adv.M.Liju",
+      "party": "INC",
+      "votes": 50240,
+      "percentage": 36.67,
+      "is_winner": false
+    },
+    {
+      "candidate": "Anoop Antony",
+      "party": "BJP",
+      "votes": 22389,
+      "percentage": 16.34,
+      "is_winner": false
+    },
+    {
+      "candidate": "M.M.Thahir",
+      "party": "SDPI",
+      "votes": 1690,
+      "percentage": 1.23,
+      "is_winner": false
+    },
+    {
+      "candidate": "Subhadramma Thottappally",
+      "party": "WPOI",
+      "votes": 525,
+      "percentage": 0.38,
+      "is_winner": false
+    }
+  ]
+}

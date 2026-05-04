@@ -7,57 +7,30 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 190161,
-    "votes_polled": 134517,
-    "votes_counted": 20253,
-    "valid_votes": 135021,
-    "rounds_completed": 3,
-    "total_rounds": 20,
-    "last_updated": "2026-05-01T01:58:58.184598+00:00"
+    "total_electors": 188495,
+    "votes_polled": 143199,
+    "votes_counted": 9405,
+    "valid_votes": 9405,
+    "rounds_completed": 14,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:16.284541+00:00"
   },
   "candidates_2026": [
-    {
-      "name": "Adv. Basil John",
-      "party": "AAP",
-      "alliance": "OTH",
-      "votes": 8345,
-      "percentage": 6.18,
-      "is_winner": false,
-      "is_leading": true
-    },
-    {
-      "name": "Jomon John",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 2121,
-      "percentage": 1.57,
-      "is_winner": false,
-      "is_leading": false
-    },
     {
       "name": "Apu John Joseph",
       "party": "KEC",
       "alliance": "UDF",
-      "votes": 2086,
-      "percentage": 1.54,
+      "votes": 72293,
+      "percentage": 58.33,
       "is_winner": false,
-      "is_leading": false
+      "is_leading": true
     },
     {
-      "name": "P T Varghese",
-      "party": "SUCI",
-      "alliance": "OTH",
-      "votes": 2014,
-      "percentage": 1.49,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Afsal M. B",
-      "party": "SDPI",
-      "alliance": "OTH",
-      "votes": 1996,
-      "percentage": 1.48,
+      "name": "Cyriac Chazhikadan",
+      "party": "KC_M",
+      "alliance": "LDF",
+      "votes": 33595,
+      "percentage": 27.1,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,17 +38,8 @@
       "name": "Adv. Roy A. Varikkad",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 1881,
-      "percentage": 1.39,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Cyriac Chazhikadan",
-      "party": "KC(M)",
-      "alliance": "LDF",
-      "votes": 884,
-      "percentage": 0.65,
+      "votes": 10988,
+      "percentage": 8.87,
       "is_winner": false,
       "is_leading": false
     },
@@ -83,8 +47,44 @@
       "name": "Ajay V Marar (ajay Unni)",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 784,
-      "percentage": 0.58,
+      "votes": 2250,
+      "percentage": 1.82,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Basil John",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 2171,
+      "percentage": 1.75,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Afsal M. B",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 1464,
+      "percentage": 1.18,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Jomon John",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 213,
+      "percentage": 0.17,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "P T Varghese",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 192,
+      "percentage": 0.15,
       "is_winner": false,
       "is_leading": false
     }
@@ -99,7 +99,7 @@
     },
     {
       "candidate": "Prof. K I ANTONY",
-      "party": "KC(M)",
+      "party": "KEC(M)",
       "votes": 47236,
       "percentage": 34.03,
       "is_winner": false

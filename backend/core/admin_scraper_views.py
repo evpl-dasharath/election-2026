@@ -27,6 +27,122 @@ from .models import Constituency, Candidate, LiveResult, ECIScrapeRaw, ECICandid
 from .eci_scraper import scrape_constituency, BIHAR_TEST_BASE_URL, BIHAR_STATE_CODE, ECI_BASE_URL, KERALA_STATE_CODE
 
 
+# ─── ECI PARTY NAME → DB Party.code MAP ─────────────────────────────────────
+# ECI uses full names, abbreviations, or mixed forms on the results page.
+# Map every known variant to the canonical Party.code used in the DB.
+
+ECI_PARTY_MAP = {
+    # ── LDF ──────────────────────────────────────────────────────────────────
+    'CPI(M)':                              'CPI_M',
+    'Communist Party of India  (Marxist)': 'CPI_M',
+    'Communist Party of India (Marxist)':  'CPI_M',
+    'CPIM':                                'CPI_M',
+    'CPI(M)-LDF':                          'CPI_M',
+    'CPI':                                 'CPI',
+    'Communist Party of India':            'CPI',
+    'Kerala Congress (B)':                 'KC_B',
+    'KC(B)':                               'KC_B',
+    'Kerala Congress (M)':                 'KC_M',
+    'KC(M)':                               'KC_M',
+    'INL':                                 'INL',
+    'Indian National League':              'INL',
+    'NCP':                                 'NCP',
+    'Nationalist Congress Party':          'NCP',
+    'JKC':                                 'JKC',
+    'Congress (Secular)':                  'CON_S',
+    'Indian Socialist Janata Dal':         'ISJD',
+    'RJD':                                 'RJD',
+    'Rashtriya Janata Dal':                'RJD',
+    'LJD':                                 'LJD',
+    # ── UDF ──────────────────────────────────────────────────────────────────
+    'INC':                                 'INC',
+    'Indian National Congress':            'INC',
+    'Congress':                            'INC',
+    'IUML':                                'IUML',
+    'Indian Union Muslim League':          'IUML',
+    'KEC':                                 'KEC',
+    'Kerala Congress':                     'KEC',
+    'KC(J)':                               'KC_J',
+    'Kerala Congress (J)':                 'KC_J',
+    'RSP':                                 'RSP',
+    'Revolutionary Socialist Party':       'RSP',
+    'CMP':                                 'CMP',
+    'Congress of Malayala People':         'CMP',
+    'RMPI':                                'RMPI',
+    'AITC':                                'AITC',
+    'All India Trinamool Congress':        'AITC',
+    'DCK':                                 'KDP',
+    'KDP':                                 'KDP',
+    'Kerala Democratic Party':             'KDP',
+    'AIFB':                                'AIFB',
+    'All India Forward Bloc':              'AIFB',
+    # ── NDA ──────────────────────────────────────────────────────────────────
+    'BJP':                                 'BJP',
+    'Bharatiya Janata Party':              'BJP',
+    'BDJS':                                'BDJS',
+    'Bharath Dharma Jana Sena':            'BDJS',
+    'TTP':                                 'TTP',
+    'Twenty20':                            'TTP',
+    'Twenty20 Party':                      'TTP',
+    'Twenty 20 Party':                     'TTP',
+    'Twenty20Party':                       'TTP',
+    'AIADMK':                              'AIADMK',
+    'All India Anna Dravida Munnetra Kazhagam': 'AIADMK',
+    'JRS':                                 'JRS',
+    'KKC':                                 'KKC',
+    # ── Others ───────────────────────────────────────────────────────────────
+    'AAP':                                 'AAP',
+    'Aam Aadmi Party':                     'AAP',
+    'BSP':                                 'BSP',
+    'Bahujan Samaj Party':                 'BSP',
+    'SDPI':                                'SDPI',
+    'Social Democratic Party of India':    'SDPI',
+    'SUCI':                                'SUCI',
+    'SUCI(C)':                             'SUCI',
+    'Socialist Unity Centre of India':     'SUCI',
+    'Socialist Unity Centre Of India':     'SUCI',
+    'Socialist Unity Centre Of India (COMMUNIST)': 'SUCI',
+    'SUCI(Communist)':                     'SUCI',
+    'WPOI':                                'WPOI',
+    'Welfare Party of India':              'WPOI',
+    'CPIML Liberation':                    'CPI_ML_L',
+    'CPI(ML) Liberation':                  'CPI_ML_L',
+    'CPI(ML)L':                            'CPI_ML_L',
+    'CPIML Red Star':                      'CPI_ML_RS',
+    'CPI(ML) Red Star':                    'CPI_ML_RS',
+    'Communist Party of India (Marxist-Leninist) Red Star': 'CPI_ML_RS',
+    'API':                                 'API',
+    'Ambedkarite Party of India':          'API',
+    # ── Independents & alliance-backed ───────────────────────────────────────
+    'IND':                                 'IND',
+    'Independent':                         'IND',
+    'None of the Above':                   'IND',
+    'NOTA':                                'IND',
+    'IND(LDF)':                            'IND_LDF',
+    'IND(UDF)':                            'IND_UDF',
+    'IND(NDA)':                            'IND_NDA',
+}
+
+
+def _resolve_eci_party_code(eci_party_str: str) -> str | None:
+    """
+    Translate an ECI party string (as scraped from the results page)
+    to the canonical Party.code used in our DB.
+    Returns None if unmapped.
+    """
+    raw = eci_party_str.strip()
+    # Direct lookup
+    code = ECI_PARTY_MAP.get(raw)
+    if code:
+        return code
+    # Case-insensitive fallback
+    raw_lower = raw.lower()
+    for key, val in ECI_PARTY_MAP.items():
+        if key.lower() == raw_lower:
+            return val
+    return None
+
+
 # ─── HELPERS ─────────────────────────────────────────────────────────────────
 
 def _save_scrape_to_db(ac_number, scrape_result):
@@ -52,10 +168,11 @@ def _save_scrape_to_db(ac_number, scrape_result):
     )
 
     # Build a lookup of existing candidates for this constituency
-    db_candidates = {
-        _normalise(c.name): c
-        for c in Candidate.objects.filter(constituency=constituency)
-    }
+    # Key: normalised name → Candidate object (also keep list for party-aware search)
+    all_db_candidates = list(
+        Candidate.objects.filter(constituency=constituency).select_related('party')
+    )
+    db_candidates = {_normalise(c.name): c for c in all_db_candidates}
 
     matched_count = 0
     from core.models import CandidateAlias
@@ -65,18 +182,49 @@ def _save_scrape_to_db(ac_number, scrape_result):
         is_nota = cand["is_nota"]
 
         if not is_nota:
+            # ── 1. Saved alias (manually confirmed in a previous scrape) ─────
             alias = CandidateAlias.objects.filter(constituency=constituency, eci_name=cand["name"]).first()
             if alias:
                 db_candidate = alias.candidate
             else:
                 norm_name = _normalise(cand["name"])
+                eci_party_code = _resolve_eci_party_code(cand.get("party", ""))
+
+                # ── 2. Exact normalised name match ───────────────────────────
                 db_candidate = db_candidates.get(norm_name)
+
+                # ── 3. Fuzzy: first-word prefix, party-filtered first ────────
                 if not db_candidate:
                     first_word = norm_name.split()[0] if norm_name else ""
-                    for db_norm, db_cand in db_candidates.items():
-                        if db_norm.startswith(first_word) and len(first_word) > 3:
-                            db_candidate = db_cand
-                            break
+                    if len(first_word) > 3:
+                        # Priority A: candidates whose party code also matches
+                        if eci_party_code:
+                            for db_cand in all_db_candidates:
+                                db_norm = _normalise(db_cand.name)
+                                party_code = db_cand.party.code if db_cand.party else None
+                                if db_norm.startswith(first_word) and party_code == eci_party_code:
+                                    db_candidate = db_cand
+                                    break
+
+                        # Priority B: fallback — any name prefix match (no party filter)
+                        # ONLY use this when party is unknown — prevents cross-party mismatches
+                        # e.g. RAJAN. J. PALLAN (INC) should NOT match Rajan. M (IND)
+                        if not db_candidate and not eci_party_code:
+                            for db_norm, db_cand in db_candidates.items():
+                                if db_norm.startswith(first_word):
+                                    db_candidate = db_cand
+                                    break
+
+                # ── 4. Last resort: match purely by party code (one candidate)
+                #    Useful when ECI name is very different (e.g. aliases/typos)
+                if not db_candidate and eci_party_code:
+                    party_matches = [
+                        c for c in all_db_candidates
+                        if c.party and c.party.code == eci_party_code
+                    ]
+                    if len(party_matches) == 1:
+                        db_candidate = party_matches[0]
+
             if db_candidate:
                 matched_count += 1
 
@@ -353,25 +501,61 @@ def scraper_commit(request, scrape_id):
 
     if request.method == "POST":
         committed = 0
+        live, _ = LiveResult.objects.get_or_create(constituency=raw.constituency)
+        
         for match in matches:
             if not match.candidate:
                 continue
             c = match.candidate
             c.votes = match.eci_total_votes
-            c.vote_percentage = match.eci_vote_percentage
+            
+            # Use votes_polled as denominator if available, otherwise fallback to ECI's percentage
+            if live.votes_polled and live.votes_polled > 0:
+                c.vote_percentage = (c.votes / live.votes_polled) * 100
+            else:
+                c.vote_percentage = match.eci_vote_percentage
+                
             c.is_leading = match.eci_is_leading
             c.is_winner = raw.is_final and match.eci_is_leading
             c.save()
             committed += 1
 
-        # Update LiveResult for this constituency
-        live, _ = LiveResult.objects.get_or_create(constituency=raw.constituency)
         live.rounds_completed = raw.rounds_completed
         live.status = "RESULT_DECLARED" if raw.is_final else "IN_PROGRESS"
+        
+        # Calculate total counted votes
+        total_counted = sum(match.eci_total_votes for match in matches if match.candidate)
+        live.votes_counted = total_counted
+        live.valid_votes = total_counted
         live.save()
 
         raw.match_status = "MATCHED"
         raw.save()
+
+        # Push to RTDB
+        from firebase_rtdb import push_constituency, update_rtdb_meta
+        rtdb_candidates = [
+            {
+                "name": c.name,
+                "party": c.party.code if c.party else "",
+                "votes": c.votes
+            }
+            for c in Candidate.objects.filter(constituency=raw.constituency).select_related("party").order_by('-votes')
+        ]
+        rtdb_data = {
+            "status": live.status,
+            "rounds_completed": live.rounds_completed,
+            "total_rounds": raw.total_rounds,
+            "last_updated": timezone.now().isoformat(),
+            "candidates": rtdb_candidates,
+            "votes_counted": live.votes_counted,
+            "valid_votes": live.valid_votes,
+            "total_electors": live.total_electors,
+            "votes_polled": live.votes_polled,
+            "rejected_votes": live.rejected_votes
+        }
+        push_constituency(raw.constituency.number, rtdb_data)
+        update_rtdb_meta()
 
         messages.success(
             request,

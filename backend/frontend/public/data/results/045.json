@@ -1,0 +1,138 @@
+{
+  "constituency": {
+    "id": 45,
+    "number": 45,
+    "name": "TIRUR",
+    "district": "Malappuram"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 255441,
+    "votes_polled": 196280,
+    "votes_counted": 10934,
+    "valid_votes": 10934,
+    "rounds_completed": 6,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:22:43.829736+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Kurukkoli Moideen",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 38119,
+      "percentage": 56.82,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "V. Abdurahiman",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 26742,
+      "percentage": 39.86,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. Narayanan Master",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 1675,
+      "percentage": 2.5,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Kabeer Shameer Kuttoor",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 103,
+      "percentage": 0.15,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Moideen Koomulli Parambil",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 95,
+      "percentage": 0.14,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Dr.S.Aleena",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 57,
+      "percentage": 0.08,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Siyad Koodiyath",
+      "party": "SP (I)",
+      "alliance": "OTH",
+      "votes": 54,
+      "percentage": 0.08,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Abdurahiman S/o Kunjeen",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 35,
+      "percentage": 0.05,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "V. Abdurahman",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 17,
+      "percentage": 0.03,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "KURUKKOLI MOIDEEN",
+      "party": "IUML",
+      "votes": 82314,
+      "percentage": 48.21,
+      "is_winner": true
+    },
+    {
+      "candidate": "Adv. GAFOOR P LILLIS",
+      "party": "CPI(M)",
+      "votes": 75100,
+      "percentage": 43.98,
+      "is_winner": false
+    },
+    {
+      "candidate": "Dr. ABDUL SALAM M",
+      "party": "BJP",
+      "votes": 9097,
+      "percentage": 5.33,
+      "is_winner": false
+    },
+    {
+      "candidate": "ASHRAF",
+      "party": "SDPI",
+      "votes": 2712,
+      "percentage": 1.59,
+      "is_winner": false
+    },
+    {
+      "candidate": "MOIDEEN MEENTHRATHAKATH",
+      "party": "IND",
+      "votes": 477,
+      "percentage": 0.28,
+      "is_winner": false
+    }
+  ]
+}

@@ -5,23 +5,32 @@
     "name": "KOTHAMANGALAM",
     "district": "Ernakulam"
   },
-  "live_result": null,
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 171968,
+    "votes_polled": 136370,
+    "votes_counted": 0,
+    "valid_votes": 0,
+    "rounds_completed": 11,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:18.931413+00:00"
+  },
   "candidates_2026": [
-    {
-      "name": "Antony John",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
     {
       "name": "Shibu Thekkumpuram",
       "party": "KEC",
       "alliance": "UDF",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 56857,
+      "percentage": 52.44,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Antony John",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 44438,
+      "percentage": 40.99,
       "is_winner": false,
       "is_leading": false
     },
@@ -29,17 +38,8 @@
       "name": "Aji Narayanan",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Finto Xavier",
-      "party": "RJP",
-      "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 5614,
+      "percentage": 5.18,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,17 +47,8 @@
       "name": "Roy Arackal",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Shibu Chalakattu",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 503,
+      "percentage": 0.46,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +56,26 @@
       "name": "Shibu Kallekkattu",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 224,
+      "percentage": 0.21,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Shibu Chalakattu",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 148,
+      "percentage": 0.14,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Finto Xavier",
+      "party": "RJP",
+      "alliance": "OTH",
+      "votes": 117,
+      "percentage": 0.11,
       "is_winner": false,
       "is_leading": false
     }

@@ -7,48 +7,48 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 193246,
-    "votes_polled": 138801,
-    "votes_counted": 7994,
-    "valid_votes": 143895,
-    "rounds_completed": 1,
-    "total_rounds": 18,
-    "last_updated": "2026-05-01T02:03:01.185338+00:00"
+    "total_electors": 192435,
+    "votes_polled": 139611,
+    "votes_counted": 6806,
+    "valid_votes": 6806,
+    "rounds_completed": 13,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:27.735925+00:00"
   },
   "candidates_2026": [
+    {
+      "name": "M. S. Arun Kumar",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 52526,
+      "percentage": 47.39,
+      "is_winner": false,
+      "is_leading": true
+    },
     {
       "name": "Adv. Muthara Raj",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 4166,
-      "percentage": 2.9,
+      "votes": 39588,
+      "percentage": 35.72,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Ajimon",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 1692,
-      "percentage": 1.18,
+      "votes": 18066,
+      "percentage": 16.3,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Suresh Nooranad",
+      "name": "SURESH NOORANAD",
       "party": "API",
       "alliance": "OTH",
-      "votes": 1302,
-      "percentage": 0.9,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "M. S. Arun Kumar",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 625,
-      "percentage": 0.43,
+      "votes": 206,
+      "percentage": 0.19,
       "is_winner": false,
       "is_leading": false
     }

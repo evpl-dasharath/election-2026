@@ -7,30 +7,30 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 200026,
-    "votes_polled": 138550,
-    "votes_counted": 6854,
-    "valid_votes": 143940,
-    "rounds_completed": 1,
-    "total_rounds": 21,
-    "last_updated": "2026-05-01T02:04:42.184822+00:00"
+    "total_electors": 210790,
+    "votes_polled": 166081,
+    "votes_counted": 11107,
+    "valid_votes": 11107,
+    "rounds_completed": 12,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:36:58.858347+00:00"
   },
   "candidates_2026": [
     {
-      "name": "S.P. Ameer Ali",
-      "party": "SDPI",
-      "alliance": "OTH",
-      "votes": 3729,
-      "percentage": 2.59,
+      "name": "Muhammad Muhsin",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 63123,
+      "percentage": 47.19,
       "is_winner": false,
       "is_leading": true
     },
     {
-      "name": "Haris Babu Pailippuram",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 723,
-      "percentage": 0.5,
+      "name": "T. P. Shaji",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 56235,
+      "percentage": 42.04,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,26 +38,17 @@
       "name": "Adv. P. Manoj",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 683,
-      "percentage": 0.47,
+      "votes": 12007,
+      "percentage": 8.98,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Muhammad Muhsin",
-      "party": "CPI",
-      "alliance": "LDF",
-      "votes": 636,
-      "percentage": 0.44,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "T. P. Shaji",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 441,
-      "percentage": 0.31,
+      "name": "S.P. Ameer Ali",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 1670,
+      "percentage": 1.25,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +56,17 @@
       "name": "Muhammed Muhsin. M. K Manjerikunnath",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 332,
-      "percentage": 0.23,
+      "votes": 122,
+      "percentage": 0.09,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Haris Babu Pailippuram",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 81,
+      "percentage": 0.06,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "shajimon",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 325,
-      "percentage": 0.23,
+      "votes": 61,
+      "percentage": 0.05,
       "is_winner": false,
       "is_leading": false
     }

@@ -7,30 +7,30 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 170646,
-    "votes_polled": 106956,
-    "votes_counted": 9591,
-    "valid_votes": 110299,
-    "rounds_completed": 2,
-    "total_rounds": 23,
-    "last_updated": "2026-05-01T02:02:10.185014+00:00"
+    "total_electors": 164541,
+    "votes_polled": 127404,
+    "votes_counted": 20260,
+    "valid_votes": 20260,
+    "rounds_completed": 12,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:51.265982+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. Bindhu Krishna",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 4494,
-      "percentage": 4.07,
+      "votes": 54667,
+      "percentage": 48.92,
       "is_winner": false,
       "is_leading": true
     },
     {
-      "name": "Adv. Sinu L R",
-      "party": "AAP",
-      "alliance": "OTH",
-      "votes": 2579,
-      "percentage": 2.34,
+      "name": "S. Jayamohan",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 40275,
+      "percentage": 36.04,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,17 +38,17 @@
       "name": "Dr. N. Prathap Kumar",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 906,
-      "percentage": 0.82,
+      "votes": 15836,
+      "percentage": 14.17,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "S. Jayamohan",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 800,
-      "percentage": 0.73,
+      "name": "Adv. Sinu L R",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 249,
+      "percentage": 0.22,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Mylode Sudhan",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 664,
-      "percentage": 0.6,
+      "votes": 111,
+      "percentage": 0.1,
       "is_winner": false,
       "is_leading": false
     }

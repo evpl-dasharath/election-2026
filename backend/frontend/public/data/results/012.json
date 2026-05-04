@@ -1,0 +1,102 @@
+{
+  "constituency": {
+    "id": 12,
+    "number": 12,
+    "name": "DHARMADOM",
+    "district": "Kannur"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 206000,
+    "votes_polled": 167766,
+    "votes_counted": 23408,
+    "valid_votes": 23408,
+    "rounds_completed": 8,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:22:05.311097+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Pinarayi Vijayan",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 44199,
+      "percentage": 47.2,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Adv. V.P Abdul Rasheed",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 40540,
+      "percentage": 43.29,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. Ranjith",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 8328,
+      "percentage": 8.89,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Vadi Hareendran",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 97,
+      "percentage": 0.1,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Vijayan A.M S/o Kunhiraman",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 69,
+      "percentage": 0.07,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Pinarayi Vijayan",
+      "party": "CPI(M)",
+      "votes": 95522,
+      "percentage": 59.61,
+      "is_winner": true
+    },
+    {
+      "candidate": "C. Raghunathan",
+      "party": "INC",
+      "votes": 45399,
+      "percentage": 28.33,
+      "is_winner": false
+    },
+    {
+      "candidate": "C. K. Padmanabhan",
+      "party": "BJP",
+      "votes": 14623,
+      "percentage": 9.13,
+      "is_winner": false
+    },
+    {
+      "candidate": "Basheer Kannadiparamba",
+      "party": "SDPI",
+      "votes": 2280,
+      "percentage": 1.42,
+      "is_winner": false
+    },
+    {
+      "candidate": "Valayar Bhagyavathi",
+      "party": "IND",
+      "votes": 1753,
+      "percentage": 1.09,
+      "is_winner": false
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "constituency": {
+    "id": 65,
+    "number": 65,
+    "name": "WADAKKANCHERY",
+    "district": "Thrissur"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 201786,
+    "votes_polled": 160762,
+    "votes_counted": 26622,
+    "valid_votes": 26622,
+    "rounds_completed": 16,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:22:52.669574+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Xeviyar Chittilappally",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 68754,
+      "percentage": 43.27,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "P N Vaisakh",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 63301,
+      "percentage": 39.83,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. T.S. Ullas Babu",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 24892,
+      "percentage": 15.66,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Jithin Sadanananthan",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 464,
+      "percentage": 0.29,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Subramanian Penakam",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 354,
+      "percentage": 0.22,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Xavier Chittilappilly",
+      "party": "CPI(M)",
+      "votes": 81026,
+      "percentage": 47.7,
+      "is_winner": true
+    },
+    {
+      "candidate": "Anil Akkara",
+      "party": "INC",
+      "votes": 65858,
+      "percentage": 38.77,
+      "is_winner": false
+    },
+    {
+      "candidate": "T.S Ullas Babu",
+      "party": "BJP",
+      "votes": 21747,
+      "percentage": 12.8,
+      "is_winner": false
+    },
+    {
+      "candidate": "Haji Aboobaker Kundukadan",
+      "party": "IND",
+      "votes": 388,
+      "percentage": 0.23,
+      "is_winner": false
+    }
+  ]
+}

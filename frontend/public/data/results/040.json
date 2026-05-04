@@ -7,38 +7,56 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 258032,
-    "votes_polled": 186980,
-    "votes_counted": 20114,
-    "valid_votes": 191090,
-    "rounds_completed": 2,
-    "total_rounds": 19,
-    "last_updated": "2026-05-01T01:58:45.184584+00:00"
+    "total_electors": 238080,
+    "votes_polled": 194678,
+    "votes_counted": 10088,
+    "valid_votes": 10088,
+    "rounds_completed": 10,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:36:52.042996+00:00"
   },
   "candidates_2026": [
     {
-      "name": "Sreedharan",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 6135,
-      "percentage": 3.21,
+      "name": "P. K. Kunhalikutty",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 57472,
+      "percentage": 67.17,
       "is_winner": false,
       "is_leading": true
+    },
+    {
+      "name": "K. T. Mujeeb",
+      "party": "NCP(SP)",
+      "alliance": "OTH",
+      "votes": 19605,
+      "percentage": 22.91,
+      "is_winner": false,
+      "is_leading": false
     },
     {
       "name": "Ashwathy Gupatha Kumar",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 5259,
-      "percentage": 2.75,
+      "votes": 3809,
+      "percentage": 4.45,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "P. K. Kunhalikutty",
-      "party": "IUML",
-      "alliance": "UDF",
-      "votes": 1995,
+      "name": "Adv. Sadiq Naduthodi",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 2466,
+      "percentage": 2.88,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Aboobacker K.P. (Kundupuzhakkal)",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 887,
       "percentage": 1.04,
       "is_winner": false,
       "is_leading": false
@@ -47,26 +65,8 @@
       "name": "Abdul Gafoor Master O.P.K",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 1993,
-      "percentage": 1.04,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Adv. Sadiq Naduthodi",
-      "party": "SDPI",
-      "alliance": "OTH",
-      "votes": 1364,
-      "percentage": 0.71,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "K. T. Mujeeb",
-      "party": "NCP(SP)",
-      "alliance": "LDF",
-      "votes": 1114,
-      "percentage": 0.58,
+      "votes": 548,
+      "percentage": 0.64,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,17 +74,17 @@
       "name": "Abdulsalam.K.P",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 1086,
-      "percentage": 0.57,
+      "votes": 159,
+      "percentage": 0.19,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Aboobacker K.P. (Kundupuzhakkal)",
-      "party": "AAP",
+      "name": "Sreedharan",
+      "party": "IND",
       "alliance": "OTH",
-      "votes": 891,
-      "percentage": 0.47,
+      "votes": 100,
+      "percentage": 0.12,
       "is_winner": false,
       "is_leading": false
     }

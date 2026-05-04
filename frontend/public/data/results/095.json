@@ -7,48 +7,39 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 164929,
-    "votes_polled": 104544,
-    "votes_counted": 4452,
-    "valid_votes": 106868,
-    "rounds_completed": 1,
-    "total_rounds": 24,
-    "last_updated": "2026-05-01T02:06:46.184521+00:00"
+    "total_electors": 155957,
+    "votes_polled": 119681,
+    "votes_counted": 20008,
+    "valid_votes": 20008,
+    "rounds_completed": 11,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:21.706780+00:00"
   },
   "candidates_2026": [
     {
-      "name": "Pradeep",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 1875,
-      "percentage": 1.75,
+      "name": "K. Binimon",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 44519,
+      "percentage": 41.63,
       "is_winner": false,
       "is_leading": true
-    },
-    {
-      "name": "K. Ajith",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 799,
-      "percentage": 0.75,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Adv. P I Jayakumar",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 454,
-      "percentage": 0.42,
-      "is_winner": false,
-      "is_leading": false
     },
     {
       "name": "P. Pradeep",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 452,
-      "percentage": 0.42,
+      "votes": 44132,
+      "percentage": 41.27,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. Ajith",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 17115,
+      "percentage": 16.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,17 +47,26 @@
       "name": "Sumam P S",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 423,
-      "percentage": 0.4,
+      "votes": 217,
+      "percentage": 0.2,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "K. Binimon",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 292,
-      "percentage": 0.27,
+      "name": "Adv. P I Jayakumar",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 110,
+      "percentage": 0.1,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Pradeep",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 106,
+      "percentage": 0.1,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "T M Bose",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 190,
-      "percentage": 0.18,
+      "votes": 102,
+      "percentage": 0.1,
       "is_winner": false,
       "is_leading": false
     }

@@ -1,0 +1,111 @@
+{
+  "constituency": {
+    "id": 104,
+    "number": 104,
+    "name": "ALAPPUZHA",
+    "district": "Alappuzha"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 191880,
+    "votes_polled": 155979,
+    "votes_counted": 10396,
+    "valid_votes": 10396,
+    "rounds_completed": 10,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:23:33.078851+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "A. D. Thomas",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 51321,
+      "percentage": 49.88,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "P. P. Chitharanjan",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 40809,
+      "percentage": 39.66,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "M.J. Job",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 10035,
+      "percentage": 9.75,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Joseph Chacko",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 101,
+      "percentage": 0.1,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Alleppey Sugunan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 83,
+      "percentage": 0.08,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Jyothi Abraham",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 60,
+      "percentage": 0.06,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "P.P Chitharanjan",
+      "party": "CPI(M)",
+      "votes": 73412,
+      "percentage": 46.33,
+      "is_winner": true
+    },
+    {
+      "candidate": "Dr.K.S Manoj",
+      "party": "INC",
+      "votes": 61768,
+      "percentage": 38.98,
+      "is_winner": false
+    },
+    {
+      "candidate": "Sandeep Vachaspati",
+      "party": "BJP",
+      "votes": 21650,
+      "percentage": 13.66,
+      "is_winner": false
+    },
+    {
+      "candidate": "Subeendran K.C",
+      "party": "BSP",
+      "votes": 207,
+      "percentage": 0.13,
+      "is_winner": false
+    },
+    {
+      "candidate": "K.A Vinod",
+      "party": "SUCI",
+      "votes": 205,
+      "percentage": 0.13,
+      "is_winner": false
+    }
+  ]
+}

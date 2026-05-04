@@ -1,0 +1,102 @@
+{
+  "constituency": {
+    "id": 118,
+    "number": 118,
+    "name": "KUNNATHUR",
+    "district": "Kollam"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 205694,
+    "votes_polled": 160050,
+    "votes_counted": 17305,
+    "valid_votes": 17305,
+    "rounds_completed": 11,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:23:43.972996+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Ullas Kovoor",
+      "party": "RSP",
+      "alliance": "UDF",
+      "votes": 56258,
+      "percentage": 50.2,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Kovoor Kunjumon",
+      "party": "RSP(L)",
+      "alliance": "OTH",
+      "votes": 38011,
+      "percentage": 33.92,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Raji Prasad",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 16758,
+      "percentage": 14.95,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Manthara Velayudhan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 264,
+      "percentage": 0.24,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sasidharan",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 225,
+      "percentage": 0.2,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "KOVOOR KUNJUMON",
+      "party": "IND",
+      "votes": 69531,
+      "percentage": 43.18,
+      "is_winner": true
+    },
+    {
+      "candidate": "ULLAS KOVOOR",
+      "party": "RSP",
+      "votes": 66522,
+      "percentage": 41.31,
+      "is_winner": false
+    },
+    {
+      "candidate": "RAJIPRASAD",
+      "party": "BJP",
+      "votes": 21847,
+      "percentage": 13.57,
+      "is_winner": false
+    },
+    {
+      "candidate": "R.S. ANJU",
+      "party": "BSP",
+      "votes": 947,
+      "percentage": 0.59,
+      "is_winner": false
+    },
+    {
+      "candidate": "MANTHARA VELAYUDHAN",
+      "party": "IND",
+      "votes": 621,
+      "percentage": 0.39,
+      "is_winner": false
+    }
+  ]
+}

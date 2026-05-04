@@ -1,0 +1,111 @@
+{
+  "constituency": {
+    "id": 14,
+    "number": 15,
+    "name": "MATTANUR",
+    "district": "Kannur"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 201719,
+    "votes_polled": 165893,
+    "votes_counted": 11948,
+    "valid_votes": 11948,
+    "rounds_completed": 10,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:22:15.486446+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "V. K. Sanoj",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 54941,
+      "percentage": 46.75,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Chandran Thillankeri",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 48449,
+      "percentage": 41.23,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Biju Elakkuzhi",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 11749,
+      "percentage": 10.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Basheer Punnad",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 1612,
+      "percentage": 1.37,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sanoj",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 138,
+      "percentage": 0.12,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Chandran Thengalath",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 109,
+      "percentage": 0.09,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "K.P. MOHANAN",
+      "party": "LJD",
+      "votes": 70626,
+      "percentage": 45.36,
+      "is_winner": true
+    },
+    {
+      "candidate": "POTTANKANDI ABDULLA",
+      "party": "IUML",
+      "votes": 61085,
+      "percentage": 39.23,
+      "is_winner": false
+    },
+    {
+      "candidate": "C. SADANANDAN MASTER",
+      "party": "BJP",
+      "votes": 21212,
+      "percentage": 13.62,
+      "is_winner": false
+    },
+    {
+      "candidate": "MOHANAN KUNHIPARAMBATH MEETHAL",
+      "party": "IND",
+      "votes": 1360,
+      "percentage": 0.87,
+      "is_winner": false
+    },
+    {
+      "candidate": "MOHANAN K.P. KAITHAVECHA PARAMBATH",
+      "party": "IND",
+      "votes": 543,
+      "percentage": 0.35,
+      "is_winner": false
+    }
+  ]
+}

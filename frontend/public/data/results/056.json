@@ -7,39 +7,48 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 224942,
-    "votes_polled": 148080,
-    "votes_counted": 6376,
-    "valid_votes": 153039,
-    "rounds_completed": 1,
-    "total_rounds": 24,
-    "last_updated": "2026-05-01T02:06:16.185011+00:00"
+    "total_electors": 176224,
+    "votes_polled": 143781,
+    "votes_counted": 14173,
+    "valid_votes": 14173,
+    "rounds_completed": 8,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:37.427970+00:00"
   },
   "candidates_2026": [
-    {
-      "name": "Udayan Sukumaran",
-      "party": "AAP",
-      "alliance": "OTH",
-      "votes": 2403,
-      "percentage": 1.57,
-      "is_winner": false,
-      "is_leading": true
-    },
     {
       "name": "Ramesh Pisharody",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 763,
-      "percentage": 0.5,
+      "votes": 49321,
+      "percentage": 44.31,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Sobha Surendran",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 38504,
+      "percentage": 34.59,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Shamsudheen B",
-      "party": "IND",
+      "name": "N. M. R. Razaq",
+      "party": "IND_LDF",
+      "alliance": "LDF",
+      "votes": 22177,
+      "percentage": 19.92,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Udayan Sukumaran",
+      "party": "AAP",
       "alliance": "OTH",
-      "votes": 731,
-      "percentage": 0.48,
+      "votes": 226,
+      "percentage": 0.2,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,26 +56,17 @@
       "name": "Krishnankutty K",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 708,
-      "percentage": 0.46,
+      "votes": 224,
+      "percentage": 0.2,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "N. M. R. Razaq",
-      "party": "IND (CPI(M))",
-      "alliance": "LDF",
-      "votes": 696,
-      "percentage": 0.45,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Sobha Surendran",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 557,
-      "percentage": 0.36,
+      "name": "Shamsudheen B",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 135,
+      "percentage": 0.12,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "Reghu M",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 407,
-      "percentage": 0.27,
+      "votes": 114,
+      "percentage": 0.1,
       "is_winner": false,
       "is_leading": false
     }

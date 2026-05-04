@@ -1,0 +1,590 @@
+[
+  {
+    "code": "CMA",
+    "name": "Communist Marxist Party (Aravindakshan)",
+    "alliance": "LDF",
+    "color_code": "#6A1B9A"
+  },
+  {
+    "code": "CON_S",
+    "name": "Congress (Secular)",
+    "alliance": "LDF",
+    "color_code": "#87CEEB"
+  },
+  {
+    "code": "CPI",
+    "name": "Communist Party of India",
+    "alliance": "LDF",
+    "color_code": "#FF4444"
+  },
+  {
+    "code": "CPI_M",
+    "name": "Communist Party of India (Marxist)",
+    "alliance": "LDF",
+    "color_code": "#ED1E26"
+  },
+  {
+    "code": "IND_LDF",
+    "name": "Independent (LDF)",
+    "alliance": "LDF",
+    "color_code": "#CC2222"
+  },
+  {
+    "code": "INL",
+    "name": "Indian National League",
+    "alliance": "LDF",
+    "color_code": "#2E8B57"
+  },
+  {
+    "code": "ISJD",
+    "name": "Indian Socialist Janata Dal",
+    "alliance": "LDF",
+    "color_code": "#006400"
+  },
+  {
+    "code": "JD_S",
+    "name": "Janata Dal (Secular)",
+    "alliance": "LDF",
+    "color_code": "#006400"
+  },
+  {
+    "code": "JKC",
+    "name": "Janadhipathya Kerala Congress",
+    "alliance": "LDF",
+    "color_code": "#B8860B"
+  },
+  {
+    "code": "KC_AMG",
+    "name": "Kerala Congress (Anti-merger Group)",
+    "alliance": "LDF",
+    "color_code": "#8B6914"
+  },
+  {
+    "code": "KC_B",
+    "name": "Kerala Congress (B)",
+    "alliance": "LDF",
+    "color_code": "#A0522D"
+  },
+  {
+    "code": "KC_KST",
+    "name": "Kerala Congress (Skaria Thomas)",
+    "alliance": "LDF",
+    "color_code": "#8B6508"
+  },
+  {
+    "code": "KC_M",
+    "name": "Kerala Congress (M)",
+    "alliance": "LDF",
+    "color_code": "#8B4513"
+  },
+  {
+    "code": "LJD",
+    "name": "Loktantrik Janata Dal",
+    "alliance": "LDF",
+    "color_code": "#5C6BC0"
+  },
+  {
+    "code": "NCP",
+    "name": "Nationalist Congress Party",
+    "alliance": "LDF",
+    "color_code": "#00BFFF"
+  },
+  {
+    "code": "NSC",
+    "name": "National Secular Conference",
+    "alliance": "LDF",
+    "color_code": "#2E7D32"
+  },
+  {
+    "code": "RJD",
+    "name": "Rashtriya Janata Dal",
+    "alliance": "LDF",
+    "color_code": "#336699"
+  },
+  {
+    "code": "RSP_L",
+    "name": "Revolutionary Socialist Party (Leninist)",
+    "alliance": "LDF",
+    "color_code": "#B22222"
+  },
+  {
+    "code": "AIADMK",
+    "name": "All India Anna Dravida Munnetra Kazhagam",
+    "alliance": "NDA",
+    "color_code": "#D4AC0D"
+  },
+  {
+    "code": "BDJS",
+    "name": "Bharath Dharma Jana Sena",
+    "alliance": "NDA",
+    "color_code": "#FFD700"
+  },
+  {
+    "code": "BJP",
+    "name": "Bharatiya Janata Party",
+    "alliance": "NDA",
+    "color_code": "#FF9933"
+  },
+  {
+    "code": "IND_NDA",
+    "name": "Independent (NDA)",
+    "alliance": "NDA",
+    "color_code": "#D97706"
+  },
+  {
+    "code": "JD_U",
+    "name": "Janata Dal (United)",
+    "alliance": "NDA",
+    "color_code": "#1A6B1A"
+  },
+  {
+    "code": "JRS",
+    "name": "Janadhipathya Rashtriya Sabha",
+    "alliance": "NDA",
+    "color_code": "#37474F"
+  },
+  {
+    "code": "JSS_T",
+    "name": "Janathipathiya Samrakshana Samithy (Thamarakshan)",
+    "alliance": "NDA",
+    "color_code": "#8D6E63"
+  },
+  {
+    "code": "KC_T",
+    "name": "Kerala Congress (Thomas)",
+    "alliance": "NDA",
+    "color_code": "#CD853F"
+  },
+  {
+    "code": "KKC",
+    "name": "Kerala Kamaraj Congress",
+    "alliance": "NDA",
+    "color_code": "#CD853F"
+  },
+  {
+    "code": "TTP",
+    "name": "Twenty20 Party",
+    "alliance": "NDA",
+    "color_code": "#FF4500"
+  },
+  {
+    "code": "AAP",
+    "name": "Aam Aadmi Party",
+    "alliance": "OTH",
+    "color_code": "#0066CC"
+  },
+  {
+    "code": "ABHM",
+    "name": "ABHM",
+    "alliance": "OTH",
+    "color_code": "#4527A0"
+  },
+  {
+    "code": "ADHRMPI",
+    "name": "ADHRMPI",
+    "alliance": "OTH",
+    "color_code": "#558B2F"
+  },
+  {
+    "code": "AIHCP",
+    "name": "AIHCP",
+    "alliance": "OTH",
+    "color_code": "#808080"
+  },
+  {
+    "code": "AKTP",
+    "name": "AKTP",
+    "alliance": "OTH",
+    "color_code": "#37474F"
+  },
+  {
+    "code": "Anna DHRM",
+    "name": "Anna DHRM",
+    "alliance": "OTH",
+    "color_code": "#808080"
+  },
+  {
+    "code": "API",
+    "name": "API",
+    "alliance": "OTH",
+    "color_code": "#808080"
+  },
+  {
+    "code": "APOI",
+    "name": "APOI",
+    "alliance": "OTH",
+    "color_code": "#37474F"
+  },
+  {
+    "code": "BDP",
+    "name": "BDP",
+    "alliance": "OTH",
+    "color_code": "#808080"
+  },
+  {
+    "code": "BHUDRP",
+    "name": "BHUDRP",
+    "alliance": "OTH",
+    "color_code": "#827717"
+  },
+  {
+    "code": "BJKP",
+    "name": "BJKP",
+    "alliance": "OTH",
+    "color_code": "#808080"
+  },
+  {
+    "code": "BSP",
+    "name": "Bahujan Samaj Party",
+    "alliance": "OTH",
+    "color_code": "#1565C0"
+  },
+  {
+    "code": "CPI_ML_L",
+    "name": "CPI(ML) Liberation",
+    "alliance": "OTH",
+    "color_code": "#CC0000"
+  },
+  {
+    "code": "CPI_ML_RS",
+    "name": "CPI(ML) Red Star",
+    "alliance": "OTH",
+    "color_code": "#D50000"
+  },
+  {
+    "code": "DHRMP",
+    "name": "DHRMP",
+    "alliance": "OTH",
+    "color_code": "#37474F"
+  },
+  {
+    "code": "DIC",
+    "name": "DIC",
+    "alliance": "OTH",
+    "color_code": "#808080"
+  },
+  {
+    "code": "DPSP",
+    "name": "DPSP",
+    "alliance": "OTH",
+    "color_code": "#37474F"
+  },
+  {
+    "code": "DSJP",
+    "name": "Democratic Social Justice Party",
+    "alliance": "OTH",
+    "color_code": "#1B5E20"
+  },
+  {
+    "code": "EPI",
+    "name": "EPI",
+    "alliance": "OTH",
+    "color_code": "#808080"
+  },
+  {
+    "code": "ICSP",
+    "name": "ICSP",
+    "alliance": "OTH",
+    "color_code": "#37474F"
+  },
+  {
+    "code": "IGP",
+    "name": "Indian Gandhiyan Party",
+    "alliance": "OTH",
+    "color_code": "#37474F"
+  },
+  {
+    "code": "IND",
+    "name": "Independent",
+    "alliance": "OTH",
+    "color_code": "#6B7280"
+  },
+  {
+    "code": "JRP",
+    "name": "JRP",
+    "alliance": "OTH",
+    "color_code": "#808080"
+  },
+  {
+    "code": "KCS",
+    "name": "Kerala Congress Secular",
+    "alliance": "OTH",
+    "color_code": "#8B6508"
+  },
+  {
+    "code": "KJ",
+    "name": "KJ",
+    "alliance": "OTH",
+    "color_code": "#37474F"
+  },
+  {
+    "code": "KJP_S",
+    "name": "Kerala Janapaksham (Secular)",
+    "alliance": "OTH",
+    "color_code": "#37474F"
+  },
+  {
+    "code": "KJPS",
+    "name": "KJPS",
+    "alliance": "OTH",
+    "color_code": "#37474F"
+  },
+  {
+    "code": "KLJP",
+    "name": "KLJP",
+    "alliance": "OTH",
+    "color_code": "#1A237E"
+  },
+  {
+    "code": "LJP",
+    "name": "LJP",
+    "alliance": "OTH",
+    "color_code": "#37474F"
+  },
+  {
+    "code": "MCPI",
+    "name": "Marxist Communist Party of India",
+    "alliance": "OTH",
+    "color_code": "#880E4F"
+  },
+  {
+    "code": "NALAP",
+    "name": "NALAP",
+    "alliance": "OTH",
+    "color_code": "#37474F"
+  },
+  {
+    "code": "NCP(SP)",
+    "name": "NCP(SP)",
+    "alliance": "OTH",
+    "color_code": "#808080"
+  },
+  {
+    "code": "NOTA",
+    "name": "None of the Above",
+    "alliance": "OTH",
+    "color_code": "#9CA3AF"
+  },
+  {
+    "code": "NWLBRP",
+    "name": "NWLBRP",
+    "alliance": "OTH",
+    "color_code": "#37474F"
+  },
+  {
+    "code": "PDP",
+    "name": "Peoples Democratic Party",
+    "alliance": "OTH",
+    "color_code": "#795548"
+  },
+  {
+    "code": "PPGP",
+    "name": "PPGP",
+    "alliance": "OTH",
+    "color_code": "#37474F"
+  },
+  {
+    "code": "RJP",
+    "name": "RJP",
+    "alliance": "OTH",
+    "color_code": "#808080"
+  },
+  {
+    "code": "RPI (A)",
+    "name": "RPI (A)",
+    "alliance": "OTH",
+    "color_code": "#808080"
+  },
+  {
+    "code": "RPI_A",
+    "name": "Republican Party of India (Athawale)",
+    "alliance": "OTH",
+    "color_code": "#0288D1"
+  },
+  {
+    "code": "RSP(L)",
+    "name": "RSP(L)",
+    "alliance": "OTH",
+    "color_code": "#808080"
+  },
+  {
+    "code": "SDC",
+    "name": "SDC",
+    "alliance": "OTH",
+    "color_code": "#37474F"
+  },
+  {
+    "code": "SDP",
+    "name": "SDP",
+    "alliance": "OTH",
+    "color_code": "#37474F"
+  },
+  {
+    "code": "SDPI",
+    "name": "Social Democratic Party of India",
+    "alliance": "OTH",
+    "color_code": "#1B5E20"
+  },
+  {
+    "code": "SHS",
+    "name": "Shiv Sena",
+    "alliance": "OTH",
+    "color_code": "#F57F17"
+  },
+  {
+    "code": "SLAP",
+    "name": "SLAP",
+    "alliance": "OTH",
+    "color_code": "#37474F"
+  },
+  {
+    "code": "SMFB",
+    "name": "SMFB",
+    "alliance": "OTH",
+    "color_code": "#37474F"
+  },
+  {
+    "code": "SP",
+    "name": "Samajwadi Party",
+    "alliance": "OTH",
+    "color_code": "#E53935"
+  },
+  {
+    "code": "SP (I)",
+    "name": "SP (I)",
+    "alliance": "OTH",
+    "color_code": "#808080"
+  },
+  {
+    "code": "SRP",
+    "name": "SRP",
+    "alliance": "OTH",
+    "color_code": "#808080"
+  },
+  {
+    "code": "SUCI",
+    "name": "Socialist Unity Centre of India",
+    "alliance": "OTH",
+    "color_code": "#B71C1C"
+  },
+  {
+    "code": "SWARAJ",
+    "name": "SWARAJ",
+    "alliance": "OTH",
+    "color_code": "#37474F"
+  },
+  {
+    "code": "SWJP",
+    "name": "SWJP",
+    "alliance": "OTH",
+    "color_code": "#37474F"
+  },
+  {
+    "code": "TFIP",
+    "name": "TFIP",
+    "alliance": "OTH",
+    "color_code": "#808080"
+  },
+  {
+    "code": "UIPP",
+    "name": "UIPP",
+    "alliance": "OTH",
+    "color_code": "#808080"
+  },
+  {
+    "code": "WPOI",
+    "name": "Welfare Party of India",
+    "alliance": "OTH",
+    "color_code": "#4A148C"
+  },
+  {
+    "code": "AIFB",
+    "name": "All India Forward Bloc",
+    "alliance": "UDF",
+    "color_code": "#CC0000"
+  },
+  {
+    "code": "AITC",
+    "name": "All India Trinamool Congress",
+    "alliance": "UDF",
+    "color_code": "#1B8A00"
+  },
+  {
+    "code": "CMP",
+    "name": "Communist Marxist Party",
+    "alliance": "UDF",
+    "color_code": "#6495ED"
+  },
+  {
+    "code": "INC",
+    "name": "Indian National Congress",
+    "alliance": "UDF",
+    "color_code": "#19AAED"
+  },
+  {
+    "code": "IND_UDF",
+    "name": "Independent (UDF)",
+    "alliance": "UDF",
+    "color_code": "#1277C0"
+  },
+  {
+    "code": "IUML",
+    "name": "Indian Union Muslim League",
+    "alliance": "UDF",
+    "color_code": "#0F8A3C"
+  },
+  {
+    "code": "JSS",
+    "name": "Janathipathiya Samrakshana Samithy",
+    "alliance": "UDF",
+    "color_code": "#8D6E63"
+  },
+  {
+    "code": "KC_J",
+    "name": "Kerala Congress (Jacob)",
+    "alliance": "UDF",
+    "color_code": "#5F9EA0"
+  },
+  {
+    "code": "KDP",
+    "name": "Kerala Democratic Party",
+    "alliance": "UDF",
+    "color_code": "#4682B4"
+  },
+  {
+    "code": "KEC",
+    "name": "Kerala Congress (P.J. Joseph)",
+    "alliance": "UDF",
+    "color_code": "#1E90FF"
+  },
+  {
+    "code": "NCK",
+    "name": "Nationalist Congress Kerala",
+    "alliance": "UDF",
+    "color_code": "#4682B4"
+  },
+  {
+    "code": "RMPI",
+    "name": "Revolutionary Marxist Party of India",
+    "alliance": "UDF",
+    "color_code": "#DC143C"
+  },
+  {
+    "code": "RSP",
+    "name": "Revolutionary Socialist Party",
+    "alliance": "UDF",
+    "color_code": "#FF6347"
+  },
+  {
+    "code": "RSP_BJ",
+    "name": "Revolutionary Socialist Party (Baby John)",
+    "alliance": "UDF",
+    "color_code": "#FF6347"
+  },
+  {
+    "code": "SJD",
+    "name": "Socialist Janata (Democratic) Party",
+    "alliance": "UDF",
+    "color_code": "#424242"
+  }
+]

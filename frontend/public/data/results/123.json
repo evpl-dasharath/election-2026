@@ -5,23 +5,32 @@
     "name": "KUNDARA",
     "district": "Kollam"
   },
-  "live_result": null,
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 206464,
+    "votes_polled": 161537,
+    "votes_counted": 9708,
+    "valid_votes": 9708,
+    "rounds_completed": 11,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:38.121693+00:00"
+  },
   "candidates_2026": [
     {
       "name": "P. C. Vishnunadh",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 57588,
+      "percentage": 53.54,
       "is_winner": false,
-      "is_leading": false
+      "is_leading": true
     },
     {
       "name": "S. L. Sajikumar",
-      "party": "CPI(M)",
+      "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 35670,
+      "percentage": 33.16,
       "is_winner": false,
       "is_leading": false
     },
@@ -29,8 +38,8 @@
       "name": "Robin Radhakrishnan (Robin RB)",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 12958,
+      "percentage": 12.05,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,17 +47,8 @@
       "name": "Lathika C",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Rahul R",
-      "party": "SUCI",
-      "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 365,
+      "percentage": 0.34,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,17 @@
       "name": "Riyas M",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 330,
+      "percentage": 0.31,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Rahul R",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 199,
+      "percentage": 0.19,
       "is_winner": false,
       "is_leading": false
     }

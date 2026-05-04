@@ -2,35 +2,35 @@
   "constituency": {
     "id": 72,
     "number": 72,
-    "name": "CHALAKKUDY",
+    "name": "CHALAKUDY",
     "district": "Thrissur"
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 189571,
-    "votes_polled": 140630,
-    "votes_counted": 12535,
-    "valid_votes": 144153,
-    "rounds_completed": 2,
-    "total_rounds": 23,
-    "last_updated": "2026-05-01T02:01:29.184610+00:00"
+    "total_electors": 179208,
+    "votes_polled": 135391,
+    "votes_counted": 8577,
+    "valid_votes": 8577,
+    "rounds_completed": 11,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:08.224324+00:00"
   },
   "candidates_2026": [
     {
-      "name": "M S Asokan Mangalappilly",
-      "party": "BSP",
-      "alliance": "OTH",
-      "votes": 3565,
-      "percentage": 2.47,
+      "name": "T. J. Saneesh Kumar Joseph",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 48542,
+      "percentage": 50.09,
       "is_winner": false,
       "is_leading": true
     },
     {
       "name": "Adv Biju Chirayath",
-      "party": "KC(M)",
+      "party": "KC_M",
       "alliance": "LDF",
-      "votes": 3441,
-      "percentage": 2.39,
+      "votes": 34775,
+      "percentage": 35.89,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,35 +38,17 @@
       "name": "Adv. Charlypaul",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 1517,
-      "percentage": 1.05,
+      "votes": 11742,
+      "percentage": 12.12,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "T. J. Saneesh Kumar Joseph",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 1393,
-      "percentage": 0.97,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Arun Edathadan",
-      "party": "IND",
+      "name": "M S Asokan Mangalappilly",
+      "party": "BSP",
       "alliance": "OTH",
-      "votes": 1340,
-      "percentage": 0.93,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "A D Biju",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 1331,
-      "percentage": 0.92,
+      "votes": 476,
+      "percentage": 0.49,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +56,26 @@
       "name": "Wilson Kallen",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 463,
-      "percentage": 0.32,
+      "votes": 354,
+      "percentage": 0.37,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Arun Edathadan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 227,
+      "percentage": 0.23,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "A D Biju",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 158,
+      "percentage": 0.16,
       "is_winner": false,
       "is_leading": false
     }
@@ -90,7 +90,7 @@
     },
     {
       "candidate": "DENNIES K ANTONY",
-      "party": "KC(M)",
+      "party": "KEC(M)",
       "votes": 60831,
       "percentage": 42.49,
       "is_winner": false

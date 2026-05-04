@@ -7,48 +7,39 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 217595,
-    "votes_polled": 149718,
-    "votes_counted": 6748,
-    "valid_votes": 155225,
-    "rounds_completed": 1,
-    "total_rounds": 23,
-    "last_updated": "2026-05-01T02:03:36.185294+00:00"
+    "total_electors": 149573,
+    "votes_polled": 111745,
+    "votes_counted": 17402,
+    "valid_votes": 17402,
+    "rounds_completed": 10,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:23.662877+00:00"
   },
   "candidates_2026": [
-    {
-      "name": "P. Anilkumar",
-      "party": "BDJS",
-      "alliance": "NDA",
-      "votes": 2388,
-      "percentage": 1.54,
-      "is_winner": false,
-      "is_leading": true
-    },
     {
       "name": "Thiruvanchoor Radhakrishnan",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 1653,
-      "percentage": 1.06,
+      "votes": 49268,
+      "percentage": 61.14,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Adv. K. Anilkumar",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 22924,
+      "percentage": 28.45,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Ralesh Chandran",
-      "party": "SUCI",
-      "alliance": "OTH",
-      "votes": 836,
-      "percentage": 0.54,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Shaiju Kurian",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 733,
-      "percentage": 0.47,
+      "name": "P. Anilkumar",
+      "party": "BDJS",
+      "alliance": "NDA",
+      "votes": 6746,
+      "percentage": 8.37,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,17 +47,26 @@
       "name": "Dr. Selin Philip",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 565,
-      "percentage": 0.36,
+      "votes": 912,
+      "percentage": 1.13,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Adv. K. Anilkumar",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 541,
-      "percentage": 0.35,
+      "name": "Ralesh Chandran",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 110,
+      "percentage": 0.14,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Shaiju Kurian",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 98,
+      "percentage": 0.12,
       "is_winner": false,
       "is_leading": false
     }

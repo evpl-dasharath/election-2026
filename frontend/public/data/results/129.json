@@ -7,39 +7,48 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 194664,
-    "votes_polled": 141727,
-    "votes_counted": 6017,
-    "valid_votes": 144411,
-    "rounds_completed": 1,
-    "total_rounds": 24,
-    "last_updated": "2026-05-01T02:06:24.201255+00:00"
+    "total_electors": 195296,
+    "votes_polled": 144772,
+    "votes_counted": 17965,
+    "valid_votes": 17965,
+    "rounds_completed": 10,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:41.438371+00:00"
   },
   "candidates_2026": [
     {
-      "name": "B. S. Anoop",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 1764,
-      "percentage": 1.22,
+      "name": "Manoj B Edamana",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 35552,
+      "percentage": 37.57,
       "is_winner": false,
       "is_leading": true
-    },
-    {
-      "name": "Anoop Alappuramkunnu",
-      "party": "Anna DHRM",
-      "alliance": "OTH",
-      "votes": 1729,
-      "percentage": 1.2,
-      "is_winner": false,
-      "is_leading": false
     },
     {
       "name": "Ramya Haridas",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 1044,
-      "percentage": 0.72,
+      "votes": 33529,
+      "percentage": 35.44,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "B. S. Anoop",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 23903,
+      "percentage": 25.26,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Anoop Alappuramkunnu",
+      "party": "Anna DHRM",
+      "alliance": "OTH",
+      "votes": 485,
+      "percentage": 0.51,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,17 +56,8 @@
       "name": "Ramasamy Sasi",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 790,
-      "percentage": 0.55,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Manoj B Edamana",
-      "party": "CPI",
-      "alliance": "LDF",
-      "votes": 714,
-      "percentage": 0.49,
+      "votes": 484,
+      "percentage": 0.51,
       "is_winner": false,
       "is_leading": false
     }

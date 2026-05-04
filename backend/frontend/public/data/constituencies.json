@@ -1,0 +1,3222 @@
+[
+  {
+    "id": 1,
+    "number": 1,
+    "name": "MANJESHWARAM",
+    "district": "Kasaragod",
+    "region": "north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "A. K. M. Ashraf",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 52298,
+      "percentage": 56.16
+    },
+    "runner_up": {
+      "name": "K. Surendran",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 31595,
+      "percentage": 33.93
+    }
+  },
+  {
+    "id": 2,
+    "number": 2,
+    "name": "KASARAGOD",
+    "district": "Kasaragod",
+    "region": "north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Kallatra Mahin Haji",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 57712,
+      "percentage": 44.02
+    },
+    "runner_up": {
+      "name": "Ashwini M.L.",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 43263,
+      "percentage": 33.0
+    }
+  },
+  {
+    "id": 3,
+    "number": 3,
+    "name": "UDMA",
+    "district": "Kasaragod",
+    "region": "north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Neelakantan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 48227,
+      "percentage": 46.9
+    },
+    "runner_up": {
+      "name": "C. H. Kunhambu",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 37439,
+      "percentage": 36.41
+    }
+  },
+  {
+    "id": 4,
+    "number": 4,
+    "name": "KANHANGAD",
+    "district": "Kasaragod",
+    "region": "north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Govindan Pallikkappil",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 66686,
+      "percentage": 44.55
+    },
+    "runner_up": {
+      "name": "Shyji Ottapalli",
+      "party": "KEC",
+      "alliance": "UDF",
+      "votes": 55439,
+      "percentage": 37.04
+    }
+  },
+  {
+    "id": 5,
+    "number": 5,
+    "name": "THRIKARIPUR",
+    "district": "Kasaragod",
+    "region": "north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Sandeep Varier",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 36103,
+      "percentage": 48.5
+    },
+    "runner_up": {
+      "name": "V. P. P. Mustafa",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 33833,
+      "percentage": 45.45
+    }
+  },
+  {
+    "id": 6,
+    "number": 6,
+    "name": "PAYYANUR",
+    "district": "Kannur",
+    "region": "north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "V. Kunjikrishnan",
+      "party": "IND_UDF",
+      "alliance": "UDF",
+      "votes": 65805,
+      "percentage": 48.6
+    },
+    "runner_up": {
+      "name": "T. I. Madhusoodanan",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 61054,
+      "percentage": 45.09
+    }
+  },
+  {
+    "id": 7,
+    "number": 7,
+    "name": "KALLIASSERI",
+    "district": "Kannur",
+    "region": "north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "M. Vijin",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 67847,
+      "percentage": 49.48
+    },
+    "runner_up": {
+      "name": "Adv. Rajeevan Kappacheri",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 57027,
+      "percentage": 41.59
+    }
+  },
+  {
+    "id": 8,
+    "number": 8,
+    "name": "TALIPARAMBA",
+    "district": "Kannur",
+    "region": "north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "T K Govindan Master",
+      "party": "IND_UDF",
+      "alliance": "UDF",
+      "votes": 41521,
+      "percentage": 52.82
+    },
+    "runner_up": {
+      "name": "P. K. Shyamala",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 28659,
+      "percentage": 36.46
+    }
+  },
+  {
+    "id": 9,
+    "number": 9,
+    "name": "IRIKKUR",
+    "district": "Kannur",
+    "region": "north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. Sajeev Joseph",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 50788,
+      "percentage": 58.13
+    },
+    "runner_up": {
+      "name": "Adv. Mathew Kunnappally",
+      "party": "KC_M",
+      "alliance": "LDF",
+      "votes": 29217,
+      "percentage": 33.44
+    }
+  },
+  {
+    "id": 10,
+    "number": 10,
+    "name": "AZHIKODE",
+    "district": "Kannur",
+    "region": "north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "K. V. Sumesh",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 47464,
+      "percentage": 46.66
+    },
+    "runner_up": {
+      "name": "Adv.  Kareem Cheleri",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 42744,
+      "percentage": 42.02
+    }
+  },
+  {
+    "id": 11,
+    "number": 11,
+    "name": "KANNUR",
+    "district": "Kannur",
+    "region": "north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. T. O. Mohanan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 49328,
+      "percentage": 50.47
+    },
+    "runner_up": {
+      "name": "Kadannappalli Ramachandran",
+      "party": "CON_S",
+      "alliance": "LDF",
+      "votes": 36054,
+      "percentage": 36.89
+    }
+  },
+  {
+    "id": 12,
+    "number": 12,
+    "name": "DHARMADOM",
+    "district": "Kannur",
+    "region": "north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Pinarayi Vijayan",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 44199,
+      "percentage": 47.2
+    },
+    "runner_up": {
+      "name": "Adv. V.P Abdul Rasheed",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 40540,
+      "percentage": 43.29
+    }
+  },
+  {
+    "id": 13,
+    "number": 13,
+    "name": "THALASSERY",
+    "district": "Kannur",
+    "region": "north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Karayi Rajan",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 44013,
+      "percentage": 47.37
+    },
+    "runner_up": {
+      "name": "K. P. Saju",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 29776,
+      "percentage": 32.04
+    }
+  },
+  {
+    "id": 15,
+    "number": 14,
+    "name": "KUTHUPARAMBA",
+    "district": "Kannur",
+    "region": "north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "P. K. Praveen",
+      "party": "RJD",
+      "alliance": "LDF",
+      "votes": 44774,
+      "percentage": 47.14
+    },
+    "runner_up": {
+      "name": "Jayanthi Rajan",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 35441,
+      "percentage": 37.32
+    }
+  },
+  {
+    "id": 14,
+    "number": 15,
+    "name": "MATTANUR",
+    "district": "Kannur",
+    "region": "north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "V. K. Sanoj",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 54941,
+      "percentage": 46.75
+    },
+    "runner_up": {
+      "name": "Chandran Thillankeri",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 48449,
+      "percentage": 41.23
+    }
+  },
+  {
+    "id": 16,
+    "number": 16,
+    "name": "PERAVOOR",
+    "district": "Kannur",
+    "region": "north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. Sunny Joseph",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 33035,
+      "percentage": 50.02
+    },
+    "runner_up": {
+      "name": "K. K. Shailaja",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 28447,
+      "percentage": 43.07
+    }
+  },
+  {
+    "id": 17,
+    "number": 17,
+    "name": "MANANTHAVADY",
+    "district": "Wayanad",
+    "region": "north",
+    "reserved": "Scheduled Tribe",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Usha M A",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 41977,
+      "percentage": 44.13
+    },
+    "runner_up": {
+      "name": "O. R. Kelu",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 40905,
+      "percentage": 43.0
+    }
+  },
+  {
+    "id": 18,
+    "number": 18,
+    "name": "SULTHAN BATHERY",
+    "district": "Wayanad",
+    "region": "north",
+    "reserved": "Scheduled Tribe",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "I. C. Balakrishnan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 50633,
+      "percentage": 44.7
+    },
+    "runner_up": {
+      "name": "M. S. Viswanathan",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 38903,
+      "percentage": 34.34
+    }
+  },
+  {
+    "id": 19,
+    "number": 19,
+    "name": "KALPETTA",
+    "district": "Wayanad",
+    "region": "north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "T. Siddique",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 83238,
+      "percentage": 56.05
+    },
+    "runner_up": {
+      "name": "P. K. Anil Kumar",
+      "party": "RJD",
+      "alliance": "LDF",
+      "votes": 44769,
+      "percentage": 30.15
+    }
+  },
+  {
+    "id": 20,
+    "number": 20,
+    "name": "VADAKARA",
+    "district": "Kozhikode",
+    "region": "north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "K. K. Rema",
+      "party": "RMPI",
+      "alliance": "UDF",
+      "votes": 61527,
+      "percentage": 49.04
+    },
+    "runner_up": {
+      "name": "M. K. Bhaskaran",
+      "party": "RJD",
+      "alliance": "LDF",
+      "votes": 48548,
+      "percentage": 38.69
+    }
+  },
+  {
+    "id": 21,
+    "number": 21,
+    "name": "KUTTIADY",
+    "district": "Kozhikode",
+    "region": "north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Parakkal Abdulla",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 53090,
+      "percentage": 49.4
+    },
+    "runner_up": {
+      "name": "K. P. Kunhammad Kutti Master",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 45997,
+      "percentage": 42.8
+    }
+  },
+  {
+    "id": 22,
+    "number": 22,
+    "name": "NADAPURAM",
+    "district": "Kozhikode",
+    "region": "north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "K. M. Abhijith",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 43876,
+      "percentage": 52.28
+    },
+    "runner_up": {
+      "name": "Adv. P. Vasantham",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 34891,
+      "percentage": 41.58
+    }
+  },
+  {
+    "id": 23,
+    "number": 23,
+    "name": "KOYILANDY",
+    "district": "Kozhikode",
+    "region": "north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "K. Praveen Kumar",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 35897,
+      "percentage": 48.86
+    },
+    "runner_up": {
+      "name": "K. Dasan",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 29135,
+      "percentage": 39.66
+    }
+  },
+  {
+    "id": 24,
+    "number": 24,
+    "name": "PERAMBRA",
+    "district": "Kozhikode",
+    "region": "north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. Fathima Thahiliya",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 39432,
+      "percentage": 50.08
+    },
+    "runner_up": {
+      "name": "T. P. Ramakrishnan",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 32757,
+      "percentage": 41.6
+    }
+  },
+  {
+    "id": 25,
+    "number": 25,
+    "name": "BALUSSERY",
+    "district": "Kozhikode",
+    "region": "north",
+    "reserved": "Scheduled Caste",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "V. T. Sooraj",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 64588,
+      "percentage": 49.19
+    },
+    "runner_up": {
+      "name": "Adv. K.M. Sachindev",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 54787,
+      "percentage": 41.72
+    }
+  },
+  {
+    "id": 26,
+    "number": 26,
+    "name": "ELATHUR",
+    "district": "Kozhikode",
+    "region": "north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. Vidya Balakrishnan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 46737,
+      "percentage": 44.67
+    },
+    "runner_up": {
+      "name": "A. K. Saseendran",
+      "party": "NCP(SP)",
+      "alliance": "OTH",
+      "votes": 37629,
+      "percentage": 35.96
+    }
+  },
+  {
+    "id": 27,
+    "number": 27,
+    "name": "KOZHIKODE NORTH",
+    "district": "Kozhikode",
+    "region": "north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. K Jayanth",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 35835,
+      "percentage": 35.34
+    },
+    "runner_up": {
+      "name": "Thottathil Ravindran",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 35055,
+      "percentage": 34.58
+    }
+  },
+  {
+    "id": 28,
+    "number": 28,
+    "name": "KOZHIKODE SOUTH",
+    "district": "Kozhikode",
+    "region": "north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. Fyzal Babu",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 26220,
+      "percentage": 36.65
+    },
+    "runner_up": {
+      "name": "Ahamed Devarkovil",
+      "party": "INL",
+      "alliance": "LDF",
+      "votes": 22869,
+      "percentage": 31.97
+    }
+  },
+  {
+    "id": 29,
+    "number": 29,
+    "name": "BEYPORE",
+    "district": "Kozhikode",
+    "region": "north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Muhammad Riyas",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 43145,
+      "percentage": 45.24
+    },
+    "runner_up": {
+      "name": "P. V. Anvar",
+      "party": "AITC",
+      "alliance": "UDF",
+      "votes": 36258,
+      "percentage": 38.02
+    }
+  },
+  {
+    "id": 30,
+    "number": 30,
+    "name": "KUNNAMANGALAM",
+    "district": "Kozhikode",
+    "region": "north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "M. A. Razak Master",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 46136,
+      "percentage": 44.82
+    },
+    "runner_up": {
+      "name": "Adv. P.T.A Rahim",
+      "party": "IND_LDF",
+      "alliance": "LDF",
+      "votes": 37417,
+      "percentage": 36.35
+    }
+  },
+  {
+    "id": 31,
+    "number": 31,
+    "name": "KODUVALLY",
+    "district": "Kozhikode",
+    "region": "north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "P. K. Firos",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 54118,
+      "percentage": 57.58
+    },
+    "runner_up": {
+      "name": "Saleem Madavoor",
+      "party": "IND_LDF",
+      "alliance": "LDF",
+      "votes": 32451,
+      "percentage": 34.53
+    }
+  },
+  {
+    "id": 32,
+    "number": 32,
+    "name": "THIRUVAMBADY",
+    "district": "Kozhikode",
+    "region": "north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "C. K. Kasim",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 57787,
+      "percentage": 47.83
+    },
+    "runner_up": {
+      "name": "Linto Joseph",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 55236,
+      "percentage": 45.72
+    }
+  },
+  {
+    "id": 33,
+    "number": 33,
+    "name": "KONDOTTY",
+    "district": "Malappuram",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "T. P. Ashrafali",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 49055,
+      "percentage": 58.97
+    },
+    "runner_up": {
+      "name": "Dr. P. Jiji",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 26072,
+      "percentage": 31.34
+    }
+  },
+  {
+    "id": 34,
+    "number": 34,
+    "name": "ERANAD",
+    "district": "Malappuram",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "P. K. Basheer",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 70325,
+      "percentage": 58.04
+    },
+    "runner_up": {
+      "name": "Adv. Shafeer Kizhisseri",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 40980,
+      "percentage": 33.82
+    }
+  },
+  {
+    "id": 35,
+    "number": 35,
+    "name": "NILAMBUR",
+    "district": "Malappuram",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Aryadan Shoukath",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 95943,
+      "percentage": 60.29
+    },
+    "runner_up": {
+      "name": "U. Sharafali",
+      "party": "IND_LDF",
+      "alliance": "LDF",
+      "votes": 48892,
+      "percentage": 30.72
+    }
+  },
+  {
+    "id": 36,
+    "number": 36,
+    "name": "WANDOOR",
+    "district": "Malappuram",
+    "region": "central_north",
+    "reserved": "Scheduled Caste",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "A. P. Anil Kumar",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 57517,
+      "percentage": 57.94
+    },
+    "runner_up": {
+      "name": "Dr. K.K Damodaran",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 36542,
+      "percentage": 36.81
+    }
+  },
+  {
+    "id": 37,
+    "number": 37,
+    "name": "MANJERI",
+    "district": "Malappuram",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. M. Rahmathulla",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 55817,
+      "percentage": 59.08
+    },
+    "runner_up": {
+      "name": "V. M. Mustafa",
+      "party": "IND_LDF",
+      "alliance": "LDF",
+      "votes": 28174,
+      "percentage": 29.82
+    }
+  },
+  {
+    "id": 38,
+    "number": 38,
+    "name": "PERINTHALMANNA",
+    "district": "Malappuram",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Najeeb Kanthapuram",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 58315,
+      "percentage": 58.25
+    },
+    "runner_up": {
+      "name": "V. P. Muhammad Haneefa",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 37046,
+      "percentage": 37.01
+    }
+  },
+  {
+    "id": 39,
+    "number": 39,
+    "name": "MANKADA",
+    "district": "Malappuram",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Manjalamkuzhi Ali",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 62263,
+      "percentage": 63.11
+    },
+    "runner_up": {
+      "name": "Kunnath Mohamed S/o Ali Haji",
+      "party": "IND_LDF",
+      "alliance": "LDF",
+      "votes": 31736,
+      "percentage": 32.17
+    }
+  },
+  {
+    "id": 40,
+    "number": 40,
+    "name": "MALAPPURAM",
+    "district": "Malappuram",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "P. K. Kunhalikutty",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 57472,
+      "percentage": 67.17
+    },
+    "runner_up": {
+      "name": "K. T. Mujeeb",
+      "party": "NCP(SP)",
+      "alliance": "OTH",
+      "votes": 19605,
+      "percentage": 22.91
+    }
+  },
+  {
+    "id": 41,
+    "number": 41,
+    "name": "VENGARA",
+    "district": "Malappuram",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "K. M. Shaji",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 47009,
+      "percentage": 55.03
+    },
+    "runner_up": {
+      "name": "Muhammad Sabah Kundupuzhakkal",
+      "party": "IND_LDF",
+      "alliance": "LDF",
+      "votes": 33051,
+      "percentage": 38.69
+    }
+  },
+  {
+    "id": 42,
+    "number": 42,
+    "name": "VALLIKKUNNU",
+    "district": "Malappuram",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "T. V. Ibrahim",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 65084,
+      "percentage": 57.99
+    },
+    "runner_up": {
+      "name": "Adv. C. P. Musthafa",
+      "party": "IND_LDF",
+      "alliance": "LDF",
+      "votes": 27941,
+      "percentage": 24.89
+    }
+  },
+  {
+    "id": 43,
+    "number": 43,
+    "name": "TIRURANGADI",
+    "district": "Malappuram",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "P. M. A. Sameer",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 42198,
+      "percentage": 59.27
+    },
+    "runner_up": {
+      "name": "Ajit Koladi",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 21482,
+      "percentage": 30.17
+    }
+  },
+  {
+    "id": 44,
+    "number": 44,
+    "name": "TANUR",
+    "district": "Malappuram",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "P. K. Navas",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 52907,
+      "percentage": 52.34
+    },
+    "runner_up": {
+      "name": "Mohamed Sameer T Thiruthiyil House",
+      "party": "IND_LDF",
+      "alliance": "LDF",
+      "votes": 36812,
+      "percentage": 36.42
+    }
+  },
+  {
+    "id": 45,
+    "number": 45,
+    "name": "TIRUR",
+    "district": "Malappuram",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Kurukkoli Moideen",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 38119,
+      "percentage": 56.82
+    },
+    "runner_up": {
+      "name": "V. Abdurahiman",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 26742,
+      "percentage": 39.86
+    }
+  },
+  {
+    "id": 46,
+    "number": 46,
+    "name": "KOTTAKKAL",
+    "district": "Malappuram",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Prof. K. K. Abid Hussain Thangal",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 35150,
+      "percentage": 64.16
+    },
+    "runner_up": {
+      "name": "K. Preethi",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 14761,
+      "percentage": 26.94
+    }
+  },
+  {
+    "id": 47,
+    "number": 47,
+    "name": "THAVANUR",
+    "district": "Malappuram",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. V S Joy",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 63089,
+      "percentage": 49.47
+    },
+    "runner_up": {
+      "name": "Dr. K. T. Jaleel",
+      "party": "IND_LDF",
+      "alliance": "LDF",
+      "votes": 49861,
+      "percentage": 39.09
+    }
+  },
+  {
+    "id": 48,
+    "number": 48,
+    "name": "PONNANI",
+    "district": "Malappuram",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "K. P. Noushad Ali",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 34693,
+      "percentage": 47.51
+    },
+    "runner_up": {
+      "name": "Adv. M. K. Sakeer",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 31281,
+      "percentage": 42.84
+    }
+  },
+  {
+    "id": 49,
+    "number": 49,
+    "name": "THRITHALA",
+    "district": "Palakkad",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "V. T. Balram",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 39975,
+      "percentage": 49.67
+    },
+    "runner_up": {
+      "name": "M. B. Rajesh",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 32587,
+      "percentage": 40.49
+    }
+  },
+  {
+    "id": 50,
+    "number": 50,
+    "name": "PATTAMBI",
+    "district": "Palakkad",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Muhammad Muhsin",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 56937,
+      "percentage": 46.84
+    },
+    "runner_up": {
+      "name": "T. P. Shaji",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 51645,
+      "percentage": 42.49
+    }
+  },
+  {
+    "id": 51,
+    "number": 51,
+    "name": "SHORNUR",
+    "district": "Palakkad",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "P. Mammikkutty",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 59230,
+      "percentage": 43.61
+    },
+    "runner_up": {
+      "name": "P. Harigovindan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 49390,
+      "percentage": 36.37
+    }
+  },
+  {
+    "id": 52,
+    "number": 52,
+    "name": "OTTAPALAM",
+    "district": "Palakkad",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. K. Premkumar",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 67404,
+      "percentage": 45.22
+    },
+    "runner_up": {
+      "name": "Major Ravi",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 40282,
+      "percentage": 27.02
+    }
+  },
+  {
+    "id": 53,
+    "number": 53,
+    "name": "KONGAD",
+    "district": "Palakkad",
+    "region": "central_north",
+    "reserved": "Scheduled Caste",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "K. A. Thulasi",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 45055,
+      "percentage": 46.11
+    },
+    "runner_up": {
+      "name": "K. Shanthakumari",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 38960,
+      "percentage": 39.87
+    }
+  },
+  {
+    "id": 54,
+    "number": 54,
+    "name": "MANNARKKAD",
+    "district": "Palakkad",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. N. Samsudheen",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 69476,
+      "percentage": 55.9
+    },
+    "runner_up": {
+      "name": "Manzil Aboobacker",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 47244,
+      "percentage": 38.01
+    }
+  },
+  {
+    "id": 55,
+    "number": 55,
+    "name": "MALAMPUZHA",
+    "district": "Palakkad",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "A. Prabhakaran",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 59680,
+      "percentage": 42.54
+    },
+    "runner_up": {
+      "name": "C. Krishnakumar",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 42779,
+      "percentage": 30.49
+    }
+  },
+  {
+    "id": 56,
+    "number": 56,
+    "name": "PALAKKAD",
+    "district": "Palakkad",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Ramesh Pisharody",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 42128,
+      "percentage": 43.74
+    },
+    "runner_up": {
+      "name": "Sobha Surendran",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 33956,
+      "percentage": 35.26
+    }
+  },
+  {
+    "id": 57,
+    "number": 57,
+    "name": "TARUR",
+    "district": "Palakkad",
+    "region": "central_north",
+    "reserved": "Scheduled Caste",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "P. P. Sumod",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 48591,
+      "percentage": 46.52
+    },
+    "runner_up": {
+      "name": "K. C. Subramanian",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 37426,
+      "percentage": 35.83
+    }
+  },
+  {
+    "id": 58,
+    "number": 58,
+    "name": "CHITTUR",
+    "district": "Palakkad",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. Sumesh Achuthan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 50190,
+      "percentage": 45.31
+    },
+    "runner_up": {
+      "name": "Adv V. Murugadas",
+      "party": "ISJD",
+      "alliance": "LDF",
+      "votes": 41954,
+      "percentage": 37.87
+    }
+  },
+  {
+    "id": 59,
+    "number": 59,
+    "name": "NENMARA",
+    "district": "Palakkad",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "K. Preman",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 46466,
+      "percentage": 44.02
+    },
+    "runner_up": {
+      "name": "A. Thankappan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 43110,
+      "percentage": 40.84
+    }
+  },
+  {
+    "id": 60,
+    "number": 60,
+    "name": "ALATHUR",
+    "district": "Palakkad",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "T. M. Sasi",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 53706,
+      "percentage": 45.72
+    },
+    "runner_up": {
+      "name": "K. M. Febin",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 46143,
+      "percentage": 39.28
+    }
+  },
+  {
+    "id": 61,
+    "number": 61,
+    "name": "CHELAKKARA",
+    "district": "Thrissur",
+    "region": "central_north",
+    "reserved": "Scheduled Caste",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "U. R. Pradeep",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 73058,
+      "percentage": 46.57
+    },
+    "runner_up": {
+      "name": "Sivan Veettikkunnu",
+      "party": "IND_UDF",
+      "alliance": "UDF",
+      "votes": 44401,
+      "percentage": 28.3
+    }
+  },
+  {
+    "id": 62,
+    "number": 62,
+    "name": "KUNNAMKULAM",
+    "district": "Thrissur",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "A. C. Moytheen",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 51965,
+      "percentage": 46.13
+    },
+    "runner_up": {
+      "name": "P. T. Ajayamohan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 46243,
+      "percentage": 41.05
+    }
+  },
+  {
+    "id": 63,
+    "number": 63,
+    "name": "GURUVAYUR",
+    "district": "Thrissur",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "C. H. Rasheed",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 30009,
+      "percentage": 43.98
+    },
+    "runner_up": {
+      "name": "N. K. Akbar",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 26822,
+      "percentage": 39.31
+    }
+  },
+  {
+    "id": 64,
+    "number": 64,
+    "name": "MANALUR",
+    "district": "Thrissur",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "C. Ravindranath",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 24105,
+      "percentage": 40.29
+    },
+    "runner_up": {
+      "name": "T. N. Prathapan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 22492,
+      "percentage": 37.59
+    }
+  },
+  {
+    "id": 65,
+    "number": 65,
+    "name": "WADAKKANCHERY",
+    "district": "Thrissur",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Xeviyar Chittilappally",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 68754,
+      "percentage": 43.27
+    },
+    "runner_up": {
+      "name": "P N Vaisakh",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 63301,
+      "percentage": 39.83
+    }
+  },
+  {
+    "id": 66,
+    "number": 66,
+    "name": "OLLUR",
+    "district": "Thrissur",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "K. Rajan",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 28400,
+      "percentage": 48.71
+    },
+    "runner_up": {
+      "name": "Adv. Shaji J Kodankandath",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 21976,
+      "percentage": 37.7
+    }
+  },
+  {
+    "id": 67,
+    "number": 67,
+    "name": "THRISSUR",
+    "district": "Thrissur",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "RESULT_DECLARED",
+    "leader": {
+      "name": "Rajan Pallan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 60290,
+      "percentage": 48.55
+    },
+    "runner_up": {
+      "name": "Alankode Leelakrishnan",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 33487,
+      "percentage": 26.97
+    }
+  },
+  {
+    "id": 68,
+    "number": 68,
+    "name": "NATTIKA",
+    "district": "Thrissur",
+    "region": "central_north",
+    "reserved": "Scheduled Caste",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Geetha Gopi",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 48112,
+      "percentage": 38.54
+    },
+    "runner_up": {
+      "name": "Adv. Sunil Lalur",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 40096,
+      "percentage": 32.12
+    }
+  },
+  {
+    "id": 69,
+    "number": 69,
+    "name": "KAIPAMANGALAM",
+    "district": "Thrissur",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "K. K. Valsaraj",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 55461,
+      "percentage": 45.71
+    },
+    "runner_up": {
+      "name": "T. M. Nazar",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 46336,
+      "percentage": 38.19
+    }
+  },
+  {
+    "id": 70,
+    "number": 70,
+    "name": "IRINJALAKUDA",
+    "district": "Thrissur",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. Thomas Unniyadan",
+      "party": "KEC",
+      "alliance": "UDF",
+      "votes": 55637,
+      "percentage": 42.57
+    },
+    "runner_up": {
+      "name": "Dr. R. Bindu",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 48738,
+      "percentage": 37.29
+    }
+  },
+  {
+    "id": 71,
+    "number": 71,
+    "name": "PUTHUKKAD",
+    "district": "Thrissur",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "K. M. Babu Raj",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 42862,
+      "percentage": 41.21
+    },
+    "runner_up": {
+      "name": "K. K. Ramachandran",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 41549,
+      "percentage": 39.95
+    }
+  },
+  {
+    "id": 72,
+    "number": 72,
+    "name": "CHALAKUDY",
+    "district": "Thrissur",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "T. J. Saneesh Kumar Joseph",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 44557,
+      "percentage": 51.1
+    },
+    "runner_up": {
+      "name": "Adv Biju Chirayath",
+      "party": "KC_M",
+      "alliance": "LDF",
+      "votes": 31044,
+      "percentage": 35.6
+    }
+  },
+  {
+    "id": 73,
+    "number": 73,
+    "name": "KODUNGALLUR",
+    "district": "Thrissur",
+    "region": "central_north",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. O J Janeesh",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 55463,
+      "percentage": 42.89
+    },
+    "runner_up": {
+      "name": "Adv. V R Sunil Kumar",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 50622,
+      "percentage": 39.15
+    }
+  },
+  {
+    "id": 74,
+    "number": 74,
+    "name": "PERUMBAVOOR",
+    "district": "Ernakulam",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Manoj Moothedan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 63206,
+      "percentage": 51.9
+    },
+    "runner_up": {
+      "name": "Basil Paul",
+      "party": "KC_M",
+      "alliance": "LDF",
+      "votes": 37695,
+      "percentage": 30.95
+    }
+  },
+  {
+    "id": 75,
+    "number": 75,
+    "name": "ANGAMALY",
+    "district": "Ernakulam",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Roji M. John",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 30331,
+      "percentage": 61.63
+    },
+    "runner_up": {
+      "name": "Saju Paul",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 15547,
+      "percentage": 31.59
+    }
+  },
+  {
+    "id": 76,
+    "number": 76,
+    "name": "ALUVA",
+    "district": "Ernakulam",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Anwar Sadath",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 27053,
+      "percentage": 52.96
+    },
+    "runner_up": {
+      "name": "Adv. A. M. Ariff",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 17535,
+      "percentage": 34.33
+    }
+  },
+  {
+    "id": 77,
+    "number": 77,
+    "name": "KALAMASSERY",
+    "district": "Ernakulam",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. V. E. Abdul Gafoor",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 34064,
+      "percentage": 50.23
+    },
+    "runner_up": {
+      "name": "P. Rajeev",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 26709,
+      "percentage": 39.38
+    }
+  },
+  {
+    "id": 78,
+    "number": 78,
+    "name": "PARAVUR",
+    "district": "Ernakulam",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. V. D. Satheesan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 42628,
+      "percentage": 47.7
+    },
+    "runner_up": {
+      "name": "E. T. Taison Master",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 34754,
+      "percentage": 38.89
+    }
+  },
+  {
+    "id": 79,
+    "number": 79,
+    "name": "VYPIN",
+    "district": "Ernakulam",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Tony Chammany",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 58918,
+      "percentage": 50.29
+    },
+    "runner_up": {
+      "name": "Adv. M. B. Shyni",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 45077,
+      "percentage": 38.48
+    }
+  },
+  {
+    "id": 80,
+    "number": 80,
+    "name": "KOCHI",
+    "district": "Ernakulam",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Mohammed Shiyas",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 37911,
+      "percentage": 46.43
+    },
+    "runner_up": {
+      "name": "K. J. Maxi",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 32794,
+      "percentage": 40.17
+    }
+  },
+  {
+    "id": 81,
+    "number": 81,
+    "name": "THRIPPUNITHURA",
+    "district": "Ernakulam",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Deepak Joy",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 24278,
+      "percentage": 44.01
+    },
+    "runner_up": {
+      "name": "K. N. Unnikrishnan",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 16936,
+      "percentage": 30.7
+    }
+  },
+  {
+    "id": 82,
+    "number": 82,
+    "name": "ERNAKULAM",
+    "district": "Ernakulam",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "T. J. Vinod",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 54078,
+      "percentage": 56.47
+    },
+    "runner_up": {
+      "name": "Sabu George",
+      "party": "ISJD",
+      "alliance": "LDF",
+      "votes": 22350,
+      "percentage": 23.34
+    }
+  },
+  {
+    "id": 83,
+    "number": 83,
+    "name": "THRIKKAKARA",
+    "district": "Ernakulam",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Uma Thomas",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 56843,
+      "percentage": 59.33
+    },
+    "runner_up": {
+      "name": "Adv. Pushpa das",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 21574,
+      "percentage": 22.52
+    }
+  },
+  {
+    "id": 84,
+    "number": 84,
+    "name": "KUNNATHUNAD",
+    "district": "Ernakulam",
+    "region": "south_central",
+    "reserved": "Scheduled Caste",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "V. P. Sajeendran",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 48616,
+      "percentage": 43.64
+    },
+    "runner_up": {
+      "name": "Adv. P. V. Sreenijin",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 32804,
+      "percentage": 29.45
+    }
+  },
+  {
+    "id": 85,
+    "number": 85,
+    "name": "PIRAVOM",
+    "district": "Ernakulam",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Anoop Jacob",
+      "party": "KC_J",
+      "alliance": "UDF",
+      "votes": 76209,
+      "percentage": 58.14
+    },
+    "runner_up": {
+      "name": "Sabu K Jacob",
+      "party": "KC_M",
+      "alliance": "LDF",
+      "votes": 38971,
+      "percentage": 29.73
+    }
+  },
+  {
+    "id": 86,
+    "number": 86,
+    "name": "MUVATTUPUZHA",
+    "district": "Ernakulam",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Dr. Mathew Kuzhalnadan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 72901,
+      "percentage": 60.46
+    },
+    "runner_up": {
+      "name": "N. Arun",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 38509,
+      "percentage": 31.94
+    }
+  },
+  {
+    "id": 87,
+    "number": 87,
+    "name": "KOTHAMANGALAM",
+    "district": "Ernakulam",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Shibu Thekkumpuram",
+      "party": "KEC",
+      "alliance": "UDF",
+      "votes": 56857,
+      "percentage": 52.44
+    },
+    "runner_up": {
+      "name": "Antony John",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 44438,
+      "percentage": 40.99
+    }
+  },
+  {
+    "id": 88,
+    "number": 88,
+    "name": "DEVIKULAM",
+    "district": "Idukki",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "F. Raja",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 26090,
+      "percentage": 43.07
+    },
+    "runner_up": {
+      "name": "Adv. A. Raja",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 25439,
+      "percentage": 42.0
+    }
+  },
+  {
+    "id": 89,
+    "number": 89,
+    "name": "UDUMBANCHOLA",
+    "district": "Idukki",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. Senapathi Venu",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 57667,
+      "percentage": 52.89
+    },
+    "runner_up": {
+      "name": "K. K. Jayachandran",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 41062,
+      "percentage": 37.66
+    }
+  },
+  {
+    "id": 90,
+    "number": 90,
+    "name": "THODUPUZHA",
+    "district": "Idukki",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Apu John Joseph",
+      "party": "KEC",
+      "alliance": "UDF",
+      "votes": 61829,
+      "percentage": 58.23
+    },
+    "runner_up": {
+      "name": "Cyriac Chazhikadan",
+      "party": "KC_M",
+      "alliance": "LDF",
+      "votes": 28235,
+      "percentage": 26.59
+    }
+  },
+  {
+    "id": 91,
+    "number": 91,
+    "name": "IDUKKI",
+    "district": "Idukki",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Roy K. Paulose",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 60122,
+      "percentage": 55.18
+    },
+    "runner_up": {
+      "name": "Roshi Augustine",
+      "party": "KC_M",
+      "alliance": "LDF",
+      "votes": 39518,
+      "percentage": 36.27
+    }
+  },
+  {
+    "id": 92,
+    "number": 92,
+    "name": "PEERUMADE",
+    "district": "Idukki",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. Syriac Thomas",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 52593,
+      "percentage": 58.03
+    },
+    "runner_up": {
+      "name": "K. Salim Kumar",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 29794,
+      "percentage": 32.87
+    }
+  },
+  {
+    "id": 93,
+    "number": 93,
+    "name": "PALA",
+    "district": "Kottayam",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Mani C. Kappan",
+      "party": "KDP",
+      "alliance": "UDF",
+      "votes": 34712,
+      "percentage": 38.07
+    },
+    "runner_up": {
+      "name": "Jose K. Mani",
+      "party": "KC_M",
+      "alliance": "LDF",
+      "votes": 31565,
+      "percentage": 34.62
+    }
+  },
+  {
+    "id": 94,
+    "number": 94,
+    "name": "KADUTHURUTHY",
+    "district": "Kottayam",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. Mons Joseph",
+      "party": "KEC",
+      "alliance": "UDF",
+      "votes": 52083,
+      "percentage": 57.16
+    },
+    "runner_up": {
+      "name": "Nirmala Jimmy",
+      "party": "KC_M",
+      "alliance": "LDF",
+      "votes": 28268,
+      "percentage": 31.02
+    }
+  },
+  {
+    "id": 95,
+    "number": 95,
+    "name": "VAIKOM",
+    "district": "Kottayam",
+    "region": "south_central",
+    "reserved": "Scheduled Caste",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "K. Binimon",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 44519,
+      "percentage": 41.63
+    },
+    "runner_up": {
+      "name": "P. Pradeep",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 44132,
+      "percentage": 41.27
+    }
+  },
+  {
+    "id": 96,
+    "number": 96,
+    "name": "ETTUMANOOR",
+    "district": "Kottayam",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Nattakam Suresh",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 49750,
+      "percentage": 52.95
+    },
+    "runner_up": {
+      "name": "V. N. Vasavan",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 32098,
+      "percentage": 34.16
+    }
+  },
+  {
+    "id": 97,
+    "number": 97,
+    "name": "KOTTAYAM",
+    "district": "Kottayam",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Thiruvanchoor Radhakrishnan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 43657,
+      "percentage": 61.02
+    },
+    "runner_up": {
+      "name": "Adv. K. Anilkumar",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 20421,
+      "percentage": 28.54
+    }
+  },
+  {
+    "id": 98,
+    "number": 98,
+    "name": "PUTHUPPALLY",
+    "district": "Kottayam",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. Chandy Oommen",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 75114,
+      "percentage": 65.37
+    },
+    "runner_up": {
+      "name": "K. M. Radhakrishnan",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 27905,
+      "percentage": 24.29
+    }
+  },
+  {
+    "id": 99,
+    "number": 99,
+    "name": "CHANGANASSERY",
+    "district": "Kottayam",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Vinu Job",
+      "party": "KEC",
+      "alliance": "UDF",
+      "votes": 48521,
+      "percentage": 46.12
+    },
+    "runner_up": {
+      "name": "Adv. Job Maichil",
+      "party": "KC_M",
+      "alliance": "LDF",
+      "votes": 41375,
+      "percentage": 39.33
+    }
+  },
+  {
+    "id": 100,
+    "number": 100,
+    "name": "KANJIRAPPALLY",
+    "district": "Kottayam",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Prof. Rony K. Baby",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 34428,
+      "percentage": 40.27
+    },
+    "runner_up": {
+      "name": "Dr. N. Jayaraj",
+      "party": "KC_M",
+      "alliance": "LDF",
+      "votes": 31707,
+      "percentage": 37.08
+    }
+  },
+  {
+    "id": 101,
+    "number": 101,
+    "name": "POONJAR",
+    "district": "Kottayam",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. Sebastian M.J",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 36694,
+      "percentage": 39.68
+    },
+    "runner_up": {
+      "name": "Adv. Sebastian Kulathunkal",
+      "party": "KC_M",
+      "alliance": "LDF",
+      "votes": 32464,
+      "percentage": 35.1
+    }
+  },
+  {
+    "id": 102,
+    "number": 102,
+    "name": "AROOR",
+    "district": "Alappuzha",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. Shanimol Osman",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 40724,
+      "percentage": 47.37
+    },
+    "runner_up": {
+      "name": "Daleema Jojo",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 34501,
+      "percentage": 40.13
+    }
+  },
+  {
+    "id": 103,
+    "number": 103,
+    "name": "CHERTHALA",
+    "district": "Alappuzha",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "P. Prasad",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 53364,
+      "percentage": 46.86
+    },
+    "runner_up": {
+      "name": "K. R. Rajendra Prasad",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 46277,
+      "percentage": 40.64
+    }
+  },
+  {
+    "id": 104,
+    "number": 104,
+    "name": "ALAPPUZHA",
+    "district": "Alappuzha",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "A. D. Thomas",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 51321,
+      "percentage": 49.88
+    },
+    "runner_up": {
+      "name": "P. P. Chitharanjan",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 40809,
+      "percentage": 39.66
+    }
+  },
+  {
+    "id": 105,
+    "number": 105,
+    "name": "AMBALAPPUZHA",
+    "district": "Alappuzha",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "G. Sudhakaran",
+      "party": "IND_UDF",
+      "alliance": "UDF",
+      "votes": 35714,
+      "percentage": 53.35
+    },
+    "runner_up": {
+      "name": "H. Salam",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 22972,
+      "percentage": 34.32
+    }
+  },
+  {
+    "id": 106,
+    "number": 106,
+    "name": "KUTTANAD",
+    "district": "Alappuzha",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Reji Cheriyan",
+      "party": "KEC",
+      "alliance": "UDF",
+      "votes": 29456,
+      "percentage": 48.46
+    },
+    "runner_up": {
+      "name": "Thomas K. Thomas",
+      "party": "NCP(SP)",
+      "alliance": "OTH",
+      "votes": 20211,
+      "percentage": 33.25
+    }
+  },
+  {
+    "id": 107,
+    "number": 107,
+    "name": "HARIPAD",
+    "district": "Alappuzha",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Ramesh Chennithala",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 65625,
+      "percentage": 47.18
+    },
+    "runner_up": {
+      "name": "T. T. Jismon",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 42832,
+      "percentage": 30.79
+    }
+  },
+  {
+    "id": 108,
+    "number": 108,
+    "name": "KAYAMKULAM",
+    "district": "Alappuzha",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. M. Liju",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 37160,
+      "percentage": 49.18
+    },
+    "runner_up": {
+      "name": "Adv. U. Prathibha",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 29668,
+      "percentage": 39.27
+    }
+  },
+  {
+    "id": 109,
+    "number": 109,
+    "name": "MAVELIKARA",
+    "district": "Alappuzha",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "M. S. Arun Kumar",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 48519,
+      "percentage": 47.44
+    },
+    "runner_up": {
+      "name": "Adv. Muthara Raj",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 36144,
+      "percentage": 35.34
+    }
+  },
+  {
+    "id": 110,
+    "number": 110,
+    "name": "CHENGANNUR",
+    "district": "Alappuzha",
+    "region": "south_central",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Saji Cherian",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 29251,
+      "percentage": 41.66
+    },
+    "runner_up": {
+      "name": "Adv. Abi Kuriakose",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 24934,
+      "percentage": 35.51
+    }
+  },
+  {
+    "id": 111,
+    "number": 111,
+    "name": "THIRUVALLA",
+    "district": "Pathanamthitta",
+    "region": "south",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. Varghese Mammen",
+      "party": "KEC",
+      "alliance": "UDF",
+      "votes": 31554,
+      "percentage": 39.76
+    },
+    "runner_up": {
+      "name": "Mathew T. Thomas",
+      "party": "ISJD",
+      "alliance": "LDF",
+      "votes": 23501,
+      "percentage": 29.62
+    }
+  },
+  {
+    "id": 112,
+    "number": 112,
+    "name": "RANNI",
+    "district": "Pathanamthitta",
+    "region": "south",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. Pazhakulam Madhu",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 19477,
+      "percentage": 44.56
+    },
+    "runner_up": {
+      "name": "Adv. Pramod Narayan",
+      "party": "KC_M",
+      "alliance": "LDF",
+      "votes": 18510,
+      "percentage": 42.35
+    }
+  },
+  {
+    "id": 113,
+    "number": 113,
+    "name": "ARANMULA",
+    "district": "Pathanamthitta",
+    "region": "south",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Abin Varkey",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 39841,
+      "percentage": 43.12
+    },
+    "runner_up": {
+      "name": "Veena George",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 29882,
+      "percentage": 32.34
+    }
+  },
+  {
+    "id": 114,
+    "number": 114,
+    "name": "KONNI",
+    "district": "Pathanamthitta",
+    "region": "south",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. K. U. Jenish Kumar",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 26209,
+      "percentage": 46.33
+    },
+    "runner_up": {
+      "name": "Prof Satheesh Kochuparambil",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 24728,
+      "percentage": 43.71
+    }
+  },
+  {
+    "id": 115,
+    "number": 115,
+    "name": "ADOOR",
+    "district": "Pathanamthitta",
+    "region": "south",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. C V  Santhakumar",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 33315,
+      "percentage": 42.98
+    },
+    "runner_up": {
+      "name": "Priji Sasidharan",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 28623,
+      "percentage": 36.93
+    }
+  },
+  {
+    "id": 116,
+    "number": 116,
+    "name": "KARUNAGAPALLY",
+    "district": "Kollam",
+    "region": "south",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "C. R. Mahesh",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 45967,
+      "percentage": 47.37
+    },
+    "runner_up": {
+      "name": "Adv.M.S. Thara",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 30796,
+      "percentage": 31.74
+    }
+  },
+  {
+    "id": 117,
+    "number": 117,
+    "name": "CHAVARA",
+    "district": "Kollam",
+    "region": "south",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Shibu Baby John",
+      "party": "RSP",
+      "alliance": "UDF",
+      "votes": 61426,
+      "percentage": 53.08
+    },
+    "runner_up": {
+      "name": "Dr. Sujith Vijayanpillai",
+      "party": "IND_LDF",
+      "alliance": "LDF",
+      "votes": 45382,
+      "percentage": 39.21
+    }
+  },
+  {
+    "id": 118,
+    "number": 118,
+    "name": "KUNNATHUR",
+    "district": "Kollam",
+    "region": "south",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Ullas Kovoor",
+      "party": "RSP",
+      "alliance": "UDF",
+      "votes": 56258,
+      "percentage": 50.2
+    },
+    "runner_up": {
+      "name": "Kovoor Kunjumon",
+      "party": "RSP(L)",
+      "alliance": "OTH",
+      "votes": 38011,
+      "percentage": 33.92
+    }
+  },
+  {
+    "id": 119,
+    "number": 119,
+    "name": "KOTTARAKKARA",
+    "district": "Kollam",
+    "region": "south",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. P. Aisha Potty",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 29095,
+      "percentage": 41.86
+    },
+    "runner_up": {
+      "name": "K. N. Balagopal",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 28850,
+      "percentage": 41.51
+    }
+  },
+  {
+    "id": 120,
+    "number": 120,
+    "name": "PATHANAPURAM",
+    "district": "Kollam",
+    "region": "south",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Jyothikumar chamakkala",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 47037,
+      "percentage": 49.46
+    },
+    "runner_up": {
+      "name": "K. B. Ganesh Kumar",
+      "party": "KC_B",
+      "alliance": "LDF",
+      "votes": 41729,
+      "percentage": 43.88
+    }
+  },
+  {
+    "id": 121,
+    "number": 121,
+    "name": "PUNALUR",
+    "district": "Kollam",
+    "region": "south",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "C. Ajaya Prasad",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 59993,
+      "percentage": 51.49
+    },
+    "runner_up": {
+      "name": "Noushad Yusuf",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 39442,
+      "percentage": 33.85
+    }
+  },
+  {
+    "id": 122,
+    "number": 122,
+    "name": "CHADAYAMANGALAM",
+    "district": "Kollam",
+    "region": "south",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "M. M. Naseer",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 35884,
+      "percentage": 43.81
+    },
+    "runner_up": {
+      "name": "J. Chinchu Rani",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 32893,
+      "percentage": 40.16
+    }
+  },
+  {
+    "id": 123,
+    "number": 123,
+    "name": "KUNDARA",
+    "district": "Kollam",
+    "region": "south",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "P. C. Vishnunadh",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 57588,
+      "percentage": 53.54
+    },
+    "runner_up": {
+      "name": "S. L. Sajikumar",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 35670,
+      "percentage": 33.16
+    }
+  },
+  {
+    "id": 124,
+    "number": 124,
+    "name": "KOLLAM",
+    "district": "Kollam",
+    "region": "south",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. Bindhu Krishna",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 54667,
+      "percentage": 48.92
+    },
+    "runner_up": {
+      "name": "S. Jayamohan",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 40275,
+      "percentage": 36.04
+    }
+  },
+  {
+    "id": 125,
+    "number": 125,
+    "name": "ERAVIPURAM",
+    "district": "Kollam",
+    "region": "south",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. Vishnu Mohan",
+      "party": "RSP",
+      "alliance": "UDF",
+      "votes": 47417,
+      "percentage": 49.41
+    },
+    "runner_up": {
+      "name": "M. Noushad",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 39314,
+      "percentage": 40.97
+    }
+  },
+  {
+    "id": 126,
+    "number": 126,
+    "name": "CHATHANNOOR",
+    "district": "Kollam",
+    "region": "south",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "B. B. Gopakumar",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 26209,
+      "percentage": 35.28
+    },
+    "runner_up": {
+      "name": "Adv. R.Rajendran",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 25947,
+      "percentage": 34.92
+    }
+  },
+  {
+    "id": 127,
+    "number": 127,
+    "name": "VARKALA",
+    "district": "Thiruvananthapuram",
+    "region": "south",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. V Joy",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 33436,
+      "percentage": 40.45
+    },
+    "runner_up": {
+      "name": "Varkala Kahar",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 32452,
+      "percentage": 39.26
+    }
+  },
+  {
+    "id": 128,
+    "number": 128,
+    "name": "ATTINGAL",
+    "district": "Thiruvananthapuram",
+    "region": "south",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "O. S. Ambika",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 39701,
+      "percentage": 40.55
+    },
+    "runner_up": {
+      "name": "P. Sudheer",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 28519,
+      "percentage": 29.13
+    }
+  },
+  {
+    "id": 129,
+    "number": 129,
+    "name": "CHIRAYINKEEZHU",
+    "district": "Thiruvananthapuram",
+    "region": "south",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Manoj B Edamana",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 31917,
+      "percentage": 37.55
+    },
+    "runner_up": {
+      "name": "Ramya Haridas",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 30004,
+      "percentage": 35.3
+    }
+  },
+  {
+    "id": 130,
+    "number": 130,
+    "name": "NEDUMANGAD",
+    "district": "Thiruvananthapuram",
+    "region": "south",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "G. R. Anil",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 32208,
+      "percentage": 42.46
+    },
+    "runner_up": {
+      "name": "Meenankal Kumar",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 23063,
+      "percentage": 30.4
+    }
+  },
+  {
+    "id": 131,
+    "number": 131,
+    "name": "VAMANAPURAM",
+    "district": "Thiruvananthapuram",
+    "region": "south",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Sudheer Sha Palode",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 46856,
+      "percentage": 51.06
+    },
+    "runner_up": {
+      "name": "D. K. Murali",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 37267,
+      "percentage": 40.61
+    }
+  },
+  {
+    "id": 132,
+    "number": 132,
+    "name": "KAZHAKOOTAM",
+    "district": "Thiruvananthapuram",
+    "region": "south",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Kadakampally Surendran",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 23757,
+      "percentage": 36.48
+    },
+    "runner_up": {
+      "name": "V. Muraleedharan",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 22511,
+      "percentage": 34.57
+    }
+  },
+  {
+    "id": 133,
+    "number": 133,
+    "name": "VATTIYOORKAVU",
+    "district": "Thiruvananthapuram",
+    "region": "south",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. V.K Prasanth",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 22841,
+      "percentage": 35.02
+    },
+    "runner_up": {
+      "name": "K. Muraleedharan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 22340,
+      "percentage": 34.25
+    }
+  },
+  {
+    "id": 134,
+    "number": 134,
+    "name": "THIRUVANANTHAPURAM",
+    "district": "Thiruvananthapuram",
+    "region": "south",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "C. P. John",
+      "party": "CMP",
+      "alliance": "UDF",
+      "votes": 24018,
+      "percentage": 34.73
+    },
+    "runner_up": {
+      "name": "Karamana Jayan",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 23273,
+      "percentage": 33.65
+    }
+  },
+  {
+    "id": 135,
+    "number": 135,
+    "name": "NEMOM",
+    "district": "Thiruvananthapuram",
+    "region": "south",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Rajeev Chandrasekhar",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 25274,
+      "percentage": 42.29
+    },
+    "runner_up": {
+      "name": "V. Shivankutty",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 20932,
+      "percentage": 35.03
+    }
+  },
+  {
+    "id": 136,
+    "number": 136,
+    "name": "ARUVIKKARA",
+    "district": "Thiruvananthapuram",
+    "region": "south",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. G. Steephen",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 36797,
+      "percentage": 42.04
+    },
+    "runner_up": {
+      "name": "V. S. Sivakumar",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 34595,
+      "percentage": 39.53
+    }
+  },
+  {
+    "id": 137,
+    "number": 137,
+    "name": "PARASSALA",
+    "district": "Thiruvananthapuram",
+    "region": "south",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "C. K. Hareendran",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 38379,
+      "percentage": 44.82
+    },
+    "runner_up": {
+      "name": "Neyyattinkara Sanal",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 28744,
+      "percentage": 33.57
+    }
+  },
+  {
+    "id": 138,
+    "number": 138,
+    "name": "KATTAKKADA",
+    "district": "Thiruvananthapuram",
+    "region": "south",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "M. R. Baiju",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 21695,
+      "percentage": 40.48
+    },
+    "runner_up": {
+      "name": "Adv. I. B. Satheesh",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 17600,
+      "percentage": 32.84
+    }
+  },
+  {
+    "id": 139,
+    "number": 139,
+    "name": "KOVALAM",
+    "district": "Thiruvananthapuram",
+    "region": "south",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "Adv. M. Vincent",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 31926,
+      "percentage": 45.78
+    },
+    "runner_up": {
+      "name": "Bhagat Rufus",
+      "party": "IND_LDF",
+      "alliance": "LDF",
+      "votes": 21282,
+      "percentage": 30.52
+    }
+  },
+  {
+    "id": 140,
+    "number": 140,
+    "name": "NEYYATTINKARA",
+    "district": "Thiruvananthapuram",
+    "region": "south",
+    "reserved": "General",
+    "status": "IN_PROGRESS",
+    "leader": {
+      "name": "N. Sakthan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 43952,
+      "percentage": 42.06
+    },
+    "runner_up": {
+      "name": "K. Ansalan",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 41154,
+      "percentage": 39.38
+    }
+  }
+]

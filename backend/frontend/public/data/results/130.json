@@ -1,0 +1,138 @@
+{
+  "constituency": {
+    "id": 130,
+    "number": 130,
+    "name": "NEDUMANGAD",
+    "district": "Thiruvananthapuram"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 198042,
+    "votes_polled": 155185,
+    "votes_counted": 7622,
+    "valid_votes": 7622,
+    "rounds_completed": 9,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:23:55.016456+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "G. R. Anil",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 32208,
+      "percentage": 42.46,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Meenankal Kumar",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 23063,
+      "percentage": 30.4,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Yuvaraj Gokul",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 19113,
+      "percentage": 25.2,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Siyad Kandala",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 505,
+      "percentage": 0.67,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sujilal B G",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 220,
+      "percentage": 0.29,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Shibu G",
+      "party": "Anna DHRM",
+      "alliance": "OTH",
+      "votes": 136,
+      "percentage": 0.18,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Vembayam Yesudas",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 69,
+      "percentage": 0.09,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Anvar Sadath",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 52,
+      "percentage": 0.07,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Kumar",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 38,
+      "percentage": 0.05,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Adv. G. R. ANIL",
+      "party": "CPI",
+      "votes": 72742,
+      "percentage": 47.54,
+      "is_winner": true
+    },
+    {
+      "candidate": "P. S. PRASANTH",
+      "party": "INC",
+      "votes": 49433,
+      "percentage": 32.31,
+      "is_winner": false
+    },
+    {
+      "candidate": "Adv. J. R. PADMAKUMAR",
+      "party": "BJP",
+      "votes": 26861,
+      "percentage": 17.56,
+      "is_winner": false
+    },
+    {
+      "candidate": "IRSHAD KANYAKULANGARA",
+      "party": "SDPI",
+      "votes": 1884,
+      "percentage": 1.23,
+      "is_winner": false
+    },
+    {
+      "candidate": "BIPIN PALLIPURAM",
+      "party": "BSP",
+      "votes": 563,
+      "percentage": 0.37,
+      "is_winner": false
+    }
+  ]
+}

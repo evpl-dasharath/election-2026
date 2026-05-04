@@ -54,6 +54,9 @@ export interface ConstituencyListItem {
   status: CountingStatus;
   sitting_party: string | null;
   sitting_alliance: Alliance | null;
+  // Polling-day static fields (from electoral rolls / ECI polling data)
+  total_electors: number;   // never changes
+  votes_polled: number;     // finalised after polling day, before counting
   leader: {
     name: string;
     party: string;
@@ -70,6 +73,10 @@ export interface ConstituencyListItem {
     percentage: number;
     party_color: string;
   } | null;
+  // Live counting progress fields (populated from RTDB)
+  votes_counted?: number;
+  rounds_completed?: number;
+  total_rounds?: number;
 }
 
 export interface ConstituencyDetail {
@@ -181,6 +188,7 @@ export interface StateSummary {
       won: number;
       leading: number;
       trailing: number;
+      vote_share?: number;
     };
   };
   /** Pure IND (party code exactly 'IND') — separate from OTH alliance_summary */
@@ -189,6 +197,8 @@ export interface StateSummary {
     leading: number;
   };
   total_votes_counted: number;
+  total_votes_polled?: number;
+
 }
 
 export interface District {

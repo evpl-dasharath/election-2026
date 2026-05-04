@@ -5,23 +5,32 @@
     "name": "PALA",
     "district": "Kottayam"
   },
-  "live_result": null,
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 176585,
+    "votes_polled": 132562,
+    "votes_counted": 7499,
+    "valid_votes": 7499,
+    "rounds_completed": 12,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:22.078778+00:00"
+  },
   "candidates_2026": [
     {
-      "name": "Jose K. Mani",
-      "party": "KC(M)",
-      "alliance": "LDF",
-      "votes": 0,
-      "percentage": 0.0,
+      "name": "Mani C. Kappan",
+      "party": "KDP",
+      "alliance": "UDF",
+      "votes": 37824,
+      "percentage": 37.95,
       "is_winner": false,
-      "is_leading": false
+      "is_leading": true
     },
     {
-      "name": "Mani C. Kappan",
-      "party": "DCK",
-      "alliance": "UDF",
-      "votes": 0,
-      "percentage": 0.0,
+      "name": "Jose K. Mani",
+      "party": "KC_M",
+      "alliance": "LDF",
+      "votes": 34930,
+      "percentage": 35.05,
       "is_winner": false,
       "is_leading": false
     },
@@ -29,17 +38,8 @@
       "name": "Shone George",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Santhosh Nadoopparampil",
-      "party": "BSP",
-      "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 25462,
+      "percentage": 25.55,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,17 +47,8 @@
       "name": "Adv. Rony Jose Nedumpallil",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Santhosh Pulickal",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 415,
+      "percentage": 0.42,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +56,26 @@
       "name": "C G Babu",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 234,
+      "percentage": 0.23,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Santhosh Pulickal",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 203,
+      "percentage": 0.2,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Santhosh Nadoopparampil",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 171,
+      "percentage": 0.17,
       "is_winner": false,
       "is_leading": false
     }
@@ -81,7 +90,7 @@
     },
     {
       "candidate": "JOSE K. MANI",
-      "party": "KC(M)",
+      "party": "KEC(M)",
       "votes": 54426,
       "percentage": 39.32,
       "is_winner": false

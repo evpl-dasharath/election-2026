@@ -5,14 +5,32 @@
     "name": "NEMOM",
     "district": "Thiruvananthapuram"
   },
-  "live_result": null,
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 171178,
+    "votes_polled": 138003,
+    "votes_counted": 7618,
+    "valid_votes": 7618,
+    "rounds_completed": 8,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:48.433035+00:00"
+  },
   "candidates_2026": [
     {
       "name": "Rajeev Chandrasekhar",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 25274,
+      "percentage": 42.29,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "V. Shivankutty",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 20932,
+      "percentage": 35.03,
       "is_winner": false,
       "is_leading": false
     },
@@ -20,17 +38,8 @@
       "name": "Adv. KS Sabarinathan",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "V. Shivankutty",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 13038,
+      "percentage": 21.82,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,26 +47,8 @@
       "name": "Vinu K",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Kamaleswaram Hari",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Subi S M",
-      "party": "TFIP",
-      "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 75,
+      "percentage": 0.13,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,17 +56,17 @@
       "name": "Karamana Prasad",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 62,
+      "percentage": 0.1,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Madanan S",
+      "name": "Kamaleswaram Hari",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 29,
+      "percentage": 0.05,
       "is_winner": false,
       "is_leading": false
     },
@@ -83,8 +74,17 @@
       "name": "Rajeev Kumar G S",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 27,
+      "percentage": 0.05,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Subi S M",
+      "party": "TFIP",
+      "alliance": "OTH",
+      "votes": 26,
+      "percentage": 0.04,
       "is_winner": false,
       "is_leading": false
     },
@@ -92,8 +92,17 @@
       "name": "Sasikala",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 15,
+      "percentage": 0.03,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Madanan S",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 14,
+      "percentage": 0.02,
       "is_winner": false,
       "is_leading": false
     }

@@ -1,0 +1,93 @@
+{
+  "constituency": {
+    "id": 115,
+    "number": 115,
+    "name": "ADOOR",
+    "district": "Pathanamthitta"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 201200,
+    "votes_polled": 147882,
+    "votes_counted": 0,
+    "valid_votes": 0,
+    "rounds_completed": 9,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:23:51.650558+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Adv. C V  Santhakumar",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 33315,
+      "percentage": 42.98,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Priji Sasidharan",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 28623,
+      "percentage": 36.93,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Pandalam Prathapan",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 14832,
+      "percentage": 19.14,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sivakumar C S",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 301,
+      "percentage": 0.39,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Chittayam Gopakumar",
+      "party": "CPI",
+      "votes": 66569,
+      "percentage": 42.83,
+      "is_winner": true
+    },
+    {
+      "candidate": "M. G. Kannan",
+      "party": "INC",
+      "votes": 63650,
+      "percentage": 40.96,
+      "is_winner": false
+    },
+    {
+      "candidate": "Adv. Pandalam Prathapan",
+      "party": "BJP",
+      "votes": 23980,
+      "percentage": 15.43,
+      "is_winner": false
+    },
+    {
+      "candidate": "R. Kannan S/o Rajan",
+      "party": "IND",
+      "votes": 218,
+      "percentage": 0.14,
+      "is_winner": false
+    },
+    {
+      "candidate": "Vipin Kanikonathu",
+      "party": "BSP",
+      "votes": 178,
+      "percentage": 0.11,
+      "is_winner": false
+    }
+  ]
+}

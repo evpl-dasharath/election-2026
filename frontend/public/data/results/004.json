@@ -7,30 +7,30 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 166006,
-    "votes_polled": 117149,
-    "votes_counted": 6400,
-    "valid_votes": 121612,
-    "rounds_completed": 1,
-    "total_rounds": 19,
-    "last_updated": "2026-05-01T02:03:20.184323+00:00"
+    "total_electors": 223980,
+    "votes_polled": 173002,
+    "votes_counted": 20247,
+    "valid_votes": 20247,
+    "rounds_completed": 16,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:36:23.315742+00:00"
   },
   "candidates_2026": [
-    {
-      "name": "B. Vijayakumar",
-      "party": "BSP",
-      "alliance": "OTH",
-      "votes": 3016,
-      "percentage": 2.48,
-      "is_winner": false,
-      "is_leading": true
-    },
     {
       "name": "Govindan Pallikkappil",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 2309,
-      "percentage": 1.9,
+      "votes": 71721,
+      "percentage": 44.56,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Shyji Ottapalli",
+      "party": "KEC",
+      "alliance": "UDF",
+      "votes": 60238,
+      "percentage": 37.42,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,17 +38,17 @@
       "name": "M. Balraj",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 718,
-      "percentage": 0.59,
+      "votes": 25217,
+      "percentage": 15.67,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Shyji Ottapalli",
-      "party": "KEC",
-      "alliance": "UDF",
-      "votes": 673,
-      "percentage": 0.55,
+      "name": "B. Vijayakumar",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 2832,
+      "percentage": 1.76,
       "is_winner": false,
       "is_leading": false
     }

@@ -2,35 +2,35 @@
   "constituency": {
     "id": 63,
     "number": 63,
-    "name": "GURUVAYOOR",
+    "name": "GURUVAYUR",
     "district": "Thrissur"
   },
-  "live_result": null,
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 218704,
+    "votes_polled": 160463,
+    "votes_counted": 10075,
+    "valid_votes": 10075,
+    "rounds_completed": 8,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:05.834162+00:00"
+  },
   "candidates_2026": [
-    {
-      "name": "Pauly Francis Guruvayur",
-      "party": "AAP",
-      "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "C. R. Unnikrishnan",
-      "party": "SUCI",
-      "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
     {
       "name": "C. H. Rasheed",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 33124,
+      "percentage": 42.2,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "N. K. Akbar",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 31196,
+      "percentage": 39.75,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,17 +38,8 @@
       "name": "B. Gopalakrishnan",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "N. K. Akbar",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 12616,
+      "percentage": 16.07,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +47,26 @@
       "name": "K.V. Abdul Nasar Paroor",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 998,
+      "percentage": 1.27,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Pauly Francis Guruvayur",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 188,
+      "percentage": 0.24,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "C. R. Unnikrishnan",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 99,
+      "percentage": 0.13,
       "is_winner": false,
       "is_leading": false
     }

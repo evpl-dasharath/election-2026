@@ -1,0 +1,95 @@
+{
+  "constituency": {
+    "id": 37,
+    "number": 37,
+    "name": "MANJERI",
+    "district": "Malappuram"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 227762,
+    "votes_polled": 187949,
+    "votes_counted": 6256,
+    "valid_votes": 6256,
+    "rounds_completed": 10,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:22:30.495089+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Adv. M. Rahmathulla",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 55817,
+      "percentage": 59.08,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "V. M. Mustafa",
+      "party": "IND_LDF",
+      "alliance": "LDF",
+      "votes": 28174,
+      "percentage": 29.82,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Pathmasree M.",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 7007,
+      "percentage": 7.42,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. PPA Sageer",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 1039,
+      "percentage": 1.1,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Bipin Benson Joseph",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 811,
+      "percentage": 0.86,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Adv. U.A. LATHEEF",
+      "party": "IUML",
+      "votes": 78836,
+      "percentage": 50.22,
+      "is_winner": true
+    },
+    {
+      "candidate": "NAZAR DEBONA",
+      "party": "CPI",
+      "votes": 64263,
+      "percentage": 40.93,
+      "is_winner": false
+    },
+    {
+      "candidate": "P.R. RASMIL NATH",
+      "party": "BJP",
+      "votes": 11350,
+      "percentage": 7.23,
+      "is_winner": false
+    },
+    {
+      "candidate": "PALATHINGAL ABOOBACKER",
+      "party": "IND",
+      "votes": 1341,
+      "percentage": 0.85,
+      "is_winner": false
+    }
+  ]
+}

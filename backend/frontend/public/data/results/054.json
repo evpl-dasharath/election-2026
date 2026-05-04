@@ -1,0 +1,120 @@
+{
+  "constituency": {
+    "id": 54,
+    "number": 54,
+    "name": "MANNARKKAD",
+    "district": "Palakkad"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 206436,
+    "votes_polled": 164591,
+    "votes_counted": 0,
+    "valid_votes": 0,
+    "rounds_completed": 8,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:22:49.295892+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Adv. N. Samsudheen",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 69476,
+      "percentage": 55.9,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Manzil Aboobacker",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 47244,
+      "percentage": 38.01,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Isaac Varghese",
+      "party": "BDJS",
+      "alliance": "NDA",
+      "votes": 5860,
+      "percentage": 4.71,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ashitha Najeeb",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 725,
+      "percentage": 0.58,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Shamsudheen S/o Muhammed",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 174,
+      "percentage": 0.14,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Aboobacker S/o Ayisha",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 137,
+      "percentage": 0.11,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Shamsudheen S/o Ummer",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 115,
+      "percentage": 0.09,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "ADVOCATE. N. SAMSUDHEEN",
+      "party": "IUML",
+      "votes": 71657,
+      "percentage": 47.11,
+      "is_winner": true
+    },
+    {
+      "candidate": "K. P. SURESH RAJ",
+      "party": "CPI",
+      "votes": 65787,
+      "percentage": 43.25,
+      "is_winner": false
+    },
+    {
+      "candidate": "AGALI NASEEMA P",
+      "party": "ADMK",
+      "votes": 10376,
+      "percentage": 6.82,
+      "is_winner": false
+    },
+    {
+      "candidate": "JAMES MASH",
+      "party": "IND",
+      "votes": 988,
+      "percentage": 0.65,
+      "is_winner": false
+    },
+    {
+      "candidate": "SIVADASAN",
+      "party": "BSP",
+      "votes": 827,
+      "percentage": 0.54,
+      "is_winner": false
+    }
+  ]
+}

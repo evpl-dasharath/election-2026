@@ -1,0 +1,102 @@
+{
+  "constituency": {
+    "id": 60,
+    "number": 60,
+    "name": "ALATHUR",
+    "district": "Palakkad"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 165657,
+    "votes_polled": 131150,
+    "votes_counted": 21659,
+    "valid_votes": 21659,
+    "rounds_completed": 11,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:22:52.873470+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "T. M. Sasi",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 53706,
+      "percentage": 45.72,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "K. M. Febin",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 46143,
+      "percentage": 39.28,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K.V. Prasanna Kumar",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 15602,
+      "percentage": 13.28,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "M T Chandran",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 581,
+      "percentage": 0.49,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "B Febin S/o Balan K.C.",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 497,
+      "percentage": 0.42,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "K.D.PRASENAN",
+      "party": "CPI(M)",
+      "votes": 74653,
+      "percentage": 55.15,
+      "is_winner": true
+    },
+    {
+      "candidate": "PALAYAM PRADEEP",
+      "party": "INC",
+      "votes": 40535,
+      "percentage": 29.94,
+      "is_winner": false
+    },
+    {
+      "candidate": "PRASANTH SIVAN",
+      "party": "BJP",
+      "votes": 18349,
+      "percentage": 13.56,
+      "is_winner": false
+    },
+    {
+      "candidate": "CHANDRAN",
+      "party": "BSP",
+      "votes": 699,
+      "percentage": 0.52,
+      "is_winner": false
+    },
+    {
+      "candidate": "RAJESH.M",
+      "party": "IND",
+      "votes": 347,
+      "percentage": 0.26,
+      "is_winner": false
+    }
+  ]
+}

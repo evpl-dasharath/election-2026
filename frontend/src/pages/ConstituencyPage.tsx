@@ -8,7 +8,8 @@ import {
   prefetchConstituencyDetail,
 } from '../hooks/useElectionData';
 import GlobalHeader from '../components/GlobalHeader';
-import { partyAbbr } from '../utils/partyAbbr';
+import { partyAbbr, partyDisplay } from '../utils/partyAbbr';
+import { generateShareCard, downloadBlob, ShareFormat, ShareCardData } from '../utils/shareCard';
 import {
   LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Legend
 } from 'recharts';
@@ -84,11 +85,15 @@ export default function ConstituencyPage() {
   const [search, setSearch] = useState('');
   const [allianceFilter, setAllianceFilter] = useState<string>('all');
   const [parliamentOpen, setParliamentOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [shareMenuOpen, setShareMenuOpen] = useState(false);
+  const [shareLoading, setShareLoading] = useState(false);
 
   // Sidebar list
   const sidebarList = useMemo(() => {
     return allConst.filter(c => {
-      if (allianceFilter !== 'all' && c.leader?.alliance !== allianceFilter) return false;
+      const activeAlliance = c.status !== 'NOT_STARTED' ? c.leader?.alliance : null;
+      if (allianceFilter !== 'all' && activeAlliance !== allianceFilter) return false;
       if (search) {
         const s = search.toLowerCase();
         return c.name.toLowerCase().includes(s) || c.district.toLowerCase().includes(s);
@@ -257,16 +262,72 @@ export default function ConstituencyPage() {
     return found ? found.percentage : null;
   };
 
+  // ── Share handler ────────────────────────────────────────────────────────
+  const handleShare = async (format: ShareFormat) => {
+    if (!leader || !countingStarted) return;
+    setShareLoading(true);
+    setShareMenuOpen(false);
+
+    const sittingAlliance =
+      historical?.la_2021?.candidates?.find((r) => r.is_winner)?.alliance ?? null;
+
+    const cardData: ShareCardData = {
+      constituencyName: c.name,
+      constituencyNumber: c.number,
+      district: c.district,
+      leaderName: leader.name,
+      leaderParty: leader.party,
+      leaderAlliance: (leader.alliance ?? 'OTH') as ShareCardData['leaderAlliance'],
+      leaderVotes: leader.votes,
+      leaderPct: leader.percentage,
+      margin,
+      runnerUpName: runnerUp?.name ?? null,
+      runnerUpParty: runnerUp?.party ?? null,
+      runnerUpAlliance: runnerUp?.alliance ?? null,
+      runnerUpVotes: runnerUp?.votes ?? 0,
+      runnerUpPct: runnerUp?.percentage ?? 0,
+      otherCandidates: candidates_2026_safe
+        .filter(cd => cd !== leader && cd !== runnerUp)
+        .slice(0, 2)
+        .map(cd => ({ name: cd.name, party: cd.party, alliance: cd.alliance ?? 'OTH', votes: cd.votes, pct: cd.percentage })),
+      status: live_result?.status ?? 'NOT_STARTED',
+      countingPct: pct,
+      sittingAlliance,
+      isFlip: !!(leader && sittingAlliance && sittingAlliance !== leader.alliance),
+    };
+
+    try {
+      const blob = await generateShareCard(cardData, format);
+      const slug = c.name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+      downloadBlob(blob, `${slug}-${format.replace(':', 'x')}.png`);
+    } catch (err) {
+      console.error('Share card generation failed:', err);
+    } finally {
+      setShareLoading(false);
+    }
+  };
+
   return (
     <div style={{ fontFamily: "'DM Sans',sans-serif", background: '#F5F2EE', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
 
       <GlobalHeader />
 
       {/* ── BODY ─────────────────────────────────────────────── */}
-      <div className="flex-1 flex flex-col md:grid md:grid-cols-[300px_1fr] min-h-0">
+      <div className="flex-1 flex flex-col md:grid md:grid-cols-[300px_1fr] min-h-0 relative">
 
         {/* ══ SIDEBAR ══════════════════════════════════════════ */}
-        <div className="hidden md:flex flex-col bg-[#FDFCFB] border-r border-[#E2DDD8] overflow-hidden sticky top-[56px] h-[calc(100vh-56px)]">
+        {sidebarOpen && (
+          <div 
+            className="md:hidden fixed inset-0 bg-black/40 z-40" 
+            onClick={() => setSidebarOpen(false)} 
+          />
+        )}
+        <div className={`
+          flex flex-col bg-[#FDFCFB] border-r border-[#E2DDD8] overflow-hidden 
+          fixed md:sticky top-0 md:top-[56px] h-[100dvh] md:h-[calc(100vh-56px)] z-50 md:z-auto
+          w-[85%] max-w-[320px] md:w-auto md:max-w-none transition-transform duration-300
+          ${sidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}
+        `}>
 
           {/* Toolbar */}
           <div style={{ padding: '12px 14px', borderBottom: '1px solid #E2DDD8', flexShrink: 0 }}>
@@ -304,11 +365,14 @@ export default function ConstituencyPage() {
             ) : (
               sidebarList.map(ci => {
                 const isActive = ci.id === constituencyId;
-                const la = ci.leader?.alliance || 'OTH';
+                const la = ci.status !== 'NOT_STARTED' && ci.leader?.alliance ? ci.leader.alliance : 'OTH';
                 return (
                   <div
                     key={ci.id}
-                    onClick={() => navigate(`/constituency/${ci.id}`)}
+                    onClick={() => {
+                      navigate(`/constituency/${ci.id}`);
+                      setSidebarOpen(false);
+                    }}
                     style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '11px 14px', cursor: 'pointer', borderBottom: '1px solid #E2DDD8', background: isActive ? (ABG[la] || '#EEF6FF') : 'transparent', borderLeft: isActive ? `3px solid ${ac(la)}` : '3px solid transparent', transition: 'background 0.12s' }}
                     onMouseEnter={e => { if (!isActive) (e.currentTarget as HTMLDivElement).style.background = '#F5F2EE'; }}
                     onMouseLeave={e => { if (!isActive) (e.currentTarget as HTMLDivElement).style.background = 'transparent'; }}
@@ -321,9 +385,9 @@ export default function ConstituencyPage() {
                       <div style={{ fontSize: 11, color: '#5C5245' }}>{ci.district}</div>
                     </div>
                     <div style={{ textAlign: 'right', flexShrink: 0 }}>
-                      {ci.leader && (
-                        <div style={{ fontSize: 11, fontWeight: 700, padding: '2px 6px', borderRadius: 4, display: 'inline-block', marginBottom: 3, background: ATAG_BG[ci.leader.alliance] || '#F3F4F6', color: ATAG_FG[ci.leader.alliance] || '#6B7280' }}>
-                          {ci.leader.party}
+                      {ci.status !== 'NOT_STARTED' && ci.leader && (
+                        <div style={{ fontSize: 10, fontWeight: 700, padding: '1px 6px', borderRadius: 3, display: 'inline-block', marginBottom: 3, background: ac(ci.leader.alliance), color: '#fff', letterSpacing: 0.3 }}>
+                          {partyDisplay(ci.leader.party)}
                         </div>
                       )}
                       <div style={{ fontSize: 10, color: '#5C5245', display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 3 }}>
@@ -344,22 +408,30 @@ export default function ConstituencyPage() {
           {/* ── HERO ──────────────────────────────────────────── */}
           <div className="px-4 md:px-8 py-5 md:py-6" style={{ background: leader ? (ABG[leader.alliance] || '#FDFCFB') : '#FDFCFB', borderBottom: `3px solid ${leader ? ac(leader.alliance) : '#E2DDD8'}` }}>
 
-            {/* Inline prev / next nav */}
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
-              {prevC ? (
-                <button onClick={() => navigate(`/constituency/${prevC.id}`)} style={{ background: 'transparent', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 5, color: '#5C5245', fontSize: 12, fontFamily: "'DM Sans',sans-serif", padding: '4px 0' }}>
-                  <span style={{ fontSize: 15 }}>←</span>
-                  <span style={{ fontWeight: 600 }}>{prevC.name}</span>
-                  <span style={{ color: '#9CA3AF', fontSize: 11 }}>{prevC.district}</span>
-                </button>
-              ) : <div />}
-              {nextC ? (
-                <button onClick={() => navigate(`/constituency/${nextC.id}`)} style={{ background: 'transparent', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 5, color: '#5C5245', fontSize: 12, fontFamily: "'DM Sans',sans-serif", padding: '4px 0' }}>
-                  <span style={{ color: '#9CA3AF', fontSize: 11 }}>{nextC.district}</span>
-                  <span style={{ fontWeight: 600 }}>{nextC.name}</span>
-                  <span style={{ fontSize: 15 }}>→</span>
-                </button>
-              ) : <div />}
+            {/* Inline prev / next nav + Mobile Toggle */}
+            <div className="flex justify-between items-center mb-4 gap-2">
+              <button 
+                onClick={() => setSidebarOpen(true)}
+                className="md:hidden bg-white border border-[#E2DDD8] rounded-md px-3 py-1.5 text-[12px] font-bold text-[#5C5245] shadow-sm flex items-center gap-1.5 shrink-0"
+              >
+                <span className="text-[14px]">☰</span> List
+              </button>
+              <div className="flex items-center gap-4 md:w-full md:justify-between ml-auto md:ml-0">
+                {prevC ? (
+                  <button onClick={() => navigate(`/constituency/${prevC.id}`)} style={{ background: 'transparent', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 5, color: '#5C5245', fontSize: 12, fontFamily: "'DM Sans',sans-serif", padding: '4px 0' }}>
+                    <span style={{ fontSize: 15 }}>←</span>
+                    <span style={{ fontWeight: 600 }} className="hidden sm:inline md:inline">{prevC.name}</span>
+                    <span style={{ color: '#9CA3AF', fontSize: 11 }} className="hidden md:inline">{prevC.district}</span>
+                  </button>
+                ) : <div />}
+                {nextC ? (
+                  <button onClick={() => navigate(`/constituency/${nextC.id}`)} style={{ background: 'transparent', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 5, color: '#5C5245', fontSize: 12, fontFamily: "'DM Sans',sans-serif", padding: '4px 0' }}>
+                    <span style={{ color: '#9CA3AF', fontSize: 11 }} className="hidden md:inline">{nextC.district}</span>
+                    <span style={{ fontWeight: 600 }} className="hidden sm:inline md:inline">{nextC.name}</span>
+                    <span style={{ fontSize: 15 }}>→</span>
+                  </button>
+                ) : <div />}
+              </div>
             </div>
 
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 18 }}>
@@ -395,13 +467,82 @@ export default function ConstituencyPage() {
                 })()}
               </div>
               {live_result && (
-                <div style={{ textAlign: 'right', flexShrink: 0 }}>
+                <div style={{ textAlign: 'right', flexShrink: 0, display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 4 }}>
                   <div style={{ fontFamily: "'DM Serif Display',serif", fontSize: 40, color: '#1A1611', lineHeight: 1 }}>{pct}%</div>
-                  <div style={{ fontSize: 11, color: '#5C5245', marginTop: 2 }}>votes counted</div>
-                  <div style={{ width: 140, height: 5, background: '#E2DDD8', borderRadius: 3, overflow: 'hidden', marginTop: 8, marginLeft: 'auto' }}>
+                  <div style={{ fontSize: 11, color: '#5C5245' }}>votes counted</div>
+                  <div style={{ width: 140, height: 5, background: '#E2DDD8', borderRadius: 3, overflow: 'hidden', marginTop: 4, marginLeft: 'auto' }}>
                     <div style={{ height: '100%', width: `${pct}%`, background: '#22c55e', borderRadius: 3, transition: 'width 0.8s ease' }} />
                   </div>
-                  <div style={{ fontSize: 11, color: '#5C5245', marginTop: 5 }}>{rLabel(live_result)}</div>
+                  <div style={{ fontSize: 11, color: '#5C5245' }}>{rLabel(live_result)}</div>
+
+                  {/* ── Share button ── */}
+                  <div style={{ position: 'relative', marginTop: 6 }}>
+                    <button
+                      id="share-card-btn"
+                      onClick={() => setShareMenuOpen(o => !o)}
+                      disabled={!leader || !countingStarted || shareLoading}
+                      style={{
+                        display: 'flex', alignItems: 'center', gap: 6,
+                        background: (leader && countingStarted) ? '#1A1611' : '#E2DDD8',
+                        color: (leader && countingStarted) ? '#fff' : '#9CA3AF',
+                        border: 'none', borderRadius: 8,
+                        padding: '8px 14px', fontSize: 13, fontWeight: 600,
+                        fontFamily: "'DM Sans',sans-serif",
+                        cursor: (leader && countingStarted && !shareLoading) ? 'pointer' : 'not-allowed',
+                        opacity: (leader && countingStarted) ? 1 : 0.5,
+                        transition: 'background 0.15s',
+                      }}
+                      onMouseEnter={e => {
+                        if (leader && countingStarted && !shareLoading)
+                          (e.currentTarget as HTMLButtonElement).style.background = '#2C2820';
+                      }}
+                      onMouseLeave={e => {
+                        if (leader && countingStarted)
+                          (e.currentTarget as HTMLButtonElement).style.background = '#1A1611';
+                      }}
+                    >
+                      <span style={{ fontSize: 15 }}>{shareLoading ? '⏳' : '↗'}</span>
+                      {shareLoading ? 'Generating…' : 'Share'}
+                    </button>
+
+                    {shareMenuOpen && (
+                      <div
+                        style={{
+                          position: 'absolute', right: 0, top: 'calc(100% + 6px)',
+                          background: '#FFFFFF', border: '1px solid #E2DDD8',
+                          borderRadius: 10, boxShadow: '0 8px 24px rgba(0,0,0,0.12)',
+                          zIndex: 100, minWidth: 196, overflow: 'hidden',
+                        }}
+                      >
+                        {(['9:16', '4:5'] as const).map((fmt, i) => (
+                          <button
+                            key={fmt}
+                            id={`share-format-${fmt.replace(':', 'x')}`}
+                            onClick={() => handleShare(fmt)}
+                            style={{
+                              display: 'flex', alignItems: 'center', gap: 10,
+                              width: '100%', textAlign: 'left',
+                              padding: '11px 16px', fontSize: 13, color: '#1A1611',
+                              fontFamily: "'DM Sans',sans-serif", fontWeight: 500,
+                              background: 'none', border: 'none', cursor: 'pointer',
+                              borderBottom: i === 0 ? '1px solid #F5F2EE' : 'none',
+                              transition: 'background 0.1s',
+                            }}
+                            onMouseEnter={e => (e.currentTarget as HTMLButtonElement).style.background = '#F5F2EE'}
+                            onMouseLeave={e => (e.currentTarget as HTMLButtonElement).style.background = 'none'}
+                          >
+                            <span style={{ fontSize: 18 }}>{fmt === '9:16' ? '📱' : '🖼'}</span>
+                            <div>
+                              <div style={{ fontWeight: 600 }}>{fmt === '9:16' ? '9:16 — Story / Reel' : '4:5 — Feed Post'}</div>
+                              <div style={{ fontSize: 11, color: '#9CA3AF', marginTop: 1 }}>
+                                {fmt === '9:16' ? '1080 × 1920 px' : '1080 × 1350 px'}
+                              </div>
+                            </div>
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 </div>
               )}
             </div>
@@ -416,8 +557,8 @@ export default function ConstituencyPage() {
                     </div>
                     <div style={{ fontFamily: "'DM Serif Display',serif", fontSize: 24, color: '#1A1611', marginBottom: 6 }}>{leader.name}</div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap', fontSize: 13, color: '#5C5245' }}>
-                      <span style={{ background: ATAG_BG[leader.alliance], color: ATAG_FG[leader.alliance], fontWeight: 700, fontSize: 11, padding: '2px 7px', borderRadius: 4 }}>{leader.alliance}</span>
-                      <span>{leader.party}</span>
+                      <span style={{ background: ac(leader.alliance), color: '#fff', fontWeight: 700, fontSize: 10, padding: '1px 7px', borderRadius: 3, letterSpacing: 0.3 }}>{leader.alliance}</span>
+                      <span>{partyDisplay(leader.party)}</span>
                       {(leader as any).is_incumbent && <Badge bg="#854D0E">Incumbent</Badge>}
                     </div>
                     {runnerUp && (
@@ -429,7 +570,7 @@ export default function ConstituencyPage() {
                   </div>
                   <div style={{ textAlign: 'right', flexShrink: 0 }}>
                     <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 30, fontWeight: 600, color: ac(leader.alliance), letterSpacing: '-1px' }}>{leader.votes.toLocaleString('en-IN')}</div>
-                    <div style={{ fontSize: 11, color: '#5C5245' }}>{leader.percentage.toFixed(1)}% of votes</div>
+                    <div style={{ fontSize: 11, color: '#5C5245' }}>{leader.percentage.toFixed(1)}% of votes polled</div>
                     {margin !== null && (
                       <div style={{ marginTop: 6 }}>
                         <div style={{ fontSize: 22, fontWeight: 800, fontFamily: "'JetBrains Mono',monospace", color: ac(leader.alliance), letterSpacing: '-1px', lineHeight: 1 }}>+{margin.toLocaleString('en-IN')}</div>
@@ -482,11 +623,14 @@ export default function ConstituencyPage() {
                           {cd.is_leading && !cd.is_winner && <Badge bg="#1D4ED8">▲ Leading</Badge>}
                           {isIncumbent && <Badge bg="#854D0E">Sitting MLA</Badge>}
                         </div>
-                        <div style={{ fontSize: 11, color: '#5C5245', marginTop: 2 }}>{cd.party} · {cd.alliance}</div>
+                        <div style={{ fontSize: 11, color: '#5C5245', marginTop: 2, display: 'flex', alignItems: 'center', gap: 5, flexWrap: 'wrap' }}>
+                          {partyDisplay(cd.party)}
+                          <span style={{ background: ac(cd.alliance), color: '#fff', fontWeight: 700, fontSize: 9, padding: '1px 6px', borderRadius: 3, letterSpacing: 0.3, whiteSpace: 'nowrap' }}>{cd.alliance}</span>
+                        </div>
                       </div>
                       <div style={{ flex: 1, maxWidth: 180 }}>
                         <div style={{ fontSize: 10, color: '#5C5245', marginBottom: 3, fontFamily: "'JetBrains Mono',monospace", display: 'flex', alignItems: 'center', gap: 4 }}>
-                          {cd.percentage.toFixed(1)}%
+                          {cd.percentage.toFixed(1)}% polled
                           {live_result?.status === 'RESULT_DECLARED' && (() => {
                             const pct21 = get2021Pct(cd.name);
                             if (pct21 === null) return null;
@@ -744,8 +888,9 @@ function HistoricalCandidateTable({
   margin: number | null;
   prevCandidates: Array<{ candidate: string; party: string; alliance: string; percentage: number }> | null;
 }) {
-  const totalVotes = candidates.reduce((s, c) => s + c.votes, 0);
-  const winner = candidates.find(c => c.is_winner) ?? candidates[0];
+  const safeCandidates = candidates || [];
+  const totalVotes = safeCandidates.reduce((s, c) => s + c.votes, 0);
+  const winner = safeCandidates.find(c => c.is_winner) ?? safeCandidates[0];
   const winColor = winner ? ac(winner.alliance) : '#5C5245';
 
   // ── Vote-share change by alliance (main fronts) or party (OTH) ──────────
@@ -759,7 +904,7 @@ function HistoricalCandidateTable({
     }
     return { al, pt };
   };
-  const curr = aggMap(candidates);
+  const curr = aggMap(safeCandidates);
   const prev = prevCandidates ? aggMap(prevCandidates) : null;
 
   const getChange = (alliance: string, party: string): number | null => {
@@ -807,7 +952,7 @@ function HistoricalCandidateTable({
           </tr>
         </thead>
         <tbody>
-          {candidates.map((cand, i) => {
+          {safeCandidates.map((cand, i) => {
             const isWinner = cand.is_winner || i === 0;
             const clr = badgeColor(cand.alliance, cand.party, cand.color_code);
             const prevPct = getChange(cand.alliance, cand.party);

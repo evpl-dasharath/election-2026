@@ -53,7 +53,14 @@ export function classifyForAlliance(
   }
 
   // Leaning: won last 2 (✗✓✓)
-  if (!w11 && w16 && w21) return 'Leaning';
+  if (!w11 && w16 && w21) {
+    if (m16 < TIGHT_MARGIN && m21 < TIGHT_MARGIN) return 'Swing';
+    
+    // Explicit rule: If it was UDF in 2011, and swung to LDF for '16 and '21, consider it a Swing seat overall.
+    if (alliance === 'LDF' && r11?.winner_alliance === 'UDF') return 'Swing';
+    
+    return 'Leaning';
+  }
 
   // Swing: alternating ✓✗✓
   if (w11 && !w16 && w21) {

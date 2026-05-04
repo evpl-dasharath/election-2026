@@ -1,0 +1,111 @@
+{
+  "constituency": {
+    "id": 97,
+    "number": 97,
+    "name": "KOTTAYAM",
+    "district": "Kottayam"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 149573,
+    "votes_polled": 111745,
+    "votes_counted": 17402,
+    "valid_votes": 17402,
+    "rounds_completed": 9,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:23:38.684948+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Thiruvanchoor Radhakrishnan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 43657,
+      "percentage": 61.02,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Adv. K. Anilkumar",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 20421,
+      "percentage": 28.54,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "P. Anilkumar",
+      "party": "BDJS",
+      "alliance": "NDA",
+      "votes": 5977,
+      "percentage": 8.35,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Dr. Selin Philip",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 845,
+      "percentage": 1.18,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ralesh Chandran",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 92,
+      "percentage": 0.13,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Shaiju Kurian",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 87,
+      "percentage": 0.12,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "THIRUVANCHOOR RADHAKRISHNAN",
+      "party": "INC",
+      "votes": 65401,
+      "percentage": 53.72,
+      "is_winner": true
+    },
+    {
+      "candidate": "Adv.K.ANILKUMAR",
+      "party": "CPI(M)",
+      "votes": 46658,
+      "percentage": 38.33,
+      "is_winner": false
+    },
+    {
+      "candidate": "MINERVA MOHAN",
+      "party": "BJP",
+      "votes": 8611,
+      "percentage": 7.07,
+      "is_winner": false
+    },
+    {
+      "candidate": "SREEKUMAR CHAKKALA",
+      "party": "BSP",
+      "votes": 374,
+      "percentage": 0.31,
+      "is_winner": false
+    },
+    {
+      "candidate": "M.K.SHAHAZAD",
+      "party": "SUCI",
+      "votes": 144,
+      "percentage": 0.12,
+      "is_winner": false
+    }
+  ]
+}

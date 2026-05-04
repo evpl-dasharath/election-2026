@@ -1,0 +1,120 @@
+{
+  "constituency": {
+    "id": 87,
+    "number": 87,
+    "name": "KOTHAMANGALAM",
+    "district": "Ernakulam"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 171968,
+    "votes_polled": 136370,
+    "votes_counted": 0,
+    "valid_votes": 0,
+    "rounds_completed": 11,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:23:36.936063+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Shibu Thekkumpuram",
+      "party": "KEC",
+      "alliance": "UDF",
+      "votes": 56857,
+      "percentage": 52.44,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Antony John",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 44438,
+      "percentage": 40.99,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Aji Narayanan",
+      "party": "BDJS",
+      "alliance": "NDA",
+      "votes": 5614,
+      "percentage": 5.18,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Roy Arackal",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 503,
+      "percentage": 0.46,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Shibu Kallekkattu",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 224,
+      "percentage": 0.21,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Shibu Chalakattu",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 148,
+      "percentage": 0.14,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Finto Xavier",
+      "party": "RJP",
+      "alliance": "OTH",
+      "votes": 117,
+      "percentage": 0.11,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "ANTONY JOHN",
+      "party": "CPI(M)",
+      "votes": 64234,
+      "percentage": 46.99,
+      "is_winner": true
+    },
+    {
+      "candidate": "Shibu Thekkumpuram",
+      "party": "KEC",
+      "votes": 57629,
+      "percentage": 42.16,
+      "is_winner": false
+    },
+    {
+      "candidate": "SHINE K KRISHNAN",
+      "party": "BDJS",
+      "votes": 4638,
+      "percentage": 3.39,
+      "is_winner": false
+    },
+    {
+      "candidate": "T.M. MOOSA",
+      "party": "SDPI",
+      "votes": 1286,
+      "percentage": 0.94,
+      "is_winner": false
+    },
+    {
+      "candidate": "Shibu Thekkan",
+      "party": "IND",
+      "votes": 276,
+      "percentage": 0.2,
+      "is_winner": false
+    }
+  ]
+}

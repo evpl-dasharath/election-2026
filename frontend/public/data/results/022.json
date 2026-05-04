@@ -7,57 +7,39 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 203719,
-    "votes_polled": 150892,
-    "votes_counted": 6926,
-    "valid_votes": 152372,
-    "rounds_completed": 1,
-    "total_rounds": 22,
-    "last_updated": "2026-05-01T02:06:26.184318+00:00"
+    "total_electors": 233690,
+    "votes_polled": 185690,
+    "votes_counted": 11737,
+    "valid_votes": 11737,
+    "rounds_completed": 9,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:36:39.283410+00:00"
   },
   "candidates_2026": [
-    {
-      "name": "C. P. Vipin Chandran",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 2993,
-      "percentage": 1.96,
-      "is_winner": false,
-      "is_leading": true
-    },
     {
       "name": "K. M. Abhijith",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 1527,
-      "percentage": 1.0,
+      "votes": 49205,
+      "percentage": 52.29,
       "is_winner": false,
-      "is_leading": false
+      "is_leading": true
     },
     {
       "name": "Adv. P. Vasantham",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 836,
-      "percentage": 0.55,
+      "votes": 39072,
+      "percentage": 41.52,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Padmakumar",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 693,
-      "percentage": 0.45,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Abhijith, s/o Balan",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 555,
-      "percentage": 0.36,
+      "name": "C. P. Vipin Chandran",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 5249,
+      "percentage": 5.58,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +47,35 @@
       "name": "Vasantha",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 318,
-      "percentage": 0.21,
+      "votes": 144,
+      "percentage": 0.15,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Abhijith, s/o Balan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 124,
+      "percentage": 0.13,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. M. Abhijith",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 102,
+      "percentage": 0.11,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Padmakumar",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 93,
+      "percentage": 0.1,
       "is_winner": false,
       "is_leading": false
     }

@@ -1,0 +1,111 @@
+{
+  "constituency": {
+    "id": 122,
+    "number": 122,
+    "name": "CHADAYAMANGALAM",
+    "district": "Kollam"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 201716,
+    "votes_polled": 150137,
+    "votes_counted": 10582,
+    "valid_votes": 10582,
+    "rounds_completed": 8,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:23:43.758573+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "M. M. Naseer",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 35884,
+      "percentage": 43.81,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "J. Chinchu Rani",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 32893,
+      "percentage": 40.16,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "R. S. Arun Raj",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 11393,
+      "percentage": 13.91,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sharafath Mallam",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 921,
+      "percentage": 1.12,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Aji Kadasseri",
+      "party": "Anna DHRM",
+      "alliance": "OTH",
+      "votes": 226,
+      "percentage": 0.28,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "G. Jayan Moonlight Chithara",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 103,
+      "percentage": 0.13,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "J.Chinchurani",
+      "party": "CPI",
+      "votes": 67252,
+      "percentage": 45.69,
+      "is_winner": true
+    },
+    {
+      "candidate": "M.M.Naseer",
+      "party": "INC",
+      "votes": 53574,
+      "percentage": 36.4,
+      "is_winner": false
+    },
+    {
+      "candidate": "Vishnu Pattathanam",
+      "party": "BJP",
+      "votes": 22238,
+      "percentage": 15.11,
+      "is_winner": false
+    },
+    {
+      "candidate": "Sharafath Mallam",
+      "party": "SDPI",
+      "votes": 1879,
+      "percentage": 1.28,
+      "is_winner": false
+    },
+    {
+      "candidate": "Archana Prajith",
+      "party": "WPOI",
+      "votes": 605,
+      "percentage": 0.41,
+      "is_winner": false
+    }
+  ]
+}

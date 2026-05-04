@@ -5,41 +5,41 @@
     "name": "WADAKKANCHERY",
     "district": "Thrissur"
   },
-  "live_result": null,
+  "live_result": {
+    "status": "RESULT_DECLARED",
+    "total_electors": 201786,
+    "votes_polled": 160762,
+    "votes_counted": 26622,
+    "valid_votes": 26622,
+    "rounds_completed": 17,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:35:04.249242+00:00"
+  },
   "candidates_2026": [
     {
-      "name": "Adv. T.S. Ullas Babu",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
       "name": "Xeviyar Chittilappally",
-      "party": "CPI(M)",
+      "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
+      "votes": 70725,
+      "percentage": 43.22,
+      "is_winner": true,
       "is_leading": false
     },
     {
       "name": "P N Vaisakh",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 65035,
+      "percentage": 39.74,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Subramanian Penakam",
-      "party": "BSP",
-      "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "name": "Adv. T.S. Ullas Babu",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 25844,
+      "percentage": 15.79,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,17 @@
       "name": "Jithin Sadanananthan",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 478,
+      "percentage": 0.29,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Subramanian Penakam",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 368,
+      "percentage": 0.22,
       "is_winner": false,
       "is_leading": false
     }

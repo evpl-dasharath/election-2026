@@ -39,7 +39,9 @@ import django
 django.setup()
 
 from django.db import transaction
+from django.utils import timezone
 from core.models import Constituency, Candidate, LiveResult
+from firebase_rtdb import push_constituency, update_rtdb_meta
 
 # ── Config ────────────────────────────────────────────────────────────────────
 TOTAL_SECONDS   = 3600        # 1 hour
@@ -123,12 +125,39 @@ def process_round(const_id, s, round_num):
         cur_votes[c.id] = cv
         c.votes    = cv
         c.vote_percentage = round(cv / s['total_valid'] * 100, 2) if s['total_valid'] else 0
+        c.is_leading = False
 
-    Candidate.objects.bulk_update(candidates, ['votes', 'vote_percentage'])
+    if cur_votes:
+        leader_id = max(cur_votes.items(), key=lambda x: x[1])[0]
+        for c in candidates:
+            if c.id == leader_id:
+                c.is_leading = True
+
+    Candidate.objects.bulk_update(candidates, ['votes', 'vote_percentage', 'is_leading'])
     LiveResult.objects.filter(constituency_id=const_id).update(
         rounds_completed=round_num,
         votes_counted=int(s['total_valid'] * pct),
     )
+
+    # Push to RTDB
+    rtdb_data = {
+        "status": "IN_PROGRESS",
+        "rounds_completed": round_num,
+        "total_rounds": s['total_rounds'],
+        "total_electors": s['total_electors'],
+        "votes_polled": int(s['total_valid'] * random.uniform(0.96, 1.00)),
+        "last_updated": timezone.now().isoformat(),
+        "candidates": [
+            {
+                "name": c.name,
+                "party": c.party.code if c.party else "",
+                "votes": c.votes
+            }
+            for c in candidates
+        ]
+    }
+    push_constituency(s['ac_number'], rtdb_data)
+    update_rtdb_meta()
 
     # Print every 5 rounds or at the end
     if round_num % 5 == 0 or round_num == s['total_rounds']:
@@ -153,6 +182,27 @@ def process_declare(const_id, s):
         rounds_completed=s['total_rounds'],
         votes_counted=s['total_valid'],
     )
+    
+    # Push to RTDB
+    rtdb_data = {
+        "status": "RESULT_DECLARED",
+        "rounds_completed": s['total_rounds'],
+        "total_rounds": s['total_rounds'],
+        "total_electors": s['total_electors'],
+        "votes_polled": s['total_valid'],
+        "last_updated": timezone.now().isoformat(),
+        "candidates": [
+            {
+                "name": c.name,
+                "party": c.party.code if c.party else "",
+                "votes": c.votes
+            }
+            for c in candidates
+        ]
+    }
+    push_constituency(s['ac_number'], rtdb_data)
+    update_rtdb_meta()
+
     winner_name = next((c.name for c in candidates if c.id == s['winner_id']), '?')
     winner_votes = s['final_votes'].get(s['winner_id'], 0)
     print(f"  ✓  [{now()}] {s['name']:30s}  DECLARED  {winner_name} ({winner_votes:,})")
@@ -191,6 +241,7 @@ def main():
         round_interval = (declare_offset - start_offset) / total_rounds
 
         state[const.id] = {
+            'ac_number':     const.number,
             'name':          const.name,
             'final_votes':   final_votes,
             'total_electors': total_electors,

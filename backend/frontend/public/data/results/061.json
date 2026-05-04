@@ -1,0 +1,95 @@
+{
+  "constituency": {
+    "id": 61,
+    "number": 61,
+    "name": "CHELAKKARA",
+    "district": "Thrissur"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 203956,
+    "votes_polled": 160900,
+    "votes_counted": 31987,
+    "valid_votes": 31987,
+    "rounds_completed": 15,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:22:48.314828+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "U. R. Pradeep",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 73058,
+      "percentage": 46.57,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Sivan Veettikkunnu",
+      "party": "IND_UDF",
+      "alliance": "UDF",
+      "votes": 44401,
+      "percentage": 28.3,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. Balakrishnan",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 36422,
+      "percentage": 23.22,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "P. R. Vinod Kumar",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 1171,
+      "percentage": 0.75,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K V Subramaniyan",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 650,
+      "percentage": 0.41,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "K RADHAKRISHNAN",
+      "party": "CPI(M)",
+      "votes": 83415,
+      "percentage": 54.41,
+      "is_winner": true
+    },
+    {
+      "candidate": "C C SREEKUMAR",
+      "party": "INC",
+      "votes": 44015,
+      "percentage": 28.71,
+      "is_winner": false
+    },
+    {
+      "candidate": "SHAJUMON VATTEKKAD",
+      "party": "BJP",
+      "votes": 24045,
+      "percentage": 15.68,
+      "is_winner": false
+    },
+    {
+      "candidate": "CHANDRAN THIYATH",
+      "party": "SDPI",
+      "votes": 1120,
+      "percentage": 0.73,
+      "is_winner": false
+    }
+  ]
+}

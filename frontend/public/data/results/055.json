@@ -7,57 +7,48 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 217963,
-    "votes_polled": 165436,
-    "votes_counted": 8372,
-    "valid_votes": 167450,
-    "rounds_completed": 1,
-    "total_rounds": 20,
-    "last_updated": "2026-05-01T02:04:02.184651+00:00"
+    "total_electors": 195429,
+    "votes_polled": 159470,
+    "votes_counted": 24645,
+    "valid_votes": 24645,
+    "rounds_completed": 12,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:02.968216+00:00"
   },
   "candidates_2026": [
     {
-      "name": "A. Suresh",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 3958,
-      "percentage": 2.36,
+      "name": "A. Prabhakaran",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 59680,
+      "percentage": 42.54,
       "is_winner": false,
       "is_leading": true
-    },
-    {
-      "name": "Ramnath C",
-      "party": "BSP",
-      "alliance": "OTH",
-      "votes": 1931,
-      "percentage": 1.15,
-      "is_winner": false,
-      "is_leading": false
     },
     {
       "name": "C. Krishnakumar",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 758,
-      "percentage": 0.45,
+      "votes": 42779,
+      "percentage": 30.49,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Saji P J",
-      "party": "AAP",
+      "name": "A. Suresh",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 35697,
+      "percentage": 25.44,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ramnath C",
+      "party": "BSP",
       "alliance": "OTH",
-      "votes": 718,
-      "percentage": 0.43,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "A. Prabhakaran",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 484,
-      "percentage": 0.29,
+      "votes": 364,
+      "percentage": 0.26,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +56,17 @@
       "name": "K Prasad",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 448,
-      "percentage": 0.27,
+      "votes": 306,
+      "percentage": 0.22,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Saji P J",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 169,
+      "percentage": 0.12,
       "is_winner": false,
       "is_leading": false
     }

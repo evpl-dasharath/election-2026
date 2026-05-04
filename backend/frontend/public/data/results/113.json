@@ -1,0 +1,120 @@
+{
+  "constituency": {
+    "id": 113,
+    "number": 113,
+    "name": "ARANMULA",
+    "district": "Pathanamthitta"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 215168,
+    "votes_polled": 153845,
+    "votes_counted": 8304,
+    "valid_votes": 8304,
+    "rounds_completed": 12,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:23:38.633408+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Abin Varkey",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 39841,
+      "percentage": 43.12,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Veena George",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 29882,
+      "percentage": 32.34,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Kummanam Rajasekharan",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 21957,
+      "percentage": 23.76,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Prabhakaran V R",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 209,
+      "percentage": 0.23,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Radhamani",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 114,
+      "percentage": 0.12,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Omalloor Ramachandran",
+      "party": "API",
+      "alliance": "OTH",
+      "votes": 48,
+      "percentage": 0.05,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Suresh Nooranad",
+      "party": "API",
+      "alliance": "OTH",
+      "votes": 0,
+      "percentage": 0.0,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "VEENA GEORGE",
+      "party": "CPI(M)",
+      "votes": 74950,
+      "percentage": 46.3,
+      "is_winner": true
+    },
+    {
+      "candidate": "Adv. K. SIVADASAN NAIR",
+      "party": "INC",
+      "votes": 55947,
+      "percentage": 34.56,
+      "is_winner": false
+    },
+    {
+      "candidate": "BIJU MATHEW",
+      "party": "BJP",
+      "votes": 29099,
+      "percentage": 17.98,
+      "is_winner": false
+    },
+    {
+      "candidate": "SIVADASAN NAIR S/o RAGHAVAN NAIR",
+      "party": "IND",
+      "votes": 629,
+      "percentage": 0.39,
+      "is_winner": false
+    },
+    {
+      "candidate": "PRASANTH ARANMULA",
+      "party": "IND",
+      "votes": 143,
+      "percentage": 0.09,
+      "is_winner": false
+    }
+  ]
+}

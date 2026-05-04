@@ -7,57 +7,39 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 244278,
-    "votes_polled": 176358,
-    "votes_counted": 8903,
-    "valid_votes": 178064,
-    "rounds_completed": 1,
-    "total_rounds": 20,
-    "last_updated": "2026-05-01T02:04:53.185408+00:00"
+    "total_electors": 175905,
+    "votes_polled": 121972,
+    "votes_counted": 17515,
+    "valid_votes": 17515,
+    "rounds_completed": 12,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:35:32.808891+00:00"
   },
   "candidates_2026": [
-    {
-      "name": "Suresh Ettikunnel",
-      "party": "BDJS",
-      "alliance": "NDA",
-      "votes": 3158,
-      "percentage": 1.77,
-      "is_winner": false,
-      "is_leading": true
-    },
-    {
-      "name": "M.M.Scaria",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 1261,
-      "percentage": 0.71,
-      "is_winner": false,
-      "is_leading": false
-    },
     {
       "name": "Adv. Mons Joseph",
       "party": "KEC",
       "alliance": "UDF",
-      "votes": 1147,
-      "percentage": 0.64,
+      "votes": 56496,
+      "percentage": 56.76,
       "is_winner": false,
-      "is_leading": false
+      "is_leading": true
     },
     {
       "name": "Nirmala Jimmy",
-      "party": "KC(M)",
+      "party": "KC_M",
       "alliance": "LDF",
-      "votes": 980,
-      "percentage": 0.55,
+      "votes": 31349,
+      "percentage": 31.49,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Indu",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 891,
-      "percentage": 0.5,
+      "name": "Suresh Ettikunnel",
+      "party": "BDJS",
+      "alliance": "NDA",
+      "votes": 9138,
+      "percentage": 9.18,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +47,8 @@
       "name": "Jijith K Joy",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 763,
-      "percentage": 0.43,
+      "votes": 1093,
+      "percentage": 1.1,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +56,26 @@
       "name": "Dominic Simon",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 566,
-      "percentage": 0.32,
+      "votes": 526,
+      "percentage": 0.53,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "M.M.Scaria",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 121,
+      "percentage": 0.12,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Indu",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 111,
+      "percentage": 0.11,
       "is_winner": false,
       "is_leading": false
     }
@@ -90,7 +90,7 @@
     },
     {
       "candidate": "Stephen George",
-      "party": "KC(M)",
+      "party": "KEC(M)",
       "votes": 55410,
       "percentage": 42.17,
       "is_winner": false

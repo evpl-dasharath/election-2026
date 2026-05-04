@@ -1,0 +1,147 @@
+{
+  "constituency": {
+    "id": 8,
+    "number": 8,
+    "name": "TALIPARAMBA",
+    "district": "Kannur"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 232280,
+    "votes_polled": 188170,
+    "votes_counted": 11791,
+    "valid_votes": 11791,
+    "rounds_completed": 7,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:22:14.497057+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "T K Govindan Master",
+      "party": "IND_UDF",
+      "alliance": "UDF",
+      "votes": 41521,
+      "percentage": 52.82,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "P. K. Shyamala",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 28659,
+      "percentage": 36.46,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "N. Haridas",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 6105,
+      "percentage": 7.77,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Koyyam Janardhanan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 555,
+      "percentage": 0.71,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Anappally Gopalan",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 394,
+      "percentage": 0.5,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "T. K. Govindan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 273,
+      "percentage": 0.35,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Abdul Salam K P",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 140,
+      "percentage": 0.18,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Shyamala P",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 108,
+      "percentage": 0.14,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Khamaruddeen C V",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 106,
+      "percentage": 0.13,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "C Balakrishnan Yadav",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 87,
+      "percentage": 0.11,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "M V GOVINDAN MASTER",
+      "party": "CPI(M)",
+      "votes": 92870,
+      "percentage": 52.14,
+      "is_winner": true
+    },
+    {
+      "candidate": "ADV. V P ABDUL RASHEED",
+      "party": "INC",
+      "votes": 70181,
+      "percentage": 39.4,
+      "is_winner": false
+    },
+    {
+      "candidate": "A P GANGADHARAN",
+      "party": "BJP",
+      "votes": 13058,
+      "percentage": 7.33,
+      "is_winner": false
+    },
+    {
+      "candidate": "SHIJITH K O P",
+      "party": "IND",
+      "votes": 508,
+      "percentage": 0.29,
+      "is_winner": false
+    },
+    {
+      "candidate": "ABDUL RASHEED S/o ISMAIL",
+      "party": "IND",
+      "votes": 365,
+      "percentage": 0.2,
+      "is_winner": false
+    }
+  ]
+}

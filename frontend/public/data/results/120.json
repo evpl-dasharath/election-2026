@@ -5,14 +5,32 @@
     "name": "PATHANAPURAM",
     "district": "Kollam"
   },
-  "live_result": null,
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 179783,
+    "votes_polled": 135142,
+    "votes_counted": 0,
+    "valid_votes": 0,
+    "rounds_completed": 11,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:49.478377+00:00"
+  },
   "candidates_2026": [
     {
+      "name": "Jyothikumar chamakkala",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 52298,
+      "percentage": 49.37,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
       "name": "K. B. Ganesh Kumar",
-      "party": "KC(B)",
+      "party": "KC_B",
       "alliance": "LDF",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 46613,
+      "percentage": 44.01,
       "is_winner": false,
       "is_leading": false
     },
@@ -20,44 +38,8 @@
       "name": "Anil Pilla",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Jyothikumar chamakkala",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Aneesh Aneesh",
-      "party": "Anna DHRM",
-      "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Genash Kumar",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Jyothish Kumar M",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 5240,
+      "percentage": 4.95,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +47,35 @@
       "name": "Vipinkumar V",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 441,
+      "percentage": 0.42,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Genash Kumar",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 428,
+      "percentage": 0.4,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Aneesh Aneesh",
+      "party": "Anna DHRM",
+      "alliance": "OTH",
+      "votes": 226,
+      "percentage": 0.21,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Jyothish Kumar M",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 198,
+      "percentage": 0.19,
       "is_winner": false,
       "is_leading": false
     }
@@ -74,7 +83,7 @@
   "results_2021": [
     {
       "candidate": "K.B. GANESH KUMAR",
-      "party": "KC(B)",
+      "party": "KEC(B)",
       "votes": 67276,
       "percentage": 49.09,
       "is_winner": true

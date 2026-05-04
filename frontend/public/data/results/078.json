@@ -7,30 +7,30 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 238116,
-    "votes_polled": 151432,
-    "votes_counted": 30497,
-    "valid_votes": 152488,
-    "rounds_completed": 4,
-    "total_rounds": 20,
-    "last_updated": "2026-05-01T01:57:17.184772+00:00"
+    "total_electors": 191646,
+    "votes_polled": 157073,
+    "votes_counted": 10409,
+    "valid_votes": 10409,
+    "rounds_completed": 10,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:10.205481+00:00"
   },
   "candidates_2026": [
     {
-      "name": "K.B.Satheesan",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 17839,
-      "percentage": 11.7,
+      "name": "Adv. V. D. Satheesan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 46954,
+      "percentage": 47.37,
       "is_winner": false,
       "is_leading": true
     },
     {
-      "name": "V.M. Faisal",
-      "party": "SDPI",
-      "alliance": "OTH",
-      "votes": 3352,
-      "percentage": 2.2,
+      "name": "E. T. Taison Master",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 37913,
+      "percentage": 38.25,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,17 @@
       "name": "Vathsala Prasanna Kumar",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 2938,
-      "percentage": 1.93,
+      "votes": 12766,
+      "percentage": 12.88,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "V.M. Faisal",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 487,
+      "percentage": 0.49,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +56,17 @@
       "name": "P.K.Rajesh",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 1839,
-      "percentage": 1.21,
+      "votes": 195,
+      "percentage": 0.2,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K.B.Satheesan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 120,
+      "percentage": 0.12,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,26 +74,8 @@
       "name": "G.Gokuldev",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 1765,
-      "percentage": 1.16,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "E. T. Taison Master",
-      "party": "CPI",
-      "alliance": "LDF",
-      "votes": 1752,
-      "percentage": 1.15,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Adv. V. D. Satheesan",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 1419,
-      "percentage": 0.93,
+      "votes": 105,
+      "percentage": 0.11,
       "is_winner": false,
       "is_leading": false
     }

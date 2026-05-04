@@ -7,57 +7,30 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 235711,
-    "votes_polled": 158287,
-    "votes_counted": 8334,
-    "valid_votes": 158363,
-    "rounds_completed": 1,
-    "total_rounds": 19,
-    "last_updated": "2026-05-01T02:04:03.188897+00:00"
+    "total_electors": 165272,
+    "votes_polled": 127127,
+    "votes_counted": 7074,
+    "valid_votes": 7074,
+    "rounds_completed": 10,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:49.247868+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. V.K Prasanth",
-      "party": "CPI(M)",
+      "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 2163,
-      "percentage": 1.37,
+      "votes": 25167,
+      "percentage": 34.66,
       "is_winner": false,
       "is_leading": true
     },
     {
-      "name": "Prasanth. K S/o. Karunakaran.C",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 1352,
-      "percentage": 0.85,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "N. Murali",
-      "party": "BSP",
-      "alliance": "OTH",
-      "votes": 1054,
-      "percentage": 0.67,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Emil B.S",
-      "party": "SUCI",
-      "alliance": "OTH",
-      "votes": 964,
-      "percentage": 0.61,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Sreekantan Nair V",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 901,
-      "percentage": 0.57,
+      "name": "K. Muraleedharan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 24959,
+      "percentage": 34.38,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +38,44 @@
       "name": "R. Sreelekha",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 772,
-      "percentage": 0.49,
+      "votes": 21749,
+      "percentage": 29.96,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "N. Murali",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 182,
+      "percentage": 0.25,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Prasanth. K S/o. Karunakaran.C",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 75,
+      "percentage": 0.1,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Emil B.S",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 63,
+      "percentage": 0.09,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sreekantan Nair V",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 36,
+      "percentage": 0.05,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,17 +83,8 @@
       "name": "Muralidharan. P S/o. K. Ponnan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 685,
-      "percentage": 0.43,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "K. Muraleedharan",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 402,
-      "percentage": 0.25,
+      "votes": 34,
+      "percentage": 0.05,
       "is_winner": false,
       "is_leading": false
     }

@@ -1,9 +1,10 @@
 import { useState, useMemo, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useStateSummary, useConstituencies, useParties } from '../hooks/useElectionData';
+import { useStateSummary, useConstituencies, useParties, useRtdbConnected } from '../hooks/useElectionData';
+import { usePinnedSeats } from '../hooks/usePinnedSeats';
 import type { Alliance, Region, ConstituencyListItem } from '../types';
 import GlobalHeader from '../components/GlobalHeader';
-import { partyAbbr } from '../utils/partyAbbr';
+import { partyAbbr, partyDisplay } from '../utils/partyAbbr';
 import {
   ALLIANCE_COLORS, PURE_IND_COLOR,
   resolvePartyColor, resolveCardBg,
@@ -54,17 +55,33 @@ export default function HomePage() {
   const { data: summary } = useStateSummary();
   const { data: constituencies, loading: loadingConst } = useConstituencies();
   const { data: parties } = useParties();
+  const rtdbConnected = useRtdbConnected();
+  const [offlineDismissed, setOfflineDismissed] = useState<boolean>(false);
+
+  // Auto-clear dismiss flag when we reconnect
+  useEffect(() => { if (rtdbConnected) setOfflineDismissed(false); }, [rtdbConnected]);
+
+  const showOfflineBanner = !rtdbConnected && !offlineDismissed;
 
   const [activeRegion, setActiveRegion] = useState<Region | null>(null);
   const [activeDistrict, setActiveDistrict] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [activeResultFilter, setActiveResultFilter] = useState<string | null>(null);
+  // 'inplay' is the default mode during counting; 'results' after all are declared
+  const [filterMode, setFilterMode] = useState<'inplay' | 'results'>('inplay');
+
+  const { pinned, toggle, isPinned } = usePinnedSeats();
+  const pinnedConstituencies = useMemo(
+    () => pinned.map(id => constituencies.find(c => c.id === Number(id))).filter(Boolean) as ConstituencyListItem[],
+    [pinned, constituencies]
+  );
 
   const STRONG_MARGIN = 10_000; // votes — "strong lead"
   const LEAN_MARGIN   = 3_000;  // votes — "lean lead" (below this = bare)
 
   // ── Derived data ────
   const totalSeats = summary?.total_constituencies || 140;
+  const declared = summary?.results_declared || 0;
 
   const indWon     = summary?.ind_summary?.won     || 0;
   const indLeading = summary?.ind_summary?.leading || 0;
@@ -89,16 +106,31 @@ export default function HomePage() {
     constituencies.filter(c => c.status === 'IN_PROGRESS' || c.status === 'RESULT_DECLARED').length
   , [constituencies]);
   const countingPct = totalSeats > 0 ? (seatsActive / totalSeats) * 100 : 0;
+  // Auto-switch to Results tab once every seat is declared
+  const allDeclared = declared >= totalSeats && totalSeats > 0;
+  useEffect(() => {
+    if (allDeclared) setFilterMode('results');
+  }, [allDeclared]);
+  // Clear the active chip whenever the mode changes
+  useEffect(() => { setActiveResultFilter(null); }, [filterMode]);
 
   const statusLabel = useMemo(() => {
-    if (countingPct === 0) return { text: 'Awaiting results', color: '' };
+    if (seatsActive === 0) return { text: 'Awaiting results', color: '' };
+    const color = leading.name === 'LDF' ? 'text-ldf' : leading.name === 'UDF' ? 'text-udf' : 'text-nda';
     if (hasMajority) {
-      const verb = countingPct >= 90 ? 'wins majority' : countingPct >= 60 ? 'heading for majority' : countingPct >= 25 ? 'on course for majority' : 'early majority trend';
-      return { text: `${leading.name} ${verb}`, color: leading.name === 'LDF' ? 'text-ldf' : leading.name === 'UDF' ? 'text-udf' : 'text-nda' };
+      if (declared >= totalSeats) return { text: `${leading.name} wins with ${leading.seats} seats`, color };
+      if (declared >= 106)        return { text: `${leading.name} wins majority`, color };
+      if (declared >= 85)         return { text: `${leading.name} heading for majority`, color };
+      if (declared >= 36)         return { text: `${leading.name} on course for majority`, color };
+      return                             { text: `${leading.name} — early majority trend`, color };
     }
-    const phase = countingPct < 25 ? 'early trends' : countingPct < 60 ? 'mid-count trends' : countingPct < 90 ? 'near-final trends' : 'final results';
-    return { text: `Hung Assembly — ${phase}`, color: '' };
-  }, [countingPct, hasMajority, leading]);
+    // No majority
+    if (declared >= totalSeats) return { text: 'Hung Assembly', color: '' };
+    if (declared >= 106)        return { text: 'Hung assembly near-certain', color: '' };
+    if (declared >= 85)         return { text: 'Hung assembly likely', color: '' };
+    if (declared >= 36)         return { text: 'Trends indicate hung assembly', color: '' };
+    return                             { text: 'Early trends', color: '' };
+  }, [declared, seatsActive, totalSeats, hasMajority, leading]);
 
   // Party breakdown for bar — each party is its own segment
   const partyBreakdown = useMemo(() => {
@@ -113,10 +145,20 @@ export default function HomePage() {
         bd[code].count++;
       }
     });
-    const order: Record<string, number> = { LDF: 1, UDF: 2, NDA: 3, OTH: 4, IND: 5 };
+    // Sort: LDF → NDA → OTH (non-IND) → IND/supported → UDF
+    // IND parties have alliance=OTH — give pure IND and supported-IND a sub-order within OTH
+    const allianceOrder = (p: { alliance: string; party: string }): number => {
+      if (p.alliance === 'LDF') return 1;
+      if (p.alliance === 'NDA') return 2;
+      if (p.alliance === 'OTH' && !isRawIND(p.party) && !isSupportedIND(p.party)) return 3;
+      if (isSupportedIND(p.party)) return 4;
+      if (isRawIND(p.party)) return 5;
+      if (p.alliance === 'UDF') return 6;
+      return 7;
+    };
     return Object.entries(bd)
       .map(([party, d]) => ({ party, ...d }))
-      .sort((a, b) => (order[a.alliance] ?? 4) - (order[b.alliance] ?? 4) || b.count - a.count);
+      .sort((a, b) => allianceOrder(a) - allianceOrder(b) || b.count - a.count);
   }, [constituencies, parties]);
 
   // ── Filtering ────
@@ -135,39 +177,83 @@ export default function HomePage() {
       if (!activeDistrict && activeRegion && c.region !== activeRegion) return false;
       if (searchTerm) {
         const s = searchTerm.toLowerCase();
-        if (!c.name.toLowerCase().includes(s) && !c.district.toLowerCase().includes(s)) return false;
+        if (!c.name.toLowerCase().includes(s)) return false;
       }
       if (activeResultFilter) {
-        const margin = (c.leader && c.runner_up) ? c.leader.votes - c.runner_up.votes : null;
-        const al = c.leader?.alliance;
-        const isDone = c.status === 'RESULT_DECLARED';
-        const isLive = c.status === 'IN_PROGRESS';
-        switch (activeResultFilter) {
-          // Strong lead: margin > STRONG_MARGIN
-          case 'ldf_strong': return isLive && al === 'LDF' && margin !== null && margin > STRONG_MARGIN;
-          case 'udf_strong': return isLive && al === 'UDF' && margin !== null && margin > STRONG_MARGIN;
-          case 'nda_strong': return isLive && al === 'NDA' && margin !== null && margin > STRONG_MARGIN;
-          // Lean lead: LEAN_MARGIN < margin <= STRONG_MARGIN
-          case 'ldf_lean':   return isLive && al === 'LDF' && margin !== null && margin > LEAN_MARGIN && margin <= STRONG_MARGIN;
-          case 'udf_lean':   return isLive && al === 'UDF' && margin !== null && margin > LEAN_MARGIN && margin <= STRONG_MARGIN;
-          case 'nda_lean':   return isLive && al === 'NDA' && margin !== null && margin > LEAN_MARGIN && margin <= STRONG_MARGIN;
-          // Bare lead: margin <= LEAN_MARGIN
-          case 'ldf_bare':   return isLive && al === 'LDF' && margin !== null && margin <= LEAN_MARGIN;
-          case 'udf_bare':   return isLive && al === 'UDF' && margin !== null && margin <= LEAN_MARGIN;
-          case 'nda_bare':   return isLive && al === 'NDA' && margin !== null && margin <= LEAN_MARGIN;
-          // Cross-alliance bare (any alliance barely leading)
-          case 'all_bare':   return isLive && margin !== null && margin <= LEAN_MARGIN;
-          default: break;
+        const winAl  = c.leader?.alliance;
+        const sittAl = c.sitting_alliance;
+        const margin = c.leader && c.runner_up ? c.leader.votes - c.runner_up.votes : null;
+        const hasResult = c.status === 'RESULT_DECLARED' || (c.status === 'IN_PROGRESS' && winAl);
+
+        if (filterMode === 'inplay') {
+          // ── In Play: cross-alliance quick filters ──────────────────────────
+          if (activeResultFilter === 'all_bare') {
+            return c.status === 'IN_PROGRESS' && margin !== null && margin < LEAN_MARGIN && !!winAl;
+          }
+          if (activeResultFilter === 'all_leading') {
+            return c.status === 'IN_PROGRESS' && !!winAl;
+          }
+          if (activeResultFilter === 'all_won') {
+            return c.status === 'RESULT_DECLARED';
+          }
+          // ── Per-alliance margin filters (only IN_PROGRESS) ────────────────
+          if (c.status !== 'IN_PROGRESS') return false;
+          if (!winAl) return false;
+          // Parse filter key: e.g. 'ldf_strong', 'udf_lean', 'nda_bare'
+          const [fAl, fBucket] = activeResultFilter.split('_');
+          const alUpper = fAl.toUpperCase();
+          if (winAl !== alUpper) return false;
+          if (margin === null) return false;
+          if (fBucket === 'strong') return margin >= STRONG_MARGIN;
+          if (fBucket === 'lean')   return margin >= LEAN_MARGIN && margin < STRONG_MARGIN;
+          if (fBucket === 'bare')   return margin < LEAN_MARGIN;
+          return true;
+        } else {
+          // ── Results: Held / Gained / Lost ───────────────────────────────
+          switch (activeResultFilter) {
+            case 'ldf_held':    return hasResult && winAl === 'LDF' && sittAl === 'LDF';
+            case 'ldf_gained':  return hasResult && winAl === 'LDF' && sittAl !== 'LDF';
+            case 'ldf_lost':    return hasResult && winAl !== 'LDF' && sittAl === 'LDF';
+            case 'udf_held':    return hasResult && winAl === 'UDF' && sittAl === 'UDF';
+            case 'udf_gained':  return hasResult && winAl === 'UDF' && sittAl !== 'UDF';
+            case 'udf_lost':    return hasResult && winAl !== 'UDF' && sittAl === 'UDF';
+            case 'nda_held':    return hasResult && winAl === 'NDA' && sittAl === 'NDA';
+            case 'nda_gained':  return hasResult && winAl === 'NDA' && sittAl !== 'NDA';
+            case 'nda_lost':    return hasResult && winAl !== 'NDA' && sittAl === 'NDA';
+            default: break;
+          }
         }
       }
       return true;
     });
-  }, [constituencies, activeRegion, activeDistrict, searchTerm, activeResultFilter, STRONG_MARGIN, LEAN_MARGIN]);
+  }, [constituencies, activeRegion, activeDistrict, searchTerm, activeResultFilter, filterMode, STRONG_MARGIN, LEAN_MARGIN]);
 
   // ── Render ──────────────────────────────────────────────
   return (
     <div className="flex flex-col min-h-screen bg-pagebg text-ink">
       <GlobalHeader />
+      {/* ── OFFLINE BANNER ── */}
+      {showOfflineBanner && (
+        <div style={{
+          background: '#1C1917',
+          borderBottom: '2px solid #78350F',
+          padding: '8px 16px',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '10px',
+          flexShrink: 0,
+        }}>
+          <span style={{ fontSize: 14, flexShrink: 0 }}>⚠️</span>
+          <span style={{ fontSize: 12, color: '#FDE68A', flex: 1 }}>
+            <strong style={{ color: '#FCD34D' }}>Live connection lost.</strong>{' '}
+            Showing last known results — will refresh automatically when reconnected.
+          </span>
+          <button
+            onClick={() => setOfflineDismissed(true)}
+            style={{ fontSize: 11, color: '#A16207', background: 'transparent', border: 'none', cursor: 'pointer', padding: '2px 6px' }}
+          >Dismiss</button>
+        </div>
+      )}
 
       {/* ── HERO SUMMARY ── */}
       <div className="bg-surface px-4 md:px-8 pt-4 md:pt-6 pb-4 md:pb-5 border-b border-pageborder shrink-0">
@@ -176,7 +262,11 @@ export default function HomePage() {
           <div className="text-[16px] text-ink2">
             <span className={`font-bold ${statusLabel.color}`}>{statusLabel.text}</span>
             <span className="text-pageborder mx-3">|</span>
-            <span className="font-medium text-ink2">{summary?.results_declared || 0} of {totalSeats} seats declared</span>
+            <span className="font-medium text-ink2">
+              {seatsActive > 0
+                ? <>{summary?.results_declared || 0} declared · {seatsActive} of {totalSeats} counting</>
+                : <>0 of {totalSeats} seats counting</>}
+            </span>
           </div>
         </div>
 
@@ -362,78 +452,231 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* ── RESULT TYPE FILTER ── */}
-      <div className="bg-surface px-4 md:px-8 py-2 border-b border-pageborder flex items-center gap-3 overflow-x-auto custom-scrollbar">
-        <span className="text-[10px] font-bold tracking-widest uppercase text-ink2 shrink-0">In Play</span>
+      {/* ── FILTER MODE TABS + CHIPS ── */}
+      <div className="bg-surface border-b border-pageborder">
 
-        {(['LDF', 'UDF', 'NDA'] as const).map((al, gi) => {
-          const color = ALLIANCE_COLORS[al];
-          // Strong/Lean/Bare — all live (IN_PROGRESS) only, Won excluded
-          const chips = [
-            { key: `${al.toLowerCase()}_strong`, label: `${al} Strong`, icon: '▲▲', title: `${al} leading by >10,000 votes` },
-            { key: `${al.toLowerCase()}_lean`,   label: `${al} Lean`,   icon: '▲',  title: `${al} leading by 3,000–10,000 votes` },
-            { key: `${al.toLowerCase()}_bare`,   label: `${al} Bare`,   icon: '~',  title: `${al} leading by <3,000 votes` },
-          ];
-          return (
-            <div key={al} className={`flex items-center gap-1.5 ${gi > 0 ? 'border-l border-pageborder pl-3' : ''}`}>
-              {chips.map(ch => {
-                const isActive = activeResultFilter === ch.key;
-                return (
-                  <button
-                    key={ch.key}
-                    title={ch.title}
-                    onClick={() => setActiveResultFilter(isActive ? null : ch.key)}
-                    className="text-[11px] font-semibold px-2.5 py-1 rounded-full border transition-all duration-150 whitespace-nowrap shrink-0"
-                    style={{
-                      borderColor: isActive ? color : `${color}55`,
-                      background: isActive ? color : 'transparent',
-                      color: isActive ? '#fff' : color,
-                    }}
-                  >
-                    <span style={{ fontSize: '9px', opacity: 0.85 }}>{ch.icon}</span> {ch.label}
-                  </button>
-                );
-              })}
-            </div>
-          );
-        })}
-
-        {/* Cross-alliance: any seat barely in play */}
-        <div className="border-l border-pageborder pl-3 shrink-0">
+        {/* Mode tabs */}
+        <div className="flex items-center px-4 md:px-8 pt-2 gap-0 border-b border-pageborder">
           <button
-            title="All alliances with bare lead (<3,000 votes) — most contested seats"
-            onClick={() => setActiveResultFilter(activeResultFilter === 'all_bare' ? null : 'all_bare')}
-            className="text-[11px] font-semibold px-2.5 py-1 rounded-full border transition-all duration-150 whitespace-nowrap"
+            onClick={() => { setFilterMode('inplay'); setActiveResultFilter(null); }}
+            className="text-[11px] font-bold tracking-widest uppercase px-4 py-2 border-b-2 transition-all duration-150"
             style={{
-              borderColor: activeResultFilter === 'all_bare' ? '#F59E0B' : '#F59E0B88',
-              background: activeResultFilter === 'all_bare' ? '#F59E0B' : 'transparent',
-              color: activeResultFilter === 'all_bare' ? '#fff' : '#B45309',
+              borderBottomColor: filterMode === 'inplay' ? '#1A1611' : 'transparent',
+              color: filterMode === 'inplay' ? '#1A1611' : '#9CA3AF',
             }}
           >
-            ⚡ All Bare
+            In Play
           </button>
+          <button
+            onClick={() => { setFilterMode('results'); setActiveResultFilter(null); }}
+            className="text-[11px] font-bold tracking-widest uppercase px-4 py-2 border-b-2 transition-all duration-150"
+            style={{
+              borderBottomColor: filterMode === 'results' ? '#1A1611' : 'transparent',
+              color: filterMode === 'results' ? '#1A1611' : '#9CA3AF',
+            }}
+          >
+            Results
+            {allDeclared && <span className="ml-1.5 text-[8px] bg-green-600 text-white px-1.5 py-0.5 rounded-full">ALL IN</span>}
+          </button>
+          {activeResultFilter && (
+            <button
+              onClick={() => setActiveResultFilter(null)}
+              className="ml-auto text-[11px] text-ink2 hover:text-ink underline shrink-0"
+            >Clear</button>
+          )}
         </div>
 
-        {activeResultFilter && (
-          <button
-            onClick={() => setActiveResultFilter(null)}
-            className="ml-auto shrink-0 text-[11px] text-ink2 hover:text-ink underline"
-          >
-            Clear
-          </button>
+        {/* In Play chips */}
+        {filterMode === 'inplay' && (
+          <div className="flex flex-col gap-1 px-4 md:px-8 py-2 overflow-x-auto custom-scrollbar">
+
+            {/* ── Row 1: Cross-alliance summary chips ── */}
+            <div className="flex items-center gap-2">
+              <span className="text-[9px] font-bold tracking-widest uppercase text-ink2 shrink-0 w-14">All</span>
+              {([
+                {
+                  key: 'all_leading',
+                  label: 'Leading',
+                  icon: '▶',
+                  title: 'All seats still being counted (any lead)',
+                  count: constituencies.filter(c => c.status === 'IN_PROGRESS' && !!c.leader).length,
+                  color: '#1A1611',
+                },
+                {
+                  key: 'all_bare',
+                  label: 'Bare leads',
+                  icon: '≈',
+                  title: `Any alliance leading by < ${(LEAN_MARGIN/1000).toFixed(0)}k votes`,
+                  count: constituencies.filter(c => {
+                    const m = c.leader && c.runner_up ? c.leader.votes - c.runner_up.votes : null;
+                    return c.status === 'IN_PROGRESS' && m !== null && m < LEAN_MARGIN && !!c.leader;
+                  }).length,
+                  color: '#DC2626',
+                },
+                {
+                  key: 'all_won',
+                  label: 'Won',
+                  icon: '✓',
+                  title: 'Seats already declared (counting complete)',
+                  count: constituencies.filter(c => c.status === 'RESULT_DECLARED').length,
+                  color: '#15803D',
+                },
+              ].map(chip => {
+                const isActive = activeResultFilter === chip.key;
+                return (
+                  <button
+                    key={chip.key}
+                    title={chip.title}
+                    onClick={() => setActiveResultFilter(isActive ? null : chip.key)}
+                    className="text-[11px] font-semibold px-2.5 py-1 rounded-full border transition-all duration-150 whitespace-nowrap shrink-0 flex items-center gap-1"
+                    style={{
+                      borderColor: isActive ? chip.color : `${chip.color}55`,
+                      background: isActive ? chip.color : 'transparent',
+                      color: isActive ? '#fff' : chip.color,
+                    }}
+                  >
+                    <span style={{ fontSize: '9px', opacity: 0.85 }}>{chip.icon}</span>
+                    {chip.label}
+                    {chip.count > 0 && <span style={{ fontSize: '9px', fontWeight: 800, opacity: isActive ? 0.9 : 0.7 }}>{chip.count}</span>}
+                  </button>
+                );
+              }))}
+            </div>
+
+
+            {/* ── Row 2: Per-alliance margin chips ── */}
+            <div className="flex items-center gap-2">
+            {(['LDF', 'UDF', 'NDA'] as const).map((al, gi) => {
+              const color = ALLIANCE_COLORS[al];
+              const chips = [
+                { key: `${al.toLowerCase()}_strong`, label: 'Strong', icon: '⬆', title: `${al} leading by >${(STRONG_MARGIN/1000).toFixed(0)}k votes` },
+                { key: `${al.toLowerCase()}_lean`,   label: 'Lean',   icon: '↑',  title: `${al} leading by ${(LEAN_MARGIN/1000).toFixed(0)}k–${(STRONG_MARGIN/1000).toFixed(0)}k votes` },
+                { key: `${al.toLowerCase()}_bare`,   label: 'Bare',   icon: '≈',  title: `${al} barely ahead (< ${(LEAN_MARGIN/1000).toFixed(0)}k votes)` },
+              ];
+              // Counts — IN_PROGRESS only (seats still being counted, not yet declared)
+              const strongN = constituencies.filter(c => {
+                const m = c.leader && c.runner_up ? c.leader.votes - c.runner_up.votes : null;
+                return c.status === 'IN_PROGRESS' && c.leader?.alliance === al && m !== null && m >= STRONG_MARGIN;
+              }).length;
+              const leanN = constituencies.filter(c => {
+                const m = c.leader && c.runner_up ? c.leader.votes - c.runner_up.votes : null;
+                return c.status === 'IN_PROGRESS' && c.leader?.alliance === al && m !== null && m >= LEAN_MARGIN && m < STRONG_MARGIN;
+              }).length;
+              const bareN = constituencies.filter(c => {
+                const m = c.leader && c.runner_up ? c.leader.votes - c.runner_up.votes : null;
+                return c.status === 'IN_PROGRESS' && c.leader?.alliance === al && m !== null && m < LEAN_MARGIN;
+              }).length;
+              const counts = [strongN, leanN, bareN];
+              return (
+                <div key={al} className={`flex items-center gap-1.5 ${gi > 0 ? 'border-l border-pageborder pl-3' : ''}`}>
+                  <span className="text-[10px] font-bold shrink-0" style={{ color }}>{al}</span>
+                  {chips.map((ch, ci) => {
+                    const isActive = activeResultFilter === ch.key;
+                    const n = counts[ci];
+                    return (
+                      <button
+                        key={ch.key}
+                        title={ch.title}
+                        onClick={() => setActiveResultFilter(isActive ? null : ch.key)}
+                        className="text-[11px] font-semibold px-2.5 py-1 rounded-full border transition-all duration-150 whitespace-nowrap shrink-0 flex items-center gap-1"
+                        style={{
+                          borderColor: isActive ? color : `${color}55`,
+                          background: isActive ? color : 'transparent',
+                          color: isActive ? '#fff' : color,
+                        }}
+                      >
+                        <span style={{ fontSize: '9px', opacity: 0.85 }}>{ch.icon}</span>
+                        {ch.label}
+                        {n > 0 && <span style={{ fontSize: '9px', fontWeight: 800, opacity: isActive ? 0.9 : 0.7 }}>{n}</span>}
+                      </button>
+                    );
+                  })}
+                </div>
+              );
+            })}
+            </div>
+          </div>
         )}
+
+
+
+
+        {/* Results chips */}
+        {filterMode === 'results' && (
+          <div className="flex items-center gap-2 px-4 md:px-8 py-2 overflow-x-auto custom-scrollbar">
+            {(['LDF', 'UDF', 'NDA'] as const).map((al, gi) => {
+              const color = ALLIANCE_COLORS[al];
+              const chips = [
+                { key: `${al.toLowerCase()}_held`,   label: 'Held',   icon: '=',  title: `${al} retained seat from 2021` },
+                { key: `${al.toLowerCase()}_gained`, label: 'Gained', icon: '↑',  title: `${al} flipped from another alliance` },
+                { key: `${al.toLowerCase()}_lost`,   label: 'Lost',   icon: '↓',  title: `${al} lost seat it held in 2021` },
+              ];
+              return (
+                <div key={al} className={`flex items-center gap-1.5 ${gi > 0 ? 'border-l border-pageborder pl-3' : ''}`}>
+                  {chips.map(ch => {
+                    const isActive = activeResultFilter === ch.key;
+                    return (
+                      <button
+                        key={ch.key}
+                        title={ch.title}
+                        onClick={() => setActiveResultFilter(isActive ? null : ch.key)}
+                        className="text-[11px] font-semibold px-2.5 py-1 rounded-full border transition-all duration-150 whitespace-nowrap shrink-0"
+                        style={{
+                          borderColor: isActive ? color : `${color}55`,
+                          background: isActive ? color : 'transparent',
+                          color: isActive ? '#fff' : color,
+                        }}
+                      >
+                        <span style={{ fontSize: '9px', opacity: 0.85 }}>{ch.icon}</span> {ch.label}
+                      </button>
+                    );
+                  })}
+                </div>
+              );
+            })}
+          </div>
+        )}
+
       </div>
 
       {/* ── CONSTITUENCY CARD GRID ── */}
       <div className="flex-1 overflow-y-auto custom-scrollbar px-4 md:px-6 py-4">
+        {/* ── PINNED SEATS SECTION ── */}
+        {pinnedConstituencies.length > 0 && (
+          <div className="mb-6">
+            <div className="flex items-center gap-2 mb-3">
+              <span className="text-[11px] font-bold tracking-widest uppercase text-ink2">📌 Pinned</span>
+              <span className="text-[10px] text-ink2 opacity-60">{pinnedConstituencies.length}/10</span>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 300px), 1fr))', gap: '12px' }}>
+              {pinnedConstituencies.map(c => (
+                <ConstituencyCard
+                  key={c.id}
+                  c={c}
+                  onClick={() => navigate(`/constituency/${c.id}`)}
+                  isPinned={true}
+                  onPinToggle={e => { e.stopPropagation(); toggle(String(c.id)); }}
+                />
+              ))}
+            </div>
+            <div className="mt-4 border-b border-pageborder" />
+          </div>
+        )}
+
         {loadingConst ? (
           <div className="text-center text-ink2 py-16">Loading constituencies...</div>
         ) : filteredConstituencies.length === 0 ? (
           <div className="text-center text-ink2 py-16 text-[14px]">No constituencies match your filters</div>
         ) : (
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 300px), 1fr))', gap: '12px' }}>
-            {filteredConstituencies.map(c => (
-              <ConstituencyCard key={c.id} c={c} onClick={() => navigate(`/constituency/${c.id}`)} />
+            {filteredConstituencies.filter(c => !isPinned(String(c.id))).map(c => (
+              <ConstituencyCard
+                key={c.id}
+                c={c}
+                onClick={() => navigate(`/constituency/${c.id}`)}
+                isPinned={isPinned(String(c.id))}
+                onPinToggle={e => { e.stopPropagation(); toggle(String(c.id)); }}
+              />
             ))}
           </div>
         )}
@@ -463,7 +706,14 @@ export default function HomePage() {
 }
 
 // ── Constituency Card Component ────────────────────────────
-function ConstituencyCard({ c, onClick }: { c: ConstituencyListItem; onClick: () => void }) {
+function ConstituencyCard({
+  c, onClick, isPinned = false, onPinToggle,
+}: {
+  c: ConstituencyListItem;
+  onClick: () => void;
+  isPinned?: boolean;
+  onPinToggle?: (e: React.MouseEvent) => void;
+}) {
   const isLive = c.status === 'IN_PROGRESS';
   const isDone = c.status === 'RESULT_DECLARED';
   const countingStarted = isLive || isDone;
@@ -482,9 +732,14 @@ function ConstituencyCard({ c, onClick }: { c: ConstituencyListItem; onClick: ()
   const BARE_THRESHOLD = 3_000;
   const isClose = isLive && margin !== null && margin < BARE_THRESHOLD;
 
-  // Progress bar: leader vote % * 2 as proxy for counting progress
+  // Progress: prefer counted/polled, fallback to rounds, then proxy
   const progressPct = isDone ? 100
-    : isLive && c.leader ? Math.min(95, Math.max(6, Number(c.leader.percentage) * 2))
+    : isLive && c.votes_counted && c.votes_polled && c.votes_polled > 0
+      ? Math.min(100, Math.round((c.votes_counted / c.votes_polled) * 100))
+    : isLive && c.rounds_completed && c.total_rounds && c.total_rounds > 0
+      ? Math.round((c.rounds_completed / c.total_rounds) * 100)
+    : isLive && c.leader
+      ? Math.min(95, Math.max(6, Number(c.leader.percentage) * 2))
     : 0;
 
   const statusLabel = isDone ? 'WON' : isLive ? 'LEADING' : 'AWAITED';
@@ -525,12 +780,40 @@ function ConstituencyCard({ c, onClick }: { c: ConstituencyListItem; onClick: ()
       }}
     >
       <div className="px-3 pt-2.5 pb-2">
-        {/* Header: number + status label */}
+        {/* Header: pin + number + status label */}
         <div className="flex items-center justify-between mb-1.5">
-          <span
-            className="font-mono text-[9px]"
-            style={{ color: countingStarted ? 'rgba(255,255,255,0.5)' : '#9CA3AF' }}
-          >#{String(c.number).padStart(3, '0')}</span>
+          <div className="flex items-center gap-1">
+            {onPinToggle && (
+              <button
+                onClick={onPinToggle}
+                title={isPinned ? 'Unpin' : 'Pin this seat'}
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 3,
+                  fontSize: 10,
+                  fontWeight: 700,
+                  padding: '2px 6px',
+                  borderRadius: 99,
+                  border: 'none',
+                  cursor: 'pointer',
+                  lineHeight: 1,
+                  transition: 'all 0.15s',
+                  background: isPinned ? '#1E293B' : 'rgba(255,255,255,0.82)',
+                  color: isPinned ? '#fff' : '#6B7280',
+                  boxShadow: isPinned ? '0 1px 6px rgba(0,0,0,0.4)' : '0 1px 3px rgba(0,0,0,0.2)',
+                  backdropFilter: 'blur(4px)',
+                }}
+              >
+                <span style={{ fontSize: 11 }}>📌</span>
+                {isPinned && <span style={{ fontSize: 9 }}>Pinned</span>}
+              </button>
+            )}
+            <span
+              className="font-mono text-[9px]"
+              style={{ color: countingStarted ? 'rgba(255,255,255,0.5)' : '#9CA3AF' }}
+            >#{String(c.number).padStart(3, '0')}</span>
+          </div>
           {isClose ? (
             // BARE badge — dark semi-transparent, readable on all alliance colors
             <span
@@ -548,12 +831,23 @@ function ConstituencyCard({ c, onClick }: { c: ConstituencyListItem; onClick: ()
           )}
         </div>
 
-        {/* Constituency name */}
-        <div
-          className="text-[12px] font-bold leading-tight mb-2 truncate"
-          style={{ color: countingStarted ? 'white' : '#333' }}
-          title={c.name}
-        >{c.name}</div>
+        {/* Constituency name and 2021 seat info */}
+        <div className="mb-2">
+          <div
+            className="text-[12px] font-bold leading-tight truncate"
+            style={{ color: countingStarted ? 'white' : '#333' }}
+            title={c.name}
+          >{c.name}</div>
+          {c.sitting_alliance && (
+            <div className="mt-1 flex items-center gap-1.5" style={{ opacity: countingStarted ? 0.8 : 1 }}>
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: 3, border: `1px solid ${countingStarted ? 'rgba(255,255,255,0.3)' : (ALLIANCE_COLORS[c.sitting_alliance] || '#9CA3AF') + '40'}`, borderRadius: 12, padding: '1px 5px', background: countingStarted ? 'rgba(0,0,0,0.1)' : 'transparent' }}>
+                <div style={{ width: 4, height: 4, borderRadius: '50%', background: countingStarted ? 'white' : (ALLIANCE_COLORS[c.sitting_alliance] || '#9CA3AF'), flexShrink: 0 }} />
+                <span style={{ fontSize: 8, fontWeight: 700, color: countingStarted ? 'white' : (ALLIANCE_COLORS[c.sitting_alliance] || '#9CA3AF') }}>{c.sitting_alliance}</span>
+                <span style={{ fontSize: 8, color: countingStarted ? 'rgba(255,255,255,0.7)' : '#9CA3AF' }}>seat (2021)</span>
+              </div>
+            </div>
+          )}
+        </div>
 
         {countingStarted && c.leader ? (
           <>
@@ -584,9 +878,15 @@ function ConstituencyCard({ c, onClick }: { c: ConstituencyListItem; onClick: ()
               title={c.leader.name}
             >{c.leader.name}</div>
             <div
-              className="text-[9px] font-medium truncate mb-2"
+              className="text-[9px] font-medium truncate mb-2 flex items-center gap-1.5"
               style={{ color: 'rgba(255,255,255,0.65)' }}
-            >{c.leader.party} · {alliance}</div>
+            >
+              {partyDisplay(c.leader.party)}
+              <span
+                className="px-1 py-0 rounded text-[8px] font-bold shrink-0"
+                style={{ background: 'rgba(255,255,255,0.18)', color: 'rgba(255,255,255,0.9)' }}
+              >{alliance}</span>
+            </div>
 
             {/* Runner-up */}
             {c.runner_up && (() => {
@@ -602,13 +902,16 @@ function ConstituencyCard({ c, onClick }: { c: ConstituencyListItem; onClick: ()
                 >
                   <span className="text-[9px] font-semibold shrink-0" style={{ color: ruColor, opacity: 0.6 }}>2nd</span>
                   <span className="text-[10px] font-semibold truncate" style={{ color: ruColor }} title={c.runner_up.name}>{c.runner_up.name}</span>
-                  <span className="text-[10px] font-semibold shrink-0" style={{ color: ruColor, opacity: 0.8 }}>{c.runner_up.party} · {c.runner_up.alliance}</span>
+                  <span className="text-[10px] font-semibold shrink-0" style={{ color: ruColor, opacity: 0.8 }}>{partyDisplay(c.runner_up.party)} · {c.runner_up.alliance}</span>
                 </div>
               );
             })()}
           </>
         ) : (
-          <div className="text-[10px] italic" style={{ color: '#9CA3AF' }}>Counting begins soon</div>
+          <div className="text-[10px] italic flex items-center gap-1.5" style={{ color: '#9CA3AF' }}>
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-neutral-400/60" />
+            Not yet started
+          </div>
         )}
       </div>
 

@@ -5,23 +5,32 @@
     "name": "SHORNUR",
     "district": "Palakkad"
   },
-  "live_result": null,
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 199620,
+    "votes_polled": 157340,
+    "votes_counted": 40698,
+    "valid_votes": 40698,
+    "rounds_completed": 11,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:36:59.999732+00:00"
+  },
   "candidates_2026": [
     {
       "name": "P. Mammikkutty",
-      "party": "CPI(M)",
+      "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 66013,
+      "percentage": 43.97,
       "is_winner": false,
-      "is_leading": false
+      "is_leading": true
     },
     {
       "name": "P. Harigovindan",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 52336,
+      "percentage": 34.86,
       "is_winner": false,
       "is_leading": false
     },
@@ -29,8 +38,8 @@
       "name": "Adv. Sanku T. Das",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 29666,
+      "percentage": 19.76,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +47,8 @@
       "name": "Aboobacker",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 1239,
+      "percentage": 0.83,
       "is_winner": false,
       "is_leading": false
     }

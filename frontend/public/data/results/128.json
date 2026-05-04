@@ -7,57 +7,30 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 226249,
-    "votes_polled": 153751,
-    "votes_counted": 8849,
-    "valid_votes": 159282,
-    "rounds_completed": 1,
-    "total_rounds": 18,
-    "last_updated": "2026-05-01T02:04:22.185274+00:00"
+    "total_electors": 197945,
+    "votes_polled": 146122,
+    "votes_counted": 19010,
+    "valid_votes": 19010,
+    "rounds_completed": 11,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:53.843638+00:00"
   },
   "candidates_2026": [
     {
-      "name": "S. Sujithra",
-      "party": "BSP",
-      "alliance": "OTH",
-      "votes": 4591,
-      "percentage": 2.88,
+      "name": "O. S. Ambika",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 43504,
+      "percentage": 40.31,
       "is_winner": false,
       "is_leading": true
-    },
-    {
-      "name": "Sunitha Kilimanoor",
-      "party": "Anna DHRM",
-      "alliance": "OTH",
-      "votes": 1186,
-      "percentage": 0.74,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Jayarajan M",
-      "party": "SDPI",
-      "alliance": "OTH",
-      "votes": 1037,
-      "percentage": 0.65,
-      "is_winner": false,
-      "is_leading": false
     },
     {
       "name": "P. Sudheer",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 947,
-      "percentage": 0.59,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "O. S. Ambika",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 639,
-      "percentage": 0.4,
+      "votes": 31730,
+      "percentage": 29.4,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +38,35 @@
       "name": "Santhosh Bhadran",
       "party": "RSP",
       "alliance": "UDF",
-      "votes": 508,
-      "percentage": 0.32,
+      "votes": 29913,
+      "percentage": 27.72,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Jayarajan M",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 889,
+      "percentage": 0.82,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "S. Sujithra",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 682,
+      "percentage": 0.63,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sunitha Kilimanoor",
+      "party": "Anna DHRM",
+      "alliance": "OTH",
+      "votes": 306,
+      "percentage": 0.28,
       "is_winner": false,
       "is_leading": false
     }

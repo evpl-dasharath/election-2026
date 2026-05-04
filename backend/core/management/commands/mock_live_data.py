@@ -92,7 +92,7 @@ class Command(BaseCommand):
                         # Sort to find the leader
                         candidates.sort(key=lambda x: x.votes, reverse=True)
                         for i, cand in enumerate(candidates):
-                            cand.vote_percentage = (cand.votes / total_cand_votes) * 100
+                            cand.vote_percentage = (cand.votes / votes_polled) * 100 if votes_polled > 0 else 0
                             cand.is_leading = False
                             cand.is_winner = False
                             

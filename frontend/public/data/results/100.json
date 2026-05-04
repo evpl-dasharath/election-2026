@@ -5,23 +5,32 @@
     "name": "KANJIRAPPALLY",
     "district": "Kottayam"
   },
-  "live_result": null,
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 177500,
+    "votes_polled": 132965,
+    "votes_counted": 8209,
+    "valid_votes": 8209,
+    "rounds_completed": 10,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:35:34.766241+00:00"
+  },
   "candidates_2026": [
-    {
-      "name": "Dr. N. Jayaraj",
-      "party": "KC(M)",
-      "alliance": "LDF",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
     {
       "name": "Prof. Rony K. Baby",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 37945,
+      "percentage": 40.39,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Dr. N. Jayaraj",
+      "party": "KC_M",
+      "alliance": "LDF",
+      "votes": 34874,
+      "percentage": 37.12,
       "is_winner": false,
       "is_leading": false
     },
@@ -29,8 +38,8 @@
       "name": "Adv. George Kurian",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 20100,
+      "percentage": 21.4,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +47,8 @@
       "name": "Thampi Kavumpadam",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 445,
+      "percentage": 0.47,
       "is_winner": false,
       "is_leading": false
     }
@@ -47,7 +56,7 @@
   "results_2021": [
     {
       "candidate": "Dr.N.JAYARAJ",
-      "party": "KC(M)",
+      "party": "KEC(M)",
       "votes": 60299,
       "percentage": 43.79,
       "is_winner": true

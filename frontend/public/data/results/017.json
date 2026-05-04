@@ -7,39 +7,39 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 231066,
-    "votes_polled": 145855,
-    "votes_counted": 18731,
-    "valid_votes": 149854,
-    "rounds_completed": 3,
-    "total_rounds": 24,
-    "last_updated": "2026-05-01T02:00:11.184572+00:00"
+    "total_electors": 205415,
+    "votes_polled": 162195,
+    "votes_counted": 9308,
+    "valid_votes": 9308,
+    "rounds_completed": 11,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:36:39.372120+00:00"
   },
   "candidates_2026": [
-    {
-      "name": "P. Shyam Raj",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 9726,
-      "percentage": 6.49,
-      "is_winner": false,
-      "is_leading": true
-    },
     {
       "name": "Usha M A",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 7122,
-      "percentage": 4.75,
+      "votes": 45982,
+      "percentage": 44.37,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "O. R. Kelu",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 44102,
+      "percentage": 42.55,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "O. R. Kelu",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 1826,
-      "percentage": 1.22,
+      "name": "P. Shyam Raj",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 12932,
+      "percentage": 12.48,
       "is_winner": false,
       "is_leading": false
     }

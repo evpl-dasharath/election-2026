@@ -1,0 +1,111 @@
+{
+  "constituency": {
+    "id": 98,
+    "number": 98,
+    "name": "PUTHUPPALLY",
+    "district": "Kottayam"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 170254,
+    "votes_polled": 125545,
+    "votes_counted": 16312,
+    "valid_votes": 16312,
+    "rounds_completed": 13,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:23:18.011137+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Adv. Chandy Oommen",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 75114,
+      "percentage": 65.37,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "K. M. Radhakrishnan",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 27905,
+      "percentage": 24.29,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Raveendranath Vakathanam",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 10530,
+      "percentage": 9.16,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Paul P Chacko",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 585,
+      "percentage": 0.51,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sabu Mylakkadan",
+      "party": "JRP",
+      "alliance": "OTH",
+      "votes": 117,
+      "percentage": 0.1,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Rijomon Mathew",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 74,
+      "percentage": 0.06,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "OOMMEN CHANDY",
+      "party": "INC",
+      "votes": 63372,
+      "percentage": 48.08,
+      "is_winner": true
+    },
+    {
+      "candidate": "JAICK C THOMAS",
+      "party": "CPI(M)",
+      "votes": 54328,
+      "percentage": 41.22,
+      "is_winner": false
+    },
+    {
+      "candidate": "N HARI",
+      "party": "BJP",
+      "votes": 11694,
+      "percentage": 8.87,
+      "is_winner": false
+    },
+    {
+      "candidate": "GEORGE JOSEPH VATHAPPALLY",
+      "party": "IND",
+      "votes": 997,
+      "percentage": 0.76,
+      "is_winner": false
+    },
+    {
+      "candidate": "ABHILASH P P",
+      "party": "BSP",
+      "votes": 763,
+      "percentage": 0.58,
+      "is_winner": false
+    }
+  ]
+}

@@ -5,50 +5,41 @@
     "name": "KOVALAM",
     "district": "Thiruvananthapuram"
   },
-  "live_result": null,
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 201200,
+    "votes_polled": 151986,
+    "votes_counted": 8037,
+    "valid_votes": 8037,
+    "rounds_completed": 10,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:54.536382+00:00"
+  },
   "candidates_2026": [
-    {
-      "name": "T. N. Suresh",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
     {
       "name": "Adv. M. Vincent",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 37365,
+      "percentage": 47.76,
       "is_winner": false,
-      "is_leading": false
+      "is_leading": true
     },
     {
       "name": "Bhagat Rufus",
-      "party": "IND (CPI(M))",
+      "party": "IND_LDF",
       "alliance": "LDF",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 23354,
+      "percentage": 29.85,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Kattachalkuzhi.M.Sugathan",
-      "party": "SRP",
-      "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "N.Jayarajan",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "name": "T. N. Suresh",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 15860,
+      "percentage": 20.27,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +47,26 @@
       "name": "Manoj S.P",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 311,
+      "percentage": 0.4,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Kattachalkuzhi.M.Sugathan",
+      "party": "SRP",
+      "alliance": "OTH",
+      "votes": 254,
+      "percentage": 0.32,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "N.Jayarajan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 244,
+      "percentage": 0.31,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +74,8 @@
       "name": "Adv. Sabu.S.Philip",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 178,
+      "percentage": 0.23,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +83,8 @@
       "name": "Venganoor Ashokan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 105,
+      "percentage": 0.13,
       "is_winner": false,
       "is_leading": false
     },
@@ -83,8 +92,8 @@
       "name": "Kiran S Pillai",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 57,
+      "percentage": 0.07,
       "is_winner": false,
       "is_leading": false
     }

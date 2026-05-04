@@ -1,0 +1,102 @@
+{
+  "constituency": {
+    "id": 66,
+    "number": 66,
+    "name": "OLLUR",
+    "district": "Thrissur"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 188395,
+    "votes_polled": 149962,
+    "votes_counted": 0,
+    "valid_votes": 0,
+    "rounds_completed": 6,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:23:00.394906+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "K. Rajan",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 28400,
+      "percentage": 48.71,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Adv. Shaji J Kodankandath",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 21976,
+      "percentage": 37.7,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Bijoy Thomas",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 7370,
+      "percentage": 12.64,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "V P Prinson Avinissery",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 183,
+      "percentage": 0.31,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Edwin Babu Alapat",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 83,
+      "percentage": 0.14,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "K Rajan",
+      "party": "CPI",
+      "votes": 76657,
+      "percentage": 49.09,
+      "is_winner": true
+    },
+    {
+      "candidate": "Jose Valloor",
+      "party": "INC",
+      "votes": 55151,
+      "percentage": 35.31,
+      "is_winner": false
+    },
+    {
+      "candidate": "Adv. B Gopalakrishnan",
+      "party": "BJP",
+      "votes": 22295,
+      "percentage": 14.28,
+      "is_winner": false
+    },
+    {
+      "candidate": "K K GEORGE KAKKASSERY",
+      "party": "IND",
+      "votes": 628,
+      "percentage": 0.4,
+      "is_winner": false
+    },
+    {
+      "candidate": "Benny Kodiyatil",
+      "party": "IND",
+      "votes": 331,
+      "percentage": 0.21,
+      "is_winner": false
+    }
+  ]
+}

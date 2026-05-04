@@ -5,23 +5,32 @@
     "name": "ARANMULA",
     "district": "Pathanamthitta"
   },
-  "live_result": null,
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 215168,
+    "votes_polled": 153845,
+    "votes_counted": 8304,
+    "valid_votes": 8304,
+    "rounds_completed": 12,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:35:37.282225+00:00"
+  },
   "candidates_2026": [
     {
       "name": "Abin Varkey",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 39841,
+      "percentage": 43.12,
       "is_winner": false,
-      "is_leading": false
+      "is_leading": true
     },
     {
       "name": "Veena George",
-      "party": "CPI(M)",
+      "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 29882,
+      "percentage": 32.34,
       "is_winner": false,
       "is_leading": false
     },
@@ -29,17 +38,8 @@
       "name": "Kummanam Rajasekharan",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Omalloor Ramachandran",
-      "party": "API",
-      "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 21957,
+      "percentage": 23.76,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,14 +47,32 @@
       "name": "Prabhakaran V R",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 209,
+      "percentage": 0.23,
       "is_winner": false,
       "is_leading": false
     },
     {
       "name": "Radhamani",
       "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 114,
+      "percentage": 0.12,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Omalloor Ramachandran",
+      "party": "API",
+      "alliance": "OTH",
+      "votes": 48,
+      "percentage": 0.05,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Suresh Nooranad",
+      "party": "API",
       "alliance": "OTH",
       "votes": 0,
       "percentage": 0.0,

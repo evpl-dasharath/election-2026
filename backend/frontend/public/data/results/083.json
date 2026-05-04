@@ -1,0 +1,102 @@
+{
+  "constituency": {
+    "id": 83,
+    "number": 83,
+    "name": "THRIKKAKARA",
+    "district": "Ernakulam"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 176387,
+    "votes_polled": 139081,
+    "votes_counted": 6702,
+    "valid_votes": 6702,
+    "rounds_completed": 13,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:23:05.040216+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Uma Thomas",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 56843,
+      "percentage": 59.33,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Adv. Pushpa das",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 21574,
+      "percentage": 22.52,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Akhil Raj (Akhil Marar)",
+      "party": "TTP",
+      "alliance": "NDA",
+      "votes": 15638,
+      "percentage": 16.32,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Jose George",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 429,
+      "percentage": 0.45,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Aloysius Kollannur",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 354,
+      "percentage": 0.37,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Adv.P.T.THOMAS",
+      "party": "INC",
+      "votes": 59839,
+      "percentage": 43.82,
+      "is_winner": true
+    },
+    {
+      "candidate": "Dr.J.JACOB",
+      "party": "IND",
+      "votes": 45510,
+      "percentage": 33.32,
+      "is_winner": false
+    },
+    {
+      "candidate": "S SAJI",
+      "party": "BJP",
+      "votes": 15483,
+      "percentage": 11.34,
+      "is_winner": false
+    },
+    {
+      "candidate": "P.M.SHIBU",
+      "party": "BSP",
+      "votes": 331,
+      "percentage": 0.24,
+      "is_winner": false
+    },
+    {
+      "candidate": "RIYAS YUSUF",
+      "party": "IND",
+      "votes": 298,
+      "percentage": 0.22,
+      "is_winner": false
+    }
+  ]
+}

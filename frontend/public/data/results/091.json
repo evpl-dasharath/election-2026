@@ -5,23 +5,32 @@
     "name": "IDUKKI",
     "district": "Idukki"
   },
-  "live_result": null,
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 167822,
+    "votes_polled": 126537,
+    "votes_counted": 7988,
+    "valid_votes": 7988,
+    "rounds_completed": 13,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:19.427337+00:00"
+  },
   "candidates_2026": [
-    {
-      "name": "Roshi Augustine",
-      "party": "KC(M)",
-      "alliance": "LDF",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
     {
       "name": "Roy K. Paulose",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 60122,
+      "percentage": 55.18,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Roshi Augustine",
+      "party": "KC_M",
+      "alliance": "LDF",
+      "votes": 39518,
+      "percentage": 36.27,
       "is_winner": false,
       "is_leading": false
     },
@@ -29,8 +38,8 @@
       "name": "Adv. Pradeesh Prabha",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 7844,
+      "percentage": 7.2,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +47,8 @@
       "name": "Shijo Antony",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 845,
+      "percentage": 0.78,
       "is_winner": false,
       "is_leading": false
     }
@@ -47,7 +56,7 @@
   "results_2021": [
     {
       "candidate": "ROSHY AUGUSTINE",
-      "party": "KC(M)",
+      "party": "KEC(M)",
       "votes": 62368,
       "percentage": 47.48,
       "is_winner": true

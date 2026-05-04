@@ -1,0 +1,129 @@
+{
+  "constituency": {
+    "id": 77,
+    "number": 77,
+    "name": "KALAMASSERY",
+    "district": "Ernakulam"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 197712,
+    "votes_polled": 161313,
+    "votes_counted": 12067,
+    "valid_votes": 12067,
+    "rounds_completed": 6,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:22:59.775565+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Adv. V. E. Abdul Gafoor",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 34064,
+      "percentage": 50.23,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "P. Rajeev",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 26709,
+      "percentage": 39.38,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "M. P. Binu",
+      "party": "BDJS",
+      "alliance": "NDA",
+      "votes": 5569,
+      "percentage": 8.21,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ajmal K Mujeeb",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 462,
+      "percentage": 0.68,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Shamsu T.K",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 183,
+      "percentage": 0.27,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Siyad V A",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 145,
+      "percentage": 0.21,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "A Rajeena",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 123,
+      "percentage": 0.18,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Rajeev S/o Vareed",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 100,
+      "percentage": 0.15,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "P. RAJEEVE",
+      "party": "CPI(M)",
+      "votes": 77141,
+      "percentage": 49.49,
+      "is_winner": true
+    },
+    {
+      "candidate": "ADV. V. E. ABDUL GAFOOR",
+      "party": "IUML",
+      "votes": 61805,
+      "percentage": 39.65,
+      "is_winner": false
+    },
+    {
+      "candidate": "P. S. JAYARAJ",
+      "party": "BDJS",
+      "votes": 11179,
+      "percentage": 7.17,
+      "is_winner": false
+    },
+    {
+      "candidate": "V. M. FAISAL",
+      "party": "SDPI",
+      "votes": 2385,
+      "percentage": 1.53,
+      "is_winner": false
+    },
+    {
+      "candidate": "P. S. UNNIKRISHNAN",
+      "party": "BSP",
+      "votes": 857,
+      "percentage": 0.55,
+      "is_winner": false
+    }
+  ]
+}

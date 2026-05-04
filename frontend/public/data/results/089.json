@@ -7,39 +7,30 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 186794,
-    "votes_polled": 125835,
-    "votes_counted": 6068,
-    "valid_votes": 127430,
-    "rounds_completed": 1,
-    "total_rounds": 21,
-    "last_updated": "2026-05-01T02:06:06.189266+00:00"
+    "total_electors": 150303,
+    "votes_polled": 119505,
+    "votes_counted": 24525,
+    "valid_votes": 24525,
+    "rounds_completed": 13,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:18.481203+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. Senapathi Venu",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 3111,
-      "percentage": 2.44,
+      "votes": 57667,
+      "percentage": 52.89,
       "is_winner": false,
       "is_leading": true
     },
     {
       "name": "K. K. Jayachandran",
-      "party": "CPI(M)",
+      "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 1306,
-      "percentage": 1.02,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "P.K. Sajeevan",
-      "party": "BSP",
-      "alliance": "OTH",
-      "votes": 768,
-      "percentage": 0.6,
+      "votes": 41062,
+      "percentage": 37.66,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +38,17 @@
       "name": "Adv. Sangeetha Viswanadhan",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 687,
-      "percentage": 0.54,
+      "votes": 9037,
+      "percentage": 8.29,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "P.K. Sajeevan",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 633,
+      "percentage": 0.58,
       "is_winner": false,
       "is_leading": false
     }

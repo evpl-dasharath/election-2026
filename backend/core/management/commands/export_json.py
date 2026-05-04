@@ -12,6 +12,8 @@ from core.models import (
     District, Constituency, Party, Candidate, LiveResult,
     HistoricalResult2021, ConstituencyMeta2021, ParliamentResult, DataSnapshot
 )
+from django.test import RequestFactory
+from core.api.views import historical_comparison, history_all, state_summary
 
 
 class Command(BaseCommand):
@@ -53,6 +55,12 @@ class Command(BaseCommand):
         historical_data = self.export_historical()
         with open(os.path.join(output_dir, 'historical.json'), 'w') as f:
             json.dump(historical_data, f, indent=2)
+            
+        # 4.5. HISTORY_ALL.JSON
+        self.stdout.write("Exporting history_all.json...")
+        history_all_data = self.export_history_all()
+        with open(os.path.join(output_dir, 'history_all.json'), 'w') as f:
+            json.dump(history_all_data, f, indent=2)
         
         # 5. PARTIES.JSON - Party master data
         self.stdout.write("Exporting parties.json...")
@@ -83,7 +91,7 @@ class Command(BaseCommand):
             f"  - results/*.json: {count} individual constituency files"
         ))
         self.stdout.write(self.style.SUCCESS(
-            f"  - historical.json: 2021 LA + 2019/2024 LS data"
+            f"  - historical.json & history_all.json: full historical data"
         ))
         self.stdout.write(self.style.SUCCESS(
             f"  - parties.json: party master data"
@@ -94,37 +102,14 @@ class Command(BaseCommand):
 
     def export_meta(self, timestamp):
         """State-level summary with live aggregates"""
-        live_results = LiveResult.objects.all()
-        candidates = Candidate.objects.all()
+        factory = RequestFactory()
+        request = factory.get('/api/summary/')
+        response = state_summary(request)
         
-        # Count seats by alliance
-        alliance_seats = {
-            'UDF': {'won': 0, 'leading': 0, 'trailing': 0},
-            'LDF': {'won': 0, 'leading': 0, 'trailing': 0},
-            'NDA': {'won': 0, 'leading': 0, 'trailing': 0},
-            'OTH': {'won': 0, 'leading': 0, 'trailing': 0},
-        }
-        
-        for constituency in Constituency.objects.all():
-            top_candidates = constituency.candidates_2026.order_by('-votes')[:2]
-            if top_candidates:
-                leader = top_candidates[0]
-                alliance = leader.party.alliance
-                
-                result = LiveResult.objects.filter(constituency=constituency).first()
-                if result and result.status == 'RESULT_DECLARED':
-                    alliance_seats[alliance]['won'] += 1
-                elif result and result.status == 'IN_PROGRESS' and leader.votes > 0:
-                    alliance_seats[alliance]['leading'] += 1
-        
-        return {
-            'timestamp': timestamp,
-            'total_constituencies': 140,
-            'results_declared': live_results.filter(status='RESULT_DECLARED').count(),
-            'counting_in_progress': live_results.filter(status='IN_PROGRESS').count(),
-            'alliance_summary': alliance_seats,
-            'total_votes_counted': candidates.aggregate(Sum('votes'))['votes__sum'] or 0,
-        }
+        # Add timestamp to the response data since frontend might use it
+        data = response.data
+        data['timestamp'] = timestamp
+        return data
 
     # District → region mapping (mirrors frontend DISTRICT_REGION constant)
     DISTRICT_REGION = {
@@ -158,14 +143,14 @@ class Command(BaseCommand):
                 'leader': {
                     'name': leader.name,
                     'party': leader.party.code,
-                    'alliance': leader.party.alliance,
+                    'alliance': leader.party.alliance.code,
                     'votes': leader.votes,
                     'percentage': float(leader.vote_percentage),
                 } if leader else None,
                 'runner_up': {
                     'name': runner_up.name,
                     'party': runner_up.party.code,
-                    'alliance': runner_up.party.alliance,
+                    'alliance': runner_up.party.alliance.code,
                     'votes': runner_up.votes,
                     'percentage': float(runner_up.vote_percentage),
                 } if runner_up else None,
@@ -189,7 +174,7 @@ class Command(BaseCommand):
                 candidates.append({
                     'name': cand.name,
                     'party': cand.party.code,
-                    'alliance': cand.party.alliance,
+                    'alliance': cand.party.alliance.code,
                     'votes': cand.votes,
                     'percentage': float(cand.vote_percentage),
                     'is_winner': cand.is_winner,
@@ -246,50 +231,21 @@ class Command(BaseCommand):
     def export_historical(self):
         """Export historical comparison data (2021 LA + 2019/2024 LS)"""
         historical = {}
+        factory = RequestFactory()
         
         for const in Constituency.objects.all():
-            # 2021 LA results
-            results_2021 = const.results_2021.order_by('-total_votes')[:5]
-            meta_2021 = ConstituencyMeta2021.objects.filter(constituency=const).first()
-            
-            # 2019 LS results
-            ls_2019 = ParliamentResult.objects.filter(year=2019, constituency=const).first()
-            
-            # 2024 LS results
-            ls_2024 = ParliamentResult.objects.filter(year=2024, constituency=const).first()
-            
-            historical[str(const.number)] = {
-                'constituency': const.name,
-                'la_2021': {
-                    'winner': meta_2021.winner_name if meta_2021 else None,
-                    'party': meta_2021.winner_party if meta_2021 else None,
-                    'margin': meta_2021.margin if meta_2021 else None,
-                    'top_5': [
-                        {
-                            'candidate': r.candidate_name,
-                            'party': r.party_code,
-                            'votes': r.total_votes,
-                            'percentage': float(r.vote_percentage),
-                        } for r in results_2021
-                    ],
-                },
-                'ls_2019': {
-                    'parliament_seat': ls_2019.parliament_constituency if ls_2019 else None,
-                    'udf_votes': ls_2019.udf_votes if ls_2019 else 0,
-                    'ldf_votes': ls_2019.ldf_votes if ls_2019 else 0,
-                    'nda_votes': ls_2019.nda_votes if ls_2019 else 0,
-                    'leader': ls_2019.lead_alliance if ls_2019 else None,
-                } if ls_2019 else None,
-                'ls_2024': {
-                    'parliament_seat': ls_2024.parliament_constituency if ls_2024 else None,
-                    'udf_votes': ls_2024.udf_votes if ls_2024 else 0,
-                    'ldf_votes': ls_2024.ldf_votes if ls_2024 else 0,
-                    'nda_votes': ls_2024.nda_votes if ls_2024 else 0,
-                    'leader': ls_2024.lead_alliance if ls_2024 else None,
-                } if ls_2024 else None,
-            }
+            request = factory.get(f'/api/historical/{const.number}/')
+            response = historical_comparison(request, constituency_number=const.number)
+            historical[str(const.number)] = response.data
         
         return historical
+
+    def export_history_all(self):
+        """Export bulk historical endpoint"""
+        factory = RequestFactory()
+        request = factory.get('/api/history/all/')
+        response = history_all(request)
+        return response.data
 
     def export_parties(self):
         """Export party master data"""
@@ -298,7 +254,7 @@ class Command(BaseCommand):
             parties.append({
                 'code': party.code,
                 'name': party.full_name,
-                'alliance': party.alliance,
+                'alliance': party.alliance.code,
                 'color_code': party.color_code,
             })
         return parties

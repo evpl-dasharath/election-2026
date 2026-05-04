@@ -5,14 +5,32 @@
     "name": "KODUNGALLUR",
     "district": "Thrissur"
   },
-  "live_result": null,
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 187212,
+    "votes_polled": 145220,
+    "votes_counted": 8915,
+    "valid_votes": 8915,
+    "rounds_completed": 13,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:08.930342+00:00"
+  },
   "candidates_2026": [
+    {
+      "name": "Adv. O J Janeesh",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 55463,
+      "percentage": 42.89,
+      "is_winner": false,
+      "is_leading": true
+    },
     {
       "name": "Adv. V R Sunil Kumar",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 50622,
+      "percentage": 39.15,
       "is_winner": false,
       "is_leading": false
     },
@@ -20,17 +38,17 @@
       "name": "Dr. Varghese George",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 21463,
+      "percentage": 16.6,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Adv. O J Janeesh",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 0,
-      "percentage": 0.0,
+      "name": "Ravi A K",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 437,
+      "percentage": 0.34,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,13 +56,22 @@
       "name": "Dr. K.M Francis Roy",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 403,
+      "percentage": 0.31,
       "is_winner": false,
       "is_leading": false
     },
     {
       "name": "Nandagopan Vellathadi",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 261,
+      "percentage": 0.2,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sadasivan",
       "party": "IND",
       "alliance": "OTH",
       "votes": 0,
@@ -53,8 +80,8 @@
       "is_leading": false
     },
     {
-      "name": "Ravi A K",
-      "party": "BSP",
+      "name": "T. C. Subrahmanyan",
+      "party": "CPI_ML_RS",
       "alliance": "OTH",
       "votes": 0,
       "percentage": 0.0,

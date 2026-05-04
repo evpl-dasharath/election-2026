@@ -1,0 +1,93 @@
+{
+  "constituency": {
+    "id": 51,
+    "number": 51,
+    "name": "SHORNUR",
+    "district": "Palakkad"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 199620,
+    "votes_polled": 157340,
+    "votes_counted": 40698,
+    "valid_votes": 40698,
+    "rounds_completed": 10,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:22:48.323498+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "P. Mammikkutty",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 59230,
+      "percentage": 43.61,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "P. Harigovindan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 49390,
+      "percentage": 36.37,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Sanku T. Das",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 25250,
+      "percentage": 18.59,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Aboobacker",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 1203,
+      "percentage": 0.89,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "P. MAMMIKUTTY",
+      "party": "CPI(M)",
+      "votes": 74400,
+      "percentage": 48.98,
+      "is_winner": true
+    },
+    {
+      "candidate": "FIROZ BABU.T.H",
+      "party": "INC",
+      "votes": 37726,
+      "percentage": 24.83,
+      "is_winner": false
+    },
+    {
+      "candidate": "SANDEEP VARIER",
+      "party": "BJP",
+      "votes": 36973,
+      "percentage": 24.34,
+      "is_winner": false
+    },
+    {
+      "candidate": "MUHAMMAD MUSTHAFA",
+      "party": "SDPI",
+      "votes": 1251,
+      "percentage": 0.82,
+      "is_winner": false
+    },
+    {
+      "candidate": "AYYAPPAN KUTTY. T.C.",
+      "party": "BSP",
+      "votes": 883,
+      "percentage": 0.58,
+      "is_winner": false
+    }
+  ]
+}

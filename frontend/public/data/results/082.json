@@ -2,44 +2,35 @@
   "constituency": {
     "id": 82,
     "number": 82,
-    "name": "ERANAKULAM",
+    "name": "ERNAKULAM",
     "district": "Ernakulam"
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 212262,
-    "votes_polled": 145306,
-    "votes_counted": 21172,
-    "valid_votes": 148209,
-    "rounds_completed": 3,
-    "total_rounds": 21,
-    "last_updated": "2026-05-01T01:58:39.185194+00:00"
+    "total_electors": 136223,
+    "votes_polled": 106485,
+    "votes_counted": 7280,
+    "valid_votes": 7280,
+    "rounds_completed": 13,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:35:16.709483+00:00"
   },
   "candidates_2026": [
-    {
-      "name": "Moses Henry Motha",
-      "party": "AAP",
-      "alliance": "OTH",
-      "votes": 8632,
-      "percentage": 5.82,
-      "is_winner": false,
-      "is_leading": true
-    },
     {
       "name": "T. J. Vinod",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 3703,
-      "percentage": 2.5,
+      "votes": 54078,
+      "percentage": 56.47,
       "is_winner": false,
-      "is_leading": false
+      "is_leading": true
     },
     {
-      "name": "Ashokan",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 3672,
-      "percentage": 2.48,
+      "name": "Sabu George",
+      "party": "ISJD",
+      "alliance": "LDF",
+      "votes": 22350,
+      "percentage": 23.34,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,17 +38,26 @@
       "name": "P.R. Sivasankar",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 2760,
-      "percentage": 1.86,
+      "votes": 17454,
+      "percentage": 18.23,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Sabu George",
-      "party": "Indian Socialist Jan",
-      "alliance": "LDF",
-      "votes": 2165,
-      "percentage": 1.46,
+      "name": "Moses Henry Motha",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 688,
+      "percentage": 0.72,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ashokan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 247,
+      "percentage": 0.26,
       "is_winner": false,
       "is_leading": false
     }

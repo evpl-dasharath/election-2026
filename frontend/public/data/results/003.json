@@ -5,41 +5,41 @@
     "name": "UDMA",
     "district": "Kasaragod"
   },
-  "live_result": null,
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 228512,
+    "votes_polled": 178399,
+    "votes_counted": 11019,
+    "valid_votes": 11019,
+    "rounds_completed": 11,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:36:24.422051+00:00"
+  },
   "candidates_2026": [
-    {
-      "name": "Manulal Meloth",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Naseer",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
     {
       "name": "Neelakantan",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 54437,
+      "percentage": 48.28,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "C. H. Kunhambu",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 40571,
+      "percentage": 35.99,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "C. H. Kunhambu",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 0,
-      "percentage": 0.0,
+      "name": "Manulal Meloth",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 17150,
+      "percentage": 15.21,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Kunhampu P P S/o Raman",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 121,
+      "percentage": 0.11,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,17 @@
       "name": "Kunhiraman",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 90,
+      "percentage": 0.08,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Naseer",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 74,
+      "percentage": 0.07,
       "is_winner": false,
       "is_leading": false
     }

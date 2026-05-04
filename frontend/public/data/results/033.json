@@ -7,30 +7,30 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 193972,
-    "votes_polled": 142583,
-    "votes_counted": 7227,
-    "valid_votes": 144557,
-    "rounds_completed": 1,
-    "total_rounds": 20,
-    "last_updated": "2026-05-01T02:02:28.184438+00:00"
+    "total_electors": 229370,
+    "votes_polled": 189207,
+    "votes_counted": 0,
+    "valid_votes": 0,
+    "rounds_completed": 8,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:36:48.136923+00:00"
   },
   "candidates_2026": [
-    {
-      "name": "M. Abdul Khader",
-      "party": "SDPI",
-      "alliance": "OTH",
-      "votes": 3494,
-      "percentage": 2.42,
-      "is_winner": false,
-      "is_leading": true
-    },
     {
       "name": "T. P. Ashrafali",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 1851,
-      "percentage": 1.28,
+      "votes": 49055,
+      "percentage": 58.97,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Dr. P. Jiji",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 26072,
+      "percentage": 31.34,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,17 +38,17 @@
       "name": "P. Subrahmanian",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 911,
-      "percentage": 0.63,
+      "votes": 6713,
+      "percentage": 8.07,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Dr. P. Jiji",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 569,
-      "percentage": 0.39,
+      "name": "M. Abdul Khader",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 770,
+      "percentage": 0.93,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Keeran N.K",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 532,
-      "percentage": 0.37,
+      "votes": 177,
+      "percentage": 0.21,
       "is_winner": false,
       "is_leading": false
     }

@@ -5,23 +5,32 @@
     "name": "NENMARA",
     "district": "Palakkad"
   },
-  "live_result": null,
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 181690,
+    "votes_polled": 146987,
+    "votes_counted": 10413,
+    "valid_votes": 10413,
+    "rounds_completed": 11,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:03.995740+00:00"
+  },
   "candidates_2026": [
+    {
+      "name": "K. Preman",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 50698,
+      "percentage": 43.88,
+      "is_winner": false,
+      "is_leading": true
+    },
     {
       "name": "A. Thankappan",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "K. Preman",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 48224,
+      "percentage": 41.74,
       "is_winner": false,
       "is_leading": false
     },
@@ -29,8 +38,8 @@
       "name": "A. N. Anurag",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 14553,
+      "percentage": 12.6,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +47,8 @@
       "name": "Anvar Sadiq",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 584,
+      "percentage": 0.51,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +56,8 @@
       "name": "Ramakrishna Sankaranarayanan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 262,
+      "percentage": 0.23,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +65,8 @@
       "name": "Radhakrishnan K",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 229,
+      "percentage": 0.2,
       "is_winner": false,
       "is_leading": false
     }

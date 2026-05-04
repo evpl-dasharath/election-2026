@@ -5,14 +5,32 @@
     "name": "ELATHUR",
     "district": "Kozhikode"
   },
-  "live_result": null,
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 211105,
+    "votes_polled": 174056,
+    "votes_counted": 11947,
+    "valid_votes": 11947,
+    "rounds_completed": 9,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:36:44.308137+00:00"
+  },
   "candidates_2026": [
+    {
+      "name": "Adv. Vidya Balakrishnan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 46737,
+      "percentage": 44.67,
+      "is_winner": false,
+      "is_leading": true
+    },
     {
       "name": "A. K. Saseendran",
       "party": "NCP(SP)",
-      "alliance": "LDF",
-      "votes": 0,
-      "percentage": 0.0,
+      "alliance": "OTH",
+      "votes": 37629,
+      "percentage": 35.96,
       "is_winner": false,
       "is_leading": false
     },
@@ -20,26 +38,8 @@
       "name": "T. Devadas",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Adv. Vidya Balakrishnan",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "P.K.Saseendran",
-      "party": "NCP",
-      "alliance": "LDF",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 18527,
+      "percentage": 17.71,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,26 +47,17 @@
       "name": "V.K. Saseendran",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 404,
+      "percentage": 0.39,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Abdul Basith Atholi",
-      "party": "AAP",
-      "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Adv.Sumin.S.Nedungadan",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "name": "P.K.Saseendran",
+      "party": "NCP",
+      "alliance": "LDF",
+      "votes": 375,
+      "percentage": 0.36,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +65,26 @@
       "name": "P.M.Sreekumar",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 289,
+      "percentage": 0.28,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Abdul Basith Atholi",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 197,
+      "percentage": 0.19,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv.Sumin.S.Nedungadan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 64,
+      "percentage": 0.06,
       "is_winner": false,
       "is_leading": false
     }

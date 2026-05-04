@@ -7,39 +7,30 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 228347,
-    "votes_polled": 153650,
-    "votes_counted": 8654,
-    "valid_votes": 155784,
-    "rounds_completed": 1,
-    "total_rounds": 18,
-    "last_updated": "2026-05-01T02:02:30.184140+00:00"
+    "total_electors": 165675,
+    "votes_polled": 133086,
+    "votes_counted": 7128,
+    "valid_votes": 7128,
+    "rounds_completed": 11,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:07.947503+00:00"
   },
   "candidates_2026": [
     {
       "name": "Mohammed Shiyas",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 4149,
-      "percentage": 2.66,
+      "votes": 37911,
+      "percentage": 46.43,
       "is_winner": false,
       "is_leading": true
     },
     {
-      "name": "Aneesh Mattancherry",
-      "party": "SDPI",
-      "alliance": "OTH",
-      "votes": 2334,
-      "percentage": 1.5,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Ajeesh P.E",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 1186,
-      "percentage": 0.76,
+      "name": "K. J. Maxi",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 32794,
+      "percentage": 40.17,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,17 +38,26 @@
       "name": "Adv. Xavier Joolappan",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 641,
-      "percentage": 0.41,
+      "votes": 9406,
+      "percentage": 11.52,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "K. J. Maxi",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 388,
-      "percentage": 0.25,
+      "name": "Aneesh Mattancherry",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 679,
+      "percentage": 0.83,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ajeesh P.E",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 232,
+      "percentage": 0.28,
       "is_winner": false,
       "is_leading": false
     }

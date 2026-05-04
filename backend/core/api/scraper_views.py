@@ -25,84 +25,13 @@ from core.eci_scraper import (
     BIHAR_TEST_BASE_URL, BIHAR_STATE_CODE,
     ECI_BASE_URL, KERALA_STATE_CODE,
 )
+# Import the shared (party-aware) save/match helper from admin_scraper_views
+# to avoid maintaining a duplicate implementation here.
+from core.admin_scraper_views import _save_scrape_to_db, _normalise
+
 
 
 # ─── HELPERS ─────────────────────────────────────────────────────────────────
-
-def _normalise(name):
-    return " ".join(name.lower().strip().split())
-
-
-def _save_scrape_to_db(ac_number, scrape_result):
-    """Save scrape result and auto-match candidates. Returns ECIScrapeRaw or None."""
-    try:
-        constituency = Constituency.objects.get(number=ac_number)
-    except Constituency.DoesNotExist:
-        return None
-
-    raw = ECIScrapeRaw.objects.create(
-        constituency=constituency,
-        rounds_completed=scrape_result["rounds_completed"],
-        total_rounds=scrape_result["total_rounds"],
-        is_final=scrape_result["is_final"],
-        eci_last_updated=scrape_result.get("eci_last_updated", ""),
-        raw_candidates=scrape_result["candidates"],
-        match_status="PENDING",
-    )
-
-    db_candidates = {
-        _normalise(c.name): c
-        for c in Candidate.objects.filter(constituency=constituency)
-    }
-
-    matched_count = 0
-    from core.models import CandidateAlias
-
-    for cand in scrape_result["candidates"]:
-        db_candidate = None
-        is_nota = cand["is_nota"]
-
-        if not is_nota:
-            alias = CandidateAlias.objects.filter(constituency=constituency, eci_name=cand["name"]).first()
-            if alias:
-                db_candidate = alias.candidate
-            else:
-                norm_name = _normalise(cand["name"])
-                db_candidate = db_candidates.get(norm_name)
-                if not db_candidate:
-                    first_word = norm_name.split()[0] if norm_name else ""
-                    for db_norm, db_cand in db_candidates.items():
-                        if db_norm.startswith(first_word) and len(first_word) > 3:
-                            db_candidate = db_cand
-                            break
-            if db_candidate:
-                matched_count += 1
-
-        ECICandidateMatch.objects.create(
-            scrape=raw,
-            constituency=constituency,
-            eci_name=cand["name"],
-            eci_party=cand["party"],
-            eci_total_votes=cand["total_votes"],
-            eci_vote_percentage=cand["vote_percentage"],
-            eci_is_leading=cand["is_leading"],
-            candidate=db_candidate,
-            is_confirmed=bool(db_candidate),
-            is_nota=is_nota,
-        )
-
-    total_real = sum(1 for c in scrape_result["candidates"] if not c["is_nota"])
-    if matched_count == total_real:
-        raw.match_status = "MATCHED"
-        raw.save()
-        _execute_commit(raw)
-    elif matched_count > 0:
-        raw.match_status = "PARTIAL"
-        raw.save()
-    else:
-        raw.save()
-
-    return raw
 
 def _execute_commit(raw):
     """Programmatically commit a scrape result."""
@@ -123,6 +52,27 @@ def _execute_commit(raw):
 
     raw.match_status = "MATCHED"
     raw.save()
+
+    from firebase_rtdb import push_constituency, update_rtdb_meta
+    rtdb_candidates = [
+        {
+            "name": c.name,
+            "party": c.party.code if c.party else "",
+            "votes": c.votes
+        }
+        for c in Candidate.objects.filter(constituency=raw.constituency).select_related("party").order_by('-votes')
+    ]
+    rtdb_data = {
+        "status": live.status,
+        "rounds_completed": live.rounds_completed,
+        "total_rounds": raw.total_rounds,
+        "total_electors": live.total_electors,
+        "votes_polled": live.votes_polled,
+        "last_updated": timezone.now().isoformat(),
+        "candidates": rtdb_candidates
+    }
+    push_constituency(raw.constituency.number, rtdb_data)
+    update_rtdb_meta()
 
 
 def _serialize_scrape(raw):
@@ -413,6 +363,27 @@ def scraper_commit(request, scrape_id):
     raw.match_status = "MATCHED"
     raw.save()
 
+    from firebase_rtdb import push_constituency, update_rtdb_meta
+    rtdb_candidates = [
+        {
+            "name": c.name,
+            "party": c.party.code if c.party else "",
+            "votes": c.votes
+        }
+        for c in Candidate.objects.filter(constituency=raw.constituency).select_related("party").order_by('-votes')
+    ]
+    rtdb_data = {
+        "status": live.status,
+        "rounds_completed": live.rounds_completed,
+        "total_rounds": raw.total_rounds,
+        "total_electors": live.total_electors,
+        "votes_polled": live.votes_polled,
+        "last_updated": timezone.now().isoformat(),
+        "candidates": rtdb_candidates
+    }
+    push_constituency(raw.constituency.number, rtdb_data)
+    update_rtdb_meta()
+
     return Response({
         "status": "committed",
         "committed": committed,
@@ -476,3 +447,42 @@ def scraper_deploy(request):
             "details": e.stderr or e.stdout
         }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
+
+
+@api_view(["POST"])
+@permission_classes([AllowAny])
+def scraper_clear(request, ac_number):
+    """
+    POST /api/scraper/clear/<ac_number>/
+    Resets a single constituency live data: candidates, LiveResult, scrape records, RTDB node.
+    """
+    try:
+        constituency = Constituency.objects.get(number=ac_number)
+    except Constituency.DoesNotExist:
+        return Response({"error": f"Constituency #{ac_number} not found"}, status=status.HTTP_404_NOT_FOUND)
+
+    n_cands = Candidate.objects.filter(constituency=constituency).update(
+        votes=0, vote_percentage=0, is_leading=False, is_winner=False
+    )
+    n_lr, _ = LiveResult.objects.filter(constituency=constituency).delete()
+    n_raw, _ = ECIScrapeRaw.objects.filter(constituency=constituency).delete()
+
+    rtdb_cleared = False
+    try:
+        from firebase_rtdb import init_firebase
+        from firebase_admin import db as rtdb_db
+        if init_firebase():
+            rtdb_db.reference(f'/live/{ac_number}').delete()
+            rtdb_cleared = True
+    except Exception:
+        pass
+
+    return Response({
+        "status": "cleared",
+        "constituency": constituency.name,
+        "ac_number": ac_number,
+        "candidates_reset": n_cands,
+        "live_results_deleted": n_lr,
+        "scrapes_deleted": n_raw,
+        "rtdb_cleared": rtdb_cleared,
+    })

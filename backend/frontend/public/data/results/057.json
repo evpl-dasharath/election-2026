@@ -1,0 +1,86 @@
+{
+  "constituency": {
+    "id": 57,
+    "number": 57,
+    "name": "TARUR",
+    "district": "Palakkad"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 164930,
+    "votes_polled": 129338,
+    "votes_counted": 31787,
+    "valid_votes": 31787,
+    "rounds_completed": 10,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:22:52.158811+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "P. P. Sumod",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 48591,
+      "percentage": 46.52,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "K. C. Subramanian",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 37426,
+      "percentage": 35.83,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Suresh Babu",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 16959,
+      "percentage": 16.24,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Narayanankutty  K T",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 706,
+      "percentage": 0.68,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "P.P.SUMOD",
+      "party": "CPI(M)",
+      "votes": 67744,
+      "percentage": 51.58,
+      "is_winner": true
+    },
+    {
+      "candidate": "K.A.SHEEBA",
+      "party": "INC",
+      "votes": 43213,
+      "percentage": 32.9,
+      "is_winner": false
+    },
+    {
+      "candidate": "JAYAPRAKASAN K.P.",
+      "party": "BJP",
+      "votes": 18465,
+      "percentage": 14.06,
+      "is_winner": false
+    },
+    {
+      "candidate": "C.A.USHAKUMARI",
+      "party": "WPOI",
+      "votes": 985,
+      "percentage": 0.75,
+      "is_winner": false
+    }
+  ]
+}

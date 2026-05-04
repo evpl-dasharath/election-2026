@@ -2,62 +2,35 @@
   "constituency": {
     "id": 81,
     "number": 81,
-    "name": "THRIPUNITHURA",
+    "name": "THRIPPUNITHURA",
     "district": "Ernakulam"
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 179442,
-    "votes_polled": 112373,
-    "votes_counted": 5547,
-    "valid_votes": 116492,
-    "rounds_completed": 1,
-    "total_rounds": 21,
-    "last_updated": "2026-05-01T02:02:48.184262+00:00"
+    "total_electors": 187923,
+    "votes_polled": 152969,
+    "votes_counted": 6343,
+    "valid_votes": 6343,
+    "rounds_completed": 9,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:16.167659+00:00"
   },
   "candidates_2026": [
     {
-      "name": "Sandeep Rajendraprasad",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 1779,
-      "percentage": 1.53,
+      "name": "Deepak Joy",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 27000,
+      "percentage": 43.39,
       "is_winner": false,
       "is_leading": true
     },
     {
-      "name": "Satheesan",
-      "party": "SUCI",
-      "alliance": "OTH",
-      "votes": 1050,
-      "percentage": 0.9,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
       "name": "K. N. Unnikrishnan",
-      "party": "CPI(M)",
+      "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 552,
-      "percentage": 0.47,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Karthikeyan",
-      "party": "BSP",
-      "alliance": "OTH",
-      "votes": 429,
-      "percentage": 0.37,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Rajkumar",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 409,
-      "percentage": 0.35,
+      "votes": 18944,
+      "percentage": 30.44,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,17 +38,35 @@
       "name": "Anjali .P. V",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 383,
-      "percentage": 0.33,
+      "votes": 15002,
+      "percentage": 24.11,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Deepak Joy",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 351,
-      "percentage": 0.3,
+      "name": "UNNIKRISHNAN K N",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 210,
+      "percentage": 0.34,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "KARTHIKEYAN",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 178,
+      "percentage": 0.29,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "SANDEEP RAJENDRAPRASAD",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 142,
+      "percentage": 0.23,
       "is_winner": false,
       "is_leading": false
     },
@@ -83,17 +74,26 @@
       "name": "Thomas Paul",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 306,
-      "percentage": 0.26,
+      "votes": 119,
+      "percentage": 0.19,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Unnikrishnan K N",
+      "name": "SATHEESAN",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 56,
+      "percentage": 0.09,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "RAJKUMAR",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 232,
-      "percentage": 0.2,
+      "votes": 25,
+      "percentage": 0.04,
       "is_winner": false,
       "is_leading": false
     }

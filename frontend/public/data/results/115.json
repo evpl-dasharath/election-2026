@@ -7,39 +7,30 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 243560,
-    "votes_polled": 167111,
-    "votes_counted": 7379,
-    "valid_votes": 169729,
-    "rounds_completed": 1,
-    "total_rounds": 23,
-    "last_updated": "2026-05-01T02:03:16.184802+00:00"
+    "total_electors": 201200,
+    "votes_polled": 147882,
+    "votes_counted": 0,
+    "valid_votes": 0,
+    "rounds_completed": 9,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:32.526328+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. C V  Santhakumar",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 2746,
-      "percentage": 1.62,
+      "votes": 33315,
+      "percentage": 42.98,
       "is_winner": false,
       "is_leading": true
-    },
-    {
-      "name": "Sivakumar C S",
-      "party": "BSP",
-      "alliance": "OTH",
-      "votes": 2374,
-      "percentage": 1.4,
-      "is_winner": false,
-      "is_leading": false
     },
     {
       "name": "Priji Sasidharan",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 1517,
-      "percentage": 0.89,
+      "votes": 28623,
+      "percentage": 36.93,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +38,17 @@
       "name": "Adv. Pandalam Prathapan",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 813,
-      "percentage": 0.48,
+      "votes": 14832,
+      "percentage": 19.14,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sivakumar C S",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 301,
+      "percentage": 0.39,
       "is_winner": false,
       "is_leading": false
     }

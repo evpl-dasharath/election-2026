@@ -6,35 +6,51 @@ from core.models import (
 )
 from django.db import models
 
+# District → region mapping (matches frontend DISTRICT_REGION and export_json)
+_DISTRICT_REGION = {
+    'Kasaragod': 'north', 'Kannur': 'north', 'Wayanad': 'north', 'Kozhikode': 'north',
+    'Malappuram': 'central_north', 'Palakkad': 'central_north', 'Thrissur': 'central_north',
+    'Ernakulam': 'south_central', 'Idukki': 'south_central',
+    'Kottayam': 'south_central', 'Alappuzha': 'south_central',
+    'Pathanamthitta': 'south', 'Kollam': 'south', 'Thiruvananthapuram': 'south',
+}
+
 # Pre-load alliance maps once at import time for O(1) lookups
 # These are refreshed on server restart; call _refresh_alliance_cache() after DB changes.
 _ALLIANCE_CACHE: dict[tuple, str] = {}
 
 def _build_cache():
     global _ALLIANCE_CACHE
-    _ALLIANCE_CACHE = {
-        (r.party_code, r.election_year, r.election_type): r.alliance
-        for r in PartyAllianceYear.objects.all()
-    }
+    try:
+        _ALLIANCE_CACHE = {
+            (r.party.code, r.election_year, r.election_type): r.alliance.code
+            for r in PartyAllianceYear.objects.select_related('party', 'alliance').all()
+        }
+    except Exception:
+        # Tables may not exist yet during migrations
+        _ALLIANCE_CACHE = {}
 
 _build_cache()  # run at startup
 
 def get_alliance(party_code: str, year: int = 2026, etype: str = 'LA') -> str:
-    """Return alliance for a party in a specific election year.
-    Looks up PartyAllianceYear first; falls back to Party.alliance for current year."""
+    """Return alliance code for a party in a specific election year.
+    Looks up PartyAllianceYear first; falls back to Party.alliance."""
     cached = _ALLIANCE_CACHE.get((party_code, year, etype))
     if cached:
         return cached
     # Fallback: live DB lookup (handles parties added after server start)
-    entry = PartyAllianceYear.objects.filter(
-        party_code=party_code, election_year=year, election_type=etype
-    ).first()
-    if entry:
-        _ALLIANCE_CACHE[(party_code, year, etype)] = entry.alliance
-        return entry.alliance
-    # Final fallback: Party.alliance
-    party = Party.objects.filter(code=party_code).first()
-    return party.alliance if party else 'OTH'
+    try:
+        entry = PartyAllianceYear.objects.select_related('party', 'alliance').filter(
+            party__code=party_code, election_year=year, election_type=etype
+        ).first()
+        if entry:
+            _ALLIANCE_CACHE[(party_code, year, etype)] = entry.alliance.code
+            return entry.alliance.code
+        # Final fallback: Party.alliance
+        party = Party.objects.select_related('alliance').filter(code=party_code).first()
+        return party.alliance.code if party else 'OTH'
+    except Exception:
+        return 'OTH'
 
 
 class DistrictSerializer(serializers.ModelSerializer):
@@ -46,10 +62,14 @@ class DistrictSerializer(serializers.ModelSerializer):
 class PartySerializer(serializers.ModelSerializer):
     seats_contested = serializers.SerializerMethodField()
     seats_leading_or_won = serializers.SerializerMethodField()
+    alliance = serializers.SerializerMethodField()
 
     class Meta:
         model = Party
         fields = ['code', 'full_name', 'alliance', 'color_code', 'seats_contested', 'seats_leading_or_won']
+
+    def get_alliance(self, obj):
+        return get_alliance(obj.code, 2026)
 
     def get_seats_contested(self, obj):
         return obj.candidates_2026.count()
@@ -61,16 +81,20 @@ class PartySerializer(serializers.ModelSerializer):
 
 
 class CandidateSerializer(serializers.ModelSerializer):
-    party_code = serializers.CharField(source='party.code')
+    party = serializers.CharField(source='party.code')
     party_name = serializers.CharField(source='party.full_name')
-    alliance = serializers.CharField(source='party.alliance')
+    alliance = serializers.CharField(source='party.alliance.code')
     party_color = serializers.CharField(source='party.color_code')
+    alliance_color = serializers.SerializerMethodField()
+
+    def get_alliance_color(self, obj):
+        return obj.party.alliance.color_code if obj.party and obj.party.alliance else '#808080'
     
     class Meta:
         model = Candidate
         fields = [
-            'id', 'name', 'party_code', 'party_name', 'alliance', 'party_color',
-            'votes', 'vote_percentage', 'is_winner', 'is_leading'
+            'id', 'name', 'party', 'party_name', 'alliance', 'party_color',
+            'alliance_color', 'votes', 'vote_percentage', 'is_winner', 'is_leading'
         ]
 
 
@@ -97,18 +121,27 @@ class ConstituencyListSerializer(serializers.ModelSerializer):
     """Lightweight serializer for list view"""
     district = serializers.CharField(source='district.name')
     reserved = serializers.CharField(source='get_reserved_category_display')
+    region = serializers.SerializerMethodField()
     leader = serializers.SerializerMethodField()
     runner_up = serializers.SerializerMethodField()
     status = serializers.SerializerMethodField()
     sitting_party = serializers.SerializerMethodField()
     sitting_alliance = serializers.SerializerMethodField()
+    # Static polling-day fields — never change during counting
+    total_electors = serializers.SerializerMethodField()
+    votes_polled = serializers.SerializerMethodField()
     
     class Meta:
         model = Constituency
         fields = [
             'id', 'number', 'name', 'district', 'region', 'reserved',
-            'leader', 'runner_up', 'status', 'sitting_party', 'sitting_alliance'
+            'leader', 'runner_up', 'status', 'sitting_party', 'sitting_alliance',
+            'total_electors', 'votes_polled',
         ]
+
+    def get_region(self, obj):
+        """Compute region from district name — the DB field is often empty."""
+        return _DISTRICT_REGION.get(obj.district.name, 'south')
     
     def get_leader(self, obj):
         live = obj.live_results.first()
@@ -150,26 +183,36 @@ class ConstituencyListSerializer(serializers.ModelSerializer):
 
     def get_sitting_party(self, obj):
         meta = getattr(obj, 'meta_2021', None)
-        return meta.winner_party if meta else None
+        return meta.winner_party.code if meta and meta.winner_party else None
 
     def get_sitting_alliance(self, obj):
         meta = getattr(obj, 'meta_2021', None)
         if meta and meta.winner_party:
-            entry = PartyAllianceYear.objects.filter(
-                party_code=meta.winner_party,
+            entry = PartyAllianceYear.objects.select_related('alliance').filter(
+                party=meta.winner_party,
                 election_year=2021,
                 election_type='LA'
             ).first()
             if entry:
-                return entry.alliance
+                return entry.alliance.code
         return None
+
+    def get_total_electors(self, obj):
+        """Total registered electors — static from electoral rolls."""
+        live = obj.live_results.first()
+        return live.total_electors if live and live.total_electors else 0
+
+    def get_votes_polled(self, obj):
+        """Votes polled on polling day — static once polling ends."""
+        live = obj.live_results.first()
+        return live.votes_polled if live and live.votes_polled else 0
 
     def get_sitting_color(self, obj):
         """Convenience: color for the 2021 sitting party."""
         meta = getattr(obj, 'meta_2021', None)
         if meta and meta.winner_party:
-            entry = PartyAllianceYear.objects.filter(
-                party_code=meta.winner_party,
+            entry = PartyAllianceYear.objects.select_related('alliance').filter(
+                party=meta.winner_party,
                 election_year=2021,
                 election_type='LA'
             ).first()
@@ -212,9 +255,10 @@ class ConstituencyDetailSerializer(serializers.ModelSerializer):
             'candidates_2026': [
                 {
                     'name': c['name'],
-                    'party': c['party_code'],
+                    'party': c['party'],
                     # Use year-aware lookup for 2026 alliance
-                    'alliance': get_alliance(c['party_code'], 2026),
+                    'alliance': get_alliance(c['party'], 2026),
+                    'party_color': c.get('party_color', '#808080'),
                     'votes': c['votes'],
                     'percentage': float(c['vote_percentage']),
                     'is_winner': c['is_winner'],

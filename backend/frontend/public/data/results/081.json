@@ -1,0 +1,138 @@
+{
+  "constituency": {
+    "id": 81,
+    "number": 81,
+    "name": "THRIPPUNITHURA",
+    "district": "Ernakulam"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 187923,
+    "votes_polled": 152969,
+    "votes_counted": 6343,
+    "valid_votes": 6343,
+    "rounds_completed": 8,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:23:26.884393+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Deepak Joy",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 24278,
+      "percentage": 44.01,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "K. N. Unnikrishnan",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 16936,
+      "percentage": 30.7,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Anjali .P. V",
+      "party": "TTP",
+      "alliance": "NDA",
+      "votes": 12824,
+      "percentage": 23.25,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "UNNIKRISHNAN K N",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 194,
+      "percentage": 0.35,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "KARTHIKEYAN",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 152,
+      "percentage": 0.28,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "SANDEEP RAJENDRAPRASAD",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 117,
+      "percentage": 0.21,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Thomas Paul",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 108,
+      "percentage": 0.2,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "SATHEESAN",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 46,
+      "percentage": 0.08,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "RAJKUMAR",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 22,
+      "percentage": 0.04,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "K. BABU",
+      "party": "INC",
+      "votes": 65875,
+      "percentage": 42.14,
+      "is_winner": true
+    },
+    {
+      "candidate": "Adv. M. SWARAJ",
+      "party": "CPI(M)",
+      "votes": 64883,
+      "percentage": 41.51,
+      "is_winner": false
+    },
+    {
+      "candidate": "Dr. K. S. RADHAKRISHNAN",
+      "party": "BJP",
+      "votes": 23756,
+      "percentage": 15.2,
+      "is_winner": false
+    },
+    {
+      "candidate": "ARUN BABU. P. C.",
+      "party": "SHS",
+      "votes": 232,
+      "percentage": 0.15,
+      "is_winner": false
+    },
+    {
+      "candidate": "RAJESH PAIROAD",
+      "party": "IND",
+      "votes": 201,
+      "percentage": 0.13,
+      "is_winner": false
+    }
+  ]
+}

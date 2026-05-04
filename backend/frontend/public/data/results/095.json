@@ -1,0 +1,120 @@
+{
+  "constituency": {
+    "id": 95,
+    "number": 95,
+    "name": "VAIKOM",
+    "district": "Kottayam"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 155957,
+    "votes_polled": 119681,
+    "votes_counted": 20008,
+    "valid_votes": 20008,
+    "rounds_completed": 11,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:23:23.224951+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "K. Binimon",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 44519,
+      "percentage": 41.63,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "P. Pradeep",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 44132,
+      "percentage": 41.27,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. Ajith",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 17115,
+      "percentage": 16.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sumam P S",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 217,
+      "percentage": 0.2,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. P I Jayakumar",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 110,
+      "percentage": 0.1,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Pradeep",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 106,
+      "percentage": 0.1,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "T M Bose",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 102,
+      "percentage": 0.1,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "C.K Asha",
+      "party": "CPI",
+      "votes": 71388,
+      "percentage": 55.96,
+      "is_winner": true
+    },
+    {
+      "candidate": "Dr.P.R Sona",
+      "party": "INC",
+      "votes": 42266,
+      "percentage": 33.13,
+      "is_winner": false
+    },
+    {
+      "candidate": "Ajitha Sabu",
+      "party": "BDJS",
+      "votes": 11953,
+      "percentage": 9.37,
+      "is_winner": false
+    },
+    {
+      "candidate": "Akhiljith Kallara",
+      "party": "BSP",
+      "votes": 726,
+      "percentage": 0.57,
+      "is_winner": false
+    },
+    {
+      "candidate": "Bindu",
+      "party": "BHUDRP",
+      "votes": 258,
+      "percentage": 0.2,
+      "is_winner": false
+    }
+  ]
+}

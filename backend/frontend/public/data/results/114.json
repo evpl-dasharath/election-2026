@@ -1,0 +1,93 @@
+{
+  "constituency": {
+    "id": 114,
+    "number": 114,
+    "name": "KONNI",
+    "district": "Pathanamthitta"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 189366,
+    "votes_polled": 132366,
+    "votes_counted": 7912,
+    "valid_votes": 7912,
+    "rounds_completed": 7,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:23:43.981822+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Adv. K. U. Jenish Kumar",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 26209,
+      "percentage": 46.33,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Prof Satheesh Kochuparambil",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 24728,
+      "percentage": 43.71,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "T. P. Sundareshan",
+      "party": "BDJS",
+      "alliance": "NDA",
+      "votes": 5190,
+      "percentage": 9.17,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv Varughese Oommen",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 147,
+      "percentage": 0.26,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Adv. K.U JENISH KUMAR",
+      "party": "CPI(M)",
+      "votes": 62318,
+      "percentage": 41.62,
+      "is_winner": true
+    },
+    {
+      "candidate": "ROBIN PETER",
+      "party": "INC",
+      "votes": 53810,
+      "percentage": 35.94,
+      "is_winner": false
+    },
+    {
+      "candidate": "K. SURENDRAN",
+      "party": "BJP",
+      "votes": 32811,
+      "percentage": 21.91,
+      "is_winner": false
+    },
+    {
+      "candidate": "RAGHU P",
+      "party": "ADHRMPI",
+      "votes": 214,
+      "percentage": 0.14,
+      "is_winner": false
+    },
+    {
+      "candidate": "MANOHARAN",
+      "party": "IND",
+      "votes": 75,
+      "percentage": 0.05,
+      "is_winner": false
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "constituency": {
+    "id": 137,
+    "number": 137,
+    "name": "PARASSALA",
+    "district": "Thiruvananthapuram"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 195648,
+    "votes_polled": 151803,
+    "votes_counted": 8704,
+    "valid_votes": 8704,
+    "rounds_completed": 11,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:23:52.955632+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "C. K. Hareendran",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 38379,
+      "percentage": 44.82,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Neyyattinkara Sanal",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 28744,
+      "percentage": 33.57,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Gireesh Neyyar",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 17578,
+      "percentage": 20.53,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Dhanuvachapuram Thankachan",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 209,
+      "percentage": 0.24,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Shaju Paliyodu",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 138,
+      "percentage": 0.16,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Deepumon N",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 112,
+      "percentage": 0.13,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "S Robinson E Nadar",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 72,
+      "percentage": 0.08,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Simiyon L P",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 42,
+      "percentage": 0.05,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "C.K.HAREENDRAN",
+      "party": "CPI(M)",
+      "votes": 78548,
+      "percentage": 48.16,
+      "is_winner": true
+    },
+    {
+      "candidate": "AN SAJITHA RESSAL.R.K",
+      "party": "INC",
+      "votes": 52720,
+      "percentage": 32.33,
+      "is_winner": false
+    },
+    {
+      "candidate": "KARAMANA JAYAN",
+      "party": "BJP",
+      "votes": 29850,
+      "percentage": 18.3,
+      "is_winner": false
+    },
+    {
+      "candidate": "J.R.JAYAKUMAR",
+      "party": "BSP",
+      "votes": 778,
+      "percentage": 0.48,
+      "is_winner": false
+    },
+    {
+      "candidate": "SHAJU PALIYODU",
+      "party": "IND",
+      "votes": 402,
+      "percentage": 0.25,
+      "is_winner": false
+    }
+  ]
+}

@@ -69,3 +69,5 @@ temp/
 # Data exports (can be large)
 /frontend/src/data/*.json
 /frontend/public/data/*.json
+
+/backend/firebase-service-account.json

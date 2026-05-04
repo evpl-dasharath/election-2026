@@ -82,6 +82,9 @@ function AdminPanel() {
   // Committing state
   const [committing, setCommitting] = useState<number | null>(null);
 
+  // Clearing state
+  const [clearing, setClearing] = useState<number | null>(null);
+
   // Deploy state
   const [deploying, setDeploying] = useState(false);
 
@@ -242,6 +245,26 @@ function AdminPanel() {
       showToast('error', 'Network error during commit');
     } finally {
       setCommitting(null);
+    }
+  };
+
+  const handleClear = async (acNumber: number) => {
+    if (!window.confirm(`Clear all live data for AC #${acNumber}? This will reset votes and delete scrape records.`)) return;
+    setClearing(acNumber);
+    try {
+      const res = await fetch(`${API_BASE}/scraper/clear/${acNumber}/`, { method: 'POST' });
+      const data = await res.json();
+      if (res.ok) {
+        showToast('success', `🗑 Cleared AC #${acNumber} (${data.constituency}) — ${data.candidates_reset} candidates reset${data.rtdb_cleared ? ', RTDB cleared' : ''}`);
+        if (activeScrape?.constituency_number === acNumber) setActiveScrape(null);
+        fetchStatus();
+      } else {
+        showToast('error', data.error || 'Clear failed');
+      }
+    } catch {
+      showToast('error', 'Network error during clear');
+    } finally {
+      setClearing(null);
     }
   };
 
@@ -518,6 +541,15 @@ function AdminPanel() {
                             className="text-xs font-semibold px-3 py-1.5 bg-[#4f8eff]/10 text-[#4f8eff] border border-[#4f8eff]/20 rounded-lg hover:bg-[#4f8eff]/20 transition-colors disabled:opacity-40"
                           >
                             {isActiveScraping ? '⏳...' : '⬇ Scrape'}
+                          </button>
+
+                          <button
+                            onClick={() => handleClear(c.number)}
+                            disabled={clearing === c.number}
+                            className="text-xs font-semibold px-3 py-1.5 bg-red-500/10 text-red-400 border border-red-500/20 rounded-lg hover:bg-red-500/20 transition-colors disabled:opacity-40"
+                            title="Reset votes, delete scrape & LiveResult, clear RTDB node"
+                          >
+                            {clearing === c.number ? '⏳...' : '🗑'}
                           </button>
 
                           {s && (

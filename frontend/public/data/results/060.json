@@ -7,39 +7,48 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 169150,
-    "votes_polled": 110847,
-    "votes_counted": 4991,
-    "valid_votes": 114797,
-    "rounds_completed": 1,
-    "total_rounds": 23,
-    "last_updated": "2026-05-01T02:05:22.184578+00:00"
+    "total_electors": 165657,
+    "votes_polled": 131150,
+    "votes_counted": 21659,
+    "valid_votes": 21659,
+    "rounds_completed": 12,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:36:59.990964+00:00"
   },
   "candidates_2026": [
     {
-      "name": "K.V. Prasanna Kumar",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 2432,
-      "percentage": 2.12,
+      "name": "T. M. Sasi",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 59267,
+      "percentage": 45.62,
       "is_winner": false,
       "is_leading": true
-    },
-    {
-      "name": "M T Chandran",
-      "party": "BSP",
-      "alliance": "OTH",
-      "votes": 1168,
-      "percentage": 1.02,
-      "is_winner": false,
-      "is_leading": false
     },
     {
       "name": "K. M. Febin",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 482,
-      "percentage": 0.42,
+      "votes": 51654,
+      "percentage": 39.76,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K.V. Prasanna Kumar",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 16776,
+      "percentage": 12.91,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "M T Chandran",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 638,
+      "percentage": 0.49,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,17 +56,8 @@
       "name": "B Febin S/o Balan K.C.",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 376,
-      "percentage": 0.33,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "T. M. Sasi",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 348,
-      "percentage": 0.3,
+      "votes": 558,
+      "percentage": 0.43,
       "is_winner": false,
       "is_leading": false
     }

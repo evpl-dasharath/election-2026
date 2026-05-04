@@ -7,57 +7,30 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 173833,
-    "votes_polled": 117127,
-    "votes_counted": 5075,
-    "valid_votes": 121803,
-    "rounds_completed": 1,
-    "total_rounds": 24,
-    "last_updated": "2026-05-01T02:05:16.184109+00:00"
+    "total_electors": 221036,
+    "votes_polled": 178862,
+    "votes_counted": 8705,
+    "valid_votes": 8705,
+    "rounds_completed": 10,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:36:49.092785+00:00"
   },
   "candidates_2026": [
     {
-      "name": "Muhamed Musthafa Pamangadan",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 2108,
-      "percentage": 1.73,
+      "name": "T. V. Ibrahim",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 65084,
+      "percentage": 57.99,
       "is_winner": false,
       "is_leading": true
     },
     {
       "name": "Adv. C. P. Musthafa",
-      "party": "IND (INL)",
+      "party": "IND_LDF",
       "alliance": "LDF",
-      "votes": 1267,
-      "percentage": 1.04,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "T. V. Ibrahim",
-      "party": "IUML",
-      "alliance": "UDF",
-      "votes": 616,
-      "percentage": 0.51,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Muhammed Aslam V P",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 409,
-      "percentage": 0.34,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Abdul Azeez Kadalundi",
-      "party": "AAP",
-      "alliance": "OTH",
-      "votes": 300,
-      "percentage": 0.25,
+      "votes": 27941,
+      "percentage": 24.89,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +38,35 @@
       "name": "M. Preman Master",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 285,
-      "percentage": 0.23,
+      "votes": 14123,
+      "percentage": 12.58,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Muhamed Musthafa Pamangadan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 2486,
+      "percentage": 2.21,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Abdul Azeez Kadalundi",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 1058,
+      "percentage": 0.94,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Muhammed Aslam V P",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 733,
+      "percentage": 0.65,
       "is_winner": false,
       "is_leading": false
     }

@@ -1,10 +1,16 @@
 from django.contrib import admin
 from core.models import (
-    District, Constituency, Party, Candidate, LiveResult,
+    Alliance, District, Constituency, Party, PartyAlias, Candidate, LiveResult,
     HistoricalResult2021, HistoricalResult2016, HistoricalResult2016Full,
     HistoricalResult2011, ConstituencyMeta2021, ParliamentResult, DataSnapshot,
     ECIScrapeRaw, ECICandidateMatch, PartyAllianceYear,
 )
+
+
+@admin.register(Alliance)
+class AllianceAdmin(admin.ModelAdmin):
+    list_display = ['code', 'full_name', 'color_code']
+    ordering = ['code']
 
 
 @admin.register(District)
@@ -27,7 +33,15 @@ class PartyAdmin(admin.ModelAdmin):
     list_display = ['code', 'full_name', 'alliance', 'color_code']
     list_filter = ['alliance']
     search_fields = ['code', 'full_name']
-    ordering = ['alliance', 'code']
+    ordering = ['alliance__code', 'code']
+
+
+@admin.register(PartyAlias)
+class PartyAliasAdmin(admin.ModelAdmin):
+    list_display = ['alias_code', 'party', 'election_year']
+    list_filter = ['election_year']
+    search_fields = ['alias_code', 'party__code']
+    ordering = ['alias_code']
 
 
 class CandidateInline(admin.TabularInline):
@@ -89,7 +103,7 @@ class LiveResultAdmin(admin.ModelAdmin):
 @admin.register(HistoricalResult2021)
 class HistoricalResult2021Admin(admin.ModelAdmin):
     list_display = [
-        'constituency', 'candidate_name', 'party_code', 'total_votes',
+        'constituency', 'candidate_name', 'party', 'party_code', 'total_votes',
         'vote_percentage', 'is_winner'
     ]
     list_filter = ['constituency__district', 'is_winner']
@@ -142,36 +156,34 @@ class ECICandidateMatchAdmin(admin.ModelAdmin):
 @admin.register(HistoricalResult2016)
 class HistoricalResult2016Admin(admin.ModelAdmin):
     list_display = ['constituency', 'winner_candidate', 'winner_party', 'winner_alliance', 'margin']
-    list_filter = ['constituency__district', 'winner_alliance']
-    search_fields = ['winner_candidate', 'winner_party', 'constituency__name']
+    list_filter = ['constituency__district']
+    search_fields = ['winner_candidate', 'constituency__name']
     ordering = ['constituency__number']
 
 
 @admin.register(HistoricalResult2016Full)
 class HistoricalResult2016FullAdmin(admin.ModelAdmin):
-    list_display = ['constituency', 'candidate_name', 'party_code', 'total_votes', 'vote_percentage', 'is_winner']
+    list_display = ['constituency', 'candidate_name', 'party', 'party_code', 'total_votes', 'vote_percentage', 'is_winner']
     list_filter = ['constituency__district', 'is_winner']
     search_fields = ['candidate_name', 'party_code', 'constituency__name']
     ordering = ['constituency__number', '-total_votes']
-    list_editable = ['party_code']
 
 
 @admin.register(HistoricalResult2011)
 class HistoricalResult2011Admin(admin.ModelAdmin):
-    list_display = ['constituency', 'candidate_name', 'party_code', 'total_votes', 'vote_percentage', 'is_winner']
+    list_display = ['constituency', 'candidate_name', 'party', 'party_code', 'total_votes', 'vote_percentage', 'is_winner']
     list_filter = ['constituency__district', 'is_winner']
     search_fields = ['candidate_name', 'party_code', 'constituency__name']
     ordering = ['constituency__number', '-total_votes']
-    list_editable = ['party_code']
 
 
 @admin.register(PartyAllianceYear)
 class PartyAllianceYearAdmin(admin.ModelAdmin):
-    list_display = ['party_code', 'canonical_code', 'alliance', 'election_year', 'election_type', 'color_code']
+    list_display = ['party', 'alliance', 'election_year', 'election_type', 'color_code']
     list_filter = ['election_year', 'election_type', 'alliance']
-    search_fields = ['party_code', 'canonical_code']
-    ordering = ['election_year', 'alliance', 'party_code']
-    list_editable = ['alliance', 'canonical_code', 'color_code']
+    search_fields = ['party__code', 'party__full_name']
+    ordering = ['election_year', 'alliance__code', 'party__code']
+    list_editable = ['alliance', 'color_code']
 
 
 # Customize admin site

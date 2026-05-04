@@ -1,0 +1,97 @@
+{
+  "constituency": {
+    "id": 88,
+    "number": 88,
+    "name": "DEVIKULAM",
+    "district": "Idukki"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 142265,
+    "votes_polled": 110781,
+    "votes_counted": 8183,
+    "valid_votes": 8183,
+    "rounds_completed": 9,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:23:21.444173+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "F. Raja",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 26090,
+      "percentage": 43.07,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Adv. A. Raja",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 25439,
+      "percentage": 42.0,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "S. Rajendran",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 8419,
+      "percentage": 13.9,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Selvi",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 147,
+      "percentage": 0.24,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Rajendran .V. B",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 100,
+      "percentage": 0.17,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Chelladurai .M",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 44,
+      "percentage": 0.07,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Adv. A. Raja",
+      "party": "CPI(M)",
+      "votes": 59049,
+      "percentage": 51.0,
+      "is_winner": true
+    },
+    {
+      "candidate": "D. Kumar",
+      "party": "INC",
+      "votes": 51201,
+      "percentage": 44.22,
+      "is_winner": false
+    },
+    {
+      "candidate": "Ganesan. S",
+      "party": "IND",
+      "votes": 4717,
+      "percentage": 4.07,
+      "is_winner": false
+    }
+  ]
+}

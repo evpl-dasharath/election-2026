@@ -5,32 +5,41 @@
     "name": "KASARAGOD",
     "district": "Kasaragod"
   },
-  "live_result": null,
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 210923,
+    "votes_polled": 167915,
+    "votes_counted": 22089,
+    "valid_votes": 22089,
+    "rounds_completed": 13,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:36:24.422529+00:00"
+  },
   "candidates_2026": [
     {
       "name": "Kallatra Mahin Haji",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 61510,
+      "percentage": 43.58,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Ashwini M.L.",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 47273,
+      "percentage": 33.49,
       "is_winner": false,
       "is_leading": false
     },
     {
       "name": "Shanavas Padhoor",
-      "party": "IND (INL)",
+      "party": "IND_LDF",
       "alliance": "LDF",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Mohammed Ali Fathah B M",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 30338,
+      "percentage": 21.49,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,17 +47,17 @@
       "name": "Shanavas A A",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 735,
+      "percentage": 0.52,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Ashwini M.L.",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 0,
-      "percentage": 0.0,
+      "name": "Mohammed Ali Fathah B M",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 692,
+      "percentage": 0.49,
       "is_winner": false,
       "is_leading": false
     }

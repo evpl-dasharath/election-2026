@@ -7,48 +7,30 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 197721,
-    "votes_polled": 125104,
-    "votes_counted": 11296,
-    "valid_votes": 129915,
-    "rounds_completed": 2,
-    "total_rounds": 23,
-    "last_updated": "2026-05-01T02:01:23.184695+00:00"
+    "total_electors": 181308,
+    "votes_polled": 143414,
+    "votes_counted": 15200,
+    "valid_votes": 15200,
+    "rounds_completed": 12,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:58.994794+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. G. Steephen",
-      "party": "CPI(M)",
+      "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 3512,
-      "percentage": 2.7,
+      "votes": 36797,
+      "percentage": 42.04,
       "is_winner": false,
       "is_leading": true
     },
     {
-      "name": "Santhosh Kumar. S",
-      "party": "BSP",
-      "alliance": "OTH",
-      "votes": 2947,
-      "percentage": 2.27,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Adv. S. Sivakumar S/o Sadasivan",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 1123,
-      "percentage": 0.86,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "R. Steephen S/o Rafi",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 1068,
-      "percentage": 0.82,
+      "name": "V. S. Sivakumar",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 34595,
+      "percentage": 39.53,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,17 +38,17 @@
       "name": "Vivek Gopan",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 984,
-      "percentage": 0.76,
+      "votes": 14914,
+      "percentage": 17.04,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "V. S. Sivakumar",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 727,
-      "percentage": 0.56,
+      "name": "Santhosh Kumar. S",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 332,
+      "percentage": 0.38,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +56,26 @@
       "name": "V. S. Sivakumar S/o Sivadasan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 619,
-      "percentage": 0.48,
+      "votes": 186,
+      "percentage": 0.21,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "R. Steephen S/o Rafi",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 160,
+      "percentage": 0.18,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. S. Sivakumar S/o Sadasivan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 70,
+      "percentage": 0.08,
       "is_winner": false,
       "is_leading": false
     }

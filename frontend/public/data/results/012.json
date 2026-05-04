@@ -2,53 +2,44 @@
   "constituency": {
     "id": 12,
     "number": 12,
-    "name": "DHARMADAM",
+    "name": "DHARMADOM",
     "district": "Kannur"
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 215461,
-    "votes_polled": 161435,
-    "votes_counted": 17577,
-    "valid_votes": 166984,
-    "rounds_completed": 2,
-    "total_rounds": 19,
-    "last_updated": "2026-05-01T02:00:51.185957+00:00"
+    "total_electors": 206000,
+    "votes_polled": 167766,
+    "votes_counted": 23408,
+    "valid_votes": 23408,
+    "rounds_completed": 9,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:36:28.542286+00:00"
   },
   "candidates_2026": [
     {
-      "name": "K. Ranjith",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 8533,
-      "percentage": 5.11,
+      "name": "Pinarayi Vijayan",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 48945,
+      "percentage": 46.47,
       "is_winner": false,
       "is_leading": true
-    },
-    {
-      "name": "Vijayan A.M S/o Kunhiraman",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 4198,
-      "percentage": 2.51,
-      "is_winner": false,
-      "is_leading": false
     },
     {
       "name": "Adv. V.P Abdul Rasheed",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 1896,
-      "percentage": 1.14,
+      "votes": 46053,
+      "percentage": 43.72,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Pinarayi Vijayan",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 1717,
-      "percentage": 1.03,
+      "name": "K. Ranjith",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 9681,
+      "percentage": 9.19,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +47,17 @@
       "name": "Vadi Hareendran",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 1289,
-      "percentage": 0.77,
+      "votes": 110,
+      "percentage": 0.1,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Vijayan A.M S/o Kunhiraman",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 74,
+      "percentage": 0.07,
       "is_winner": false,
       "is_leading": false
     }

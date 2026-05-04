@@ -2,44 +2,35 @@
   "constituency": {
     "id": 18,
     "number": 18,
-    "name": "SULTHANBATHERY",
+    "name": "SULTHAN BATHERY",
     "district": "Wayanad"
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 237992,
-    "votes_polled": 154420,
-    "votes_counted": 16271,
-    "valid_votes": 154579,
-    "rounds_completed": 2,
-    "total_rounds": 19,
-    "last_updated": "2026-05-01T02:01:32.184622+00:00"
+    "total_electors": 225329,
+    "votes_polled": 173976,
+    "votes_counted": 16454,
+    "valid_votes": 16454,
+    "rounds_completed": 13,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:36:35.447845+00:00"
   },
   "candidates_2026": [
     {
-      "name": "Benadict",
-      "party": "BSP",
-      "alliance": "OTH",
-      "votes": 5455,
-      "percentage": 3.53,
+      "name": "I. C. Balakrishnan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 54714,
+      "percentage": 44.49,
       "is_winner": false,
       "is_leading": true
     },
     {
       "name": "M. S. Viswanathan",
-      "party": "CPI(M)",
+      "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 2521,
-      "percentage": 1.63,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Prakrithi N V",
-      "party": "AAP",
-      "alliance": "OTH",
-      "votes": 1810,
-      "percentage": 1.17,
+      "votes": 43125,
+      "percentage": 35.06,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +38,26 @@
       "name": "A. S. Kavitha",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 1504,
-      "percentage": 0.97,
+      "votes": 21904,
+      "percentage": 17.81,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Prakrithi N V",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 1373,
+      "percentage": 1.12,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Benadict",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 313,
+      "percentage": 0.25,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,17 +65,8 @@
       "name": "V.A Ramesan",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 1481,
-      "percentage": 0.96,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Rajesh R M",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 1457,
-      "percentage": 0.94,
+      "votes": 207,
+      "percentage": 0.17,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,17 +74,17 @@
       "name": "Balakrishnan Edakkal",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 1291,
-      "percentage": 0.84,
+      "votes": 164,
+      "percentage": 0.13,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "I. C. Balakrishnan",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 829,
-      "percentage": 0.54,
+      "name": "Rajesh R M",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 134,
+      "percentage": 0.11,
       "is_winner": false,
       "is_leading": false
     }

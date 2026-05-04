@@ -1,0 +1,147 @@
+{
+  "constituency": {
+    "id": 99,
+    "number": 99,
+    "name": "CHANGANASSERY",
+    "district": "Kottayam"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 162885,
+    "votes_polled": 119166,
+    "votes_counted": 8226,
+    "valid_votes": 8226,
+    "rounds_completed": 13,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:23:51.834282+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Vinu Job",
+      "party": "KEC",
+      "alliance": "UDF",
+      "votes": 48521,
+      "percentage": 46.12,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Adv. Job Maichil",
+      "party": "KC_M",
+      "alliance": "LDF",
+      "votes": 41375,
+      "percentage": 39.33,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "B. Radhakrishna Menon",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 12957,
+      "percentage": 12.32,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Usha Johnson",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 766,
+      "percentage": 0.73,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Althaf Hassan",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 439,
+      "percentage": 0.42,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Aravind V",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 315,
+      "percentage": 0.3,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Prof. Dr. Saju Kannanthara",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 227,
+      "percentage": 0.22,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Dr.Kalki P",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 58,
+      "percentage": 0.06,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Joemon Joseph Srampickal A P J Juman V S",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 51,
+      "percentage": 0.05,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Jose Joseph",
+      "party": "JRP",
+      "alliance": "OTH",
+      "votes": 39,
+      "percentage": 0.04,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Adv. Job Maichil",
+      "party": "KEC(M)",
+      "votes": 55425,
+      "percentage": 44.85,
+      "is_winner": true
+    },
+    {
+      "candidate": "V. J. Laly",
+      "party": "KEC",
+      "votes": 49366,
+      "percentage": 39.94,
+      "is_winner": false
+    },
+    {
+      "candidate": "Adv G Raman Nair",
+      "party": "BJP",
+      "votes": 14491,
+      "percentage": 11.73,
+      "is_winner": false
+    },
+    {
+      "candidate": "Tijo Karikkandam",
+      "party": "IND",
+      "votes": 1094,
+      "percentage": 0.89,
+      "is_winner": false
+    },
+    {
+      "candidate": "Amruth Dev T",
+      "party": "BSP",
+      "votes": 1079,
+      "percentage": 0.87,
+      "is_winner": false
+    }
+  ]
+}

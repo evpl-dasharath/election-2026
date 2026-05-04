@@ -2,44 +2,35 @@
   "constituency": {
     "id": 132,
     "number": 132,
-    "name": "KAZHAKKOOTTAM",
+    "name": "KAZHAKOOTAM",
     "district": "Thiruvananthapuram"
   },
-  "live_result": null,
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 164561,
+    "votes_polled": 129377,
+    "votes_counted": 7672,
+    "valid_votes": 7672,
+    "rounds_completed": 9,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:59.124676+00:00"
+  },
   "candidates_2026": [
     {
-      "name": "Deebika Karimanal",
-      "party": "Anna DHRM",
-      "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "name": "Kadakampally Surendran",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 23757,
+      "percentage": 36.48,
       "is_winner": false,
-      "is_leading": false
+      "is_leading": true
     },
     {
-      "name": "Sreekantan Nair V.",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "T. S. Rajan",
-      "party": "BSP",
-      "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "K. Surendran",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "name": "V. Muraleedharan",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 22511,
+      "percentage": 34.57,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,26 +38,44 @@
       "name": "Adv.  T. Sarathchandra Prasad",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 18006,
+      "percentage": 27.65,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "V. Muraleedharan",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 0,
-      "percentage": 0.0,
+      "name": "T. S. Rajan",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 151,
+      "percentage": 0.23,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Kadakampally Surendran",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 0,
-      "percentage": 0.0,
+      "name": "Deebika Karimanal",
+      "party": "Anna DHRM",
+      "alliance": "OTH",
+      "votes": 149,
+      "percentage": 0.23,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. Surendran",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 50,
+      "percentage": 0.08,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sreekantan Nair V.",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 32,
+      "percentage": 0.05,
       "is_winner": false,
       "is_leading": false
     }

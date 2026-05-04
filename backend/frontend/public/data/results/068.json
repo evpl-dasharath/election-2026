@@ -1,0 +1,84 @@
+{
+  "constituency": {
+    "id": 68,
+    "number": 68,
+    "name": "NATTIKA",
+    "district": "Thrissur"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 203427,
+    "votes_polled": 155377,
+    "votes_counted": 20075,
+    "valid_votes": 20075,
+    "rounds_completed": 13,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:22:52.527230+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Geetha Gopi",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 48112,
+      "percentage": 38.54,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Adv. Sunil Lalur",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 40096,
+      "percentage": 32.12,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "C. C. Mukundan",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 35487,
+      "percentage": 28.43,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "C C MUKUNDHAN",
+      "party": "CPI",
+      "votes": 72930,
+      "percentage": 47.49,
+      "is_winner": true
+    },
+    {
+      "candidate": "ADV. SUNIL LALOOR",
+      "party": "INC",
+      "votes": 44499,
+      "percentage": 28.98,
+      "is_winner": false
+    },
+    {
+      "candidate": "LOJANAN AMBATT",
+      "party": "BJP",
+      "votes": 33716,
+      "percentage": 21.96,
+      "is_winner": false
+    },
+    {
+      "candidate": "C S JITHESHKUMAR",
+      "party": "IND",
+      "votes": 617,
+      "percentage": 0.4,
+      "is_winner": false
+    },
+    {
+      "candidate": "SIVARATHNAN ALATHI",
+      "party": "IND",
+      "votes": 595,
+      "percentage": 0.39,
+      "is_winner": false
+    }
+  ]
+}

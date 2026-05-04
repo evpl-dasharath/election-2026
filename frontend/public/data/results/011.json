@@ -7,57 +7,48 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 191385,
-    "votes_polled": 119774,
-    "votes_counted": 6201,
-    "valid_votes": 124038,
-    "rounds_completed": 1,
-    "total_rounds": 20,
-    "last_updated": "2026-05-01T02:06:01.184901+00:00"
+    "total_electors": 182682,
+    "votes_polled": 138125,
+    "votes_counted": 22168,
+    "valid_votes": 22168,
+    "rounds_completed": 10,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:36:34.240733+00:00"
   },
   "candidates_2026": [
     {
-      "name": "T.K. Mohanan",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 2570,
-      "percentage": 2.07,
+      "name": "Adv. T. O. Mohanan",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 55587,
+      "percentage": 51.41,
       "is_winner": false,
       "is_leading": true
+    },
+    {
+      "name": "Kadannappalli Ramachandran",
+      "party": "CON_S",
+      "alliance": "LDF",
+      "votes": 39177,
+      "percentage": 36.24,
+      "is_winner": false,
+      "is_leading": false
     },
     {
       "name": "C. Raghunath",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 1344,
-      "percentage": 1.08,
+      "votes": 12136,
+      "percentage": 11.22,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "M.K. Shahazad",
-      "party": "SUCI",
-      "alliance": "OTH",
-      "votes": 627,
-      "percentage": 0.51,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Ramachandran Kuniyil",
+      "name": "T.K. Mohanan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 573,
-      "percentage": 0.46,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Kadannappalli Ramachandran",
-      "party": "CONG(S)",
-      "alliance": "LDF",
-      "votes": 413,
-      "percentage": 0.33,
+      "votes": 210,
+      "percentage": 0.19,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,17 +56,26 @@
       "name": "Suresh Kumar",
       "party": "BJKP",
       "alliance": "OTH",
-      "votes": 275,
-      "percentage": 0.22,
+      "votes": 189,
+      "percentage": 0.17,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Adv. T. O. Mohanan",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 264,
-      "percentage": 0.21,
+      "name": "M.K. Shahazad",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 167,
+      "percentage": 0.15,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ramachandran Kuniyil",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 144,
+      "percentage": 0.13,
       "is_winner": false,
       "is_leading": false
     }

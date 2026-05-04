@@ -1,0 +1,111 @@
+{
+  "constituency": {
+    "id": 96,
+    "number": 96,
+    "name": "ETTUMANOOR",
+    "district": "Kottayam"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 158256,
+    "votes_polled": 120416,
+    "votes_counted": 26726,
+    "valid_votes": 26726,
+    "rounds_completed": 10,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:23:34.489638+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Nattakam Suresh",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 49750,
+      "percentage": 52.95,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "V. N. Vasavan",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 32098,
+      "percentage": 34.16,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Athira D. Nair",
+      "party": "TTP",
+      "alliance": "NDA",
+      "votes": 10973,
+      "percentage": 11.68,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Binoy Joseph Kulathunkal",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 361,
+      "percentage": 0.38,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ashna Thambi",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 184,
+      "percentage": 0.2,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Raj Mohan Vettikulangara Unni",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 112,
+      "percentage": 0.12,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "V N Vasavan",
+      "party": "CPI(M)",
+      "votes": 58289,
+      "percentage": 46.2,
+      "is_winner": true
+    },
+    {
+      "candidate": "Adv. Prince Lukose",
+      "party": "KEC",
+      "votes": 43986,
+      "percentage": 34.86,
+      "is_winner": false
+    },
+    {
+      "candidate": "T N HariKumar",
+      "party": "BJP",
+      "votes": 13746,
+      "percentage": 10.9,
+      "is_winner": false
+    },
+    {
+      "candidate": "Lathika Subhash",
+      "party": "IND",
+      "votes": 7624,
+      "percentage": 6.04,
+      "is_winner": false
+    },
+    {
+      "candidate": "Jijith K Joy",
+      "party": "BSP",
+      "votes": 1165,
+      "percentage": 0.92,
+      "is_winner": false
+    }
+  ]
+}

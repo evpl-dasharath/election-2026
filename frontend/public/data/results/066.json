@@ -7,30 +7,30 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 182280,
-    "votes_polled": 117215,
-    "votes_counted": 21065,
-    "valid_votes": 121126,
-    "rounds_completed": 4,
-    "total_rounds": 23,
-    "last_updated": "2026-05-01T01:57:10.186337+00:00"
+    "total_electors": 188395,
+    "votes_polled": 149962,
+    "votes_counted": 0,
+    "valid_votes": 0,
+    "rounds_completed": 6,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:06.695498+00:00"
   },
   "candidates_2026": [
     {
       "name": "K. Rajan",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 8742,
-      "percentage": 7.22,
+      "votes": 28400,
+      "percentage": 48.71,
       "is_winner": false,
       "is_leading": true
     },
     {
-      "name": "Edwin Babu Alapat",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 5451,
-      "percentage": 4.5,
+      "name": "Adv. Shaji J Kodankandath",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 21976,
+      "percentage": 37.7,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Bijoy Thomas",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 2499,
-      "percentage": 2.06,
+      "votes": 7370,
+      "percentage": 12.64,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,17 +47,17 @@
       "name": "V P Prinson Avinissery",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 2266,
-      "percentage": 1.87,
+      "votes": 183,
+      "percentage": 0.31,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Adv. Shaji J Kodankandath",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 2253,
-      "percentage": 1.86,
+      "name": "Edwin Babu Alapat",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 83,
+      "percentage": 0.14,
       "is_winner": false,
       "is_leading": false
     }

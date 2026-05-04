@@ -6,31 +6,40 @@
     "district": "Thrissur"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
-    "total_electors": 218529,
-    "votes_polled": 151647,
-    "votes_counted": 6513,
-    "valid_votes": 156335,
-    "rounds_completed": 1,
-    "total_rounds": 24,
-    "last_updated": "2026-05-01T02:04:01.190047+00:00"
+    "status": "RESULT_DECLARED",
+    "total_electors": 203956,
+    "votes_polled": 160900,
+    "votes_counted": 31987,
+    "valid_votes": 31987,
+    "rounds_completed": 16,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:07.021230+00:00"
   },
   "candidates_2026": [
+    {
+      "name": "U. R. Pradeep",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 76073,
+      "percentage": 46.63,
+      "is_winner": true,
+      "is_leading": false
+    },
+    {
+      "name": "Sivan Veettikkunnu",
+      "party": "IND_UDF",
+      "alliance": "UDF",
+      "votes": 46687,
+      "percentage": 28.62,
+      "is_winner": false,
+      "is_leading": false
+    },
     {
       "name": "K. Balakrishnan",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 3137,
-      "percentage": 2.01,
-      "is_winner": false,
-      "is_leading": true
-    },
-    {
-      "name": "Sivan Veettikkunnu",
-      "party": "IND (IUML)",
-      "alliance": "UDF",
-      "votes": 1314,
-      "percentage": 0.84,
+      "votes": 37286,
+      "percentage": 22.85,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +47,8 @@
       "name": "P. R. Vinod Kumar",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 773,
-      "percentage": 0.49,
+      "votes": 1204,
+      "percentage": 0.74,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,17 +56,8 @@
       "name": "K V Subramaniyan",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 671,
-      "percentage": 0.43,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "U. R. Pradeep",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 579,
-      "percentage": 0.37,
+      "votes": 669,
+      "percentage": 0.41,
       "is_winner": false,
       "is_leading": false
     }

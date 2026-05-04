@@ -7,39 +7,30 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 173178,
-    "votes_polled": 124086,
-    "votes_counted": 6367,
-    "valid_votes": 127349,
-    "rounds_completed": 1,
-    "total_rounds": 20,
-    "last_updated": "2026-05-01T02:02:29.188934+00:00"
+    "total_electors": 177094,
+    "votes_polled": 142950,
+    "votes_counted": 8029,
+    "valid_votes": 8029,
+    "rounds_completed": 7,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:35:48.583870+00:00"
   },
   "candidates_2026": [
     {
-      "name": "Adv. Jayakumar Theertham",
-      "party": "CPIML Liberation",
-      "alliance": "OTH",
-      "votes": 2042,
-      "percentage": 1.6,
+      "name": "M. R. Baiju",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 26466,
+      "percentage": 41.41,
       "is_winner": false,
       "is_leading": true
     },
     {
-      "name": "Nobil M. D",
-      "party": "BSP",
-      "alliance": "OTH",
-      "votes": 1917,
-      "percentage": 1.51,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
       "name": "Adv. I. B. Satheesh",
-      "party": "CPI(M)",
+      "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 949,
-      "percentage": 0.75,
+      "votes": 21070,
+      "percentage": 32.97,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,17 +38,26 @@
       "name": "P. K. Krishnadas",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 895,
-      "percentage": 0.7,
+      "votes": 15740,
+      "percentage": 24.63,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "M. R. Baiju",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 421,
-      "percentage": 0.33,
+      "name": "Nobil M. D",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 180,
+      "percentage": 0.28,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Jayakumar Theertham",
+      "party": "CPI_ML_L",
+      "alliance": "OTH",
+      "votes": 108,
+      "percentage": 0.17,
       "is_winner": false,
       "is_leading": false
     }

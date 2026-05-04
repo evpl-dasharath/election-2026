@@ -1,0 +1,138 @@
+{
+  "constituency": {
+    "id": 139,
+    "number": 139,
+    "name": "KOVALAM",
+    "district": "Thiruvananthapuram"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 201200,
+    "votes_polled": 151986,
+    "votes_counted": 8037,
+    "valid_votes": 8037,
+    "rounds_completed": 9,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:24:01.845583+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Adv. M. Vincent",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 31926,
+      "percentage": 45.78,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Bhagat Rufus",
+      "party": "IND_LDF",
+      "alliance": "LDF",
+      "votes": 21282,
+      "percentage": 30.52,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "T. N. Suresh",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 15063,
+      "percentage": 21.6,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Manoj S.P",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 270,
+      "percentage": 0.39,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Kattachalkuzhi.M.Sugathan",
+      "party": "SRP",
+      "alliance": "OTH",
+      "votes": 232,
+      "percentage": 0.33,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "N.Jayarajan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 226,
+      "percentage": 0.32,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Sabu.S.Philip",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 154,
+      "percentage": 0.22,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Venganoor Ashokan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 91,
+      "percentage": 0.13,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Kiran S Pillai",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 52,
+      "percentage": 0.07,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Adv. M. VINCENT",
+      "party": "INC",
+      "votes": 74868,
+      "percentage": 47.06,
+      "is_winner": true
+    },
+    {
+      "candidate": "NEELALOHITHADASAN NADAR",
+      "party": "JD(S)",
+      "votes": 63306,
+      "percentage": 39.79,
+      "is_winner": false
+    },
+    {
+      "candidate": "VISHNUPURAM CHANDRASEKHARAN",
+      "party": "BJP",
+      "votes": 18664,
+      "percentage": 11.73,
+      "is_winner": false
+    },
+    {
+      "candidate": "KANCHAMPAZHINJI SASIKUMAR",
+      "party": "BSP",
+      "votes": 641,
+      "percentage": 0.4,
+      "is_winner": false
+    },
+    {
+      "candidate": "PRINCE V.S.",
+      "party": "IND",
+      "votes": 417,
+      "percentage": 0.26,
+      "is_winner": false
+    }
+  ]
+}

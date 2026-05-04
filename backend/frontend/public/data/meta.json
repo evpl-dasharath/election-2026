@@ -1,0 +1,39 @@
+{
+  "total_constituencies": 140,
+  "results_declared": 1,
+  "counting_in_progress": 139,
+  "not_started": 0,
+  "alliance_summary": {
+    "UDF": {
+      "won": 1,
+      "leading": 102,
+      "trailing": 0,
+      "vote_share": 46.53123434505065
+    },
+    "LDF": {
+      "won": 0,
+      "leading": 35,
+      "trailing": 0,
+      "vote_share": 37.000683971037915
+    },
+    "NDA": {
+      "won": 0,
+      "leading": 2,
+      "trailing": 0,
+      "vote_share": 14.578752939336178
+    },
+    "OTH": {
+      "won": 0,
+      "leading": 0,
+      "trailing": 0,
+      "vote_share": 1.889328744575259
+    }
+  },
+  "ind_summary": {
+    "won": 0,
+    "leading": 0
+  },
+  "total_votes_counted": 13540047,
+  "total_votes_polled": 21225079,
+  "timestamp": "2026-05-04T07:24:08.629898+00:00"
+}

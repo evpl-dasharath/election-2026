@@ -1,0 +1,93 @@
+{
+  "constituency": {
+    "id": 39,
+    "number": 39,
+    "name": "MANKADA",
+    "district": "Malappuram"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 230838,
+    "votes_polled": 185362,
+    "votes_counted": 18606,
+    "valid_votes": 18606,
+    "rounds_completed": 11,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:22:40.834089+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Manjalamkuzhi Ali",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 62263,
+      "percentage": 63.11,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Kunnath Mohamed S/o Ali Haji",
+      "party": "IND_LDF",
+      "alliance": "LDF",
+      "votes": 31736,
+      "percentage": 32.17,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Lijoy Paul",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 3716,
+      "percentage": 3.77,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Kunnath Muhammed",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 316,
+      "percentage": 0.32,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "MANJALAMKUZHI ALI",
+      "party": "IUML",
+      "votes": 83231,
+      "percentage": 49.46,
+      "is_winner": true
+    },
+    {
+      "candidate": "Adv. T.K. RASHEEDALI",
+      "party": "CPI(M)",
+      "votes": 76985,
+      "percentage": 45.75,
+      "is_winner": false
+    },
+    {
+      "candidate": "SAJESH ELAYIL",
+      "party": "BJP",
+      "votes": 6641,
+      "percentage": 3.95,
+      "is_winner": false
+    },
+    {
+      "candidate": "ALI S/o MUSTHAFA",
+      "party": "IND",
+      "votes": 350,
+      "percentage": 0.21,
+      "is_winner": false
+    },
+    {
+      "candidate": "ALI S/o ALAVI HAJI",
+      "party": "IND",
+      "votes": 193,
+      "percentage": 0.11,
+      "is_winner": false
+    }
+  ]
+}

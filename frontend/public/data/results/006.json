@@ -2,35 +2,44 @@
   "constituency": {
     "id": 6,
     "number": 6,
-    "name": "PAYYANNUR",
+    "name": "PAYYANUR",
     "district": "Kannur"
   },
-  "live_result": null,
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 188935,
+    "votes_polled": 152224,
+    "votes_counted": 15860,
+    "valid_votes": 15860,
+    "rounds_completed": 12,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:36:23.641654+00:00"
+  },
   "candidates_2026": [
+    {
+      "name": "V. Kunjikrishnan",
+      "party": "IND_UDF",
+      "alliance": "UDF",
+      "votes": 65805,
+      "percentage": 48.6,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "T. I. Madhusoodanan",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 61054,
+      "percentage": 45.09,
+      "is_winner": false,
+      "is_leading": false
+    },
     {
       "name": "A. P. Gangadharan",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "V. Kunjikrishnan",
-      "party": "IND (RSP)",
-      "alliance": "UDF",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "T. I. Madhusoodanan",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 7013,
+      "percentage": 5.18,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +47,8 @@
       "name": "Sandeep V. K.",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 481,
+      "percentage": 0.36,
       "is_winner": false,
       "is_leading": false
     }

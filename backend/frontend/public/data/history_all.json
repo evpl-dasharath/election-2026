@@ -1,0 +1,3502 @@
+[
+  {
+    "constituency_number": 1,
+    "constituency_name": "MANJESHWARAM",
+    "district": "Kasaragod",
+    "la_2011": {
+      "winner": "P B ABDUL RAZAK",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 5828
+    },
+    "la_2016": {
+      "winner": "P B Abdul Razak",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 89
+    },
+    "la_2021": {
+      "winner": "A K M ASHRAF",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 745
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 2,
+    "constituency_name": "KASARAGOD",
+    "district": "Kasaragod",
+    "la_2011": {
+      "winner": "N.A.NELLIKKUNNU",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 9738
+    },
+    "la_2016": {
+      "winner": "N A Nellikkunnu",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 8607
+    },
+    "la_2021": {
+      "winner": "N A NELLIKKUNNU",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 12901
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 3,
+    "constituency_name": "UDMA",
+    "district": "Kasaragod",
+    "la_2011": {
+      "winner": "K.KUNHIRAMAN",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 11380
+    },
+    "la_2016": {
+      "winner": "K Kunhiraman",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 3832
+    },
+    "la_2021": {
+      "winner": "C H KUNHAMBU",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 13322
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 4,
+    "constituency_name": "KANHANGAD",
+    "district": "Kasaragod",
+    "la_2011": {
+      "winner": "E.CHANDRASHEKHARAN",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 12178
+    },
+    "la_2016": {
+      "winner": "E.Chandrashekaran",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 26011
+    },
+    "la_2021": {
+      "winner": "E CHANDRASHEKARAN",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 27139
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 5,
+    "constituency_name": "THRIKARIPUR",
+    "district": "Kasaragod",
+    "la_2011": {
+      "winner": "K KUNHIRAMAN",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 8765
+    },
+    "la_2016": {
+      "winner": "M.Rajagopalan",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 16959
+    },
+    "la_2021": {
+      "winner": "M RAJAGOPALAN",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 26137
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 6,
+    "constituency_name": "PAYYANUR",
+    "district": "Kannur",
+    "la_2011": {
+      "winner": "C.KRISHNAN",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 32124
+    },
+    "la_2016": {
+      "winner": "C Krishnan",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 40263
+    },
+    "la_2021": {
+      "winner": "T I MADHUSOODANAN",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 49780
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 7,
+    "constituency_name": "KALLIASSERI",
+    "district": "Kannur",
+    "la_2011": {
+      "winner": "T.V. RAJESH",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 29946
+    },
+    "la_2016": {
+      "winner": "T V Rajesh",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 42891
+    },
+    "la_2021": {
+      "winner": "M VIJIN",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 44393
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 8,
+    "constituency_name": "TALIPARAMBA",
+    "district": "Kannur",
+    "la_2011": {
+      "winner": "JAMES MATHEW",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 27861
+    },
+    "la_2016": {
+      "winner": "James Mathew",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 40617
+    },
+    "la_2021": {
+      "winner": "M V GOVINDAN MASTER",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 22689
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 9,
+    "constituency_name": "IRIKKUR",
+    "district": "Kannur",
+    "la_2011": {
+      "winner": "K. C. JOSEPH",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 11757
+    },
+    "la_2016": {
+      "winner": "K C Joseph",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 9647
+    },
+    "la_2021": {
+      "winner": "Adv. Sajeev Joseph",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 10010
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 10,
+    "constituency_name": "AZHIKODE",
+    "district": "Kannur",
+    "la_2011": {
+      "winner": "K.M.SHAJI",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 493
+    },
+    "la_2016": {
+      "winner": "K M Shaji",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 2287
+    },
+    "la_2021": {
+      "winner": "K V Sumesh",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 6141
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 11,
+    "constituency_name": "KANNUR",
+    "district": "Kannur",
+    "la_2011": {
+      "winner": "A.P ABDULLAKUTTY",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 6443
+    },
+    "la_2016": {
+      "winner": "Ramachandran Kadannappalli",
+      "winner_party": "CON_S",
+      "winner_alliance": "LDF",
+      "margin": 1196
+    },
+    "la_2021": {
+      "winner": "RAMACHANDRAN KADANNAPPALLI",
+      "winner_party": "CON_S",
+      "winner_alliance": "LDF",
+      "margin": 1745
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 12,
+    "constituency_name": "DHARMADOM",
+    "district": "Kannur",
+    "la_2011": {
+      "winner": "K.K. NARAYANAN",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 15162
+    },
+    "la_2016": {
+      "winner": "Pinarayi Vijayan",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 36905
+    },
+    "la_2021": {
+      "winner": "Pinarayi Vijayan",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 50123
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 13,
+    "constituency_name": "THALASSERY",
+    "district": "Kannur",
+    "la_2011": {
+      "winner": "KODIYERI BALAKRISHNAN",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 26509
+    },
+    "la_2016": {
+      "winner": "Adv. A N Shamseer",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 34117
+    },
+    "la_2021": {
+      "winner": "Adv. A. N. SHAMSEER",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 36801
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 14,
+    "constituency_name": "KUTHUPARAMBA",
+    "district": "Kannur",
+    "la_2011": {
+      "winner": "E.P.JAYARAJAN",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 30512
+    },
+    "la_2016": {
+      "winner": "E. P. Jayarajan",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 43381
+    },
+    "la_2021": {
+      "winner": "K K SHAILAJA TEACHER",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 60963
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 15,
+    "constituency_name": "MATTANUR",
+    "district": "Kannur",
+    "la_2011": {
+      "winner": "K.P.MOHANAN S/O P R KURUP",
+      "winner_party": "SJD",
+      "winner_alliance": "UDF",
+      "margin": 3303
+    },
+    "la_2016": {
+      "winner": "K K Shailaja Teacher",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 12291
+    },
+    "la_2021": {
+      "winner": "K.P. MOHANAN",
+      "winner_party": "LJD",
+      "winner_alliance": "LDF",
+      "margin": 9541
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 16,
+    "constituency_name": "PERAVOOR",
+    "district": "Kannur",
+    "la_2011": {
+      "winner": "ADV.SUNNY JOSEPH",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 3440
+    },
+    "la_2016": {
+      "winner": "Adv. Sunny Joseph",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 7989
+    },
+    "la_2021": {
+      "winner": "Adv. Sunny Joseph",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 3172
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 17,
+    "constituency_name": "MANANTHAVADY",
+    "district": "Wayanad",
+    "la_2011": {
+      "winner": "P.K.JAYALAKSHMI",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 12734
+    },
+    "la_2016": {
+      "winner": "O R Kelu",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 1307
+    },
+    "la_2021": {
+      "winner": "O.R.KELU",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 9282
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 18,
+    "constituency_name": "SULTHAN BATHERY",
+    "district": "Wayanad",
+    "la_2011": {
+      "winner": "I.C BALAKRISHNAN",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 7583
+    },
+    "la_2016": {
+      "winner": "I C Balakrishnan",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 11198
+    },
+    "la_2021": {
+      "winner": "I.C BALAKRISHNAN",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 11822
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 19,
+    "constituency_name": "KALPETTA",
+    "district": "Wayanad",
+    "la_2011": {
+      "winner": "M.V SREYAMSKUMAR",
+      "winner_party": "SJD",
+      "winner_alliance": "UDF",
+      "margin": 18169
+    },
+    "la_2016": {
+      "winner": "C K Saseendran",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 13083
+    },
+    "la_2021": {
+      "winner": "Adv.T SIDDIQU",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 5470
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 20,
+    "constituency_name": "VADAKARA",
+    "district": "Kozhikode",
+    "la_2011": {
+      "winner": "C.K.NANU",
+      "winner_party": "JD_S",
+      "winner_alliance": "LDF",
+      "margin": 847
+    },
+    "la_2016": {
+      "winner": "C.K.Nanu",
+      "winner_party": "JD_S",
+      "winner_alliance": "LDF",
+      "margin": 9511
+    },
+    "la_2021": {
+      "winner": "K.K.REMA",
+      "winner_party": "RMPI",
+      "winner_alliance": "UDF",
+      "margin": 7491
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 21,
+    "constituency_name": "KUTTIADY",
+    "district": "Kozhikode",
+    "la_2011": {
+      "winner": "K.K.LATHIKA",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 6972
+    },
+    "la_2016": {
+      "winner": "Parakkal Abdulla",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 1157
+    },
+    "la_2021": {
+      "winner": "K P KUNHAMMED KUTTI MASTER",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 333
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 22,
+    "constituency_name": "NADAPURAM",
+    "district": "Kozhikode",
+    "la_2011": {
+      "winner": "E.K.VIJAYAN",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 7546
+    },
+    "la_2016": {
+      "winner": "E. K. Vijayan",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 4759
+    },
+    "la_2021": {
+      "winner": "E. K. VIJAYAN",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 4036
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 23,
+    "constituency_name": "KOYILANDY",
+    "district": "Kozhikode",
+    "la_2011": {
+      "winner": "K.DASAN",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 4139
+    },
+    "la_2016": {
+      "winner": "K.Dasan",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 13369
+    },
+    "la_2021": {
+      "winner": "Kanathil Jameela",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 8472
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 24,
+    "constituency_name": "PERAMBRA",
+    "district": "Kozhikode",
+    "la_2011": {
+      "winner": "K. KUNHAMMAD MASTER",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 15269
+    },
+    "la_2016": {
+      "winner": "T.P.Ramakrishnan",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 4101
+    },
+    "la_2021": {
+      "winner": "T.P. RAMAKRISHNAN",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 22592
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 25,
+    "constituency_name": "BALUSSERY",
+    "district": "Kozhikode",
+    "la_2011": {
+      "winner": "PURUSHAN KADALUNDI",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 8882
+    },
+    "la_2016": {
+      "winner": "Purushuan Kadalundi",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 15464
+    },
+    "la_2021": {
+      "winner": "Adv. K.M. SACHINDEV",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 20372
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 26,
+    "constituency_name": "ELATHUR",
+    "district": "Kozhikode",
+    "la_2011": {
+      "winner": "A.K. SASEENDRAN",
+      "winner_party": "NCP",
+      "winner_alliance": "LDF",
+      "margin": 14654
+    },
+    "la_2016": {
+      "winner": "A K Saseendran",
+      "winner_party": "NCP",
+      "winner_alliance": "LDF",
+      "margin": 29057
+    },
+    "la_2021": {
+      "winner": "A .K Saseendran",
+      "winner_party": "NCP",
+      "winner_alliance": "LDF",
+      "margin": 38502
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 27,
+    "constituency_name": "KOZHIKODE NORTH",
+    "district": "Kozhikode",
+    "la_2011": {
+      "winner": "A. PRADEEP KUMAR",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 8998
+    },
+    "la_2016": {
+      "winner": "A Pradeep Kumar",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 27873
+    },
+    "la_2021": {
+      "winner": "Thottathil Ravindran",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 12928
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 28,
+    "constituency_name": "KOZHIKODE SOUTH",
+    "district": "Kozhikode",
+    "la_2011": {
+      "winner": "DR. M.K. MUNEER",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 1376
+    },
+    "la_2016": {
+      "winner": "Dr. M.K.Muneer",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 6327
+    },
+    "la_2021": {
+      "winner": "AHAMMAD DEVARKOVIL",
+      "winner_party": "INL",
+      "winner_alliance": "LDF",
+      "margin": 12459
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 29,
+    "constituency_name": "BEYPORE",
+    "district": "Kozhikode",
+    "la_2011": {
+      "winner": "ELAMARAM KAREEM",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 5316
+    },
+    "la_2016": {
+      "winner": "Mammed Koya V K C",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 14363
+    },
+    "la_2021": {
+      "winner": "Adv. P. A MOHAMED RIYAS",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 28747
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 30,
+    "constituency_name": "KUNNAMANGALAM",
+    "district": "Kozhikode",
+    "la_2011": {
+      "winner": "ADV.P.T.A.RAHIM",
+      "winner_party": "IND_LDF",
+      "winner_alliance": "LDF",
+      "margin": 3269
+    },
+    "la_2016": {
+      "winner": "Adv. P.T.A. Rahim  &#39;E&#39;",
+      "winner_party": "IND_LDF",
+      "winner_alliance": "LDF",
+      "margin": 11205
+    },
+    "la_2021": {
+      "winner": "ADV. P. T. A RAHIM",
+      "winner_party": "IND_LDF",
+      "winner_alliance": "LDF",
+      "margin": 10276
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 31,
+    "constituency_name": "KODUVALLY",
+    "district": "Kozhikode",
+    "la_2011": {
+      "winner": "V.M.UMMER MASTER",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 16552
+    },
+    "la_2016": {
+      "winner": "Karat Razack",
+      "winner_party": "IND_LDF",
+      "winner_alliance": "LDF",
+      "margin": 573
+    },
+    "la_2021": {
+      "winner": "DR. M.K MUNEER",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 6344
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 32,
+    "constituency_name": "THIRUVAMBADY",
+    "district": "Kozhikode",
+    "la_2011": {
+      "winner": "C MOYINKUTTY",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 3833
+    },
+    "la_2016": {
+      "winner": "George M. Thomas",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 3008
+    },
+    "la_2021": {
+      "winner": "Linto Joseph",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 4643
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 33,
+    "constituency_name": "KONDOTTY",
+    "district": "Malappuram",
+    "la_2011": {
+      "winner": "K MUHAMMEDUNNI HAJI",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 28149
+    },
+    "la_2016": {
+      "winner": "T.V. Ibrahim",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 10654
+    },
+    "la_2021": {
+      "winner": "T V IBRAHIM",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 17666
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 34,
+    "constituency_name": "ERANAD",
+    "district": "Malappuram",
+    "la_2011": {
+      "winner": "P.K.BASHEER",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 11246
+    },
+    "la_2016": {
+      "winner": "P.K Basheer",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 12893
+    },
+    "la_2021": {
+      "winner": "P.K. Basheer",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 22546
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 35,
+    "constituency_name": "NILAMBUR",
+    "district": "Malappuram",
+    "la_2011": {
+      "winner": "ARYADAN MOHAMMED",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 5598
+    },
+    "la_2016": {
+      "winner": "P V Anvar",
+      "winner_party": "IND_LDF",
+      "winner_alliance": "LDF",
+      "margin": 11504
+    },
+    "la_2021": {
+      "winner": "P.V. ANVAR",
+      "winner_party": "IND_LDF",
+      "winner_alliance": "LDF",
+      "margin": 2700
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 36,
+    "constituency_name": "WANDOOR",
+    "district": "Malappuram",
+    "la_2011": {
+      "winner": "A.P.ANILKUMAR",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 28919
+    },
+    "la_2016": {
+      "winner": "A.P.Anil Kumar",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 23864
+    },
+    "la_2021": {
+      "winner": "A P ANILKUMAR",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 15563
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 37,
+    "constituency_name": "MANJERI",
+    "district": "Malappuram",
+    "la_2011": {
+      "winner": "ADV.M.UMMER",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 29079
+    },
+    "la_2016": {
+      "winner": "Adv. M Ummer",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 19616
+    },
+    "la_2021": {
+      "winner": "Adv. U.A. LATHEEF",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 14573
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 38,
+    "constituency_name": "PERINTHALMANNA",
+    "district": "Malappuram",
+    "la_2011": {
+      "winner": "MANJALAMKUZHI ALI",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 9589
+    },
+    "la_2016": {
+      "winner": "Manjalamkuzhi Ali",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 579
+    },
+    "la_2021": {
+      "winner": "NAJEEB KANTHAPURAM",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 38
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 39,
+    "constituency_name": "MANKADA",
+    "district": "Malappuram",
+    "la_2011": {
+      "winner": "T.A.AHMED KABEER",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 23593
+    },
+    "la_2016": {
+      "winner": "T A Ahammed Kabeer",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 1508
+    },
+    "la_2021": {
+      "winner": "MANJALAMKUZHI ALI",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 6246
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 40,
+    "constituency_name": "MALAPPURAM",
+    "district": "Malappuram",
+    "la_2011": {
+      "winner": "P. UBAIDULLA",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 44508
+    },
+    "la_2016": {
+      "winner": "P Ubaidulla",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 35672
+    },
+    "la_2021": {
+      "winner": "P. UBAIDULLA",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 35208
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 41,
+    "constituency_name": "VENGARA",
+    "district": "Malappuram",
+    "la_2011": {
+      "winner": "P.K.KUNHALIKUTTY",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 38237
+    },
+    "la_2016": {
+      "winner": "P.K. Kunhalikkutty",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 38057
+    },
+    "la_2021": {
+      "winner": "P.K KUNJHALIKUTTY",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 30596
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 42,
+    "constituency_name": "VALLIKKUNNU",
+    "district": "Malappuram",
+    "la_2011": {
+      "winner": "ADV.K.N.A.KHADER",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 18122
+    },
+    "la_2016": {
+      "winner": "Abdul Hameed Master",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 12610
+    },
+    "la_2021": {
+      "winner": "ABDUL HAMEED MASTER",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 14116
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 43,
+    "constituency_name": "TIRURANGADI",
+    "district": "Malappuram",
+    "la_2011": {
+      "winner": "P.K.ABDU RABB",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 30208
+    },
+    "la_2016": {
+      "winner": "P.K Abdu Rabb",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 6043
+    },
+    "la_2021": {
+      "winner": "K P A MAJEED",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 9578
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 44,
+    "constituency_name": "TANUR",
+    "district": "Malappuram",
+    "la_2011": {
+      "winner": "ABDURAHIMAN RANDATHANI",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 9433
+    },
+    "la_2016": {
+      "winner": "V Abdurahiman",
+      "winner_party": "NSC",
+      "winner_alliance": "LDF",
+      "margin": 4918
+    },
+    "la_2021": {
+      "winner": "V.ABDURAHIMAN",
+      "winner_party": "NSC",
+      "winner_alliance": "LDF",
+      "margin": 985
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 45,
+    "constituency_name": "TIRUR",
+    "district": "Malappuram",
+    "la_2011": {
+      "winner": "C MAMMOOTTY",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 23566
+    },
+    "la_2016": {
+      "winner": "C. Mammutty (E)",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 7061
+    },
+    "la_2021": {
+      "winner": "KURUKKOLI MOIDEEN",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 7214
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 46,
+    "constituency_name": "KOTTAKKAL",
+    "district": "Malappuram",
+    "la_2011": {
+      "winner": "ABDUSSAMAD SAMADANI",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 35902
+    },
+    "la_2016": {
+      "winner": "Abid Hussain Thangal",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 15042
+    },
+    "la_2021": {
+      "winner": "PROF. ABID HUSSAIN THANGAL",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 16588
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 47,
+    "constituency_name": "THAVANUR",
+    "district": "Malappuram",
+    "la_2011": {
+      "winner": "DR.K.T. JALEEL",
+      "winner_party": "IND_LDF",
+      "winner_alliance": "LDF",
+      "margin": 6854
+    },
+    "la_2016": {
+      "winner": "Dr. K.T. Jaleel",
+      "winner_party": "IND_LDF",
+      "winner_alliance": "LDF",
+      "margin": 17064
+    },
+    "la_2021": {
+      "winner": "DR.K.T.JALEEL",
+      "winner_party": "IND_LDF",
+      "winner_alliance": "LDF",
+      "margin": 2564
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 48,
+    "constituency_name": "PONNANI",
+    "district": "Malappuram",
+    "la_2011": {
+      "winner": "P.SREERAMAKRISHNAN",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 4101
+    },
+    "la_2016": {
+      "winner": "P. Sreeramakrishnan",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 15640
+    },
+    "la_2021": {
+      "winner": "P NANDAKUMAR",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 17043
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 49,
+    "constituency_name": "THRITHALA",
+    "district": "Palakkad",
+    "la_2011": {
+      "winner": "ADV.V.T. BALRAM",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 3197
+    },
+    "la_2016": {
+      "winner": "V.T. Balram",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 10547
+    },
+    "la_2021": {
+      "winner": "M. B RAJESH",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 3016
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 50,
+    "constituency_name": "PATTAMBI",
+    "district": "Palakkad",
+    "la_2011": {
+      "winner": "C.P.MOHAMMED",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 12475
+    },
+    "la_2016": {
+      "winner": "Muhammed Muhassin",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 7404
+    },
+    "la_2021": {
+      "winner": "Muhammed Muhassin",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 17974
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 51,
+    "constituency_name": "SHORNUR",
+    "district": "Palakkad",
+    "la_2011": {
+      "winner": "K.S.SALEEKHA",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 13493
+    },
+    "la_2016": {
+      "winner": "P.K.Sasi",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 24547
+    },
+    "la_2021": {
+      "winner": "P. MAMMIKUTTY",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 36674
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 52,
+    "constituency_name": "OTTAPALAM",
+    "district": "Palakkad",
+    "la_2011": {
+      "winner": "M. HAMZA",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 13203
+    },
+    "la_2016": {
+      "winner": "P Unni",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 16088
+    },
+    "la_2021": {
+      "winner": "Adv. K. PREMKUMAR",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 15152
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 53,
+    "constituency_name": "KONGAD",
+    "district": "Palakkad",
+    "la_2011": {
+      "winner": "K.V.VIJAYADAS",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 3565
+    },
+    "la_2016": {
+      "winner": "K.V.Vijayadas",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 13271
+    },
+    "la_2021": {
+      "winner": "Santhakumari K",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 27219
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 54,
+    "constituency_name": "MANNARKKAD",
+    "district": "Palakkad",
+    "la_2011": {
+      "winner": "ADVOCATE N. SAMSUDHEEN",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 8270
+    },
+    "la_2016": {
+      "winner": "Adv.N.Samsudheen",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 12325
+    },
+    "la_2021": {
+      "winner": "ADVOCATE. N. SAMSUDHEEN",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 5870
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 55,
+    "constituency_name": "MALAMPUZHA",
+    "district": "Palakkad",
+    "la_2011": {
+      "winner": "V.S.ACHUTHANANDAN.",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 23440
+    },
+    "la_2016": {
+      "winner": "V S Achuthanandan  E",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 27142
+    },
+    "la_2021": {
+      "winner": "A. PRABHAKARAN",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 25734
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 56,
+    "constituency_name": "PALAKKAD",
+    "district": "Palakkad",
+    "la_2011": {
+      "winner": "SHAFI PARAMBIL",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 7403
+    },
+    "la_2016": {
+      "winner": "Shafi  Parambil",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 17483
+    },
+    "la_2021": {
+      "winner": "SHAFI PARAMBIL",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 3859
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 57,
+    "constituency_name": "TARUR",
+    "district": "Palakkad",
+    "la_2011": {
+      "winner": "A. K. BALAN",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 25756
+    },
+    "la_2016": {
+      "winner": "A.K.Balan",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 23068
+    },
+    "la_2021": {
+      "winner": "P.P.SUMOD",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 24531
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 58,
+    "constituency_name": "CHITTUR",
+    "district": "Palakkad",
+    "la_2011": {
+      "winner": "K.ACHUTHAN",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 12330
+    },
+    "la_2016": {
+      "winner": "K Krishnankutty",
+      "winner_party": "JD_S",
+      "winner_alliance": "LDF",
+      "margin": 7285
+    },
+    "la_2021": {
+      "winner": "K. KRISHNANKUTTY",
+      "winner_party": "JD_S",
+      "winner_alliance": "LDF",
+      "margin": 33878
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 59,
+    "constituency_name": "NENMARA",
+    "district": "Palakkad",
+    "la_2011": {
+      "winner": "V. CHENTHAMARAKSHAN",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 8694
+    },
+    "la_2016": {
+      "winner": "K. Babu",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 7408
+    },
+    "la_2021": {
+      "winner": "K. Babu",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 28704
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 60,
+    "constituency_name": "ALATHUR",
+    "district": "Palakkad",
+    "la_2011": {
+      "winner": "M.CHANDRAN",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 24741
+    },
+    "la_2016": {
+      "winner": "K.D.Prasenan",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 36060
+    },
+    "la_2021": {
+      "winner": "K.D.PRASENAN",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 34118
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 61,
+    "constituency_name": "CHELAKKARA",
+    "district": "Thrissur",
+    "la_2011": {
+      "winner": "K.RADHAKRISHNAN",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 24676
+    },
+    "la_2016": {
+      "winner": "U R Pradeep",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 10200
+    },
+    "la_2021": {
+      "winner": "K RADHAKRISHNAN",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 39400
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 62,
+    "constituency_name": "KUNNAMKULAM",
+    "district": "Thrissur",
+    "la_2011": {
+      "winner": "BABU.M.PALISSERY",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 481
+    },
+    "la_2016": {
+      "winner": "A C Moideen(E)",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 7782
+    },
+    "la_2021": {
+      "winner": "A.C.MOIDEEN",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 26631
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 63,
+    "constituency_name": "GURUVAYUR",
+    "district": "Thrissur",
+    "la_2011": {
+      "winner": "K.V.ABDUL KHADER",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 9968
+    },
+    "la_2016": {
+      "winner": "K.V. Abdul Khader",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 15098
+    },
+    "la_2021": {
+      "winner": "N.K.AKBAR",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 18268
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 64,
+    "constituency_name": "MANALUR",
+    "district": "Thrissur",
+    "la_2011": {
+      "winner": "P.A. MADHAVAN",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 481
+    },
+    "la_2016": {
+      "winner": "Murali Perunelly",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 19325
+    },
+    "la_2021": {
+      "winner": "MURALI PERUNELLY",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 29876
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 65,
+    "constituency_name": "WADAKKANCHERY",
+    "district": "Thrissur",
+    "la_2011": {
+      "winner": "C.N.BALAKRISHNAN",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 6685
+    },
+    "la_2016": {
+      "winner": "Anil Akkara",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 43
+    },
+    "la_2021": {
+      "winner": "Xavier Chittilappilly",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 15168
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 66,
+    "constituency_name": "OLLUR",
+    "district": "Thrissur",
+    "la_2011": {
+      "winner": "M.P. VINCENT",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 6247
+    },
+    "la_2016": {
+      "winner": "Adv. K. Rajan",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 13248
+    },
+    "la_2021": {
+      "winner": "K Rajan",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 21506
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 67,
+    "constituency_name": "THRISSUR",
+    "district": "Thrissur",
+    "la_2011": {
+      "winner": "ADV.THERAMBIL RAMAKRISHNAN",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 16169
+    },
+    "la_2016": {
+      "winner": "Adv.V S Sunilkumar",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 6987
+    },
+    "la_2021": {
+      "winner": "P BALACHANDRAN",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 946
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 68,
+    "constituency_name": "NATTIKA",
+    "district": "Thrissur",
+    "la_2011": {
+      "winner": "GEETHA GOPI",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 16054
+    },
+    "la_2016": {
+      "winner": "Geetha Gopi",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 26777
+    },
+    "la_2021": {
+      "winner": "C C MUKUNDHAN",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 28431
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 69,
+    "constituency_name": "KAIPAMANGALAM",
+    "district": "Thrissur",
+    "la_2011": {
+      "winner": "ADV.V S SUNILKUMAR",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 13570
+    },
+    "la_2016": {
+      "winner": "E T Taison Master",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 33440
+    },
+    "la_2021": {
+      "winner": "E T TAISON MASTER",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 22698
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 70,
+    "constituency_name": "IRINJALAKUDA",
+    "district": "Thrissur",
+    "la_2011": {
+      "winner": "ADV.THOMAS UNNIYADAN",
+      "winner_party": "KC_M",
+      "winner_alliance": "UDF",
+      "margin": 12404
+    },
+    "la_2016": {
+      "winner": "Prof. K.U. Arunan (E)",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 2711
+    },
+    "la_2021": {
+      "winner": "Prof. R Bindu",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 5949
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 71,
+    "constituency_name": "PUTHUKKAD",
+    "district": "Thrissur",
+    "la_2011": {
+      "winner": "C. RAVEENDRANATH",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 26482
+    },
+    "la_2016": {
+      "winner": "Prof.C.Raveendranath",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 38478
+    },
+    "la_2021": {
+      "winner": "K.K. Ramachandran",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 27353
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 72,
+    "constituency_name": "CHALAKUDY",
+    "district": "Thrissur",
+    "la_2011": {
+      "winner": "DEVASSY.B.D.",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 2549
+    },
+    "la_2016": {
+      "winner": "B. D. Devassy",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 26648
+    },
+    "la_2021": {
+      "winner": "Saneeshkumar Joseph",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 1057
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 73,
+    "constituency_name": "KODUNGALLUR",
+    "district": "Thrissur",
+    "la_2011": {
+      "winner": "T.N.PRATHAPAN",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 9432
+    },
+    "la_2016": {
+      "winner": "V R Sunilkumar",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 22791
+    },
+    "la_2021": {
+      "winner": "Adv. V. R. SUNILKUMAR",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 23893
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 74,
+    "constituency_name": "PERUMBAVOOR",
+    "district": "Ernakulam",
+    "la_2011": {
+      "winner": "SAJU PAUL",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 3382
+    },
+    "la_2016": {
+      "winner": "Adv. Eldhose Kunnappilly",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 7088
+    },
+    "la_2021": {
+      "winner": "Adv ELDOSE P KUNNAPILLIL",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 2899
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 75,
+    "constituency_name": "ANGAMALY",
+    "district": "Ernakulam",
+    "la_2011": {
+      "winner": "ADVOCATE JOSE THETTAYIL",
+      "winner_party": "JD_S",
+      "winner_alliance": "LDF",
+      "margin": 7170
+    },
+    "la_2016": {
+      "winner": "Roji M John",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 9186
+    },
+    "la_2021": {
+      "winner": "ROJI M JOHN",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 15929
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 76,
+    "constituency_name": "ALUVA",
+    "district": "Ernakulam",
+    "la_2011": {
+      "winner": "ANWAR SADATH",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 13214
+    },
+    "la_2016": {
+      "winner": "Anwar Sadath",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 18835
+    },
+    "la_2021": {
+      "winner": "ANWAR SADATH",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 18886
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 77,
+    "constituency_name": "KALAMASSERY",
+    "district": "Ernakulam",
+    "la_2011": {
+      "winner": "V. K. EBRAHIM KUNJU",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 7789
+    },
+    "la_2016": {
+      "winner": "V K Ebrahim Kunju",
+      "winner_party": "IUML",
+      "winner_alliance": "UDF",
+      "margin": 12118
+    },
+    "la_2021": {
+      "winner": "P. RAJEEVE",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 15336
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 78,
+    "constituency_name": "PARAVUR",
+    "district": "Ernakulam",
+    "la_2011": {
+      "winner": "ADV.V.D.SATHEESAN",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 11349
+    },
+    "la_2016": {
+      "winner": "V D Satheesan",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 20634
+    },
+    "la_2021": {
+      "winner": "V.D. SATHEESAN",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 21301
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 79,
+    "constituency_name": "VYPIN",
+    "district": "Ernakulam",
+    "la_2011": {
+      "winner": "S.SARMA",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 5242
+    },
+    "la_2016": {
+      "winner": "S Sarma",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 19353
+    },
+    "la_2021": {
+      "winner": "K.N. Unnikrishnan",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 8201
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 80,
+    "constituency_name": "KOCHI",
+    "district": "Ernakulam",
+    "la_2011": {
+      "winner": "DOMINIC PRESENTATION",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 16503
+    },
+    "la_2016": {
+      "winner": "K J Maxy",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 1086
+    },
+    "la_2021": {
+      "winner": "K.J. MAXY",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 14079
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 81,
+    "constituency_name": "THRIPPUNITHURA",
+    "district": "Ernakulam",
+    "la_2011": {
+      "winner": "K.BABU",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 15778
+    },
+    "la_2016": {
+      "winner": "Adv. M Swaraj",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 4467
+    },
+    "la_2021": {
+      "winner": "K. BABU",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 992
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 82,
+    "constituency_name": "ERNAKULAM",
+    "district": "Ernakulam",
+    "la_2011": {
+      "winner": "HIBI EDEN",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 32437
+    },
+    "la_2016": {
+      "winner": "Hibi Eden",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 21949
+    },
+    "la_2021": {
+      "winner": "T. J. Vinod",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 10970
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 83,
+    "constituency_name": "THRIKKAKARA",
+    "district": "Ernakulam",
+    "la_2011": {
+      "winner": "BENNY BEHANAN",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 22406
+    },
+    "la_2016": {
+      "winner": "Adv.P T Thomas            E",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 11996
+    },
+    "la_2021": {
+      "winner": "Adv.P.T.THOMAS",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 14329
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 84,
+    "constituency_name": "KUNNATHUNAD",
+    "district": "Ernakulam",
+    "la_2011": {
+      "winner": "V.P. SAJEENDRAN",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 8732
+    },
+    "la_2016": {
+      "winner": "V P  Sajeendran",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 2679
+    },
+    "la_2021": {
+      "winner": "ADV. P.V.SREENIJIN",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 2715
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 85,
+    "constituency_name": "PIRAVOM",
+    "district": "Ernakulam",
+    "la_2011": {
+      "winner": "T. M. JACOB",
+      "winner_party": "KC_J",
+      "winner_alliance": "UDF",
+      "margin": 157
+    },
+    "la_2016": {
+      "winner": "Anoop Jacob",
+      "winner_party": "KC_J",
+      "winner_alliance": "UDF",
+      "margin": 6195
+    },
+    "la_2021": {
+      "winner": "ANOOP JACOB",
+      "winner_party": "KC_J",
+      "winner_alliance": "UDF",
+      "margin": 25364
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 86,
+    "constituency_name": "MUVATTUPUZHA",
+    "district": "Ernakulam",
+    "la_2011": {
+      "winner": "JOSEPH VAZHACKKAN",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 5163
+    },
+    "la_2016": {
+      "winner": "Eldho Abraham",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 9375
+    },
+    "la_2021": {
+      "winner": "Dr. MATHEW KUZHALNADAN",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 6161
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 87,
+    "constituency_name": "KOTHAMANGALAM",
+    "district": "Ernakulam",
+    "la_2011": {
+      "winner": "SHEV.T.U.KURUVILLA",
+      "winner_party": "KC_M",
+      "winner_alliance": "UDF",
+      "margin": 12222
+    },
+    "la_2016": {
+      "winner": "Antony John",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 19282
+    },
+    "la_2021": {
+      "winner": "ANTONY JOHN",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 6605
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 88,
+    "constituency_name": "DEVIKULAM",
+    "district": "Idukki",
+    "la_2011": {
+      "winner": "S. RAJENDRAN",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 4078
+    },
+    "la_2016": {
+      "winner": "S Rajendran",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 5782
+    },
+    "la_2021": {
+      "winner": "Adv. A. Raja",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 7848
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 89,
+    "constituency_name": "UDUMBANCHOLA",
+    "district": "Idukki",
+    "la_2011": {
+      "winner": "K.K.JAYACHANDRAN",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 9833
+    },
+    "la_2016": {
+      "winner": "M.M. Mani",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 1109
+    },
+    "la_2021": {
+      "winner": "M. M. MANI",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 38305
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 90,
+    "constituency_name": "THODUPUZHA",
+    "district": "Idukki",
+    "la_2011": {
+      "winner": "P.J.JOSEPH",
+      "winner_party": "KC_M",
+      "winner_alliance": "UDF",
+      "margin": 22868
+    },
+    "la_2016": {
+      "winner": "P.J. Joseph",
+      "winner_party": "KC_M",
+      "winner_alliance": "UDF",
+      "margin": 45587
+    },
+    "la_2021": {
+      "winner": "P J JOSEPH",
+      "winner_party": "KEC",
+      "winner_alliance": "UDF",
+      "margin": 20259
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 91,
+    "constituency_name": "IDUKKI",
+    "district": "Idukki",
+    "la_2011": {
+      "winner": "ROSHY AUGUSTINE,",
+      "winner_party": "KC_M",
+      "winner_alliance": "UDF",
+      "margin": 15806
+    },
+    "la_2016": {
+      "winner": "Roshy Augustine",
+      "winner_party": "KC_M",
+      "winner_alliance": "UDF",
+      "margin": 9333
+    },
+    "la_2021": {
+      "winner": "ROSHY AUGUSTINE",
+      "winner_party": "KC_M",
+      "winner_alliance": "LDF",
+      "margin": 5573
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 92,
+    "constituency_name": "PEERUMADE",
+    "district": "Idukki",
+    "la_2011": {
+      "winner": "E. S. BIJIMOL",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 4777
+    },
+    "la_2016": {
+      "winner": "E S Bijimol",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 314
+    },
+    "la_2021": {
+      "winner": "VAZHOOR SOMAN",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 1835
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 93,
+    "constituency_name": "PALA",
+    "district": "Kottayam",
+    "la_2011": {
+      "winner": "K.M.MANI",
+      "winner_party": "KC_M",
+      "winner_alliance": "UDF",
+      "margin": 5259
+    },
+    "la_2016": {
+      "winner": "K M Mani",
+      "winner_party": "KC_M",
+      "winner_alliance": "UDF",
+      "margin": 4703
+    },
+    "la_2021": {
+      "winner": "MANI C KAPPEN",
+      "winner_party": "IND_UDF",
+      "winner_alliance": "UDF",
+      "margin": 15378
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 94,
+    "constituency_name": "KADUTHURUTHY",
+    "district": "Kottayam",
+    "la_2011": {
+      "winner": "ADV.MONS JOSEPH",
+      "winner_party": "KC_M",
+      "winner_alliance": "UDF",
+      "margin": 23057
+    },
+    "la_2016": {
+      "winner": "Adv. Mons Joseph",
+      "winner_party": "KC_M",
+      "winner_alliance": "UDF",
+      "margin": 42256
+    },
+    "la_2021": {
+      "winner": "Adv. Mons Joseph",
+      "winner_party": "KEC",
+      "winner_alliance": "UDF",
+      "margin": 4256
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 95,
+    "constituency_name": "VAIKOM",
+    "district": "Kottayam",
+    "la_2011": {
+      "winner": "K. AJITH",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 10568
+    },
+    "la_2016": {
+      "winner": "C K Asha",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 24584
+    },
+    "la_2021": {
+      "winner": "C.K Asha",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 29122
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 96,
+    "constituency_name": "ETTUMANOOR",
+    "district": "Kottayam",
+    "la_2011": {
+      "winner": "ADV. K. SURESH KURUP",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 1801
+    },
+    "la_2016": {
+      "winner": "Suresh Kurup",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 8899
+    },
+    "la_2021": {
+      "winner": "V N Vasavan",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 14303
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 97,
+    "constituency_name": "KOTTAYAM",
+    "district": "Kottayam",
+    "la_2011": {
+      "winner": "THIRUVANCHOOR RADHAKRISHNAN",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 711
+    },
+    "la_2016": {
+      "winner": "Thiruvanchoor Radhakrishnan",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 33632
+    },
+    "la_2021": {
+      "winner": "THIRUVANCHOOR RADHAKRISHNAN",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 18743
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 98,
+    "constituency_name": "PUTHUPPALLY",
+    "district": "Kottayam",
+    "la_2011": {
+      "winner": "OOMMEN CHANDY",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 33255
+    },
+    "la_2016": {
+      "winner": "Oommen Chandy",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 27092
+    },
+    "la_2021": {
+      "winner": "OOMMEN CHANDY",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 9044
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 99,
+    "constituency_name": "CHANGANASSERY",
+    "district": "Kottayam",
+    "la_2011": {
+      "winner": "C.F THOMAS",
+      "winner_party": "KC_M",
+      "winner_alliance": "UDF",
+      "margin": 2554
+    },
+    "la_2016": {
+      "winner": "C F Thomas",
+      "winner_party": "KC_M",
+      "winner_alliance": "UDF",
+      "margin": 1849
+    },
+    "la_2021": {
+      "winner": "Adv. Job Maichil",
+      "winner_party": "KC_M",
+      "winner_alliance": "LDF",
+      "margin": 6059
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 100,
+    "constituency_name": "KANJIRAPPALLY",
+    "district": "Kottayam",
+    "la_2011": {
+      "winner": "DR. N.JAYARAJ",
+      "winner_party": "KC_M",
+      "winner_alliance": "UDF",
+      "margin": 12206
+    },
+    "la_2016": {
+      "winner": "Dr. N Jayaraj",
+      "winner_party": "KC_M",
+      "winner_alliance": "UDF",
+      "margin": 3890
+    },
+    "la_2021": {
+      "winner": "Dr.N.JAYARAJ",
+      "winner_party": "KC_M",
+      "winner_alliance": "LDF",
+      "margin": 13703
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 101,
+    "constituency_name": "POONJAR",
+    "district": "Kottayam",
+    "la_2011": {
+      "winner": "P C GEORGE, PLATHOTTAM",
+      "winner_party": "KC_M",
+      "winner_alliance": "UDF",
+      "margin": 15704
+    },
+    "la_2016": {
+      "winner": "P C George Plathottam",
+      "winner_party": "IND",
+      "winner_alliance": "OTH",
+      "margin": 27821
+    },
+    "la_2021": {
+      "winner": "Adv. Sebastian Kulathunkal",
+      "winner_party": "KC_M",
+      "winner_alliance": "LDF",
+      "margin": 16817
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 102,
+    "constituency_name": "AROOR",
+    "district": "Alappuzha",
+    "la_2011": {
+      "winner": "ADV.AM.ARIFF",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 16852
+    },
+    "la_2016": {
+      "winner": "Adv.A.M.Ariff",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 38519
+    },
+    "la_2021": {
+      "winner": "DALEEMA",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 7013
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 103,
+    "constituency_name": "CHERTHALA",
+    "district": "Alappuzha",
+    "la_2011": {
+      "winner": "P.THILOTHAMAN",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 18315
+    },
+    "la_2016": {
+      "winner": "P.Thilothaman",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 7196
+    },
+    "la_2021": {
+      "winner": "P PRASAD",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 6148
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 104,
+    "constituency_name": "ALAPPUZHA",
+    "district": "Alappuzha",
+    "la_2011": {
+      "winner": "DR.T.M.THOMAS ISAAC",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 16342
+    },
+    "la_2016": {
+      "winner": "Dr.T.M.Thomas Isaac",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 31032
+    },
+    "la_2021": {
+      "winner": "P.P Chitharanjan",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 11644
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 105,
+    "constituency_name": "AMBALAPPUZHA",
+    "district": "Alappuzha",
+    "la_2011": {
+      "winner": "G.SUDHAKARAN",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 16580
+    },
+    "la_2016": {
+      "winner": "G.Sudhakaran",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 22621
+    },
+    "la_2021": {
+      "winner": "H.Salam",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 11125
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 106,
+    "constituency_name": "KUTTANAD",
+    "district": "Alappuzha",
+    "la_2011": {
+      "winner": "THOMAS CHANDY",
+      "winner_party": "NCP",
+      "winner_alliance": "LDF",
+      "margin": 7971
+    },
+    "la_2016": {
+      "winner": "Thomas Chandy",
+      "winner_party": "NCP",
+      "winner_alliance": "LDF",
+      "margin": 4891
+    },
+    "la_2021": {
+      "winner": "THOMAS K THOMAS",
+      "winner_party": "NCP",
+      "winner_alliance": "LDF",
+      "margin": 5516
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 107,
+    "constituency_name": "HARIPAD",
+    "district": "Alappuzha",
+    "la_2011": {
+      "winner": "RAMESH CHENNITHALA",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 5520
+    },
+    "la_2016": {
+      "winner": "Ramesh Chennithala",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 18621
+    },
+    "la_2021": {
+      "winner": "RAMESH CHENNITHALA",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 13666
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 108,
+    "constituency_name": "KAYAMKULAM",
+    "district": "Alappuzha",
+    "la_2011": {
+      "winner": "C.K.SADASIVAN",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 1315
+    },
+    "la_2016": {
+      "winner": "Adv.U.Prathibha Hari",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 11857
+    },
+    "la_2021": {
+      "winner": "Adv. U. Prathibha",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 6298
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 109,
+    "constituency_name": "MAVELIKARA",
+    "district": "Alappuzha",
+    "la_2011": {
+      "winner": "R. RAJESH",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 5149
+    },
+    "la_2016": {
+      "winner": "R.Rajesh",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 31542
+    },
+    "la_2021": {
+      "winner": "M S ARUN KUMAR",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 24717
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 110,
+    "constituency_name": "CHENGANNUR",
+    "district": "Alappuzha",
+    "la_2011": {
+      "winner": "P.C.VISHNUNATH",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 12500
+    },
+    "la_2016": {
+      "winner": "Adv.K.K.Ramachandran Nair",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 7983
+    },
+    "la_2021": {
+      "winner": "SAJI CHERIAN",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 32093
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 111,
+    "constituency_name": "THIRUVALLA",
+    "district": "Pathanamthitta",
+    "la_2011": {
+      "winner": "ADV MATHEW T THOMAS",
+      "winner_party": "JD_S",
+      "winner_alliance": "LDF",
+      "margin": 10767
+    },
+    "la_2016": {
+      "winner": "Adv.Mathew T Thomas",
+      "winner_party": "JD_S",
+      "winner_alliance": "LDF",
+      "margin": 8262
+    },
+    "la_2021": {
+      "winner": "Adv. MATHEW T THOMAS",
+      "winner_party": "JD_S",
+      "winner_alliance": "LDF",
+      "margin": 11421
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 112,
+    "constituency_name": "RANNI",
+    "district": "Pathanamthitta",
+    "la_2011": {
+      "winner": "RAJU ABRHAM",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 6614
+    },
+    "la_2016": {
+      "winner": "Raju Abraham",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 14596
+    },
+    "la_2021": {
+      "winner": "Adv. Pramod Narayan",
+      "winner_party": "KC_M",
+      "winner_alliance": "LDF",
+      "margin": 1285
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 113,
+    "constituency_name": "ARANMULA",
+    "district": "Pathanamthitta",
+    "la_2011": {
+      "winner": "ADV.K.SIVADASAN NAIR",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 6511
+    },
+    "la_2016": {
+      "winner": "Veena George",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 7646
+    },
+    "la_2021": {
+      "winner": "VEENA GEORGE",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 19003
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 114,
+    "constituency_name": "KONNI",
+    "district": "Pathanamthitta",
+    "la_2011": {
+      "winner": "ADV. ADOOR PRAKASH",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 7774
+    },
+    "la_2016": {
+      "winner": "Adoor Prakash",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 20748
+    },
+    "la_2021": {
+      "winner": "Adv. K.U JENISH KUMAR",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 8508
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 115,
+    "constituency_name": "ADOOR",
+    "district": "Pathanamthitta",
+    "la_2011": {
+      "winner": "CHITTAYAM GOPAKUMAR",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 607
+    },
+    "la_2016": {
+      "winner": "Chittayam Gopakumar",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 25460
+    },
+    "la_2021": {
+      "winner": "Chittayam Gopakumar",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 2919
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 116,
+    "constituency_name": "KARUNAGAPALLY",
+    "district": "Kollam",
+    "la_2011": {
+      "winner": "C. DIVAKARAN",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 14522
+    },
+    "la_2016": {
+      "winner": "R.Ramachandran",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 1759
+    },
+    "la_2021": {
+      "winner": "C. R Mahesh",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 29208
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 117,
+    "constituency_name": "CHAVARA",
+    "district": "Kollam",
+    "la_2011": {
+      "winner": "SHIBU BABY JOHN",
+      "winner_party": "RSP_BJ",
+      "winner_alliance": "UDF",
+      "margin": 6061
+    },
+    "la_2016": {
+      "winner": "N.Vijayan Pillai",
+      "winner_party": "CMP",
+      "winner_alliance": "UDF",
+      "margin": 6189
+    },
+    "la_2021": {
+      "winner": "Dr.SUJITH VIJAYANPILLAI",
+      "winner_party": "IND_LDF",
+      "winner_alliance": "LDF",
+      "margin": 1096
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 118,
+    "constituency_name": "KUNNATHUR",
+    "district": "Kollam",
+    "la_2011": {
+      "winner": "KOVOOR KUNJUMON",
+      "winner_party": "RSP",
+      "winner_alliance": "UDF",
+      "margin": 12088
+    },
+    "la_2016": {
+      "winner": "Kovoor Kunjumon",
+      "winner_party": "IND_LDF",
+      "winner_alliance": "LDF",
+      "margin": 20529
+    },
+    "la_2021": {
+      "winner": "KOVOOR KUNJUMON",
+      "winner_party": "IND_LDF",
+      "winner_alliance": "LDF",
+      "margin": 3009
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 119,
+    "constituency_name": "KOTTARAKKARA",
+    "district": "Kollam",
+    "la_2011": {
+      "winner": "P.AISHA POTTY",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 20592
+    },
+    "la_2016": {
+      "winner": "Adv. P.Aisha Potty",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 42632
+    },
+    "la_2021": {
+      "winner": "K N BALAGOPAL",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 10814
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 120,
+    "constituency_name": "PATHANAPURAM",
+    "district": "Kollam",
+    "la_2011": {
+      "winner": "K.B GANESH KUMAR",
+      "winner_party": "KC_B",
+      "winner_alliance": "UDF",
+      "margin": 20402
+    },
+    "la_2016": {
+      "winner": "K.B. Ganesh Kumar",
+      "winner_party": "KC_B",
+      "winner_alliance": "LDF",
+      "margin": 24562
+    },
+    "la_2021": {
+      "winner": "K.B. GANESH KUMAR",
+      "winner_party": "KC_B",
+      "winner_alliance": "LDF",
+      "margin": 14336
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 121,
+    "constituency_name": "PUNALUR",
+    "district": "Kollam",
+    "la_2011": {
+      "winner": "ADV.K.RAJU",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 18005
+    },
+    "la_2016": {
+      "winner": "Adv.K.Raju",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 33582
+    },
+    "la_2021": {
+      "winner": "P S SUPAL",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 37057
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 122,
+    "constituency_name": "CHADAYAMANGALAM",
+    "district": "Kollam",
+    "la_2011": {
+      "winner": "MULLAKKARA RATNAKARAN",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 23624
+    },
+    "la_2016": {
+      "winner": "Mullakkara Retnakaran",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 21928
+    },
+    "la_2021": {
+      "winner": "J.Chinchurani",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 13678
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 123,
+    "constituency_name": "KUNDARA",
+    "district": "Kollam",
+    "la_2011": {
+      "winner": "M.A. BABY",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 14793
+    },
+    "la_2016": {
+      "winner": "J.Mercy Kutty Amma",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 30460
+    },
+    "la_2021": {
+      "winner": "P.C.Vishnunadh",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 4454
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 124,
+    "constituency_name": "KOLLAM",
+    "district": "Kollam",
+    "la_2011": {
+      "winner": "P.K.GURUDASAN",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 8540
+    },
+    "la_2016": {
+      "winner": "M Mukesh",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 17611
+    },
+    "la_2021": {
+      "winner": "M Mukesh",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 2072
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 125,
+    "constituency_name": "ERAVIPURAM",
+    "district": "Kollam",
+    "la_2011": {
+      "winner": "A.A. AZEEZ",
+      "winner_party": "RSP",
+      "winner_alliance": "UDF",
+      "margin": 8012
+    },
+    "la_2016": {
+      "winner": "M. Noushad",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 28803
+    },
+    "la_2021": {
+      "winner": "M. Noushad",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 28121
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 126,
+    "constituency_name": "CHATHANNOOR",
+    "district": "Kollam",
+    "la_2011": {
+      "winner": "G.S.JAYALAL",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 12589
+    },
+    "la_2016": {
+      "winner": "G.S.Jayalal",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 34407
+    },
+    "la_2021": {
+      "winner": "G.S. JAYALAL",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 17206
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 127,
+    "constituency_name": "VARKALA",
+    "district": "Thiruvananthapuram",
+    "la_2011": {
+      "winner": "VARKALA KAHAR",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 10710
+    },
+    "la_2016": {
+      "winner": "Adv.V.Joy",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 2386
+    },
+    "la_2021": {
+      "winner": "Adv. V Joy",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 17821
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 128,
+    "constituency_name": "ATTINGAL",
+    "district": "Thiruvananthapuram",
+    "la_2011": {
+      "winner": "ADVOCATE. B. SATYAN",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 30065
+    },
+    "la_2016": {
+      "winner": "Adv.B.Satyan",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 40383
+    },
+    "la_2021": {
+      "winner": "O S AMBIKA",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 31636
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 129,
+    "constituency_name": "CHIRAYINKEEZHU",
+    "district": "Thiruvananthapuram",
+    "la_2011": {
+      "winner": "V.SASI",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 12225
+    },
+    "la_2016": {
+      "winner": "V. Sasi",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 14322
+    },
+    "la_2021": {
+      "winner": "V. Sasi",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 14017
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 130,
+    "constituency_name": "NEDUMANGAD",
+    "district": "Thiruvananthapuram",
+    "la_2011": {
+      "winner": "PALODE RAVI",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 5030
+    },
+    "la_2016": {
+      "winner": "C.Divakaran",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 3621
+    },
+    "la_2021": {
+      "winner": "Adv. G. R. ANIL",
+      "winner_party": "CPI",
+      "winner_alliance": "LDF",
+      "margin": 23309
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 131,
+    "constituency_name": "VAMANAPURAM",
+    "district": "Thiruvananthapuram",
+    "la_2011": {
+      "winner": "KOLIAKODE.N. KRISHNAN NAIR",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 2236
+    },
+    "la_2016": {
+      "winner": "Adv. D.K.Murali",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 9596
+    },
+    "la_2021": {
+      "winner": "Adv. D. K. Murali",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 10242
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 132,
+    "constituency_name": "KAZHAKOOTAM",
+    "district": "Thiruvananthapuram",
+    "la_2011": {
+      "winner": "ADV. M. A. VAHEED",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 2196
+    },
+    "la_2016": {
+      "winner": "Kadakampally Surendran",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 7347
+    },
+    "la_2021": {
+      "winner": "Kadakampally Surendran",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 23497
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 133,
+    "constituency_name": "VATTIYOORKAVU",
+    "district": "Thiruvananthapuram",
+    "la_2011": {
+      "winner": "K.MURALIDHARAN",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 16167
+    },
+    "la_2016": {
+      "winner": "K Muraleedharan",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 7622
+    },
+    "la_2021": {
+      "winner": "Adv.V.K.PRASANTH",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 21515
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 134,
+    "constituency_name": "THIRUVANANTHAPURAM",
+    "district": "Thiruvananthapuram",
+    "la_2011": {
+      "winner": "ADV.V.S.SIVAKUMAR",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 5352
+    },
+    "la_2016": {
+      "winner": "V.S. Sivakumar",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 10905
+    },
+    "la_2021": {
+      "winner": "Adv.ANTONY RAJU",
+      "winner_party": "JKC",
+      "winner_alliance": "LDF",
+      "margin": 7089
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 135,
+    "constituency_name": "NEMOM",
+    "district": "Thiruvananthapuram",
+    "la_2011": {
+      "winner": "V.SIVANKUTTY",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 6415
+    },
+    "la_2016": {
+      "winner": "O.Rajagopal",
+      "winner_party": "BJP",
+      "winner_alliance": "NDA",
+      "margin": 8671
+    },
+    "la_2021": {
+      "winner": "V.Sivankutty",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 3949
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 136,
+    "constituency_name": "ARUVIKKARA",
+    "district": "Thiruvananthapuram",
+    "la_2011": {
+      "winner": "G. KARTHIKEYEN",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 10674
+    },
+    "la_2016": {
+      "winner": "K.S. Sabarinadhan",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 21314
+    },
+    "la_2021": {
+      "winner": "Adv. G. Steephen",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 5046
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 137,
+    "constituency_name": "PARASSALA",
+    "district": "Thiruvananthapuram",
+    "la_2011": {
+      "winner": "A.T. GEORGE",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 505
+    },
+    "la_2016": {
+      "winner": "C.K.Hareendrakumar (C.K.Hareendran)",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 18566
+    },
+    "la_2021": {
+      "winner": "C.K.HAREENDRAN",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 25828
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 138,
+    "constituency_name": "KATTAKKADA",
+    "district": "Thiruvananthapuram",
+    "la_2011": {
+      "winner": "N SAKTHAN",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 12916
+    },
+    "la_2016": {
+      "winner": "Adv. I.B. Satheesh",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 849
+    },
+    "la_2021": {
+      "winner": "Adv I B SATHEESH",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 23231
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 139,
+    "constituency_name": "KOVALAM",
+    "district": "Thiruvananthapuram",
+    "la_2011": {
+      "winner": "JAMEELA PRAKASAM",
+      "winner_party": "JD_S",
+      "winner_alliance": "LDF",
+      "margin": 7205
+    },
+    "la_2016": {
+      "winner": "Adv.M.Vincent",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 2615
+    },
+    "la_2021": {
+      "winner": "Adv. M. VINCENT",
+      "winner_party": "INC",
+      "winner_alliance": "UDF",
+      "margin": 11562
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  },
+  {
+    "constituency_number": 140,
+    "constituency_name": "NEYYATTINKARA",
+    "district": "Thiruvananthapuram",
+    "la_2011": {
+      "winner": "R SELVARAJ",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 6702
+    },
+    "la_2016": {
+      "winner": "K.Ansalan",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 9543
+    },
+    "la_2021": {
+      "winner": "K. ANSALAN",
+      "winner_party": "CPI_M",
+      "winner_alliance": "LDF",
+      "margin": 14262
+    },
+    "ls_2019": null,
+    "ls_2024": null
+  }
+]

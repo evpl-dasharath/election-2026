@@ -7,39 +7,30 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 229993,
-    "votes_polled": 152659,
-    "votes_counted": 7040,
-    "valid_votes": 154896,
-    "rounds_completed": 1,
-    "total_rounds": 22,
-    "last_updated": "2026-05-01T02:06:01.191822+00:00"
+    "total_electors": 191465,
+    "votes_polled": 159586,
+    "votes_counted": 10016,
+    "valid_votes": 10016,
+    "rounds_completed": 9,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:23.373625+00:00"
   },
   "candidates_2026": [
-    {
-      "name": "Vayalar Rajeevan",
-      "party": "BDP",
-      "alliance": "OTH",
-      "votes": 1960,
-      "percentage": 1.27,
-      "is_winner": false,
-      "is_leading": true
-    },
-    {
-      "name": "N.K. Sasikumar",
-      "party": "SUCI",
-      "alliance": "OTH",
-      "votes": 1776,
-      "percentage": 1.15,
-      "is_winner": false,
-      "is_leading": false
-    },
     {
       "name": "Adv. Shanimol Osman",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 918,
-      "percentage": 0.59,
+      "votes": 45033,
+      "percentage": 47.04,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Daleema Jojo",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 38422,
+      "percentage": 40.13,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,17 +38,26 @@
       "name": "Adv. P.S. Jyothis",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 807,
-      "percentage": 0.52,
+      "votes": 11045,
+      "percentage": 11.54,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Daleema Jojo",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 757,
-      "percentage": 0.49,
+      "name": "N.K. Sasikumar",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 186,
+      "percentage": 0.19,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Vayalar Rajeevan",
+      "party": "BDP",
+      "alliance": "OTH",
+      "votes": 181,
+      "percentage": 0.19,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Vipin",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 658,
-      "percentage": 0.42,
+      "votes": 145,
+      "percentage": 0.15,
       "is_winner": false,
       "is_leading": false
     }

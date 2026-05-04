@@ -2,44 +2,44 @@
   "constituency": {
     "id": 1,
     "number": 1,
-    "name": "MANJESHWAR",
+    "name": "MANJESHWARAM",
     "district": "Kasaragod"
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 243810,
-    "votes_polled": 155872,
-    "votes_counted": 15222,
-    "valid_votes": 159838,
-    "rounds_completed": 2,
-    "total_rounds": 21,
-    "last_updated": "2026-05-01T02:00:46.184907+00:00"
+    "total_electors": 230113,
+    "votes_polled": 186483,
+    "votes_counted": 11884,
+    "valid_votes": 11884,
+    "rounds_completed": 9,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:36:24.060606+00:00"
   },
   "candidates_2026": [
     {
-      "name": "K. Surendran",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 3505,
-      "percentage": 2.19,
+      "name": "A. K. M. Ashraf",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 59093,
+      "percentage": 56.36,
       "is_winner": false,
       "is_leading": true
     },
     {
-      "name": "Sanjeeva",
-      "party": "BSP",
-      "alliance": "OTH",
-      "votes": 1846,
-      "percentage": 1.15,
+      "name": "K. Surendran",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 34904,
+      "percentage": 33.29,
       "is_winner": false,
       "is_leading": false
     },
     {
       "name": "K. R. Jayananda",
-      "party": "CPI(M)",
+      "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 1548,
-      "percentage": 0.97,
+      "votes": 9816,
+      "percentage": 9.36,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,17 +47,8 @@
       "name": "Gean Lavina Monteiro",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 1375,
-      "percentage": 0.86,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "D Surendran Nair",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 1304,
-      "percentage": 0.82,
+      "votes": 351,
+      "percentage": 0.33,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +56,26 @@
       "name": "Kannur Abdulla Master",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 1277,
-      "percentage": 0.8,
+      "votes": 102,
+      "percentage": 0.1,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sanjeeva",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 100,
+      "percentage": 0.1,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "D Surendran Nair",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 93,
+      "percentage": 0.09,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,26 +83,8 @@
       "name": "Abdul Latheef I",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 1233,
-      "percentage": 0.77,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "John D' Souza",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 920,
-      "percentage": 0.58,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "A. K. M. Ashraf",
-      "party": "IUML",
-      "alliance": "UDF",
-      "votes": 844,
-      "percentage": 0.53,
+      "votes": 47,
+      "percentage": 0.04,
       "is_winner": false,
       "is_leading": false
     },
@@ -101,8 +92,17 @@
       "name": "Mohammed Ashraf",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 706,
-      "percentage": 0.44,
+      "votes": 25,
+      "percentage": 0.02,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "John D' Souza",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 19,
+      "percentage": 0.02,
       "is_winner": false,
       "is_leading": false
     },
@@ -110,8 +110,8 @@
       "name": "Mohammed Ashraf K A",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 624,
-      "percentage": 0.39,
+      "votes": 0,
+      "percentage": 0.0,
       "is_winner": false,
       "is_leading": false
     }

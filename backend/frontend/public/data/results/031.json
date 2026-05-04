@@ -1,0 +1,174 @@
+{
+  "constituency": {
+    "id": 31,
+    "number": 31,
+    "name": "KODUVALLY",
+    "district": "Kozhikode"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 201668,
+    "votes_polled": 163310,
+    "votes_counted": 10042,
+    "valid_votes": 10042,
+    "rounds_completed": 9,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:22:24.240292+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "P. K. Firos",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 54118,
+      "percentage": 57.58,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Saleem Madavoor",
+      "party": "IND_LDF",
+      "alliance": "LDF",
+      "votes": 32451,
+      "percentage": 34.53,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Giri Pambanal",
+      "party": "BDJS",
+      "alliance": "NDA",
+      "votes": 6064,
+      "percentage": 6.45,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sunil Mannath",
+      "party": "RPI (A)",
+      "alliance": "OTH",
+      "votes": 171,
+      "percentage": 0.18,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Bavan Kutty K M",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 168,
+      "percentage": 0.18,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Firose K C S/o Moitheenkutty",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 158,
+      "percentage": 0.17,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Abdul Shukoor",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 134,
+      "percentage": 0.14,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Lakshmanan K P Thamarassery",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 109,
+      "percentage": 0.12,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Firose S/o Aboobacker Musaliar",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 96,
+      "percentage": 0.1,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sajir K",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 79,
+      "percentage": 0.08,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Saleem Muttanchery",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 70,
+      "percentage": 0.07,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Saleem C K",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 62,
+      "percentage": 0.07,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Shaheeda C P",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 38,
+      "percentage": 0.04,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "DR. M.K MUNEER",
+      "party": "IUML",
+      "votes": 72336,
+      "percentage": 47.86,
+      "is_winner": true
+    },
+    {
+      "candidate": "KARAT RAZACK",
+      "party": "IND",
+      "votes": 65992,
+      "percentage": 43.66,
+      "is_winner": false
+    },
+    {
+      "candidate": "T BALASOMAN",
+      "party": "BJP",
+      "votes": 9498,
+      "percentage": 6.28,
+      "is_winner": false
+    },
+    {
+      "candidate": "MUSTHAFA KOMMERI",
+      "party": "SDPI",
+      "votes": 1769,
+      "percentage": 1.17,
+      "is_winner": false
+    },
+    {
+      "candidate": "ABDUL RAZAK K S/O AHMAD KUTTY",
+      "party": "IND",
+      "votes": 381,
+      "percentage": 0.25,
+      "is_winner": false
+    }
+  ]
+}

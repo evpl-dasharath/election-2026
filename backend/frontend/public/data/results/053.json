@@ -1,0 +1,86 @@
+{
+  "constituency": {
+    "id": 53,
+    "number": 53,
+    "name": "KONGAD",
+    "district": "Palakkad"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 182603,
+    "votes_polled": 145406,
+    "votes_counted": 16120,
+    "valid_votes": 16120,
+    "rounds_completed": 6,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:22:45.413049+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "K. A. Thulasi",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 45055,
+      "percentage": 46.11,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "K. Shanthakumari",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 38960,
+      "percentage": 39.87,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Renu Suresh",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 12613,
+      "percentage": 12.91,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Guruvayoorappan P E",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 458,
+      "percentage": 0.47,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Santhakumari K",
+      "party": "CPI(M)",
+      "votes": 67881,
+      "percentage": 49.01,
+      "is_winner": true
+    },
+    {
+      "candidate": "U C Raman",
+      "party": "IUML",
+      "votes": 40662,
+      "percentage": 29.36,
+      "is_winner": false
+    },
+    {
+      "candidate": "Suresh Babu M",
+      "party": "BJP",
+      "votes": 27661,
+      "percentage": 19.97,
+      "is_winner": false
+    },
+    {
+      "candidate": "Guruvayoorappan P E",
+      "party": "BSP",
+      "votes": 1351,
+      "percentage": 0.98,
+      "is_winner": false
+    }
+  ]
+}

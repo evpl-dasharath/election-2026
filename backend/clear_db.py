@@ -55,25 +55,42 @@ from core.models import (
 
 # ── Live result data ──────────────────────────────────────────
 n = Candidate.objects.update(votes=0, vote_percentage=0, is_leading=False, is_winner=False)
-print(f'  ✓  Reset {n} candidates (votes → 0, flags → False)')
+print(f'  OK  Reset {n} candidates (votes -> 0, flags -> False)')
 
 lr, _ = LiveResult.objects.all().delete()
-print(f'  ✓  Deleted {lr} LiveResult records')
+print(f'  OK  Deleted {lr} LiveResult records')
 
 ds, _ = DataSnapshot.objects.all().delete()
-print(f'  ✓  Deleted {ds} DataSnapshot records')
+print(f'  OK  Deleted {ds} DataSnapshot records')
 
 # ── Scraper session data ──────────────────────────────────────
 matches, _ = ECICandidateMatch.objects.all().delete()
-print(f'  ✓  Deleted {matches} ECICandidateMatch records')
+print(f'  OK  Deleted {matches} ECICandidateMatch records')
 
 raws, _ = ECIScrapeRaw.objects.all().delete()
-print(f'  ✓  Deleted {raws} ECIScrapeRaw records')
+print(f'  OK  Deleted {raws} ECIScrapeRaw records')
 
 aliases, _ = CandidateAlias.objects.all().delete()
-print(f'  ✓  Deleted {aliases} CandidateAlias records')
+print(f'  OK  Deleted {aliases} CandidateAlias records')
 
 print('=' * 50)
 print('  Database is clean. Ready for a fresh run.')
 print('=' * 50)
 
+# ── Firebase RTDB wipe ────────────────────────────────────────
+print()
+print('  Clearing Firebase RTDB...')
+try:
+    from firebase_rtdb import init_firebase, push_meta
+    from firebase_admin import db as rtdb_db
+
+    if init_firebase():
+        rtdb_db.reference('/live').set({})
+        rtdb_db.reference('/meta').set({})
+        print('  OK  RTDB /live and /meta cleared')
+    else:
+        print('  WARN  Firebase not initialized — skipping RTDB clear')
+except Exception as e:
+    print(f'  WARN  Could not clear RTDB: {e}')
+
+print()

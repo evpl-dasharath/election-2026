@@ -8,7 +8,7 @@ from core.api.views import (
 )
 from core.api.scraper_views import (
     scraper_status, scraper_run, scraper_scrape_detail,
-    scraper_save_matches, scraper_commit, scraper_stop, scraper_deploy
+    scraper_save_matches, scraper_commit, scraper_stop, scraper_deploy, scraper_clear
 )
 from core.admin_scraper_views import scraper_urls
 
@@ -35,4 +35,5 @@ urlpatterns = [
     path('api/scraper/scrape/<int:scrape_id>/save-matches/', scraper_save_matches, name='api-scraper-save-matches'),
     path('api/scraper/commit/<int:scrape_id>/', scraper_commit, name='api-scraper-commit'),
     path('api/scraper/deploy/', scraper_deploy, name='api-scraper-deploy'),
+    path('api/scraper/clear/<int:ac_number>/', scraper_clear, name='api-scraper-clear'),
 ]

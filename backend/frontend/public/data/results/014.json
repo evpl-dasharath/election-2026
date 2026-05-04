@@ -1,0 +1,138 @@
+{
+  "constituency": {
+    "id": 15,
+    "number": 14,
+    "name": "KUTHUPARAMBA",
+    "district": "Kannur"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 205771,
+    "votes_polled": 161447,
+    "votes_counted": 10349,
+    "valid_votes": 10349,
+    "rounds_completed": 9,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:22:21.870547+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "P. K. Praveen",
+      "party": "RJD",
+      "alliance": "LDF",
+      "votes": 44774,
+      "percentage": 47.14,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Jayanthi Rajan",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 35441,
+      "percentage": 37.32,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. Shijilal",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 13208,
+      "percentage": 13.91,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Jayanthi",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 425,
+      "percentage": 0.45,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Praveen Kumar",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 366,
+      "percentage": 0.39,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Rafeed AP",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 172,
+      "percentage": 0.18,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "K. P. Mohanan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 114,
+      "percentage": 0.12,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "M. Shylaja",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 80,
+      "percentage": 0.08,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Shahul Hameed",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 70,
+      "percentage": 0.07,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "K K SHAILAJA TEACHER",
+      "party": "CPI(M)",
+      "votes": 96129,
+      "percentage": 61.97,
+      "is_winner": true
+    },
+    {
+      "candidate": "ILLIKKAL AUGUSTHY",
+      "party": "RSP",
+      "votes": 35166,
+      "percentage": 22.67,
+      "is_winner": false
+    },
+    {
+      "candidate": "BIJU ELAKKUZHI",
+      "party": "BJP",
+      "votes": 18223,
+      "percentage": 11.75,
+      "is_winner": false
+    },
+    {
+      "candidate": "RAFEEK KEECHERY",
+      "party": "SDPI",
+      "votes": 4201,
+      "percentage": 2.71,
+      "is_winner": false
+    },
+    {
+      "candidate": "AGUSTHY N A",
+      "party": "IND",
+      "votes": 619,
+      "percentage": 0.4,
+      "is_winner": false
+    }
+  ]
+}

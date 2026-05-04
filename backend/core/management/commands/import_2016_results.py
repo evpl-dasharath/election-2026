@@ -41,21 +41,20 @@ COL_TOTAL        = 9
 COL_ELECTORS     = 10
 COL_VOTES_POLLED = 11
 
-# Party-code aliases: xlsx code → canonical code stored in PartyAllianceYear
+# Party-code aliases: xlsx raw code -> canonical code in Party table
 PARTY_ALIAS = {
-    'CPM':  'CPI(M)',   # ECI xlsx uses CPM
-    'CPIM': 'CPI(M)',   # another variant
-    'C(S)': 'CON(S)',   # Congress (Secular) / Kadannappalli faction
-    'KCST': 'KC(ST)',   # Kerala Congress (Skaria Thomas)
-    'KCS':  'KC(S)',    # Kerala Congress (Secular) — C. F. Thomas, Changanassery
+    'CPM':    'CPI_M',
+    'CPIM':   'CPI_M',
+    'C(S)':   'CON_S',
+    'KCST':   'KC_KST',
+    'KCS':    'KCS',
+    'KEC(M)': 'KC_M',
+    'KEC(B)': 'KC_B',
+    'KEC(J)': 'KC_J',
 }
 
-# Constituency-specific alliance overrides where ECI reuses the same code for
-# two factionally-distinct parties that belong to different alliances.
-# Format: {const_no: {normalised_party_code: 'ALLIANCE'}}
 CONSTITUENCY_PARTY_ALLIANCE_OVERRIDE = {
-    # CMPKSC in Chavara = CMP(Aravindakshan) → LDF
-    # CMPKSC in Kunnamkulam = C.P.John faction → UDF (normal mapping)
+    # CMPKSC in Chavara = CMP(Aravindakshan) -> LDF
     117: {'CMPKSC': 'LDF'},
 }
 
@@ -90,23 +89,27 @@ class Command(BaseCommand):
                 f'  Cleared {n_full} full records + {n_sum} summary records'
             ))
 
-        # Build alliance lookup once — avoids repeated DB hits per candidate
+        # Build alliance lookup once — uses FK-based party code
         alliance_map: dict[str, str] = {
-            r.party_code: r.alliance
-            for r in PartyAllianceYear.objects.filter(election_year=2016, election_type='LA')
+            r.party.code: r.alliance.code
+            for r in PartyAllianceYear.objects.select_related('party', 'alliance').filter(
+                election_year=2016, election_type='LA'
+            )
         }
 
         def get_alliance(party_code: str, const_no: int) -> str:
+            # First check constituency-specific override
             overrides = CONSTITUENCY_PARTY_ALLIANCE_OVERRIDE.get(const_no, {})
             if party_code in overrides:
                 return overrides[party_code]
+            # Then check global year map, default to OTH
             return alliance_map.get(party_code, 'OTH')
 
-        wb = openpyxl.load_workbook(xlsx_path, data_only=True, read_only=True)
-        ws = wb['DetailedResult']
+        wb = openpyxl.load_workbook(xlsx_path, data_only=True)
+        ws = wb.active
 
         rows = list(ws.iter_rows(values_only=True))
-        data_rows = rows[3:]  # skip title row, blank row, header row
+        data_rows = rows[1:]  # skip header row
 
         # Group rows by constituency number
         by_const: dict[int, list] = {}
@@ -202,13 +205,13 @@ class Command(BaseCommand):
                 constituency=constituency,
                 defaults={
                     'winner_candidate':    winner['name'],
-                    'winner_party':        winner['party'],
-                    'winner_alliance':     w_alliance,
+                    'winner_party_code':   winner['party'],
+                    'winner_alliance_code':w_alliance,
                     'winner_votes':        winner['total'],
                     'winner_percentage':   winner['pct'],
                     'runnerup_candidate':  runnerup['name'],
-                    'runnerup_party':      runnerup['party'],
-                    'runnerup_alliance':   ru_alliance,
+                    'runnerup_party_code': runnerup['party'],
+                    'runnerup_alliance_code': ru_alliance,
                     'runnerup_votes':      runnerup['total'],
                     'runnerup_percentage': runnerup['pct'],
                     'margin':              margin,

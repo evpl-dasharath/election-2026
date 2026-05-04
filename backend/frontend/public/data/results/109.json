@@ -1,0 +1,93 @@
+{
+  "constituency": {
+    "id": 109,
+    "number": 109,
+    "name": "MAVELIKARA",
+    "district": "Alappuzha"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 192435,
+    "votes_polled": 139611,
+    "votes_counted": 6806,
+    "valid_votes": 6806,
+    "rounds_completed": 12,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:23:43.973504+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "M. S. Arun Kumar",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 48519,
+      "percentage": 47.44,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Adv. Muthara Raj",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 36144,
+      "percentage": 35.34,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ajimon",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 16993,
+      "percentage": 16.61,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "SURESH NOORANAD",
+      "party": "API",
+      "alliance": "OTH",
+      "votes": 194,
+      "percentage": 0.19,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "M S ARUN KUMAR",
+      "party": "CPI(M)",
+      "votes": 71743,
+      "percentage": 47.61,
+      "is_winner": true
+    },
+    {
+      "candidate": "K K SHAJU",
+      "party": "INC",
+      "votes": 47026,
+      "percentage": 31.21,
+      "is_winner": false
+    },
+    {
+      "candidate": "K SANJU",
+      "party": "BJP",
+      "votes": 30955,
+      "percentage": 20.54,
+      "is_winner": false
+    },
+    {
+      "candidate": "K SASIKUMAR",
+      "party": "SUCI",
+      "votes": 151,
+      "percentage": 0.1,
+      "is_winner": false
+    },
+    {
+      "candidate": "B SUBHASH",
+      "party": "IND",
+      "votes": 131,
+      "percentage": 0.09,
+      "is_winner": false
+    }
+  ]
+}

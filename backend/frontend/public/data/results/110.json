@@ -1,0 +1,93 @@
+{
+  "constituency": {
+    "id": 110,
+    "number": 110,
+    "name": "CHENGANNUR",
+    "district": "Alappuzha"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 189866,
+    "votes_polled": 134899,
+    "votes_counted": 9104,
+    "valid_votes": 9104,
+    "rounds_completed": 8,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:23:35.759197+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Saji Cherian",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 29251,
+      "percentage": 41.66,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Adv. Abi Kuriakose",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 24934,
+      "percentage": 35.51,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "M. V. Gopakumar",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 15481,
+      "percentage": 22.05,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "B. Praneesh",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 203,
+      "percentage": 0.29,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "SAJI CHERIAN",
+      "party": "CPI(M)",
+      "votes": 71502,
+      "percentage": 48.58,
+      "is_winner": true
+    },
+    {
+      "candidate": "M. MURALI",
+      "party": "INC",
+      "votes": 39409,
+      "percentage": 26.78,
+      "is_winner": false
+    },
+    {
+      "candidate": "M. V. GOPAKUMAR",
+      "party": "BJP",
+      "votes": 34620,
+      "percentage": 23.52,
+      "is_winner": false
+    },
+    {
+      "candidate": "SHAJI T. GEORGE",
+      "party": "BSP",
+      "votes": 534,
+      "percentage": 0.36,
+      "is_winner": false
+    },
+    {
+      "candidate": "T. K. GOPINATHAN",
+      "party": "SUCI",
+      "votes": 316,
+      "percentage": 0.21,
+      "is_winner": false
+    }
+  ]
+}

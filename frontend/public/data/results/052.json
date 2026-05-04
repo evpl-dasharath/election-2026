@@ -7,21 +7,21 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 246662,
-    "votes_polled": 184295,
-    "votes_counted": 7734,
-    "valid_votes": 185624,
-    "rounds_completed": 1,
-    "total_rounds": 24,
-    "last_updated": "2026-05-01T02:06:43.189602+00:00"
+    "total_electors": 209627,
+    "votes_polled": 166318,
+    "votes_counted": 25254,
+    "valid_votes": 25254,
+    "rounds_completed": 12,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:36:59.387448+00:00"
   },
   "candidates_2026": [
     {
-      "name": "P. K. Sasi",
-      "party": "IND (INC)",
-      "alliance": "UDF",
-      "votes": 3420,
-      "percentage": 1.84,
+      "name": "Adv. K. Premkumar",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 68517,
+      "percentage": 45.2,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,35 +29,17 @@
       "name": "Major Ravi",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 1513,
-      "percentage": 0.82,
+      "votes": 41001,
+      "percentage": 27.05,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Muhammed Asharaf V.H",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 713,
-      "percentage": 0.38,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Adv. K. Premkumar",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 692,
-      "percentage": 0.37,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Sasi P.K S/o Krishnankutty",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 661,
-      "percentage": 0.36,
+      "name": "P. K. Sasi",
+      "party": "IND_UDF",
+      "alliance": "UDF",
+      "votes": 38773,
+      "percentage": 25.58,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +47,26 @@
       "name": "K.P Rajeesh",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 637,
-      "percentage": 0.34,
+      "votes": 931,
+      "percentage": 0.61,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sasi P.K S/o Krishnankutty",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 921,
+      "percentage": 0.61,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Muhammed Asharaf V.H",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 417,
+      "percentage": 0.28,
       "is_winner": false,
       "is_leading": false
     }

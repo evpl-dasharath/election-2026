@@ -5,50 +5,32 @@
     "name": "ETTUMANOOR",
     "district": "Kottayam"
   },
-  "live_result": null,
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 158256,
+    "votes_polled": 120416,
+    "votes_counted": 26726,
+    "valid_votes": 26726,
+    "rounds_completed": 11,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:19.604946+00:00"
+  },
   "candidates_2026": [
-    {
-      "name": "Binoy Joseph Kulathunkal",
-      "party": "BSP",
-      "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Raj Mohan Vettikulangara Unni",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Ashna Thambi",
-      "party": "SUCI",
-      "alliance": "OTH",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "V. N. Vasavan",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 0,
-      "percentage": 0.0,
-      "is_winner": false,
-      "is_leading": false
-    },
     {
       "name": "Nattakam Suresh",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 55672,
+      "percentage": 52.45,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "V. N. Vasavan",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 37397,
+      "percentage": 35.23,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +38,35 @@
       "name": "Athira D. Nair",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 0,
-      "percentage": 0.0,
+      "votes": 11812,
+      "percentage": 11.13,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Binoy Joseph Kulathunkal",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 406,
+      "percentage": 0.38,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ashna Thambi",
+      "party": "SUCI",
+      "alliance": "OTH",
+      "votes": 205,
+      "percentage": 0.19,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Raj Mohan Vettikulangara Unni",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 124,
+      "percentage": 0.12,
       "is_winner": false,
       "is_leading": false
     }

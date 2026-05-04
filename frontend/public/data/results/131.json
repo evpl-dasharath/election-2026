@@ -7,39 +7,30 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 228069,
-    "votes_polled": 156179,
-    "votes_counted": 7297,
-    "valid_votes": 160555,
-    "rounds_completed": 1,
-    "total_rounds": 22,
-    "last_updated": "2026-05-01T02:06:06.195298+00:00"
+    "total_electors": 187828,
+    "votes_polled": 145491,
+    "votes_counted": 7716,
+    "valid_votes": 7716,
+    "rounds_completed": 12,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:35:45.243576+00:00"
   },
   "candidates_2026": [
     {
-      "name": "Vipinlal V A",
-      "party": "BSP",
-      "alliance": "OTH",
-      "votes": 3878,
-      "percentage": 2.42,
+      "name": "Sudheer Sha Palode",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 46856,
+      "percentage": 51.06,
       "is_winner": false,
       "is_leading": true
     },
     {
       "name": "D. K. Murali",
-      "party": "CPI(M)",
+      "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 1142,
-      "percentage": 0.71,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Muraleedharan G Nair",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 678,
-      "percentage": 0.42,
+      "votes": 37267,
+      "percentage": 40.61,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,17 +38,17 @@
       "name": "Venu Karanavar",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 630,
-      "percentage": 0.39,
+      "votes": 6514,
+      "percentage": 7.1,
       "is_winner": false,
       "is_leading": false
     },
     {
-      "name": "Sudheer Sha Palode",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 550,
-      "percentage": 0.34,
+      "name": "Vipinlal V A",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 426,
+      "percentage": 0.46,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +56,17 @@
       "name": "Ratheesh R",
       "party": "Anna DHRM",
       "alliance": "OTH",
-      "votes": 394,
-      "percentage": 0.25,
+      "votes": 143,
+      "percentage": 0.16,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Muraleedharan G Nair",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 98,
+      "percentage": 0.11,
       "is_winner": false,
       "is_leading": false
     }

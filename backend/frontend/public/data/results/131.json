@@ -1,0 +1,111 @@
+{
+  "constituency": {
+    "id": 131,
+    "number": 131,
+    "name": "VAMANAPURAM",
+    "district": "Thiruvananthapuram"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 187828,
+    "votes_polled": 145491,
+    "votes_counted": 7716,
+    "valid_votes": 7716,
+    "rounds_completed": 12,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:23:48.247273+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "Sudheer Sha Palode",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 46856,
+      "percentage": 51.06,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "D. K. Murali",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 37267,
+      "percentage": 40.61,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Venu Karanavar",
+      "party": "BDJS",
+      "alliance": "NDA",
+      "votes": 6514,
+      "percentage": 7.1,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Vipinlal V A",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 426,
+      "percentage": 0.46,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ratheesh R",
+      "party": "Anna DHRM",
+      "alliance": "OTH",
+      "votes": 143,
+      "percentage": 0.16,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Muraleedharan G Nair",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 98,
+      "percentage": 0.11,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "Adv. D. K. Murali",
+      "party": "CPI(M)",
+      "votes": 73137,
+      "percentage": 49.91,
+      "is_winner": true
+    },
+    {
+      "candidate": "Anad Jayan",
+      "party": "INC",
+      "votes": 62895,
+      "percentage": 42.92,
+      "is_winner": false
+    },
+    {
+      "candidate": "Thazhava Sahadevan",
+      "party": "BDJS",
+      "votes": 5603,
+      "percentage": 3.82,
+      "is_winner": false
+    },
+    {
+      "candidate": "Ajmal Ismail",
+      "party": "SDPI",
+      "votes": 2325,
+      "percentage": 1.59,
+      "is_winner": false
+    },
+    {
+      "candidate": "Santhosh T.",
+      "party": "BSP",
+      "votes": 552,
+      "percentage": 0.38,
+      "is_winner": false
+    }
+  ]
+}

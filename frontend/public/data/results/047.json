@@ -7,30 +7,39 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 259641,
-    "votes_polled": 184860,
-    "votes_counted": 16840,
-    "valid_votes": 185240,
-    "rounds_completed": 2,
-    "total_rounds": 22,
-    "last_updated": "2026-05-01T02:02:00.184310+00:00"
+    "total_electors": 208776,
+    "votes_polled": 162427,
+    "votes_counted": 14273,
+    "valid_votes": 14273,
+    "rounds_completed": 13,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:36:58.934208+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. V S Joy",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 6771,
-      "percentage": 3.66,
+      "votes": 67707,
+      "percentage": 49.3,
       "is_winner": false,
       "is_leading": true
+    },
+    {
+      "name": "Dr. K. T. Jaleel",
+      "party": "IND_LDF",
+      "alliance": "LDF",
+      "votes": 53674,
+      "percentage": 39.08,
+      "is_winner": false,
+      "is_leading": false
     },
     {
       "name": "Ravi Thelath",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 4856,
-      "percentage": 2.62,
+      "votes": 13157,
+      "percentage": 9.58,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +47,8 @@
       "name": "Abdul Jaleel",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 1838,
-      "percentage": 0.99,
+      "votes": 1796,
+      "percentage": 1.31,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,17 +56,8 @@
       "name": "Abdul Jaleel K T S/o Moideen K T",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 1758,
-      "percentage": 0.95,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Dr. K. T. Jaleel",
-      "party": "IND (CPI(M))",
-      "alliance": "LDF",
-      "votes": 1746,
-      "percentage": 0.94,
+      "votes": 314,
+      "percentage": 0.23,
       "is_winner": false,
       "is_leading": false
     }

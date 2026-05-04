@@ -2,35 +2,35 @@
   "constituency": {
     "id": 126,
     "number": 126,
-    "name": "CHATHANNUR",
+    "name": "CHATHANNOOR",
     "district": "Kollam"
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 201853,
-    "votes_polled": 144794,
-    "votes_counted": 23673,
-    "valid_votes": 149933,
-    "rounds_completed": 3,
-    "total_rounds": 19,
-    "last_updated": "2026-05-01T01:59:25.191091+00:00"
+    "total_electors": 177000,
+    "votes_polled": 134325,
+    "votes_counted": 9521,
+    "valid_votes": 9521,
+    "rounds_completed": 9,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:54.621404+00:00"
   },
   "candidates_2026": [
-    {
-      "name": "Adv. R.Rajendran",
-      "party": "CPI",
-      "alliance": "LDF",
-      "votes": 8423,
-      "percentage": 5.62,
-      "is_winner": false,
-      "is_leading": true
-    },
     {
       "name": "B. B. Gopakumar",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 6865,
-      "percentage": 4.58,
+      "votes": 29950,
+      "percentage": 35.95,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Adv. R.Rajendran",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 29128,
+      "percentage": 34.97,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,17 +38,8 @@
       "name": "Sooraj Ravi",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 3697,
-      "percentage": 2.47,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Sindhu Puthenkulam",
-      "party": "Anna DHRM",
-      "alliance": "OTH",
-      "votes": 2875,
-      "percentage": 1.92,
+      "votes": 23207,
+      "percentage": 27.86,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +47,17 @@
       "name": "Arun A",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 2231,
-      "percentage": 1.49,
+      "votes": 387,
+      "percentage": 0.46,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sindhu Puthenkulam",
+      "party": "Anna DHRM",
+      "alliance": "OTH",
+      "votes": 202,
+      "percentage": 0.24,
       "is_winner": false,
       "is_leading": false
     }

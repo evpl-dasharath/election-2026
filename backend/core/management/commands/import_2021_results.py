@@ -98,7 +98,7 @@ class Command(BaseCommand):
                     constituency=meta['constituency'],
                     total_electors=meta['total_electors'],
                     winner_name=winner.candidate_name,
-                    winner_party=winner.party_code,
+                    winner_party_code=winner.party_code,
                     margin=margin
                 )
         

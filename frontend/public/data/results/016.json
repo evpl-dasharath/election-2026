@@ -7,30 +7,39 @@
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 258771,
-    "votes_polled": 195128,
-    "votes_counted": 10908,
-    "valid_votes": 196359,
-    "rounds_completed": 1,
-    "total_rounds": 18,
-    "last_updated": "2026-05-01T02:06:54.184745+00:00"
+    "total_electors": 182384,
+    "votes_polled": 144265,
+    "votes_counted": 10722,
+    "valid_votes": 10722,
+    "rounds_completed": 7,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:36:35.133718+00:00"
   },
   "candidates_2026": [
     {
-      "name": "Paily Vathiatt",
-      "party": "BDJS",
-      "alliance": "NDA",
-      "votes": 3532,
-      "percentage": 1.8,
+      "name": "Adv. Sunny Joseph",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 39013,
+      "percentage": 50.27,
       "is_winner": false,
       "is_leading": true
     },
     {
-      "name": "Venugopalan. C",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 1336,
-      "percentage": 0.68,
+      "name": "K. K. Shailaja",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 33410,
+      "percentage": 43.05,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Paily Vathiatt",
+      "party": "BDJS",
+      "alliance": "NDA",
+      "votes": 4474,
+      "percentage": 5.77,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,62 +47,8 @@
       "name": "Adv. Henstion George",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 1226,
-      "percentage": 0.62,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Sailaja. A. V",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 777,
-      "percentage": 0.4,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Adv. Sunny Joseph",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 734,
-      "percentage": 0.37,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "K. K. Shailaja",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 713,
-      "percentage": 0.36,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Sunny",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 676,
-      "percentage": 0.34,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Aruvikkal Krishnan",
-      "party": "CPIML Red Star",
-      "alliance": "OTH",
-      "votes": 637,
-      "percentage": 0.32,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Narayana Kumar",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 560,
-      "percentage": 0.29,
+      "votes": 230,
+      "percentage": 0.3,
       "is_winner": false,
       "is_leading": false
     },
@@ -101,8 +56,17 @@
       "name": "Sunny Joseph Muthukulathel",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 505,
-      "percentage": 0.26,
+      "votes": 83,
+      "percentage": 0.11,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sailaja. A. V",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 65,
+      "percentage": 0.08,
       "is_winner": false,
       "is_leading": false
     },
@@ -110,8 +74,44 @@
       "name": "C. Shylaja",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 408,
-      "percentage": 0.21,
+      "votes": 40,
+      "percentage": 0.05,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Aruvikkal Krishnan",
+      "party": "CPI_ML_RS",
+      "alliance": "OTH",
+      "votes": 36,
+      "percentage": 0.05,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Sunny",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 29,
+      "percentage": 0.04,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Narayana Kumar",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 22,
+      "percentage": 0.03,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Venugopalan. C",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 11,
+      "percentage": 0.01,
       "is_winner": false,
       "is_leading": false
     }

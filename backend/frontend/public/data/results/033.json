@@ -1,0 +1,102 @@
+{
+  "constituency": {
+    "id": 33,
+    "number": 33,
+    "name": "KONDOTTY",
+    "district": "Malappuram"
+  },
+  "live_result": {
+    "status": "IN_PROGRESS",
+    "total_electors": 229370,
+    "votes_polled": 189207,
+    "votes_counted": 0,
+    "valid_votes": 0,
+    "rounds_completed": 8,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:22:35.928451+00:00"
+  },
+  "candidates_2026": [
+    {
+      "name": "T. P. Ashrafali",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 49055,
+      "percentage": 58.97,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Dr. P. Jiji",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 26072,
+      "percentage": 31.34,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "P. Subrahmanian",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 6713,
+      "percentage": 8.07,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "M. Abdul Khader",
+      "party": "SDPI",
+      "alliance": "OTH",
+      "votes": 770,
+      "percentage": 0.93,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Keeran N.K",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 177,
+      "percentage": 0.21,
+      "is_winner": false,
+      "is_leading": false
+    }
+  ],
+  "results_2021": [
+    {
+      "candidate": "T V IBRAHIM",
+      "party": "IUML",
+      "votes": 82759,
+      "percentage": 50.42,
+      "is_winner": true
+    },
+    {
+      "candidate": "KATTUPARUTHY SULAIMAN HAJI",
+      "party": "IND",
+      "votes": 65093,
+      "percentage": 39.66,
+      "is_winner": false
+    },
+    {
+      "candidate": "SHEEBA UNNIKRISHNAN",
+      "party": "BJP",
+      "votes": 11114,
+      "percentage": 6.77,
+      "is_winner": false
+    },
+    {
+      "candidate": "Razak PALERI",
+      "party": "WPOI",
+      "votes": 2579,
+      "percentage": 1.57,
+      "is_winner": false
+    },
+    {
+      "candidate": "SIVADASAN T",
+      "party": "BSP",
+      "votes": 908,
+      "percentage": 0.55,
+      "is_winner": false
+    }
+  ]
+}

@@ -2,71 +2,35 @@
   "constituency": {
     "id": 70,
     "number": 70,
-    "name": "IRINJALAKKUDA",
+    "name": "IRINJALAKUDA",
     "district": "Thrissur"
   },
   "live_result": {
     "status": "IN_PROGRESS",
-    "total_electors": 249241,
-    "votes_polled": 181333,
-    "votes_counted": 19870,
-    "valid_votes": 188766,
-    "rounds_completed": 2,
-    "total_rounds": 19,
-    "last_updated": "2026-05-01T01:59:16.184555+00:00"
+    "total_electors": 194592,
+    "votes_polled": 149582,
+    "votes_counted": 29912,
+    "valid_votes": 29912,
+    "rounds_completed": 14,
+    "total_rounds": 0,
+    "last_updated": "2026-05-04T07:37:49.167007+00:00"
   },
   "candidates_2026": [
-    {
-      "name": "Dr. Anish",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 6817,
-      "percentage": 3.61,
-      "is_winner": false,
-      "is_leading": true
-    },
-    {
-      "name": "Dr. Shaju K Y (Kavungal)",
-      "party": "AAP",
-      "alliance": "OTH",
-      "votes": 4268,
-      "percentage": 2.26,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Thankamany Tharayil",
-      "party": "BSP",
-      "alliance": "OTH",
-      "votes": 2121,
-      "percentage": 1.12,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Ayyappan Manakkal",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 2076,
-      "percentage": 1.1,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Dr. R. Bindu",
-      "party": "CPI(M)",
-      "alliance": "LDF",
-      "votes": 1801,
-      "percentage": 0.95,
-      "is_winner": false,
-      "is_leading": false
-    },
     {
       "name": "Adv. Thomas Unniyadan",
       "party": "KEC",
       "alliance": "UDF",
-      "votes": 1506,
-      "percentage": 0.8,
+      "votes": 55637,
+      "percentage": 42.57,
+      "is_winner": false,
+      "is_leading": true
+    },
+    {
+      "name": "Dr. R. Bindu",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 48738,
+      "percentage": 37.29,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +38,44 @@
       "name": "Santhosh Cherkalam",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 1360,
-      "percentage": 0.72,
+      "votes": 24009,
+      "percentage": 18.37,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Thankamany Tharayil",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 761,
+      "percentage": 0.58,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Dr. Shaju K Y (Kavungal)",
+      "party": "AAP",
+      "alliance": "OTH",
+      "votes": 513,
+      "percentage": 0.39,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Dr. Anish",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 226,
+      "percentage": 0.17,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ayyappan Manakkal",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 83,
+      "percentage": 0.06,
       "is_winner": false,
       "is_leading": false
     }
