@@ -6,31 +6,31 @@
     "district": "Malappuram"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 247184,
     "votes_polled": 201034,
     "votes_counted": 10984,
     "valid_votes": 10984,
-    "rounds_completed": 14,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:59.775316+00:00"
+    "last_updated": "2026-05-04T12:36:15.911622+00:00"
   },
   "candidates_2026": [
     {
       "name": "A. P. Anil Kumar",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 93120,
-      "percentage": 59.5,
+      "votes": 121074,
+      "percentage": 59.59,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Dr. K.K Damodaran",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 56407,
-      "percentage": 36.04,
+      "votes": 73135,
+      "percentage": 36.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "E. P. Kumaradas",
       "party": "IND_NDA",
       "alliance": "NDA",
-      "votes": 4719,
-      "percentage": 3.02,
+      "votes": 6018,
+      "percentage": 2.96,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Anilkumar S/o Kuttan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 986,
-      "percentage": 0.63,
+      "votes": 1267,
+      "percentage": 0.62,
       "is_winner": false,
       "is_leading": false
     }

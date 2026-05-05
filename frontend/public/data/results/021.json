@@ -6,31 +6,31 @@
     "district": "Kozhikode"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 215940,
     "votes_polled": 175040,
     "votes_counted": 9943,
     "valid_votes": 9943,
-    "rounds_completed": 13,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:54.062227+00:00"
+    "last_updated": "2026-05-04T12:36:03.364212+00:00"
   },
   "candidates_2026": [
     {
       "name": "Parakkal Abdulla",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 72308,
-      "percentage": 49.74,
+      "votes": 88197,
+      "percentage": 49.52,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "K. P. Kunhammad Kutti Master",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 62712,
-      "percentage": 43.14,
+      "votes": 77275,
+      "percentage": 43.39,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Ramadas Manaleri",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 9892,
-      "percentage": 6.8,
+      "votes": 12035,
+      "percentage": 6.76,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,7 +47,7 @@
       "name": "Kunhammadkutty",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 85,
+      "votes": 114,
       "percentage": 0.06,
       "is_winner": false,
       "is_leading": false
@@ -56,7 +56,7 @@
       "name": "Abdulla",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 77,
+      "votes": 95,
       "percentage": 0.05,
       "is_winner": false,
       "is_leading": false

@@ -6,31 +6,31 @@
     "district": "Thiruvananthapuram"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 195648,
     "votes_polled": 151803,
     "votes_counted": 8704,
     "valid_votes": 8704,
-    "rounds_completed": 14,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:31.759636+00:00"
+    "last_updated": "2026-05-04T12:36:06.931876+00:00"
   },
   "candidates_2026": [
     {
       "name": "C. K. Hareendran",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 47263,
-      "percentage": 44.37,
+      "votes": 69149,
+      "percentage": 44.61,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Neyyattinkara Sanal",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 37064,
-      "percentage": 34.8,
+      "votes": 54136,
+      "percentage": 34.92,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Adv. Gireesh Neyyar",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 20970,
-      "percentage": 19.69,
+      "votes": 29919,
+      "percentage": 19.3,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,7 +47,16 @@
       "name": "Adv. Dhanuvachapuram Thankachan",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 228,
+      "votes": 340,
+      "percentage": 0.22,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Shaju Paliyodu",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 318,
       "percentage": 0.21,
       "is_winner": false,
       "is_leading": false
@@ -56,17 +65,8 @@
       "name": "Deepumon N",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 215,
-      "percentage": 0.2,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Shaju Paliyodu",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 175,
-      "percentage": 0.16,
+      "votes": 298,
+      "percentage": 0.19,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "S Robinson E Nadar",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 88,
-      "percentage": 0.08,
+      "votes": 148,
+      "percentage": 0.1,
       "is_winner": false,
       "is_leading": false
     },
@@ -83,7 +83,7 @@
       "name": "Simiyon L P",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 47,
+      "votes": 68,
       "percentage": 0.04,
       "is_winner": false,
       "is_leading": false

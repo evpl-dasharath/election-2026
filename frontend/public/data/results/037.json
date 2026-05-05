@@ -6,31 +6,31 @@
     "district": "Malappuram"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 227762,
     "votes_polled": 187949,
     "votes_counted": 6256,
     "valid_votes": 6256,
-    "rounds_completed": 16,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:59.047988+00:00"
+    "last_updated": "2026-05-04T12:36:03.898884+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. M. Rahmathulla",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 88084,
-      "percentage": 58.77,
+      "votes": 113622,
+      "percentage": 59.8,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "V. M. Mustafa",
       "party": "IND_LDF",
       "alliance": "LDF",
-      "votes": 44762,
-      "percentage": 29.87,
+      "votes": 55735,
+      "percentage": 29.33,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Pathmasree M.",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 11269,
-      "percentage": 7.52,
+      "votes": 13423,
+      "percentage": 7.06,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Adv. PPA Sageer",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 1719,
-      "percentage": 1.15,
+      "votes": 2222,
+      "percentage": 1.17,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Bipin Benson Joseph",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 1316,
-      "percentage": 0.88,
+      "votes": 1698,
+      "percentage": 0.89,
       "is_winner": false,
       "is_leading": false
     }

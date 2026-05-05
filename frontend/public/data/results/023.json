@@ -6,31 +6,31 @@
     "district": "Kozhikode"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 213254,
     "votes_polled": 169408,
     "votes_counted": 10183,
     "valid_votes": 10183,
-    "rounds_completed": 11,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:55.000475+00:00"
+    "last_updated": "2026-05-04T12:36:10.321668+00:00"
   },
   "candidates_2026": [
     {
       "name": "K. Praveen Kumar",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 54947,
-      "percentage": 47.32,
+      "votes": 79913,
+      "percentage": 46.35,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "K. Dasan",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 45763,
-      "percentage": 39.41,
+      "votes": 67843,
+      "percentage": 39.35,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "C. R. Praphul Krishnan",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 14695,
-      "percentage": 12.65,
+      "votes": 23545,
+      "percentage": 13.66,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,16 +47,7 @@
       "name": "Praveen",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 139,
-      "percentage": 0.12,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Praveen Kumar",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 130,
+      "votes": 198,
       "percentage": 0.11,
       "is_winner": false,
       "is_leading": false
@@ -65,8 +56,17 @@
       "name": "Musthafa PK (Padinjare Kuniyoth)",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 120,
-      "percentage": 0.1,
+      "votes": 193,
+      "percentage": 0.11,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Praveen Kumar",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 192,
+      "percentage": 0.11,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,7 +74,7 @@
       "name": "Dasan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 66,
+      "votes": 99,
       "percentage": 0.06,
       "is_winner": false,
       "is_leading": false

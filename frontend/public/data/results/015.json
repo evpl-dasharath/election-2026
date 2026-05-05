@@ -6,31 +6,31 @@
     "district": "Kannur"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 201719,
     "votes_polled": 165893,
     "votes_counted": 11948,
     "valid_votes": 11948,
-    "rounds_completed": 13,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:52.592540+00:00"
+    "last_updated": "2026-05-04T12:36:04.606477+00:00"
   },
   "candidates_2026": [
     {
       "name": "V. K. Sanoj",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 72486,
-      "percentage": 47.98,
+      "votes": 81456,
+      "percentage": 47.96,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Chandran Thillankeri",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 59686,
-      "percentage": 39.51,
+      "votes": 67288,
+      "percentage": 39.61,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Biju Elakkuzhi",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 15822,
-      "percentage": 10.47,
+      "votes": 17815,
+      "percentage": 10.49,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Basheer Punnad",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 2089,
-      "percentage": 1.38,
+      "votes": 2171,
+      "percentage": 1.28,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "Sanoj",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 186,
+      "votes": 210,
       "percentage": 0.12,
       "is_winner": false,
       "is_leading": false
@@ -65,7 +65,7 @@
       "name": "Chandran Thengalath",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 135,
+      "votes": 147,
       "percentage": 0.09,
       "is_winner": false,
       "is_leading": false

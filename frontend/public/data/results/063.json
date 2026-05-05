@@ -6,31 +6,31 @@
     "district": "Thrissur"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 218704,
     "votes_polled": 160463,
     "votes_counted": 10075,
     "valid_votes": 10075,
-    "rounds_completed": 11,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:04.118942+00:00"
+    "last_updated": "2026-05-04T12:35:56.183778+00:00"
   },
   "candidates_2026": [
-    {
-      "name": "C. H. Rasheed",
-      "party": "IUML",
-      "alliance": "UDF",
-      "votes": 42678,
-      "percentage": 40.01,
-      "is_winner": false,
-      "is_leading": true
-    },
     {
       "name": "N. K. Akbar",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 42667,
-      "percentage": 40.0,
+      "votes": 66069,
+      "percentage": 40.77,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "C. H. Rasheed",
+      "party": "IUML",
+      "alliance": "UDF",
+      "votes": 64071,
+      "percentage": 39.54,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "B. Gopalakrishnan",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 19303,
-      "percentage": 18.1,
+      "votes": 28947,
+      "percentage": 17.86,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "K.V. Abdul Nasar Paroor",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 1100,
-      "percentage": 1.03,
+      "votes": 1610,
+      "percentage": 0.99,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Pauly Francis Guruvayur",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 348,
-      "percentage": 0.33,
+      "votes": 466,
+      "percentage": 0.29,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,7 +65,7 @@
       "name": "C. R. Unnikrishnan",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 137,
+      "votes": 218,
       "percentage": 0.13,
       "is_winner": false,
       "is_leading": false

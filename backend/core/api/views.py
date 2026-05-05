@@ -371,6 +371,7 @@ def alliance_detail(request, alliance_code):
     vote share vs 2021, and the full 140-constituency list annotated with competing flag.
     GET /api/alliance/{alliance_code}/
     """
+    alliance_code = alliance_code.upper()
     if alliance_code not in ['LDF', 'UDF', 'NDA', 'OTH']:
         return Response({'error': 'Invalid alliance code'}, status=404)
 

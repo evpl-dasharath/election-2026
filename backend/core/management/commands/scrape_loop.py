@@ -150,6 +150,11 @@ class Command(BaseCommand):
                 # Check which seats still need scraping
                 pending_acs, declared = _get_pending_acs(all_ac_numbers)
 
+                # Always scrape ALL seats on the very first loop to ensure a full refresh
+                if cycle == 1:
+                    pending_acs = all_ac_numbers
+                    declared = []
+
                 self.stdout.write(self.style.MIGRATE_HEADING(
                     f"\n--- Cycle {cycle} | "
                     f"Pending: {len(pending_acs)} | "
@@ -163,6 +168,25 @@ class Command(BaseCommand):
                     break
 
                 run_single_cycle(pending_acs, base_url, state_code, self.stdout)
+
+                # Bulk-update RESULT_DECLARED status from statewise pages
+                self.stdout.write(self.style.MIGRATE_HEADING("  -> Running statewise scraper to sync DECLARED status..."))
+                try:
+                    import sys
+                    sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  
+                    # Import directly so we share the same Django DB connection
+                    backend_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', '..')
+                    sys.path.insert(0, os.path.abspath(backend_dir))
+                    from scrape_statewise import scrape_all_pages, commit as statewise_commit
+                    sw_rows = scrape_all_pages()
+                    if sw_rows:
+                        declared = sum(1 for r in sw_rows if r['status'] == 'RESULT_DECLARED')
+                        self.stdout.write(f"  Statewise: {len(sw_rows)} rows, {declared} declared")
+                        statewise_commit(sw_rows, dry_run=False)
+                    else:
+                        self.stdout.write(self.style.WARNING("  Statewise: 0 rows scraped"))
+                except Exception as e:
+                    self.stdout.write(self.style.ERROR(f"  Statewise scrape failed: {e}"))
 
                 elapsed = time.time() - start
                 self.stdout.write(self.style.SUCCESS(

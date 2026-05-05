@@ -6,31 +6,31 @@
     "district": "Thrissur"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 179208,
     "votes_polled": 135391,
     "votes_counted": 8577,
     "valid_votes": 8577,
-    "rounds_completed": 14,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:09.042521+00:00"
+    "last_updated": "2026-05-04T12:35:53.402650+00:00"
   },
   "candidates_2026": [
     {
       "name": "T. J. Saneesh Kumar Joseph",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 63061,
-      "percentage": 51.38,
+      "votes": 71202,
+      "percentage": 51.62,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Adv Biju Chirayath",
       "party": "KC_M",
       "alliance": "LDF",
-      "votes": 42962,
-      "percentage": 35.01,
+      "votes": 48046,
+      "percentage": 34.83,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Adv. Charlypaul",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 14408,
-      "percentage": 11.74,
+      "votes": 16030,
+      "percentage": 11.62,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "M S Asokan Mangalappilly",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 577,
-      "percentage": 0.47,
+      "votes": 663,
+      "percentage": 0.48,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Wilson Kallen",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 451,
-      "percentage": 0.37,
+      "votes": 519,
+      "percentage": 0.38,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Arun Edathadan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 272,
-      "percentage": 0.22,
+      "votes": 311,
+      "percentage": 0.23,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "A D Biju",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 195,
-      "percentage": 0.16,
+      "votes": 228,
+      "percentage": 0.17,
       "is_winner": false,
       "is_leading": false
     }

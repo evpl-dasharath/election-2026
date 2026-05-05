@@ -6,31 +6,31 @@
     "district": "Thiruvananthapuram"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 195296,
     "votes_polled": 144772,
     "votes_counted": 17965,
     "valid_votes": 17965,
-    "rounds_completed": 14,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:27.495720+00:00"
+    "last_updated": "2026-05-04T12:35:54.607965+00:00"
   },
   "candidates_2026": [
-    {
-      "name": "Manoj B Edamana",
-      "party": "CPI",
-      "alliance": "LDF",
-      "votes": 50290,
-      "percentage": 37.6,
-      "is_winner": false,
-      "is_leading": true
-    },
     {
       "name": "Ramya Haridas",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 50287,
-      "percentage": 37.6,
+      "votes": 56833,
+      "percentage": 38.51,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Manoj B Edamana",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 55411,
+      "percentage": 37.55,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "B. S. Anoop",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 30944,
-      "percentage": 23.14,
+      "votes": 32920,
+      "percentage": 22.31,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Ramasamy Sasi",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 694,
-      "percentage": 0.52,
+      "votes": 743,
+      "percentage": 0.5,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Anoop Alappuramkunnu",
       "party": "Anna DHRM",
       "alliance": "OTH",
-      "votes": 588,
-      "percentage": 0.44,
+      "votes": 617,
+      "percentage": 0.42,
       "is_winner": false,
       "is_leading": false
     }

@@ -107,6 +107,12 @@ export default function GlobalHeader() {
 
   const allPills = [...mainPills, ...conditionalPills];
 
+  const handlePillNavigation = (id: string) => {
+    if (id === 'LDF' || id === 'UDF' || id === 'NDA') {
+      navigate(`/alliance/${id.toLowerCase()}`);
+    }
+  };
+
   const staleBanner = staleness !== 'ok' && isElectionDay() ? (
     <div
       className="text-center text-[11px] font-semibold py-1 px-4"
@@ -257,7 +263,11 @@ export default function GlobalHeader() {
 
         {/* Left: logo + status badge */}
         <div className="flex items-center gap-2 md:gap-2.5 shrink-0 md:w-[200px]">
-          <div className="font-serif text-[15px] md:text-[17px] tracking-tight whitespace-nowrap">
+          <div
+            className="font-serif text-[15px] md:text-[17px] tracking-tight whitespace-nowrap cursor-pointer hover:text-white/85 transition-colors"
+            onClick={() => navigate('/')}
+            title="Go to state overview"
+          >
             Kerala <span className="text-gold">Elections</span> 2026
           </div>
           <StatusBadge />
@@ -270,12 +280,15 @@ export default function GlobalHeader() {
             return (
               <div
                 key={id}
+                onClick={() => handlePillNavigation(id)}
                 style={{
                   display: 'inline-flex', alignItems: 'center', gap: 8,
                   background: `${color}18`,
                   border: `1px solid ${color}50`,
                   borderRadius: 10, padding: '6px 14px',
+                  cursor: id === 'LDF' || id === 'UDF' || id === 'NDA' ? 'pointer' : 'default',
                 }}
+                title={id === 'LDF' || id === 'UDF' || id === 'NDA' ? `Open ${id} alliance page` : undefined}
               >
                 <div style={{ width: 8, height: 8, borderRadius: '50%', background: color, flexShrink: 0 }} />
                 <span style={{ fontSize: 13, fontWeight: 700, color, letterSpacing: 0.5 }}>{id}</span>
@@ -296,20 +309,20 @@ export default function GlobalHeader() {
         </div>
 
         {/* Right: nav + time */}
-        <div className="flex items-center justify-end gap-3 md:gap-5 shrink-0 md:w-[200px] order-2 md:order-3">
-          {/* Nav — scrollable on mobile so all 5 entries fit */}
-          <div className="flex gap-3 md:gap-4 overflow-x-auto custom-scrollbar">
+        <div className="flex items-center justify-end gap-2 md:gap-5 shrink min-w-0 max-w-full order-2 md:order-3">
+          {/* Nav — wrap instead of horizontal drag so all links remain reachable */}
+          <div className="flex flex-wrap justify-end gap-x-2 gap-y-1 md:gap-x-4">
             {navItems.map(({ label, active, onClick }) => (
               <span
                 key={label}
                 onClick={onClick}
-                className={`text-[11px] font-medium cursor-pointer hover:text-white/80 transition-colors whitespace-nowrap ${active ? 'text-white' : 'text-white/45'}`}
+                className={`text-[10px] md:text-[11px] font-medium cursor-pointer hover:text-white/80 transition-colors whitespace-nowrap ${active ? 'text-white' : 'text-white/45'}`}
               >
                 {label}
               </span>
             ))}
           </div>
-          <div className="font-mono text-[10px] text-white/35 shrink-0">
+          <div className="font-mono text-[10px] text-white/35 shrink-0 whitespace-nowrap">
             {time.toLocaleString('en-IN', { hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Kolkata' })} IST
           </div>
         </div>

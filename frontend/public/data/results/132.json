@@ -6,31 +6,31 @@
     "district": "Thiruvananthapuram"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 164561,
     "votes_polled": 129377,
     "votes_counted": 7672,
     "valid_votes": 7672,
-    "rounds_completed": 11,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:32.743242+00:00"
+    "last_updated": "2026-05-04T12:35:59.553378+00:00"
   },
   "candidates_2026": [
-    {
-      "name": "Kadakampally Surendran",
-      "party": "CPI_M",
-      "alliance": "LDF",
-      "votes": 29311,
-      "percentage": 36.56,
-      "is_winner": false,
-      "is_leading": true
-    },
     {
       "name": "V. Muraleedharan",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 27812,
-      "percentage": 34.69,
+      "votes": 46564,
+      "percentage": 35.39,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Kadakampally Surendran",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 46136,
+      "percentage": 35.06,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Adv.  T. Sarathchandra Prasad",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 22008,
-      "percentage": 27.45,
+      "votes": 37183,
+      "percentage": 28.26,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,7 +47,7 @@
       "name": "T. S. Rajan",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 181,
+      "votes": 298,
       "percentage": 0.23,
       "is_winner": false,
       "is_leading": false
@@ -56,8 +56,8 @@
       "name": "Deebika Karimanal",
       "party": "Anna DHRM",
       "alliance": "OTH",
-      "votes": 174,
-      "percentage": 0.22,
+      "votes": 260,
+      "percentage": 0.2,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "K. Surendran",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 63,
-      "percentage": 0.08,
+      "votes": 97,
+      "percentage": 0.07,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,7 +74,7 @@
       "name": "Sreekantan Nair V.",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 41,
+      "votes": 68,
       "percentage": 0.05,
       "is_winner": false,
       "is_leading": false

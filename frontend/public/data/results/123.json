@@ -6,31 +6,31 @@
     "district": "Kollam"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 206464,
     "votes_polled": 161537,
     "votes_counted": 9708,
     "valid_votes": 9708,
-    "rounds_completed": 15,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:28.237835+00:00"
+    "last_updated": "2026-05-04T12:36:01.838024+00:00"
   },
   "candidates_2026": [
     {
       "name": "P. C. Vishnunadh",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 80089,
-      "percentage": 53.64,
+      "votes": 87862,
+      "percentage": 53.44,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "S. L. Sajikumar",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 49831,
-      "percentage": 33.37,
+      "votes": 55298,
+      "percentage": 33.63,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Robin Radhakrishnan (Robin RB)",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 17363,
-      "percentage": 11.63,
+      "votes": 18996,
+      "percentage": 11.55,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Riyas M",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 642,
-      "percentage": 0.43,
+      "votes": 722,
+      "percentage": 0.44,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Lathika C",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 498,
-      "percentage": 0.33,
+      "votes": 572,
+      "percentage": 0.35,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Rahul R",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 250,
-      "percentage": 0.17,
+      "votes": 269,
+      "percentage": 0.16,
       "is_winner": false,
       "is_leading": false
     }

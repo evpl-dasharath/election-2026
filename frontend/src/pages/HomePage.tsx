@@ -941,4 +941,3 @@ function ConstituencyCard({
     </div>
   );
 }
-

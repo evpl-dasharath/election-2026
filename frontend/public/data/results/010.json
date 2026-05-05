@@ -6,31 +6,31 @@
     "district": "Kannur"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 188250,
     "votes_polled": 146289,
     "votes_counted": 12159,
     "valid_votes": 12159,
-    "rounds_completed": 12,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:47.875690+00:00"
+    "last_updated": "2026-05-04T12:35:52.720687+00:00"
   },
   "candidates_2026": [
     {
       "name": "K. V. Sumesh",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 59461,
-      "percentage": 44.61,
+      "votes": 64951,
+      "percentage": 43.76,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Adv.  Kareem Cheleri",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 57042,
-      "percentage": 42.8,
+      "votes": 64602,
+      "percentage": 43.53,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "K. K. Vinod Kumar",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 15544,
-      "percentage": 11.66,
+      "votes": 17476,
+      "percentage": 11.78,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,7 +47,7 @@
       "name": "Abdul Kareem. V. V",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 213,
+      "votes": 235,
       "percentage": 0.16,
       "is_winner": false,
       "is_leading": false
@@ -56,7 +56,7 @@
       "name": "Reshmi Ravi",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 198,
+      "votes": 227,
       "percentage": 0.15,
       "is_winner": false,
       "is_leading": false
@@ -65,8 +65,8 @@
       "name": "Sumesh. T. P",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 115,
-      "percentage": 0.09,
+      "votes": 124,
+      "percentage": 0.08,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,7 +74,7 @@
       "name": "Kareem Chandroth",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 102,
+      "votes": 115,
       "percentage": 0.08,
       "is_winner": false,
       "is_leading": false
@@ -83,7 +83,7 @@
       "name": "Sumesh Kumar. K",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 94,
+      "votes": 106,
       "percentage": 0.07,
       "is_winner": false,
       "is_leading": false

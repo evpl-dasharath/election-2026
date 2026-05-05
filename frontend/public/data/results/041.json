@@ -6,31 +6,31 @@
     "district": "Malappuram"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 211630,
     "votes_polled": 168944,
     "votes_counted": 12575,
     "valid_votes": 12575,
-    "rounds_completed": 10,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:35:06.722263+00:00"
+    "last_updated": "2026-05-04T12:36:15.396562+00:00"
   },
   "candidates_2026": [
     {
       "name": "K. M. Shaji",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 68120,
-      "percentage": 55.37,
+      "votes": 95863,
+      "percentage": 56.29,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Muhammad Sabah Kundupuzhakkal",
       "party": "IND_LDF",
       "alliance": "LDF",
-      "votes": 47931,
-      "percentage": 38.96,
+      "votes": 65538,
+      "percentage": 38.49,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Jayakrishnan V.N.",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 5011,
-      "percentage": 4.07,
+      "votes": 6126,
+      "percentage": 3.6,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Abdul Rafeeq Chemban",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 794,
-      "percentage": 0.65,
+      "votes": 1145,
+      "percentage": 0.67,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "K.M.Shaji Shymalayam",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 207,
-      "percentage": 0.17,
+      "votes": 305,
+      "percentage": 0.18,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,7 +65,7 @@
       "name": "U.P. Shaji",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 99,
+      "votes": 141,
       "percentage": 0.08,
       "is_winner": false,
       "is_leading": false

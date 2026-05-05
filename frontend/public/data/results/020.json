@@ -6,31 +6,31 @@
     "district": "Kozhikode"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 176832,
     "votes_polled": 140599,
     "votes_counted": 22690,
     "valid_votes": 22690,
-    "rounds_completed": 14,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:58.203325+00:00"
+    "last_updated": "2026-05-04T12:36:14.491729+00:00"
   },
   "candidates_2026": [
     {
       "name": "K. K. Rema",
       "party": "RMPI",
       "alliance": "UDF",
-      "votes": 69725,
-      "percentage": 48.96,
+      "votes": 70117,
+      "percentage": 48.97,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "M. K. Bhaskaran",
       "party": "RJD",
       "alliance": "LDF",
-      "votes": 54931,
-      "percentage": 38.58,
+      "votes": 55255,
+      "percentage": 38.59,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Adv. K. Dileep",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 14240,
-      "percentage": 10.0,
+      "votes": 14295,
+      "percentage": 9.98,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Shamseer Chombala",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 2472,
-      "percentage": 1.74,
+      "votes": 2477,
+      "percentage": 1.73,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,7 +74,7 @@
       "name": "Rama W/o Vijayan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 160,
+      "votes": 162,
       "percentage": 0.11,
       "is_winner": false,
       "is_leading": false
@@ -83,7 +83,7 @@
       "name": "Ramakrishnan Vattakandi",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 93,
+      "votes": 94,
       "percentage": 0.07,
       "is_winner": false,
       "is_leading": false

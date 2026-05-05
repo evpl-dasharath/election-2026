@@ -6,31 +6,31 @@
     "district": "Palakkad"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 164930,
     "votes_polled": 129338,
     "votes_counted": 31787,
     "valid_votes": 31787,
-    "rounds_completed": 13,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:35:07.752888+00:00"
+    "last_updated": "2026-05-04T12:36:11.194577+00:00"
   },
   "candidates_2026": [
     {
       "name": "P. P. Sumod",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 60342,
-      "percentage": 45.84,
+      "votes": 60557,
+      "percentage": 45.79,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "K. C. Subramanian",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 48376,
-      "percentage": 36.75,
+      "votes": 48647,
+      "percentage": 36.79,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Suresh Babu",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 21029,
-      "percentage": 15.98,
+      "votes": 21162,
+      "percentage": 16.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Narayanankutty  K T",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 864,
-      "percentage": 0.66,
+      "votes": 866,
+      "percentage": 0.65,
       "is_winner": false,
       "is_leading": false
     }

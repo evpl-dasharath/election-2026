@@ -65,47 +65,52 @@ function PartyConstCard({
     <div
       onClick={onClick}
       style={{
-        background: cardBg, border: counting ? 'none' : '1px solid #E2DDD8',
-        borderRadius: 10, padding: '10px 12px', cursor: 'pointer',
-        boxShadow: isClose ? '0 4px 18px rgba(0,0,0,0.25)' : '0 1px 4px rgba(0,0,0,0.1)',
+        background: counting && isWinning ? partyColor : counting ? '#4B5563' : '#E8E4DF',
+        borderRadius: 12, padding: '12px 14px', cursor: 'pointer', position: 'relative',
+        boxShadow: isClose ? '0 4px 18px rgba(0,0,0,0.35)' : counting ? '0 4px 14px rgba(26,22,17,0.14)' : '0 1px 4px rgba(0,0,0,0.15)',
         transition: 'transform 0.1s',
       }}
-      onMouseEnter={e => (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-1px)'}
+      onMouseEnter={e => (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-2px)'}
       onMouseLeave={e => (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)'}
     >
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 5 }}>
-        <span style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 9, color: counting ? 'rgba(255,255,255,0.5)' : '#9CA3AF' }}>
+      <div className="flex justify-between items-start mb-1.5">
+        <span className="font-mono text-[9px]" style={{ color: counting ? 'rgba(255,255,255,0.5)' : '#9CA3AF' }}>
           #{String(c.number).padStart(3, '0')}
         </span>
         <ClassBadge cls={seatCls} alliance={ownerAl} />
       </div>
-      <div style={{ fontSize: 12, fontWeight: 700, color: counting ? 'white' : '#1A1611', marginBottom: 3, lineHeight: 1.3 }}>{c.name}</div>
-      <div style={{ fontSize: 9, color: counting ? 'rgba(255,255,255,0.55)' : '#9CA3AF', marginBottom: 6 }}>
+      <div className="font-bold leading-snug mb-1 text-[13px]" style={{ color: counting ? 'white' : '#1A1611' }}>{c.name}</div>
+      <div className="text-[9px] mb-2" style={{ color: counting ? 'rgba(255,255,255,0.55)' : '#9CA3AF' }}>
         {c.district}
-        {c.sitting_alliance && <> · 2021: <span style={{ color: ac(c.sitting_alliance), fontWeight: 700 }}>{c.sitting_alliance}</span></>}
+        {c.sitting_alliance && (
+          <> · 2021: <span style={{ color: counting ? 'rgba(255,255,255,0.85)' : ac(c.sitting_alliance), fontWeight: 700 }}>{c.sitting_alliance}</span></>
+        )}
       </div>
       {counting && c.leader ? (
         <>
-          <div style={{ fontSize: 18, fontWeight: 800, color: 'white', lineHeight: 1, marginBottom: 3 }}>
+          <div className="font-black leading-none text-[18px] mb-1" style={{ color: 'white' }}>
             {isWinning && margin !== null ? `+${margin.toLocaleString('en-IN')}` : c.leader.name}
           </div>
           {!isWinning && (
-            <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.7)' }}>
+            <div className="text-[10px]" style={{ color: 'rgba(255,255,255,0.7)' }}>
               Leader: {c.leader.party} · {c.leader.alliance}
             </div>
           )}
           {c.runner_up && isWinning && (
-            <div style={{ fontSize: 9, color: 'rgba(255,255,255,0.65)' }}>2nd: {c.runner_up.name} · {c.runner_up.party}</div>
+            <div className="text-[9px]" style={{ color: 'rgba(255,255,255,0.65)' }}>2nd: {c.runner_up.name} · {c.runner_up.party}</div>
           )}
         </>
       ) : (
-        <div style={{ fontSize: 10, color: '#9CA3AF', fontStyle: 'italic' }}>Awaited</div>
+        <div className="text-[10px] italic flex items-center gap-1.5" style={{ color: '#9CA3AF' }}>
+          <span className="inline-block w-1.5 h-1.5 rounded-full bg-neutral-400/60" />
+          Awaited
+        </div>
       )}
     </div>
   );
 }
 
-// ── Sidebar item ──────────────────────────────────────────────
+// ── Sidebar party item ────────────────────────────────────────
 function SidebarPartyItem({
   party,
   isActive,
@@ -119,29 +124,24 @@ function SidebarPartyItem({
   return (
     <div
       onClick={onClick}
+      className="flex items-center gap-2.5 px-3.5 py-2.5 cursor-pointer transition-colors"
       style={{
-        display: 'flex', alignItems: 'center', gap: 10,
-        padding: '9px 14px',
-        cursor: 'pointer',
         borderLeft: isActive ? `3px solid ${alColor}` : '3px solid transparent',
         background: isActive ? `${alColor}10` : 'transparent',
-        transition: 'all 0.12s',
       }}
       onMouseEnter={e => { if (!isActive) (e.currentTarget as HTMLDivElement).style.background = '#F5F2EE'; }}
       onMouseLeave={e => { if (!isActive) (e.currentTarget as HTMLDivElement).style.background = 'transparent'; }}
     >
-      {/* Color dot */}
-      <div style={{ width: 8, height: 8, borderRadius: '50%', background: alColor, flexShrink: 0 }} />
-      {/* Name */}
-      <div style={{ flex: 1, minWidth: 0 }}>
-        <div style={{ fontSize: 12, fontWeight: isActive ? 700 : 500, color: isActive ? alColor : '#1A1611', letterSpacing: 0.2, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+      <div className="w-2 h-2 rounded-full shrink-0" style={{ background: alColor }} />
+      <div className="flex-1 min-w-0">
+        <div className="text-[12px] truncate"
+          style={{ fontWeight: isActive ? 700 : 500, color: isActive ? alColor : '#1A1611', letterSpacing: 0.2 }}>
           {party.code}
         </div>
-        <div style={{ fontSize: 10, color: '#9CA3AF', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{party.full_name || party.name}</div>
+        <div className="text-[10px] text-ink2 truncate">{party.full_name || party.name}</div>
       </div>
-      {/* Seat count */}
       {party.seats_leading_or_won !== undefined && (
-        <span style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 13, fontWeight: 700, color: isActive ? alColor : '#5C5245', flexShrink: 0 }}>
+        <span className="font-mono text-[13px] font-bold shrink-0" style={{ color: isActive ? alColor : '#5C5245' }}>
           {party.seats_leading_or_won}
         </span>
       )}
@@ -162,13 +162,11 @@ export default function PartyPage() {
   const [sidebarAlFilter, setSidebarAlFilter] = useState<string>('all');
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  // Card filters
   const [rawProfile, setRawProfile] = useState<SeatClass | null>(null);
   const [rawOutcome, setRawOutcome] = useState<string | null>(null);
   const [rawMargin, setRawMargin] = useState<string | null>(null);
   const [sortBy, setSortBy] = useState<'number' | 'margin'>('number');
 
-  // Classification map
   const classMap = useMemo(() => {
     const map: Record<number, { seatClass: SeatClass; ownerAlliance: string | null }> = {};
     if (!allHistory) return map;
@@ -176,7 +174,6 @@ export default function PartyPage() {
     return map;
   }, [allHistory]);
 
-  // Sidebar party list — sorted by alliance group then seats
   const sidebarParties = useMemo(() => {
     const alOrder = { LDF: 0, UDF: 1, NDA: 2, OTH: 3 };
     return [...(parties || [])]
@@ -194,7 +191,6 @@ export default function PartyPage() {
       );
   }, [parties, sidebarSearch, sidebarAlFilter]);
 
-  // Enriched constituency list for the party
   const enrichedConsts = useMemo(() => {
     if (!partyDetail?.constituencies) return [];
     return partyDetail.constituencies.map(c => {
@@ -213,7 +209,6 @@ export default function PartyPage() {
     });
   }, [partyDetail, classMap]);
 
-  // Apply card filters
   const filteredConsts = useMemo(() => {
     let rows = enrichedConsts;
     if (rawProfile) rows = rows.filter(r => r.seatClass === rawProfile);
@@ -231,51 +226,52 @@ export default function PartyPage() {
   const allianceColor = ac(partyDetail?.alliance || 'OTH');
   const totalWonLeading = (partyDetail?.seats_won || 0) + (partyDetail?.seats_leading || 0);
   const swingVs2021 = partyDetail ? partyDetail.vote_share - partyDetail.vote_share_2021_pct : 0;
+  const hasAnyFilter = rawProfile || rawOutcome || rawMargin;
 
   return (
-    <div style={{ fontFamily: "'DM Sans',sans-serif", background: '#F5F2EE', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+    <div className="flex flex-col min-h-screen bg-pagebg text-ink">
       <GlobalHeader />
 
-      <div style={{ display: 'flex', flex: 1, overflow: 'hidden', position: 'relative' }}>
+      <div className="flex-1 flex flex-col md:grid md:grid-cols-[280px_1fr] min-h-0 relative">
+
+        {/* Mobile overlay */}
+        {sidebarOpen && (
+          <div className="md:hidden fixed inset-0 bg-black/40 z-40" onClick={() => setSidebarOpen(false)} />
+        )}
 
         {/* ── Sidebar ── */}
-        <aside style={{
-          width: 280, flexShrink: 0,
-          background: '#FDFCFB', borderRight: '1px solid #E2DDD8',
-          display: 'flex', flexDirection: 'column',
-          // Mobile: slide over
-          position: 'fixed', top: 0, left: 0, bottom: 0, zIndex: 40,
-          transform: sidebarOpen ? 'translateX(0)' : 'translateX(-100%)',
-          transition: 'transform 0.2s',
-        }}
-          className="md:static md:transform-none md:flex md:z-auto"
-        >
+        <aside className={`
+          flex flex-col bg-surface border-r border-pageborder overflow-hidden
+          fixed md:sticky top-0 md:top-[56px] h-[100dvh] md:h-[calc(100vh-56px)] z-50 md:z-auto
+          w-[85%] max-w-[320px] md:w-auto md:max-w-none transition-transform duration-300
+          ${sidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}
+        `}>
           {/* Sidebar header */}
-          <div style={{ padding: '14px 14px 10px', borderBottom: '1px solid #E2DDD8', flexShrink: 0 }}>
+          <div className="px-3.5 py-3 border-b border-pageborder shrink-0">
             {/* Search */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: 6, background: '#F5F2EE', border: '1px solid #E2DDD8', borderRadius: 7, padding: '6px 10px', marginBottom: 8 }}>
-              <span style={{ color: '#5C5245', fontSize: 14 }}>⌕</span>
+            <div className="flex items-center gap-1.5 bg-pagebg rounded-lg px-2.5 py-2 mb-2">
+              <span className="text-ink2 text-sm">⌕</span>
               <input
                 type="text"
                 placeholder="Search party…"
                 value={sidebarSearch}
                 onChange={e => setSidebarSearch(e.target.value)}
-                style={{ border: 'none', background: 'none', outline: 'none', fontFamily: "'DM Sans',sans-serif", fontSize: 12, color: '#1A1611', width: '100%' }}
+                className="bg-transparent border-none outline-none text-[12px] text-ink w-full placeholder-ink2"
               />
             </div>
             {/* Alliance filter chips */}
-            <div style={{ display: 'flex', gap: 4 }}>
+            <div className="flex gap-1.5">
               {(['all', 'LDF', 'UDF', 'NDA'] as const).map(f => {
                 const active = sidebarAlFilter === f;
                 const color = f === 'all' ? '#1A1611' : ac(f);
                 return (
-                  <button key={f} onClick={() => setSidebarAlFilter(f)} style={{
-                    fontSize: 10, fontWeight: 700, padding: '3px 8px', borderRadius: 20, cursor: 'pointer',
-                    fontFamily: "'DM Sans',sans-serif",
-                    border: `1.5px solid ${active ? color : '#D1CBC4'}`,
-                    background: active ? color : 'transparent',
-                    color: active ? '#fff' : color,
-                  }}>
+                  <button key={f} onClick={() => setSidebarAlFilter(f)}
+                    className="text-[10px] font-bold px-2 py-1 rounded-full cursor-pointer transition-all"
+                    style={{
+                      border: `1.5px solid ${active ? color : '#D1CBC4'}`,
+                      background: active ? color : 'transparent',
+                      color: active ? '#fff' : color,
+                    }}>
                     {f === 'all' ? 'All' : f}
                   </button>
                 );
@@ -284,11 +280,11 @@ export default function PartyPage() {
           </div>
 
           {/* Party list */}
-          <div style={{ flex: 1, overflowY: 'auto' }}>
+          <div className="flex-1 overflow-y-auto">
             {partiesLoading ? (
-              <div style={{ padding: 24, textAlign: 'center', color: '#9CA3AF', fontSize: 12 }}>Loading…</div>
+              <div className="p-6 text-center text-ink2 text-[12px]">Loading…</div>
             ) : sidebarParties.length === 0 ? (
-              <div style={{ padding: 24, textAlign: 'center', color: '#9CA3AF', fontSize: 12 }}>No parties match</div>
+              <div className="p-6 text-center text-ink2 text-[12px]">No parties match</div>
             ) : (
               sidebarParties.map(p => (
                 <SidebarPartyItem
@@ -302,84 +298,81 @@ export default function PartyPage() {
           </div>
         </aside>
 
-        {/* Sidebar overlay for mobile */}
-        {sidebarOpen && (
-          <div
-            onClick={() => setSidebarOpen(false)}
-            style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.4)', zIndex: 39 }}
-          />
-        )}
+        {/* ── Main panel ── */}
+        <main className="overflow-y-auto min-w-0">
 
-        {/* ── Main Panel ── */}
-        <main style={{ flex: 1, overflowY: 'auto', minWidth: 0 }}>
-
-          {/* Mobile sidebar toggle */}
-          <div style={{ padding: '10px 16px', borderBottom: '1px solid #E2DDD8', background: '#FDFCFB', display: 'flex', alignItems: 'center', gap: 10 }}
-            className="md:hidden"
-          >
-            <button onClick={() => setSidebarOpen(true)} style={{ fontSize: 12, fontWeight: 600, color: '#5C5245', background: '#F5F2EE', border: '1px solid #E2DDD8', borderRadius: 6, padding: '5px 12px', cursor: 'pointer', fontFamily: "'DM Sans',sans-serif" }}>
+          {/* Mobile sidebar toggle + breadcrumb */}
+          <div className="md:hidden flex items-center gap-2.5 px-4 py-2.5 border-b border-pageborder bg-surface">
+            <button
+              onClick={() => setSidebarOpen(true)}
+              className="text-[12px] font-bold text-ink2 bg-pagebg border border-pageborder rounded px-3 py-1.5 cursor-pointer"
+            >
               ☰ All Parties
             </button>
             {partyDetail && (
-              <span style={{ fontSize: 13, fontWeight: 700, color: partyColor }}>{partyDetail.code}</span>
+              <span className="text-[13px] font-bold" style={{ color: partyColor }}>{partyDetail.code}</span>
             )}
           </div>
 
           {!code || !partyDetail ? (
-            /* No party selected */
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '60vh', flexDirection: 'column', gap: 12 }}>
+            <div className="flex items-center justify-center h-[60vh] flex-col gap-3">
               {detailLoading ? (
                 <>
-                  <div style={{ width: 36, height: 36, border: '3px solid #E2DDD8', borderTopColor: '#C8A84B', borderRadius: '50%', animation: 'spin 0.8s linear infinite' }} />
-                  <p style={{ color: '#9CA3AF', fontSize: 13 }}>Loading party data…</p>
+                  <div className="w-9 h-9 rounded-full border-[3px] border-pageborder"
+                    style={{ borderTopColor: '#C8A84B', animation: 'spin 0.8s linear infinite' }} />
+                  <p className="text-ink2 text-[13px]">Loading party data…</p>
                   <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
                 </>
               ) : (
                 <>
-                  <div style={{ fontSize: 32 }}>🏛</div>
-                  <p style={{ color: '#9CA3AF', fontSize: 14 }}>Select a party from the sidebar</p>
+                  <div className="text-[32px]">🏛</div>
+                  <p className="text-ink2 text-[14px]">Select a party from the sidebar</p>
                 </>
               )}
             </div>
           ) : (
-            <div style={{ padding: '20px 24px 40px' }}>
+            <div className="px-4 md:px-8 py-5 pb-10">
 
               {/* ── Party header ── */}
-              <div style={{ background: '#FDFCFB', border: '1px solid #E2DDD8', borderRadius: 12, padding: '20px 24px', marginBottom: 20, borderLeft: `4px solid ${partyColor}` }}>
-                <div style={{ display: 'flex', alignItems: 'flex-start', gap: 14 }}>
+              <div className="bg-surface rounded-xl px-5 py-4 mb-5 shadow-sm">
+                <div className="flex items-start gap-3.5">
                   {/* Party circle */}
-                  <div style={{ width: 48, height: 48, borderRadius: '50%', background: partyColor, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14, fontWeight: 800, color: '#fff', flexShrink: 0 }}>
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center text-[14px] font-black text-white shrink-0"
+                    style={{ background: partyColor }}>
                     {partyAbbr(partyDetail.code)}
                   </div>
-                  <div style={{ flex: 1 }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 2 }}>
-                      <h1 style={{ fontFamily: "'DM Serif Display',serif", fontSize: 22, color: '#1A1611', lineHeight: 1.1 }}>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-1">
+                      <h1 className="font-sans text-[22px] font-bold text-ink leading-tight">
                         {partyDetail.code}
                       </h1>
-                      <span style={{ fontSize: 10, fontWeight: 700, padding: '2px 8px', borderRadius: 20, background: allianceColor + '20', color: allianceColor, border: `1px solid ${allianceColor}50` }}>
+                      <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
+                        style={{ background: allianceColor + '20', color: allianceColor }}>
                         {partyDetail.alliance}
                       </span>
                     </div>
-                    <div style={{ fontSize: 13, color: '#5C5245', marginBottom: 14 }}>{partyDetail.full_name}</div>
+                    <div className="text-[13px] text-ink2 mb-4">{partyDetail.full_name}</div>
 
-                    {/* Stats */}
-                    <div style={{ display: 'flex', gap: 20, flexWrap: 'wrap' }}>
+                    {/* Stats — mirrors HomePage alliance row */}
+                    <div className="flex items-end gap-0 overflow-x-auto custom-scrollbar pb-1 -mb-1">
                       {[
                         { label: 'Won + Leading', value: totalWonLeading, color: partyColor },
                         { label: 'Won', value: partyDetail.seats_won, color: '#1A1611' },
                         { label: 'Contested', value: partyDetail.seats_contested, color: '#6B7280' },
-                      ].map(s => (
-                        <div key={s.label}>
-                          <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 20, fontWeight: 800, color: s.color, lineHeight: 1 }}>{s.value}</div>
-                          <div style={{ fontSize: 10, color: '#9CA3AF', marginTop: 2 }}>{s.label}</div>
+                      ].map((s, i, arr) => (
+                        <div key={s.label} className={`px-4 md:px-5 shrink-0 ${i < arr.length - 1 ? 'border-r border-pageborder' : ''}`}>
+                          <div className="w-2 h-2 mb-1.5" style={{ backgroundColor: s.color }} />
+                          <div className="text-[12px] font-semibold mb-0.5" style={{ color: s.color }}>{s.label}</div>
+                          <div className="font-sans font-bold text-[20px] leading-none" style={{ color: s.color }}>{s.value}</div>
                         </div>
                       ))}
-                      <div style={{ borderLeft: '1px solid #E2DDD8', paddingLeft: 20 }}>
-                        <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 20, fontWeight: 800, color: '#1A1611', lineHeight: 1 }}>
+                      <div className="px-4 md:px-5 shrink-0">
+                        <div className="w-2 h-2 mb-1.5 bg-ink" />
+                        <div className="text-[12px] font-semibold mb-0.5 text-ink">Vote Share</div>
+                        <div className="font-sans font-bold text-[20px] leading-none text-ink">
                           {partyDetail.vote_share?.toFixed(1)}%
                         </div>
-                        <div style={{ fontSize: 10, color: '#9CA3AF', marginTop: 2 }}>Vote Share</div>
-                        <div style={{ fontSize: 11, fontWeight: 700, color: swingVs2021 >= 0 ? '#16A34A' : '#DC2626', marginTop: 2 }}>
+                        <div className="text-[11px] font-bold mt-0.5" style={{ color: swingVs2021 >= 0 ? '#16A34A' : '#DC2626' }}>
                           {swingVs2021 >= 0 ? '▲' : '▼'}{Math.abs(swingVs2021).toFixed(1)}% vs 2021
                         </div>
                       </div>
@@ -389,21 +382,20 @@ export default function PartyPage() {
               </div>
 
               {/* ── Constituency cards ── */}
-              <div style={{ marginBottom: 16 }}>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10, flexWrap: 'wrap', gap: 6 }}>
-                  <h2 style={{ fontSize: 12, fontWeight: 700, letterSpacing: 1.5, textTransform: 'uppercase', color: '#5C5245' }}>
+              <div>
+                <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
+                  <h2 className="text-[11px] font-bold tracking-widest uppercase text-ink2">
                     Constituencies · {filteredConsts.length} / {enrichedConsts.length}
                   </h2>
-                  <div style={{ display: 'flex', gap: 4 }}>
+                  <div className="flex gap-1.5">
                     {(['number', 'margin'] as const).map(s => (
-                      <button key={s} onClick={() => setSortBy(s)} style={{
-                        fontSize: 10, padding: '3px 10px', borderRadius: 20, cursor: 'pointer',
-                        fontFamily: "'DM Sans',sans-serif",
-                        border: `1px solid ${sortBy === s ? '#1A1611' : '#D1CBC4'}`,
-                        background: sortBy === s ? '#1A1611' : 'transparent',
-                        color: sortBy === s ? '#fff' : '#5C5245',
-                        textTransform: 'capitalize',
-                      }}>
+                      <button key={s} onClick={() => setSortBy(s)}
+                        className="text-[10px] px-2.5 py-1 rounded-full cursor-pointer border font-semibold capitalize transition-all"
+                        style={{
+                          border: `1px solid ${sortBy === s ? '#1A1611' : '#D1CBC4'}`,
+                          background: sortBy === s ? '#1A1611' : 'transparent',
+                          color: sortBy === s ? '#fff' : '#5C5245',
+                        }}>
                         {s === 'number' ? '# Order' : 'By Margin'}
                       </button>
                     ))}
@@ -411,47 +403,50 @@ export default function PartyPage() {
                 </div>
 
                 {/* Filter chips */}
-                <div style={{ display: 'flex', gap: 5, flexWrap: 'wrap', marginBottom: 14, paddingBottom: 10, borderBottom: '1px solid #E2DDD8' }}>
+                <div className="bg-surface rounded-xl px-4 py-3 mb-4 shadow-sm flex gap-2 flex-wrap items-center">
                   {(['Stronghold', 'Fragile', 'Leaning', 'Swing', "Opponent's"] as SeatClass[]).map(p => (
-                    <button key={p} onClick={() => setRawProfile(rawProfile === p ? null : p)} style={{
-                      fontSize: 10, padding: '3px 10px', borderRadius: 20, cursor: 'pointer', fontFamily: "'DM Sans',sans-serif",
-                      border: `1px solid ${rawProfile === p ? '#1A1611' : '#D1CBC4'}`,
-                      background: rawProfile === p ? '#1A1611' : 'transparent',
-                      color: rawProfile === p ? '#fff' : '#5C5245',
-                    }}>{p}</button>
+                    <button key={p} onClick={() => setRawProfile(rawProfile === p ? null : p)}
+                      className="text-[10px] px-2.5 py-1 rounded-full cursor-pointer border font-medium transition-all"
+                      style={{
+                        border: `1px solid ${rawProfile === p ? '#1A1611' : '#D1CBC4'}`,
+                        background: rawProfile === p ? '#1A1611' : 'transparent',
+                        color: rawProfile === p ? '#fff' : '#5C5245',
+                      }}>{p}</button>
                   ))}
-                  <span style={{ borderLeft: '1px solid #E2DDD8', margin: '0 2px' }} />
+                  <span className="border-l border-pageborder h-4" />
                   {(['holding', 'gained', 'lost', 'trailing'] as const).map(o => (
-                    <button key={o} onClick={() => setRawOutcome(rawOutcome === o ? null : o)} style={{
-                      fontSize: 10, padding: '3px 10px', borderRadius: 20, cursor: 'pointer', fontFamily: "'DM Sans',sans-serif",
-                      border: `1px solid ${rawOutcome === o ? partyColor : '#D1CBC4'}`,
-                      background: rawOutcome === o ? partyColor + '22' : 'transparent',
-                      color: rawOutcome === o ? partyColor : '#5C5245',
-                      textTransform: 'capitalize',
-                    }}>{o}</button>
+                    <button key={o} onClick={() => setRawOutcome(rawOutcome === o ? null : o)}
+                      className="text-[10px] px-2.5 py-1 rounded-full cursor-pointer border font-medium capitalize transition-all"
+                      style={{
+                        border: `1px solid ${rawOutcome === o ? partyColor : '#D1CBC4'}`,
+                        background: rawOutcome === o ? partyColor + '22' : 'transparent',
+                        color: rawOutcome === o ? partyColor : '#5C5245',
+                      }}>{o}</button>
                   ))}
-                  <span style={{ borderLeft: '1px solid #E2DDD8', margin: '0 2px' }} />
+                  <span className="border-l border-pageborder h-4" />
                   {[{ k: 'safe', l: 'Safe 5k+' }, { k: 'comfortable', l: '2–5k' }, { k: 'close', l: '<2k' }].map(({ k, l }) => (
-                    <button key={k} onClick={() => setRawMargin(rawMargin === k ? null : k)} style={{
-                      fontSize: 10, padding: '3px 10px', borderRadius: 20, cursor: 'pointer', fontFamily: "'DM Sans',sans-serif",
-                      border: `1px solid ${rawMargin === k ? '#1A1611' : '#D1CBC4'}`,
-                      background: rawMargin === k ? '#1A1611' : 'transparent',
-                      color: rawMargin === k ? '#fff' : '#5C5245',
-                    }}>{l}</button>
+                    <button key={k} onClick={() => setRawMargin(rawMargin === k ? null : k)}
+                      className="text-[10px] px-2.5 py-1 rounded-full cursor-pointer border font-medium transition-all"
+                      style={{
+                        border: `1px solid ${rawMargin === k ? '#1A1611' : '#D1CBC4'}`,
+                        background: rawMargin === k ? '#1A1611' : 'transparent',
+                        color: rawMargin === k ? '#fff' : '#5C5245',
+                      }}>{l}</button>
                   ))}
-                  {(rawProfile || rawOutcome || rawMargin) && (
-                    <button onClick={() => { setRawProfile(null); setRawOutcome(null); setRawMargin(null); }} style={{
-                      fontSize: 10, padding: '3px 10px', borderRadius: 20, cursor: 'pointer', fontFamily: "'DM Sans',sans-serif",
-                      border: '1px solid #DC2626', color: '#DC2626', background: 'transparent',
-                    }}>✕ Clear</button>
+                  {hasAnyFilter && (
+                    <button
+                      onClick={() => { setRawProfile(null); setRawOutcome(null); setRawMargin(null); }}
+                      className="text-[10px] px-2.5 py-1 rounded-full cursor-pointer border font-medium ml-auto"
+                      style={{ border: '1px solid #DC2626', color: '#DC2626', background: 'transparent' }}>
+                      ✕ Clear
+                    </button>
                   )}
                 </div>
 
-                {/* Grid */}
                 {filteredConsts.length === 0 ? (
-                  <div style={{ textAlign: 'center', padding: 40, color: '#9CA3AF', fontSize: 13 }}>No constituencies match</div>
+                  <div className="text-center py-10 text-ink2 text-[13px]">No constituencies match</div>
                 ) : (
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(170px, 1fr))', gap: 10 }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))', gap: 10 }}>
                     {filteredConsts.map(c => (
                       <PartyConstCard
                         key={c.id}

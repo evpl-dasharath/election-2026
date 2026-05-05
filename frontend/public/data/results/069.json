@@ -6,31 +6,31 @@
     "district": "Thrissur"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 182716,
     "votes_polled": 140819,
     "votes_counted": 9609,
     "valid_votes": 9609,
-    "rounds_completed": 13,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:02.718571+00:00"
+    "last_updated": "2026-05-04T12:35:57.761316+00:00"
   },
   "candidates_2026": [
     {
       "name": "K. K. Valsaraj",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 60894,
-      "percentage": 45.77,
+      "votes": 65448,
+      "percentage": 45.81,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "T. M. Nazar",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 51355,
-      "percentage": 38.6,
+      "votes": 55504,
+      "percentage": 38.85,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Athulya Ghosh",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 18745,
-      "percentage": 14.09,
+      "votes": 19688,
+      "percentage": 13.78,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,7 +47,7 @@
       "name": "Jayan Eratt",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 609,
+      "votes": 653,
       "percentage": 0.46,
       "is_winner": false,
       "is_leading": false
@@ -56,8 +56,8 @@
       "name": "A.M. Muhammed Riyas",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 470,
-      "percentage": 0.35,
+      "votes": 536,
+      "percentage": 0.38,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Manoj M.M.",
       "party": "CPI_ML_RS",
       "alliance": "OTH",
-      "votes": 315,
-      "percentage": 0.24,
+      "votes": 335,
+      "percentage": 0.23,
       "is_winner": false,
       "is_leading": false
     }

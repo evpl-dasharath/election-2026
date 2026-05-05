@@ -6,31 +6,31 @@
     "district": "Kollam"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 179783,
     "votes_polled": 135142,
     "votes_counted": 0,
     "valid_votes": 0,
-    "rounds_completed": 12,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:23.710629+00:00"
+    "last_updated": "2026-05-04T12:36:07.104908+00:00"
   },
   "candidates_2026": [
     {
       "name": "Jyothikumar chamakkala",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 57923,
-      "percentage": 50.14,
+      "votes": 68275,
+      "percentage": 49.61,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "K. B. Ganesh Kumar",
       "party": "KC_B",
       "alliance": "LDF",
-      "votes": 50073,
-      "percentage": 43.34,
+      "votes": 59965,
+      "percentage": 43.57,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Anil Pilla",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 5585,
-      "percentage": 4.83,
+      "votes": 7031,
+      "percentage": 5.11,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Vipinkumar V",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 486,
-      "percentage": 0.42,
+      "votes": 629,
+      "percentage": 0.46,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Genash Kumar",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 468,
-      "percentage": 0.41,
+      "votes": 547,
+      "percentage": 0.4,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Aneesh Aneesh",
       "party": "Anna DHRM",
       "alliance": "OTH",
-      "votes": 239,
-      "percentage": 0.21,
+      "votes": 297,
+      "percentage": 0.22,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "Jyothish Kumar M",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 226,
-      "percentage": 0.2,
+      "votes": 266,
+      "percentage": 0.19,
       "is_winner": false,
       "is_leading": false
     }

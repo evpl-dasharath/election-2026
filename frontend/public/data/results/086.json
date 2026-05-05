@@ -6,31 +6,31 @@
     "district": "Ernakulam"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 186254,
     "votes_polled": 145482,
     "votes_counted": 23235,
     "valid_votes": 23235,
-    "rounds_completed": 13,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:14.222884+00:00"
+    "last_updated": "2026-05-04T12:36:04.951222+00:00"
   },
   "candidates_2026": [
     {
       "name": "Dr. Mathew Kuzhalnadan",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 80576,
-      "percentage": 60.44,
+      "votes": 89914,
+      "percentage": 60.7,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "N. Arun",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 42731,
-      "percentage": 32.05,
+      "votes": 47085,
+      "percentage": 31.79,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,7 +38,7 @@
       "name": "Sunny Kadoothazhe",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 8856,
+      "votes": 9840,
       "percentage": 6.64,
       "is_winner": false,
       "is_leading": false
@@ -47,8 +47,8 @@
       "name": "Roy Arakkal",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 562,
-      "percentage": 0.42,
+      "votes": 609,
+      "percentage": 0.41,
       "is_winner": false,
       "is_leading": false
     }

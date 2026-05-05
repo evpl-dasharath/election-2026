@@ -5,6 +5,8 @@ import type {
   ConstituencyDetail,
   HistoricalComparison,
   Party,
+  AllianceSummary,
+  PartyDetailFull,
 } from '../types';
 import { db } from '../firebase';
 import { ref, onValue } from 'firebase/database';
@@ -106,6 +108,10 @@ import { ConstituencyHistory } from '../utils/seatClassification';
 let _allHistoricalCache: ConstituencyHistory[] | null = null;
 const _constituencyDetailCache: Record<number, ConstituencyDetail> = {};
 const _historicalCache: Record<number, HistoricalComparison> = {};
+const _allianceCache: Record<string, AllianceSummary> = {};
+const _partyDetailCache: Record<string, PartyDetailFull> = {};
+let _allResultDetailsCache: ConstituencyDetail[] | null = null;
+let _historicalIndexCache: Record<string, HistoricalComparison> | null = null;
 
 // ─── RTDB last-update timestamp (for staleness detection) ──────────────────
 let _lastRtdbUpdate: number | null = null;
@@ -139,7 +145,291 @@ export function clearElectionDataCache() {
   _allHistoricalCache = null;
   Object.keys(_constituencyDetailCache).forEach(k => delete _constituencyDetailCache[+k]);
   Object.keys(_historicalCache).forEach(k => delete _historicalCache[+k]);
+  Object.keys(_allianceCache).forEach(k => delete _allianceCache[k]);
+  Object.keys(_partyDetailCache).forEach(k => delete _partyDetailCache[k]);
+  _allResultDetailsCache = null;
+  _historicalIndexCache = null;
   _refreshCallbacks.forEach(cb => cb());
+}
+
+async function _ensureStaticConstituencies(): Promise<ConstituencyListItem[]> {
+  if (_constituenciesCache) return _constituenciesCache;
+  const res = await fetch(`${JSON_BASE_PATH}/constituencies.json`);
+  const json: ConstituencyListItem[] = await res.json();
+  _constituenciesCache = json;
+  return json;
+}
+
+async function _ensureStaticParties(): Promise<Party[]> {
+  if (_partiesCache) return _partiesCache;
+  const res = await fetch(`${JSON_BASE_PATH}/parties.json`);
+  const json: Party[] = await res.json();
+  _partiesCache = json;
+  return json;
+}
+
+async function _ensureStaticHistoricalIndex(): Promise<Record<string, HistoricalComparison>> {
+  if (_historicalIndexCache) return _historicalIndexCache;
+  const res = await fetch(`${JSON_BASE_PATH}/historical.json`);
+  const json: Record<string, HistoricalComparison> = await res.json();
+  _historicalIndexCache = json;
+  return json;
+}
+
+async function _ensureAllStaticResultDetails(): Promise<ConstituencyDetail[]> {
+  if (_allResultDetailsCache) return _allResultDetailsCache;
+  const constituencies = await _ensureStaticConstituencies();
+  const results = await Promise.all(
+    constituencies.map(async (c) => {
+      const res = await fetch(`${JSON_BASE_PATH}/results/${c.number.toString().padStart(3, '0')}.json`);
+      if (!res.ok) {
+        throw new Error(`Missing static result for constituency ${c.number}`);
+      }
+      return res.json() as Promise<ConstituencyDetail>;
+    })
+  );
+  _allResultDetailsCache = results;
+  return results;
+}
+
+function _getAllianceFromPartyCode(partyCode: string, parties: Party[]): string {
+  return parties.find((party) => party.code === partyCode)?.alliance || 'OTH';
+}
+
+async function _buildAllianceSummaryFromStatic(code: string): Promise<AllianceSummary> {
+  const allianceCode = code.toUpperCase();
+  const parties = await _ensureStaticParties();
+  const constituencies = await _ensureStaticConstituencies();
+  const results = await _ensureAllStaticResultDetails();
+  const historical = await _ensureStaticHistoricalIndex();
+  const partiesInAlliance = parties.filter((party) => party.alliance === allianceCode);
+  const partyCodes = new Set(partiesInAlliance.map((party) => party.code));
+  const partyStats: Record<string, {
+    code: string;
+    name: string;
+    color: string;
+    contested: number;
+    won: number;
+    leading: number;
+    votes: number;
+    votes2021: number;
+  }> = {};
+
+  partiesInAlliance.forEach((party) => {
+    partyStats[party.code] = {
+      code: party.code,
+      name: party.full_name || party.name,
+      color: party.color_code || party.color || '#808080',
+      contested: 0,
+      won: 0,
+      leading: 0,
+      votes: 0,
+      votes2021: 0,
+    };
+  });
+
+  let totalValidVotes2026 = 0;
+  let allianceVotes2026 = 0;
+  let totalVotes2021 = 0;
+  let allianceVotes2021 = 0;
+  let seatsWon = 0;
+  let seatsLeading = 0;
+  let gained = 0;
+  let held = 0;
+  let lost = 0;
+  let bestMargin: { constituency: string; margin: number } | null = null;
+  let worstMargin: { constituency: string; margin: number } | null = null;
+  const gainedFrom = { LDF: 0, UDF: 0, NDA: 0, OTH: 0 };
+  const lostTo = { LDF: 0, UDF: 0, NDA: 0, OTH: 0 };
+
+  const constituencyByNumber = new Map(constituencies.map((c) => [c.number, c]));
+
+  results.forEach((result) => {
+    const constituency = constituencyByNumber.get(result.constituency.number);
+    if (!constituency) return;
+
+    const candidates2026 = result.candidates_2026.filter((candidate) => candidate.party !== 'NOTA');
+    const topTwo2026 = [...candidates2026].sort((a, b) => b.votes - a.votes).slice(0, 2);
+    const contestingParties = new Set<string>();
+
+    candidates2026.forEach((candidate) => {
+      totalValidVotes2026 += candidate.votes;
+      contestingParties.add(candidate.party);
+      if (partyCodes.has(candidate.party)) {
+        allianceVotes2026 += candidate.votes;
+        if (!partyStats[candidate.party]) {
+          partyStats[candidate.party] = {
+            code: candidate.party,
+            name: candidate.party,
+            color: parties.find((party) => party.code === candidate.party)?.color_code || '#808080',
+            contested: 0,
+            won: 0,
+            leading: 0,
+            votes: 0,
+            votes2021: 0,
+          };
+        }
+        partyStats[candidate.party].votes += candidate.votes;
+      }
+    });
+
+    contestingParties.forEach((partyCode) => {
+      if (partyCodes.has(partyCode) && partyStats[partyCode]) {
+        partyStats[partyCode].contested += 1;
+      }
+    });
+
+    const history = historical[String(result.constituency.number)];
+    history?.la_2021?.candidates?.forEach((candidate) => {
+      totalVotes2021 += candidate.votes;
+      if (candidate.alliance === allianceCode) allianceVotes2021 += candidate.votes;
+      if (partyCodes.has(candidate.party) && partyStats[candidate.party]) {
+        partyStats[candidate.party].votes2021 += candidate.votes;
+      }
+    });
+
+    const status = result.live_result?.status || constituency.status;
+    const leader = topTwo2026[0];
+    const runnerUp = topTwo2026[1];
+    const hasStarted = status === 'IN_PROGRESS' || status === 'RESULT_DECLARED' || status === 'COMPLETED';
+    const currentAlliance = leader?.alliance || null;
+    const historicalWinnerAlliance =
+      history?.la_2021?.candidates?.find((candidate) => candidate.is_winner)?.alliance || null;
+    const sittingAlliance = historicalWinnerAlliance || constituency.sitting_alliance || null;
+
+    if (leader && leader.party && partyStats[leader.party]) {
+      if (status === 'RESULT_DECLARED' || status === 'COMPLETED') {
+        partyStats[leader.party].won += 1;
+      } else if (status === 'IN_PROGRESS') {
+        partyStats[leader.party].leading += 1;
+      }
+    }
+
+    if (hasStarted && leader) {
+      if (currentAlliance === allianceCode) {
+        if (status === 'RESULT_DECLARED' || status === 'COMPLETED') seatsWon += 1;
+        else if (status === 'IN_PROGRESS') seatsLeading += 1;
+
+        if (sittingAlliance === allianceCode) held += 1;
+        else {
+          gained += 1;
+          const bucket = (sittingAlliance && sittingAlliance in gainedFrom ? sittingAlliance : 'OTH') as keyof typeof gainedFrom;
+          gainedFrom[bucket] += 1;
+        }
+      } else if (sittingAlliance === allianceCode && currentAlliance) {
+        lost += 1;
+        const bucket = (currentAlliance in lostTo ? currentAlliance : 'OTH') as keyof typeof lostTo;
+        lostTo[bucket] += 1;
+      }
+    }
+
+    if (leader && runnerUp && currentAlliance === allianceCode) {
+      const margin = leader.votes - runnerUp.votes;
+      if (!bestMargin || margin > bestMargin.margin) {
+        bestMargin = { constituency: result.constituency.name, margin };
+      }
+      if (!worstMargin || margin < worstMargin.margin) {
+        worstMargin = { constituency: result.constituency.name, margin };
+      }
+    }
+  });
+
+  const partiesData = Object.values(partyStats)
+    .filter((party) => party.contested > 0 || party.votes > 0 || party.votes2021 > 0)
+    .map((party) => ({
+      code: party.code,
+      name: party.name,
+      color: party.color,
+      contested: party.contested,
+      won: party.won,
+      leading: party.leading,
+      vote_share: totalValidVotes2026 > 0 ? (party.votes / totalValidVotes2026) * 100 : 0,
+      vote_share_2021_pct: totalVotes2021 > 0 ? (party.votes2021 / totalVotes2021) * 100 : 0,
+    }))
+    .sort((a, b) => (b.won + b.leading) - (a.won + a.leading) || b.vote_share - a.vote_share);
+
+  return {
+    alliance: allianceCode,
+    seats_won: seatsWon,
+    seats_leading: seatsLeading,
+    seats_trailing: Math.max(0, partiesData.reduce((sum, party) => sum + party.contested, 0) - seatsWon - seatsLeading),
+    seats_contested: partiesData.reduce((sum, party) => sum + party.contested, 0),
+    total_votes: allianceVotes2026,
+    vote_share: totalValidVotes2026 > 0 ? (allianceVotes2026 / totalValidVotes2026) * 100 : 0,
+    vote_share_2021_pct: totalVotes2021 > 0 ? (allianceVotes2021 / totalVotes2021) * 100 : 0,
+    best_margin: bestMargin,
+    worst_margin: worstMargin,
+    seat_movement: { gained, held, lost },
+    swing_analysis: { gained_from: gainedFrom, lost_to: lostTo },
+    parties: partiesData,
+    constituencies: constituencies.map((constituency) => ({
+      ...constituency,
+      competing: results
+        .find((result) => result.constituency.number === constituency.number)
+        ?.candidates_2026.some((candidate) => candidate.party !== 'NOTA' && _getAllianceFromPartyCode(candidate.party, parties) === allianceCode) || false,
+    })),
+  };
+}
+
+async function _buildPartyDetailFromStatic(code: string): Promise<PartyDetailFull> {
+  const partyCode = code.toUpperCase();
+  const parties = await _ensureStaticParties();
+  const constituencies = await _ensureStaticConstituencies();
+  const results = await _ensureAllStaticResultDetails();
+  const historical = await _ensureStaticHistoricalIndex();
+  const party = parties.find((item) => item.code.toUpperCase() === partyCode);
+
+  if (!party) {
+    throw new Error(`Party not found: ${code}`);
+  }
+
+  let totalValidVotes2026 = 0;
+  let partyVotes2026 = 0;
+  let totalVotes2021 = 0;
+  let partyVotes2021 = 0;
+  let seatsWon = 0;
+  let seatsLeading = 0;
+  const contestedNumbers = new Set<number>();
+
+  results.forEach((result) => {
+    const candidates2026 = result.candidates_2026.filter((candidate) => candidate.party !== 'NOTA');
+    const leader = [...candidates2026].sort((a, b) => b.votes - a.votes)[0];
+    const status = result.live_result?.status;
+
+    candidates2026.forEach((candidate) => {
+      totalValidVotes2026 += candidate.votes;
+      if (candidate.party.toUpperCase() === partyCode) {
+        contestedNumbers.add(result.constituency.number);
+        partyVotes2026 += candidate.votes;
+      }
+    });
+
+    historical[String(result.constituency.number)]?.la_2021?.candidates?.forEach((candidate) => {
+      totalVotes2021 += candidate.votes;
+      if (candidate.party.toUpperCase() === partyCode) {
+        partyVotes2021 += candidate.votes;
+      }
+    });
+
+    if (leader?.party.toUpperCase() === partyCode) {
+      if (status === 'RESULT_DECLARED' || status === 'COMPLETED') seatsWon += 1;
+      else if (status === 'IN_PROGRESS') seatsLeading += 1;
+    }
+  });
+
+  return {
+    code: party.code,
+    full_name: party.full_name || party.name,
+    alliance: party.alliance,
+    color_code: party.color_code || party.color || '#808080',
+    seats_contested: contestedNumbers.size,
+    seats_won: seatsWon,
+    seats_leading: seatsLeading,
+    total_votes: partyVotes2026,
+    vote_share: totalValidVotes2026 > 0 ? (partyVotes2026 / totalValidVotes2026) * 100 : 0,
+    vote_share_2021_pct: totalVotes2021 > 0 ? (partyVotes2021 / totalVotes2021) * 100 : 0,
+    constituencies: constituencies.filter((constituency) => contestedNumbers.has(constituency.number)),
+  };
 }
 
 /**
@@ -741,8 +1031,11 @@ export function useAllianceSummary(code: string | null) {
           json = await res.json();
         } else {
           const res = await fetch(`${JSON_BASE_PATH}/alliance_${code.toLowerCase()}.json`);
-          if (!res.ok) throw new Error(`HTTP ${res.status}`);
-          json = await res.json();
+          if (res.ok) {
+            json = await res.json();
+          } else {
+            json = await _buildAllianceSummaryFromStatic(code);
+          }
         }
         _allianceCache[code] = json;
         setData(json);
@@ -794,8 +1087,11 @@ export function usePartyDetail(code: string | null) {
           json = await res.json();
         } else {
           const res = await fetch(`${JSON_BASE_PATH}/party_${code.toLowerCase()}.json`);
-          if (!res.ok) throw new Error(`HTTP ${res.status}`);
-          json = await res.json();
+          if (res.ok) {
+            json = await res.json();
+          } else {
+            json = await _buildPartyDetailFromStatic(code);
+          }
         }
         _partyDetailCache[code] = json;
         setData(json);

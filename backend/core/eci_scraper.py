@@ -168,15 +168,23 @@ def _parse_constituency_html(html, ac_number):
     total_rounds = 0
 
     for tag in soup.find_all(["h2", "h3", "p", "div", "span"]):
-        text = tag.get_text()
+        text = tag.get_text(strip=True)
         if "Round" in text and "/" in text:
             match = re.search(r"Round[,\s]+(\d+)\s*/\s*(\d+)", text)
             if match:
                 rounds_completed = int(match.group(1))
                 total_rounds = int(match.group(2))
-                break
+                # Don't break, keep searching for "Result Declared"
 
-    is_final = (rounds_completed > 0 and rounds_completed == total_rounds)
+    # Check for explicit "Result Declared" text (ECI often uses this)
+    is_final = False
+    if rounds_completed > 0 and rounds_completed == total_rounds:
+        is_final = True
+    
+    # Also scan the page text for "Result Declared"
+    page_text = soup.get_text().lower()
+    if "result declared" in page_text:
+        is_final = True
 
     # ── Last updated
     eci_last_updated = ""

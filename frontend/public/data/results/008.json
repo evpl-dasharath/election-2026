@@ -11,17 +11,17 @@
     "votes_polled": 188170,
     "votes_counted": 11791,
     "valid_votes": 11791,
-    "rounds_completed": 11,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:46.782822+00:00"
+    "last_updated": "2026-05-04T13:05:48.109469+00:00"
   },
   "candidates_2026": [
     {
       "name": "T K Govindan Master",
       "party": "IND_UDF",
       "alliance": "UDF",
-      "votes": 60134,
-      "percentage": 48.25,
+      "votes": 90946,
+      "percentage": 47.55,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "P. K. Shyamala",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 49759,
-      "percentage": 39.92,
+      "votes": 78378,
+      "percentage": 40.98,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "N. Haridas",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 10736,
-      "percentage": 8.61,
+      "votes": 16010,
+      "percentage": 8.37,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Koyyam Janardhanan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 801,
-      "percentage": 0.64,
+      "votes": 1201,
+      "percentage": 0.63,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Anappally Gopalan",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 749,
-      "percentage": 0.6,
+      "votes": 1077,
+      "percentage": 0.56,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "T. K. Govindan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 503,
-      "percentage": 0.4,
+      "votes": 731,
+      "percentage": 0.38,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,7 +74,7 @@
       "name": "Abdul Salam K P",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 237,
+      "votes": 363,
       "percentage": 0.19,
       "is_winner": false,
       "is_leading": false
@@ -83,8 +83,8 @@
       "name": "Shyamala P",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 175,
-      "percentage": 0.14,
+      "votes": 294,
+      "percentage": 0.15,
       "is_winner": false,
       "is_leading": false
     },
@@ -92,8 +92,8 @@
       "name": "Khamaruddeen C V",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 152,
-      "percentage": 0.12,
+      "votes": 281,
+      "percentage": 0.15,
       "is_winner": false,
       "is_leading": false
     },
@@ -101,8 +101,8 @@
       "name": "C Balakrishnan Yadav",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 141,
-      "percentage": 0.11,
+      "votes": 197,
+      "percentage": 0.1,
       "is_winner": false,
       "is_leading": false
     }

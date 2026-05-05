@@ -6,31 +6,31 @@
     "district": "Kannur"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 185841,
     "votes_polled": 141852,
     "votes_counted": 21371,
     "valid_votes": 21371,
-    "rounds_completed": 13,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:50.700135+00:00"
+    "last_updated": "2026-05-04T12:36:11.351108+00:00"
   },
   "candidates_2026": [
     {
       "name": "Karayi Rajan",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 65705,
-      "percentage": 47.8,
+      "votes": 69743,
+      "percentage": 48.34,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "K. P. Saju",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 47114,
-      "percentage": 34.27,
+      "votes": 49220,
+      "percentage": 34.11,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "O. Nidheesh",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 22146,
-      "percentage": 16.11,
+      "votes": 22754,
+      "percentage": 15.77,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "A.C. Jalaluddin",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 1418,
-      "percentage": 1.03,
+      "votes": 1444,
+      "percentage": 1.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "Saju V P",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 230,
+      "votes": 240,
       "percentage": 0.17,
       "is_winner": false,
       "is_leading": false
@@ -65,7 +65,7 @@
       "name": "Rajan O P",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 85,
+      "votes": 89,
       "percentage": 0.06,
       "is_winner": false,
       "is_leading": false

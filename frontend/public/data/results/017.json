@@ -6,31 +6,31 @@
     "district": "Wayanad"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 205415,
     "votes_polled": 162195,
     "votes_counted": 9308,
     "valid_votes": 9308,
-    "rounds_completed": 14,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:55.501658+00:00"
+    "last_updated": "2026-05-04T12:36:03.716297+00:00"
   },
   "candidates_2026": [
     {
       "name": "Usha M A",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 61658,
-      "percentage": 46.24,
+      "votes": 77425,
+      "percentage": 46.92,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "O. R. Kelu",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 55200,
-      "percentage": 41.4,
+      "votes": 66882,
+      "percentage": 40.53,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "P. Shyam Raj",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 15680,
-      "percentage": 11.76,
+      "votes": 19681,
+      "percentage": 11.93,
       "is_winner": false,
       "is_leading": false
     }

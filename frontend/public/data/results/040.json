@@ -6,31 +6,31 @@
     "district": "Malappuram"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 238080,
     "votes_polled": 194678,
     "votes_counted": 10088,
     "valid_votes": 10088,
-    "rounds_completed": 13,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:35:07.553831+00:00"
+    "last_updated": "2026-05-04T12:59:25.723811+00:00"
   },
   "candidates_2026": [
     {
       "name": "P. K. Kunhalikutty",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 73066,
-      "percentage": 67.34,
+      "votes": 131632,
+      "percentage": 66.86,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "K. T. Mujeeb",
       "party": "NCP(SP)",
       "alliance": "OTH",
-      "votes": 25129,
-      "percentage": 23.16,
+      "votes": 46305,
+      "percentage": 23.52,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Ashwathy Gupatha Kumar",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 4580,
-      "percentage": 4.22,
+      "votes": 9127,
+      "percentage": 4.64,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Adv. Sadiq Naduthodi",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 3099,
-      "percentage": 2.86,
+      "votes": 5124,
+      "percentage": 2.6,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Aboobacker K.P. (Kundupuzhakkal)",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 1067,
-      "percentage": 0.98,
+      "votes": 2060,
+      "percentage": 1.05,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Abdul Gafoor Master O.P.K",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 564,
-      "percentage": 0.52,
+      "votes": 712,
+      "percentage": 0.36,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "Abdulsalam.K.P",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 197,
-      "percentage": 0.18,
+      "votes": 315,
+      "percentage": 0.16,
       "is_winner": false,
       "is_leading": false
     },
@@ -83,8 +83,8 @@
       "name": "Sreedharan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 118,
-      "percentage": 0.11,
+      "votes": 231,
+      "percentage": 0.12,
       "is_winner": false,
       "is_leading": false
     }

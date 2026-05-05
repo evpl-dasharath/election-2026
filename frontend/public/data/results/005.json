@@ -6,31 +6,31 @@
     "district": "Kasaragod"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 210090,
     "votes_polled": 167315,
     "votes_counted": 10315,
     "valid_votes": 10315,
-    "rounds_completed": 11,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:48.500655+00:00"
+    "last_updated": "2026-05-04T12:36:13.944484+00:00"
   },
   "candidates_2026": [
-    {
-      "name": "V. P. P. Mustafa",
-      "party": "CPI_M",
-      "alliance": "LDF",
-      "votes": 57973,
-      "percentage": 48.87,
-      "is_winner": false,
-      "is_leading": true
-    },
     {
       "name": "Sandeep Varier",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 54175,
-      "percentage": 45.67,
+      "votes": 83109,
+      "percentage": 48.63,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "V. P. P. Mustafa",
+      "party": "CPI_M",
+      "alliance": "LDF",
+      "votes": 78678,
+      "percentage": 46.04,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Ravi Kulangara",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 5506,
-      "percentage": 4.64,
+      "votes": 7837,
+      "percentage": 4.59,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Sandeep Elatt",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 200,
-      "percentage": 0.17,
+      "votes": 258,
+      "percentage": 0.15,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Musthafa P P",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 132,
-      "percentage": 0.11,
+      "votes": 169,
+      "percentage": 0.1,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Musthafa V P",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 107,
-      "percentage": 0.09,
+      "votes": 143,
+      "percentage": 0.08,
       "is_winner": false,
       "is_leading": false
     }

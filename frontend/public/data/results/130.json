@@ -6,31 +6,31 @@
     "district": "Thiruvananthapuram"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 198042,
     "votes_polled": 155185,
     "votes_counted": 7622,
     "valid_votes": 7622,
-    "rounds_completed": 11,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:31.659481+00:00"
+    "last_updated": "2026-05-04T12:36:47.537559+00:00"
   },
   "candidates_2026": [
     {
       "name": "G. R. Anil",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 40092,
-      "percentage": 42.91,
+      "votes": 69206,
+      "percentage": 43.55,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Meenankal Kumar",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 28666,
-      "percentage": 30.68,
+      "votes": 47623,
+      "percentage": 29.97,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Yuvaraj Gokul",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 22714,
-      "percentage": 24.31,
+      "votes": 38999,
+      "percentage": 24.54,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Siyad Kandala",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 828,
-      "percentage": 0.89,
+      "votes": 1191,
+      "percentage": 0.75,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Sujilal B G",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 254,
-      "percentage": 0.27,
+      "votes": 408,
+      "percentage": 0.26,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Shibu G",
       "party": "Anna DHRM",
       "alliance": "OTH",
-      "votes": 142,
-      "percentage": 0.15,
+      "votes": 171,
+      "percentage": 0.11,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "Vembayam Yesudas",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 80,
-      "percentage": 0.09,
+      "votes": 129,
+      "percentage": 0.08,
       "is_winner": false,
       "is_leading": false
     },
@@ -83,7 +83,7 @@
       "name": "Anvar Sadath",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 58,
+      "votes": 95,
       "percentage": 0.06,
       "is_winner": false,
       "is_leading": false
@@ -92,8 +92,8 @@
       "name": "Kumar",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 50,
-      "percentage": 0.05,
+      "votes": 93,
+      "percentage": 0.06,
       "is_winner": false,
       "is_leading": false
     }

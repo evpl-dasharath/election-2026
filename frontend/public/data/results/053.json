@@ -6,31 +6,31 @@
     "district": "Palakkad"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 182603,
     "votes_polled": 145406,
     "votes_counted": 16120,
     "valid_votes": 16120,
-    "rounds_completed": 8,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:35:06.666833+00:00"
+    "last_updated": "2026-05-04T12:36:00.630145+00:00"
   },
   "candidates_2026": [
     {
       "name": "K. A. Thulasi",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 56363,
-      "percentage": 43.46,
+      "votes": 62734,
+      "percentage": 42.2,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "K. Shanthakumari",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 52113,
-      "percentage": 40.19,
+      "votes": 59028,
+      "percentage": 39.71,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Renu Suresh",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 19598,
-      "percentage": 15.11,
+      "votes": 24925,
+      "percentage": 16.77,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Guruvayoorappan P E",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 689,
-      "percentage": 0.53,
+      "votes": 859,
+      "percentage": 0.58,
       "is_winner": false,
       "is_leading": false
     }

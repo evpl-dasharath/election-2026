@@ -33,10 +33,10 @@ function ClassBadge({ cls, alliance }: { cls: SeatClass; alliance: string | null
   const bg = isStrong
     ? color
     : isFragile
-    ? 'transparent'
-    : alliance
-    ? color + '22'
-    : '#F5F2EE';
+      ? 'transparent'
+      : alliance
+        ? color + '22'
+        : '#F5F2EE';
 
   const fg = isStrong ? '#fff' : color;
 
@@ -60,16 +60,16 @@ function ClassBadge({ cls, alliance }: { cls: SeatClass; alliance: string | null
 
 // ── Swing delta pill ──────────────────────────────────────────
 function SwingPill({ value }: { value: number }) {
-  if (Math.abs(value) < 0.1) return <span style={{ color: '#9CA3AF', fontSize: 11 }}>≈</span>;
+  if (Math.abs(value) < 0.1) return <span className="text-ink2 text-[11px]">≈</span>;
   const up = value > 0;
   return (
-    <span style={{ fontSize: 11, fontWeight: 700, fontFamily: "'JetBrains Mono',monospace", color: up ? '#16A34A' : '#DC2626' }}>
+    <span className="font-mono text-[11px] font-bold" style={{ color: up ? '#16A34A' : '#DC2626' }}>
       {up ? '▲' : '▼'}{Math.abs(value).toFixed(1)}%
     </span>
   );
 }
 
-// ── Constituency card (mini, reuses HomePage card style) ──────
+// ── Constituency card ─────────────────────────────────────────
 function ConstCard({
   c,
   seatCls,
@@ -89,7 +89,6 @@ function ConstCard({
   const margin = c.leader && c.runner_up ? c.leader.votes - c.runner_up.votes : null;
   const isClose = margin !== null && margin < TIGHT_MARGIN;
 
-  // 2026 outcome relative to this alliance
   const currentLeader = c.leader?.alliance?.toUpperCase();
   const sitting = c.sitting_alliance?.toUpperCase();
   const al = allianceCode.toUpperCase();
@@ -116,74 +115,64 @@ function ConstCard({
     <div
       onClick={onClick}
       style={{
-        background: countingStarted ? cardColor : '#FDFCFB',
-        border: countingStarted ? 'none' : '1px solid #E2DDD8',
-        borderRadius: 10,
-        padding: '10px 12px',
+        background: countingStarted ? cardColor : '#E8E4DF',
+        borderRadius: 12,
+        padding: '12px 14px',
         cursor: 'pointer',
         position: 'relative',
-        boxShadow: isClose ? '0 4px 18px rgba(0,0,0,0.25)' : '0 1px 4px rgba(0,0,0,0.1)',
+        boxShadow: isClose ? '0 4px 18px rgba(0,0,0,0.35)' : countingStarted ? '0 4px 14px rgba(26,22,17,0.14)' : '0 1px 4px rgba(0,0,0,0.15)',
         transition: 'transform 0.1s',
       }}
-      onMouseEnter={e => (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-1px)'}
+      onMouseEnter={e => (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-2px)'}
       onMouseLeave={e => (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)'}
     >
-      {/* Header row */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 6 }}>
-        <span style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 9, color: countingStarted ? 'rgba(255,255,255,0.5)' : '#9CA3AF' }}>
+      <div className="flex justify-between items-start mb-2">
+        <span className="font-mono text-[9px]" style={{ color: countingStarted ? 'rgba(255,255,255,0.5)' : '#9CA3AF' }}>
           #{String(c.number).padStart(3, '0')}
         </span>
-        <div style={{ display: 'flex', gap: 4, alignItems: 'center' }}>
+        <div className="flex gap-1 items-center">
           <ClassBadge cls={seatCls} alliance={ownerAl} />
-          <span style={{
-            fontSize: 8, fontWeight: 700, letterSpacing: 0.5,
-            padding: '1px 5px', borderRadius: 10,
-            background: 'rgba(0,0,0,0.2)',
-            color: outcomeBadge[outcome].color,
-          }}>
+          <span className="text-[8px] font-black tracking-wider px-1.5 py-0.5 rounded"
+            style={{ backgroundColor: 'rgba(0,0,0,0.45)', color: 'rgba(255,255,255,0.95)' }}>
             {outcomeBadge[outcome].label}
           </span>
         </div>
       </div>
 
-      {/* Name */}
-      <div style={{ fontSize: 12, fontWeight: 700, color: countingStarted ? 'white' : '#1A1611', marginBottom: 4, lineHeight: 1.3 }}>
+      <div className="font-bold leading-snug mb-1 text-[13px]" style={{ color: countingStarted ? 'white' : '#1A1611' }}>
         {c.name}
       </div>
 
-      {/* 2021 holder */}
       {c.sitting_alliance && (
-        <div style={{ fontSize: 9, color: countingStarted ? 'rgba(255,255,255,0.6)' : '#9CA3AF', marginBottom: 6 }}>
-          2021: <span style={{ fontWeight: 700, color: ac(c.sitting_alliance) }}>{c.sitting_alliance}</span>
-          {c.sitting_party && ` · ${c.sitting_party}`}
+        <div className="text-[9px] mb-2" style={{ color: countingStarted ? 'rgba(255,255,255,0.6)' : '#9CA3AF' }}>
+          2021: <span style={{ fontWeight: 700, color: countingStarted ? 'rgba(255,255,255,0.85)' : ac(c.sitting_alliance) }}>{c.sitting_alliance}</span>
+          {(c as any).sitting_party && ` · ${(c as any).sitting_party}`}
         </div>
       )}
 
-      {/* Live data */}
       {countingStarted && c.leader ? (
         <>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 4 }}>
-            <span style={{ fontSize: 20, fontWeight: 800, color: 'white', lineHeight: 1 }}>
+          <div className="flex justify-between items-center mb-1">
+            <span className="font-black leading-none text-[20px]" style={{ color: 'white' }}>
               {margin !== null ? `+${margin.toLocaleString('en-IN')}` : '—'}
             </span>
-            <div style={{
-              width: 32, height: 32, borderRadius: '50%',
-              background: 'rgba(255,255,255,0.92)',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              fontSize: 9, fontWeight: 800, color: cardColor,
-            }}>
+            <div className="w-8 h-8 rounded-full flex items-center justify-center text-[9px] font-black shrink-0"
+              style={{ background: 'rgba(255,255,255,0.92)', color: cardColor }}>
               {partyAbbr(c.leader.party)}
             </div>
           </div>
-          <div style={{ fontSize: 11, fontWeight: 600, color: 'white', marginBottom: 2 }}>{c.leader.name}</div>
+          <div className="text-[11px] font-semibold mb-1" style={{ color: 'white' }}>{c.leader.name}</div>
           {c.runner_up && (
-            <div style={{ fontSize: 9, color: 'rgba(255,255,255,0.7)' }}>
+            <div className="text-[9px]" style={{ color: 'rgba(255,255,255,0.7)' }}>
               2nd: {c.runner_up.name} · {c.runner_up.alliance}
             </div>
           )}
         </>
       ) : (
-        <div style={{ fontSize: 10, color: '#9CA3AF', fontStyle: 'italic' }}>Not yet started</div>
+        <div className="text-[10px] italic flex items-center gap-1.5" style={{ color: '#9CA3AF' }}>
+          <span className="inline-block w-1.5 h-1.5 rounded-full bg-neutral-400/60" />
+          Not yet started
+        </div>
       )}
     </div>
   );
@@ -214,17 +203,13 @@ export default function AlliancePage() {
   const { data: allHistory } = useAllHistorical();
   const { data: allConst } = useConstituencies();
 
-  // Named filter state
   const [namedFilter, setNamedFilter] = useState<NamedFilter | null>(null);
-  // Raw filter state
   const [rawProfile, setRawProfile] = useState<SeatClass | null>(null);
   const [rawOutcome, setRawOutcome] = useState<string | null>(null);
   const [rawMargin, setRawMargin] = useState<string | null>(null);
   const [rawVote, setRawVote] = useState<string | null>(null);
-  // Sort
   const [sortBy, setSortBy] = useState<'number' | 'margin' | 'swing'>('number');
 
-  // Seat classifications from historical data
   const classMap = useMemo(() => {
     const map: Record<number, { seatClass: SeatClass; ownerAlliance: string | null }> = {};
     if (!allHistory) return map;
@@ -234,7 +219,6 @@ export default function AlliancePage() {
     return map;
   }, [allHistory]);
 
-  // Build enriched constituency list
   const enriched = useMemo(() => {
     if (!data?.constituencies) return [];
     return data.constituencies.map(c => {
@@ -248,40 +232,21 @@ export default function AlliancePage() {
       if ((c.status === 'IN_PROGRESS' || c.status === 'RESULT_DECLARED') && currentLeader) {
         if (currentLeader === al) outcome = sitting === al ? 'held' : 'gained';
         else if (sitting === al) outcome = 'lost';
-        else {
-          // Check rank among all candidates — approximated by runner_up alliance
-          outcome = 'trailing';
-        }
+        else outcome = 'trailing';
       }
 
-      // Historical alliance shares for vote swing
-      const hist = allHistory?.find(h => h.constituency_number === c.number);
-      const share2021 = hist?.la_2021?.winner_alliance
-        ? (hist.la_2021.winner_alliance === al ? 100 : 0) // placeholder — real share from alliance_shares
-        : null;
-
-      return {
-        ...c,
-        seatClass: cls.seatClass,
-        ownerAlliance: cls.ownerAlliance,
-        outcome,
-        margin,
-      };
+      return { ...c, seatClass: cls.seatClass, ownerAlliance: cls.ownerAlliance, outcome, margin };
     });
   }, [data, classMap, allianceUpper, allHistory]);
 
-  // Apply named filter → sets raw filters
   function applyNamed(f: NamedFilter | null) {
     setNamedFilter(f);
     setRawProfile(null);
     setRawOutcome(null);
     setRawMargin(null);
     setRawVote(null);
-    if (!f) return;
-    // Map named filters to raw combinations (handled in filter logic below)
   }
 
-  // Filter logic
   const filtered = useMemo(() => {
     let rows = enriched;
 
@@ -291,24 +256,15 @@ export default function AlliancePage() {
         const out = r.outcome;
         const m = r.margin;
         switch (namedFilter) {
-          case 'strongholds_pressure':
-            return cls === 'Stronghold' && (out === 'held') && false; // + vote share ▼ — needs share data
-          case 'strongholds_lost':
-            return cls === 'Stronghold' && out === 'lost';
-          case 'fragile_holding':
-            return cls === 'Fragile' && (out === 'held' || out === 'leading');
-          case 'fragile_lost':
-            return cls === 'Fragile' && out === 'lost';
-          case 'swing_won':
-            return cls === 'Swing' && (out === 'gained' || out === 'held');
-          case 'opponent_captured':
-            return cls === "Opponent's" && out === 'gained';
-          case 'leaning_at_risk':
-            return cls === 'Leaning' && (out === 'lost' || out === 'trailing');
-          case 'surprise_collapse':
-            return out === 'trailing' && m !== null && m < -10000;
-          case 'growing_in_loss':
-            return out === 'lost'; // + vote share ▲ — needs share data
+          case 'strongholds_pressure': return cls === 'Stronghold' && (out === 'held') && false;
+          case 'strongholds_lost': return cls === 'Stronghold' && out === 'lost';
+          case 'fragile_holding': return cls === 'Fragile' && (out === 'held' || out === 'leading');
+          case 'fragile_lost': return cls === 'Fragile' && out === 'lost';
+          case 'swing_won': return cls === 'Swing' && (out === 'gained' || out === 'held');
+          case 'opponent_captured': return cls === "Opponent's" && out === 'gained';
+          case 'leaning_at_risk': return cls === 'Leaning' && (out === 'lost' || out === 'trailing');
+          case 'surprise_collapse': return out === 'trailing' && m !== null && m < -10000;
+          case 'growing_in_loss': return out === 'lost';
           default: return true;
         }
       });
@@ -318,9 +274,9 @@ export default function AlliancePage() {
       else if (rawOutcome === 'gained') rows = rows.filter(r => r.outcome === 'gained');
       else if (rawOutcome === 'lost') rows = rows.filter(r => r.outcome === 'lost');
       else if (rawOutcome === 'runner-up') rows = rows.filter(r => r.outcome === 'trailing');
-      if (rawMargin === 'safe') rows = rows.filter(r => r.margin !== null && r.margin >= 5000);
-      else if (rawMargin === 'comfortable') rows = rows.filter(r => r.margin !== null && r.margin >= 2000 && r.margin < 5000);
-      else if (rawMargin === 'close') rows = rows.filter(r => r.margin !== null && r.margin < 2000);
+      if (rawMargin === 'safe') rows = rows.filter(r => r.margin !== null && r.margin >= LARGE_MARGIN);
+      else if (rawMargin === 'comfortable') rows = rows.filter(r => r.margin !== null && r.margin >= TIGHT_MARGIN && r.margin < LARGE_MARGIN);
+      else if (rawMargin === 'close') rows = rows.filter(r => r.margin !== null && r.margin < TIGHT_MARGIN);
     }
 
     return [...rows].sort((a, b) => {
@@ -331,12 +287,13 @@ export default function AlliancePage() {
 
   if (loading) {
     return (
-      <div style={{ minHeight: '100vh', background: '#F5F2EE', display: 'flex', flexDirection: 'column' }}>
+      <div className="flex flex-col min-h-screen bg-pagebg text-ink">
         <GlobalHeader />
-        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <div style={{ textAlign: 'center' }}>
-            <div style={{ width: 40, height: 40, border: `3px solid ${allianceColor}30`, borderTopColor: allianceColor, borderRadius: '50%', animation: 'spin 0.8s linear infinite', margin: '0 auto 12px' }} />
-            <p style={{ color: '#5C5245', fontSize: 13 }}>Loading {allianceUpper} data…</p>
+        <div className="flex-1 flex items-center justify-center">
+          <div className="text-center">
+            <div className="w-10 h-10 rounded-full border-[3px] border-pageborder mx-auto mb-3"
+              style={{ borderTopColor: allianceColor, animation: 'spin 0.8s linear infinite' }} />
+            <p className="text-ink2 text-[13px]">Loading {allianceUpper} data…</p>
           </div>
           <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
         </div>
@@ -346,106 +303,106 @@ export default function AlliancePage() {
 
   const totalWonLeading = (data?.seats_won || 0) + (data?.seats_leading || 0);
   const swingVs2021 = data ? data.vote_share - data.vote_share_2021_pct : 0;
+  const hasAnyFilter = namedFilter || rawProfile || rawOutcome || rawMargin || rawVote;
 
   return (
-    <div style={{ fontFamily: "'DM Sans',sans-serif", background: '#F5F2EE', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+    <div className="flex flex-col min-h-screen bg-pagebg text-ink">
       <GlobalHeader />
 
       {/* ── Alliance tab switcher ── */}
-      <div style={{ background: '#1A1611', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 0, borderBottom: `3px solid ${allianceColor}` }}>
-        {(['ldf', 'udf', 'nda'] as const).map(al => {
-          const active = allianceCode === al;
-          const color = ac(al.toUpperCase());
-          return (
-            <button
-              key={al}
-              onClick={() => navigate(`/alliance/${al}`)}
-              style={{
-                padding: '10px 32px',
-                fontSize: 13, fontWeight: 800, letterSpacing: 1.5,
-                textTransform: 'uppercase',
-                border: 'none', cursor: 'pointer',
-                background: active ? color : 'transparent',
-                color: active ? '#fff' : color,
-                borderBottom: active ? `3px solid ${color}` : '3px solid transparent',
-                transition: 'all 0.15s',
-                fontFamily: "'DM Sans',sans-serif",
-                marginBottom: -3,
-              }}
-            >
-              {al.toUpperCase()}
-            </button>
-          );
-        })}
+      <div className="bg-surface border-b border-pageborder shrink-0">
+        <div className="flex items-center px-4 md:px-8 pt-2 gap-0">
+          {(['ldf', 'udf', 'nda'] as const).map(al => {
+            const active = allianceCode === al;
+            const color = ac(al.toUpperCase());
+            return (
+              <button
+                key={al}
+                onClick={() => navigate(`/alliance/${al}`)}
+                className="text-[11px] font-black tracking-widest uppercase px-5 py-2.5 border-b-2 transition-all duration-150"
+                style={{
+                  borderBottomColor: active ? color : 'transparent',
+                  color: active ? color : '#9CA3AF',
+                }}
+              >
+                {al.toUpperCase()}
+              </button>
+            );
+          })}
+        </div>
       </div>
 
-      {/* ── Header ── */}
-      <div style={{ background: '#FDFCFB', borderBottom: '1px solid #E2DDD8', padding: '20px 24px 16px' }}>
-        <div style={{ maxWidth: 1400, margin: '0 auto' }}>
-          <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12, marginBottom: 16 }}>
-            <div style={{ width: 12, height: 12, borderRadius: '50%', background: allianceColor, marginTop: 5, flexShrink: 0 }} />
-            <div>
-              <h1 style={{ fontFamily: "'DM Serif Display',serif", fontSize: 28, color: '#1A1611', lineHeight: 1.1, marginBottom: 2 }}>
-                {allianceUpper}
-              </h1>
-              <div style={{ fontSize: 14, color: '#5C5245', marginBottom: 12 }}>{ALLIANCE_FULL[allianceCode]}</div>
-              {/* Stat strip */}
-              <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>
-                {[
-                  { label: 'Leading + Won', value: totalWonLeading, color: allianceColor },
-                  { label: 'Won', value: data?.seats_won || 0, color: '#1A1611' },
-                  { label: 'Trailing', value: data?.seats_trailing || 0, color: '#6B7280' },
-                  { label: 'Contested', value: data?.seats_contested || 0, color: '#6B7280' },
-                ].map(s => (
-                  <div key={s.label}>
-                    <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 22, fontWeight: 800, color: s.color, lineHeight: 1 }}>{s.value}</div>
-                    <div style={{ fontSize: 10, color: '#9CA3AF', letterSpacing: 0.5, marginTop: 2 }}>{s.label}</div>
-                  </div>
-                ))}
-                <div style={{ borderLeft: '1px solid #E2DDD8', paddingLeft: 24 }}>
-                  <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 22, fontWeight: 800, color: '#1A1611', lineHeight: 1 }}>
-                    {data?.vote_share?.toFixed(1) || '—'}%
-                  </div>
-                  <div style={{ fontSize: 10, color: '#9CA3AF', letterSpacing: 0.5, marginTop: 2 }}>Vote Share</div>
-                  {data && (
-                    <div style={{ fontSize: 11, fontWeight: 700, color: swingVs2021 >= 0 ? '#16A34A' : '#DC2626', marginTop: 2 }}>
-                      {swingVs2021 >= 0 ? '▲' : '▼'}{Math.abs(swingVs2021).toFixed(1)}% vs 2021
-                    </div>
-                  )}
+      {/* ── Hero header ── */}
+      <div className="bg-surface px-4 md:px-8 pt-5 pb-4 border-b border-pageborder shrink-0">
+        <div className="flex items-start gap-3 mb-4">
+          <div className="w-3 h-3 rounded-full mt-1.5 shrink-0" style={{ backgroundColor: allianceColor }} />
+          <div>
+            <div className="font-sans text-[22px] md:text-[26px] font-bold tracking-tight leading-none mb-1" style={{ color: allianceColor }}>
+              {allianceUpper}
+            </div>
+            <div className="text-[14px] text-ink2 mb-4">{ALLIANCE_FULL[allianceCode]}</div>
+
+            {/* Stat strip — mirrors HomePage alliance row */}
+            <div className="flex items-end gap-0 overflow-x-auto custom-scrollbar pb-1 -mb-1">
+              {[
+                { label: 'Leading + Won', value: totalWonLeading, color: allianceColor },
+                { label: 'Won', value: data?.seats_won || 0, color: '#1A1611' },
+                { label: 'Trailing', value: data?.seats_trailing || 0, color: '#6B7280' },
+                { label: 'Contested', value: data?.seats_contested || 0, color: '#6B7280' },
+              ].map((s, i, arr) => (
+                <div key={s.label} className={`px-5 md:px-6 shrink-0 ${i < arr.length - 1 ? 'border-r border-pageborder' : ''}`}>
+                  <div className="w-2.5 h-2.5 mb-2" style={{ backgroundColor: s.color }} />
+                  <div className="text-[13px] font-semibold mb-0.5" style={{ color: s.color }}>{s.label}</div>
+                  <div className="font-sans font-bold text-[22px] leading-none" style={{ color: s.color }}>{s.value}</div>
                 </div>
+              ))}
+              <div className="px-5 md:px-6 shrink-0">
+                <div className="w-2.5 h-2.5 mb-2 bg-ink" />
+                <div className="text-[13px] font-semibold mb-0.5 text-ink">Vote Share</div>
+                <div className="font-sans font-bold text-[22px] leading-none text-ink">
+                  {data?.vote_share?.toFixed(1) || '—'}%
+                </div>
+                {data && (
+                  <div className="text-[11px] font-bold mt-0.5" style={{ color: swingVs2021 >= 0 ? '#16A34A' : '#DC2626' }}>
+                    {swingVs2021 >= 0 ? '▲' : '▼'}{Math.abs(swingVs2021).toFixed(1)}% vs 2021
+                  </div>
+                )}
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div style={{ maxWidth: 1400, margin: '0 auto', width: '100%', padding: '0 24px' }}>
+      {/* ── Content ── */}
+      <div className="flex-1 w-full px-4 md:px-8 py-5 space-y-6">
 
-        {/* ── Section 2: Seat Movement ── */}
-        <section style={{ padding: '20px 0 0' }}>
-          <h2 style={{ fontSize: 12, fontWeight: 700, letterSpacing: 1.5, textTransform: 'uppercase', color: '#5C5245', marginBottom: 12 }}>Seat Movement vs 2021</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12, marginBottom: 16 }}>
+        {/* ── Seat Movement ── */}
+        <section>
+          <h2 className="text-[11px] font-bold tracking-widest uppercase text-ink2 mb-3">Seat Movement vs 2021</h2>
+          <div className="grid grid-cols-3 gap-3 mb-4">
             {[
               { label: 'Gained', value: data?.seat_movement.gained || 0, color: '#7C3AED', desc: 'Not held in 2021' },
               { label: 'Held', value: data?.seat_movement.held || 0, color: allianceColor, desc: 'Sitting seats defended' },
               { label: 'Lost', value: data?.seat_movement.lost || 0, color: '#DC2626', desc: 'Sitting seats lost' },
             ].map(s => (
-              <div key={s.label} style={{ background: '#FDFCFB', border: '1px solid #E2DDD8', borderRadius: 10, padding: '14px 16px', borderTop: `3px solid ${s.color}` }}>
-                <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 28, fontWeight: 800, color: s.color, lineHeight: 1 }}>{s.value}</div>
-                <div style={{ fontSize: 12, fontWeight: 700, color: '#1A1611', marginTop: 4 }}>{s.label}</div>
-                <div style={{ fontSize: 11, color: '#9CA3AF', marginTop: 2 }}>{s.desc}</div>
+              <div key={s.label}
+                className="bg-surface rounded-xl px-4 py-3 shadow-sm">
+                <div className="font-mono text-[28px] font-black leading-none mb-1" style={{ color: s.color }}>{s.value}</div>
+                <div className="text-[12px] font-bold text-ink">{s.label}</div>
+                <div className="text-[11px] text-ink2 mt-0.5">{s.desc}</div>
               </div>
             ))}
           </div>
 
           {/* Party breakdown table */}
           {data?.parties && data.parties.length > 0 && (
-            <div style={{ background: '#FDFCFB', border: '1px solid #E2DDD8', borderRadius: 10, overflow: 'hidden', marginBottom: 20 }}>
-              <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+            <div className="bg-surface rounded-xl overflow-hidden shadow-sm">
+              <table className="w-full border-collapse">
                 <thead>
-                  <tr style={{ background: '#F5F2EE', borderBottom: '2px solid #E2DDD8' }}>
+                  <tr className="bg-pagebg border-b-2 border-pageborder">
                     {['Party', 'Contested', 'Won / Leading', 'Vote Share', 'vs 2021'].map(h => (
-                      <th key={h} style={{ padding: '8px 12px', fontSize: 10, fontWeight: 700, letterSpacing: 1, textTransform: 'uppercase', color: '#5C5245', textAlign: h === 'Party' ? 'left' : 'right' }}>{h}</th>
+                      <th key={h} className="px-3 py-2.5 text-[10px] font-bold tracking-widest uppercase text-ink2"
+                        style={{ textAlign: h === 'Party' ? 'left' : 'right' }}>{h}</th>
                     ))}
                   </tr>
                 </thead>
@@ -453,24 +410,22 @@ export default function AlliancePage() {
                   {data.parties.map(p => (
                     <tr
                       key={p.code}
-                      style={{ borderBottom: '1px solid #F5F2EE', cursor: 'pointer' }}
+                      className="border-b border-pageborder cursor-pointer transition-colors hover:bg-pagebg"
                       onClick={() => navigate(`/party/${p.code}`)}
-                      onMouseEnter={e => (e.currentTarget as HTMLTableRowElement).style.background = '#F5F2EE'}
-                      onMouseLeave={e => (e.currentTarget as HTMLTableRowElement).style.background = 'transparent'}
                     >
-                      <td style={{ padding: '10px 12px' }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                          <div style={{ width: 8, height: 8, borderRadius: '50%', background: p.color || allianceColor, flexShrink: 0 }} />
+                      <td className="px-3 py-2.5">
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 rounded-full shrink-0" style={{ background: p.color || allianceColor }} />
                           <div>
-                            <div style={{ fontSize: 13, fontWeight: 600, color: '#1A1611' }}>{p.code}</div>
-                            <div style={{ fontSize: 11, color: '#6B7280' }}>{p.name}</div>
+                            <div className="text-[13px] font-semibold text-ink">{p.code}</div>
+                            <div className="text-[11px] text-ink2">{p.name}</div>
                           </div>
                         </div>
                       </td>
-                      <td style={{ padding: '10px 12px', textAlign: 'right', fontFamily: "'JetBrains Mono',monospace", fontSize: 13, color: '#1A1611' }}>{p.contested}</td>
-                      <td style={{ padding: '10px 12px', textAlign: 'right', fontFamily: "'JetBrains Mono',monospace", fontSize: 13, color: allianceColor, fontWeight: 700 }}>{p.won + p.leading}</td>
-                      <td style={{ padding: '10px 12px', textAlign: 'right', fontFamily: "'JetBrains Mono',monospace", fontSize: 13, color: '#1A1611' }}>{p.vote_share?.toFixed(1)}%</td>
-                      <td style={{ padding: '10px 12px', textAlign: 'right' }}>
+                      <td className="px-3 py-2.5 text-right font-mono text-[13px] text-ink">{p.contested}</td>
+                      <td className="px-3 py-2.5 text-right font-mono text-[13px] font-bold" style={{ color: allianceColor }}>{p.won + p.leading}</td>
+                      <td className="px-3 py-2.5 text-right font-mono text-[13px] text-ink">{p.vote_share?.toFixed(1)}%</td>
+                      <td className="px-3 py-2.5 text-right">
                         <SwingPill value={(p.vote_share || 0) - (p.vote_share_2021_pct || 0)} />
                       </td>
                     </tr>
@@ -481,77 +436,76 @@ export default function AlliancePage() {
           )}
         </section>
 
-        {/* ── Section 3: Swing Analysis ── */}
+        {/* ── Swing Analysis ── */}
         {data?.swing_analysis && (
-          <section style={{ paddingBottom: 20 }}>
-            <h2 style={{ fontSize: 12, fontWeight: 700, letterSpacing: 1.5, textTransform: 'uppercase', color: '#5C5245', marginBottom: 12 }}>Swing Analysis</h2>
-            <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap', background: '#FDFCFB', border: '1px solid #E2DDD8', borderRadius: 10, padding: '14px 20px' }}>
+          <section>
+            <h2 className="text-[11px] font-bold tracking-widest uppercase text-ink2 mb-3">Swing Analysis</h2>
+            <div className="bg-surface rounded-xl px-5 py-4 shadow-sm flex gap-6 flex-wrap">
               <div>
-                <div style={{ fontSize: 11, fontWeight: 700, color: '#16A34A', letterSpacing: 0.5, marginBottom: 6 }}>GAINED FROM</div>
-                <div style={{ display: 'flex', gap: 16 }}>
+                <div className="text-[10px] font-bold tracking-widest uppercase mb-2" style={{ color: '#16A34A' }}>GAINED FROM</div>
+                <div className="flex gap-4">
                   {Object.entries(data.swing_analysis.gained_from).filter(([, v]) => v > 0).map(([al, v]) => (
-                    <div key={al} style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-                      <span style={{ width: 8, height: 8, borderRadius: '50%', background: ac(al), display: 'inline-block' }} />
-                      <span style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 18, fontWeight: 800, color: ac(al) }}>{v}</span>
-                      <span style={{ fontSize: 11, color: '#6B7280' }}>{al}</span>
+                    <div key={al} className="flex items-center gap-1.5">
+                      <span className="w-2 h-2 rounded-full inline-block" style={{ background: ac(al) }} />
+                      <span className="font-mono text-[18px] font-black" style={{ color: ac(al) }}>{v}</span>
+                      <span className="text-[11px] text-ink2">{al}</span>
                     </div>
                   ))}
                 </div>
               </div>
-              <div style={{ borderLeft: '1px solid #E2DDD8', paddingLeft: 24 }}>
-                <div style={{ fontSize: 11, fontWeight: 700, color: '#DC2626', letterSpacing: 0.5, marginBottom: 6 }}>LOST TO</div>
-                <div style={{ display: 'flex', gap: 16 }}>
+              <div className="border-l border-pageborder pl-6">
+                <div className="text-[10px] font-bold tracking-widest uppercase mb-2" style={{ color: '#DC2626' }}>LOST TO</div>
+                <div className="flex gap-4">
                   {Object.entries(data.swing_analysis.lost_to).filter(([, v]) => v > 0).map(([al, v]) => (
-                    <div key={al} style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-                      <span style={{ width: 8, height: 8, borderRadius: '50%', background: ac(al), display: 'inline-block' }} />
-                      <span style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 18, fontWeight: 800, color: ac(al) }}>{v}</span>
-                      <span style={{ fontSize: 11, color: '#6B7280' }}>{al}</span>
+                    <div key={al} className="flex items-center gap-1.5">
+                      <span className="w-2 h-2 rounded-full inline-block" style={{ background: ac(al) }} />
+                      <span className="font-mono text-[18px] font-black" style={{ color: ac(al) }}>{v}</span>
+                      <span className="text-[11px] text-ink2">{al}</span>
                     </div>
                   ))}
                 </div>
               </div>
               {data.best_margin && (
-                <div style={{ borderLeft: '1px solid #E2DDD8', paddingLeft: 24 }}>
-                  <div style={{ fontSize: 11, fontWeight: 700, color: '#16A34A', letterSpacing: 0.5, marginBottom: 4 }}>BEST MARGIN</div>
-                  <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 16, fontWeight: 700, color: '#1A1611' }}>+{data.best_margin.margin.toLocaleString('en-IN')}</div>
-                  <div style={{ fontSize: 11, color: '#6B7280' }}>{data.best_margin.constituency}</div>
+                <div className="border-l border-pageborder pl-6">
+                  <div className="text-[10px] font-bold tracking-widest uppercase mb-1" style={{ color: '#16A34A' }}>BEST MARGIN</div>
+                  <div className="font-mono text-[16px] font-bold text-ink">+{data.best_margin.margin.toLocaleString('en-IN')}</div>
+                  <div className="text-[11px] text-ink2">{data.best_margin.constituency}</div>
                 </div>
               )}
               {data.worst_margin && (
-                <div style={{ borderLeft: '1px solid #E2DDD8', paddingLeft: 24 }}>
-                  <div style={{ fontSize: 11, fontWeight: 700, color: '#DC2626', letterSpacing: 0.5, marginBottom: 4 }}>CLOSEST</div>
-                  <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 16, fontWeight: 700, color: '#1A1611' }}>+{data.worst_margin.margin.toLocaleString('en-IN')}</div>
-                  <div style={{ fontSize: 11, color: '#6B7280' }}>{data.worst_margin.constituency}</div>
+                <div className="border-l border-pageborder pl-6">
+                  <div className="text-[10px] font-bold tracking-widest uppercase mb-1" style={{ color: '#DC2626' }}>CLOSEST</div>
+                  <div className="font-mono text-[16px] font-bold text-ink">+{data.worst_margin.margin.toLocaleString('en-IN')}</div>
+                  <div className="text-[11px] text-ink2">{data.worst_margin.constituency}</div>
                 </div>
               )}
             </div>
           </section>
         )}
 
-        {/* ── Section 5: Constituency Cards ── */}
-        <section style={{ paddingBottom: 32 }}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12, flexWrap: 'wrap', gap: 8 }}>
-            <h2 style={{ fontSize: 12, fontWeight: 700, letterSpacing: 1.5, textTransform: 'uppercase', color: '#5C5245' }}>
+        {/* ── Constituencies ── */}
+        <section className="pb-8">
+          <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
+            <h2 className="text-[11px] font-bold tracking-widest uppercase text-ink2">
               Constituencies · {filtered.length} shown
             </h2>
-            {/* Sort */}
-            <div style={{ display: 'flex', gap: 4 }}>
+            <div className="flex gap-1.5">
               {(['number', 'margin'] as const).map(s => (
-                <button key={s} onClick={() => setSortBy(s)} style={{
-                  fontSize: 10, padding: '3px 10px', borderRadius: 20, cursor: 'pointer',
-                  border: `1px solid ${sortBy === s ? '#1A1611' : '#D1CBC4'}`,
-                  background: sortBy === s ? '#1A1611' : 'transparent',
-                  color: sortBy === s ? '#fff' : '#5C5245',
-                  fontFamily: "'DM Sans',sans-serif", textTransform: 'capitalize',
-                }}>
+                <button key={s} onClick={() => setSortBy(s)}
+                  className="text-[10px] px-2.5 py-1 rounded-full cursor-pointer transition-all duration-150 border font-semibold capitalize"
+                  style={{
+                    border: `1px solid ${sortBy === s ? '#1A1611' : '#D1CBC4'}`,
+                    background: sortBy === s ? '#1A1611' : 'transparent',
+                    color: sortBy === s ? '#fff' : '#5C5245',
+                  }}>
                   {s === 'number' ? '# Order' : 'By Margin'}
                 </button>
               ))}
             </div>
           </div>
 
-          {/* Named filters row 1 */}
-          <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginBottom: 8 }}>
+          {/* Named filters */}
+          <div className="bg-surface rounded-xl px-4 py-3 mb-2 shadow-sm flex gap-2 flex-wrap">
             {([
               { key: 'strongholds_lost', label: '🔴 Strongholds Lost' },
               { key: 'fragile_holding', label: '⚡ Fragile Holding' },
@@ -563,65 +517,65 @@ export default function AlliancePage() {
               <button
                 key={f.key}
                 onClick={() => applyNamed(namedFilter === f.key ? null : f.key)}
+                className="text-[11px] px-3 py-1 rounded-full cursor-pointer transition-all duration-150 font-semibold"
                 style={{
-                  fontSize: 11, padding: '4px 12px', borderRadius: 20, cursor: 'pointer',
-                  fontFamily: "'DM Sans',sans-serif", fontWeight: 600,
                   border: `1.5px solid ${namedFilter === f.key ? allianceColor : '#D1CBC4'}`,
                   background: namedFilter === f.key ? allianceColor : 'transparent',
                   color: namedFilter === f.key ? '#fff' : '#5C5245',
-                  transition: 'all 0.15s',
-                }}
-              >
+                }}>
                 {f.label}
               </button>
             ))}
           </div>
 
-          {/* Raw filters row 2 */}
-          <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginBottom: 16, paddingTop: 8, borderTop: '1px solid #E2DDD8' }}>
-            {/* Profile */}
+          {/* Raw filters */}
+          <div className="bg-surface rounded-xl px-4 py-3 mb-4 shadow-sm flex gap-2 flex-wrap items-center">
             {(['Stronghold', 'Fragile', 'Leaning', 'Swing', "Opponent's"] as SeatClass[]).map(p => (
-              <button key={p} onClick={() => { setNamedFilter(null); setRawProfile(rawProfile === p ? null : p); }}
-                style={{ fontSize: 10, padding: '3px 10px', borderRadius: 20, cursor: 'pointer', fontFamily: "'DM Sans',sans-serif",
+              <button key={p}
+                onClick={() => { setNamedFilter(null); setRawProfile(rawProfile === p ? null : p); }}
+                className="text-[10px] px-2.5 py-1 rounded-full cursor-pointer border font-medium transition-all"
+                style={{
                   border: `1px solid ${rawProfile === p ? '#1A1611' : '#D1CBC4'}`,
                   background: rawProfile === p ? '#1A1611' : 'transparent',
                   color: rawProfile === p ? '#fff' : '#5C5245',
                 }}>{p}</button>
             ))}
-            <span style={{ borderLeft: '1px solid #E2DDD8', margin: '0 4px' }} />
-            {/* Outcome */}
+            <span className="border-l border-pageborder h-4" />
             {(['holding', 'gained', 'lost', 'runner-up'] as const).map(o => (
-              <button key={o} onClick={() => { setNamedFilter(null); setRawOutcome(rawOutcome === o ? null : o); }}
-                style={{ fontSize: 10, padding: '3px 10px', borderRadius: 20, cursor: 'pointer', fontFamily: "'DM Sans',sans-serif",
+              <button key={o}
+                onClick={() => { setNamedFilter(null); setRawOutcome(rawOutcome === o ? null : o); }}
+                className="text-[10px] px-2.5 py-1 rounded-full cursor-pointer border font-medium capitalize transition-all"
+                style={{
                   border: `1px solid ${rawOutcome === o ? allianceColor : '#D1CBC4'}`,
                   background: rawOutcome === o ? allianceColor + '22' : 'transparent',
                   color: rawOutcome === o ? allianceColor : '#5C5245',
-                  textTransform: 'capitalize',
                 }}>{o}</button>
             ))}
-            <span style={{ borderLeft: '1px solid #E2DDD8', margin: '0 4px' }} />
-            {/* Margin */}
+            <span className="border-l border-pageborder h-4" />
             {[{ k: 'safe', l: 'Safe 5k+' }, { k: 'comfortable', l: '2–5k' }, { k: 'close', l: 'Close <2k' }].map(({ k, l }) => (
-              <button key={k} onClick={() => { setNamedFilter(null); setRawMargin(rawMargin === k ? null : k); }}
-                style={{ fontSize: 10, padding: '3px 10px', borderRadius: 20, cursor: 'pointer', fontFamily: "'DM Sans',sans-serif",
+              <button key={k}
+                onClick={() => { setNamedFilter(null); setRawMargin(rawMargin === k ? null : k); }}
+                className="text-[10px] px-2.5 py-1 rounded-full cursor-pointer border font-medium transition-all"
+                style={{
                   border: `1px solid ${rawMargin === k ? '#1A1611' : '#D1CBC4'}`,
                   background: rawMargin === k ? '#1A1611' : 'transparent',
                   color: rawMargin === k ? '#fff' : '#5C5245',
                 }}>{l}</button>
             ))}
-            {(namedFilter || rawProfile || rawOutcome || rawMargin) && (
-              <button onClick={() => { setNamedFilter(null); setRawProfile(null); setRawOutcome(null); setRawMargin(null); setRawVote(null); }}
-                style={{ fontSize: 10, padding: '3px 10px', borderRadius: 20, cursor: 'pointer', fontFamily: "'DM Sans',sans-serif",
-                  border: '1px solid #DC2626', color: '#DC2626', background: 'transparent',
-                }}>✕ Clear</button>
+            {hasAnyFilter && (
+              <button
+                onClick={() => { setNamedFilter(null); setRawProfile(null); setRawOutcome(null); setRawMargin(null); setRawVote(null); }}
+                className="text-[10px] px-2.5 py-1 rounded-full cursor-pointer border font-medium transition-all ml-auto"
+                style={{ border: '1px solid #DC2626', color: '#DC2626', background: 'transparent' }}>
+                ✕ Clear
+              </button>
             )}
           </div>
 
-          {/* Card grid */}
           {filtered.length === 0 ? (
-            <div style={{ textAlign: 'center', padding: 48, color: '#9CA3AF', fontSize: 13 }}>No constituencies match the current filters</div>
+            <div className="text-center py-12 text-ink2 text-[13px]">No constituencies match the current filters</div>
           ) : (
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))', gap: 10 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))', gap: 10 }}>
               {filtered.map(c => (
                 <ConstCard
                   key={c.id}

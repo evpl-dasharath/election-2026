@@ -6,31 +6,31 @@
     "district": "Kozhikode"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 233690,
     "votes_polled": 185690,
     "votes_counted": 11737,
     "valid_votes": 11737,
-    "rounds_completed": 13,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:53.229853+00:00"
+    "last_updated": "2026-05-04T12:36:05.127524+00:00"
   },
   "candidates_2026": [
     {
       "name": "K. M. Abhijith",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 69669,
-      "percentage": 51.72,
+      "votes": 99763,
+      "percentage": 52.87,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Adv. P. Vasantham",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 55811,
-      "percentage": 41.43,
+      "votes": 76163,
+      "percentage": 40.36,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "C. P. Vipin Chandran",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 8284,
-      "percentage": 6.15,
+      "votes": 11506,
+      "percentage": 6.1,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,17 +47,8 @@
       "name": "Vasantha",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 244,
-      "percentage": 0.18,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Abhijith, s/o Balan",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 175,
-      "percentage": 0.13,
+      "votes": 314,
+      "percentage": 0.17,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +56,17 @@
       "name": "Padmakumar",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 173,
-      "percentage": 0.13,
+      "votes": 269,
+      "percentage": 0.14,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Abhijith, s/o Balan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 218,
+      "percentage": 0.12,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "K. M. Abhijith",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 157,
-      "percentage": 0.12,
+      "votes": 207,
+      "percentage": 0.11,
       "is_winner": false,
       "is_leading": false
     }

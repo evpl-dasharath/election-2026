@@ -6,31 +6,31 @@
     "district": "Thrissur"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 188395,
     "votes_polled": 149962,
     "votes_counted": 0,
     "valid_votes": 0,
-    "rounds_completed": 8,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:35:11.723496+00:00"
+    "last_updated": "2026-05-04T12:36:06.181292+00:00"
   },
   "candidates_2026": [
     {
       "name": "K. Rajan",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 36756,
-      "percentage": 47.46,
+      "votes": 69703,
+      "percentage": 45.86,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Adv. Shaji J Kodankandath",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 30206,
-      "percentage": 39.0,
+      "votes": 60819,
+      "percentage": 40.02,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Bijoy Thomas",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 9690,
-      "percentage": 12.51,
+      "votes": 19737,
+      "percentage": 12.99,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "V P Prinson Avinissery",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 271,
-      "percentage": 0.35,
+      "votes": 594,
+      "percentage": 0.39,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Edwin Babu Alapat",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 120,
-      "percentage": 0.15,
+      "votes": 275,
+      "percentage": 0.18,
       "is_winner": false,
       "is_leading": false
     }

@@ -6,31 +6,31 @@
     "district": "Ernakulam"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 197712,
     "votes_polled": 161313,
     "votes_counted": 12067,
     "valid_votes": 12067,
-    "rounds_completed": 8,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:05.391972+00:00"
+    "last_updated": "2026-05-04T12:35:57.941315+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. V. E. Abdul Gafoor",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 43885,
-      "percentage": 49.59,
+      "votes": 80606,
+      "percentage": 49.35,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "P. Rajeev",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 34407,
-      "percentage": 38.88,
+      "votes": 64294,
+      "percentage": 39.36,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "M. P. Binu",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 8021,
-      "percentage": 9.06,
+      "votes": 14130,
+      "percentage": 8.65,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Ajmal K Mujeeb",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 827,
-      "percentage": 0.93,
+      "votes": 1578,
+      "percentage": 0.97,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Shamsu T.K",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 253,
-      "percentage": 0.29,
+      "votes": 553,
+      "percentage": 0.34,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Siyad V A",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 183,
-      "percentage": 0.21,
+      "votes": 331,
+      "percentage": 0.2,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "A Rajeena",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 154,
-      "percentage": 0.17,
+      "votes": 301,
+      "percentage": 0.18,
       "is_winner": false,
       "is_leading": false
     },
@@ -83,8 +83,8 @@
       "name": "Rajeev S/o Vareed",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 130,
-      "percentage": 0.15,
+      "votes": 233,
+      "percentage": 0.14,
       "is_winner": false,
       "is_leading": false
     }

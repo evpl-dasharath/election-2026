@@ -6,31 +6,31 @@
     "district": "Thiruvananthapuram"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 167377,
     "votes_polled": 129784,
     "votes_counted": 15885,
     "valid_votes": 15885,
-    "rounds_completed": 16,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:29.304017+00:00"
+    "last_updated": "2026-05-04T12:36:05.821207+00:00"
   },
   "candidates_2026": [
     {
       "name": "N. Sakthan",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 52556,
-      "percentage": 43.31,
+      "votes": 58760,
+      "percentage": 43.98,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "K. Ansalan",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 47357,
-      "percentage": 39.03,
+      "votes": 51794,
+      "percentage": 38.76,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "S. Rajasekharan Nair",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 20324,
-      "percentage": 16.75,
+      "votes": 21858,
+      "percentage": 16.36,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Surendranathan. K",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 304,
-      "percentage": 0.25,
+      "votes": 327,
+      "percentage": 0.24,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "Bibin S.B",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 143,
+      "votes": 157,
       "percentage": 0.12,
       "is_winner": false,
       "is_leading": false

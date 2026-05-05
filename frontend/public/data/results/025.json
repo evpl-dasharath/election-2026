@@ -6,31 +6,31 @@
     "district": "Kozhikode"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 228689,
     "votes_polled": 187136,
     "votes_counted": 9909,
     "valid_votes": 9909,
-    "rounds_completed": 17,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:58.744861+00:00"
+    "last_updated": "2026-05-04T12:35:52.889251+00:00"
   },
   "candidates_2026": [
     {
       "name": "V. T. Sooraj",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 87907,
+      "votes": 94804,
       "percentage": 49.55,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Adv. K.M. Sachindev",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 72444,
-      "percentage": 40.84,
+      "votes": 77824,
+      "percentage": 40.68,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "C. P. Sateeshan",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 16108,
-      "percentage": 9.08,
+      "votes": 17669,
+      "percentage": 9.24,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,7 +47,7 @@
       "name": "Sooraj K S/o Asokan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 255,
+      "votes": 272,
       "percentage": 0.14,
       "is_winner": false,
       "is_leading": false
@@ -56,7 +56,7 @@
       "name": "Abhijith",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 216,
+      "votes": 230,
       "percentage": 0.12,
       "is_winner": false,
       "is_leading": false

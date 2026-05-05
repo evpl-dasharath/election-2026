@@ -11,26 +11,26 @@
     "votes_polled": 166318,
     "votes_counted": 25254,
     "valid_votes": 25254,
-    "rounds_completed": 14,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:48:57.606088+00:00"
+    "last_updated": "2026-05-04T12:36:06.388124+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. K. Premkumar",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 74890,
-      "percentage": 44.36,
-      "is_winner": true,
+      "votes": 75362,
+      "percentage": 44.3,
+      "is_winner": false,
       "is_leading": false
     },
     {
       "name": "P. K. Sasi",
       "party": "IND_UDF",
       "alliance": "UDF",
-      "votes": 47980,
-      "percentage": 28.42,
+      "votes": 48585,
+      "percentage": 28.56,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Major Ravi",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 42303,
-      "percentage": 25.06,
+      "votes": 42476,
+      "percentage": 24.97,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,7 +47,7 @@
       "name": "Sasi P.K S/o Krishnankutty",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 1045,
+      "votes": 1062,
       "percentage": 0.62,
       "is_winner": false,
       "is_leading": false
@@ -56,7 +56,7 @@
       "name": "K.P Rajeesh",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 1012,
+      "votes": 1025,
       "percentage": 0.6,
       "is_winner": false,
       "is_leading": false
@@ -65,7 +65,7 @@
       "name": "Muhammed Asharaf V.H",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 453,
+      "votes": 459,
       "percentage": 0.27,
       "is_winner": false,
       "is_leading": false

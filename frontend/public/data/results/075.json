@@ -6,31 +6,31 @@
     "district": "Ernakulam"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 170404,
     "votes_polled": 128859,
     "votes_counted": 0,
     "valid_votes": 0,
-    "rounds_completed": 8,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:07.139320+00:00"
+    "last_updated": "2026-05-04T12:35:51.866890+00:00"
   },
   "candidates_2026": [
     {
       "name": "Roji M. John",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 39121,
-      "percentage": 59.72,
+      "votes": 78331,
+      "percentage": 59.86,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Saju Paul",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 21194,
-      "percentage": 32.35,
+      "votes": 41323,
+      "percentage": 31.58,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,17 +38,8 @@
       "name": "Promy Kuriakose",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 4621,
-      "percentage": 7.05,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Joby Paul Uppan",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 86,
-      "percentage": 0.13,
+      "votes": 9893,
+      "percentage": 7.56,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +47,17 @@
       "name": "P V Rajeesh",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 68,
-      "percentage": 0.1,
+      "votes": 220,
+      "percentage": 0.17,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Joby Paul Uppan",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 163,
+      "percentage": 0.12,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Suphil Sebastian",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 57,
-      "percentage": 0.09,
+      "votes": 156,
+      "percentage": 0.12,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "Subran",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 42,
-      "percentage": 0.06,
+      "votes": 96,
+      "percentage": 0.07,
       "is_winner": false,
       "is_leading": false
     }

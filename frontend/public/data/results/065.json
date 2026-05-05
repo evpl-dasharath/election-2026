@@ -11,9 +11,9 @@
     "votes_polled": 160762,
     "votes_counted": 26622,
     "valid_votes": 26622,
-    "rounds_completed": 17,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:35:04.249242+00:00"
+    "last_updated": "2026-05-04T12:36:15.745798+00:00"
   },
   "candidates_2026": [
     {
@@ -22,7 +22,7 @@
       "alliance": "LDF",
       "votes": 70725,
       "percentage": 43.22,
-      "is_winner": true,
+      "is_winner": false,
       "is_leading": false
     },
     {

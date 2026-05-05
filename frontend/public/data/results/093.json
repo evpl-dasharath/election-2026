@@ -6,31 +6,31 @@
     "district": "Kottayam"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 176585,
     "votes_polled": 132562,
     "votes_counted": 7499,
     "valid_votes": 7499,
-    "rounds_completed": 14,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:12.973986+00:00"
+    "last_updated": "2026-05-04T12:36:06.566506+00:00"
   },
   "candidates_2026": [
     {
       "name": "Mani C. Kappan",
       "party": "KDP",
       "alliance": "UDF",
-      "votes": 45287,
-      "percentage": 37.22,
+      "votes": 50799,
+      "percentage": 37.39,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Jose K. Mani",
       "party": "KC_M",
       "alliance": "LDF",
-      "votes": 43213,
-      "percentage": 35.52,
+      "votes": 47808,
+      "percentage": 35.19,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Shone George",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 31423,
-      "percentage": 25.83,
+      "votes": 35304,
+      "percentage": 25.99,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Adv. Rony Jose Nedumpallil",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 468,
-      "percentage": 0.38,
+      "votes": 506,
+      "percentage": 0.37,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "C G Babu",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 286,
+      "votes": 325,
       "percentage": 0.24,
       "is_winner": false,
       "is_leading": false
@@ -65,7 +65,7 @@
       "name": "Santhosh Pulickal",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 249,
+      "votes": 272,
       "percentage": 0.2,
       "is_winner": false,
       "is_leading": false
@@ -74,8 +74,8 @@
       "name": "Santhosh Nadoopparampil",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 219,
-      "percentage": 0.18,
+      "votes": 254,
+      "percentage": 0.19,
       "is_winner": false,
       "is_leading": false
     }

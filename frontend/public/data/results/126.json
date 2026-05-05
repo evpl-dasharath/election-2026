@@ -6,31 +6,31 @@
     "district": "Kollam"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 177000,
     "votes_polled": 134325,
     "votes_counted": 9521,
     "valid_votes": 9521,
-    "rounds_completed": 12,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:30.321628+00:00"
+    "last_updated": "2026-05-04T12:35:53.751391+00:00"
   },
   "candidates_2026": [
     {
       "name": "B. B. Gopakumar",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 41875,
-      "percentage": 36.87,
+      "votes": 51923,
+      "percentage": 38.04,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Adv. R.Rajendran",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 39979,
-      "percentage": 35.2,
+      "votes": 47525,
+      "percentage": 34.82,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Sooraj Ravi",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 30257,
-      "percentage": 26.64,
+      "votes": 35276,
+      "percentage": 25.84,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Arun A",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 511,
-      "percentage": 0.45,
+      "votes": 627,
+      "percentage": 0.46,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "Sindhu Puthenkulam",
       "party": "Anna DHRM",
       "alliance": "OTH",
-      "votes": 356,
+      "votes": 428,
       "percentage": 0.31,
       "is_winner": false,
       "is_leading": false

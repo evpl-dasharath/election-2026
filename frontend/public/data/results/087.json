@@ -6,31 +6,31 @@
     "district": "Ernakulam"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 171968,
     "votes_polled": 136370,
     "votes_counted": 0,
     "valid_votes": 0,
-    "rounds_completed": 12,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:13.046081+00:00"
+    "last_updated": "2026-05-04T12:36:00.804351+00:00"
   },
   "candidates_2026": [
     {
       "name": "Shibu Thekkumpuram",
       "party": "KEC",
       "alliance": "UDF",
-      "votes": 63130,
-      "percentage": 52.92,
+      "votes": 73479,
+      "percentage": 52.83,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Antony John",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 48577,
-      "percentage": 40.72,
+      "votes": 56620,
+      "percentage": 40.71,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Aji Narayanan",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 5851,
-      "percentage": 4.9,
+      "votes": 7046,
+      "percentage": 5.07,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Roy Arackal",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 659,
-      "percentage": 0.55,
+      "votes": 703,
+      "percentage": 0.51,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Shibu Kallekkattu",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 244,
-      "percentage": 0.2,
+      "votes": 297,
+      "percentage": 0.21,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Shibu Chalakattu",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 161,
-      "percentage": 0.13,
+      "votes": 192,
+      "percentage": 0.14,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,7 +74,7 @@
       "name": "Finto Xavier",
       "party": "RJP",
       "alliance": "OTH",
-      "votes": 123,
+      "votes": 137,
       "percentage": 0.1,
       "is_winner": false,
       "is_leading": false

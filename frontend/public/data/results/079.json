@@ -6,31 +6,31 @@
     "district": "Ernakulam"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 161285,
     "votes_polled": 129834,
     "votes_counted": 0,
     "valid_votes": 0,
-    "rounds_completed": 15,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:04.824623+00:00"
+    "last_updated": "2026-05-04T12:36:15.569503+00:00"
   },
   "candidates_2026": [
     {
       "name": "Tony Chammany",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 64296,
-      "percentage": 50.14,
+      "votes": 66112,
+      "percentage": 50.18,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Adv. M. B. Shyni",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 49374,
-      "percentage": 38.5,
+      "votes": 50464,
+      "percentage": 38.3,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Anitha Thomas",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 13080,
-      "percentage": 10.2,
+      "votes": 13637,
+      "percentage": 10.35,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,7 +47,7 @@
       "name": "Mohandas PG",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 332,
+      "votes": 342,
       "percentage": 0.26,
       "is_winner": false,
       "is_leading": false
@@ -56,7 +56,7 @@
       "name": "T. C. SUBRAHMANYAN",
       "party": "CPI_ML_RS",
       "alliance": "OTH",
-      "votes": 251,
+      "votes": 262,
       "percentage": 0.2,
       "is_winner": false,
       "is_leading": false
@@ -65,7 +65,7 @@
       "name": "SADASIVAN",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 156,
+      "votes": 163,
       "percentage": 0.12,
       "is_winner": false,
       "is_leading": false

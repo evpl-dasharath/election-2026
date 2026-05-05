@@ -6,31 +6,31 @@
     "district": "Kannur"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 206000,
     "votes_polled": 167766,
     "votes_counted": 23408,
     "valid_votes": 23408,
-    "rounds_completed": 11,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:53.369533+00:00"
+    "last_updated": "2026-05-04T12:35:55.133974+00:00"
   },
   "candidates_2026": [
     {
       "name": "Pinarayi Vijayan",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 61898,
-      "percentage": 47.49,
+      "votes": 85614,
+      "percentage": 49.87,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Adv. V.P Abdul Rasheed",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 54787,
-      "percentage": 42.03,
+      "votes": 66367,
+      "percentage": 38.66,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "K. Ranjith",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 12853,
-      "percentage": 9.86,
+      "votes": 18555,
+      "percentage": 10.81,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Vadi Hareendran",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 151,
-      "percentage": 0.12,
+      "votes": 193,
+      "percentage": 0.11,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "Vijayan A.M S/o Kunhiraman",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 90,
+      "votes": 117,
       "percentage": 0.07,
       "is_winner": false,
       "is_leading": false

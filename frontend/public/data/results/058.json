@@ -6,31 +6,31 @@
     "district": "Palakkad"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 172015,
     "votes_polled": 145576,
     "votes_counted": 24282,
     "valid_votes": 24282,
-    "rounds_completed": 13,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:35:07.738556+00:00"
+    "last_updated": "2026-05-04T12:35:54.781320+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. Sumesh Achuthan",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 64712,
+      "votes": 65325,
       "percentage": 44.2,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Adv V. Murugadas",
       "party": "ISJD",
       "alliance": "LDF",
-      "votes": 58244,
-      "percentage": 39.78,
+      "votes": 58815,
+      "percentage": 39.8,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Pranesh Rajendran",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 14590,
-      "percentage": 9.96,
+      "votes": 14697,
+      "percentage": 9.94,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,7 +47,7 @@
       "name": "Murugadas. P.  S/o Pazhaniappa Mudaliyaar",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 6930,
+      "votes": 6984,
       "percentage": 4.73,
       "is_winner": false,
       "is_leading": false
@@ -56,7 +56,7 @@
       "name": "N S K Puram Sasikumar",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 405,
+      "votes": 408,
       "percentage": 0.28,
       "is_winner": false,
       "is_leading": false
@@ -65,8 +65,8 @@
       "name": "Sumesh C",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 256,
-      "percentage": 0.17,
+      "votes": 261,
+      "percentage": 0.18,
       "is_winner": false,
       "is_leading": false
     }

@@ -6,31 +6,31 @@
     "district": "Malappuram"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 221036,
     "votes_polled": 178862,
     "votes_counted": 8705,
     "valid_votes": 8705,
-    "rounds_completed": 12,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:35:02.509710+00:00"
+    "last_updated": "2026-05-04T12:36:14.825930+00:00"
   },
   "candidates_2026": [
     {
       "name": "T. V. Ibrahim",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 73374,
-      "percentage": 54.44,
+      "votes": 100718,
+      "percentage": 55.64,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Adv. C. P. Musthafa",
       "party": "IND_LDF",
       "alliance": "LDF",
-      "votes": 36074,
-      "percentage": 26.77,
+      "votes": 49429,
+      "percentage": 27.31,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "M. Preman Master",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 19419,
-      "percentage": 14.41,
+      "votes": 23283,
+      "percentage": 12.86,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Muhamed Musthafa Pamangadan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 2734,
-      "percentage": 2.03,
+      "votes": 3698,
+      "percentage": 2.04,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Abdul Azeez Kadalundi",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 1271,
-      "percentage": 0.94,
+      "votes": 1575,
+      "percentage": 0.87,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Muhammed Aslam V P",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 889,
-      "percentage": 0.66,
+      "votes": 1058,
+      "percentage": 0.58,
       "is_winner": false,
       "is_leading": false
     }

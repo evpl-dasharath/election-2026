@@ -11,9 +11,9 @@
     "votes_polled": 127404,
     "votes_counted": 20260,
     "valid_votes": 20260,
-    "rounds_completed": 14,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:03:30.109822+00:00"
+    "last_updated": "2026-05-04T12:36:00.272219+00:00"
   },
   "candidates_2026": [
     {
@@ -22,7 +22,7 @@
       "alliance": "UDF",
       "votes": 63416,
       "percentage": 48.9,
-      "is_winner": true,
+      "is_winner": false,
       "is_leading": false
     },
     {

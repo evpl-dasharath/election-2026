@@ -6,31 +6,31 @@
     "district": "Pathanamthitta"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 176015,
     "votes_polled": 121415,
     "votes_counted": 6538,
     "valid_votes": 6538,
-    "rounds_completed": 9,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:24.561449+00:00"
+    "last_updated": "2026-05-04T12:36:10.511778+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. Pazhakulam Madhu",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 29595,
-      "percentage": 46.54,
+      "votes": 54652,
+      "percentage": 44.13,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Adv. Pramod Narayan",
       "party": "KC_M",
       "alliance": "LDF",
-      "votes": 26370,
-      "percentage": 41.47,
+      "votes": 50308,
+      "percentage": 40.62,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Thomas K. Samuel",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 7208,
-      "percentage": 11.34,
+      "votes": 17993,
+      "percentage": 14.53,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Sreehari K P",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 155,
-      "percentage": 0.24,
+      "votes": 333,
+      "percentage": 0.27,
       "is_winner": false,
       "is_leading": false
     }

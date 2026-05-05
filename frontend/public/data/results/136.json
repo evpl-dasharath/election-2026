@@ -6,31 +6,31 @@
     "district": "Thiruvananthapuram"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 181308,
     "votes_polled": 143414,
     "votes_counted": 15200,
     "valid_votes": 15200,
-    "rounds_completed": 16,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:33.586848+00:00"
+    "last_updated": "2026-05-04T12:35:52.370819+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. G. Steephen",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 50213,
-      "percentage": 42.43,
+      "votes": 61907,
+      "percentage": 42.15,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "V. S. Sivakumar",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 47321,
-      "percentage": 39.99,
+      "votes": 59064,
+      "percentage": 40.21,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Vivek Gopan",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 19094,
-      "percentage": 16.14,
+      "votes": 23760,
+      "percentage": 16.18,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Santhosh Kumar. S",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 494,
-      "percentage": 0.42,
+      "votes": 687,
+      "percentage": 0.47,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "V. S. Sivakumar S/o Sivadasan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 249,
+      "votes": 303,
       "percentage": 0.21,
       "is_winner": false,
       "is_leading": false
@@ -65,8 +65,8 @@
       "name": "R. Steephen S/o Rafi",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 225,
-      "percentage": 0.19,
+      "votes": 264,
+      "percentage": 0.18,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,7 +74,7 @@
       "name": "Adv. S. Sivakumar S/o Sadasivan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 96,
+      "votes": 118,
       "percentage": 0.08,
       "is_winner": false,
       "is_leading": false

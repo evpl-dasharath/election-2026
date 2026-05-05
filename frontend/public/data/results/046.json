@@ -11,17 +11,17 @@
     "votes_polled": 189380,
     "votes_counted": 0,
     "valid_votes": 0,
-    "rounds_completed": 7,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:33:53.140252+00:00"
+    "last_updated": "2026-05-04T13:05:47.208738+00:00"
   },
   "candidates_2026": [
     {
       "name": "Prof. K. K. Abid Hussain Thangal",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 50053,
-      "percentage": 64.71,
+      "votes": 118111,
+      "percentage": 61.77,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "K. Preethi",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 20803,
-      "percentage": 26.89,
+      "votes": 55473,
+      "percentage": 29.01,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Subrahmanian Chunkapally",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 3434,
-      "percentage": 4.44,
+      "votes": 10558,
+      "percentage": 5.52,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Adv. Majeed Marakkara",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 2053,
-      "percentage": 2.65,
+      "votes": 4557,
+      "percentage": 2.38,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "Preethi Kp",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 272,
+      "votes": 674,
       "percentage": 0.35,
       "is_winner": false,
       "is_leading": false
@@ -65,8 +65,8 @@
       "name": "Mohamed Rafi",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 164,
-      "percentage": 0.21,
+      "votes": 545,
+      "percentage": 0.29,
       "is_winner": false,
       "is_leading": false
     }

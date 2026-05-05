@@ -6,31 +6,31 @@
     "district": "Kottayam"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 158256,
     "votes_polled": 120416,
     "votes_counted": 26726,
     "valid_votes": 26726,
-    "rounds_completed": 12,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:16.127113+00:00"
+    "last_updated": "2026-05-04T12:35:56.003883+00:00"
   },
   "candidates_2026": [
     {
       "name": "Nattakam Suresh",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 61024,
-      "percentage": 52.19,
+      "votes": 64077,
+      "percentage": 52.13,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "V. N. Vasavan",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 41865,
-      "percentage": 35.8,
+      "votes": 44325,
+      "percentage": 36.06,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Athira D. Nair",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 12645,
-      "percentage": 10.81,
+      "votes": 12975,
+      "percentage": 10.56,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,7 +47,7 @@
       "name": "Binoy Joseph Kulathunkal",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 434,
+      "votes": 455,
       "percentage": 0.37,
       "is_winner": false,
       "is_leading": false
@@ -56,8 +56,8 @@
       "name": "Ashna Thambi",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 248,
-      "percentage": 0.21,
+      "votes": 277,
+      "percentage": 0.23,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Raj Mohan Vettikulangara Unni",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 149,
-      "percentage": 0.13,
+      "votes": 205,
+      "percentage": 0.17,
       "is_winner": false,
       "is_leading": false
     }

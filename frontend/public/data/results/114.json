@@ -11,17 +11,17 @@
     "votes_polled": 132366,
     "votes_counted": 7912,
     "valid_votes": 7912,
-    "rounds_completed": 8,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:18.204014+00:00"
+    "last_updated": "2026-05-04T13:05:47.506083+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. K. U. Jenish Kumar",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 29351,
-      "percentage": 45.31,
+      "votes": 60380,
+      "percentage": 44.59,
       "is_winner": false,
       "is_leading": true
     },
@@ -29,8 +29,8 @@
       "name": "Prof Satheesh Kochuparambil",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 28500,
-      "percentage": 44.0,
+      "votes": 58542,
+      "percentage": 43.23,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "T. P. Sundareshan",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 6390,
-      "percentage": 9.86,
+      "votes": 15278,
+      "percentage": 11.28,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Adv Varughese Oommen",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 179,
-      "percentage": 0.28,
+      "votes": 400,
+      "percentage": 0.3,
       "is_winner": false,
       "is_leading": false
     }

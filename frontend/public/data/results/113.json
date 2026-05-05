@@ -6,31 +6,31 @@
     "district": "Pathanamthitta"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 215168,
     "votes_polled": 153845,
     "votes_counted": 8304,
     "valid_votes": 8304,
-    "rounds_completed": 16,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:20.178248+00:00"
+    "last_updated": "2026-05-04T12:35:52.035099+00:00"
   },
   "candidates_2026": [
     {
       "name": "Abin Varkey",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 53930,
-      "percentage": 43.45,
+      "votes": 70083,
+      "percentage": 44.51,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Veena George",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 40666,
-      "percentage": 32.77,
+      "votes": 51098,
+      "percentage": 32.45,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Kummanam Rajasekharan",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 28554,
-      "percentage": 23.01,
+      "votes": 34983,
+      "percentage": 22.22,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Prabhakaran V R",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 257,
-      "percentage": 0.21,
+      "votes": 347,
+      "percentage": 0.22,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Radhamani",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 158,
-      "percentage": 0.13,
+      "votes": 229,
+      "percentage": 0.15,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,7 +65,7 @@
       "name": "Omalloor Ramachandran",
       "party": "API",
       "alliance": "OTH",
-      "votes": 77,
+      "votes": 95,
       "percentage": 0.06,
       "is_winner": false,
       "is_leading": false

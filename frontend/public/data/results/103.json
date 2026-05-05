@@ -6,31 +6,31 @@
     "district": "Alappuzha"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 206016,
     "votes_polled": 169077,
     "votes_counted": 12016,
     "valid_votes": 12016,
-    "rounds_completed": 13,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T08:34:20.148418+00:00"
+    "last_updated": "2026-05-04T12:35:54.433201+00:00"
   },
   "candidates_2026": [
     {
       "name": "P. Prasad",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 64207,
-      "percentage": 47.25,
+      "votes": 83216,
+      "percentage": 48.32,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "K. R. Rajendra Prasad",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 54826,
-      "percentage": 40.34,
+      "votes": 68727,
+      "percentage": 39.91,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Adv. Anandaraj T. P",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 15093,
-      "percentage": 11.11,
+      "votes": 17997,
+      "percentage": 10.45,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Nandakumar",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 342,
-      "percentage": 0.25,
+      "votes": 455,
+      "percentage": 0.26,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "A.P. Prasad S/o Purushothaman",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 276,
-      "percentage": 0.2,
+      "votes": 366,
+      "percentage": 0.21,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,7 +65,7 @@
       "name": "Rajendra Prasad S/o Prabhakaran",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 197,
+      "votes": 249,
       "percentage": 0.14,
       "is_winner": false,
       "is_leading": false
@@ -74,8 +74,8 @@
       "name": "Adv. Sonnymon K. Mathew",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 157,
-      "percentage": 0.12,
+      "votes": 190,
+      "percentage": 0.11,
       "is_winner": false,
       "is_leading": false
     }
