@@ -1,6 +1,6 @@
 {
   "meta": {
-    "timestamp": "2026-05-04T11:33:32.375725+00:00",
+    "timestamp": "2026-05-04T11:33:33.875247+00:00",
     "total_constituencies": 140,
     "results_declared": 4,
     "counting_in_progress": 136,
@@ -501,6 +501,106 @@
           "name": "NOTA",
           "party": "NOTA",
           "votes": 1184
+        }
+      ]
+    },
+    "72": {
+      "status": "IN_PROGRESS",
+      "rounds_completed": 0,
+      "total_rounds": 0,
+      "total_electors": 179208,
+      "votes_polled": 135391,
+      "last_updated": "2026-05-04T11:33:34.639048+00:00",
+      "candidates": [
+        {
+          "name": "T. J. Saneesh Kumar Joseph",
+          "party": "INC",
+          "votes": 71202
+        },
+        {
+          "name": "Adv Biju Chirayath",
+          "party": "KC_M",
+          "votes": 48046
+        },
+        {
+          "name": "Adv. Charlypaul",
+          "party": "TTP",
+          "votes": 16030
+        },
+        {
+          "name": "M S Asokan Mangalappilly",
+          "party": "BSP",
+          "votes": 663
+        },
+        {
+          "name": "Wilson Kallen",
+          "party": "AAP",
+          "votes": 519
+        },
+        {
+          "name": "Arun Edathadan",
+          "party": "IND",
+          "votes": 311
+        },
+        {
+          "name": "A D Biju",
+          "party": "IND",
+          "votes": 228
+        },
+        {
+          "name": "NOTA",
+          "party": "NOTA",
+          "votes": 932
+        }
+      ]
+    },
+    "67": {
+      "status": "IN_PROGRESS",
+      "rounds_completed": 0,
+      "total_rounds": 0,
+      "total_electors": 161225,
+      "votes_polled": 122047,
+      "last_updated": "2026-05-04T11:33:34.946818+00:00",
+      "candidates": [
+        {
+          "name": "Rajan Pallan",
+          "party": "INC",
+          "votes": 60290
+        },
+        {
+          "name": "Alankode Leelakrishnan",
+          "party": "CPI",
+          "votes": 33487
+        },
+        {
+          "name": "Padmaja Venugopal",
+          "party": "BJP",
+          "votes": 28662
+        },
+        {
+          "name": "Rani Anto",
+          "party": "AAP",
+          "votes": 299
+        },
+        {
+          "name": "Rajan. M",
+          "party": "IND",
+          "votes": 153
+        },
+        {
+          "name": "Rosilin Chacko",
+          "party": "BSP",
+          "votes": 138
+        },
+        {
+          "name": "Arshed Aziz",
+          "party": "CPI_ML_L",
+          "votes": 110
+        },
+        {
+          "name": "NOTA",
+          "party": "NOTA",
+          "votes": 1043
         }
       ]
     }
