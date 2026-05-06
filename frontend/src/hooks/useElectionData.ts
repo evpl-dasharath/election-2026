@@ -672,27 +672,39 @@ export function useConstituencies() {
                   total_rounds: liveAc.total_rounds ?? 0,
                 };
 
-                if (liveAc.status === 'NOT_STARTED') {
-                  newC.leader = null;
-                  newC.runner_up = null;
-                } else if (liveAc.candidates && liveAc.candidates.length > 0) {
-                  const sorted = [...liveAc.candidates].sort((a: any, b: any) => b.votes - a.votes);
-
+                if (liveAc.candidates && liveAc.candidates.length > 0) {
                   const getPartyInfo = (pCode: string) => {
                     const p = _partiesCache?.find(x => x.code === pCode);
                     return { alliance: p?.alliance || 'OTH', color: p?.color_code || p?.color || '#999999' };
                   };
 
+                  const sorted = [...liveAc.candidates].sort((a: any, b: any) => b.votes - a.votes);
                   const totalVotesCounted = sorted.reduce((s: number, c: any) => s + c.votes, 0);
+                  
+                  // Update top-level votes_counted with the real sum
+                  newC.votes_counted = totalVotesCounted;
+
                   // Use votes_polled as denominator if available AND >= total counted.
-                  // If votes_polled < total counted (DB/ECI mismatch) fall back to
-                  // totalVotesCounted so percentages never exceed 100%.
-                  // NOTA is included in totalVotesCounted for an accurate denominator.
                   const voteShareDenominator = (
                     newC.votes_polled && newC.votes_polled > 0 && newC.votes_polled >= totalVotesCounted
                       ? newC.votes_polled
                       : totalVotesCounted > 0 ? totalVotesCounted : 0
                   );
+
+                  // Map full candidates list
+                  newC.candidates_2026 = sorted.map((c: any) => {
+                    const pInfo = getPartyInfo(c.party);
+                    return {
+                      name: c.name,
+                      party: c.party,
+                      alliance: pInfo.alliance as any,
+                      votes: c.votes,
+                      percentage: voteShareDenominator > 0 ? (c.votes / voteShareDenominator) * 100 : 0,
+                      is_winner: liveAc.status === 'RESULT_DECLARED' && c === sorted[0],
+                      is_leading: liveAc.status === 'IN_PROGRESS' && c === sorted[0],
+                      party_color: pInfo.color
+                    };
+                  });
 
                   // Exclude NOTA from leader/runner-up consideration
                   const nonNota = sorted.filter(

@@ -114,8 +114,9 @@ function ConstCard({
   let labelFg = 'rgba(255,255,255,0.95)';
 
   const outcomeLabels: Record<string, string> = {
-    leading: c.status === 'RESULT_DECLARED' || c.status === 'COMPLETED' ? 'WON' : 'LEADING',
-    gained: c.status === 'RESULT_DECLARED' || c.status === 'COMPLETED' ? 'WON' : 'LEADING',
+    won: 'WON',
+    leading: 'LEADING',
+    gained: 'GAINED',
     lost: 'LOST',
     '2nd': '2ND',
     close_3rd: 'CLOSE 3RD',
@@ -127,7 +128,7 @@ function ConstCard({
   let borderStyle = 'none';
 
   if (countingStarted) {
-    if (outcome === 'leading' || outcome === 'gained') {
+    if (outcome === 'won' || outcome === 'leading' || outcome === 'gained') {
       cardBg = allianceColor;
       textPrimary = '#fff';
       textSecondary = 'rgba(255,255,255,0.85)';
@@ -181,7 +182,7 @@ function ConstCard({
       onMouseLeave={e => (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)'}
     >
       <div className="flex justify-between items-start mb-2">
-        <span className="font-mono text-[9px]" style={{ color: (outcome === 'leading' || outcome === 'gained') ? 'rgba(255,255,255,0.6)' : '#9CA3AF' }}>
+        <span className="font-mono text-[9px]" style={{ color: (outcome === 'won' || outcome === 'leading' || outcome === 'gained') ? 'rgba(255,255,255,0.6)' : '#9CA3AF' }}>
           #{String(c.number).padStart(3, '0')}
         </span>
         <div className="flex gap-1 items-center">
@@ -198,35 +199,40 @@ function ConstCard({
       </div>
 
       <div className="text-[9px] mb-2 flex items-center gap-1.5" style={{ color: textSecondary, opacity: subTextOpacity }}>
-        <span>2021: <span style={{ fontWeight: 700, color: (outcome === 'leading' || outcome === 'gained') ? '#fff' : ac(c.sitting_alliance || 'OTH') }}>{c.sitting_alliance}</span></span>
+        <span>2021: <span style={{ fontWeight: 700, color: (outcome === 'won' || outcome === 'leading' || outcome === 'gained') ? '#fff' : ac(c.sitting_alliance || 'OTH') }}>{c.sitting_alliance}</span></span>
         {c.sitting_party && <span className="opacity-60">· {c.sitting_party}</span>}
       </div>
 
       {countingStarted && c.alliance_candidate_name ? (
         <>
-          <div className="flex justify-between items-end mb-2">
-            <div>
-              <div className="text-[10px] font-bold opacity-80" style={{ color: textPrimary }}>
-                {c.alliance_party_code} Candidate
-              </div>
-              <div className="text-[13px] font-black" style={{ color: textPrimary }}>{c.alliance_candidate_name}</div>
+          <div className="mb-3">
+            <div className="text-[10px] font-bold opacity-80" style={{ color: textPrimary }}>
+              {c.alliance_party_code} Candidate
             </div>
-            <div className="text-right">
-              <div className="font-black text-[22px] leading-none" style={{ color: textPrimary }}>
-                {marginValue !== null && marginValue !== undefined ? (marginValue > 0 ? `+${marginValue.toLocaleString('en-IN')}` : marginValue.toLocaleString('en-IN')) : '—'}
-              </div>
-              <div className="text-[9px] font-bold opacity-70" style={{ color: textPrimary }}>MARGIN</div>
-            </div>
+            <div className="text-[15px] font-black truncate" style={{ color: textPrimary }}>{c.alliance_candidate_name}</div>
           </div>
           
-          <div className="rounded-lg p-2 flex justify-between items-center" style={{ background: innerBoxBg }}>
+          <div className="flex justify-between items-end mb-3">
             <div>
-              <div className="text-[12px] font-black" style={{ color: textPrimary }}>{c.alliance_votes?.toLocaleString('en-IN')}</div>
-              <div className="text-[8px] font-bold tracking-wider" style={{ color: textPrimary, opacity: 0.6 }}>VOTES</div>
+              <div className="font-black text-[24px] leading-none" style={{ color: textPrimary }}>
+                {c.alliance_votes?.toLocaleString('en-IN') || '0'}
+              </div>
+              <div className="text-[9px] font-bold opacity-70 mt-1" style={{ color: textPrimary }}>VOTES</div>
             </div>
             <div className="text-right">
-              <div className="text-[12px] font-black" style={{ color: textPrimary }}>{c.voteShare?.toFixed(1)}%</div>
-              <div className="text-[8px] font-bold tracking-wider" style={{ color: textPrimary, opacity: 0.6 }}>SHARE</div>
+              <div className="font-black text-[24px] leading-none" style={{ color: textPrimary }}>
+                {c.voteShare?.toFixed(1)}%
+              </div>
+              <div className="text-[9px] font-bold opacity-70 mt-1" style={{ color: textPrimary }}>SHARE</div>
+            </div>
+          </div>
+
+          <div className="rounded-lg py-2 px-3 flex justify-between items-center" style={{ background: innerBoxBg }}>
+            <div className="text-[10px] font-bold opacity-70 uppercase tracking-wider" style={{ color: textPrimary }}>Current Margin</div>
+            <div className="text-right">
+              <div className="font-black text-[16px] leading-none" style={{ color: textPrimary }}>
+                {marginValue !== null && marginValue !== undefined ? (marginValue > 0 ? `+${marginValue.toLocaleString('en-IN')}` : marginValue.toLocaleString('en-IN')) : '—'}
+              </div>
             </div>
           </div>
         </>
@@ -298,49 +304,127 @@ export default function AlliancePage() {
   const enriched = useMemo(() => {
     if (!data?.constituencies) return [];
     return data.constituencies.map(c => {
+      const liveC = allConst?.find(ac => ac.number === c.number);
       const cls = classMap[c.number] || { seatClass: "Opponent's" as SeatClass, ownerAlliance: null };
-      const currentLeader = c.leader?.alliance?.toUpperCase();
-      const sitting = c.sitting_alliance?.toUpperCase();
+      
       const al = allianceUpper;
       
-      const marginToSecond = c.margin_to_second !== undefined ? c.margin_to_second : null;
-      const alliancePos = c.alliance_pos !== undefined ? c.alliance_pos : null;
-      const allianceVotes = c.alliance_votes || 0;
-      const totalValid = c.total_valid || 0;
-      const voteShare = totalValid > 0 ? (allianceVotes / totalValid) * 100 : 0; 
-      // Let's rely on allianceVotes for now since that is 100% accurate.
+      // Merge live data
+      const status = liveC?.status || c.status;
+      const leader = liveC?.leader || c.leader;
+      const runner_up = liveC?.runner_up || c.runner_up;
+      
+      const allianceCandidate = liveC?.candidates_2026?.find(cand => cand.alliance === al);
+      const allianceVotes = allianceCandidate?.votes ?? c.alliance_votes ?? 0;
+      const allianceCandidateName = allianceCandidate?.name ?? c.alliance_candidate_name;
+      const alliancePartyCode = allianceCandidate?.party ?? c.alliance_party_code;
 
+      const totalCounted = liveC?.votes_counted || 0;
+      // VOTE SHARE FIX: Use total votes counted so far as the denominator for live share
+      const voteShareDenominator = totalCounted > 0 ? totalCounted : (c.total_valid || 0);
+      const voteShare = voteShareDenominator > 0 ? (allianceVotes / voteShareDenominator) * 100 : 0;
+
+      const currentLeaderAl = leader?.alliance?.toUpperCase();
+      const sitting = c.sitting_alliance?.toUpperCase();
+
+      const isDeclared = status === 'RESULT_DECLARED' || status === 'COMPLETED';
+
+      // Placing
       let placing: string | null = null;
-      if (alliancePos === 1) placing = 'won';
-      else if (alliancePos === 2) placing = '2nd';
-      else if (alliancePos === 3) placing = (marginToSecond !== null && marginToSecond < 10000) ? 'close_3rd' : 'distant_3rd';
+      if (currentLeaderAl === al) {
+        placing = isDeclared ? 'won' : 'leading';
+      } else if (runner_up?.alliance?.toUpperCase() === al) {
+        placing = '2nd';
+      } else {
+        // Fallback to static placement if live top-2 doesn't include us
+        const alliancePos = c.alliance_pos !== undefined ? c.alliance_pos : null;
+        if (alliancePos === 1) placing = isDeclared ? 'won' : 'leading';
+        else if (alliancePos === 2) placing = '2nd';
+        else if (alliancePos === 3) {
+          const m2 = c.margin_to_second !== undefined ? c.margin_to_second : 100000;
+          placing = m2 < 10000 ? 'close_3rd' : 'distant_3rd';
+        }
+      }
 
+      // Movement
       let movement: string | null = null;
-      if (currentLeader === al) movement = sitting === al ? 'held' : 'gained';
-      else if (sitting === al) movement = 'lost';
+      if (status !== 'NOT_STARTED') {
+        if (currentLeaderAl === al) movement = sitting === al ? 'held' : 'gained';
+        else if (sitting === al) movement = 'lost';
+      }
 
-      let relativeMargin = null;
-      if (c.leader) {
-        if (alliancePos === 1) {
-          relativeMargin = c.runner_up ? c.leader.votes - c.runner_up.votes : c.leader.votes;
+      // Margin
+      let margin = null;
+      if (leader) {
+        if (currentLeaderAl === al) {
+          margin = runner_up ? leader.votes - runner_up.votes : leader.votes;
         } else {
-          relativeMargin = allianceVotes - c.leader.votes;
+          margin = allianceVotes - leader.votes;
         }
       }
 
       return { 
         ...c, 
+        status,
+        leader,
+        runner_up,
         seatClass: cls.seatClass, 
         ownerAlliance: cls.ownerAlliance, 
         placing,
         movement,
-        margin: relativeMargin,
+        margin,
         allianceVotes,
-        voteShare
+        voteShare,
+        alliance_candidate_name: allianceCandidateName,
+        alliance_party_code: alliancePartyCode
       };
     });
-  }, [data, classMap, allianceUpper]);
+  }, [data, allConst, classMap, allianceUpper]);
 
+  const liveSummary = useMemo(() => {
+    const stats = {
+      won: 0,
+      leading: 0,
+      second: 0,
+      close3rd: 0,
+      distant3rd: 0,
+      trailing: 0,
+      contested: enriched.length,
+      gained: 0,
+      held: 0,
+      lost: 0,
+      totalVotes: 0,
+      totalValid: 0,
+      partyStats: {} as Record<string, { won: number; leading: number; second: number; close3rd: number; distant3rd: number; contested: number; votes: number; totalValid: number }>
+    };
+
+    enriched.forEach(c => {
+      const pCode = c.alliance_party_code || 'OTH';
+      if (!stats.partyStats[pCode]) {
+        stats.partyStats[pCode] = { won: 0, leading: 0, second: 0, close3rd: 0, distant3rd: 0, contested: 0, votes: 0, totalValid: 0 };
+      }
+      const ps = stats.partyStats[pCode];
+      ps.contested++;
+      ps.votes += c.allianceVotes || 0;
+      const cValid = (c.status !== 'NOT_STARTED' && c.votes_counted) ? c.votes_counted : (c.total_valid || 0);
+      ps.totalValid += cValid;
+      stats.totalVotes += c.allianceVotes || 0;
+      stats.totalValid += cValid;
+
+      if (c.placing === 'won') { stats.won++; ps.won++; }
+      else if (c.placing === 'leading') { stats.leading++; ps.leading++; }
+      else if (c.placing === '2nd') { stats.second++; ps.second++; }
+      else if (c.placing === 'close_3rd') { stats.close3rd++; ps.close3rd++; }
+      else if (c.placing === 'distant_3rd') { stats.distant3rd++; ps.distant3rd++; }
+      else if (c.status !== 'NOT_STARTED') { stats.trailing++; }
+
+      if (c.movement === 'gained') stats.gained++;
+      if (c.movement === 'held') stats.held++;
+      if (c.movement === 'lost') stats.lost++;
+    });
+
+    return stats;
+  }, [enriched]);
 
   const filtered = useMemo(() => {
     let rows = enriched;
@@ -388,8 +472,7 @@ export default function AlliancePage() {
     );
   }
 
-  const totalWonLeading = (data?.seats_won || 0) + (data?.seats_leading || 0);
-  const swingVs2021 = data ? data.vote_share - data.vote_share_2021_pct : 0;
+  const swingVs2021 = data && liveSummary.totalValid > 0 ? (liveSummary.totalVotes / liveSummary.totalValid * 100) - data.vote_share_2021_pct : 0;
   const hasAnyFilter = rawProfile || rawOutcome || rawMovement || rawMargin || rawVotes !== null || rawVoteShare !== null;
 
   return (
@@ -432,11 +515,12 @@ export default function AlliancePage() {
             {/* Stat strip — mirrors HomePage alliance row */}
             <div className="flex items-end gap-0 overflow-x-auto custom-scrollbar pb-1 -mb-1">
               {[
-                { label: 'Won', value: data?.seats_won || 0, color: allianceColor },
-                { label: '2nd', value: data?.seats_2nd || 0, color: '#1A1611' },
-                { label: 'Close 3rd', value: data?.seats_close_3rd || 0, color: '#F59E0B', desc: '< 10k margin' },
-                { label: 'Distant 3rd', value: data?.seats_distant_3rd || 0, color: '#6B7280', desc: '≥ 10k margin' },
-                { label: 'Contested', value: data?.seats_contested || 0, color: '#6B7280' },
+                { label: 'Won', value: liveSummary.won, color: allianceColor },
+                { label: 'Leading', value: liveSummary.leading, color: allianceColor + 'BB' },
+                { label: '2nd', value: liveSummary.second, color: '#1A1611' },
+                { label: 'Close 3rd', value: liveSummary.close3rd, color: '#F59E0B', desc: '< 10k margin' },
+                { label: 'Distant 3rd', value: liveSummary.distant3rd, color: '#6B7280', desc: '≥ 10k margin' },
+                { label: 'Contested', value: liveSummary.contested, color: '#6B7280' },
               ].map((s, i, arr) => (
                 <div key={s.label} className={`px-5 md:px-6 shrink-0 ${i < arr.length - 1 ? 'border-r border-pageborder' : ''}`}>
                   <div className="w-2.5 h-2.5 mb-2" style={{ backgroundColor: s.color }} />
@@ -449,7 +533,7 @@ export default function AlliancePage() {
                 <div className="w-2.5 h-2.5 mb-2 bg-ink" />
                 <div className="text-[13px] font-semibold mb-0.5 text-ink">Vote Share</div>
                 <div className="font-sans font-bold text-[22px] leading-none text-ink">
-                  {data?.vote_share?.toFixed(1) || '—'}%
+                  {liveSummary.totalValid > 0 ? (liveSummary.totalVotes / liveSummary.totalValid * 100).toFixed(1) : '—'}%
                 </div>
                 {data && (
                   <div className="text-[11px] font-bold mt-0.5" style={{ color: swingVs2021 >= 0 ? '#16A34A' : '#DC2626' }}>
@@ -458,15 +542,18 @@ export default function AlliancePage() {
                 )}
               </div>
               
-              {data?.parties && data.parties.length > 0 && data.parties.map((p) => (
-                <div key={p.code} className="px-5 md:px-6 shrink-0 border-l border-pageborder">
-                  <div className="w-2.5 h-2.5 mb-2" style={{ backgroundColor: p.color || allianceColor }} />
-                  <div className="text-[13px] font-semibold mb-0.5" style={{ color: p.color || allianceColor }}>{p.code}</div>
-                  <div className="font-sans font-bold text-[22px] leading-none" style={{ color: p.color || allianceColor }}>
-                    {p.won} <span className="font-sans font-semibold text-[14px] text-ink2 ml-0.5">/ {p.contested}</span>
+              {data?.parties && data.parties.length > 0 && data.parties.map((p) => {
+                const ps = liveSummary.partyStats[p.code];
+                return (
+                  <div key={p.code} className="px-5 md:px-6 shrink-0 border-l border-pageborder">
+                    <div className="w-2.5 h-2.5 mb-2" style={{ backgroundColor: p.color || allianceColor }} />
+                    <div className="text-[13px] font-semibold mb-0.5" style={{ color: p.color || allianceColor }}>{p.code}</div>
+                    <div className="font-sans font-bold text-[22px] leading-none" style={{ color: p.color || allianceColor }}>
+                      {ps ? ps.won + ps.leading : 0} <span className="font-sans font-semibold text-[14px] text-ink2 ml-0.5">/ {p.contested}</span>
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>
@@ -500,9 +587,9 @@ export default function AlliancePage() {
               <h2 className="text-[11px] font-bold tracking-widest uppercase text-ink2 mb-3">Seat Movement vs 2021</h2>
               <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-4">
                 {[
-                  { label: 'Gained', value: data?.seat_movement.gained || 0, color: '#7C3AED', desc: 'Not held in 2021' },
-                  { label: 'Held', value: data?.seat_movement.held || 0, color: allianceColor, desc: 'Sitting seats defended' },
-                  { label: 'Lost', value: data?.seat_movement.lost || 0, color: '#DC2626', desc: 'Sitting seats lost' },
+                  { label: 'Gained', value: liveSummary.gained, color: '#7C3AED', desc: 'Not held in 2021' },
+                  { label: 'Held', value: liveSummary.held, color: allianceColor, desc: 'Sitting seats defended' },
+                  { label: 'Lost', value: liveSummary.lost, color: '#DC2626', desc: 'Sitting seats lost' },
                   { label: 'Pulled to 2nd', value: data?.seat_movement.pulled_up_to_2nd || 0, color: '#10B981', desc: 'Was 3rd+ in 2021' },
                   { label: 'Pushed to 3rd', value: data?.seat_movement.pushed_to_3rd || 0, color: '#F59E0B', desc: 'Was 1st/2nd in 2021' },
                 ].map(s => (
@@ -528,33 +615,38 @@ export default function AlliancePage() {
                       </tr>
                     </thead>
                     <tbody>
-                      {data.parties.map(p => (
-                        <tr
-                          key={p.code}
-                          className="border-b border-pageborder cursor-pointer transition-colors hover:bg-pagebg"
-                          onClick={() => navigate(`/party/${p.code}`)}
-                        >
-                          <td className="px-3 py-2.5">
-                            <div className="flex items-center gap-2">
-                              <div className="w-2 h-2 rounded-full shrink-0" style={{ background: p.color || allianceColor }} />
-                              <div>
-                                <div className="text-[13px] font-semibold text-ink">{p.code}</div>
-                                <div className="text-[11px] text-ink2">{p.name}</div>
+                      {data.parties.map(p => {
+                        const ps = liveSummary.partyStats[p.code];
+                        const wonLeading = ps ? ps.won + ps.leading : 0;
+                        const vShare = ps && ps.totalValid > 0 ? (ps.votes / ps.totalValid * 100) : 0;
+                        return (
+                          <tr
+                            key={p.code}
+                            className="border-b border-pageborder cursor-pointer transition-colors hover:bg-pagebg"
+                            onClick={() => navigate(`/party/${p.code}`)}
+                          >
+                            <td className="px-3 py-2.5">
+                              <div className="flex items-center gap-2">
+                                <div className="w-2 h-2 rounded-full shrink-0" style={{ background: p.color || allianceColor }} />
+                                <div>
+                                  <div className="text-[13px] font-semibold text-ink">{p.code}</div>
+                                  <div className="text-[11px] text-ink2">{p.name}</div>
+                                </div>
                               </div>
-                            </div>
-                          </td>
-                          <td className="px-3 py-2.5 text-right font-mono text-[13px] text-ink">{p.contested}</td>
-                          <td className="px-3 py-2.5 text-right font-mono text-[13px] font-bold" style={{ color: allianceColor }}>{p.won}</td>
-                          <td className="px-3 py-2.5 text-right font-mono text-[13px] text-ink">{p.seats_2nd || 0}</td>
-                          <td className="px-3 py-2.5 text-right font-mono text-[13px] text-ink">{p.seats_close_3rd || 0}</td>
-                          <td className="px-3 py-2.5 text-right font-mono text-[13px] text-ink">{p.seats_distant_3rd || 0}</td>
-                          <td className="px-3 py-2.5 text-right font-mono text-[13px] text-ink">{(p.contested > 0 ? (p.won / p.contested * 100) : 0).toFixed(1)}%</td>
-                          <td className="px-3 py-2.5 text-right font-mono text-[13px] text-ink">{p.vote_share?.toFixed(1)}%</td>
-                          <td className="px-3 py-2.5 text-right">
-                            <SwingPill value={(p.vote_share || 0) - (p.vote_share_2021_pct || 0)} />
-                          </td>
-                        </tr>
-                      ))}
+                            </td>
+                            <td className="px-3 py-2.5 text-right font-mono text-[13px] text-ink">{p.contested}</td>
+                            <td className="px-3 py-2.5 text-right font-mono text-[13px] font-bold" style={{ color: allianceColor }}>{wonLeading}</td>
+                            <td className="px-3 py-2.5 text-right font-mono text-[13px] text-ink">{ps?.second || 0}</td>
+                            <td className="px-3 py-2.5 text-right font-mono text-[13px] text-ink">{ps?.close3rd || 0}</td>
+                            <td className="px-3 py-2.5 text-right font-mono text-[13px] text-ink">{ps?.distant3rd || 0}</td>
+                            <td className="px-3 py-2.5 text-right font-mono text-[13px] text-ink">{(p.contested > 0 ? (wonLeading / p.contested * 100) : 0).toFixed(1)}%</td>
+                            <td className="px-3 py-2.5 text-right font-mono text-[13px] text-ink">{vShare.toFixed(1)}%</td>
+                            <td className="px-3 py-2.5 text-right">
+                              <SwingPill value={vShare - (p.vote_share_2021_pct || 0)} />
+                            </td>
+                          </tr>
+                        );
+                      })}
                     </tbody>
                   </table>
                 </div>
