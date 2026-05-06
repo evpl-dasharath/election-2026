@@ -6,31 +6,31 @@
     "district": "Wayanad"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 225329,
     "votes_polled": 173976,
     "votes_counted": 16454,
     "valid_votes": 16454,
-    "rounds_completed": 12,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:22:10.619698+00:00"
+    "last_updated": "2026-05-05T01:10:09.780238+00:00"
   },
   "candidates_2026": [
     {
       "name": "I. C. Balakrishnan",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 50633,
-      "percentage": 44.7,
+      "votes": 78936,
+      "percentage": 44.61,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "M. S. Viswanathan",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 38903,
-      "percentage": 34.34,
+      "votes": 62339,
+      "percentage": 35.23,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "A. S. Kavitha",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 20710,
-      "percentage": 18.28,
+      "votes": 31308,
+      "percentage": 17.69,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Prakrithi N V",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 1293,
-      "percentage": 1.14,
+      "votes": 1781,
+      "percentage": 1.01,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Benadict",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 293,
-      "percentage": 0.26,
+      "votes": 447,
+      "percentage": 0.25,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "V.A Ramesan",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 189,
-      "percentage": 0.17,
+      "votes": 275,
+      "percentage": 0.16,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "Balakrishnan Edakkal",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 154,
-      "percentage": 0.14,
+      "votes": 212,
+      "percentage": 0.12,
       "is_winner": false,
       "is_leading": false
     },
@@ -83,7 +83,7 @@
       "name": "Rajesh R M",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 123,
+      "votes": 198,
       "percentage": 0.11,
       "is_winner": false,
       "is_leading": false

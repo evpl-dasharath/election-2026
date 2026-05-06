@@ -6,31 +6,31 @@
     "district": "Malappuram"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 229370,
     "votes_polled": 189207,
     "votes_counted": 0,
     "valid_votes": 0,
-    "rounds_completed": 8,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:22:35.928451+00:00"
+    "last_updated": "2026-05-05T01:10:01.109204+00:00"
   },
   "candidates_2026": [
     {
       "name": "T. P. Ashrafali",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 49055,
-      "percentage": 58.97,
+      "votes": 114997,
+      "percentage": 60.01,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Dr. P. Jiji",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 26072,
-      "percentage": 31.34,
+      "votes": 58980,
+      "percentage": 30.78,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "P. Subrahmanian",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 6713,
-      "percentage": 8.07,
+      "votes": 13994,
+      "percentage": 7.3,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "M. Abdul Khader",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 770,
-      "percentage": 0.93,
+      "votes": 2231,
+      "percentage": 1.16,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Keeran N.K",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 177,
-      "percentage": 0.21,
+      "votes": 441,
+      "percentage": 0.23,
       "is_winner": false,
       "is_leading": false
     }

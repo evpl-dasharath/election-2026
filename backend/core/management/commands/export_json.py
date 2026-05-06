@@ -13,7 +13,7 @@ from core.models import (
     HistoricalResult2021, ConstituencyMeta2021, ParliamentResult, DataSnapshot
 )
 from django.test import RequestFactory
-from core.api.views import historical_comparison, history_all, state_summary
+from core.api.views import historical_comparison, history_all, state_summary, alliance_detail, party_detail
 
 
 class Command(BaseCommand):
@@ -68,6 +68,14 @@ class Command(BaseCommand):
         with open(os.path.join(output_dir, 'parties.json'), 'w') as f:
             json.dump(parties_data, f, indent=2)
         
+        # 6. ALLIANCE_{CODE}.JSON - Alliance detail pages
+        self.stdout.write("Exporting alliance details...")
+        alliance_count = self.export_alliances(output_dir)
+        
+        # 7. PARTY_{CODE}.JSON - Party detail pages
+        self.stdout.write("Exporting party details...")
+        party_count = self.export_parties_detail(output_dir)
+        
         # Update snapshots
         DataSnapshot.objects.update_or_create(
             snapshot_type='all',
@@ -95,6 +103,12 @@ class Command(BaseCommand):
         ))
         self.stdout.write(self.style.SUCCESS(
             f"  - parties.json: party master data"
+        ))
+        self.stdout.write(self.style.SUCCESS(
+            f"  - alliance_*.json: {alliance_count} alliance details"
+        ))
+        self.stdout.write(self.style.SUCCESS(
+            f"  - party_*.json: {party_count} party details"
         ))
         self.stdout.write(self.style.SUCCESS(
             f"  - Output: {output_dir}"
@@ -254,7 +268,31 @@ class Command(BaseCommand):
             parties.append({
                 'code': party.code,
                 'name': party.full_name,
-                'alliance': party.alliance.code,
+                'alliance': party.alliance.code if party.alliance else 'OTH',
                 'color_code': party.color_code,
             })
         return parties
+
+    def export_alliances(self, output_dir):
+        """Export alliance detail endpoints"""
+        factory = RequestFactory()
+        count = 0
+        for code in ['LDF', 'UDF', 'NDA', 'OTH']:
+            request = factory.get(f'/api/alliance/{code}/')
+            response = alliance_detail(request, alliance_code=code)
+            with open(os.path.join(output_dir, f'alliance_{code.lower()}.json'), 'w') as f:
+                json.dump(response.data, f, indent=2)
+            count += 1
+        return count
+
+    def export_parties_detail(self, output_dir):
+        """Export party detail endpoints"""
+        factory = RequestFactory()
+        count = 0
+        for party in Party.objects.all():
+            request = factory.get(f'/api/party/{party.code}/')
+            response = party_detail(request, party_code=party.code)
+            with open(os.path.join(output_dir, f'party_{party.code.lower()}.json'), 'w') as f:
+                json.dump(response.data, f, indent=2)
+            count += 1
+        return count

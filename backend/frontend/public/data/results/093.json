@@ -6,31 +6,31 @@
     "district": "Kottayam"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 176585,
     "votes_polled": 132562,
     "votes_counted": 7499,
     "valid_votes": 7499,
-    "rounds_completed": 11,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:23:45.193222+00:00"
+    "last_updated": "2026-05-05T01:10:06.729677+00:00"
   },
   "candidates_2026": [
     {
       "name": "Mani C. Kappan",
       "party": "KDP",
       "alliance": "UDF",
-      "votes": 34712,
-      "percentage": 38.07,
+      "votes": 50799,
+      "percentage": 37.39,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Jose K. Mani",
       "party": "KC_M",
       "alliance": "LDF",
-      "votes": 31565,
-      "percentage": 34.62,
+      "votes": 47808,
+      "percentage": 35.19,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Shone George",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 23601,
-      "percentage": 25.88,
+      "votes": 35304,
+      "percentage": 25.99,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Adv. Rony Jose Nedumpallil",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 367,
-      "percentage": 0.4,
+      "votes": 506,
+      "percentage": 0.37,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "C G Babu",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 214,
-      "percentage": 0.23,
+      "votes": 325,
+      "percentage": 0.24,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Santhosh Pulickal",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 190,
-      "percentage": 0.21,
+      "votes": 272,
+      "percentage": 0.2,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "Santhosh Nadoopparampil",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 155,
-      "percentage": 0.17,
+      "votes": 254,
+      "percentage": 0.19,
       "is_winner": false,
       "is_leading": false
     }

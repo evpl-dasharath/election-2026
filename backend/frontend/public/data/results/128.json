@@ -6,31 +6,31 @@
     "district": "Thiruvananthapuram"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 197945,
     "votes_polled": 146122,
     "votes_counted": 19010,
     "valid_votes": 19010,
-    "rounds_completed": 10,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:23:48.381159+00:00"
+    "last_updated": "2026-05-05T01:09:54.598099+00:00"
   },
   "candidates_2026": [
     {
       "name": "O. S. Ambika",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 39701,
-      "percentage": 40.55,
+      "votes": 59163,
+      "percentage": 39.46,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "P. Sudheer",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 28519,
-      "percentage": 29.13,
+      "votes": 45788,
+      "percentage": 30.54,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Santhosh Bhadran",
       "party": "RSP",
       "alliance": "UDF",
-      "votes": 27114,
-      "percentage": 27.69,
+      "votes": 41372,
+      "percentage": 27.6,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Jayarajan M",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 846,
-      "percentage": 0.86,
+      "votes": 1019,
+      "percentage": 0.68,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "S. Sujithra",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 636,
-      "percentage": 0.65,
+      "votes": 905,
+      "percentage": 0.6,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Sunitha Kilimanoor",
       "party": "Anna DHRM",
       "alliance": "OTH",
-      "votes": 278,
-      "percentage": 0.28,
+      "votes": 397,
+      "percentage": 0.26,
       "is_winner": false,
       "is_leading": false
     }

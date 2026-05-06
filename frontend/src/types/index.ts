@@ -1,4 +1,4 @@
-// Election data types
+// Election data types - updated 10k threshold
 
 export type Alliance = 'UDF' | 'LDF' | 'NDA' | 'OTH';
 
@@ -52,11 +52,15 @@ export interface ConstituencyListItem {
   region: Region;
   reserved: string;
   status: CountingStatus;
+  votes_counted?: number;
+  rounds_completed?: number;
+  total_rounds?: number;
   sitting_party: string | null;
   sitting_alliance: Alliance | null;
   // Polling-day static fields (from electoral rolls / ECI polling data)
   total_electors: number;   // never changes
   votes_polled: number;     // finalised after polling day, before counting
+  total_valid: number;      // total valid votes counted in 2026
   leader: {
     name: string;
     party: string;
@@ -73,10 +77,17 @@ export interface ConstituencyListItem {
     percentage: number;
     party_color: string;
   } | null;
-  // Live counting progress fields (populated from RTDB)
-  votes_counted?: number;
-  rounds_completed?: number;
-  total_rounds?: number;
+  // Extra fields injected by Alliance/Party detail endpoints
+  alliance_pos?: number | null;
+  margin_to_second?: number | null;
+  alliance_votes?: number;
+  party_pos?: number | null;
+  party_votes?: number;
+  party_candidate_name?: string | null;
+  alliance_candidate_name?: string | null;
+  alliance_party_code?: string | null;
+  margin?: number | null;
+  voteShare?: number;
 }
 
 export interface ConstituencyDetail {
@@ -234,6 +245,9 @@ export interface PartyInAlliance {
   contested: number;
   won: number;
   leading: number;
+  seats_2nd: number;
+  seats_close_3rd: number;
+  seats_distant_3rd: number;
   vote_share: number;
   vote_share_2021_pct: number;
 }
@@ -242,6 +256,9 @@ export interface AllianceSummary {
   alliance: string;
   seats_won: number;
   seats_leading: number;
+  seats_2nd: number;
+  seats_close_3rd: number;
+  seats_distant_3rd: number;
   seats_trailing: number;
   seats_contested: number;
   total_votes: number;
@@ -249,7 +266,7 @@ export interface AllianceSummary {
   vote_share_2021_pct: number;
   best_margin: { constituency: string; margin: number } | null;
   worst_margin: { constituency: string; margin: number } | null;
-  seat_movement: { gained: number; held: number; lost: number };
+  seat_movement: { gained: number; held: number; lost: number; pushed_to_3rd: number; pulled_up_to_2nd: number };
   swing_analysis: {
     gained_from: { LDF: number; UDF: number; NDA: number; OTH: number };
     lost_to: { LDF: number; UDF: number; NDA: number; OTH: number };
@@ -266,6 +283,10 @@ export interface PartyDetailFull {
   seats_contested: number;
   seats_won: number;
   seats_leading: number;
+  seats_2nd: number;
+  seats_close_3rd: number;
+  seats_distant_3rd: number;
+  seats_trailing: number;
   total_votes: number;
   vote_share: number;
   vote_share_2021_pct: number;

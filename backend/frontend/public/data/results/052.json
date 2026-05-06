@@ -6,31 +6,22 @@
     "district": "Palakkad"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 209627,
     "votes_polled": 166318,
     "votes_counted": 25254,
     "valid_votes": 25254,
-    "rounds_completed": 12,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:22:42.250830+00:00"
+    "last_updated": "2026-05-05T01:10:06.582738+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. K. Premkumar",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 67404,
-      "percentage": 45.22,
-      "is_winner": false,
-      "is_leading": true
-    },
-    {
-      "name": "Major Ravi",
-      "party": "BJP",
-      "alliance": "NDA",
-      "votes": 40282,
-      "percentage": 27.02,
+      "votes": 75362,
+      "percentage": 44.3,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +29,17 @@
       "name": "P. K. Sasi",
       "party": "IND_UDF",
       "alliance": "UDF",
-      "votes": 38167,
-      "percentage": 25.61,
+      "votes": 48585,
+      "percentage": 28.56,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Major Ravi",
+      "party": "BJP",
+      "alliance": "NDA",
+      "votes": 42476,
+      "percentage": 24.97,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Sasi P.K S/o Krishnankutty",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 908,
-      "percentage": 0.61,
+      "votes": 1062,
+      "percentage": 0.62,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "K.P Rajeesh",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 899,
+      "votes": 1025,
       "percentage": 0.6,
       "is_winner": false,
       "is_leading": false
@@ -65,7 +65,7 @@
       "name": "Muhammed Asharaf V.H",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 399,
+      "votes": 459,
       "percentage": 0.27,
       "is_winner": false,
       "is_leading": false

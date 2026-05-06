@@ -6,31 +6,31 @@
     "district": "Kasaragod"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 210090,
     "votes_polled": 167315,
     "votes_counted": 10315,
     "valid_votes": 10315,
-    "rounds_completed": 7,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:22:00.040240+00:00"
+    "last_updated": "2026-05-05T01:10:12.098110+00:00"
   },
   "candidates_2026": [
     {
       "name": "Sandeep Varier",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 36103,
-      "percentage": 48.5,
+      "votes": 83109,
+      "percentage": 48.63,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "V. P. P. Mustafa",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 33833,
-      "percentage": 45.45,
+      "votes": 78678,
+      "percentage": 46.04,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Ravi Kulangara",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 3816,
-      "percentage": 5.13,
+      "votes": 7837,
+      "percentage": 4.59,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Sandeep Elatt",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 149,
-      "percentage": 0.2,
+      "votes": 258,
+      "percentage": 0.15,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Musthafa P P",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 95,
-      "percentage": 0.13,
+      "votes": 169,
+      "percentage": 0.1,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Musthafa V P",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 73,
-      "percentage": 0.1,
+      "votes": 143,
+      "percentage": 0.08,
       "is_winner": false,
       "is_leading": false
     }

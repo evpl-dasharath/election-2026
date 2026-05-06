@@ -6,31 +6,31 @@
     "district": "Thrissur"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 203956,
     "votes_polled": 160900,
     "votes_counted": 31987,
     "valid_votes": 31987,
-    "rounds_completed": 15,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:22:48.314828+00:00"
+    "last_updated": "2026-05-05T01:09:55.926394+00:00"
   },
   "candidates_2026": [
     {
       "name": "U. R. Pradeep",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 73058,
-      "percentage": 46.57,
+      "votes": 76073,
+      "percentage": 46.63,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Sivan Veettikkunnu",
       "party": "IND_UDF",
       "alliance": "UDF",
-      "votes": 44401,
-      "percentage": 28.3,
+      "votes": 46687,
+      "percentage": 28.62,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "K. Balakrishnan",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 36422,
-      "percentage": 23.22,
+      "votes": 37286,
+      "percentage": 22.85,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "P. R. Vinod Kumar",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 1171,
-      "percentage": 0.75,
+      "votes": 1204,
+      "percentage": 0.74,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "K V Subramaniyan",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 650,
+      "votes": 669,
       "percentage": 0.41,
       "is_winner": false,
       "is_leading": false

@@ -6,31 +6,31 @@
     "district": "Kollam"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 205694,
     "votes_polled": 160050,
     "votes_counted": 17305,
     "valid_votes": 17305,
-    "rounds_completed": 11,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:23:43.972996+00:00"
+    "last_updated": "2026-05-05T01:10:03.201661+00:00"
   },
   "candidates_2026": [
     {
       "name": "Ullas Kovoor",
       "party": "RSP",
       "alliance": "UDF",
-      "votes": 56258,
-      "percentage": 50.2,
+      "votes": 81488,
+      "percentage": 49.66,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Kovoor Kunjumon",
       "party": "RSP(L)",
-      "alliance": "OTH",
-      "votes": 38011,
-      "percentage": 33.92,
+      "alliance": "LDF",
+      "votes": 56174,
+      "percentage": 34.23,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Raji Prasad",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 16758,
-      "percentage": 14.95,
+      "votes": 24841,
+      "percentage": 15.14,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Manthara Velayudhan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 264,
-      "percentage": 0.24,
+      "votes": 404,
+      "percentage": 0.25,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Sasidharan",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 225,
-      "percentage": 0.2,
+      "votes": 366,
+      "percentage": 0.22,
       "is_winner": false,
       "is_leading": false
     }

@@ -6,31 +6,31 @@
     "district": "Kollam"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 214513,
     "votes_polled": 169079,
     "votes_counted": 10417,
     "valid_votes": 10417,
-    "rounds_completed": 9,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:23:39.620221+00:00"
+    "last_updated": "2026-05-05T01:09:59.713908+00:00"
   },
   "candidates_2026": [
     {
       "name": "C. R. Mahesh",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 45967,
-      "percentage": 47.37,
+      "votes": 82593,
+      "percentage": 47.81,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Adv.M.S. Thara",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 30796,
-      "percentage": 31.74,
+      "votes": 55975,
+      "percentage": 32.4,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "V. S. Jithin Dev",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 19312,
-      "percentage": 19.9,
+      "votes": 32121,
+      "percentage": 18.6,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Latheef",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 511,
-      "percentage": 0.53,
+      "votes": 1227,
+      "percentage": 0.71,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Twinkle Prabhakaran",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 154,
-      "percentage": 0.16,
+      "votes": 295,
+      "percentage": 0.17,
       "is_winner": false,
       "is_leading": false
     }

@@ -6,31 +6,31 @@
     "district": "Kozhikode"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 173205,
     "votes_polled": 138962,
     "votes_counted": 10168,
     "valid_votes": 10168,
-    "rounds_completed": 10,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:22:25.213965+00:00"
+    "last_updated": "2026-05-05T01:10:02.304882+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. K Jayanth",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 35835,
-      "percentage": 35.34,
+      "votes": 50636,
+      "percentage": 35.78,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Thottathil Ravindran",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 35055,
-      "percentage": 34.58,
+      "votes": 49153,
+      "percentage": 34.73,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Navya Haridas",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 29169,
-      "percentage": 28.77,
+      "votes": 39899,
+      "percentage": 28.19,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Dr. Alphonsa Mathew",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 403,
-      "percentage": 0.4,
+      "votes": 542,
+      "percentage": 0.38,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Jayanth S",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 144,
-      "percentage": 0.14,
+      "votes": 174,
+      "percentage": 0.12,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Jayanth Kumar",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 121,
-      "percentage": 0.12,
+      "votes": 160,
+      "percentage": 0.11,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,7 +74,7 @@
       "name": "A Sajeena",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 93,
+      "votes": 124,
       "percentage": 0.09,
       "is_winner": false,
       "is_leading": false
@@ -83,7 +83,7 @@
       "name": "Raveendranathan Nair",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 46,
+      "votes": 68,
       "percentage": 0.05,
       "is_winner": false,
       "is_leading": false
@@ -92,7 +92,7 @@
       "name": "Raveendran",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 41,
+      "votes": 57,
       "percentage": 0.04,
       "is_winner": false,
       "is_leading": false
@@ -101,7 +101,7 @@
       "name": "Raveendran",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 36,
+      "votes": 55,
       "percentage": 0.04,
       "is_winner": false,
       "is_leading": false

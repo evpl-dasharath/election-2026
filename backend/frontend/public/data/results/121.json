@@ -6,31 +6,31 @@
     "district": "Kollam"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 197346,
     "votes_polled": 140095,
     "votes_counted": 8411,
     "valid_votes": 8411,
-    "rounds_completed": 13,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:23:56.028258+00:00"
+    "last_updated": "2026-05-05T01:10:09.052223+00:00"
   },
   "candidates_2026": [
     {
       "name": "C. Ajaya Prasad",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 59993,
-      "percentage": 51.49,
+      "votes": 71944,
+      "percentage": 50.47,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Noushad Yusuf",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 39442,
-      "percentage": 33.85,
+      "votes": 50415,
+      "percentage": 35.37,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Adv. B. Raghunathan Pillai",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 13134,
-      "percentage": 11.27,
+      "votes": 15393,
+      "percentage": 10.8,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Nedumoncavu Gopalakrishnan",
       "party": "EPI",
       "alliance": "OTH",
-      "votes": 1291,
-      "percentage": 1.11,
+      "votes": 1538,
+      "percentage": 1.08,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Jose Saranath",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 1124,
-      "percentage": 0.96,
+      "votes": 1425,
+      "percentage": 1.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "K. Mahesh",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 447,
-      "percentage": 0.38,
+      "votes": 560,
+      "percentage": 0.39,
       "is_winner": false,
       "is_leading": false
     }

@@ -1,0 +1,51 @@
+{
+  "code": "RMPI",
+  "full_name": "Revolutionary Marxist Party of India",
+  "alliance": "UDF",
+  "color_code": "#DC143C",
+  "seats_contested": 1,
+  "seats_won": 1,
+  "seats_leading": 0,
+  "seats_2nd": 0,
+  "seats_close_3rd": 0,
+  "seats_distant_3rd": 0,
+  "seats_trailing": 0,
+  "total_votes": 70117,
+  "vote_share": 49.11,
+  "vote_share_2021_pct": 47.75,
+  "constituencies": [
+    {
+      "id": 20,
+      "number": 20,
+      "name": "VADAKARA",
+      "district": "Kozhikode",
+      "region": "north",
+      "reserved": "General",
+      "leader": {
+        "name": "K. K. Rema",
+        "party": "RMPI",
+        "alliance": "UDF",
+        "votes": 70117,
+        "percentage": 48.97,
+        "party_color": "#DC143C"
+      },
+      "runner_up": {
+        "name": "M. K. Bhaskaran",
+        "party": "RJD",
+        "alliance": "LDF",
+        "votes": 55255,
+        "percentage": 38.59,
+        "party_color": "#336699"
+      },
+      "status": "RESULT_DECLARED",
+      "sitting_party": "RMPI",
+      "sitting_alliance": "UDF",
+      "total_electors": 176832,
+      "votes_polled": 140599,
+      "total_valid": 22690,
+      "party_pos": 1,
+      "margin_to_second": 40960,
+      "party_votes": 70117
+    }
+  ]
+}

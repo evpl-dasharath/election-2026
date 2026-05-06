@@ -6,31 +6,31 @@
     "district": "Kannur"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 232280,
     "votes_polled": 188170,
     "votes_counted": 11791,
     "valid_votes": 11791,
     "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T13:05:48.109469+00:00"
+    "last_updated": "2026-05-05T01:10:09.914663+00:00"
   },
   "candidates_2026": [
     {
       "name": "T K Govindan Master",
       "party": "IND_UDF",
       "alliance": "UDF",
-      "votes": 90946,
-      "percentage": 47.55,
+      "votes": 91339,
+      "percentage": 47.53,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "P. K. Shyamala",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 78378,
-      "percentage": 40.98,
+      "votes": 78788,
+      "percentage": 41.0,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,7 +38,7 @@
       "name": "N. Haridas",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 16010,
+      "votes": 16089,
       "percentage": 8.37,
       "is_winner": false,
       "is_leading": false
@@ -47,7 +47,7 @@
       "name": "Koyyam Janardhanan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 1201,
+      "votes": 1202,
       "percentage": 0.63,
       "is_winner": false,
       "is_leading": false
@@ -56,7 +56,7 @@
       "name": "Anappally Gopalan",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 1077,
+      "votes": 1083,
       "percentage": 0.56,
       "is_winner": false,
       "is_leading": false
@@ -65,7 +65,7 @@
       "name": "T. K. Govindan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 731,
+      "votes": 735,
       "percentage": 0.38,
       "is_winner": false,
       "is_leading": false
@@ -74,7 +74,7 @@
       "name": "Abdul Salam K P",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 363,
+      "votes": 366,
       "percentage": 0.19,
       "is_winner": false,
       "is_leading": false
@@ -92,7 +92,7 @@
       "name": "Khamaruddeen C V",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 281,
+      "votes": 283,
       "percentage": 0.15,
       "is_winner": false,
       "is_leading": false
@@ -101,7 +101,7 @@
       "name": "C Balakrishnan Yadav",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 197,
+      "votes": 198,
       "percentage": 0.1,
       "is_winner": false,
       "is_leading": false

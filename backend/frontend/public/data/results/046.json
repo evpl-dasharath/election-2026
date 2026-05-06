@@ -6,31 +6,31 @@
     "district": "Malappuram"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 243014,
     "votes_polled": 189380,
     "votes_counted": 0,
     "valid_votes": 0,
-    "rounds_completed": 5,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:22:37.044759+00:00"
+    "last_updated": "2026-05-05T01:10:01.698602+00:00"
   },
   "candidates_2026": [
     {
       "name": "Prof. K. K. Abid Hussain Thangal",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 35150,
-      "percentage": 64.16,
+      "votes": 118111,
+      "percentage": 61.77,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "K. Preethi",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 14761,
-      "percentage": 26.94,
+      "votes": 55473,
+      "percentage": 29.01,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Subrahmanian Chunkapally",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 2736,
-      "percentage": 4.99,
+      "votes": 10558,
+      "percentage": 5.52,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Adv. Majeed Marakkara",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 1418,
-      "percentage": 2.59,
+      "votes": 4557,
+      "percentage": 2.38,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "Preethi Kp",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 191,
+      "votes": 674,
       "percentage": 0.35,
       "is_winner": false,
       "is_leading": false
@@ -65,8 +65,8 @@
       "name": "Mohamed Rafi",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 108,
-      "percentage": 0.2,
+      "votes": 545,
+      "percentage": 0.29,
       "is_winner": false,
       "is_leading": false
     }

@@ -58,7 +58,24 @@ function PartyConstCard({
   const counting = c.status === 'IN_PROGRESS' || c.status === 'RESULT_DECLARED';
   const margin = c.leader && c.runner_up ? c.leader.votes - c.runner_up.votes : null;
   const isClose = margin !== null && margin < TIGHT_MARGIN;
-  const isWinning = c.leader?.party === partyCode;
+  
+  const enriched = c as any;
+  const outcome = enriched.movement === 'held' || enriched.movement === 'gained' 
+    ? (enriched.movement === 'held' ? 'won' : 'gained')
+    : (enriched.movement === 'lost' ? 'lost' : (enriched.placing || 'trailing'));
+
+  const outcomeBadge: Record<string, { label: string; color: string }> = {
+    won: { label: c.status === 'RESULT_DECLARED' ? 'WON' : 'LEADING', color: '#16A34A' },
+    gained: { label: c.status === 'RESULT_DECLARED' ? 'GAINED' : 'GAINING', color: '#7C3AED' },
+    lost: { label: 'LOST', color: '#DC2626' },
+    '2nd': { label: '2ND', color: '#6B7280' },
+    close_3rd: { label: 'CLOSE 3RD', color: '#F59E0B' },
+    distant_3rd: { label: 'DISTANT 3RD', color: '#9CA3AF' },
+    trailing: { label: 'TRAILING', color: '#D1D5DB' },
+    pending: { label: 'AWAITED', color: '#D1D5DB' },
+  };
+
+  const isWinning = outcome === 'won' || outcome === 'gained';
   const cardBg = counting && isWinning ? partyColor : counting ? '#4B5563' : '#FDFCFB';
 
   return (
@@ -77,7 +94,15 @@ function PartyConstCard({
         <span className="font-mono text-[9px]" style={{ color: counting ? 'rgba(255,255,255,0.5)' : '#9CA3AF' }}>
           #{String(c.number).padStart(3, '0')}
         </span>
-        <ClassBadge cls={seatCls} alliance={ownerAl} />
+        <div className="flex gap-1 items-center">
+          <ClassBadge cls={seatCls} alliance={ownerAl} />
+          {counting && (
+            <span className="text-[8px] font-black tracking-wider px-1.5 py-0.5 rounded"
+              style={{ backgroundColor: 'rgba(0,0,0,0.45)', color: 'rgba(255,255,255,0.95)' }}>
+              {outcomeBadge[outcome]?.label || 'PENDING'}
+            </span>
+          )}
+        </div>
       </div>
       <div className="font-bold leading-snug mb-1 text-[13px]" style={{ color: counting ? 'white' : '#1A1611' }}>{c.name}</div>
       <div className="text-[9px] mb-2" style={{ color: counting ? 'rgba(255,255,255,0.55)' : '#9CA3AF' }}>
@@ -164,8 +189,11 @@ export default function PartyPage() {
 
   const [rawProfile, setRawProfile] = useState<SeatClass | null>(null);
   const [rawOutcome, setRawOutcome] = useState<string | null>(null);
+  const [rawMovement, setRawMovement] = useState<string | null>(null);
   const [rawMargin, setRawMargin] = useState<string | null>(null);
-  const [sortBy, setSortBy] = useState<'number' | 'margin'>('number');
+  const [rawVotes, setRawVotes] = useState<number | null>(null);
+  const [rawVoteShare, setRawVoteShare] = useState<number | null>(null);
+  const [sortBy, setSortBy] = useState<'number' | 'margin' | 'votes' | 'vote_share'>('number');
 
   const classMap = useMemo(() => {
     const map: Record<number, { seatClass: SeatClass; ownerAlliance: string | null }> = {};
@@ -195,38 +223,63 @@ export default function PartyPage() {
     if (!partyDetail?.constituencies) return [];
     return partyDetail.constituencies.map(c => {
       const cls = classMap[c.number] || { seatClass: "Opponent's" as SeatClass, ownerAlliance: null };
-      const margin = c.leader && c.runner_up ? c.leader.votes - c.runner_up.votes : null;
       const sitting = c.sitting_alliance?.toUpperCase();
-      const currentLeader = c.leader?.alliance?.toUpperCase();
-      const isWinning = c.leader?.party === partyDetail.code;
-      let outcome = 'pending';
-      if ((c.status === 'IN_PROGRESS' || c.status === 'RESULT_DECLARED') && currentLeader) {
-        if (isWinning) outcome = sitting === partyDetail.alliance ? 'held' : 'gained';
-        else if (sitting === partyDetail.alliance) outcome = 'lost';
-        else outcome = 'trailing';
-      }
-      return { ...c, seatClass: cls.seatClass, ownerAlliance: cls.ownerAlliance, margin, outcome };
+      const margin = c.leader && c.runner_up ? c.leader.votes - c.runner_up.votes : null;
+      
+      const marginToSecond = c.margin_to_second !== undefined ? c.margin_to_second : null;
+      const partyPos = c.party_pos !== undefined ? c.party_pos : null;
+      const partyVotes = c.party_votes || 0;
+      const totalValid = c.total_valid || 0;
+      
+      // Calculate vote share
+      const voteShare = totalValid > 0 ? (partyVotes / totalValid) * 100 : 0;
+
+      let placing: string | null = null;
+      if (partyPos === 1) placing = 'won';
+      else if (partyPos === 2) placing = '2nd';
+      else if (partyPos === 3) placing = (marginToSecond !== null && marginToSecond < 5000) ? 'close_3rd' : 'distant_3rd';
+
+      let movement: string | null = null;
+      if (partyPos === 1) movement = sitting === partyDetail.alliance ? 'held' : 'gained';
+      else if (sitting === partyDetail.alliance) movement = 'lost';
+
+      return { ...c, seatClass: cls.seatClass, ownerAlliance: cls.ownerAlliance, margin, placing, movement, partyVotes, voteShare };
     });
   }, [partyDetail, classMap]);
 
   const filteredConsts = useMemo(() => {
     let rows = enrichedConsts;
-    if (rawProfile) rows = rows.filter(r => r.seatClass === rawProfile);
-    if (rawOutcome === 'holding') rows = rows.filter(r => r.outcome === 'held');
-    else if (rawOutcome === 'gained') rows = rows.filter(r => r.outcome === 'gained');
-    else if (rawOutcome === 'lost') rows = rows.filter(r => r.outcome === 'lost');
-    else if (rawOutcome === 'trailing') rows = rows.filter(r => r.outcome === 'trailing');
+    if (rawProfile) rows = rows.filter(r => r.seatClass === rawProfile && r.ownerAlliance === partyDetail?.alliance);
+    if (rawOutcome) rows = rows.filter(r => r.placing === rawOutcome);
+    if (rawMovement) rows = rows.filter(r => r.movement === rawMovement);
+
     if (rawMargin === 'safe') rows = rows.filter(r => r.margin !== null && r.margin >= 5000);
     else if (rawMargin === 'comfortable') rows = rows.filter(r => r.margin !== null && r.margin >= 2000 && r.margin < 5000);
     else if (rawMargin === 'close') rows = rows.filter(r => r.margin !== null && r.margin < 2000);
-    return [...rows].sort((a, b) => sortBy === 'margin' ? (b.margin ?? -1) - (a.margin ?? -1) : a.number - b.number);
-  }, [enrichedConsts, rawProfile, rawOutcome, rawMargin, sortBy]);
+
+    if (rawVotes !== null) {
+      if (rawVotes === 100000) rows = rows.filter(r => r.partyVotes >= 90000);
+      else rows = rows.filter(r => r.partyVotes >= rawVotes && r.partyVotes < rawVotes + 10000);
+    }
+
+    if (rawVoteShare !== null) {
+      if (rawVoteShare === 55) rows = rows.filter(r => r.voteShare >= 55);
+      else rows = rows.filter(r => r.voteShare >= rawVoteShare && r.voteShare < rawVoteShare + 5);
+    }
+
+    return [...rows].sort((a, b) => {
+      if (sortBy === 'margin') return (b.margin ?? -1) - (a.margin ?? -1);
+      if (sortBy === 'votes') return (b.partyVotes ?? -1) - (a.partyVotes ?? -1);
+      if (sortBy === 'vote_share') return (b.voteShare ?? -1) - (a.voteShare ?? -1);
+      return a.number - b.number;
+    });
+  }, [enrichedConsts, rawProfile, rawOutcome, rawMovement, rawMargin, rawVotes, rawVoteShare, sortBy, partyDetail]);
 
   const partyColor = partyDetail?.color_code || ac(partyDetail?.alliance || 'OTH');
   const allianceColor = ac(partyDetail?.alliance || 'OTH');
   const totalWonLeading = (partyDetail?.seats_won || 0) + (partyDetail?.seats_leading || 0);
   const swingVs2021 = partyDetail ? partyDetail.vote_share - partyDetail.vote_share_2021_pct : 0;
-  const hasAnyFilter = rawProfile || rawOutcome || rawMargin;
+  const hasAnyFilter = rawProfile || rawOutcome || rawMovement || rawMargin || rawVotes !== null || rawVoteShare !== null;
 
   return (
     <div className="flex flex-col min-h-screen bg-pagebg text-ink">
@@ -356,14 +409,17 @@ export default function PartyPage() {
                     {/* Stats — mirrors HomePage alliance row */}
                     <div className="flex items-end gap-0 overflow-x-auto custom-scrollbar pb-1 -mb-1">
                       {[
-                        { label: 'Won + Leading', value: totalWonLeading, color: partyColor },
-                        { label: 'Won', value: partyDetail.seats_won, color: '#1A1611' },
+                        { label: 'Won', value: partyDetail.seats_won, color: partyColor },
+                        { label: '2nd', value: partyDetail.seats_2nd, color: '#1A1611' },
+                        { label: 'Close 3rd', value: partyDetail.seats_close_3rd, color: '#F59E0B', desc: '< 10k margin' },
+                        { label: 'Dist. 3rd', value: partyDetail.seats_distant_3rd, color: '#6B7280', desc: '≥ 10k margin' },
                         { label: 'Contested', value: partyDetail.seats_contested, color: '#6B7280' },
                       ].map((s, i, arr) => (
                         <div key={s.label} className={`px-4 md:px-5 shrink-0 ${i < arr.length - 1 ? 'border-r border-pageborder' : ''}`}>
                           <div className="w-2 h-2 mb-1.5" style={{ backgroundColor: s.color }} />
                           <div className="text-[12px] font-semibold mb-0.5" style={{ color: s.color }}>{s.label}</div>
                           <div className="font-sans font-bold text-[20px] leading-none" style={{ color: s.color }}>{s.value}</div>
+                          {s.desc && <div className="text-[9px] text-ink2 mt-1 whitespace-nowrap font-medium">{s.desc}</div>}
                         </div>
                       ))}
                       <div className="px-4 md:px-5 shrink-0">
@@ -387,45 +443,79 @@ export default function PartyPage() {
                   <h2 className="text-[11px] font-bold tracking-widest uppercase text-ink2">
                     Constituencies · {filteredConsts.length} / {enrichedConsts.length}
                   </h2>
-                  <div className="flex gap-1.5">
-                    {(['number', 'margin'] as const).map(s => (
+                  <div className="flex gap-1.5 flex-wrap justify-end">
+                    {(['number', 'margin', 'votes', 'vote_share'] as const).map(s => (
                       <button key={s} onClick={() => setSortBy(s)}
-                        className="text-[10px] px-2.5 py-1 rounded-full cursor-pointer border font-semibold capitalize transition-all"
+                        className="text-[10px] px-2.5 py-1 rounded-full cursor-pointer transition-all duration-150 border font-semibold capitalize"
                         style={{
                           border: `1px solid ${sortBy === s ? '#1A1611' : '#D1CBC4'}`,
                           background: sortBy === s ? '#1A1611' : 'transparent',
                           color: sortBy === s ? '#fff' : '#5C5245',
                         }}>
-                        {s === 'number' ? '# Order' : 'By Margin'}
+                        {s === 'number' ? '# Order' : s === 'margin' ? 'By Margin' : s === 'votes' ? 'By Votes' : 'By Vote %'}
                       </button>
                     ))}
                   </div>
                 </div>
 
-                {/* Filter chips */}
-                <div className="bg-surface rounded-xl px-4 py-3 mb-4 shadow-sm flex gap-2 flex-wrap items-center">
-                  {(['Stronghold', 'Fragile', 'Leaning', 'Swing', "Opponent's"] as SeatClass[]).map(p => (
-                    <button key={p} onClick={() => setRawProfile(rawProfile === p ? null : p)}
+                {/* Filter Row 1: Profile */}
+                <div className="bg-surface rounded-xl px-4 py-3 mb-2 shadow-sm flex gap-2 flex-wrap items-center">
+                  <span className="text-[10px] font-bold tracking-widest uppercase text-ink2 mr-1">Profile:</span>
+                  {(['Stronghold', 'Leaning', 'Fragile', 'Swing', "Opponent's"] as SeatClass[]).map(p => (
+                    <button key={p}
+                      onClick={() => setRawProfile(rawProfile === p ? null : p)}
                       className="text-[10px] px-2.5 py-1 rounded-full cursor-pointer border font-medium transition-all"
                       style={{
-                        border: `1px solid ${rawProfile === p ? '#1A1611' : '#D1CBC4'}`,
-                        background: rawProfile === p ? '#1A1611' : 'transparent',
+                        border: `1px solid ${rawProfile === p ? partyColor : '#D1CBC4'}`,
+                        background: rawProfile === p ? partyColor : 'transparent',
                         color: rawProfile === p ? '#fff' : '#5C5245',
                       }}>{p}</button>
                   ))}
-                  <span className="border-l border-pageborder h-4" />
-                  {(['holding', 'gained', 'lost', 'trailing'] as const).map(o => (
-                    <button key={o} onClick={() => setRawOutcome(rawOutcome === o ? null : o)}
+                  {hasAnyFilter && (
+                    <button
+                      onClick={() => { setRawProfile(null); setRawOutcome(null); setRawMovement(null); setRawMargin(null); setRawVotes(null); setRawVoteShare(null); }}
+                      className="text-[10px] px-2.5 py-1 rounded-full cursor-pointer border font-medium transition-all ml-auto"
+                      style={{ border: '1px solid #DC2626', color: '#DC2626', background: 'transparent' }}>
+                      ✕ Clear All
+                    </button>
+                  )}
+                </div>
+                {/* Filter Row 2: Metrics */}
+                <div className="bg-surface rounded-xl px-4 py-3 mb-4 shadow-sm flex gap-2 flex-wrap items-center">
+                  <span className="text-[10px] font-bold tracking-widest uppercase text-ink2 mr-1">Metrics:</span>
+                  
+                  {/* Placing */}
+                  {([
+                    { k: 'won', l: 'Won' }, { k: '2nd', l: '2nd' }, { k: 'close_3rd', l: 'Close 3rd' }, { k: 'distant_3rd', l: 'Distant 3rd' }
+                  ] as const).map(({ k, l }) => (
+                    <button key={k}
+                      onClick={() => setRawOutcome(rawOutcome === k ? null : k)}
+                      className="text-[10px] px-2.5 py-1 rounded-full cursor-pointer border font-medium transition-all"
+                      style={{
+                        border: `1px solid ${rawOutcome === k ? '#1A1611' : '#D1CBC4'}`,
+                        background: rawOutcome === k ? '#1A1611' : 'transparent',
+                        color: rawOutcome === k ? '#fff' : '#5C5245',
+                      }}>{l}</button>
+                  ))}
+                  <span className="border-l border-pageborder h-4 mx-1" />
+                  
+                  {/* Movement */}
+                  {(['held', 'gained', 'lost'] as const).map(o => (
+                    <button key={o}
+                      onClick={() => setRawMovement(rawMovement === o ? null : o)}
                       className="text-[10px] px-2.5 py-1 rounded-full cursor-pointer border font-medium capitalize transition-all"
                       style={{
-                        border: `1px solid ${rawOutcome === o ? partyColor : '#D1CBC4'}`,
-                        background: rawOutcome === o ? partyColor + '22' : 'transparent',
-                        color: rawOutcome === o ? partyColor : '#5C5245',
+                        border: `1px solid ${rawMovement === o ? '#1A1611' : '#D1CBC4'}`,
+                        background: rawMovement === o ? '#1A1611' : 'transparent',
+                        color: rawMovement === o ? '#fff' : '#5C5245',
                       }}>{o}</button>
                   ))}
-                  <span className="border-l border-pageborder h-4" />
-                  {[{ k: 'safe', l: 'Safe 5k+' }, { k: 'comfortable', l: '2–5k' }, { k: 'close', l: '<2k' }].map(({ k, l }) => (
-                    <button key={k} onClick={() => setRawMargin(rawMargin === k ? null : k)}
+                  <span className="border-l border-pageborder h-4 mx-1" />
+                  
+                  {/* Margins */}
+                  {[{ k: 'safe', l: 'Safe 5k+' }, { k: 'comfortable', l: '2–5k' }, { k: 'close', l: 'Close <2k' }].map(({ k, l }) => (
+                    <button key={k}
+                      onClick={() => setRawMargin(rawMargin === k ? null : k)}
                       className="text-[10px] px-2.5 py-1 rounded-full cursor-pointer border font-medium transition-all"
                       style={{
                         border: `1px solid ${rawMargin === k ? '#1A1611' : '#D1CBC4'}`,
@@ -433,14 +523,35 @@ export default function PartyPage() {
                         color: rawMargin === k ? '#fff' : '#5C5245',
                       }}>{l}</button>
                   ))}
-                  {hasAnyFilter && (
-                    <button
-                      onClick={() => { setRawProfile(null); setRawOutcome(null); setRawMargin(null); }}
-                      className="text-[10px] px-2.5 py-1 rounded-full cursor-pointer border font-medium ml-auto"
-                      style={{ border: '1px solid #DC2626', color: '#DC2626', background: 'transparent' }}>
-                      ✕ Clear
-                    </button>
-                  )}
+                  <span className="border-l border-pageborder h-4 mx-1" />
+                  
+                  {/* Votes Bucket Select */}
+                  <select 
+                    value={rawVotes || ''} 
+                    onChange={(e) => setRawVotes(e.target.value ? Number(e.target.value) : null)}
+                    className="text-[10px] px-2 py-1 rounded-full border border-pageborder bg-transparent outline-none cursor-pointer"
+                    style={{ color: rawVotes ? '#1A1611' : '#5C5245', fontWeight: rawVotes ? 600 : 400 }}
+                  >
+                    <option value="">Votes...</option>
+                    {[5000, 10000, 20000, 30000, 40000, 50000, 60000, 70000, 80000, 90000].map(v => (
+                      <option key={v} value={v}>{v/1000}k - {(v+10000)/1000}k</option>
+                    ))}
+                    <option value={100000}>90k+</option>
+                  </select>
+                  
+                  {/* Vote Share Select */}
+                  <select 
+                    value={rawVoteShare || ''} 
+                    onChange={(e) => setRawVoteShare(e.target.value ? Number(e.target.value) : null)}
+                    className="text-[10px] px-2 py-1 rounded-full border border-pageborder bg-transparent outline-none cursor-pointer"
+                    style={{ color: rawVoteShare ? '#1A1611' : '#5C5245', fontWeight: rawVoteShare ? 600 : 400 }}
+                  >
+                    <option value="">Vote %...</option>
+                    {[5, 10, 15, 20, 25, 30, 35, 40, 45, 50].map(v => (
+                      <option key={v} value={v}>{v}% - {v+5}%</option>
+                    ))}
+                    <option value={55}>55%+</option>
+                  </select>
                 </div>
 
                 {filteredConsts.length === 0 ? (

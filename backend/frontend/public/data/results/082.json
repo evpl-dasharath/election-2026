@@ -6,31 +6,31 @@
     "district": "Ernakulam"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 136223,
     "votes_polled": 106485,
     "votes_counted": 7280,
     "valid_votes": 7280,
-    "rounds_completed": 13,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:23:09.629246+00:00"
+    "last_updated": "2026-05-05T01:09:57.141403+00:00"
   },
   "candidates_2026": [
     {
       "name": "T. J. Vinod",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 54078,
-      "percentage": 56.47,
+      "votes": 61296,
+      "percentage": 56.9,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Sabu George",
       "party": "ISJD",
       "alliance": "LDF",
-      "votes": 22350,
-      "percentage": 23.34,
+      "votes": 25133,
+      "percentage": 23.33,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "P.R. Sivasankar",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 17454,
-      "percentage": 18.23,
+      "votes": 19154,
+      "percentage": 17.78,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Moses Henry Motha",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 688,
-      "percentage": 0.72,
+      "votes": 783,
+      "percentage": 0.73,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Ashokan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 247,
-      "percentage": 0.26,
+      "votes": 287,
+      "percentage": 0.27,
       "is_winner": false,
       "is_leading": false
     }

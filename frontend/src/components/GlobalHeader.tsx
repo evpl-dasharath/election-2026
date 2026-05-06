@@ -113,107 +113,18 @@ export default function GlobalHeader() {
     }
   };
 
-  const staleBanner = staleness !== 'ok' && isElectionDay() ? (
-    <div
-      className="text-center text-[11px] font-semibold py-1 px-4"
-      style={{
-        background: staleness === 'error' ? 'rgba(239,68,68,0.15)' : 'rgba(245,158,11,0.15)',
-        color: staleness === 'error' ? '#FCA5A5' : '#FCD34D',
-        borderBottom: `1px solid ${staleness === 'error' ? 'rgba(239,68,68,0.2)' : 'rgba(245,158,11,0.2)'}`,
-      }}
-    >
-      {staleness === 'error'
-        ? '⚠ No data received for 20+ minutes — check network or backend'
-        : '⚠ No data updates for 10 minutes — feed may be delayed'}
-    </div>
-  ) : null;
-
-  const cachedBanner = dataSource === 'cached-json' ? (
-    <div
-      className="text-center text-[11px] font-semibold py-1 px-4 flex items-center justify-center gap-2"
-      style={{
-        background: 'rgba(251,146,60,0.12)',
-        color: '#FD9A5B',
-        borderBottom: '1px solid rgba(251,146,60,0.22)',
-      }}
-    >
-      <span
-        style={{
-          display: 'inline-block',
-          width: 7, height: 7,
-          borderRadius: '50%',
-          background: '#FB923C',
-          animation: 'cachedPulse 2s ease-in-out infinite',
-          flexShrink: 0,
-        }}
-      />
-      <span>
-        📦 Showing cached data
-        {cacheAge ? ` · snapshot loaded ${cacheAge}` : ''}
-        {' · '}
-        <span
-          onClick={handleRefresh}
-          style={{ textDecoration: 'underline', cursor: 'pointer', opacity: 0.85 }}
-          title="Retry Firebase connection"
-        >
-          Retry live
-        </span>
-      </span>
-    </div>
-  ) : null;
+  const staleBanner = null;
+  const cachedBanner = null;
 
   const StatusBadge = () => {
-    if (!isElectionDay()) {
-      return (
-        <div
-          className="flex items-center gap-1 text-[9px] font-bold tracking-wider px-2 py-0.5 rounded-full uppercase border select-none"
-          style={{ background: 'rgba(139,92,246,0.15)', border: '1px solid rgba(139,92,246,0.35)', color: '#A78BFA' }}
-          title="Pre-election: running in development mode. Goes live on May 4, 2026 at 8:00 AM IST."
-        >
-          <span className="text-[9px]">🛠</span> IN DEV
-        </div>
-      );
-    }
-    if (isRefreshing) {
-      return (
-        <button
-          onClick={handleRefresh}
-          className="flex items-center gap-1 text-[9px] font-bold tracking-wider px-2 py-0.5 rounded-full uppercase border transition-all duration-500 cursor-pointer select-none bg-blue-500/15 border-blue-500/30 text-blue-400"
-        >
-          <span className="inline-block animate-spin text-[11px] leading-none">↻</span>
-        </button>
-      );
-    }
-    if (staleness === 'error') {
-      return (
-        <button
-          onClick={handleRefresh}
-          title="Data stale 20+ min — click to refresh"
-          className="flex items-center gap-1 text-[9px] font-bold tracking-wider px-2 py-0.5 rounded-full uppercase border transition-all duration-500 cursor-pointer select-none bg-red-500/15 border-red-500/30 text-red-400"
-        >
-          <span className="text-[11px] leading-none">⚠</span><span>Stale</span>
-        </button>
-      );
-    }
-    if (staleness === 'warn') {
-      return (
-        <button
-          onClick={handleRefresh}
-          title="No update for 10 min — click to refresh"
-          className="flex items-center gap-1 text-[9px] font-bold tracking-wider px-2 py-0.5 rounded-full uppercase border transition-all duration-500 cursor-pointer select-none bg-amber-500/20 border-amber-500/40 text-amber-400"
-        >
-          <span className="text-[11px] leading-none">↻</span><span>Delayed</span>
-        </button>
-      );
-    }
     return (
-      <button
-        onClick={handleRefresh}
-        title="Live — data streaming from Firebase"
-        className="flex items-center gap-1 text-[9px] font-bold tracking-wider px-2 py-0.5 rounded-full uppercase border transition-all duration-500 cursor-pointer select-none bg-green-500/15 border-green-500/30 text-green-400"
+      <div
+        className="flex items-center gap-1.5 text-[9px] font-bold tracking-wider px-2.5 py-0.5 rounded-full uppercase border select-none bg-green-500/15 border-green-500/30 text-green-400"
+        title="Counting completed - final results"
       >
-        <div className="pulse" /><span>Live</span>
-      </button>
+        <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
+        <span>Counting Completed</span>
+      </div>
     );
   };
 

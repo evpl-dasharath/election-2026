@@ -167,9 +167,9 @@ export default function HistoryPage() {
       const la_2026: ElectionResult | null = (live?.status !== 'NOT_STARTED' && live?.leader)
         ? {
             winner: live.leader.name,
-            winner_party: live.leader.party,
-            winner_alliance: live.leader.alliance,
-            margin: null, // Since the definition doesn't fit live.leader.votes - live.runner_up.votes correctly, we can ignore or map properly
+            winner_party: live.leader.party.toUpperCase(),
+            winner_alliance: live.leader.alliance.toUpperCase(),
+            margin: null,
           }
         : null;
       return { ...h, la_2026, _live: live };

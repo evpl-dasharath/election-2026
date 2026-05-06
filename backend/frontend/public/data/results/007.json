@@ -6,31 +6,31 @@
     "district": "Kannur"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 203796,
     "votes_polled": 156902,
     "votes_counted": 23826,
     "valid_votes": 23826,
-    "rounds_completed": 12,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:22:03.924965+00:00"
+    "last_updated": "2026-05-05T01:09:58.955128+00:00"
   },
   "candidates_2026": [
     {
       "name": "M. Vijin",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 67847,
-      "percentage": 49.48,
+      "votes": 81428,
+      "percentage": 50.93,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Adv. Rajeevan Kappacheri",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 57027,
-      "percentage": 41.59,
+      "votes": 62995,
+      "percentage": 39.4,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "A.V. Sanil Kumar",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 10351,
-      "percentage": 7.55,
+      "votes": 13110,
+      "percentage": 8.2,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "K.K. Abdul Jabbar",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 1080,
-      "percentage": 0.79,
+      "votes": 1281,
+      "percentage": 0.8,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Rajeevan Kannoth S/o Kammaran",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 126,
-      "percentage": 0.09,
+      "votes": 160,
+      "percentage": 0.1,
       "is_winner": false,
       "is_leading": false
     }

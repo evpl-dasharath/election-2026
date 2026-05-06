@@ -19,7 +19,7 @@ const ALLIANCE_FULL: Record<string, string> = {
   nda: 'National Democratic Alliance',
 };
 
-const LARGE_MARGIN = 5000;
+const LARGE_MARGIN = 10000;
 const TIGHT_MARGIN = 2000;
 
 // ── Seat classification badge ─────────────────────────────────
@@ -83,112 +83,163 @@ function ConstCard({
   allianceCode: string;
   onClick: () => void;
 }) {
-  const countingStarted = c.status === 'IN_PROGRESS' || c.status === 'RESULT_DECLARED';
-  const alliance = c.leader?.alliance || 'OTH';
-  const cardColor = countingStarted ? ac(alliance) : undefined;
-  const margin = c.leader && c.runner_up ? c.leader.votes - c.runner_up.votes : null;
-  const isClose = margin !== null && margin < TIGHT_MARGIN;
-
+  const countingStarted = c.status === 'IN_PROGRESS' || c.status === 'RESULT_DECLARED' || c.status === 'COMPLETED';
+  
   const currentLeader = c.leader?.alliance?.toUpperCase();
   const sitting = c.sitting_alliance?.toUpperCase();
   const al = allianceCode.toUpperCase();
-  let outcome: 'leading' | 'gained' | 'lost' | 'trailing' | 'pending' = 'pending';
-  if (countingStarted && currentLeader) {
-    if (currentLeader === al) {
-      outcome = sitting === al ? 'leading' : 'gained';
-    } else if (sitting === al) {
+  let outcome: string = 'pending';
+  if (countingStarted) {
+    const enriched = c as any;
+    if (enriched.movement === 'held' || enriched.movement === 'gained') {
+      outcome = enriched.movement === 'held' ? 'leading' : 'gained';
+    } else if (enriched.movement === 'lost') {
       outcome = 'lost';
+    } else if (enriched.placing) {
+      outcome = enriched.placing;
     } else {
       outcome = 'trailing';
     }
   }
 
-  const outcomeBadge: Record<string, { label: string; color: string }> = {
-    leading: { label: c.status === 'RESULT_DECLARED' ? 'WON' : 'LEADING', color: '#16A34A' },
-    gained: { label: c.status === 'RESULT_DECLARED' ? 'GAINED' : 'GAINING', color: '#7C3AED' },
-    lost: { label: 'LOST', color: '#DC2626' },
-    trailing: { label: '2ND', color: '#6B7280' },
-    pending: { label: 'AWAITED', color: '#D1D5DB' },
+  const allianceColor = ac(al);
+
+  // Dynamic colors based on outcome
+  let cardBg = '#E8E4DF';
+  let textPrimary = '#1A1611';
+  let textSecondary = '#5C5245';
+  let subTextOpacity = '0.7';
+  let innerBoxBg = 'rgba(0,0,0,0.05)';
+  let labelBg = 'rgba(0,0,0,0.45)';
+  let labelFg = 'rgba(255,255,255,0.95)';
+
+  const outcomeLabels: Record<string, string> = {
+    leading: c.status === 'RESULT_DECLARED' || c.status === 'COMPLETED' ? 'WON' : 'LEADING',
+    gained: c.status === 'RESULT_DECLARED' || c.status === 'COMPLETED' ? 'WON' : 'LEADING',
+    lost: 'LOST',
+    '2nd': '2ND',
+    close_3rd: 'CLOSE 3RD',
+    distant_3rd: 'DISTANT 3RD',
+    trailing: 'TRAILING',
+    pending: 'AWAITED',
   };
+
+  let borderStyle = 'none';
+
+  if (countingStarted) {
+    if (outcome === 'leading' || outcome === 'gained') {
+      cardBg = allianceColor;
+      textPrimary = '#fff';
+      textSecondary = 'rgba(255,255,255,0.85)';
+      subTextOpacity = '0.6';
+      innerBoxBg = 'rgba(0,0,0,0.2)';
+    } else if (outcome === '2nd') {
+      cardBg = allianceColor + '15'; // Subtle tint
+      textPrimary = '#1A1611';       // High contrast dark text
+      textSecondary = '#5C5245';
+      subTextOpacity = '0.8';
+      innerBoxBg = allianceColor + '10';
+      labelBg = allianceColor;
+      borderStyle = `1px solid ${allianceColor}40`;
+    } else if (outcome === 'close_3rd') {
+      cardBg = '#FFFFFF';           // Clear white background for 3rd
+      textPrimary = '#1A1611';
+      textSecondary = '#5C5245';
+      subTextOpacity = '0.8';
+      innerBoxBg = 'rgba(0,0,0,0.03)';
+      labelBg = '#D97706';          // Amber for close 3rd to distinguish
+      borderStyle = `1px dashed ${allianceColor}60`;
+    } else {
+      // distant_3rd, trailing, lost
+      cardBg = '#F9FAFB';
+      textPrimary = '#6B7280';
+      textSecondary = '#9CA3AF';
+      subTextOpacity = '0.8';
+      innerBoxBg = 'rgba(0,0,0,0.02)';
+      labelBg = '#9CA3AF';
+      borderStyle = '1px solid #E5E7EB';
+    }
+  }
+
+  const marginValue = c.margin;
+  const isClose = (marginValue !== null && marginValue !== undefined) && Math.abs(marginValue) < TIGHT_MARGIN;
 
   return (
     <div
       onClick={onClick}
       style={{
-        background: countingStarted ? cardColor : '#E8E4DF',
+        background: cardBg,
         borderRadius: 12,
         padding: '12px 14px',
         cursor: 'pointer',
         position: 'relative',
-        boxShadow: isClose ? '0 4px 18px rgba(0,0,0,0.35)' : countingStarted ? '0 4px 14px rgba(26,22,17,0.14)' : '0 1px 4px rgba(0,0,0,0.15)',
+        boxShadow: isClose ? '0 4px 18px rgba(0,0,0,0.15)' : countingStarted ? '0 2px 8px rgba(0,0,0,0.03)' : '0 1px 4px rgba(0,0,0,0.05)',
         transition: 'transform 0.1s',
+        border: borderStyle,
       }}
       onMouseEnter={e => (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-2px)'}
       onMouseLeave={e => (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)'}
     >
       <div className="flex justify-between items-start mb-2">
-        <span className="font-mono text-[9px]" style={{ color: countingStarted ? 'rgba(255,255,255,0.5)' : '#9CA3AF' }}>
+        <span className="font-mono text-[9px]" style={{ color: (outcome === 'leading' || outcome === 'gained') ? 'rgba(255,255,255,0.6)' : '#9CA3AF' }}>
           #{String(c.number).padStart(3, '0')}
         </span>
         <div className="flex gap-1 items-center">
           <ClassBadge cls={seatCls} alliance={ownerAl} />
           <span className="text-[8px] font-black tracking-wider px-1.5 py-0.5 rounded"
-            style={{ backgroundColor: 'rgba(0,0,0,0.45)', color: 'rgba(255,255,255,0.95)' }}>
-            {outcomeBadge[outcome].label}
+            style={{ backgroundColor: labelBg, color: labelFg }}>
+            {outcomeLabels[outcome]}
           </span>
         </div>
       </div>
 
-      <div className="font-bold leading-snug mb-1 text-[13px]" style={{ color: countingStarted ? 'white' : '#1A1611' }}>
+      <div className="font-bold leading-snug mb-1 text-[14px]" style={{ color: textPrimary }}>
         {c.name}
       </div>
 
-      {c.sitting_alliance && (
-        <div className="text-[9px] mb-2" style={{ color: countingStarted ? 'rgba(255,255,255,0.6)' : '#9CA3AF' }}>
-          2021: <span style={{ fontWeight: 700, color: countingStarted ? 'rgba(255,255,255,0.85)' : ac(c.sitting_alliance) }}>{c.sitting_alliance}</span>
-          {(c as any).sitting_party && ` · ${(c as any).sitting_party}`}
-        </div>
-      )}
+      <div className="text-[9px] mb-2 flex items-center gap-1.5" style={{ color: textSecondary, opacity: subTextOpacity }}>
+        <span>2021: <span style={{ fontWeight: 700, color: (outcome === 'leading' || outcome === 'gained') ? '#fff' : ac(c.sitting_alliance || 'OTH') }}>{c.sitting_alliance}</span></span>
+        {c.sitting_party && <span className="opacity-60">· {c.sitting_party}</span>}
+      </div>
 
-      {countingStarted && c.leader ? (
+      {countingStarted && c.alliance_candidate_name ? (
         <>
-          <div className="flex justify-between items-center mb-1">
-            <span className="font-black leading-none text-[20px]" style={{ color: 'white' }}>
-              {margin !== null ? `+${margin.toLocaleString('en-IN')}` : '—'}
-            </span>
-            <div className="w-8 h-8 rounded-full flex items-center justify-center text-[9px] font-black shrink-0"
-              style={{ background: 'rgba(255,255,255,0.92)', color: cardColor }}>
-              {partyAbbr(c.leader.party)}
+          <div className="flex justify-between items-end mb-2">
+            <div>
+              <div className="text-[10px] font-bold opacity-80" style={{ color: textPrimary }}>
+                {c.alliance_party_code} Candidate
+              </div>
+              <div className="text-[13px] font-black" style={{ color: textPrimary }}>{c.alliance_candidate_name}</div>
+            </div>
+            <div className="text-right">
+              <div className="font-black text-[22px] leading-none" style={{ color: textPrimary }}>
+                {marginValue !== null && marginValue !== undefined ? (marginValue > 0 ? `+${marginValue.toLocaleString('en-IN')}` : marginValue.toLocaleString('en-IN')) : '—'}
+              </div>
+              <div className="text-[9px] font-bold opacity-70" style={{ color: textPrimary }}>MARGIN</div>
             </div>
           </div>
-          <div className="text-[11px] font-semibold mb-1" style={{ color: 'white' }}>{c.leader.name}</div>
-          {c.runner_up && (
-            <div className="text-[9px]" style={{ color: 'rgba(255,255,255,0.7)' }}>
-              2nd: {c.runner_up.name} · {c.runner_up.alliance}
+          
+          <div className="rounded-lg p-2 flex justify-between items-center" style={{ background: innerBoxBg }}>
+            <div>
+              <div className="text-[12px] font-black" style={{ color: textPrimary }}>{c.alliance_votes?.toLocaleString('en-IN')}</div>
+              <div className="text-[8px] font-bold tracking-wider" style={{ color: textPrimary, opacity: 0.6 }}>VOTES</div>
             </div>
-          )}
+            <div className="text-right">
+              <div className="text-[12px] font-black" style={{ color: textPrimary }}>{c.voteShare?.toFixed(1)}%</div>
+              <div className="text-[8px] font-bold tracking-wider" style={{ color: textPrimary, opacity: 0.6 }}>SHARE</div>
+            </div>
+          </div>
         </>
       ) : (
         <div className="text-[10px] italic flex items-center gap-1.5" style={{ color: '#9CA3AF' }}>
           <span className="inline-block w-1.5 h-1.5 rounded-full bg-neutral-400/60" />
-          Not yet started
+          {countingStarted ? 'No candidate info' : 'Awaiting results'}
         </div>
       )}
     </div>
   );
 }
 
-// ── Named filter definitions ──────────────────────────────────
-type NamedFilter =
-  | 'strongholds_pressure'
-  | 'strongholds_lost'
-  | 'fragile_holding'
-  | 'fragile_lost'
-  | 'swing_won'
-  | 'opponent_captured'
-  | 'leaning_at_risk'
-  | 'surprise_collapse'
-  | 'growing_in_loss';
 
 // ── Main page ─────────────────────────────────────────────────
 export default function AlliancePage() {
@@ -203,21 +254,46 @@ export default function AlliancePage() {
   const { data: allHistory } = useAllHistorical();
   const { data: allConst } = useConstituencies();
 
-  const [namedFilter, setNamedFilter] = useState<NamedFilter | null>(null);
   const [rawProfile, setRawProfile] = useState<SeatClass | null>(null);
   const [rawOutcome, setRawOutcome] = useState<string | null>(null);
+  const [rawMovement, setRawMovement] = useState<string | null>(null);
   const [rawMargin, setRawMargin] = useState<string | null>(null);
-  const [rawVote, setRawVote] = useState<string | null>(null);
-  const [sortBy, setSortBy] = useState<'number' | 'margin' | 'swing'>('number');
+  const [rawVotes, setRawVotes] = useState<number | null>(null);
+  const [rawVoteShare, setRawVoteShare] = useState<number | null>(null);
+  const [sortBy, setSortBy] = useState<'number' | 'margin' | 'votes' | 'vote_share'>('number');
+  const [activeTab, setActiveTab] = useState<'summary' | 'constituencies'>('summary');
 
   const classMap = useMemo(() => {
     const map: Record<number, { seatClass: SeatClass; ownerAlliance: string | null }> = {};
     if (!allHistory) return map;
     allHistory.forEach(h => {
-      map[h.constituency_number] = classifySeat(h);
+      const results = [h.la_2011, h.la_2016, h.la_2021];
+      
+      // 1. Check if the selected alliance "owns" it (Strong/Lean/Fragile only)
+      const clsForUs = classifyForAlliance(allianceUpper, results);
+      if (clsForUs === 'Stronghold' || clsForUs === 'Leaning' || clsForUs === 'Fragile') {
+        map[h.constituency_number] = {
+          seatClass: clsForUs,
+          ownerAlliance: allianceUpper
+        };
+      } else {
+        // 2. Not ours. Is it a global Swing or belongs to someone else?
+        const global = classifySeat(h);
+        if (global.seatClass === 'Swing') {
+          map[h.constituency_number] = {
+            seatClass: 'Swing',
+            ownerAlliance: null
+          };
+        } else {
+          map[h.constituency_number] = {
+            seatClass: "Opponent's",
+            ownerAlliance: global.ownerAlliance
+          };
+        }
+      }
     });
     return map;
-  }, [allHistory]);
+  }, [allHistory, allianceUpper]);
 
   const enriched = useMemo(() => {
     if (!data?.constituencies) return [];
@@ -226,64 +302,75 @@ export default function AlliancePage() {
       const currentLeader = c.leader?.alliance?.toUpperCase();
       const sitting = c.sitting_alliance?.toUpperCase();
       const al = allianceUpper;
-      const margin = c.leader && c.runner_up ? c.leader.votes - c.runner_up.votes : null;
+      
+      const marginToSecond = c.margin_to_second !== undefined ? c.margin_to_second : null;
+      const alliancePos = c.alliance_pos !== undefined ? c.alliance_pos : null;
+      const allianceVotes = c.alliance_votes || 0;
+      const totalValid = c.total_valid || 0;
+      const voteShare = totalValid > 0 ? (allianceVotes / totalValid) * 100 : 0; 
+      // Let's rely on allianceVotes for now since that is 100% accurate.
 
-      let outcome: string = 'pending';
-      if ((c.status === 'IN_PROGRESS' || c.status === 'RESULT_DECLARED') && currentLeader) {
-        if (currentLeader === al) outcome = sitting === al ? 'held' : 'gained';
-        else if (sitting === al) outcome = 'lost';
-        else outcome = 'trailing';
+      let placing: string | null = null;
+      if (alliancePos === 1) placing = 'won';
+      else if (alliancePos === 2) placing = '2nd';
+      else if (alliancePos === 3) placing = (marginToSecond !== null && marginToSecond < 10000) ? 'close_3rd' : 'distant_3rd';
+
+      let movement: string | null = null;
+      if (currentLeader === al) movement = sitting === al ? 'held' : 'gained';
+      else if (sitting === al) movement = 'lost';
+
+      let relativeMargin = null;
+      if (c.leader) {
+        if (alliancePos === 1) {
+          relativeMargin = c.runner_up ? c.leader.votes - c.runner_up.votes : c.leader.votes;
+        } else {
+          relativeMargin = allianceVotes - c.leader.votes;
+        }
       }
 
-      return { ...c, seatClass: cls.seatClass, ownerAlliance: cls.ownerAlliance, outcome, margin };
+      return { 
+        ...c, 
+        seatClass: cls.seatClass, 
+        ownerAlliance: cls.ownerAlliance, 
+        placing,
+        movement,
+        margin: relativeMargin,
+        allianceVotes,
+        voteShare
+      };
     });
-  }, [data, classMap, allianceUpper, allHistory]);
+  }, [data, classMap, allianceUpper]);
 
-  function applyNamed(f: NamedFilter | null) {
-    setNamedFilter(f);
-    setRawProfile(null);
-    setRawOutcome(null);
-    setRawMargin(null);
-    setRawVote(null);
-  }
 
   const filtered = useMemo(() => {
     let rows = enriched;
 
-    if (namedFilter) {
-      rows = rows.filter(r => {
-        const cls = r.seatClass;
-        const out = r.outcome;
-        const m = r.margin;
-        switch (namedFilter) {
-          case 'strongholds_pressure': return cls === 'Stronghold' && (out === 'held') && false;
-          case 'strongholds_lost': return cls === 'Stronghold' && out === 'lost';
-          case 'fragile_holding': return cls === 'Fragile' && (out === 'held' || out === 'leading');
-          case 'fragile_lost': return cls === 'Fragile' && out === 'lost';
-          case 'swing_won': return cls === 'Swing' && (out === 'gained' || out === 'held');
-          case 'opponent_captured': return cls === "Opponent's" && out === 'gained';
-          case 'leaning_at_risk': return cls === 'Leaning' && (out === 'lost' || out === 'trailing');
-          case 'surprise_collapse': return out === 'trailing' && m !== null && m < -10000;
-          case 'growing_in_loss': return out === 'lost';
-          default: return true;
-        }
-      });
-    } else {
-      if (rawProfile) rows = rows.filter(r => r.seatClass === rawProfile);
-      if (rawOutcome === 'holding') rows = rows.filter(r => r.outcome === 'held' || r.outcome === 'leading');
-      else if (rawOutcome === 'gained') rows = rows.filter(r => r.outcome === 'gained');
-      else if (rawOutcome === 'lost') rows = rows.filter(r => r.outcome === 'lost');
-      else if (rawOutcome === 'runner-up') rows = rows.filter(r => r.outcome === 'trailing');
-      if (rawMargin === 'safe') rows = rows.filter(r => r.margin !== null && r.margin >= LARGE_MARGIN);
-      else if (rawMargin === 'comfortable') rows = rows.filter(r => r.margin !== null && r.margin >= TIGHT_MARGIN && r.margin < LARGE_MARGIN);
-      else if (rawMargin === 'close') rows = rows.filter(r => r.margin !== null && r.margin < TIGHT_MARGIN);
+    if (rawProfile) rows = rows.filter(r => r.seatClass === rawProfile);
+    if (rawOutcome) rows = rows.filter(r => r.placing === rawOutcome);
+    if (rawMovement) rows = rows.filter(r => r.movement === rawMovement);
+    
+    if (rawMargin === 'safe') rows = rows.filter(r => r.margin !== null && r.margin >= 10000);
+    else if (rawMargin === 'comfortable') rows = rows.filter(r => r.margin !== null && r.margin >= 2000 && r.margin < 10000);
+    else if (rawMargin === 'close') rows = rows.filter(r => r.margin !== null && Math.abs(r.margin) < 2000);
+
+    if (rawVotes !== null) {
+      if (rawVotes === 100000) rows = rows.filter(r => r.allianceVotes >= 90000); // Hack for >= max bucket
+      else rows = rows.filter(r => r.allianceVotes >= rawVotes && r.allianceVotes < rawVotes + 10000);
+    }
+    
+    if (rawVoteShare !== null) {
+      if (rawVoteShare === 55) rows = rows.filter(r => r.voteShare >= 55);
+      else rows = rows.filter(r => r.voteShare >= rawVoteShare && r.voteShare < rawVoteShare + 5);
     }
 
     return [...rows].sort((a, b) => {
       if (sortBy === 'margin') return (b.margin ?? -1) - (a.margin ?? -1);
+      if (sortBy === 'votes') return (b.allianceVotes ?? -1) - (a.allianceVotes ?? -1);
+      if (sortBy === 'vote_share') return (b.voteShare ?? -1) - (a.voteShare ?? -1);
+      // Fallback
       return a.number - b.number;
     });
-  }, [enriched, namedFilter, rawProfile, rawOutcome, rawMargin, rawVote, sortBy]);
+  }, [enriched, rawProfile, rawOutcome, rawMovement, rawMargin, rawVotes, sortBy, allianceUpper]);
 
   if (loading) {
     return (
@@ -303,7 +390,7 @@ export default function AlliancePage() {
 
   const totalWonLeading = (data?.seats_won || 0) + (data?.seats_leading || 0);
   const swingVs2021 = data ? data.vote_share - data.vote_share_2021_pct : 0;
-  const hasAnyFilter = namedFilter || rawProfile || rawOutcome || rawMargin || rawVote;
+  const hasAnyFilter = rawProfile || rawOutcome || rawMovement || rawMargin || rawVotes !== null || rawVoteShare !== null;
 
   return (
     <div className="flex flex-col min-h-screen bg-pagebg text-ink">
@@ -345,18 +432,20 @@ export default function AlliancePage() {
             {/* Stat strip — mirrors HomePage alliance row */}
             <div className="flex items-end gap-0 overflow-x-auto custom-scrollbar pb-1 -mb-1">
               {[
-                { label: 'Leading + Won', value: totalWonLeading, color: allianceColor },
-                { label: 'Won', value: data?.seats_won || 0, color: '#1A1611' },
-                { label: 'Trailing', value: data?.seats_trailing || 0, color: '#6B7280' },
+                { label: 'Won', value: data?.seats_won || 0, color: allianceColor },
+                { label: '2nd', value: data?.seats_2nd || 0, color: '#1A1611' },
+                { label: 'Close 3rd', value: data?.seats_close_3rd || 0, color: '#F59E0B', desc: '< 10k margin' },
+                { label: 'Distant 3rd', value: data?.seats_distant_3rd || 0, color: '#6B7280', desc: '≥ 10k margin' },
                 { label: 'Contested', value: data?.seats_contested || 0, color: '#6B7280' },
               ].map((s, i, arr) => (
                 <div key={s.label} className={`px-5 md:px-6 shrink-0 ${i < arr.length - 1 ? 'border-r border-pageborder' : ''}`}>
                   <div className="w-2.5 h-2.5 mb-2" style={{ backgroundColor: s.color }} />
                   <div className="text-[13px] font-semibold mb-0.5" style={{ color: s.color }}>{s.label}</div>
                   <div className="font-sans font-bold text-[22px] leading-none" style={{ color: s.color }}>{s.value}</div>
+                  {s.desc && <div className="text-[10px] text-ink2 mt-1 whitespace-nowrap font-medium">{s.desc}</div>}
                 </div>
               ))}
-              <div className="px-5 md:px-6 shrink-0">
+              <div className="px-5 md:px-6 shrink-0 border-l border-pageborder">
                 <div className="w-2.5 h-2.5 mb-2 bg-ink" />
                 <div className="text-[13px] font-semibold mb-0.5 text-ink">Vote Share</div>
                 <div className="font-sans font-bold text-[22px] leading-none text-ink">
@@ -368,6 +457,16 @@ export default function AlliancePage() {
                   </div>
                 )}
               </div>
+              
+              {data?.parties && data.parties.length > 0 && data.parties.map((p) => (
+                <div key={p.code} className="px-5 md:px-6 shrink-0 border-l border-pageborder">
+                  <div className="w-2.5 h-2.5 mb-2" style={{ backgroundColor: p.color || allianceColor }} />
+                  <div className="text-[13px] font-semibold mb-0.5" style={{ color: p.color || allianceColor }}>{p.code}</div>
+                  <div className="font-sans font-bold text-[22px] leading-none" style={{ color: p.color || allianceColor }}>
+                    {p.won} <span className="font-sans font-semibold text-[14px] text-ink2 ml-0.5">/ {p.contested}</span>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -376,219 +475,278 @@ export default function AlliancePage() {
       {/* ── Content ── */}
       <div className="flex-1 w-full px-4 md:px-8 py-5 space-y-6">
 
-        {/* ── Seat Movement ── */}
-        <section>
-          <h2 className="text-[11px] font-bold tracking-widest uppercase text-ink2 mb-3">Seat Movement vs 2021</h2>
-          <div className="grid grid-cols-3 gap-3 mb-4">
-            {[
-              { label: 'Gained', value: data?.seat_movement.gained || 0, color: '#7C3AED', desc: 'Not held in 2021' },
-              { label: 'Held', value: data?.seat_movement.held || 0, color: allianceColor, desc: 'Sitting seats defended' },
-              { label: 'Lost', value: data?.seat_movement.lost || 0, color: '#DC2626', desc: 'Sitting seats lost' },
-            ].map(s => (
-              <div key={s.label}
-                className="bg-surface rounded-xl px-4 py-3 shadow-sm">
-                <div className="font-mono text-[28px] font-black leading-none mb-1" style={{ color: s.color }}>{s.value}</div>
-                <div className="text-[12px] font-bold text-ink">{s.label}</div>
-                <div className="text-[11px] text-ink2 mt-0.5">{s.desc}</div>
-              </div>
-            ))}
-          </div>
+        {/* ── Tabs ── */}
+        <div className="flex gap-6 border-b border-pageborder px-1">
+          <button
+            onClick={() => setActiveTab('summary')}
+            className={`text-[12px] font-bold tracking-widest uppercase pb-3 transition-colors ${activeTab === 'summary' ? 'text-ink' : 'text-ink2 hover:text-ink'}`}
+            style={{ borderBottom: activeTab === 'summary' ? `2px solid ${allianceColor}` : '2px solid transparent', marginBottom: '-1px' }}
+          >
+            Summary
+          </button>
+          <button
+            onClick={() => setActiveTab('constituencies')}
+            className={`text-[12px] font-bold tracking-widest uppercase pb-3 transition-colors ${activeTab === 'constituencies' ? 'text-ink' : 'text-ink2 hover:text-ink'}`}
+            style={{ borderBottom: activeTab === 'constituencies' ? `2px solid ${allianceColor}` : '2px solid transparent', marginBottom: '-1px' }}
+          >
+            Constituencies
+          </button>
+        </div>
 
-          {/* Party breakdown table */}
-          {data?.parties && data.parties.length > 0 && (
-            <div className="bg-surface rounded-xl overflow-hidden shadow-sm">
-              <table className="w-full border-collapse">
-                <thead>
-                  <tr className="bg-pagebg border-b-2 border-pageborder">
-                    {['Party', 'Contested', 'Won / Leading', 'Vote Share', 'vs 2021'].map(h => (
-                      <th key={h} className="px-3 py-2.5 text-[10px] font-bold tracking-widest uppercase text-ink2"
-                        style={{ textAlign: h === 'Party' ? 'left' : 'right' }}>{h}</th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {data.parties.map(p => (
-                    <tr
-                      key={p.code}
-                      className="border-b border-pageborder cursor-pointer transition-colors hover:bg-pagebg"
-                      onClick={() => navigate(`/party/${p.code}`)}
-                    >
-                      <td className="px-3 py-2.5">
-                        <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 rounded-full shrink-0" style={{ background: p.color || allianceColor }} />
-                          <div>
-                            <div className="text-[13px] font-semibold text-ink">{p.code}</div>
-                            <div className="text-[11px] text-ink2">{p.name}</div>
-                          </div>
+        {activeTab === 'summary' ? (
+          <div className="space-y-6 animate-in fade-in slide-in-from-bottom-2 duration-300">
+            {/* ── Seat Movement ── */}
+            <section>
+              <h2 className="text-[11px] font-bold tracking-widest uppercase text-ink2 mb-3">Seat Movement vs 2021</h2>
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-4">
+                {[
+                  { label: 'Gained', value: data?.seat_movement.gained || 0, color: '#7C3AED', desc: 'Not held in 2021' },
+                  { label: 'Held', value: data?.seat_movement.held || 0, color: allianceColor, desc: 'Sitting seats defended' },
+                  { label: 'Lost', value: data?.seat_movement.lost || 0, color: '#DC2626', desc: 'Sitting seats lost' },
+                  { label: 'Pulled to 2nd', value: data?.seat_movement.pulled_up_to_2nd || 0, color: '#10B981', desc: 'Was 3rd+ in 2021' },
+                  { label: 'Pushed to 3rd', value: data?.seat_movement.pushed_to_3rd || 0, color: '#F59E0B', desc: 'Was 1st/2nd in 2021' },
+                ].map(s => (
+                  <div key={s.label}
+                    className="bg-surface rounded-xl px-4 py-3 shadow-sm">
+                    <div className="font-mono text-[28px] font-black leading-none mb-1" style={{ color: s.color }}>{s.value}</div>
+                    <div className="text-[12px] font-bold text-ink">{s.label}</div>
+                    <div className="text-[11px] text-ink2 mt-0.5">{s.desc}</div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Party breakdown table */}
+              {data?.parties && data.parties.length > 0 && (
+                <div className="bg-surface rounded-xl overflow-hidden shadow-sm">
+                  <table className="w-full border-collapse">
+                    <thead>
+                      <tr className="bg-pagebg border-b-2 border-pageborder">
+                        {['Party', 'Contested', 'Won', '2nd', 'Close 3rd', 'Distant 3rd', 'Strike Rate', 'Vote Share', 'vs 2021'].map(h => (
+                          <th key={h} className="px-3 py-2.5 text-[10px] font-bold tracking-widest uppercase text-ink2"
+                            style={{ textAlign: h === 'Party' ? 'left' : 'right' }}>{h}</th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {data.parties.map(p => (
+                        <tr
+                          key={p.code}
+                          className="border-b border-pageborder cursor-pointer transition-colors hover:bg-pagebg"
+                          onClick={() => navigate(`/party/${p.code}`)}
+                        >
+                          <td className="px-3 py-2.5">
+                            <div className="flex items-center gap-2">
+                              <div className="w-2 h-2 rounded-full shrink-0" style={{ background: p.color || allianceColor }} />
+                              <div>
+                                <div className="text-[13px] font-semibold text-ink">{p.code}</div>
+                                <div className="text-[11px] text-ink2">{p.name}</div>
+                              </div>
+                            </div>
+                          </td>
+                          <td className="px-3 py-2.5 text-right font-mono text-[13px] text-ink">{p.contested}</td>
+                          <td className="px-3 py-2.5 text-right font-mono text-[13px] font-bold" style={{ color: allianceColor }}>{p.won}</td>
+                          <td className="px-3 py-2.5 text-right font-mono text-[13px] text-ink">{p.seats_2nd || 0}</td>
+                          <td className="px-3 py-2.5 text-right font-mono text-[13px] text-ink">{p.seats_close_3rd || 0}</td>
+                          <td className="px-3 py-2.5 text-right font-mono text-[13px] text-ink">{p.seats_distant_3rd || 0}</td>
+                          <td className="px-3 py-2.5 text-right font-mono text-[13px] text-ink">{(p.contested > 0 ? (p.won / p.contested * 100) : 0).toFixed(1)}%</td>
+                          <td className="px-3 py-2.5 text-right font-mono text-[13px] text-ink">{p.vote_share?.toFixed(1)}%</td>
+                          <td className="px-3 py-2.5 text-right">
+                            <SwingPill value={(p.vote_share || 0) - (p.vote_share_2021_pct || 0)} />
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+            </section>
+
+            {/* ── Swing Analysis ── */}
+            {data?.swing_analysis && (
+              <section>
+                <h2 className="text-[11px] font-bold tracking-widest uppercase text-ink2 mb-3">Swing Analysis</h2>
+                <div className="bg-surface rounded-xl px-5 py-4 shadow-sm flex gap-6 flex-wrap">
+                  <div>
+                    <div className="text-[10px] font-bold tracking-widest uppercase mb-2" style={{ color: '#16A34A' }}>GAINED FROM</div>
+                    <div className="flex gap-4">
+                      {Object.entries(data.swing_analysis.gained_from).filter(([, v]) => v > 0).map(([al, v]) => (
+                        <div key={al} className="flex items-center gap-1.5">
+                          <span className="w-2 h-2 rounded-full inline-block" style={{ background: ac(al) }} />
+                          <span className="font-mono text-[18px] font-black" style={{ color: ac(al) }}>{v}</span>
+                          <span className="text-[11px] text-ink2">{al}</span>
                         </div>
-                      </td>
-                      <td className="px-3 py-2.5 text-right font-mono text-[13px] text-ink">{p.contested}</td>
-                      <td className="px-3 py-2.5 text-right font-mono text-[13px] font-bold" style={{ color: allianceColor }}>{p.won + p.leading}</td>
-                      <td className="px-3 py-2.5 text-right font-mono text-[13px] text-ink">{p.vote_share?.toFixed(1)}%</td>
-                      <td className="px-3 py-2.5 text-right">
-                        <SwingPill value={(p.vote_share || 0) - (p.vote_share_2021_pct || 0)} />
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          )}
-        </section>
-
-        {/* ── Swing Analysis ── */}
-        {data?.swing_analysis && (
-          <section>
-            <h2 className="text-[11px] font-bold tracking-widest uppercase text-ink2 mb-3">Swing Analysis</h2>
-            <div className="bg-surface rounded-xl px-5 py-4 shadow-sm flex gap-6 flex-wrap">
-              <div>
-                <div className="text-[10px] font-bold tracking-widest uppercase mb-2" style={{ color: '#16A34A' }}>GAINED FROM</div>
-                <div className="flex gap-4">
-                  {Object.entries(data.swing_analysis.gained_from).filter(([, v]) => v > 0).map(([al, v]) => (
-                    <div key={al} className="flex items-center gap-1.5">
-                      <span className="w-2 h-2 rounded-full inline-block" style={{ background: ac(al) }} />
-                      <span className="font-mono text-[18px] font-black" style={{ color: ac(al) }}>{v}</span>
-                      <span className="text-[11px] text-ink2">{al}</span>
+                      ))}
                     </div>
-                  ))}
-                </div>
-              </div>
-              <div className="border-l border-pageborder pl-6">
-                <div className="text-[10px] font-bold tracking-widest uppercase mb-2" style={{ color: '#DC2626' }}>LOST TO</div>
-                <div className="flex gap-4">
-                  {Object.entries(data.swing_analysis.lost_to).filter(([, v]) => v > 0).map(([al, v]) => (
-                    <div key={al} className="flex items-center gap-1.5">
-                      <span className="w-2 h-2 rounded-full inline-block" style={{ background: ac(al) }} />
-                      <span className="font-mono text-[18px] font-black" style={{ color: ac(al) }}>{v}</span>
-                      <span className="text-[11px] text-ink2">{al}</span>
+                  </div>
+                  <div className="border-l border-pageborder pl-6">
+                    <div className="text-[10px] font-bold tracking-widest uppercase mb-2" style={{ color: '#DC2626' }}>LOST TO</div>
+                    <div className="flex gap-4">
+                      {Object.entries(data.swing_analysis.lost_to).filter(([, v]) => v > 0).map(([al, v]) => (
+                        <div key={al} className="flex items-center gap-1.5">
+                          <span className="w-2 h-2 rounded-full inline-block" style={{ background: ac(al) }} />
+                          <span className="font-mono text-[18px] font-black" style={{ color: ac(al) }}>{v}</span>
+                          <span className="text-[11px] text-ink2">{al}</span>
+                        </div>
+                      ))}
                     </div>
-                  ))}
+                  </div>
+                  {data.best_margin && (
+                    <div className="border-l border-pageborder pl-6">
+                      <div className="text-[10px] font-bold tracking-widest uppercase mb-1" style={{ color: '#16A34A' }}>BEST MARGIN</div>
+                      <div className="font-mono text-[16px] font-bold text-ink">+{data.best_margin.margin.toLocaleString('en-IN')}</div>
+                      <div className="text-[11px] text-ink2">{data.best_margin.constituency}</div>
+                    </div>
+                  )}
+                  {data.worst_margin && (
+                    <div className="border-l border-pageborder pl-6">
+                      <div className="text-[10px] font-bold tracking-widest uppercase mb-1" style={{ color: '#DC2626' }}>CLOSEST</div>
+                      <div className="font-mono text-[16px] font-bold text-ink">+{data.worst_margin.margin.toLocaleString('en-IN')}</div>
+                      <div className="text-[11px] text-ink2">{data.worst_margin.constituency}</div>
+                    </div>
+                  )}
                 </div>
-              </div>
-              {data.best_margin && (
-                <div className="border-l border-pageborder pl-6">
-                  <div className="text-[10px] font-bold tracking-widest uppercase mb-1" style={{ color: '#16A34A' }}>BEST MARGIN</div>
-                  <div className="font-mono text-[16px] font-bold text-ink">+{data.best_margin.margin.toLocaleString('en-IN')}</div>
-                  <div className="text-[11px] text-ink2">{data.best_margin.constituency}</div>
-                </div>
-              )}
-              {data.worst_margin && (
-                <div className="border-l border-pageborder pl-6">
-                  <div className="text-[10px] font-bold tracking-widest uppercase mb-1" style={{ color: '#DC2626' }}>CLOSEST</div>
-                  <div className="font-mono text-[16px] font-bold text-ink">+{data.worst_margin.margin.toLocaleString('en-IN')}</div>
-                  <div className="text-[11px] text-ink2">{data.worst_margin.constituency}</div>
-                </div>
-              )}
-            </div>
-          </section>
-        )}
-
-        {/* ── Constituencies ── */}
-        <section className="pb-8">
-          <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
-            <h2 className="text-[11px] font-bold tracking-widest uppercase text-ink2">
-              Constituencies · {filtered.length} shown
-            </h2>
-            <div className="flex gap-1.5">
-              {(['number', 'margin'] as const).map(s => (
-                <button key={s} onClick={() => setSortBy(s)}
-                  className="text-[10px] px-2.5 py-1 rounded-full cursor-pointer transition-all duration-150 border font-semibold capitalize"
-                  style={{
-                    border: `1px solid ${sortBy === s ? '#1A1611' : '#D1CBC4'}`,
-                    background: sortBy === s ? '#1A1611' : 'transparent',
-                    color: sortBy === s ? '#fff' : '#5C5245',
-                  }}>
-                  {s === 'number' ? '# Order' : 'By Margin'}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Named filters */}
-          <div className="bg-surface rounded-xl px-4 py-3 mb-2 shadow-sm flex gap-2 flex-wrap">
-            {([
-              { key: 'strongholds_lost', label: '🔴 Strongholds Lost' },
-              { key: 'fragile_holding', label: '⚡ Fragile Holding' },
-              { key: 'fragile_lost', label: '⚡ Fragile Lost' },
-              { key: 'swing_won', label: '🔄 Swing Won' },
-              { key: 'opponent_captured', label: '🏹 Opponent Territory' },
-              { key: 'leaning_at_risk', label: '📉 Leaning at Risk' },
-            ] as { key: NamedFilter; label: string }[]).map(f => (
-              <button
-                key={f.key}
-                onClick={() => applyNamed(namedFilter === f.key ? null : f.key)}
-                className="text-[11px] px-3 py-1 rounded-full cursor-pointer transition-all duration-150 font-semibold"
-                style={{
-                  border: `1.5px solid ${namedFilter === f.key ? allianceColor : '#D1CBC4'}`,
-                  background: namedFilter === f.key ? allianceColor : 'transparent',
-                  color: namedFilter === f.key ? '#fff' : '#5C5245',
-                }}>
-                {f.label}
-              </button>
-            ))}
-          </div>
-
-          {/* Raw filters */}
-          <div className="bg-surface rounded-xl px-4 py-3 mb-4 shadow-sm flex gap-2 flex-wrap items-center">
-            {(['Stronghold', 'Fragile', 'Leaning', 'Swing', "Opponent's"] as SeatClass[]).map(p => (
-              <button key={p}
-                onClick={() => { setNamedFilter(null); setRawProfile(rawProfile === p ? null : p); }}
-                className="text-[10px] px-2.5 py-1 rounded-full cursor-pointer border font-medium transition-all"
-                style={{
-                  border: `1px solid ${rawProfile === p ? '#1A1611' : '#D1CBC4'}`,
-                  background: rawProfile === p ? '#1A1611' : 'transparent',
-                  color: rawProfile === p ? '#fff' : '#5C5245',
-                }}>{p}</button>
-            ))}
-            <span className="border-l border-pageborder h-4" />
-            {(['holding', 'gained', 'lost', 'runner-up'] as const).map(o => (
-              <button key={o}
-                onClick={() => { setNamedFilter(null); setRawOutcome(rawOutcome === o ? null : o); }}
-                className="text-[10px] px-2.5 py-1 rounded-full cursor-pointer border font-medium capitalize transition-all"
-                style={{
-                  border: `1px solid ${rawOutcome === o ? allianceColor : '#D1CBC4'}`,
-                  background: rawOutcome === o ? allianceColor + '22' : 'transparent',
-                  color: rawOutcome === o ? allianceColor : '#5C5245',
-                }}>{o}</button>
-            ))}
-            <span className="border-l border-pageborder h-4" />
-            {[{ k: 'safe', l: 'Safe 5k+' }, { k: 'comfortable', l: '2–5k' }, { k: 'close', l: 'Close <2k' }].map(({ k, l }) => (
-              <button key={k}
-                onClick={() => { setNamedFilter(null); setRawMargin(rawMargin === k ? null : k); }}
-                className="text-[10px] px-2.5 py-1 rounded-full cursor-pointer border font-medium transition-all"
-                style={{
-                  border: `1px solid ${rawMargin === k ? '#1A1611' : '#D1CBC4'}`,
-                  background: rawMargin === k ? '#1A1611' : 'transparent',
-                  color: rawMargin === k ? '#fff' : '#5C5245',
-                }}>{l}</button>
-            ))}
-            {hasAnyFilter && (
-              <button
-                onClick={() => { setNamedFilter(null); setRawProfile(null); setRawOutcome(null); setRawMargin(null); setRawVote(null); }}
-                className="text-[10px] px-2.5 py-1 rounded-full cursor-pointer border font-medium transition-all ml-auto"
-                style={{ border: '1px solid #DC2626', color: '#DC2626', background: 'transparent' }}>
-                ✕ Clear
-              </button>
+              </section>
             )}
           </div>
+        ) : (
+          <div className="animate-in fade-in slide-in-from-bottom-2 duration-300">
+            {/* ── Constituencies ── */}
+            <section className="pb-8">
+              <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
+                <h2 className="text-[11px] font-bold tracking-widest uppercase text-ink2">
+                  Constituencies · {filtered.length} shown
+                </h2>
+                <div className="flex gap-1.5 flex-wrap justify-end">
+                  {(['number', 'margin', 'votes', 'vote_share'] as const).map(s => (
+                    <button key={s} onClick={() => setSortBy(s)}
+                      className="text-[10px] px-2.5 py-1 rounded-full cursor-pointer transition-all duration-150 border font-semibold capitalize"
+                      style={{
+                        border: `1px solid ${sortBy === s ? '#1A1611' : '#D1CBC4'}`,
+                        background: sortBy === s ? '#1A1611' : 'transparent',
+                        color: sortBy === s ? '#fff' : '#5C5245',
+                      }}>
+                      {s === 'number' ? '# Order' : s === 'margin' ? 'By Margin' : s === 'votes' ? 'By Votes' : 'By Vote %'}
+                    </button>
+                  ))}
+                </div>
+              </div>
 
-          {filtered.length === 0 ? (
-            <div className="text-center py-12 text-ink2 text-[13px]">No constituencies match the current filters</div>
-          ) : (
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))', gap: 10 }}>
-              {filtered.map(c => (
-                <ConstCard
-                  key={c.id}
-                  c={c}
-                  seatCls={c.seatClass}
-                  ownerAl={c.ownerAlliance}
-                  allianceCode={allianceCode}
-                  onClick={() => navigate(`/constituency/${c.id}`)}
-                />
-              ))}
-            </div>
-          )}
-        </section>
+              {/* Filter Row 1: Profile */}
+              <div className="bg-surface rounded-xl px-4 py-3 mb-2 shadow-sm flex gap-2 flex-wrap items-center">
+                <span className="text-[10px] font-bold tracking-widest uppercase text-ink2 mr-1">Profile:</span>
+                {(['Stronghold', 'Leaning', 'Fragile', 'Swing', "Opponent's"] as SeatClass[]).map(p => (
+                  <button key={p}
+                    onClick={() => setRawProfile(rawProfile === p ? null : p)}
+                    className="text-[10px] px-2.5 py-1 rounded-full cursor-pointer border font-medium transition-all"
+                    style={{
+                      border: `1px solid ${rawProfile === p ? allianceColor : '#D1CBC4'}`,
+                      background: rawProfile === p ? allianceColor : 'transparent',
+                      color: rawProfile === p ? '#fff' : '#5C5245',
+                    }}>{p}</button>
+                ))}
+                {hasAnyFilter && (
+                  <button
+                    onClick={() => { setRawProfile(null); setRawOutcome(null); setRawMovement(null); setRawMargin(null); setRawVotes(null); setRawVoteShare(null); }}
+                    className="text-[10px] px-2.5 py-1 rounded-full cursor-pointer border font-medium transition-all ml-auto"
+                    style={{ border: '1px solid #DC2626', color: '#DC2626', background: 'transparent' }}>
+                    ✕ Clear All
+                  </button>
+                )}
+              </div>
+
+              {/* Filter Row 2: Metrics */}
+              <div className="bg-surface rounded-xl px-4 py-3 mb-4 shadow-sm flex gap-2 flex-wrap items-center">
+                <span className="text-[10px] font-bold tracking-widest uppercase text-ink2 mr-1">Metrics:</span>
+                
+                {/* Placing */}
+                {([
+                  { k: 'won', l: 'Won' }, { k: '2nd', l: '2nd' }, { k: 'close_3rd', l: 'Close 3rd' }, { k: 'distant_3rd', l: 'Distant 3rd' }
+                ] as const).map(({ k, l }) => (
+                  <button key={k}
+                    onClick={() => setRawOutcome(rawOutcome === k ? null : k)}
+                    className="text-[10px] px-2.5 py-1 rounded-full cursor-pointer border font-medium transition-all"
+                    style={{
+                      border: `1px solid ${rawOutcome === k ? '#1A1611' : '#D1CBC4'}`,
+                      background: rawOutcome === k ? '#1A1611' : 'transparent',
+                      color: rawOutcome === k ? '#fff' : '#5C5245',
+                    }}>{l}</button>
+                ))}
+                <span className="border-l border-pageborder h-4 mx-1" />
+                
+                {/* Movement */}
+                {(['held', 'gained', 'lost'] as const).map(o => (
+                  <button key={o}
+                    onClick={() => setRawMovement(rawMovement === o ? null : o)}
+                    className="text-[10px] px-2.5 py-1 rounded-full cursor-pointer border font-medium capitalize transition-all"
+                    style={{
+                      border: `1px solid ${rawMovement === o ? '#1A1611' : '#D1CBC4'}`,
+                      background: rawMovement === o ? '#1A1611' : 'transparent',
+                      color: rawMovement === o ? '#fff' : '#5C5245',
+                    }}>{o}</button>
+                ))}
+                <span className="border-l border-pageborder h-4 mx-1" />
+                
+                {/* Margins */}
+                {[{ k: 'safe', l: 'Safe 10k+' }, { k: 'comfortable', l: '2–10k' }, { k: 'close', l: 'Close <2k' }].map(({ k, l }) => (
+                  <button key={k}
+                    onClick={() => setRawMargin(rawMargin === k ? null : k)}
+                    className="text-[10px] px-2.5 py-1 rounded-full cursor-pointer border font-medium transition-all"
+                    style={{
+                      border: `1px solid ${rawMargin === k ? '#1A1611' : '#D1CBC4'}`,
+                      background: rawMargin === k ? '#1A1611' : 'transparent',
+                      color: rawMargin === k ? '#fff' : '#5C5245',
+                    }}>{l}</button>
+                ))}
+                <span className="border-l border-pageborder h-4 mx-1" />
+                
+                {/* Votes Bucket Select */}
+                <select 
+                  value={rawVotes || ''} 
+                  onChange={(e) => setRawVotes(e.target.value ? Number(e.target.value) : null)}
+                  className="text-[10px] px-2 py-1 rounded-full border border-pageborder bg-transparent outline-none cursor-pointer"
+                  style={{ color: rawVotes ? '#1A1611' : '#5C5245', fontWeight: rawVotes ? 600 : 400 }}
+                >
+                  <option value="">Votes...</option>
+                  {[5000, 10000, 20000, 30000, 40000, 50000, 60000, 70000, 80000, 90000].map(v => (
+                    <option key={v} value={v}>{v/1000}k - {(v+10000)/1000}k</option>
+                  ))}
+                  <option value={100000}>90k+</option>
+                </select>
+                
+                {/* Vote Share Select */}
+                <select 
+                  value={rawVoteShare || ''} 
+                  onChange={(e) => setRawVoteShare(e.target.value ? Number(e.target.value) : null)}
+                  className="text-[10px] px-2 py-1 rounded-full border border-pageborder bg-transparent outline-none cursor-pointer"
+                  style={{ color: rawVoteShare ? '#1A1611' : '#5C5245', fontWeight: rawVoteShare ? 600 : 400 }}
+                >
+                  <option value="">Vote %...</option>
+                  {[5, 10, 15, 20, 25, 30, 35, 40, 45, 50].map(v => (
+                    <option key={v} value={v}>{v}% - {v+5}%</option>
+                  ))}
+                  <option value={55}>55%+</option>
+                </select>
+              </div>
+
+              {filtered.length === 0 ? (
+                <div className="text-center py-12 text-ink2 text-[13px]">No constituencies match the current filters</div>
+              ) : (
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))', gap: 10 }}>
+                  {filtered.map(c => (
+                    <ConstCard
+                      key={c.id}
+                      c={c}
+                      seatCls={c.seatClass}
+                      ownerAl={c.ownerAlliance}
+                      allianceCode={allianceCode}
+                      onClick={() => navigate(`/constituency/${c.id}`)}
+                    />
+                  ))}
+                </div>
+              )}
+            </section>
+          </div>
+        )}
 
       </div>
     </div>

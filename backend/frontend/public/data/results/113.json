@@ -6,31 +6,31 @@
     "district": "Pathanamthitta"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 215168,
     "votes_polled": 153845,
     "votes_counted": 8304,
     "valid_votes": 8304,
-    "rounds_completed": 12,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:23:38.633408+00:00"
+    "last_updated": "2026-05-05T01:09:54.129827+00:00"
   },
   "candidates_2026": [
     {
       "name": "Abin Varkey",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 39841,
-      "percentage": 43.12,
+      "votes": 70083,
+      "percentage": 44.51,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Veena George",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 29882,
-      "percentage": 32.34,
+      "votes": 51098,
+      "percentage": 32.45,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Kummanam Rajasekharan",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 21957,
-      "percentage": 23.76,
+      "votes": 34983,
+      "percentage": 22.22,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Prabhakaran V R",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 209,
-      "percentage": 0.23,
+      "votes": 347,
+      "percentage": 0.22,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Radhamani",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 114,
-      "percentage": 0.12,
+      "votes": 229,
+      "percentage": 0.15,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Omalloor Ramachandran",
       "party": "API",
       "alliance": "OTH",
-      "votes": 48,
-      "percentage": 0.05,
+      "votes": 95,
+      "percentage": 0.06,
       "is_winner": false,
       "is_leading": false
     },

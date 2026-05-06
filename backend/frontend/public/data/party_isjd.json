@@ -1,0 +1,117 @@
+{
+  "code": "ISJD",
+  "full_name": "Indian Socialist Janata Dal",
+  "alliance": "LDF",
+  "color_code": "#006400",
+  "seats_contested": 3,
+  "seats_won": 0,
+  "seats_leading": 0,
+  "seats_2nd": 2,
+  "seats_close_3rd": 1,
+  "seats_distant_3rd": 0,
+  "seats_trailing": 3,
+  "total_votes": 125971,
+  "vote_share": 32.02,
+  "vote_share_2021_pct": 0,
+  "constituencies": [
+    {
+      "id": 58,
+      "number": 58,
+      "name": "CHITTUR",
+      "district": "Palakkad",
+      "region": "central_north",
+      "reserved": "General",
+      "leader": {
+        "name": "Adv. Sumesh Achuthan",
+        "party": "INC",
+        "alliance": "UDF",
+        "votes": 65325,
+        "percentage": 44.2,
+        "party_color": "#19AAED"
+      },
+      "runner_up": {
+        "name": "Adv V. Murugadas",
+        "party": "ISJD",
+        "alliance": "LDF",
+        "votes": 58815,
+        "percentage": 39.8,
+        "party_color": "#006400"
+      },
+      "status": "RESULT_DECLARED",
+      "sitting_party": "JD_S",
+      "sitting_alliance": "LDF",
+      "total_electors": 172015,
+      "votes_polled": 145576,
+      "total_valid": 24282,
+      "party_pos": 2,
+      "margin_to_second": 44118,
+      "party_votes": 58815
+    },
+    {
+      "id": 82,
+      "number": 82,
+      "name": "ERNAKULAM",
+      "district": "Ernakulam",
+      "region": "south_central",
+      "reserved": "General",
+      "leader": {
+        "name": "T. J. Vinod",
+        "party": "INC",
+        "alliance": "UDF",
+        "votes": 61296,
+        "percentage": 56.9,
+        "party_color": "#19AAED"
+      },
+      "runner_up": {
+        "name": "Sabu George",
+        "party": "ISJD",
+        "alliance": "LDF",
+        "votes": 25133,
+        "percentage": 23.33,
+        "party_color": "#006400"
+      },
+      "status": "RESULT_DECLARED",
+      "sitting_party": "INC",
+      "sitting_alliance": "UDF",
+      "total_electors": 136223,
+      "votes_polled": 106485,
+      "total_valid": 7280,
+      "party_pos": 2,
+      "margin_to_second": 5979,
+      "party_votes": 25133
+    },
+    {
+      "id": 111,
+      "number": 111,
+      "name": "THIRUVALLA",
+      "district": "Pathanamthitta",
+      "region": "south",
+      "reserved": "General",
+      "leader": {
+        "name": "Adv. Varghese Mammen",
+        "party": "KEC",
+        "alliance": "UDF",
+        "votes": 53224,
+        "percentage": 37.82,
+        "party_color": "#1E90FF"
+      },
+      "runner_up": {
+        "name": "Anoop Antony",
+        "party": "BJP",
+        "alliance": "NDA",
+        "votes": 43078,
+        "percentage": 30.61,
+        "party_color": "#FF9933"
+      },
+      "status": "RESULT_DECLARED",
+      "sitting_party": "JD_S",
+      "sitting_alliance": "LDF",
+      "total_electors": 198395,
+      "votes_polled": 137825,
+      "total_valid": 0,
+      "party_pos": 3,
+      "margin_to_second": 1055,
+      "party_votes": 42023
+    }
+  ]
+}

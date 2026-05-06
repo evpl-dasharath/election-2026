@@ -6,31 +6,31 @@
     "district": "Ernakulam"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 194360,
     "votes_polled": 157004,
     "votes_counted": 0,
     "valid_votes": 0,
-    "rounds_completed": 6,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:23:04.777497+00:00"
+    "last_updated": "2026-05-05T01:09:53.649952+00:00"
   },
   "candidates_2026": [
     {
       "name": "Anwar Sadath",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 27053,
-      "percentage": 52.96,
+      "votes": 83899,
+      "percentage": 52.78,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Adv. A. M. Ariff",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 17535,
-      "percentage": 34.33,
+      "votes": 54756,
+      "percentage": 34.45,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "M.A. Brahmaraj",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 5961,
-      "percentage": 11.67,
+      "votes": 18732,
+      "percentage": 11.78,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,7 +47,7 @@
       "name": "Hakhikhath Hameed",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 128,
+      "votes": 403,
       "percentage": 0.25,
       "is_winner": false,
       "is_leading": false

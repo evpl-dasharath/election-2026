@@ -6,31 +6,31 @@
     "district": "Palakkad"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 176224,
     "votes_polled": 143781,
     "votes_counted": 14173,
     "valid_votes": 14173,
-    "rounds_completed": 7,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:22:52.644268+00:00"
+    "last_updated": "2026-05-05T01:10:06.875244+00:00"
   },
   "candidates_2026": [
     {
       "name": "Ramesh Pisharody",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 42128,
-      "percentage": 43.74,
+      "votes": 62199,
+      "percentage": 42.26,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Sobha Surendran",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 33956,
-      "percentage": 35.26,
+      "votes": 49052,
+      "percentage": 33.33,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,17 +38,8 @@
       "name": "N. M. R. Razaq",
       "party": "IND_LDF",
       "alliance": "LDF",
-      "votes": 19078,
-      "percentage": 19.81,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Krishnankutty K",
-      "party": "BSP",
-      "alliance": "OTH",
-      "votes": 202,
-      "percentage": 0.21,
+      "votes": 33931,
+      "percentage": 23.05,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +47,17 @@
       "name": "Udayan Sukumaran",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 201,
-      "percentage": 0.21,
+      "votes": 437,
+      "percentage": 0.3,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Krishnankutty K",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 348,
+      "percentage": 0.24,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Shamsudheen B",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 110,
-      "percentage": 0.11,
+      "votes": 193,
+      "percentage": 0.13,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "Reghu M",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 103,
-      "percentage": 0.11,
+      "votes": 191,
+      "percentage": 0.13,
       "is_winner": false,
       "is_leading": false
     }

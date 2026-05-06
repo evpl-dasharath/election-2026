@@ -29418,8 +29418,8 @@
     "la_2011": {
       "margin": 6061,
       "alliance_shares": {
-        "LDF": 0.45,
-        "UDF": 97.55,
+        "LDF": 46.84,
+        "UDF": 51.16,
         "NDA": 1.59,
         "OTH": 0.42
       },
@@ -29439,7 +29439,7 @@
           "votes": 58941,
           "percentage": 46.39,
           "is_winner": false,
-          "alliance": "UDF",
+          "alliance": "LDF",
           "color_code": "#FF6347"
         },
         {
@@ -29652,8 +29652,8 @@
     "la_2011": {
       "margin": 12088,
       "alliance_shares": {
-        "LDF": 0.94,
-        "UDF": 91.55,
+        "LDF": 50.91,
+        "UDF": 41.58,
         "NDA": 4.13,
         "OTH": 3.37
       },
@@ -29664,7 +29664,7 @@
           "votes": 71923,
           "percentage": 49.97,
           "is_winner": true,
-          "alliance": "UDF",
+          "alliance": "LDF",
           "color_code": "#FF6347"
         },
         {
@@ -31443,8 +31443,8 @@
     "la_2011": {
       "margin": 8012,
       "alliance_shares": {
-        "LDF": 3.09,
-        "UDF": 90.34,
+        "LDF": 52.09,
+        "UDF": 41.34,
         "NDA": 4.82,
         "OTH": 1.75
       },
@@ -31455,7 +31455,7 @@
           "votes": 51271,
           "percentage": 49.0,
           "is_winner": true,
-          "alliance": "UDF",
+          "alliance": "LDF",
           "color_code": "#FF6347"
         },
         {
@@ -34566,8 +34566,8 @@
     "la_2011": {
       "margin": 10674,
       "alliance_shares": {
-        "LDF": 0.83,
-        "UDF": 88.41,
+        "LDF": 40.45,
+        "UDF": 48.79,
         "NDA": 6.61,
         "OTH": 4.15
       },
@@ -34587,7 +34587,7 @@
           "votes": 46123,
           "percentage": 39.62,
           "is_winner": false,
-          "alliance": "UDF",
+          "alliance": "LDF",
           "color_code": "#FF6347"
         },
         {

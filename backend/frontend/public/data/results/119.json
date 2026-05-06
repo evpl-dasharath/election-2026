@@ -6,31 +6,31 @@
     "district": "Kollam"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 193272,
     "votes_polled": 145185,
     "votes_counted": 10161,
     "valid_votes": 10161,
-    "rounds_completed": 7,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:23:41.599322+00:00"
+    "last_updated": "2026-05-05T01:10:01.845453+00:00"
   },
   "candidates_2026": [
-    {
-      "name": "Adv. P. Aisha Potty",
-      "party": "INC",
-      "alliance": "UDF",
-      "votes": 29095,
-      "percentage": 41.86,
-      "is_winner": false,
-      "is_leading": true
-    },
     {
       "name": "K. N. Balagopal",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 28850,
-      "percentage": 41.51,
+      "votes": 63926,
+      "percentage": 42.95,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Adv. P. Aisha Potty",
+      "party": "INC",
+      "alliance": "UDF",
+      "votes": 62914,
+      "percentage": 42.27,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "R. Reshmi",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 10953,
-      "percentage": 15.76,
+      "votes": 20664,
+      "percentage": 13.88,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Mamachan D",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 135,
-      "percentage": 0.19,
+      "votes": 386,
+      "percentage": 0.26,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Wilfred Zacharias",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 105,
-      "percentage": 0.15,
+      "votes": 236,
+      "percentage": 0.16,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "G Suresh",
       "party": "EPI",
       "alliance": "OTH",
-      "votes": 63,
-      "percentage": 0.09,
+      "votes": 117,
+      "percentage": 0.08,
       "is_winner": false,
       "is_leading": false
     }

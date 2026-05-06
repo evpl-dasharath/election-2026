@@ -6,31 +6,31 @@
     "district": "Idukki"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 188495,
     "votes_polled": 143199,
     "votes_counted": 9405,
     "valid_votes": 9405,
-    "rounds_completed": 12,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:23:29.110746+00:00"
+    "last_updated": "2026-05-05T01:10:11.063574+00:00"
   },
   "candidates_2026": [
     {
       "name": "Apu John Joseph",
       "party": "KEC",
       "alliance": "UDF",
-      "votes": 61829,
-      "percentage": 58.23,
+      "votes": 84796,
+      "percentage": 58.01,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Cyriac Chazhikadan",
       "party": "KC_M",
       "alliance": "LDF",
-      "votes": 28235,
-      "percentage": 26.59,
+      "votes": 40505,
+      "percentage": 27.71,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,17 +38,8 @@
       "name": "Adv. Roy A. Varikkad",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 9915,
-      "percentage": 9.34,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Ajay V Marar (ajay Unni)",
-      "party": "IND",
-      "alliance": "OTH",
-      "votes": 2008,
-      "percentage": 1.89,
+      "votes": 12679,
+      "percentage": 8.67,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +47,17 @@
       "name": "Adv. Basil John",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 1868,
-      "percentage": 1.76,
+      "votes": 2603,
+      "percentage": 1.78,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Ajay V Marar (ajay Unni)",
+      "party": "IND",
+      "alliance": "OTH",
+      "votes": 2580,
+      "percentage": 1.77,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Afsal M. B",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 1268,
-      "percentage": 1.19,
+      "votes": 1626,
+      "percentage": 1.11,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,7 +74,7 @@
       "name": "Jomon John",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 194,
+      "votes": 267,
       "percentage": 0.18,
       "is_winner": false,
       "is_leading": false
@@ -83,8 +83,8 @@
       "name": "P T Varghese",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 179,
-      "percentage": 0.17,
+      "votes": 234,
+      "percentage": 0.16,
       "is_winner": false,
       "is_leading": false
     }

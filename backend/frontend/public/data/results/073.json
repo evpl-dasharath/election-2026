@@ -6,31 +6,31 @@
     "district": "Thrissur"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 187212,
     "votes_polled": 145220,
     "votes_counted": 8915,
     "valid_votes": 8915,
-    "rounds_completed": 13,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:23:04.845723+00:00"
+    "last_updated": "2026-05-05T01:10:00.664683+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. O J Janeesh",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 55463,
-      "percentage": 42.89,
+      "votes": 65162,
+      "percentage": 44.05,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Adv. V R Sunil Kumar",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 50622,
-      "percentage": 39.15,
+      "votes": 56854,
+      "percentage": 38.44,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Dr. Varghese George",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 21463,
-      "percentage": 16.6,
+      "votes": 23933,
+      "percentage": 16.18,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Ravi A K",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 437,
-      "percentage": 0.34,
+      "votes": 488,
+      "percentage": 0.33,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Dr. K.M Francis Roy",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 403,
-      "percentage": 0.31,
+      "votes": 447,
+      "percentage": 0.3,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Nandagopan Vellathadi",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 261,
-      "percentage": 0.2,
+      "votes": 284,
+      "percentage": 0.19,
       "is_winner": false,
       "is_leading": false
     },

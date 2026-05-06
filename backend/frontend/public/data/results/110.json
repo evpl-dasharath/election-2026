@@ -6,31 +6,31 @@
     "district": "Alappuzha"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 189866,
     "votes_polled": 134899,
     "votes_counted": 9104,
     "valid_votes": 9104,
-    "rounds_completed": 8,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:23:35.759197+00:00"
+    "last_updated": "2026-05-05T01:09:56.076440+00:00"
   },
   "candidates_2026": [
     {
       "name": "Saji Cherian",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 29251,
-      "percentage": 41.66,
+      "votes": 57859,
+      "percentage": 42.1,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Adv. Abi Kuriakose",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 24934,
-      "percentage": 35.51,
+      "votes": 47567,
+      "percentage": 34.61,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "M. V. Gopakumar",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 15481,
-      "percentage": 22.05,
+      "votes": 30942,
+      "percentage": 22.51,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "B. Praneesh",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 203,
-      "percentage": 0.29,
+      "votes": 429,
+      "percentage": 0.31,
       "is_winner": false,
       "is_leading": false
     }

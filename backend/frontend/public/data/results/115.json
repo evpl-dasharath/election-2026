@@ -6,31 +6,31 @@
     "district": "Pathanamthitta"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 201200,
     "votes_polled": 147882,
     "votes_counted": 0,
     "valid_votes": 0,
-    "rounds_completed": 9,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:23:51.650558+00:00"
+    "last_updated": "2026-05-05T01:09:53.179976+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. C V  Santhakumar",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 33315,
-      "percentage": 42.98,
+      "votes": 66153,
+      "percentage": 44.2,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Priji Sasidharan",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 28623,
-      "percentage": 36.93,
+      "votes": 55821,
+      "percentage": 37.3,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Adv. Pandalam Prathapan",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 14832,
-      "percentage": 19.14,
+      "votes": 26337,
+      "percentage": 17.6,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Sivakumar C S",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 301,
-      "percentage": 0.39,
+      "votes": 576,
+      "percentage": 0.38,
       "is_winner": false,
       "is_leading": false
     }

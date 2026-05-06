@@ -6,31 +6,31 @@
     "district": "Malappuram"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 222792,
     "votes_polled": 174958,
     "votes_counted": 0,
     "valid_votes": 0,
-    "rounds_completed": 6,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:22:36.862501+00:00"
+    "last_updated": "2026-05-05T01:10:11.950867+00:00"
   },
   "candidates_2026": [
     {
       "name": "P. M. A. Sameer",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 42198,
-      "percentage": 59.27,
+      "votes": 111869,
+      "percentage": 63.48,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Ajit Koladi",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 21482,
-      "percentage": 30.17,
+      "votes": 48482,
+      "percentage": 27.51,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Riju C. Raghav",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 6024,
-      "percentage": 8.46,
+      "votes": 11497,
+      "percentage": 6.52,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Hameed V",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 897,
-      "percentage": 1.26,
+      "votes": 2650,
+      "percentage": 1.5,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Moosa Jarathingal",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 222,
-      "percentage": 0.31,
+      "votes": 843,
+      "percentage": 0.48,
       "is_winner": false,
       "is_leading": false
     }

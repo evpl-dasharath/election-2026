@@ -6,31 +6,31 @@
     "district": "Kozhikode"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 155972,
     "votes_polled": 126446,
     "votes_counted": 6635,
     "valid_votes": 6635,
-    "rounds_completed": 7,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:22:23.362959+00:00"
+    "last_updated": "2026-05-05T01:10:02.454302+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. Fyzal Babu",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 26220,
-      "percentage": 36.65,
+      "votes": 52680,
+      "percentage": 41.2,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Ahamed Devarkovil",
       "party": "INL",
       "alliance": "LDF",
-      "votes": 22869,
-      "percentage": 31.97,
+      "votes": 41885,
+      "percentage": 32.76,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "T. Raneesh",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 21943,
-      "percentage": 30.67,
+      "votes": 32463,
+      "percentage": 25.39,
       "is_winner": false,
       "is_leading": false
     }

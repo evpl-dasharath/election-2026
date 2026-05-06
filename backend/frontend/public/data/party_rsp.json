@@ -1,0 +1,150 @@
+{
+  "code": "RSP",
+  "full_name": "Revolutionary Socialist Party",
+  "alliance": "UDF",
+  "color_code": "#FF6347",
+  "seats_contested": 4,
+  "seats_won": 3,
+  "seats_leading": 0,
+  "seats_2nd": 0,
+  "seats_close_3rd": 1,
+  "seats_distant_3rd": 0,
+  "seats_trailing": 1,
+  "total_votes": 261551,
+  "vote_share": 44.75,
+  "vote_share_2021_pct": 33.48,
+  "constituencies": [
+    {
+      "id": 117,
+      "number": 117,
+      "name": "CHAVARA",
+      "district": "Kollam",
+      "region": "south",
+      "reserved": "General",
+      "leader": {
+        "name": "Shibu Baby John",
+        "party": "RSP",
+        "alliance": "UDF",
+        "votes": 74308,
+        "percentage": 52.2,
+        "party_color": "#FF6347"
+      },
+      "runner_up": {
+        "name": "Dr. Sujith Vijayanpillai",
+        "party": "IND_LDF",
+        "alliance": "LDF",
+        "votes": 55735,
+        "percentage": 39.16,
+        "party_color": "#CC2222"
+      },
+      "status": "RESULT_DECLARED",
+      "sitting_party": "IND_LDF",
+      "sitting_alliance": "LDF",
+      "total_electors": 178798,
+      "votes_polled": 139337,
+      "total_valid": 23655,
+      "party_pos": 1,
+      "margin_to_second": 44723,
+      "party_votes": 74308
+    },
+    {
+      "id": 118,
+      "number": 118,
+      "name": "KUNNATHUR",
+      "district": "Kollam",
+      "region": "south",
+      "reserved": "General",
+      "leader": {
+        "name": "Ullas Kovoor",
+        "party": "RSP",
+        "alliance": "UDF",
+        "votes": 81488,
+        "percentage": 49.66,
+        "party_color": "#FF6347"
+      },
+      "runner_up": {
+        "name": "Kovoor Kunjumon",
+        "party": "RSP(L)",
+        "alliance": "LDF",
+        "votes": 56174,
+        "percentage": 34.23,
+        "party_color": "#808080"
+      },
+      "status": "RESULT_DECLARED",
+      "sitting_party": "IND_LDF",
+      "sitting_alliance": "LDF",
+      "total_electors": 205694,
+      "votes_polled": 160050,
+      "total_valid": 17305,
+      "party_pos": 1,
+      "margin_to_second": 31333,
+      "party_votes": 81488
+    },
+    {
+      "id": 125,
+      "number": 125,
+      "name": "ERAVIPURAM",
+      "district": "Kollam",
+      "region": "south",
+      "reserved": "General",
+      "leader": {
+        "name": "Adv. Vishnu Mohan",
+        "party": "RSP",
+        "alliance": "UDF",
+        "votes": 64383,
+        "percentage": 48.63,
+        "party_color": "#FF6347"
+      },
+      "runner_up": {
+        "name": "M. Noushad",
+        "party": "CPI_M",
+        "alliance": "LDF",
+        "votes": 55580,
+        "percentage": 41.98,
+        "party_color": "#ED1E26"
+      },
+      "status": "RESULT_DECLARED",
+      "sitting_party": "CPI_M",
+      "sitting_alliance": "LDF",
+      "total_electors": 168865,
+      "votes_polled": 130583,
+      "total_valid": 8166,
+      "party_pos": 1,
+      "margin_to_second": 45111,
+      "party_votes": 64383
+    },
+    {
+      "id": 128,
+      "number": 128,
+      "name": "ATTINGAL",
+      "district": "Thiruvananthapuram",
+      "region": "south",
+      "reserved": "General",
+      "leader": {
+        "name": "O. S. Ambika",
+        "party": "CPI_M",
+        "alliance": "LDF",
+        "votes": 59163,
+        "percentage": 39.46,
+        "party_color": "#ED1E26"
+      },
+      "runner_up": {
+        "name": "P. Sudheer",
+        "party": "BJP",
+        "alliance": "NDA",
+        "votes": 45788,
+        "percentage": 30.54,
+        "party_color": "#FF9933"
+      },
+      "status": "RESULT_DECLARED",
+      "sitting_party": "CPI_M",
+      "sitting_alliance": "LDF",
+      "total_electors": 197945,
+      "votes_polled": 146122,
+      "total_valid": 19010,
+      "party_pos": 3,
+      "margin_to_second": 4416,
+      "party_votes": 41372
+    }
+  ]
+}

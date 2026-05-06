@@ -6,31 +6,31 @@
     "district": "Kottayam"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 184665,
     "votes_polled": 142173,
     "votes_counted": 13092,
     "valid_votes": 13092,
-    "rounds_completed": 10,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:23:29.028436+00:00"
+    "last_updated": "2026-05-05T01:10:08.754363+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. Sebastian M.J",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 36694,
-      "percentage": 39.68,
+      "votes": 56900,
+      "percentage": 39.3,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Adv. Sebastian Kulathunkal",
       "party": "KC_M",
       "alliance": "LDF",
-      "votes": 32464,
-      "percentage": 35.1,
+      "votes": 50207,
+      "percentage": 34.67,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "P. C. George",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 22474,
-      "percentage": 24.3,
+      "votes": 36172,
+      "percentage": 24.98,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Shiny A C",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 286,
-      "percentage": 0.31,
+      "votes": 603,
+      "percentage": 0.42,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "Abhiram Babu",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 129,
+      "votes": 205,
       "percentage": 0.14,
       "is_winner": false,
       "is_leading": false
@@ -65,8 +65,8 @@
       "name": "Mayamol K P",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 71,
-      "percentage": 0.08,
+      "votes": 136,
+      "percentage": 0.09,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,7 +74,7 @@
       "name": "Santhosh Joseph",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 47,
+      "votes": 73,
       "percentage": 0.05,
       "is_winner": false,
       "is_leading": false

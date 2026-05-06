@@ -90,6 +90,12 @@
     "color_code": "#00BFFF"
   },
   {
+    "code": "NCP(SP)",
+    "name": "NCP(SP)",
+    "alliance": "LDF",
+    "color_code": "#808080"
+  },
+  {
     "code": "NSC",
     "name": "National Secular Conference",
     "alliance": "LDF",
@@ -100,6 +106,12 @@
     "name": "Rashtriya Janata Dal",
     "alliance": "LDF",
     "color_code": "#336699"
+  },
+  {
+    "code": "RSP(L)",
+    "name": "RSP(L)",
+    "alliance": "LDF",
+    "color_code": "#808080"
   },
   {
     "code": "RSP_L",
@@ -354,12 +366,6 @@
     "color_code": "#37474F"
   },
   {
-    "code": "NCP(SP)",
-    "name": "NCP(SP)",
-    "alliance": "OTH",
-    "color_code": "#808080"
-  },
-  {
     "code": "NOTA",
     "name": "None of the Above",
     "alliance": "OTH",
@@ -400,12 +406,6 @@
     "name": "Republican Party of India (Athawale)",
     "alliance": "OTH",
     "color_code": "#0288D1"
-  },
-  {
-    "code": "RSP(L)",
-    "name": "RSP(L)",
-    "alliance": "OTH",
-    "color_code": "#808080"
   },
   {
     "code": "SDC",

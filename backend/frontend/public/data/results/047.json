@@ -6,31 +6,31 @@
     "district": "Malappuram"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 208776,
     "votes_polled": 162427,
     "votes_counted": 14273,
     "valid_votes": 14273,
-    "rounds_completed": 12,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:22:42.127869+00:00"
+    "last_updated": "2026-05-05T01:10:10.500133+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. V S Joy",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 63089,
-      "percentage": 49.47,
+      "votes": 79661,
+      "percentage": 48.61,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Dr. K. T. Jaleel",
       "party": "IND_LDF",
       "alliance": "LDF",
-      "votes": 49861,
-      "percentage": 39.09,
+      "votes": 65014,
+      "percentage": 39.67,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Ravi Thelath",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 12015,
-      "percentage": 9.42,
+      "votes": 16039,
+      "percentage": 9.79,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Abdul Jaleel",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 1661,
-      "percentage": 1.3,
+      "votes": 2021,
+      "percentage": 1.23,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Abdul Jaleel K T S/o Moideen K T",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 293,
-      "percentage": 0.23,
+      "votes": 349,
+      "percentage": 0.21,
       "is_winner": false,
       "is_leading": false
     }

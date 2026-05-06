@@ -403,39 +403,24 @@ def alliance_detail(request, alliance_code):
             votes_2021_alliance += r.total_votes
     vote_share_2021 = (votes_2021_alliance / total_2021 * 100) if total_2021 > 0 else 0
 
-    # 4. Per-party breakdown
+    # 4. Per-party breakdown init
     party_stats = {}
     for c in Candidate.objects.filter(party_id__in=party_ids).select_related('party'):
         pc = c.party.code
         if pc not in party_stats:
             party_stats[pc] = {
                 'code': pc, 'name': c.party.full_name, 'color': c.party.color_code,
-                'contested': 0, 'won': 0, 'leading': 0, 'votes': 0,
+                'contested': 0, 'won': 0, 'leading': 0, 'votes': 0, 'constituency_ids': [],
+                'seats_2nd': 0, 'seats_close_3rd': 0, 'seats_distant_3rd': 0,
             }
         party_stats[pc]['contested'] += 1
-        if c.is_winner:
-            party_stats[pc]['won'] += 1
-        elif c.is_leading:
-            party_stats[pc]['leading'] += 1
+        party_stats[pc]['constituency_ids'].append(c.constituency_id)
         party_stats[pc]['votes'] += c.votes
 
-    parties_data = []
-    for p in party_stats.values():
-        v21 = party_2021_votes.get(p['code'], 0)
-        parties_data.append({
-            'code': p['code'], 'name': p['name'], 'color': p['color'],
-            'contested': p['contested'], 'won': p['won'], 'leading': p['leading'],
-            'vote_share': round((p['votes'] / total_valid_votes * 100) if total_valid_votes > 0 else 0, 2),
-            'vote_share_2021_pct': round((v21 / total_2021 * 100) if total_2021 > 0 else 0, 2),
-        })
-    parties_data.sort(key=lambda x: (x['won'] + x['leading'], x['vote_share']), reverse=True)
-
-    total_won = sum(p['won'] for p in parties_data)
-    total_leading = sum(p['leading'] for p in parties_data)
-    total_contested = sum(p['contested'] for p in parties_data)
-
-    # 5. Seat movement vs 2021 + swing analysis
+    # 5. Seat movement vs 2021 + swing analysis + won/leading tally
     gained = held = lost = 0
+    pushed_to_3rd = pulled_up_to_2nd = 0
+    seats_2nd = seats_close_3rd = seats_distant_3rd = 0
     swing_gained_from = {'LDF': 0, 'UDF': 0, 'NDA': 0, 'OTH': 0}
     swing_lost_to = {'LDF': 0, 'UDF': 0, 'NDA': 0, 'OTH': 0}
 
@@ -443,19 +428,56 @@ def alliance_detail(request, alliance_code):
         'winner_party', 'constituency'
     ).prefetch_related(
         'constituency__candidates_2026', 'constituency__candidates_2026__party',
-        'constituency__live_results'
+        'constituency__live_results', 'constituency__results_2021', 'constituency__results_2021__party'
     ).all():
         wp = meta.winner_party.code if meta.winner_party else None
         sitting_al = _party_alliance(wp, am2021) if wp else 'OTH'
-        top_cand = meta.constituency.candidates_2026.order_by('-votes').first()
-        if not top_cand or top_cand.votes == 0:
+        cands_2026 = list(meta.constituency.candidates_2026.order_by('-votes'))
+        if not cands_2026 or cands_2026[0].votes == 0:
             continue
         live = meta.constituency.live_results.first()
         if not live or live.status == 'NOT_STARTED':
             continue
-        current_al = _party_alliance(top_cand.party.code, am2026)
+
+        # Get current alliance position
+        current_pos = None
+        for i, cand in enumerate(cands_2026):
+            if _party_alliance(cand.party.code, am2026) == alliance_code:
+                current_pos = i + 1
+                break
+                
+        # Get 2021 position
+        r21_list = list(meta.constituency.results_2021.all().order_by('-total_votes'))
+        pos_2021 = None
+        for i, r in enumerate(r21_list):
+            pc = r.party.code if r.party else r.party_code
+            if _party_alliance(pc, am2021) == alliance_code:
+                pos_2021 = i + 1
+                break
+                
+        if current_pos == 2:
+            seats_2nd += 1
+        elif current_pos == 3:
+            if cands_2026[1].votes - cands_2026[2].votes < 10000:
+                seats_close_3rd += 1
+            else:
+                seats_distant_3rd += 1
+            
+        if current_pos == 3 and pos_2021 in (1, 2):
+            pushed_to_3rd += 1
+        if current_pos == 2 and (pos_2021 is None or pos_2021 > 2):
+            pulled_up_to_2nd += 1
+
+        current_al = _party_alliance(cands_2026[0].party.code, am2026)
 
         if current_al == alliance_code:
+            top_pc = cands_2026[0].party.code
+            if top_pc in party_stats:
+                if live.status in ('RESULT_DECLARED', 'COMPLETED'):
+                    party_stats[top_pc]['won'] += 1
+                else:
+                    party_stats[top_pc]['leading'] += 1
+
             if sitting_al == alliance_code:
                 held += 1
             else:
@@ -464,6 +486,53 @@ def alliance_detail(request, alliance_code):
         elif sitting_al == alliance_code:
             lost += 1
             swing_lost_to[current_al if current_al in swing_lost_to else 'OTH'] += 1
+
+        # Track 2nd and 3rd per party
+        if current_pos in (2, 3):
+            # Find the party in this alliance at this position
+            target_cand = cands_2026[current_pos-1]
+            target_pc = target_cand.party.code
+            if target_pc in party_stats:
+                if current_pos == 2:
+                    party_stats[target_pc]['seats_2nd'] += 1
+                else:
+                    if cands_2026[1].votes - cands_2026[2].votes < 10000:
+                        party_stats[target_pc]['seats_close_3rd'] += 1
+                    else:
+                        party_stats[target_pc]['seats_distant_3rd'] += 1
+
+    parties_data = []
+    for p in party_stats.values():
+        v21 = party_2021_votes.get(p['code'], 0)
+        
+        c_ids_26 = p['constituency_ids']
+        total_valid_26_contested = Candidate.objects.filter(constituency_id__in=c_ids_26).aggregate(t=Sum('votes'))['t'] or 0
+        vote_share_26 = (p['votes'] / total_valid_26_contested * 100) if total_valid_26_contested > 0 else 0
+        
+        c_ids_21 = HistoricalResult2021.objects.filter(
+            Q(party__code=p['code']) | Q(party_code=p['code'])
+        ).values_list('constituency_id', flat=True)
+        
+        if c_ids_21:
+            total_valid_21_contested = HistoricalResult2021.objects.filter(constituency_id__in=c_ids_21).aggregate(t=Sum('total_votes'))['t'] or 0
+            vote_share_21 = (v21 / total_valid_21_contested * 100) if total_valid_21_contested > 0 else 0
+        else:
+            vote_share_21 = 0
+
+        parties_data.append({
+            'code': p['code'], 'name': p['name'], 'color': p['color'],
+            'contested': p['contested'], 'won': p['won'], 'leading': p['leading'],
+            'seats_2nd': p['seats_2nd'],
+            'seats_close_3rd': p['seats_close_3rd'],
+            'seats_distant_3rd': p['seats_distant_3rd'],
+            'vote_share': round(vote_share_26, 2),
+            'vote_share_2021_pct': round(vote_share_21, 2),
+        })
+    parties_data.sort(key=lambda x: (x['won'] + x['leading'], x['vote_share']), reverse=True)
+
+    total_won = sum(p['won'] for p in parties_data)
+    total_leading = sum(p['leading'] for p in parties_data)
+    total_contested = sum(p['contested'] for p in parties_data)
 
     # 6. Best/worst margins (alliance leading seats only)
     best_margin = worst_margin = None
@@ -499,15 +568,40 @@ def alliance_detail(request, alliance_code):
     )
 
     consts_data = []
-    for item in ConstituencyListSerializer(all_consts, many=True).data:
+    for c, item in zip(all_consts, ConstituencyListSerializer(all_consts, many=True).data):
         item = dict(item)
         item['competing'] = item['id'] in competing_ids
+        
+        cands = list(c.candidates_2026.order_by('-votes'))
+        alliance_pos = None
+        margin_to_second = None
+        alliance_votes_cand = 0
+        alliance_candidate_name = None
+        alliance_party_code = None
+        for i, cand in enumerate(cands):
+            if _party_alliance(cand.party.code, am2026) == alliance_code:
+                alliance_pos = i + 1
+                alliance_votes_cand = cand.votes
+                alliance_candidate_name = cand.name
+                alliance_party_code = cand.party.code
+                break
+        if len(cands) >= 3:
+            margin_to_second = cands[1].votes - cands[2].votes
+            
+        item['alliance_pos'] = alliance_pos
+        item['margin_to_second'] = margin_to_second
+        item['alliance_votes'] = alliance_votes_cand
+        item['alliance_candidate_name'] = alliance_candidate_name
+        item['alliance_party_code'] = alliance_party_code
         consts_data.append(item)
 
     return Response({
         'alliance': alliance_code,
         'seats_won': total_won,
         'seats_leading': total_leading,
+        'seats_2nd': seats_2nd,
+        'seats_close_3rd': seats_close_3rd,
+        'seats_distant_3rd': seats_distant_3rd,
         'seats_trailing': total_contested - total_won - total_leading,
         'seats_contested': total_contested,
         'total_votes': alliance_votes,
@@ -515,7 +609,13 @@ def alliance_detail(request, alliance_code):
         'vote_share_2021_pct': round(vote_share_2021, 2),
         'best_margin': best_margin,
         'worst_margin': worst_margin,
-        'seat_movement': {'gained': gained, 'held': held, 'lost': lost},
+        'seat_movement': {
+            'gained': gained, 
+            'held': held, 
+            'lost': lost,
+            'pushed_to_3rd': pushed_to_3rd,
+            'pulled_up_to_2nd': pulled_up_to_2nd
+        },
         'swing_analysis': {'gained_from': swing_gained_from, 'lost_to': swing_lost_to},
         'parties': parties_data,
         'constituencies': consts_data,
@@ -534,24 +634,25 @@ def party_detail(request, party_code):
     except Party.DoesNotExist:
         return Response({'error': 'Party not found'}, status=404)
 
-    total_valid_votes = Candidate.objects.aggregate(t=Sum('votes'))['t'] or 0
     candidates = Candidate.objects.filter(party=party).select_related('constituency')
     party_votes = candidates.aggregate(t=Sum('votes'))['t'] or 0
-    vote_share = (party_votes / total_valid_votes * 100) if total_valid_votes > 0 else 0
+    
+    contested_ids = list(candidates.values_list('constituency_id', flat=True))
+    total_valid_votes_contested = Candidate.objects.filter(constituency_id__in=contested_ids).aggregate(t=Sum('votes'))['t'] or 0
+    vote_share = (party_votes / total_valid_votes_contested * 100) if total_valid_votes_contested > 0 else 0
 
     pay = PartyAllianceYear.objects.select_related('alliance').filter(
         party=party, election_year=2026, election_type='LA'
     ).first()
     alliance = pay.alliance.code if pay else party.alliance.code
 
-    won = candidates.filter(is_winner=True).count()
-    leading = candidates.filter(is_leading=True).count()
     contested = candidates.count()
 
     # 2021 vote share for this party
-    total_2021 = HistoricalResult2021.objects.aggregate(t=Sum('total_votes'))['t'] or 0
     votes_2021 = HistoricalResult2021.objects.filter(party=party).aggregate(t=Sum('total_votes'))['t'] or 0
-    vote_share_2021 = (votes_2021 / total_2021 * 100) if total_2021 > 0 else 0
+    c_ids_21 = HistoricalResult2021.objects.filter(party=party).values_list('constituency_id', flat=True)
+    total_2021_contested = HistoricalResult2021.objects.filter(constituency_id__in=c_ids_21).aggregate(t=Sum('total_votes'))['t'] or 0
+    vote_share_2021 = (votes_2021 / total_2021_contested * 100) if total_2021_contested > 0 else 0
 
     # Constituencies this party is contesting (scoped list)
     contested_ids = list(candidates.values_list('constituency_id', flat=True))
@@ -561,6 +662,56 @@ def party_detail(request, party_code):
         'candidates_2026', 'candidates_2026__party', 'live_results', 'results_2021'
     ).order_by('number')
 
+    won = 0
+    leading = 0
+    seats_2nd = 0
+    seats_close_3rd = 0
+    seats_distant_3rd = 0
+    for c in scoped_consts:
+        cands = list(c.candidates_2026.order_by('-votes'))
+        current_pos = None
+        for i, cand in enumerate(cands):
+            if cand.party == party:
+                current_pos = i + 1
+                break
+                
+        if current_pos == 1:
+            live = c.live_results.first()
+            if live and live.status in ('RESULT_DECLARED', 'COMPLETED'):
+                won += 1
+            elif live and live.status == 'IN_PROGRESS':
+                leading += 1
+        elif current_pos == 2:
+            seats_2nd += 1
+        elif current_pos == 3:
+            if cands[1].votes - cands[2].votes < 10000:
+                seats_close_3rd += 1
+            else:
+                seats_distant_3rd += 1
+
+    consts_data = []
+    for c, item in zip(scoped_consts, ConstituencyListSerializer(scoped_consts, many=True).data):
+        item = dict(item)
+        cands = list(c.candidates_2026.order_by('-votes'))
+        party_pos = None
+        margin_to_second = None
+        party_votes_cand = 0
+        party_candidate_name = None
+        for i, cand in enumerate(cands):
+            if cand.party == party:
+                party_pos = i + 1
+                party_votes_cand = cand.votes
+                party_candidate_name = cand.name
+                break
+        if len(cands) >= 3:
+            margin_to_second = cands[1].votes - cands[2].votes
+            
+        item['party_pos'] = party_pos
+        item['margin_to_second'] = margin_to_second
+        item['party_votes'] = party_votes_cand
+        item['party_candidate_name'] = party_candidate_name
+        consts_data.append(item)
+
     return Response({
         'code': party.code,
         'full_name': party.full_name,
@@ -569,8 +720,12 @@ def party_detail(request, party_code):
         'seats_contested': contested,
         'seats_won': won,
         'seats_leading': leading,
+        'seats_2nd': seats_2nd,
+        'seats_close_3rd': seats_close_3rd,
+        'seats_distant_3rd': seats_distant_3rd,
+        'seats_trailing': contested - won - leading,
         'total_votes': party_votes,
         'vote_share': round(vote_share, 2),
         'vote_share_2021_pct': round(vote_share_2021, 2),
-        'constituencies': ConstituencyListSerializer(scoped_consts, many=True).data,
+        'constituencies': consts_data,
     })

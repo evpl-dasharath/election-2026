@@ -6,31 +6,31 @@
     "district": "Kollam"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 206464,
     "votes_polled": 161537,
     "votes_counted": 9708,
     "valid_votes": 9708,
-    "rounds_completed": 11,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:24:03.426069+00:00"
+    "last_updated": "2026-05-05T01:10:02.609186+00:00"
   },
   "candidates_2026": [
     {
       "name": "P. C. Vishnunadh",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 57588,
-      "percentage": 53.54,
+      "votes": 87862,
+      "percentage": 53.44,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "S. L. Sajikumar",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 35670,
-      "percentage": 33.16,
+      "votes": 55298,
+      "percentage": 33.63,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,17 +38,8 @@
       "name": "Robin Radhakrishnan (Robin RB)",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 12958,
-      "percentage": 12.05,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Lathika C",
-      "party": "BSP",
-      "alliance": "OTH",
-      "votes": 365,
-      "percentage": 0.34,
+      "votes": 18996,
+      "percentage": 11.55,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +47,17 @@
       "name": "Riyas M",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 330,
-      "percentage": 0.31,
+      "votes": 722,
+      "percentage": 0.44,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Lathika C",
+      "party": "BSP",
+      "alliance": "OTH",
+      "votes": 572,
+      "percentage": 0.35,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Rahul R",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 199,
-      "percentage": 0.19,
+      "votes": 269,
+      "percentage": 0.16,
       "is_winner": false,
       "is_leading": false
     }

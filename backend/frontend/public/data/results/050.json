@@ -6,31 +6,31 @@
     "district": "Palakkad"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 210790,
     "votes_polled": 166081,
     "votes_counted": 11107,
     "valid_votes": 11107,
-    "rounds_completed": 11,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:22:49.481736+00:00"
+    "last_updated": "2026-05-05T01:10:07.467590+00:00"
   },
   "candidates_2026": [
     {
       "name": "Muhammad Muhsin",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 56937,
-      "percentage": 46.84,
+      "votes": 80062,
+      "percentage": 47.25,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "T. P. Shaji",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 51645,
-      "percentage": 42.49,
+      "votes": 70620,
+      "percentage": 41.68,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Adv. P. Manoj",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 10801,
-      "percentage": 8.89,
+      "votes": 15282,
+      "percentage": 9.02,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "S.P. Ameer Ali",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 1523,
-      "percentage": 1.25,
+      "votes": 2582,
+      "percentage": 1.52,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "Muhammed Muhsin. M. K Manjerikunnath",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 113,
+      "votes": 152,
       "percentage": 0.09,
       "is_winner": false,
       "is_leading": false
@@ -65,7 +65,7 @@
       "name": "Haris Babu Pailippuram",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 78,
+      "votes": 104,
       "percentage": 0.06,
       "is_winner": false,
       "is_leading": false
@@ -74,7 +74,7 @@
       "name": "shajimon",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 56,
+      "votes": 86,
       "percentage": 0.05,
       "is_winner": false,
       "is_leading": false

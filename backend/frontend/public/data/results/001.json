@@ -6,31 +6,31 @@
     "district": "Kasaragod"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 230113,
     "votes_polled": 186483,
     "votes_counted": 11884,
     "valid_votes": 11884,
-    "rounds_completed": 8,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:21:59.018878+00:00"
+    "last_updated": "2026-05-05T01:10:04.523870+00:00"
   },
   "candidates_2026": [
     {
       "name": "A. K. M. Ashraf",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 52298,
-      "percentage": 56.16,
+      "votes": 96948,
+      "percentage": 51.62,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "K. Surendran",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 31595,
-      "percentage": 33.93,
+      "votes": 67696,
+      "percentage": 36.05,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "K. R. Jayananda",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 8311,
-      "percentage": 8.92,
+      "votes": 21212,
+      "percentage": 11.29,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Gean Lavina Monteiro",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 337,
-      "percentage": 0.36,
+      "votes": 523,
+      "percentage": 0.28,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Kannur Abdulla Master",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 89,
-      "percentage": 0.1,
+      "votes": 285,
+      "percentage": 0.15,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Sanjeeva",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 89,
-      "percentage": 0.1,
+      "votes": 212,
+      "percentage": 0.11,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "D Surendran Nair",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 82,
-      "percentage": 0.09,
+      "votes": 203,
+      "percentage": 0.11,
       "is_winner": false,
       "is_leading": false
     },
@@ -83,7 +83,7 @@
       "name": "Abdul Latheef I",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 41,
+      "votes": 79,
       "percentage": 0.04,
       "is_winner": false,
       "is_leading": false
@@ -92,8 +92,8 @@
       "name": "Mohammed Ashraf",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 22,
-      "percentage": 0.02,
+      "votes": 64,
+      "percentage": 0.03,
       "is_winner": false,
       "is_leading": false
     },
@@ -101,7 +101,7 @@
       "name": "John D' Souza",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 17,
+      "votes": 46,
       "percentage": 0.02,
       "is_winner": false,
       "is_leading": false

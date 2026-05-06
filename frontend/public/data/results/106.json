@@ -13,7 +13,7 @@
     "valid_votes": 0,
     "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T12:36:03.200739+00:00"
+    "last_updated": "2026-05-05T01:10:03.494316+00:00"
   },
   "candidates_2026": [
     {
@@ -28,7 +28,7 @@
     {
       "name": "Thomas K. Thomas",
       "party": "NCP(SP)",
-      "alliance": "OTH",
+      "alliance": "LDF",
       "votes": 35994,
       "percentage": 31.98,
       "is_winner": false,

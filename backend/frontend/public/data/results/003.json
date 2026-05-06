@@ -6,31 +6,31 @@
     "district": "Kasaragod"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 228512,
     "votes_polled": 178399,
     "votes_counted": 11019,
     "valid_votes": 11019,
-    "rounds_completed": 10,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:21:59.885163+00:00"
+    "last_updated": "2026-05-05T01:10:12.250966+00:00"
   },
   "candidates_2026": [
     {
       "name": "Neelakantan",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 48227,
-      "percentage": 46.9,
+      "votes": 78910,
+      "percentage": 43.64,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "C. H. Kunhambu",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 37439,
-      "percentage": 36.41,
+      "votes": 74063,
+      "percentage": 40.96,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Manulal Meloth",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 16628,
-      "percentage": 16.17,
+      "votes": 26899,
+      "percentage": 14.88,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,7 +47,7 @@
       "name": "Kunhampu P P S/o Raman",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 111,
+      "votes": 191,
       "percentage": 0.11,
       "is_winner": false,
       "is_leading": false
@@ -56,8 +56,8 @@
       "name": "Kunhiraman",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 88,
-      "percentage": 0.09,
+      "votes": 138,
+      "percentage": 0.08,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Naseer",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 68,
-      "percentage": 0.07,
+      "votes": 111,
+      "percentage": 0.06,
       "is_winner": false,
       "is_leading": false
     }

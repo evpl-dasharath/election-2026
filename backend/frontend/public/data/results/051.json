@@ -6,31 +6,31 @@
     "district": "Palakkad"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 199620,
     "votes_polled": 157340,
     "votes_counted": 40698,
     "valid_votes": 40698,
-    "rounds_completed": 10,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:22:48.323498+00:00"
+    "last_updated": "2026-05-05T01:10:09.638687+00:00"
   },
   "candidates_2026": [
     {
       "name": "P. Mammikkutty",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 59230,
-      "percentage": 43.61,
+      "votes": 70583,
+      "percentage": 44.08,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "P. Harigovindan",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 49390,
-      "percentage": 36.37,
+      "votes": 54066,
+      "percentage": 33.77,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Adv. Sanku T. Das",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 25250,
-      "percentage": 18.59,
+      "votes": 33264,
+      "percentage": 20.77,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Aboobacker",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 1203,
-      "percentage": 0.89,
+      "votes": 1263,
+      "percentage": 0.79,
       "is_winner": false,
       "is_leading": false
     }

@@ -6,31 +6,31 @@
     "district": "Kottayam"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 155957,
     "votes_polled": 119681,
     "votes_counted": 20008,
     "valid_votes": 20008,
-    "rounds_completed": 11,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:23:23.224951+00:00"
+    "last_updated": "2026-05-05T01:10:12.710838+00:00"
   },
   "candidates_2026": [
     {
       "name": "K. Binimon",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 44519,
-      "percentage": 41.63,
+      "votes": 52944,
+      "percentage": 41.94,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "P. Pradeep",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 44132,
-      "percentage": 41.27,
+      "votes": 51584,
+      "percentage": 40.86,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "K. Ajith",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 17115,
-      "percentage": 16.0,
+      "votes": 20297,
+      "percentage": 16.08,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Sumam P S",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 217,
-      "percentage": 0.2,
+      "votes": 280,
+      "percentage": 0.22,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Adv. P I Jayakumar",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 110,
-      "percentage": 0.1,
+      "votes": 158,
+      "percentage": 0.13,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,7 +65,7 @@
       "name": "Pradeep",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 106,
+      "votes": 123,
       "percentage": 0.1,
       "is_winner": false,
       "is_leading": false
@@ -74,8 +74,8 @@
       "name": "T M Bose",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 102,
-      "percentage": 0.1,
+      "votes": 115,
+      "percentage": 0.09,
       "is_winner": false,
       "is_leading": false
     }

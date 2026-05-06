@@ -6,31 +6,31 @@
     "district": "Kozhikode"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 211105,
     "votes_polled": 174056,
     "votes_counted": 11947,
     "valid_votes": 11947,
-    "rounds_completed": 9,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:22:30.048582+00:00"
+    "last_updated": "2026-05-05T01:09:56.977313+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. Vidya Balakrishnan",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 46737,
-      "percentage": 44.67,
+      "votes": 77662,
+      "percentage": 43.69,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "A. K. Saseendran",
       "party": "NCP(SP)",
-      "alliance": "OTH",
-      "votes": 37629,
-      "percentage": 35.96,
+      "alliance": "LDF",
+      "votes": 65500,
+      "percentage": 36.85,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "T. Devadas",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 18527,
-      "percentage": 17.71,
+      "votes": 31510,
+      "percentage": 17.73,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "V.K. Saseendran",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 404,
-      "percentage": 0.39,
+      "votes": 726,
+      "percentage": 0.41,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "P.K.Saseendran",
       "party": "NCP",
       "alliance": "LDF",
-      "votes": 375,
-      "percentage": 0.36,
+      "votes": 692,
+      "percentage": 0.39,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "P.M.Sreekumar",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 289,
-      "percentage": 0.28,
+      "votes": 481,
+      "percentage": 0.27,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "Abdul Basith Atholi",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 197,
-      "percentage": 0.19,
+      "votes": 348,
+      "percentage": 0.2,
       "is_winner": false,
       "is_leading": false
     },
@@ -83,8 +83,8 @@
       "name": "Adv.Sumin.S.Nedungadan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 64,
-      "percentage": 0.06,
+      "votes": 117,
+      "percentage": 0.07,
       "is_winner": false,
       "is_leading": false
     }

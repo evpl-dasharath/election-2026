@@ -1,0 +1,51 @@
+{
+  "code": "CON_S",
+  "full_name": "Congress (Secular)",
+  "alliance": "LDF",
+  "color_code": "#87CEEB",
+  "seats_contested": 1,
+  "seats_won": 0,
+  "seats_leading": 0,
+  "seats_2nd": 1,
+  "seats_close_3rd": 0,
+  "seats_distant_3rd": 0,
+  "seats_trailing": 1,
+  "total_votes": 52069,
+  "vote_share": 37.24,
+  "vote_share_2021_pct": 45.15,
+  "constituencies": [
+    {
+      "id": 11,
+      "number": 11,
+      "name": "KANNUR",
+      "district": "Kannur",
+      "region": "north",
+      "reserved": "General",
+      "leader": {
+        "name": "Adv. T. O. Mohanan",
+        "party": "INC",
+        "alliance": "UDF",
+        "votes": 70620,
+        "percentage": 50.26,
+        "party_color": "#19AAED"
+      },
+      "runner_up": {
+        "name": "Kadannappalli Ramachandran",
+        "party": "CON_S",
+        "alliance": "LDF",
+        "votes": 52069,
+        "percentage": 37.05,
+        "party_color": "#87CEEB"
+      },
+      "status": "RESULT_DECLARED",
+      "sitting_party": "CON_S",
+      "sitting_alliance": "LDF",
+      "total_electors": 182682,
+      "votes_polled": 138125,
+      "total_valid": 22168,
+      "party_pos": 2,
+      "margin_to_second": 35925,
+      "party_votes": 52069
+    }
+  ]
+}

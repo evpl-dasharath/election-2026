@@ -6,31 +6,31 @@
     "district": "Kollam"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 201716,
     "votes_polled": 150137,
     "votes_counted": 10582,
     "valid_votes": 10582,
-    "rounds_completed": 8,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:23:43.758573+00:00"
+    "last_updated": "2026-05-05T01:09:55.205559+00:00"
   },
   "candidates_2026": [
     {
       "name": "M. M. Naseer",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 35884,
-      "percentage": 43.81,
+      "votes": 68281,
+      "percentage": 44.55,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "J. Chinchu Rani",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 32893,
-      "percentage": 40.16,
+      "votes": 60795,
+      "percentage": 39.67,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "R. S. Arun Raj",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 11393,
-      "percentage": 13.91,
+      "votes": 20971,
+      "percentage": 13.68,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Sharafath Mallam",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 921,
-      "percentage": 1.12,
+      "votes": 1674,
+      "percentage": 1.09,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Aji Kadasseri",
       "party": "Anna DHRM",
       "alliance": "OTH",
-      "votes": 226,
-      "percentage": 0.28,
+      "votes": 381,
+      "percentage": 0.25,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "G. Jayan Moonlight Chithara",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 103,
-      "percentage": 0.13,
+      "votes": 277,
+      "percentage": 0.18,
       "is_winner": false,
       "is_leading": false
     }

@@ -6,31 +6,31 @@
     "district": "Alappuzha"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 192435,
     "votes_polled": 139611,
     "votes_counted": 6806,
     "valid_votes": 6806,
-    "rounds_completed": 12,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:23:43.973504+00:00"
+    "last_updated": "2026-05-05T01:10:05.108431+00:00"
   },
   "candidates_2026": [
     {
       "name": "M. S. Arun Kumar",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 48519,
-      "percentage": 47.44,
+      "votes": 67180,
+      "percentage": 47.09,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Adv. Muthara Raj",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 36144,
-      "percentage": 35.34,
+      "votes": 51444,
+      "percentage": 36.06,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Ajimon",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 16993,
-      "percentage": 16.61,
+      "votes": 23200,
+      "percentage": 16.26,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,7 +47,7 @@
       "name": "SURESH NOORANAD",
       "party": "API",
       "alliance": "OTH",
-      "votes": 194,
+      "votes": 278,
       "percentage": 0.19,
       "is_winner": false,
       "is_leading": false

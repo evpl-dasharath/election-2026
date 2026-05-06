@@ -1,0 +1,51 @@
+{
+  "code": "NCP",
+  "full_name": "Nationalist Congress Party",
+  "alliance": "LDF",
+  "color_code": "#00BFFF",
+  "seats_contested": 1,
+  "seats_won": 0,
+  "seats_leading": 0,
+  "seats_2nd": 0,
+  "seats_close_3rd": 0,
+  "seats_distant_3rd": 0,
+  "seats_trailing": 1,
+  "total_votes": 692,
+  "vote_share": 0.39,
+  "vote_share_2021_pct": 46.04,
+  "constituencies": [
+    {
+      "id": 26,
+      "number": 26,
+      "name": "ELATHUR",
+      "district": "Kozhikode",
+      "region": "north",
+      "reserved": "General",
+      "leader": {
+        "name": "Adv. Vidya Balakrishnan",
+        "party": "INC",
+        "alliance": "UDF",
+        "votes": 77662,
+        "percentage": 43.69,
+        "party_color": "#19AAED"
+      },
+      "runner_up": {
+        "name": "A. K. Saseendran",
+        "party": "NCP(SP)",
+        "alliance": "LDF",
+        "votes": 65500,
+        "percentage": 36.85,
+        "party_color": "#808080"
+      },
+      "status": "RESULT_DECLARED",
+      "sitting_party": "NCP",
+      "sitting_alliance": "LDF",
+      "total_electors": 211105,
+      "votes_polled": 174056,
+      "total_valid": 11947,
+      "party_pos": 5,
+      "margin_to_second": 33990,
+      "party_votes": 692
+    }
+  ]
+}

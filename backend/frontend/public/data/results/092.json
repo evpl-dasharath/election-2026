@@ -6,31 +6,31 @@
     "district": "Idukki"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 156542,
     "votes_polled": 121351,
     "votes_counted": 7566,
     "valid_votes": 7566,
-    "rounds_completed": 12,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:23:09.946627+00:00"
+    "last_updated": "2026-05-05T01:10:07.764932+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. Syriac Thomas",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 52593,
-      "percentage": 58.03,
+      "votes": 69672,
+      "percentage": 56.8,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "K. Salim Kumar",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 29794,
-      "percentage": 32.87,
+      "votes": 42038,
+      "percentage": 34.27,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "V. Ratheesh",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 6975,
-      "percentage": 7.7,
+      "votes": 9218,
+      "percentage": 7.52,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Joseph Jacob",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 384,
-      "percentage": 0.42,
+      "votes": 508,
+      "percentage": 0.41,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "K Murali",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 300,
-      "percentage": 0.33,
+      "votes": 425,
+      "percentage": 0.35,
       "is_winner": false,
       "is_leading": false
     }

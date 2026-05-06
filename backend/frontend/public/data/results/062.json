@@ -6,31 +6,31 @@
     "district": "Thrissur"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 196839,
     "votes_polled": 151841,
     "votes_counted": 20639,
     "valid_votes": 20639,
-    "rounds_completed": 11,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:22:59.999679+00:00"
+    "last_updated": "2026-05-05T01:10:02.893350+00:00"
   },
   "candidates_2026": [
     {
       "name": "A. C. Moytheen",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 51965,
-      "percentage": 46.13,
+      "votes": 69522,
+      "percentage": 45.22,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "P. T. Ajayamohan",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 46243,
-      "percentage": 41.05,
+      "votes": 64959,
+      "percentage": 42.25,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Rijil K. R.",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 12971,
-      "percentage": 11.51,
+      "votes": 17104,
+      "percentage": 11.13,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Rajeev K Sivaraman",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 709,
-      "percentage": 0.63,
+      "votes": 1035,
+      "percentage": 0.67,
       "is_winner": false,
       "is_leading": false
     }

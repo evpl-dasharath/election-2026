@@ -74,10 +74,8 @@ let _infoConnectedStarted = false;
 function _ensureInfoConnectedListener() {
   if (_infoConnectedStarted) return;
   _infoConnectedStarted = true;
-  const connRef = ref(db, '.info/connected');
-  onValue(connRef, (snap) => {
-    _notifyConnected(snap.val() === true);
-  });
+  _setDataSource('cached-json');
+  _notifyConnected(false);
 }
 
 /**
@@ -96,7 +94,7 @@ export function useRtdbConnected(): boolean {
 }
 
 // Environment-based data source
-const USE_API = import.meta.env.DEV;
+const USE_API = false;
 const API_BASE_URL = 'http://localhost:8001/api';
 const JSON_BASE_PATH = '/data';
 
@@ -211,6 +209,9 @@ async function _buildAllianceSummaryFromStatic(code: string): Promise<AllianceSu
     contested: number;
     won: number;
     leading: number;
+    seats_2nd: number;
+    seats_close_3rd: number;
+    seats_distant_3rd: number;
     votes: number;
     votes2021: number;
   }> = {};
@@ -223,6 +224,9 @@ async function _buildAllianceSummaryFromStatic(code: string): Promise<AllianceSu
       contested: 0,
       won: 0,
       leading: 0,
+      seats_2nd: 0,
+      seats_close_3rd: 0,
+      seats_distant_3rd: 0,
       votes: 0,
       votes2021: 0,
     };
@@ -239,6 +243,10 @@ async function _buildAllianceSummaryFromStatic(code: string): Promise<AllianceSu
   let lost = 0;
   let bestMargin: { constituency: string; margin: number } | null = null;
   let worstMargin: { constituency: string; margin: number } | null = null;
+  let seats2nd = 0;
+  let seatsClose3rd = 0;
+  let seatsDistant3rd = 0;
+  let seatsTrailing = 0;
   const gainedFrom = { LDF: 0, UDF: 0, NDA: 0, OTH: 0 };
   const lostTo = { LDF: 0, UDF: 0, NDA: 0, OTH: 0 };
 
@@ -265,6 +273,9 @@ async function _buildAllianceSummaryFromStatic(code: string): Promise<AllianceSu
             contested: 0,
             won: 0,
             leading: 0,
+            seats_2nd: 0,
+            seats_close_3rd: 0,
+            seats_distant_3rd: 0,
             votes: 0,
             votes2021: 0,
           };
@@ -323,6 +334,34 @@ async function _buildAllianceSummaryFromStatic(code: string): Promise<AllianceSu
       }
     }
 
+    // Determine alliance placement for this constituency
+    if (topTwo2026.length > 0) {
+      const p1 = _getAllianceFromPartyCode(candidates2026[0]?.party, parties);
+      const p2Code = candidates2026[1]?.party;
+      const p2 = p2Code ? _getAllianceFromPartyCode(p2Code, parties) : null;
+      const p3Code = candidates2026[2]?.party;
+      const p3 = p3Code ? _getAllianceFromPartyCode(p3Code, parties) : null;
+      
+      if (p2 === allianceCode) {
+        seats2nd += 1;
+        if (p2Code && partyStats[p2Code]) partyStats[p2Code].seats_2nd += 1;
+      } else if (p3 === allianceCode) {
+        const marginToSecond = candidates2026[1].votes - candidates2026[2].votes;
+        if (marginToSecond < 10000) {
+          seatsClose3rd += 1;
+          if (p3Code && partyStats[p3Code]) partyStats[p3Code].seats_close_3rd += 1;
+        } else {
+          seatsDistant3rd += 1;
+          if (p3Code && partyStats[p3Code]) partyStats[p3Code].seats_distant_3rd += 1;
+        }
+      } else if (p1 !== allianceCode) {
+        // If not 1st, not 2nd, not 3rd, it's trailing further
+        if (candidates2026.some(c => _getAllianceFromPartyCode(c.party, parties) === allianceCode)) {
+          seatsTrailing += 1;
+        }
+      }
+    }
+
     if (leader && runnerUp && currentAlliance === allianceCode) {
       const margin = leader.votes - runnerUp.votes;
       if (!bestMargin || margin > bestMargin.margin) {
@@ -343,6 +382,9 @@ async function _buildAllianceSummaryFromStatic(code: string): Promise<AllianceSu
       contested: party.contested,
       won: party.won,
       leading: party.leading,
+      seats_2nd: party.seats_2nd,
+      seats_close_3rd: party.seats_close_3rd,
+      seats_distant_3rd: party.seats_distant_3rd,
       vote_share: totalValidVotes2026 > 0 ? (party.votes / totalValidVotes2026) * 100 : 0,
       vote_share_2021_pct: totalVotes2021 > 0 ? (party.votes2021 / totalVotes2021) * 100 : 0,
     }))
@@ -352,14 +394,17 @@ async function _buildAllianceSummaryFromStatic(code: string): Promise<AllianceSu
     alliance: allianceCode,
     seats_won: seatsWon,
     seats_leading: seatsLeading,
-    seats_trailing: Math.max(0, partiesData.reduce((sum, party) => sum + party.contested, 0) - seatsWon - seatsLeading),
+    seats_2nd: seats2nd,
+    seats_close_3rd: seatsClose3rd,
+    seats_distant_3rd: seatsDistant3rd,
+    seats_trailing: seatsTrailing,
     seats_contested: partiesData.reduce((sum, party) => sum + party.contested, 0),
     total_votes: allianceVotes2026,
     vote_share: totalValidVotes2026 > 0 ? (allianceVotes2026 / totalValidVotes2026) * 100 : 0,
     vote_share_2021_pct: totalVotes2021 > 0 ? (allianceVotes2021 / totalVotes2021) * 100 : 0,
     best_margin: bestMargin,
     worst_margin: worstMargin,
-    seat_movement: { gained, held, lost },
+    seat_movement: { gained, held, lost, pushed_to_3rd: 0, pulled_up_to_2nd: 0 },
     swing_analysis: { gained_from: gainedFrom, lost_to: lostTo },
     parties: partiesData,
     constituencies: constituencies.map((constituency) => ({
@@ -389,6 +434,10 @@ async function _buildPartyDetailFromStatic(code: string): Promise<PartyDetailFul
   let partyVotes2021 = 0;
   let seatsWon = 0;
   let seatsLeading = 0;
+  let seats2nd = 0;
+  let seatsClose3rd = 0;
+  let seatsDistant3rd = 0;
+  let seatsTrailing = 0;
   const contestedNumbers = new Set<number>();
 
   results.forEach((result) => {
@@ -414,6 +463,23 @@ async function _buildPartyDetailFromStatic(code: string): Promise<PartyDetailFul
     if (leader?.party.toUpperCase() === partyCode) {
       if (status === 'RESULT_DECLARED' || status === 'COMPLETED') seatsWon += 1;
       else if (status === 'IN_PROGRESS') seatsLeading += 1;
+    } else {
+      const p2 = candidates2026[1]?.party.toUpperCase();
+      const p3 = candidates2026[2]?.party.toUpperCase();
+      if (p2 === partyCode) {
+        seats2nd += 1;
+      } else if (p3 === partyCode) {
+        const marginToSecond = candidates2026[1].votes - candidates2026[2].votes;
+        if (marginToSecond < 10000) {
+          seatsClose3rd += 1;
+        } else {
+          seatsDistant3rd += 1;
+        }
+      } else {
+        if (candidates2026.some(c => c.party.toUpperCase() === partyCode)) {
+          seatsTrailing += 1;
+        }
+      }
     }
   });
 
@@ -425,6 +491,10 @@ async function _buildPartyDetailFromStatic(code: string): Promise<PartyDetailFul
     seats_contested: contestedNumbers.size,
     seats_won: seatsWon,
     seats_leading: seatsLeading,
+    seats_2nd: seats2nd,
+    seats_close_3rd: seatsClose3rd,
+    seats_distant_3rd: seatsDistant3rd,
+    seats_trailing: seatsTrailing,
     total_votes: partyVotes2026,
     vote_share: totalValidVotes2026 > 0 ? (partyVotes2026 / totalValidVotes2026) * 100 : 0,
     vote_share_2021_pct: totalVotes2021 > 0 ? (partyVotes2021 / totalVotes2021) * 100 : 0,
@@ -1030,7 +1100,7 @@ export function useAllianceSummary(code: string | null) {
           if (!res.ok) throw new Error(`HTTP ${res.status}`);
           json = await res.json();
         } else {
-          const res = await fetch(`${JSON_BASE_PATH}/alliance_${code.toLowerCase()}.json`);
+          const res = await fetch(`${JSON_BASE_PATH}/alliance_${code.toLowerCase()}.json?v=${Date.now()}`);
           if (res.ok) {
             json = await res.json();
           } else {
@@ -1086,7 +1156,7 @@ export function usePartyDetail(code: string | null) {
           if (!res.ok) throw new Error(`HTTP ${res.status}`);
           json = await res.json();
         } else {
-          const res = await fetch(`${JSON_BASE_PATH}/party_${code.toLowerCase()}.json`);
+          const res = await fetch(`${JSON_BASE_PATH}/party_${code.toLowerCase()}.json?v=${Date.now()}`);
           if (res.ok) {
             json = await res.json();
           } else {
@@ -1107,3 +1177,5 @@ export function usePartyDetail(code: string | null) {
 
   return { data, loading, error };
 }
+
+

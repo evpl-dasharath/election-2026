@@ -6,31 +6,31 @@
     "district": "Palakkad"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 206436,
     "votes_polled": 164591,
     "votes_counted": 0,
     "valid_votes": 0,
-    "rounds_completed": 8,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:22:49.295892+00:00"
+    "last_updated": "2026-05-05T01:10:04.820365+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. N. Samsudheen",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 69476,
-      "percentage": 55.9,
+      "votes": 90606,
+      "percentage": 53.68,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Manzil Aboobacker",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 47244,
-      "percentage": 38.01,
+      "votes": 64703,
+      "percentage": 38.34,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Isaac Varghese",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 5860,
-      "percentage": 4.71,
+      "votes": 10671,
+      "percentage": 6.32,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Ashitha Najeeb",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 725,
-      "percentage": 0.58,
+      "votes": 939,
+      "percentage": 0.56,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Shamsudheen S/o Muhammed",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 174,
-      "percentage": 0.14,
+      "votes": 358,
+      "percentage": 0.21,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "Aboobacker S/o Ayisha",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 137,
-      "percentage": 0.11,
+      "votes": 289,
+      "percentage": 0.17,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "Shamsudheen S/o Ummer",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 115,
-      "percentage": 0.09,
+      "votes": 257,
+      "percentage": 0.15,
       "is_winner": false,
       "is_leading": false
     }

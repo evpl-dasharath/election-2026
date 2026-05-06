@@ -1,0 +1,51 @@
+{
+  "code": "KC_B",
+  "full_name": "Kerala Congress (B)",
+  "alliance": "LDF",
+  "color_code": "#A0522D",
+  "seats_contested": 1,
+  "seats_won": 0,
+  "seats_leading": 0,
+  "seats_2nd": 1,
+  "seats_close_3rd": 0,
+  "seats_distant_3rd": 0,
+  "seats_trailing": 1,
+  "total_votes": 59965,
+  "vote_share": 43.77,
+  "vote_share_2021_pct": 49.26,
+  "constituencies": [
+    {
+      "id": 120,
+      "number": 120,
+      "name": "PATHANAPURAM",
+      "district": "Kollam",
+      "region": "south",
+      "reserved": "General",
+      "leader": {
+        "name": "Jyothikumar chamakkala",
+        "party": "INC",
+        "alliance": "UDF",
+        "votes": 68275,
+        "percentage": 49.61,
+        "party_color": "#19AAED"
+      },
+      "runner_up": {
+        "name": "K. B. Ganesh Kumar",
+        "party": "KC_B",
+        "alliance": "LDF",
+        "votes": 59965,
+        "percentage": 43.57,
+        "party_color": "#A0522D"
+      },
+      "status": "RESULT_DECLARED",
+      "sitting_party": "KC_B",
+      "sitting_alliance": "LDF",
+      "total_electors": 179783,
+      "votes_polled": 135142,
+      "total_valid": 0,
+      "party_pos": 2,
+      "margin_to_second": 52934,
+      "party_votes": 59965
+    }
+  ]
+}

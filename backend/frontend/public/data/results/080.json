@@ -6,31 +6,31 @@
     "district": "Ernakulam"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 165675,
     "votes_polled": 133086,
     "votes_counted": 7128,
     "valid_votes": 7128,
-    "rounds_completed": 11,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:23:01.587159+00:00"
+    "last_updated": "2026-05-05T01:10:00.513346+00:00"
   },
   "candidates_2026": [
     {
       "name": "Mohammed Shiyas",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 37911,
-      "percentage": 46.43,
+      "votes": 64318,
+      "percentage": 47.87,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "K. J. Maxi",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 32794,
-      "percentage": 40.17,
+      "votes": 56130,
+      "percentage": 41.78,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Adv. Xavier Joolappan",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 9406,
-      "percentage": 11.52,
+      "votes": 11854,
+      "percentage": 8.82,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Aneesh Mattancherry",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 679,
-      "percentage": 0.83,
+      "votes": 803,
+      "percentage": 0.6,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Ajeesh P.E",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 232,
-      "percentage": 0.28,
+      "votes": 318,
+      "percentage": 0.24,
       "is_winner": false,
       "is_leading": false
     }

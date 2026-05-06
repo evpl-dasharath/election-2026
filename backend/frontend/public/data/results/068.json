@@ -6,31 +6,31 @@
     "district": "Thrissur"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 203427,
     "votes_polled": 155377,
     "votes_counted": 20075,
     "valid_votes": 20075,
-    "rounds_completed": 13,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:22:52.527230+00:00"
+    "last_updated": "2026-05-05T01:10:05.552786+00:00"
   },
   "candidates_2026": [
     {
       "name": "Geetha Gopi",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 48112,
-      "percentage": 38.54,
+      "votes": 58979,
+      "percentage": 37.44,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Adv. Sunil Lalur",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 40096,
-      "percentage": 32.12,
+      "votes": 51886,
+      "percentage": 32.94,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "C. C. Mukundan",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 35487,
-      "percentage": 28.43,
+      "votes": 45216,
+      "percentage": 28.7,
       "is_winner": false,
       "is_leading": false
     }

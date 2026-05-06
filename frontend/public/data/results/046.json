@@ -6,14 +6,14 @@
     "district": "Malappuram"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 243014,
     "votes_polled": 189380,
     "votes_counted": 0,
     "valid_votes": 0,
     "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T13:05:47.208738+00:00"
+    "last_updated": "2026-05-05T01:10:01.698602+00:00"
   },
   "candidates_2026": [
     {
@@ -23,7 +23,7 @@
       "votes": 118111,
       "percentage": 61.77,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "K. Preethi",

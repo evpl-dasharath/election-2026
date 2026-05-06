@@ -6,31 +6,31 @@
     "district": "Ernakulam"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 171968,
     "votes_polled": 136370,
     "votes_counted": 0,
     "valid_votes": 0,
-    "rounds_completed": 11,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:23:36.936063+00:00"
+    "last_updated": "2026-05-05T01:10:01.553568+00:00"
   },
   "candidates_2026": [
     {
       "name": "Shibu Thekkumpuram",
       "party": "KEC",
       "alliance": "UDF",
-      "votes": 56857,
-      "percentage": 52.44,
+      "votes": 73479,
+      "percentage": 52.83,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Antony John",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 44438,
-      "percentage": 40.99,
+      "votes": 56620,
+      "percentage": 40.71,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Aji Narayanan",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 5614,
-      "percentage": 5.18,
+      "votes": 7046,
+      "percentage": 5.07,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Roy Arackal",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 503,
-      "percentage": 0.46,
+      "votes": 703,
+      "percentage": 0.51,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "Shibu Kallekkattu",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 224,
+      "votes": 297,
       "percentage": 0.21,
       "is_winner": false,
       "is_leading": false
@@ -65,7 +65,7 @@
       "name": "Shibu Chalakattu",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 148,
+      "votes": 192,
       "percentage": 0.14,
       "is_winner": false,
       "is_leading": false
@@ -74,8 +74,8 @@
       "name": "Finto Xavier",
       "party": "RJP",
       "alliance": "OTH",
-      "votes": 117,
-      "percentage": 0.11,
+      "votes": 137,
+      "percentage": 0.1,
       "is_winner": false,
       "is_leading": false
     }

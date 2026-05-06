@@ -6,31 +6,31 @@
     "district": "Ernakulam"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 176387,
     "votes_polled": 139081,
     "votes_counted": 6702,
     "valid_votes": 6702,
-    "rounds_completed": 13,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:23:05.040216+00:00"
+    "last_updated": "2026-05-05T01:10:11.212540+00:00"
   },
   "candidates_2026": [
     {
       "name": "Uma Thomas",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 56843,
-      "percentage": 59.33,
+      "votes": 83375,
+      "percentage": 59.35,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Adv. Pushpa das",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 21574,
-      "percentage": 22.52,
+      "votes": 33164,
+      "percentage": 23.61,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Akhil Raj (Akhil Marar)",
       "party": "TTP",
       "alliance": "NDA",
-      "votes": 15638,
-      "percentage": 16.32,
+      "votes": 21424,
+      "percentage": 15.25,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Jose George",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 429,
-      "percentage": 0.45,
+      "votes": 605,
+      "percentage": 0.43,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Aloysius Kollannur",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 354,
-      "percentage": 0.37,
+      "votes": 551,
+      "percentage": 0.39,
       "is_winner": false,
       "is_leading": false
     }

@@ -6,31 +6,31 @@
     "district": "Kottayam"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 149573,
     "votes_polled": 111745,
     "votes_counted": 17402,
     "valid_votes": 17402,
-    "rounds_completed": 9,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:23:38.684948+00:00"
+    "last_updated": "2026-05-05T01:10:01.990512+00:00"
   },
   "candidates_2026": [
     {
       "name": "Thiruvanchoor Radhakrishnan",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 43657,
-      "percentage": 61.02,
+      "votes": 68893,
+      "percentage": 60.57,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Adv. K. Anilkumar",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 20421,
-      "percentage": 28.54,
+      "votes": 32907,
+      "percentage": 28.93,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "P. Anilkumar",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 5977,
-      "percentage": 8.35,
+      "votes": 9726,
+      "percentage": 8.55,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Dr. Selin Philip",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 845,
-      "percentage": 1.18,
+      "votes": 1202,
+      "percentage": 1.06,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Ralesh Chandran",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 92,
-      "percentage": 0.13,
+      "votes": 171,
+      "percentage": 0.15,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,7 +65,7 @@
       "name": "Shaiju Kurian",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 87,
+      "votes": 137,
       "percentage": 0.12,
       "is_winner": false,
       "is_leading": false

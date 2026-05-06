@@ -6,31 +6,31 @@
     "district": "Alappuzha"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 201394,
     "votes_polled": 152334,
     "votes_counted": 8822,
     "valid_votes": 8822,
-    "rounds_completed": 8,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:23:40.474374+00:00"
+    "last_updated": "2026-05-05T01:10:00.197364+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. M. Liju",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 37160,
-      "percentage": 49.18,
+      "votes": 76651,
+      "percentage": 49.33,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Adv. U. Prathibha",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 29668,
-      "percentage": 39.27,
+      "votes": 61079,
+      "percentage": 39.3,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Thambi Mettuthara",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 8402,
-      "percentage": 11.12,
+      "votes": 16973,
+      "percentage": 10.92,
       "is_winner": false,
       "is_leading": false
     }

@@ -13,7 +13,7 @@
     "valid_votes": 17305,
     "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T12:36:02.559259+00:00"
+    "last_updated": "2026-05-05T01:10:03.201661+00:00"
   },
   "candidates_2026": [
     {
@@ -28,7 +28,7 @@
     {
       "name": "Kovoor Kunjumon",
       "party": "RSP(L)",
-      "alliance": "OTH",
+      "alliance": "LDF",
       "votes": 56174,
       "percentage": 34.23,
       "is_winner": false,

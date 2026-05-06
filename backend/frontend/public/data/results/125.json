@@ -6,31 +6,31 @@
     "district": "Kollam"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 168865,
     "votes_polled": 130583,
     "votes_counted": 8166,
     "valid_votes": 8166,
-    "rounds_completed": 10,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:23:45.053767+00:00"
+    "last_updated": "2026-05-05T01:09:57.287457+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. Vishnu Mohan",
       "party": "RSP",
       "alliance": "UDF",
-      "votes": 47417,
-      "percentage": 49.41,
+      "votes": 64383,
+      "percentage": 48.63,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "M. Noushad",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 39314,
-      "percentage": 40.97,
+      "votes": 55580,
+      "percentage": 41.98,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Saji D. Anand",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 7788,
-      "percentage": 8.12,
+      "votes": 10469,
+      "percentage": 7.91,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Firoz  S  R",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 466,
-      "percentage": 0.49,
+      "votes": 597,
+      "percentage": 0.45,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Noushad A   S/o.Aliyaru Kunju",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 303,
-      "percentage": 0.32,
+      "votes": 443,
+      "percentage": 0.33,
       "is_winner": false,
       "is_leading": false
     }

@@ -130,13 +130,14 @@ class ConstituencyListSerializer(serializers.ModelSerializer):
     # Static polling-day fields — never change during counting
     total_electors = serializers.SerializerMethodField()
     votes_polled = serializers.SerializerMethodField()
+    total_valid = serializers.SerializerMethodField()
     
     class Meta:
         model = Constituency
         fields = [
             'id', 'number', 'name', 'district', 'region', 'reserved',
             'leader', 'runner_up', 'status', 'sitting_party', 'sitting_alliance',
-            'total_electors', 'votes_polled',
+            'total_electors', 'votes_polled', 'total_valid',
         ]
 
     def get_region(self, obj):
@@ -206,6 +207,11 @@ class ConstituencyListSerializer(serializers.ModelSerializer):
         """Votes polled on polling day — static once polling ends."""
         live = obj.live_results.first()
         return live.votes_polled if live and live.votes_polled else 0
+        
+    def get_total_valid(self, obj):
+        """Sum of all candidate votes in 2026."""
+        live = obj.live_results.first()
+        return live.valid_votes if live and live.valid_votes else 0
 
     def get_sitting_color(self, obj):
         """Convenience: color for the 2021 sitting party."""

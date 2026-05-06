@@ -6,31 +6,31 @@
     "district": "Alappuzha"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 184457,
     "votes_polled": 140796,
     "votes_counted": 29095,
     "valid_votes": 29095,
-    "rounds_completed": 14,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:23:33.829588+00:00"
+    "last_updated": "2026-05-05T01:09:57.900336+00:00"
   },
   "candidates_2026": [
     {
       "name": "Ramesh Chennithala",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 65625,
-      "percentage": 47.18,
+      "votes": 68184,
+      "percentage": 47.08,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "T. T. Jismon",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 42832,
-      "percentage": 30.79,
+      "votes": 44807,
+      "percentage": 30.94,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Sandeep Vachaspati",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 29864,
-      "percentage": 21.47,
+      "votes": 31022,
+      "percentage": 21.42,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Vidhya V.P",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 212,
-      "percentage": 0.15,
+      "votes": 231,
+      "percentage": 0.16,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "Soumya V.Sasidharan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 65,
+      "votes": 69,
       "percentage": 0.05,
       "is_winner": false,
       "is_leading": false
@@ -65,7 +65,7 @@
       "name": "Ch. Ramesh",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 57,
+      "votes": 59,
       "percentage": 0.04,
       "is_winner": false,
       "is_leading": false

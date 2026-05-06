@@ -1,0 +1,51 @@
+{
+  "code": "IGP",
+  "full_name": "Indian Gandhiyan Party",
+  "alliance": "OTH",
+  "color_code": "#37474F",
+  "seats_contested": 1,
+  "seats_won": 0,
+  "seats_leading": 0,
+  "seats_2nd": 0,
+  "seats_close_3rd": 0,
+  "seats_distant_3rd": 0,
+  "seats_trailing": 1,
+  "total_votes": 118,
+  "vote_share": 0.07,
+  "vote_share_2021_pct": 0,
+  "constituencies": [
+    {
+      "id": 64,
+      "number": 64,
+      "name": "MANALUR",
+      "district": "Thrissur",
+      "region": "central_north",
+      "reserved": "General",
+      "leader": {
+        "name": "C. Ravindranath",
+        "party": "CPI_M",
+        "alliance": "LDF",
+        "votes": 65337,
+        "percentage": 38.12,
+        "party_color": "#ED1E26"
+      },
+      "runner_up": {
+        "name": "T. N. Prathapan",
+        "party": "INC",
+        "alliance": "UDF",
+        "votes": 65211,
+        "percentage": 38.05,
+        "party_color": "#19AAED"
+      },
+      "status": "RESULT_DECLARED",
+      "sitting_party": "CPI_M",
+      "sitting_alliance": "LDF",
+      "total_electors": 222278,
+      "votes_polled": 168686,
+      "total_valid": 0,
+      "party_pos": 8,
+      "margin_to_second": 27086,
+      "party_votes": 118
+    }
+  ]
+}

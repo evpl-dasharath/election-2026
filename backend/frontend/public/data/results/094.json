@@ -6,31 +6,31 @@
     "district": "Kottayam"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 175905,
     "votes_polled": 121972,
     "votes_counted": 17515,
     "valid_votes": 17515,
-    "rounds_completed": 11,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:23:28.110036+00:00"
+    "last_updated": "2026-05-05T01:09:58.505264+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. Mons Joseph",
       "party": "KEC",
       "alliance": "UDF",
-      "votes": 52083,
-      "percentage": 57.16,
+      "votes": 70353,
+      "percentage": 56.39,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Nirmala Jimmy",
       "party": "KC_M",
       "alliance": "LDF",
-      "votes": 28268,
-      "percentage": 31.02,
+      "votes": 39053,
+      "percentage": 31.3,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Suresh Ettikunnel",
       "party": "BDJS",
       "alliance": "NDA",
-      "votes": 8359,
-      "percentage": 9.17,
+      "votes": 12228,
+      "percentage": 9.8,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Jijith K Joy",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 1042,
-      "percentage": 1.14,
+      "votes": 1324,
+      "percentage": 1.06,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "Dominic Simon",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 500,
-      "percentage": 0.55,
+      "votes": 628,
+      "percentage": 0.5,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "M.M.Scaria",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 115,
-      "percentage": 0.13,
+      "votes": 134,
+      "percentage": 0.11,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "Indu",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 105,
-      "percentage": 0.12,
+      "votes": 134,
+      "percentage": 0.11,
       "is_winner": false,
       "is_leading": false
     }

@@ -6,31 +6,31 @@
     "district": "Palakkad"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 195429,
     "votes_polled": 159470,
     "votes_counted": 24645,
     "valid_votes": 24645,
-    "rounds_completed": 12,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:22:44.682469+00:00"
+    "last_updated": "2026-05-05T01:10:03.787081+00:00"
   },
   "candidates_2026": [
     {
       "name": "A. Prabhakaran",
       "party": "CPI_M",
       "alliance": "LDF",
-      "votes": 59680,
-      "percentage": 42.54,
+      "votes": 68629,
+      "percentage": 42.28,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "C. Krishnakumar",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 42779,
-      "percentage": 30.49,
+      "votes": 48908,
+      "percentage": 30.13,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "A. Suresh",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 35697,
-      "percentage": 25.44,
+      "votes": 42262,
+      "percentage": 26.04,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Ramnath C",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 364,
-      "percentage": 0.26,
+      "votes": 448,
+      "percentage": 0.28,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "K Prasad",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 306,
+      "votes": 355,
       "percentage": 0.22,
       "is_winner": false,
       "is_leading": false
@@ -65,7 +65,7 @@
       "name": "Saji P J",
       "party": "AAP",
       "alliance": "OTH",
-      "votes": 169,
+      "votes": 197,
       "percentage": 0.12,
       "is_winner": false,
       "is_leading": false

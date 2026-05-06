@@ -1,39 +1,39 @@
 {
   "total_constituencies": 140,
-  "results_declared": 1,
-  "counting_in_progress": 139,
+  "results_declared": 140,
+  "counting_in_progress": 0,
   "not_started": 0,
   "alliance_summary": {
     "UDF": {
-      "won": 1,
-      "leading": 102,
+      "won": 102,
+      "leading": 0,
       "trailing": 0,
-      "vote_share": 46.53123434505065
+      "vote_share": 46.81323179912732
     },
     "LDF": {
-      "won": 0,
-      "leading": 35,
+      "won": 35,
+      "leading": 0,
       "trailing": 0,
-      "vote_share": 37.000683971037915
+      "vote_share": 37.859370684769075
     },
     "NDA": {
-      "won": 0,
-      "leading": 2,
+      "won": 3,
+      "leading": 0,
       "trailing": 0,
-      "vote_share": 14.578752939336178
+      "vote_share": 14.280913994143976
     },
     "OTH": {
       "won": 0,
       "leading": 0,
       "trailing": 0,
-      "vote_share": 1.889328744575259
+      "vote_share": 1.0464835219596207
     }
   },
   "ind_summary": {
     "won": 0,
     "leading": 0
   },
-  "total_votes_counted": 13540047,
+  "total_votes_counted": 21471910,
   "total_votes_polled": 21225079,
-  "timestamp": "2026-05-04T07:24:08.629898+00:00"
+  "timestamp": "2026-05-05T03:42:38.057442+00:00"
 }

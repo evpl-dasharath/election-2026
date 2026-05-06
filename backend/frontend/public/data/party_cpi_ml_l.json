@@ -1,0 +1,84 @@
+{
+  "code": "CPI_ML_L",
+  "full_name": "CPI(ML) Liberation",
+  "alliance": "OTH",
+  "color_code": "#CC0000",
+  "seats_contested": 2,
+  "seats_won": 0,
+  "seats_leading": 0,
+  "seats_2nd": 0,
+  "seats_close_3rd": 0,
+  "seats_distant_3rd": 0,
+  "seats_trailing": 2,
+  "total_votes": 372,
+  "vote_share": 0.14,
+  "vote_share_2021_pct": 0,
+  "constituencies": [
+    {
+      "id": 67,
+      "number": 67,
+      "name": "THRISSUR",
+      "district": "Thrissur",
+      "region": "central_north",
+      "reserved": "General",
+      "leader": {
+        "name": "Rajan Pallan",
+        "party": "INC",
+        "alliance": "UDF",
+        "votes": 60290,
+        "percentage": 48.55,
+        "party_color": "#19AAED"
+      },
+      "runner_up": {
+        "name": "Alankode Leelakrishnan",
+        "party": "CPI",
+        "alliance": "LDF",
+        "votes": 33487,
+        "percentage": 26.97,
+        "party_color": "#FF4444"
+      },
+      "status": "RESULT_DECLARED",
+      "sitting_party": "CPI",
+      "sitting_alliance": "LDF",
+      "total_electors": 161225,
+      "votes_polled": 122047,
+      "total_valid": 21254,
+      "party_pos": 7,
+      "margin_to_second": 4825,
+      "party_votes": 110
+    },
+    {
+      "id": 138,
+      "number": 138,
+      "name": "KATTAKKADA",
+      "district": "Thiruvananthapuram",
+      "region": "south",
+      "reserved": "General",
+      "leader": {
+        "name": "M. R. Baiju",
+        "party": "INC",
+        "alliance": "UDF",
+        "votes": 56846,
+        "percentage": 38.87,
+        "party_color": "#19AAED"
+      },
+      "runner_up": {
+        "name": "Adv. I. B. Satheesh",
+        "party": "CPI_M",
+        "alliance": "LDF",
+        "votes": 49710,
+        "percentage": 33.99,
+        "party_color": "#ED1E26"
+      },
+      "status": "RESULT_DECLARED",
+      "sitting_party": "CPI_M",
+      "sitting_alliance": "LDF",
+      "total_electors": 177094,
+      "votes_polled": 142950,
+      "total_valid": 8029,
+      "party_pos": 5,
+      "margin_to_second": 11479,
+      "party_votes": 262
+    }
+  ]
+}

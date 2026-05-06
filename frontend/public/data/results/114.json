@@ -6,14 +6,14 @@
     "district": "Pathanamthitta"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 189366,
     "votes_polled": 132366,
     "votes_counted": 7912,
     "valid_votes": 7912,
     "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T13:05:47.506083+00:00"
+    "last_updated": "2026-05-05T01:10:01.400124+00:00"
   },
   "candidates_2026": [
     {
@@ -23,7 +23,7 @@
       "votes": 60380,
       "percentage": 44.59,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Prof Satheesh Kochuparambil",

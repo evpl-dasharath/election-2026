@@ -6,31 +6,31 @@
     "district": "Thiruvananthapuram"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 195296,
     "votes_polled": 144772,
     "votes_counted": 17965,
     "valid_votes": 17965,
-    "rounds_completed": 9,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:24:05.252835+00:00"
+    "last_updated": "2026-05-05T01:09:56.364551+00:00"
   },
   "candidates_2026": [
-    {
-      "name": "Manoj B Edamana",
-      "party": "CPI",
-      "alliance": "LDF",
-      "votes": 31917,
-      "percentage": 37.55,
-      "is_winner": false,
-      "is_leading": true
-    },
     {
       "name": "Ramya Haridas",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 30004,
-      "percentage": 35.3,
+      "votes": 56833,
+      "percentage": 38.51,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Manoj B Edamana",
+      "party": "CPI",
+      "alliance": "LDF",
+      "votes": 55411,
+      "percentage": 37.55,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,17 +38,8 @@
       "name": "B. S. Anoop",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 21726,
-      "percentage": 25.56,
-      "is_winner": false,
-      "is_leading": false
-    },
-    {
-      "name": "Anoop Alappuramkunnu",
-      "party": "Anna DHRM",
-      "alliance": "OTH",
-      "votes": 434,
-      "percentage": 0.51,
+      "votes": 32920,
+      "percentage": 22.31,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +47,17 @@
       "name": "Ramasamy Sasi",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 326,
-      "percentage": 0.38,
+      "votes": 743,
+      "percentage": 0.5,
+      "is_winner": false,
+      "is_leading": false
+    },
+    {
+      "name": "Anoop Alappuramkunnu",
+      "party": "Anna DHRM",
+      "alliance": "OTH",
+      "votes": 617,
+      "percentage": 0.42,
       "is_winner": false,
       "is_leading": false
     }

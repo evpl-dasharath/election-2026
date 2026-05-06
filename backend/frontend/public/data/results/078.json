@@ -6,31 +6,31 @@
     "district": "Ernakulam"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 191646,
     "votes_polled": 157073,
     "votes_counted": 10409,
     "valid_votes": 10409,
-    "rounds_completed": 9,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:23:05.342842+00:00"
+    "last_updated": "2026-05-05T01:10:07.172607+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. V. D. Satheesan",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 42628,
-      "percentage": 47.7,
+      "votes": 78658,
+      "percentage": 49.3,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "E. T. Taison Master",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 34754,
-      "percentage": 38.89,
+      "votes": 58058,
+      "percentage": 36.39,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Vathsala Prasanna Kumar",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 10766,
-      "percentage": 12.05,
+      "votes": 20377,
+      "percentage": 12.77,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "V.M. Faisal",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 330,
-      "percentage": 0.37,
+      "votes": 828,
+      "percentage": 0.52,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,8 +56,8 @@
       "name": "P.K.Rajesh",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 175,
-      "percentage": 0.2,
+      "votes": 328,
+      "percentage": 0.21,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "K.B.Satheesan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 109,
-      "percentage": 0.12,
+      "votes": 200,
+      "percentage": 0.13,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "G.Gokuldev",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 91,
-      "percentage": 0.1,
+      "votes": 171,
+      "percentage": 0.11,
       "is_winner": false,
       "is_leading": false
     }

@@ -6,31 +6,31 @@
     "district": "Malappuram"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 230838,
     "votes_polled": 185362,
     "votes_counted": 18606,
     "valid_votes": 18606,
-    "rounds_completed": 11,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:22:40.834089+00:00"
+    "last_updated": "2026-05-05T01:10:04.662605+00:00"
   },
   "candidates_2026": [
     {
       "name": "Manjalamkuzhi Ali",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 62263,
-      "percentage": 63.11,
+      "votes": 110692,
+      "percentage": 58.98,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Kunnath Mohamed S/o Ali Haji",
       "party": "IND_LDF",
       "alliance": "LDF",
-      "votes": 31736,
-      "percentage": 32.17,
+      "votes": 65083,
+      "percentage": 34.68,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Lijoy Paul",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 3716,
-      "percentage": 3.77,
+      "votes": 9933,
+      "percentage": 5.29,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Kunnath Muhammed",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 316,
-      "percentage": 0.32,
+      "votes": 663,
+      "percentage": 0.35,
       "is_winner": false,
       "is_leading": false
     }

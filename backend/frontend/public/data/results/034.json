@@ -6,31 +6,31 @@
     "district": "Malappuram"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 199556,
     "votes_polled": 166170,
     "votes_counted": 17191,
     "valid_votes": 17191,
-    "rounds_completed": 13,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:22:27.647137+00:00"
+    "last_updated": "2026-05-05T01:09:57.441722+00:00"
   },
   "candidates_2026": [
     {
       "name": "P. K. Basheer",
       "party": "IUML",
       "alliance": "UDF",
-      "votes": 70325,
-      "percentage": 58.04,
+      "votes": 98547,
+      "percentage": 58.42,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Adv. Shafeer Kizhisseri",
       "party": "CPI",
       "alliance": "LDF",
-      "votes": 40980,
-      "percentage": 33.82,
+      "votes": 57258,
+      "percentage": 33.94,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "Adv. N. Sreeprakash",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 6791,
-      "percentage": 5.6,
+      "votes": 8728,
+      "percentage": 5.17,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,8 +47,8 @@
       "name": "Yusuf Chemmala",
       "party": "SDPI",
       "alliance": "OTH",
-      "votes": 1872,
-      "percentage": 1.55,
+      "votes": 2530,
+      "percentage": 1.5,
       "is_winner": false,
       "is_leading": false
     },
@@ -56,7 +56,7 @@
       "name": "Krishnan Thachannan",
       "party": "BSP",
       "alliance": "OTH",
-      "votes": 345,
+      "votes": 467,
       "percentage": 0.28,
       "is_winner": false,
       "is_leading": false
@@ -65,8 +65,8 @@
       "name": "Mujeeb Rahman",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 132,
-      "percentage": 0.11,
+      "votes": 166,
+      "percentage": 0.1,
       "is_winner": false,
       "is_leading": false
     }

@@ -6,31 +6,31 @@
     "district": "Kannur"
   },
   "live_result": {
-    "status": "IN_PROGRESS",
+    "status": "RESULT_DECLARED",
     "total_electors": 182682,
     "votes_polled": 138125,
     "votes_counted": 22168,
     "valid_votes": 22168,
-    "rounds_completed": 9,
+    "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T07:22:04.824757+00:00"
+    "last_updated": "2026-05-05T01:09:59.575024+00:00"
   },
   "candidates_2026": [
     {
       "name": "Adv. T. O. Mohanan",
       "party": "INC",
       "alliance": "UDF",
-      "votes": 49328,
-      "percentage": 50.47,
+      "votes": 70620,
+      "percentage": 50.26,
       "is_winner": false,
-      "is_leading": true
+      "is_leading": false
     },
     {
       "name": "Kadannappalli Ramachandran",
       "party": "CON_S",
       "alliance": "LDF",
-      "votes": 36054,
-      "percentage": 36.89,
+      "votes": 52069,
+      "percentage": 37.05,
       "is_winner": false,
       "is_leading": false
     },
@@ -38,8 +38,8 @@
       "name": "C. Raghunath",
       "party": "BJP",
       "alliance": "NDA",
-      "votes": 11272,
-      "percentage": 11.53,
+      "votes": 16144,
+      "percentage": 11.49,
       "is_winner": false,
       "is_leading": false
     },
@@ -47,7 +47,7 @@
       "name": "T.K. Mohanan",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 194,
+      "votes": 281,
       "percentage": 0.2,
       "is_winner": false,
       "is_leading": false
@@ -56,8 +56,8 @@
       "name": "Suresh Kumar",
       "party": "BJKP",
       "alliance": "OTH",
-      "votes": 164,
-      "percentage": 0.17,
+      "votes": 255,
+      "percentage": 0.18,
       "is_winner": false,
       "is_leading": false
     },
@@ -65,8 +65,8 @@
       "name": "M.K. Shahazad",
       "party": "SUCI",
       "alliance": "OTH",
-      "votes": 148,
-      "percentage": 0.15,
+      "votes": 229,
+      "percentage": 0.16,
       "is_winner": false,
       "is_leading": false
     },
@@ -74,8 +74,8 @@
       "name": "Ramachandran Kuniyil",
       "party": "IND",
       "alliance": "OTH",
-      "votes": 125,
-      "percentage": 0.13,
+      "votes": 216,
+      "percentage": 0.15,
       "is_winner": false,
       "is_leading": false
     }

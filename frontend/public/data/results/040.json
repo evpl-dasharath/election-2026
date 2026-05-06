@@ -13,7 +13,7 @@
     "valid_votes": 10088,
     "rounds_completed": 0,
     "total_rounds": 0,
-    "last_updated": "2026-05-04T12:59:25.723811+00:00"
+    "last_updated": "2026-05-05T01:10:03.933955+00:00"
   },
   "candidates_2026": [
     {
@@ -28,7 +28,7 @@
     {
       "name": "K. T. Mujeeb",
       "party": "NCP(SP)",
-      "alliance": "OTH",
+      "alliance": "LDF",
       "votes": 46305,
       "percentage": 23.52,
       "is_winner": false,

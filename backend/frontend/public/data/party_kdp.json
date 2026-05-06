@@ -1,0 +1,51 @@
+{
+  "code": "KDP",
+  "full_name": "Kerala Democratic Party",
+  "alliance": "UDF",
+  "color_code": "#4682B4",
+  "seats_contested": 1,
+  "seats_won": 1,
+  "seats_leading": 0,
+  "seats_2nd": 0,
+  "seats_close_3rd": 0,
+  "seats_distant_3rd": 0,
+  "seats_trailing": 0,
+  "total_votes": 50799,
+  "vote_share": 37.55,
+  "vote_share_2021_pct": 0,
+  "constituencies": [
+    {
+      "id": 93,
+      "number": 93,
+      "name": "PALA",
+      "district": "Kottayam",
+      "region": "south_central",
+      "reserved": "General",
+      "leader": {
+        "name": "Mani C. Kappan",
+        "party": "KDP",
+        "alliance": "UDF",
+        "votes": 50799,
+        "percentage": 37.39,
+        "party_color": "#4682B4"
+      },
+      "runner_up": {
+        "name": "Jose K. Mani",
+        "party": "KC_M",
+        "alliance": "LDF",
+        "votes": 47808,
+        "percentage": 35.19,
+        "party_color": "#8B4513"
+      },
+      "status": "RESULT_DECLARED",
+      "sitting_party": "IND_UDF",
+      "sitting_alliance": "UDF",
+      "total_electors": 176585,
+      "votes_polled": 132562,
+      "total_valid": 7499,
+      "party_pos": 1,
+      "margin_to_second": 12504,
+      "party_votes": 50799
+    }
+  ]
+}
