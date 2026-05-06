@@ -30,6 +30,7 @@ kerala-election-2026/
 │   │           ├── import_parliament_results.py
 │   │           └── export_json.py
 │   ├── config/                # Django settings
+│   ├── scripts/               # Backend utility scripts
 │   ├── requirements.txt       # Python dependencies
 │   ├── manage.py
 │   └── SETUP.md              # Detailed backend setup guide
@@ -38,24 +39,32 @@ kerala-election-2026/
 │   ├── src/
 │   │   ├── components/       # Reusable components
 │   │   ├── pages/            # Page components
-│   │   │   ├── HomePage.tsx
-│   │   │   ├── ConstituencyPage.tsx
-│   │   │   └── AdminPanel.tsx
 │   │   ├── hooks/            # Custom hooks
-│   │   │   └── useElectionData.ts
 │   │   ├── types/            # TypeScript types
-│   │   │   └── index.ts
 │   │   ├── data/             # Exported JSON (for production)
 │   │   ├── App.tsx
 │   │   └── main.tsx
 │   ├── package.json
 │   └── vite.config.ts
 │
-└── data/                      # Source CSV files
-    ├── election_candidates.csv     # 2021 LA results (complete)
-    ├── 2019_Parliment.csv         # 2019 LS results
-    └── 2024_Parliment.csv         # 2024 LS results
+├── data/                      # Source CSV files
+├── docs/                      # Documentation
+│   ├── ARCHITECTURE.md        # System architecture details
+│   ├── DATA_FLOW.md           # Data import/export flows
+│   ├── plans/                 # Planning and implementation documents
+│   ├── ai_context/            # AI generation context and prompts
+│   ├── reports/               # Project delivery and handoff reports
+│   └── DEV_GUIDE.md           # Developer guidelines
+├── scripts/                   # Root utility and scraping scripts
+│   ├── scraping/
+│   ├── data_management/
+│   └── utils/
+└── archive/                   # Archived artifacts and old files
 ```
+
+For more details on the system, see the documentation in `docs/`:
+- [Architecture Details](docs/ARCHITECTURE.md)
+- [Data Flow Details](docs/DATA_FLOW.md)
 
 ---
 
