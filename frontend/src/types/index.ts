@@ -43,6 +43,7 @@ export interface LiveResult {
 }
 
 export type Region = 'north' | 'central_north' | 'south_central' | 'south';
+export type SeatClass = 'Stronghold' | 'Leaning' | 'Fragile' | 'Swing' | "Opponent's";
 
 export interface ConstituencyListItem {
   id: number;
@@ -88,6 +89,7 @@ export interface ConstituencyListItem {
   alliance_party_code?: string | null;
   margin?: number | null;
   voteShare?: number;
+  placing?: string | null;
   alliance_votes_2021?: number;
   alliance_share_2021?: number;
   party_votes_2021?: number;
