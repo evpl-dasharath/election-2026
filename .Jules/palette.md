@@ -1,0 +1,3 @@
+## 2024-05-06 - Accessible Navigation in Global Header
+**Learning:** Converting `div` and `span` elements acting as navigation links into semantic `<button>` elements immediately enables native keyboard interactions (Enter/Space to activate) and tab focus without requiring `tabIndex` or `onKeyDown` handlers. Adding `focus-visible` classes significantly improves the experience for keyboard users by showing clear focus rings only when navigating via keyboard.
+**Action:** Always prefer native semantic HTML elements (`<button>`, `<a>`) for interactive elements over adding ARIA roles and keyboard event handlers to `div` or `span` elements. Use Tailwind's `focus-visible:` classes to provide clear visual feedback during keyboard navigation.
