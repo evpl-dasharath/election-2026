@@ -37,7 +37,6 @@ for ac_num in [67, 13]:
 print('\n\n' + '='*60)
 print('ALL PARTIAL/PENDING scrapes:')
 print('='*60)
-from django.db.models import Q
 partials = ECIScrapeRaw.objects.filter(
     match_status__in=['PARTIAL', 'PENDING']
 ).select_related('constituency').order_by('constituency__number')
