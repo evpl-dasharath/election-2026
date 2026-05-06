@@ -1,10 +1,10 @@
 import { useState, useMemo } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { useParties, usePartyDetail, useAllHistorical } from '../hooks/useElectionData';
+import { useParties, usePartyDetail, useAllHistorical, useConstituencies } from '../hooks/useElectionData';
 import GlobalHeader from '../components/GlobalHeader';
 import { partyAbbr } from '../utils/partyAbbr';
 import { classifySeat } from '../utils/seatClassification';
-import type { Party, ConstituencyListItem } from '../types';
+import type { Party, ConstituencyListItem, SeatClass } from '../types';
 
 // ── Design tokens ─────────────────────────────────────────────
 const AC: Record<string, string> = {
@@ -13,8 +13,6 @@ const AC: Record<string, string> = {
 function ac(a: string) { return AC[a] || '#6B7280'; }
 
 const TIGHT_MARGIN = 2000;
-
-type SeatClass = 'Stronghold' | 'Fragile' | 'Leaning' | 'Swing' | "Opponent's";
 
 // ── Classification badge ──────────────────────────────────────
 function ClassBadge({ cls, alliance }: { cls: SeatClass; alliance: string | null }) {
@@ -55,80 +53,147 @@ function PartyConstCard({
   partyColor: string;
   onClick: () => void;
 }) {
-  const counting = c.status === 'IN_PROGRESS' || c.status === 'RESULT_DECLARED';
-  const margin = c.leader && c.runner_up ? c.leader.votes - c.runner_up.votes : null;
-  const isClose = margin !== null && margin < TIGHT_MARGIN;
-  
-  const enriched = c as any;
-  const outcome = enriched.movement === 'held' || enriched.movement === 'gained' 
-    ? (enriched.movement === 'held' ? 'won' : 'gained')
-    : (enriched.movement === 'lost' ? 'lost' : (enriched.placing || 'trailing'));
+  const status = c.status;
+  const countingStarted = status !== 'NOT_STARTED';
+  const outcome = c.placing || 'trailing';
 
-  const outcomeBadge: Record<string, { label: string; color: string }> = {
-    won: { label: c.status === 'RESULT_DECLARED' ? 'WON' : 'LEADING', color: '#16A34A' },
-    gained: { label: c.status === 'RESULT_DECLARED' ? 'GAINED' : 'GAINING', color: '#7C3AED' },
-    lost: { label: 'LOST', color: '#DC2626' },
-    '2nd': { label: '2ND', color: '#6B7280' },
-    close_3rd: { label: 'CLOSE 3RD', color: '#F59E0B' },
-    distant_3rd: { label: 'DISTANT 3RD', color: '#9CA3AF' },
-    trailing: { label: 'TRAILING', color: '#D1D5DB' },
-    pending: { label: 'AWAITED', color: '#D1D5DB' },
+  const outcomeLabels: Record<string, string> = {
+    won: 'WON',
+    leading: 'LEADING',
+    gained: 'GAINED',
+    lost: 'LOST',
+    '2nd': '2ND',
+    close_3rd: 'CLOSE 3RD',
+    distant_3rd: 'DISTANT 3RD',
+    trailing: 'TRAILING',
+    pending: 'AWAITED',
   };
 
-  const isWinning = outcome === 'won' || outcome === 'gained';
-  const cardBg = counting && isWinning ? partyColor : counting ? '#4B5563' : '#FDFCFB';
+  // Dynamic colors
+  let cardBg = '#E8E4DF';
+  let textPrimary = '#1A1611';
+  let textSecondary = '#5C5245';
+  let subTextOpacity = '0.7';
+  let innerBoxBg = 'rgba(0,0,0,0.05)';
+  let labelBg = 'rgba(0,0,0,0.45)';
+  let labelFg = 'rgba(255,255,255,0.95)';
+
+  let borderStyle = 'none';
+
+  if (countingStarted) {
+    if (outcome === 'won' || outcome === 'leading' || outcome === 'gained') {
+      cardBg = partyColor;
+      textPrimary = '#fff';
+      textSecondary = 'rgba(255,255,255,0.85)';
+      subTextOpacity = '0.6';
+      innerBoxBg = 'rgba(0,0,0,0.2)';
+    } else if (outcome === '2nd') {
+      cardBg = partyColor + '15';
+      textPrimary = '#1A1611';
+      textSecondary = '#5C5245';
+      subTextOpacity = '0.8';
+      innerBoxBg = partyColor + '10';
+      labelBg = partyColor;
+      borderStyle = `1px solid ${partyColor}40`;
+    } else if (outcome === 'close_3rd') {
+      cardBg = '#FFFFFF';
+      textPrimary = '#1A1611';
+      textSecondary = '#5C5245';
+      subTextOpacity = '0.8';
+      innerBoxBg = 'rgba(0,0,0,0.03)';
+      labelBg = '#D97706';
+      borderStyle = `1px dashed ${partyColor}60`;
+    } else {
+      cardBg = '#F9FAFB';
+      textPrimary = '#6B7280';
+      textSecondary = '#9CA3AF';
+      subTextOpacity = '0.8';
+      innerBoxBg = 'rgba(0,0,0,0.02)';
+      labelBg = '#9CA3AF';
+      borderStyle = '1px solid #E5E7EB';
+    }
+  }
+
+  const marginValue = c.margin;
+  const isClose = (marginValue !== null && marginValue !== undefined) && Math.abs(marginValue) < TIGHT_MARGIN;
 
   return (
     <div
       onClick={onClick}
       style={{
-        background: counting && isWinning ? partyColor : counting ? '#4B5563' : '#E8E4DF',
-        borderRadius: 12, padding: '12px 14px', cursor: 'pointer', position: 'relative',
-        boxShadow: isClose ? '0 4px 18px rgba(0,0,0,0.35)' : counting ? '0 4px 14px rgba(26,22,17,0.14)' : '0 1px 4px rgba(0,0,0,0.15)',
+        background: cardBg,
+        borderRadius: 12,
+        padding: '12px 14px',
+        cursor: 'pointer',
+        position: 'relative',
+        boxShadow: isClose ? '0 4px 18px rgba(0,0,0,0.15)' : countingStarted ? '0 2px 8px rgba(0,0,0,0.03)' : '0 1px 4px rgba(0,0,0,0.05)',
         transition: 'transform 0.1s',
+        border: borderStyle,
       }}
       onMouseEnter={e => (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-2px)'}
       onMouseLeave={e => (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)'}
     >
-      <div className="flex justify-between items-start mb-1.5">
-        <span className="font-mono text-[9px]" style={{ color: counting ? 'rgba(255,255,255,0.5)' : '#9CA3AF' }}>
+      <div className="flex justify-between items-start mb-2">
+        <span className="font-mono text-[9px]" style={{ color: (outcome === 'won' || outcome === 'leading' || outcome === 'gained') ? 'rgba(255,255,255,0.6)' : '#9CA3AF' }}>
           #{String(c.number).padStart(3, '0')}
         </span>
         <div className="flex gap-1 items-center">
           <ClassBadge cls={seatCls} alliance={ownerAl} />
-          {counting && (
+          {countingStarted && (
             <span className="text-[8px] font-black tracking-wider px-1.5 py-0.5 rounded"
-              style={{ backgroundColor: 'rgba(0,0,0,0.45)', color: 'rgba(255,255,255,0.95)' }}>
-              {outcomeBadge[outcome]?.label || 'PENDING'}
+              style={{ backgroundColor: labelBg, color: labelFg }}>
+              {outcomeLabels[outcome] || 'PENDING'}
             </span>
           )}
         </div>
       </div>
-      <div className="font-bold leading-snug mb-1 text-[13px]" style={{ color: counting ? 'white' : '#1A1611' }}>{c.name}</div>
-      <div className="text-[9px] mb-2" style={{ color: counting ? 'rgba(255,255,255,0.55)' : '#9CA3AF' }}>
-        {c.district}
-        {c.sitting_alliance && (
-          <> · 2021: <span style={{ color: counting ? 'rgba(255,255,255,0.85)' : ac(c.sitting_alliance), fontWeight: 700 }}>{c.sitting_alliance}</span></>
-        )}
+
+      <div className="font-bold leading-snug mb-1 text-[14px]" style={{ color: textPrimary }}>
+        {c.name}
       </div>
-      {counting && c.leader ? (
+
+      <div className="text-[9px] mb-2 flex items-center gap-1.5" style={{ color: textSecondary, opacity: subTextOpacity }}>
+        <span>2021: <span style={{ fontWeight: 700, color: (outcome === 'won' || outcome === 'leading' || outcome === 'gained') ? '#fff' : ac(c.sitting_alliance || 'OTH') }}>{c.sitting_alliance}</span></span>
+        {c.sitting_party && <span className="opacity-60">· {c.sitting_party}</span>}
+      </div>
+
+      {countingStarted && (c as any).party_candidate_name ? (
         <>
-          <div className="font-black leading-none text-[18px] mb-1" style={{ color: 'white' }}>
-            {isWinning && margin !== null ? `+${margin.toLocaleString('en-IN')}` : c.leader.name}
-          </div>
-          {!isWinning && (
-            <div className="text-[10px]" style={{ color: 'rgba(255,255,255,0.7)' }}>
-              Leader: {c.leader.party} · {c.leader.alliance}
+          <div className="mb-3">
+            <div className="text-[10px] font-bold opacity-80" style={{ color: textPrimary }}>
+              {partyCode} Candidate
             </div>
-          )}
-          {c.runner_up && isWinning && (
-            <div className="text-[9px]" style={{ color: 'rgba(255,255,255,0.65)' }}>2nd: {c.runner_up.name} · {c.runner_up.party}</div>
-          )}
+            <div className="text-[15px] font-black truncate" style={{ color: textPrimary }}>{(c as any).party_candidate_name}</div>
+          </div>
+          
+          <div className="flex justify-between items-end mb-3">
+            <div>
+              <div className="font-black text-[24px] leading-none" style={{ color: textPrimary }}>
+                {(c as any).partyVotes?.toLocaleString('en-IN') || '0'}
+              </div>
+              <div className="text-[9px] font-bold opacity-70 mt-1" style={{ color: textPrimary }}>VOTES</div>
+            </div>
+            <div className="text-right">
+              <div className="font-black text-[24px] leading-none" style={{ color: textPrimary }}>
+                {(c as any).voteShare?.toFixed(1)}%
+              </div>
+              <div className="text-[9px] font-bold opacity-70 mt-1" style={{ color: textPrimary }}>SHARE</div>
+            </div>
+          </div>
+
+          <div className="rounded-lg py-2 px-3 flex justify-between items-center" style={{ background: innerBoxBg }}>
+            <div className="text-[10px] font-bold opacity-70 uppercase tracking-wider" style={{ color: textPrimary }}>Current Margin</div>
+            <div className="text-right">
+              <div className="font-black text-[16px] leading-none" style={{ color: textPrimary }}>
+                {marginValue !== null && marginValue !== undefined ? (marginValue > 0 ? `+${marginValue.toLocaleString('en-IN')}` : marginValue.toLocaleString('en-IN')) : '—'}
+              </div>
+            </div>
+          </div>
         </>
       ) : (
         <div className="text-[10px] italic flex items-center gap-1.5" style={{ color: '#9CA3AF' }}>
           <span className="inline-block w-1.5 h-1.5 rounded-full bg-neutral-400/60" />
-          Awaited
+          {countingStarted ? 'No candidate info' : 'Awaiting results'}
         </div>
       )}
     </div>
@@ -180,7 +245,8 @@ export default function PartyPage() {
   const navigate = useNavigate();
 
   const { data: parties, loading: partiesLoading } = useParties();
-  const { data: partyDetail, loading: detailLoading } = usePartyDetail(code || null);
+  const { data: detailData, loading: detailLoading } = usePartyDetail(code || null);
+  const { data: allConst } = useConstituencies();
   const { data: allHistory } = useAllHistorical();
 
   const [sidebarSearch, setSidebarSearch] = useState('');
@@ -220,42 +286,134 @@ export default function PartyPage() {
   }, [parties, sidebarSearch, sidebarAlFilter]);
 
   const enrichedConsts = useMemo(() => {
-    if (!partyDetail?.constituencies) return [];
-    return partyDetail.constituencies.map(c => {
+    if (!detailData?.constituencies) return [];
+    const partyUpper = (code || '').toUpperCase();
+
+    return detailData.constituencies.map(c => {
+      const liveC = allConst?.find(ac => ac.number === c.number);
       const cls = classMap[c.number] || { seatClass: "Opponent's" as SeatClass, ownerAlliance: null };
+      
+      const status = liveC?.status || c.status;
+      const leader = liveC?.leader || c.leader;
+      const runner_up = liveC?.runner_up || c.runner_up;
       const sitting = c.sitting_alliance?.toUpperCase();
-      const margin = c.leader && c.runner_up ? c.leader.votes - c.runner_up.votes : null;
-      
-      const marginToSecond = c.margin_to_second !== undefined ? c.margin_to_second : null;
-      const partyPos = c.party_pos !== undefined ? c.party_pos : null;
-      const partyVotes = c.party_votes || 0;
-      const totalValid = c.total_valid || 0;
-      
-      // Calculate vote share
-      const voteShare = totalValid > 0 ? (partyVotes / totalValid) * 100 : 0;
 
+      const cand2026 = liveC?.candidates_2026?.find(cand => cand.party.toUpperCase() === partyUpper);
+      const partyVotes = cand2026?.votes ?? c.party_votes ?? 0;
+      const partyCandidateName = cand2026?.name ?? c.party_candidate_name;
+
+      const totalCounted = liveC?.votes_counted || 0;
+      const voteShareDenominator = totalCounted > 0 ? totalCounted : (c.total_valid || 0);
+      const voteShare = voteShareDenominator > 0 ? (partyVotes / voteShareDenominator) * 100 : 0;
+
+      const currentLeaderParty = leader?.party?.toUpperCase();
+      const isDeclared = status === 'RESULT_DECLARED' || status === 'COMPLETED';
+
+      // Placing
       let placing: string | null = null;
-      if (partyPos === 1) placing = 'won';
-      else if (partyPos === 2) placing = '2nd';
-      else if (partyPos === 3) placing = (marginToSecond !== null && marginToSecond < 5000) ? 'close_3rd' : 'distant_3rd';
+      if (currentLeaderParty === partyUpper) {
+        placing = isDeclared ? 'won' : 'leading';
+      } else if (runner_up?.party?.toUpperCase() === partyUpper) {
+        placing = '2nd';
+      } else {
+        // Check live candidates rank
+        if (liveC?.candidates_2026) {
+          const sorted = liveC.candidates_2026;
+          const idx = sorted.findIndex(cand => cand.party.toUpperCase() === partyUpper);
+          if (idx === 2) {
+            const m2 = sorted[1].votes - sorted[2].votes;
+            placing = m2 < 10000 ? 'close_3rd' : 'distant_3rd';
+          } else if (idx > 2) {
+            placing = 'trailing';
+          }
+        }
+        
+        if (!placing) {
+          const partyPos = c.party_pos !== undefined ? c.party_pos : null;
+          if (partyPos === 1) placing = isDeclared ? 'won' : 'leading';
+          else if (partyPos === 2) placing = '2nd';
+          else if (partyPos === 3) {
+            const m2 = c.margin_to_second !== undefined ? c.margin_to_second : 100000;
+            placing = m2 < 10000 ? 'close_3rd' : 'distant_3rd';
+          }
+        }
+      }
 
+      // Movement
       let movement: string | null = null;
-      if (partyPos === 1) movement = sitting === partyDetail.alliance ? 'held' : 'gained';
-      else if (sitting === partyDetail.alliance) movement = 'lost';
+      if (status !== 'NOT_STARTED') {
+        if (currentLeaderParty === partyUpper) {
+          movement = sitting === detailData.alliance ? 'held' : 'gained';
+        } else if (sitting === detailData.alliance) {
+          movement = 'lost';
+        }
+      }
 
-      return { ...c, seatClass: cls.seatClass, ownerAlliance: cls.ownerAlliance, margin, placing, movement, partyVotes, voteShare };
+      // Margin
+      let margin = null;
+      if (leader) {
+        if (currentLeaderParty === partyUpper) {
+          margin = runner_up ? leader.votes - runner_up.votes : leader.votes;
+        } else {
+          margin = partyVotes - leader.votes;
+        }
+      }
+
+      return { 
+        ...c, 
+        status,
+        leader,
+        runner_up,
+        seatClass: cls.seatClass, 
+        ownerAlliance: cls.ownerAlliance, 
+        margin, 
+        placing, 
+        movement, 
+        partyVotes, 
+        voteShare,
+        party_candidate_name: partyCandidateName 
+      };
     });
-  }, [partyDetail, classMap]);
+  }, [detailData, allConst, classMap, code]);
+
+  const liveSummary = useMemo(() => {
+    const stats = {
+      won: 0,
+      leading: 0,
+      second: 0,
+      close3rd: 0,
+      distant3rd: 0,
+      trailing: 0,
+      contested: enrichedConsts.length,
+      totalVotes: 0,
+      totalValid: 0,
+    };
+
+    enrichedConsts.forEach(c => {
+      stats.totalVotes += c.partyVotes || 0;
+      const cValid = (c.status !== 'NOT_STARTED' && c.votes_counted) ? c.votes_counted : (c.total_valid || 0);
+      stats.totalValid += cValid;
+
+      if (c.placing === 'won') stats.won++;
+      else if (c.placing === 'leading') stats.leading++;
+      else if (c.placing === '2nd') stats.second++;
+      else if (c.placing === 'close_3rd') stats.close3rd++;
+      else if (c.placing === 'distant_3rd') stats.distant3rd++;
+      else if (c.status !== 'NOT_STARTED') stats.trailing++;
+    });
+
+    return stats;
+  }, [enrichedConsts]);
 
   const filteredConsts = useMemo(() => {
     let rows = enrichedConsts;
-    if (rawProfile) rows = rows.filter(r => r.seatClass === rawProfile && r.ownerAlliance === partyDetail?.alliance);
+    if (rawProfile) rows = rows.filter(r => r.seatClass === rawProfile && r.ownerAlliance === detailData?.alliance);
     if (rawOutcome) rows = rows.filter(r => r.placing === rawOutcome);
     if (rawMovement) rows = rows.filter(r => r.movement === rawMovement);
 
-    if (rawMargin === 'safe') rows = rows.filter(r => r.margin !== null && r.margin >= 5000);
-    else if (rawMargin === 'comfortable') rows = rows.filter(r => r.margin !== null && r.margin >= 2000 && r.margin < 5000);
-    else if (rawMargin === 'close') rows = rows.filter(r => r.margin !== null && r.margin < 2000);
+    if (rawMargin === 'safe') rows = rows.filter(r => r.margin !== null && r.margin >= 10000);
+    else if (rawMargin === 'comfortable') rows = rows.filter(r => r.margin !== null && r.margin >= 2000 && r.margin < 10000);
+    else if (rawMargin === 'close') rows = rows.filter(r => r.margin !== null && Math.abs(r.margin ?? 0) < 2000);
 
     if (rawVotes !== null) {
       if (rawVotes === 100000) rows = rows.filter(r => r.partyVotes >= 90000);
@@ -273,12 +431,12 @@ export default function PartyPage() {
       if (sortBy === 'vote_share') return (b.voteShare ?? -1) - (a.voteShare ?? -1);
       return a.number - b.number;
     });
-  }, [enrichedConsts, rawProfile, rawOutcome, rawMovement, rawMargin, rawVotes, rawVoteShare, sortBy, partyDetail]);
+  }, [enrichedConsts, rawProfile, rawOutcome, rawMovement, rawMargin, rawVotes, rawVoteShare, sortBy, detailData]);
 
-  const partyColor = partyDetail?.color_code || ac(partyDetail?.alliance || 'OTH');
-  const allianceColor = ac(partyDetail?.alliance || 'OTH');
-  const totalWonLeading = (partyDetail?.seats_won || 0) + (partyDetail?.seats_leading || 0);
-  const swingVs2021 = partyDetail ? partyDetail.vote_share - partyDetail.vote_share_2021_pct : 0;
+  const partyColor = detailData?.color_code || ac(detailData?.alliance || 'OTH');
+  const allianceColor = ac(detailData?.alliance || 'OTH');
+  const totalWonLeading = (detailData?.seats_won || 0) + (detailData?.seats_leading || 0);
+  const swingVs2021 = detailData ? detailData.vote_share - detailData.vote_share_2021_pct : 0;
   const hasAnyFilter = rawProfile || rawOutcome || rawMovement || rawMargin || rawVotes !== null || rawVoteShare !== null;
 
   return (
@@ -362,12 +520,12 @@ export default function PartyPage() {
             >
               ☰ All Parties
             </button>
-            {partyDetail && (
-              <span className="text-[13px] font-bold" style={{ color: partyColor }}>{partyDetail.code}</span>
+            {detailData && (
+              <span className="text-[13px] font-bold" style={{ color: partyColor }}>{detailData.code}</span>
             )}
           </div>
 
-          {!code || !partyDetail ? (
+          {!code || !detailData ? (
             <div className="flex items-center justify-center h-[60vh] flex-col gap-3">
               {detailLoading ? (
                 <>
@@ -392,28 +550,29 @@ export default function PartyPage() {
                   {/* Party circle */}
                   <div className="w-12 h-12 rounded-full flex items-center justify-center text-[14px] font-black text-white shrink-0"
                     style={{ background: partyColor }}>
-                    {partyAbbr(partyDetail.code)}
+                    {partyAbbr(detailData.code)}
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-1">
                       <h1 className="font-sans text-[22px] font-bold text-ink leading-tight">
-                        {partyDetail.code}
+                        {detailData.code}
                       </h1>
                       <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
                         style={{ background: allianceColor + '20', color: allianceColor }}>
-                        {partyDetail.alliance}
+                        {detailData.alliance}
                       </span>
                     </div>
-                    <div className="text-[13px] text-ink2 mb-4">{partyDetail.full_name}</div>
+                    <div className="text-[13px] text-ink2 mb-4">{detailData.full_name}</div>
 
                     {/* Stats — mirrors HomePage alliance row */}
                     <div className="flex items-end gap-0 overflow-x-auto custom-scrollbar pb-1 -mb-1">
                       {[
-                        { label: 'Won', value: partyDetail.seats_won, color: partyColor },
-                        { label: '2nd', value: partyDetail.seats_2nd, color: '#1A1611' },
-                        { label: 'Close 3rd', value: partyDetail.seats_close_3rd, color: '#F59E0B', desc: '< 10k margin' },
-                        { label: 'Dist. 3rd', value: partyDetail.seats_distant_3rd, color: '#6B7280', desc: '≥ 10k margin' },
-                        { label: 'Contested', value: partyDetail.seats_contested, color: '#6B7280' },
+                        { label: 'Won', value: liveSummary.won, color: partyColor },
+                        { label: 'Leading', value: liveSummary.leading, color: partyColor + 'BB' },
+                        { label: '2nd', value: liveSummary.second, color: '#1A1611' },
+                        { label: 'Close 3rd', value: liveSummary.close3rd, color: '#F59E0B', desc: '< 10k margin' },
+                        { label: 'Dist. 3rd', value: liveSummary.distant3rd, color: '#6B7280', desc: '≥ 10k margin' },
+                        { label: 'Contested', value: liveSummary.contested, color: '#6B7280' },
                       ].map((s, i, arr) => (
                         <div key={s.label} className={`px-4 md:px-5 shrink-0 ${i < arr.length - 1 ? 'border-r border-pageborder' : ''}`}>
                           <div className="w-2 h-2 mb-1.5" style={{ backgroundColor: s.color }} />
@@ -426,7 +585,7 @@ export default function PartyPage() {
                         <div className="w-2 h-2 mb-1.5 bg-ink" />
                         <div className="text-[12px] font-semibold mb-0.5 text-ink">Vote Share</div>
                         <div className="font-sans font-bold text-[20px] leading-none text-ink">
-                          {partyDetail.vote_share?.toFixed(1)}%
+                          {liveSummary.totalValid > 0 ? (liveSummary.totalVotes / liveSummary.totalValid * 100).toFixed(1) : '—'}%
                         </div>
                         <div className="text-[11px] font-bold mt-0.5" style={{ color: swingVs2021 >= 0 ? '#16A34A' : '#DC2626' }}>
                           {swingVs2021 >= 0 ? '▲' : '▼'}{Math.abs(swingVs2021).toFixed(1)}% vs 2021
@@ -564,7 +723,7 @@ export default function PartyPage() {
                         c={c}
                         seatCls={c.seatClass}
                         ownerAl={c.ownerAlliance}
-                        partyCode={partyDetail.code}
+                        partyCode={detailData.code}
                         partyColor={partyColor}
                         onClick={() => navigate(`/constituency/${c.id}`)}
                       />
