@@ -341,7 +341,7 @@ export default function AlliancePage() {
         if (alliancePos === 1) placing = isDeclared ? 'won' : 'leading';
         else if (alliancePos === 2) placing = '2nd';
         else if (alliancePos === 3) {
-          const m2 = c.margin_to_second !== undefined ? c.margin_to_second : 100000;
+          const m2 = c.margin_to_second !== undefined && c.margin_to_second !== null ? c.margin_to_second : 100000;
           placing = m2 < 10000 ? 'close_3rd' : 'distant_3rd';
         }
       }
