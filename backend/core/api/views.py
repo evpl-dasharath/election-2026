@@ -94,14 +94,26 @@ def state_summary(request):
     }
     ind_summary = {'won': 0, 'leading': 0}
 
-    for constituency in Constituency.objects.all():
-        top_candidates = constituency.candidates_2026.select_related('party', 'party__alliance').order_by('-votes')[:2]
+    constituencies = Constituency.objects.prefetch_related(
+        Prefetch(
+            'candidates_2026',
+            queryset=Candidate.objects.select_related('party', 'party__alliance').order_by('-votes'),
+            to_attr='prefetched_candidates'
+        ),
+        Prefetch(
+            'live_results',
+            to_attr='prefetched_live_results'
+        )
+    ).all()
+
+    for constituency in constituencies:
+        top_candidates = constituency.prefetched_candidates[:2]
         if top_candidates:
             leader = top_candidates[0]
             alliance = leader.party.alliance.code
             party_code = leader.party.code
 
-            result = constituency.live_results.first()
+            result = constituency.prefetched_live_results[0] if constituency.prefetched_live_results else None
             if result and result.status == 'RESULT_DECLARED':
                 alliance_seats[alliance]['won'] += 1
                 if party_code == 'IND':
