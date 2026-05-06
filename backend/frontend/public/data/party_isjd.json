@@ -45,7 +45,10 @@
       "total_valid": 24282,
       "party_pos": 2,
       "margin_to_second": 44118,
-      "party_votes": 58815
+      "party_votes": 58815,
+      "party_candidate_name": "Adv V. Murugadas",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 82,
@@ -78,7 +81,10 @@
       "total_valid": 7280,
       "party_pos": 2,
       "margin_to_second": 5979,
-      "party_votes": 25133
+      "party_votes": 25133,
+      "party_candidate_name": "Sabu George",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 111,
@@ -111,7 +117,10 @@
       "total_valid": 0,
       "party_pos": 3,
       "margin_to_second": 1055,
-      "party_votes": 42023
+      "party_votes": 42023,
+      "party_candidate_name": "Mathew T. Thomas",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     }
   ]
 }

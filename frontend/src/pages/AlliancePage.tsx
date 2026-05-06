@@ -91,15 +91,7 @@ function ConstCard({
   let outcome: string = 'pending';
   if (countingStarted) {
     const enriched = c as any;
-    if (enriched.movement === 'held' || enriched.movement === 'gained') {
-      outcome = enriched.movement === 'held' ? 'leading' : 'gained';
-    } else if (enriched.movement === 'lost') {
-      outcome = 'lost';
-    } else if (enriched.placing) {
-      outcome = enriched.placing;
-    } else {
-      outcome = 'trailing';
-    }
+    outcome = enriched.placing || 'trailing';
   }
 
   const allianceColor = ac(al);
@@ -116,8 +108,6 @@ function ConstCard({
   const outcomeLabels: Record<string, string> = {
     won: 'WON',
     leading: 'LEADING',
-    gained: 'GAINED',
-    lost: 'LOST',
     '2nd': '2ND',
     close_3rd: 'CLOSE 3RD',
     distant_3rd: 'DISTANT 3RD',
@@ -128,7 +118,7 @@ function ConstCard({
   let borderStyle = 'none';
 
   if (countingStarted) {
-    if (outcome === 'won' || outcome === 'leading' || outcome === 'gained') {
+    if (outcome === 'won' || outcome === 'leading') {
       cardBg = allianceColor;
       textPrimary = '#fff';
       textSecondary = 'rgba(255,255,255,0.85)';
@@ -363,6 +353,10 @@ export default function AlliancePage() {
         }
       }
 
+      // Trends
+      const shareDiff = (c as any).alliance_share_2021 !== undefined ? (voteShare - (c as any).alliance_share_2021) : 0;
+      const votesDiff = (c as any).alliance_votes_2021 !== undefined ? (allianceVotes - (c as any).alliance_votes_2021) : 0;
+
       return { 
         ...c, 
         status,
@@ -375,8 +369,11 @@ export default function AlliancePage() {
         margin,
         allianceVotes,
         voteShare,
+        votes_counted: totalCounted,
         alliance_candidate_name: allianceCandidateName,
-        alliance_party_code: alliancePartyCode
+        alliance_party_code: alliancePartyCode,
+        shareDiff,
+        votesDiff
       };
     });
   }, [data, allConst, classMap, allianceUpper]);
@@ -394,7 +391,13 @@ export default function AlliancePage() {
       held: 0,
       lost: 0,
       totalVotes: 0,
-      totalValid: 0,
+      totalValid: allConst?.reduce((sum, c) => sum + (c.votes_counted || 0), 0) || 0,
+      shareInc: 0,
+      shareDec: 0,
+      shareHeld: 0,
+      votesInc: 0,
+      votesDec: 0,
+      votesHeld: 0,
       partyStats: {} as Record<string, { won: number; leading: number; second: number; close3rd: number; distant3rd: number; contested: number; votes: number; totalValid: number }>
     };
 
@@ -404,12 +407,15 @@ export default function AlliancePage() {
         stats.partyStats[pCode] = { won: 0, leading: 0, second: 0, close3rd: 0, distant3rd: 0, contested: 0, votes: 0, totalValid: 0 };
       }
       const ps = stats.partyStats[pCode];
-      ps.contested++;
-      ps.votes += c.allianceVotes || 0;
-      const cValid = (c.status !== 'NOT_STARTED' && c.votes_counted) ? c.votes_counted : (c.total_valid || 0);
-      ps.totalValid += cValid;
+      
+      const cCounted = c.votes_counted || 0;
       stats.totalVotes += c.allianceVotes || 0;
-      stats.totalValid += cValid;
+
+      ps.votes += c.allianceVotes || 0;
+      if (c.competing) {
+        ps.contested++;
+        ps.totalValid += cCounted;
+      }
 
       if (c.placing === 'won') { stats.won++; ps.won++; }
       else if (c.placing === 'leading') { stats.leading++; ps.leading++; }
@@ -421,10 +427,24 @@ export default function AlliancePage() {
       if (c.movement === 'gained') stats.gained++;
       if (c.movement === 'held') stats.held++;
       if (c.movement === 'lost') stats.lost++;
+
+      // Trend counts
+      if (c.status !== 'NOT_STARTED') {
+        const sd = (c as any).shareDiff || 0;
+        const vd = (c as any).votesDiff || 0;
+        
+        if (sd > 0.1) stats.shareInc++;
+        else if (sd < -0.1) stats.shareDec++;
+        else stats.shareHeld++;
+
+        if (vd > 10) stats.votesInc++;
+        else if (vd < -10) stats.votesDec++;
+        else stats.votesHeld++;
+      }
     });
 
     return stats;
-  }, [enriched]);
+  }, [enriched, allConst]);
 
   const filtered = useMemo(() => {
     let rows = enriched;
@@ -435,7 +455,10 @@ export default function AlliancePage() {
     
     if (rawMargin === 'safe') rows = rows.filter(r => r.margin !== null && r.margin >= 10000);
     else if (rawMargin === 'comfortable') rows = rows.filter(r => r.margin !== null && r.margin >= 2000 && r.margin < 10000);
-    else if (rawMargin === 'close') rows = rows.filter(r => r.margin !== null && Math.abs(r.margin) < 2000);
+    else if (rawMargin === 'close') rows = rows.filter(r => r.margin !== null && r.margin > 0 && r.margin < 2000);
+    else if (rawMargin === 'lost_safe') rows = rows.filter(r => r.margin !== null && r.margin <= -10000);
+    else if (rawMargin === 'lost_comfortable') rows = rows.filter(r => r.margin !== null && r.margin <= -2000 && r.margin > -10000);
+    else if (rawMargin === 'lost_close') rows = rows.filter(r => r.margin !== null && r.margin < 0 && r.margin > -2000);
 
     if (rawVotes !== null) {
       if (rawVotes === 100000) rows = rows.filter(r => r.allianceVotes >= 90000); // Hack for >= max bucket
@@ -516,7 +539,6 @@ export default function AlliancePage() {
             <div className="flex items-end gap-0 overflow-x-auto custom-scrollbar pb-1 -mb-1">
               {[
                 { label: 'Won', value: liveSummary.won, color: allianceColor },
-                { label: 'Leading', value: liveSummary.leading, color: allianceColor + 'BB' },
                 { label: '2nd', value: liveSummary.second, color: '#1A1611' },
                 { label: 'Close 3rd', value: liveSummary.close3rd, color: '#F59E0B', desc: '< 10k margin' },
                 { label: 'Distant 3rd', value: liveSummary.distant3rd, color: '#6B7280', desc: '≥ 10k margin' },
@@ -602,13 +624,86 @@ export default function AlliancePage() {
                 ))}
               </div>
 
-              {/* Party breakdown table */}
+              {/* ── Swing Analysis ── */}
+              {data?.swing_analysis && (
+                <div className="bg-surface rounded-xl px-5 py-4 shadow-sm flex gap-6 flex-wrap mb-6">
+                  <div>
+                    <div className="text-[10px] font-bold tracking-widest uppercase mb-2" style={{ color: '#16A34A' }}>GAINED FROM</div>
+                    <div className="flex gap-4">
+                      {(() => {
+                        const gained = Object.entries(data.swing_analysis.gained_from).filter(([, v]) => v > 0);
+                        if (gained.length === 0) return <div className="text-[14px] font-bold text-ink2 opacity-40 py-1">NONE</div>;
+                        return gained.map(([al, v]) => (
+                          <div key={al} className="flex items-center gap-1.5">
+                            <span className="w-2 h-2 rounded-full inline-block" style={{ background: ac(al) }} />
+                            <span className="font-mono text-[18px] font-black" style={{ color: ac(al) }}>{v}</span>
+                            <span className="text-[11px] text-ink2">{al}</span>
+                          </div>
+                        ));
+                      })()}
+                    </div>
+                  </div>
+                  <div className="border-l border-pageborder pl-6">
+                    <div className="text-[10px] font-bold tracking-widest uppercase mb-2" style={{ color: '#DC2626' }}>LOST TO</div>
+                    <div className="flex gap-4">
+                      {(() => {
+                        const lost = Object.entries(data.swing_analysis.lost_to).filter(([, v]) => v > 0);
+                        if (lost.length === 0) return <div className="text-[14px] font-bold text-ink2 opacity-40 py-1">NONE</div>;
+                        return lost.map(([al, v]) => (
+                          <div key={al} className="flex items-center gap-1.5">
+                            <span className="w-2 h-2 rounded-full inline-block" style={{ background: ac(al) }} />
+                            <span className="font-mono text-[18px] font-black" style={{ color: ac(al) }}>{v}</span>
+                            <span className="text-[11px] text-ink2">{al}</span>
+                          </div>
+                        ));
+                      })()}
+                    </div>
+                  </div>
+                  {data.best_margin && (
+                    <div className="border-l border-pageborder pl-6">
+                      <div className="text-[10px] font-bold tracking-widest uppercase mb-1" style={{ color: '#16A34A' }}>BEST MARGIN</div>
+                      <div className="font-mono text-[16px] font-bold text-ink">+{data.best_margin.margin.toLocaleString('en-IN')}</div>
+                      <div className="text-[11px] text-ink2">{data.best_margin.constituency}</div>
+                    </div>
+                  )}
+                  {data.worst_margin && (
+                    <div className="border-l border-pageborder pl-6">
+                      <div className="text-[10px] font-bold tracking-widest uppercase mb-1" style={{ color: '#DC2626' }}>CLOSEST</div>
+                      <div className="font-mono text-[16px] font-bold text-ink">+{data.worst_margin.margin.toLocaleString('en-IN')}</div>
+                      <div className="text-[11px] text-ink2">{data.worst_margin.constituency}</div>
+                    </div>
+                  )}
+                </div>
+              )}
+
+            {/* ── Trend Analysis ── */}
+            <section>
+              <h2 className="text-[11px] font-bold tracking-widest uppercase text-ink2 mb-3">Vote & Share Trends (vs 2021)</h2>
+              <div className="grid grid-cols-2 md:grid-cols-6 gap-3">
+                {[
+                  { label: 'Share Up', value: liveSummary.shareInc, color: '#16A34A', desc: '> 0.1% increase' },
+                  { label: 'Share Held', value: liveSummary.shareHeld, color: '#6B7280', desc: '± 0.1% change' },
+                  { label: 'Share Down', value: liveSummary.shareDec, color: '#DC2626', desc: '> 0.1% decrease' },
+                  { label: 'Votes Up', value: liveSummary.votesInc, color: '#16A34A', desc: 'Absolute increase' },
+                  { label: 'Votes Held', value: liveSummary.votesHeld, color: '#6B7280', desc: 'No change' },
+                  { label: 'Votes Down', value: liveSummary.votesDec, color: '#DC2626', desc: 'Absolute decrease' },
+                ].map(s => (
+                  <div key={s.label} className="bg-surface rounded-xl px-3.5 py-2.5 shadow-sm border border-pageborder/50">
+                    <div className="font-mono text-[22px] font-black leading-none mb-1" style={{ color: s.color }}>{s.value}</div>
+                    <div className="text-[11px] font-bold text-ink truncate">{s.label}</div>
+                    <div className="text-[9px] text-ink2 mt-0.5 whitespace-nowrap">{s.desc}</div>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* Party breakdown table */}
               {data?.parties && data.parties.length > 0 && (
                 <div className="bg-surface rounded-xl overflow-hidden shadow-sm">
                   <table className="w-full border-collapse">
                     <thead>
                       <tr className="bg-pagebg border-b-2 border-pageborder">
-                        {['Party', 'Contested', 'Won', '2nd', 'Close 3rd', 'Distant 3rd', 'Strike Rate', 'Vote Share', 'vs 2021'].map(h => (
+                        {['Party', 'Contested', 'Won', '2nd', 'Close 3rd', 'Distant 3rd', 'Strike Rate', 'Share (Contested)', 'Overall Share', 'vs 2021'].map(h => (
                           <th key={h} className="px-3 py-2.5 text-[10px] font-bold tracking-widest uppercase text-ink2"
                             style={{ textAlign: h === 'Party' ? 'left' : 'right' }}>{h}</th>
                         ))}
@@ -618,7 +713,9 @@ export default function AlliancePage() {
                       {data.parties.map(p => {
                         const ps = liveSummary.partyStats[p.code];
                         const wonLeading = ps ? ps.won + ps.leading : 0;
-                        const vShare = ps && ps.totalValid > 0 ? (ps.votes / ps.totalValid * 100) : 0;
+                        const shareContested = ps && ps.totalValid > 0 ? (ps.votes / ps.totalValid * 100) : 0;
+                        const overallShare = ps && liveSummary.totalValid > 0 ? (ps.votes / liveSummary.totalValid * 100) : 0;
+                        
                         return (
                           <tr
                             key={p.code}
@@ -640,9 +737,10 @@ export default function AlliancePage() {
                             <td className="px-3 py-2.5 text-right font-mono text-[13px] text-ink">{ps?.close3rd || 0}</td>
                             <td className="px-3 py-2.5 text-right font-mono text-[13px] text-ink">{ps?.distant3rd || 0}</td>
                             <td className="px-3 py-2.5 text-right font-mono text-[13px] text-ink">{(p.contested > 0 ? (wonLeading / p.contested * 100) : 0).toFixed(1)}%</td>
-                            <td className="px-3 py-2.5 text-right font-mono text-[13px] text-ink">{vShare.toFixed(1)}%</td>
+                            <td className="px-3 py-2.5 text-right font-mono text-[13px] text-ink">{shareContested.toFixed(1)}%</td>
+                            <td className="px-3 py-2.5 text-right font-mono text-[13px] text-ink">{overallShare.toFixed(1)}%</td>
                             <td className="px-3 py-2.5 text-right">
-                              <SwingPill value={vShare - (p.vote_share_2021_pct || 0)} />
+                              <SwingPill value={overallShare - (p.vote_share_2021_pct || 0)} />
                             </td>
                           </tr>
                         );
@@ -653,52 +751,6 @@ export default function AlliancePage() {
               )}
             </section>
 
-            {/* ── Swing Analysis ── */}
-            {data?.swing_analysis && (
-              <section>
-                <h2 className="text-[11px] font-bold tracking-widest uppercase text-ink2 mb-3">Swing Analysis</h2>
-                <div className="bg-surface rounded-xl px-5 py-4 shadow-sm flex gap-6 flex-wrap">
-                  <div>
-                    <div className="text-[10px] font-bold tracking-widest uppercase mb-2" style={{ color: '#16A34A' }}>GAINED FROM</div>
-                    <div className="flex gap-4">
-                      {Object.entries(data.swing_analysis.gained_from).filter(([, v]) => v > 0).map(([al, v]) => (
-                        <div key={al} className="flex items-center gap-1.5">
-                          <span className="w-2 h-2 rounded-full inline-block" style={{ background: ac(al) }} />
-                          <span className="font-mono text-[18px] font-black" style={{ color: ac(al) }}>{v}</span>
-                          <span className="text-[11px] text-ink2">{al}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="border-l border-pageborder pl-6">
-                    <div className="text-[10px] font-bold tracking-widest uppercase mb-2" style={{ color: '#DC2626' }}>LOST TO</div>
-                    <div className="flex gap-4">
-                      {Object.entries(data.swing_analysis.lost_to).filter(([, v]) => v > 0).map(([al, v]) => (
-                        <div key={al} className="flex items-center gap-1.5">
-                          <span className="w-2 h-2 rounded-full inline-block" style={{ background: ac(al) }} />
-                          <span className="font-mono text-[18px] font-black" style={{ color: ac(al) }}>{v}</span>
-                          <span className="text-[11px] text-ink2">{al}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  {data.best_margin && (
-                    <div className="border-l border-pageborder pl-6">
-                      <div className="text-[10px] font-bold tracking-widest uppercase mb-1" style={{ color: '#16A34A' }}>BEST MARGIN</div>
-                      <div className="font-mono text-[16px] font-bold text-ink">+{data.best_margin.margin.toLocaleString('en-IN')}</div>
-                      <div className="text-[11px] text-ink2">{data.best_margin.constituency}</div>
-                    </div>
-                  )}
-                  {data.worst_margin && (
-                    <div className="border-l border-pageborder pl-6">
-                      <div className="text-[10px] font-bold tracking-widest uppercase mb-1" style={{ color: '#DC2626' }}>CLOSEST</div>
-                      <div className="font-mono text-[16px] font-bold text-ink">+{data.worst_margin.margin.toLocaleString('en-IN')}</div>
-                      <div className="text-[11px] text-ink2">{data.worst_margin.constituency}</div>
-                    </div>
-                  )}
-                </div>
-              </section>
-            )}
           </div>
         ) : (
           <div className="animate-in fade-in slide-in-from-bottom-2 duration-300">
@@ -779,13 +831,26 @@ export default function AlliancePage() {
                 <span className="border-l border-pageborder h-4 mx-1" />
                 
                 {/* Margins */}
-                {[{ k: 'safe', l: 'Safe 10k+' }, { k: 'comfortable', l: '2–10k' }, { k: 'close', l: 'Close <2k' }].map(({ k, l }) => (
+                <span className="text-[10px] font-bold text-ink2 ml-1">Win Margin:</span>
+                {[{ k: 'safe', l: 'Safe 10k+' }, { k: 'comfortable', l: '2–10k' }, { k: 'close', l: '<2k' }].map(({ k, l }) => (
                   <button key={k}
                     onClick={() => setRawMargin(rawMargin === k ? null : k)}
                     className="text-[10px] px-2.5 py-1 rounded-full cursor-pointer border font-medium transition-all"
                     style={{
-                      border: `1px solid ${rawMargin === k ? '#1A1611' : '#D1CBC4'}`,
-                      background: rawMargin === k ? '#1A1611' : 'transparent',
+                      border: `1px solid ${rawMargin === k ? '#16A34A' : '#D1CBC4'}`,
+                      background: rawMargin === k ? '#16A34A' : 'transparent',
+                      color: rawMargin === k ? '#fff' : '#5C5245',
+                    }}>{l}</button>
+                ))}
+                
+                <span className="text-[10px] font-bold text-ink2 ml-1">Loss Margin:</span>
+                {[{ k: 'lost_safe', l: 'Large 10k+' }, { k: 'lost_comfortable', l: '2–10k' }, { k: 'lost_close', l: '<2k' }].map(({ k, l }) => (
+                  <button key={k}
+                    onClick={() => setRawMargin(rawMargin === k ? null : k)}
+                    className="text-[10px] px-2.5 py-1 rounded-full cursor-pointer border font-medium transition-all"
+                    style={{
+                      border: `1px solid ${rawMargin === k ? '#DC2626' : '#D1CBC4'}`,
+                      background: rawMargin === k ? '#DC2626' : 'transparent',
                       color: rawMargin === k ? '#fff' : '#5C5245',
                     }}>{l}</button>
                 ))}

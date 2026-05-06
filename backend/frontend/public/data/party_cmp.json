@@ -45,7 +45,10 @@
       "total_valid": 6007,
       "party_pos": 1,
       "margin_to_second": 598,
-      "party_votes": 45586
+      "party_votes": 45586,
+      "party_candidate_name": "C. P. John",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     }
   ]
 }

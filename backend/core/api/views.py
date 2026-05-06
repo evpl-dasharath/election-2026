@@ -556,11 +556,12 @@ def alliance_detail(request, alliance_code):
             worst_val = margin
             worst_margin = {'constituency': const.name, 'margin': margin}
 
-    # 7. All 140 constituencies annotated with competing=True/False
+    # 7. All 140 constituencies annotated with competing=True/False + 2021 historicals
     all_consts = list(Constituency.objects.select_related(
         'district', 'meta_2021', 'meta_2021__winner_party'
     ).prefetch_related(
-        'candidates_2026', 'candidates_2026__party', 'live_results', 'results_2021'
+        'candidates_2026', 'candidates_2026__party', 'live_results', 
+        'results_2021', 'results_2021__party'
     ).order_by('number'))
 
     competing_ids = set(
@@ -572,27 +573,41 @@ def alliance_detail(request, alliance_code):
         item = dict(item)
         item['competing'] = item['id'] in competing_ids
         
-        cands = list(c.candidates_2026.order_by('-votes'))
+        # 2026 Live
+        cands_26 = list(c.candidates_2026.order_by('-votes'))
         alliance_pos = None
         margin_to_second = None
         alliance_votes_cand = 0
         alliance_candidate_name = None
         alliance_party_code = None
-        for i, cand in enumerate(cands):
+        for i, cand in enumerate(cands_26):
             if _party_alliance(cand.party.code, am2026) == alliance_code:
                 alliance_pos = i + 1
                 alliance_votes_cand = cand.votes
                 alliance_candidate_name = cand.name
                 alliance_party_code = cand.party.code
                 break
-        if len(cands) >= 3:
-            margin_to_second = cands[1].votes - cands[2].votes
+        if len(cands_26) >= 3:
+            margin_to_second = cands_26[1].votes - cands_26[2].votes
             
+        # 2021 Historical
+        r21_list = list(c.results_2021.all())
+        alliance_votes_2021 = 0
+        total_valid_2021 = sum(r.total_votes for r in r21_list)
+        for r in r21_list:
+            pc = r.party.code if r.party else r.party_code
+            if _party_alliance(pc, am2021) == alliance_code:
+                alliance_votes_2021 += r.total_votes
+        
         item['alliance_pos'] = alliance_pos
         item['margin_to_second'] = margin_to_second
         item['alliance_votes'] = alliance_votes_cand
         item['alliance_candidate_name'] = alliance_candidate_name
         item['alliance_party_code'] = alliance_party_code
+        
+        item['alliance_votes_2021'] = alliance_votes_2021
+        item['alliance_share_2021'] = (alliance_votes_2021 / total_valid_2021 * 100) if total_valid_2021 > 0 else 0
+        
         consts_data.append(item)
 
     return Response({
@@ -690,26 +705,40 @@ def party_detail(request, party_code):
                 seats_distant_3rd += 1
 
     consts_data = []
+    am2021 = _build_alliance_map(2021)
     for c, item in zip(scoped_consts, ConstituencyListSerializer(scoped_consts, many=True).data):
         item = dict(item)
-        cands = list(c.candidates_2026.order_by('-votes'))
+        cands_26 = list(c.candidates_2026.order_by('-votes'))
         party_pos = None
         margin_to_second = None
         party_votes_cand = 0
         party_candidate_name = None
-        for i, cand in enumerate(cands):
+        for i, cand in enumerate(cands_26):
             if cand.party == party:
                 party_pos = i + 1
                 party_votes_cand = cand.votes
                 party_candidate_name = cand.name
                 break
-        if len(cands) >= 3:
-            margin_to_second = cands[1].votes - cands[2].votes
+        if len(cands_26) >= 3:
+            margin_to_second = cands_26[1].votes - cands_26[2].votes
             
+        # 2021 Historical
+        r21_list = list(c.results_2021.all())
+        party_votes_2021 = 0
+        total_valid_2021 = sum(r.total_votes for r in r21_list)
+        for r in r21_list:
+            pc = r.party.code if r.party else r.party_code
+            if pc == party.code:
+                party_votes_2021 += r.total_votes
+        
         item['party_pos'] = party_pos
         item['margin_to_second'] = margin_to_second
         item['party_votes'] = party_votes_cand
         item['party_candidate_name'] = party_candidate_name
+        
+        item['party_votes_2021'] = party_votes_2021
+        item['party_share_2021'] = (party_votes_2021 / total_valid_2021 * 100) if total_valid_2021 > 0 else 0
+        
         consts_data.append(item)
 
     return Response({

@@ -45,7 +45,10 @@
       "total_valid": 20247,
       "party_pos": 2,
       "margin_to_second": 37541,
-      "party_votes": 64604
+      "party_votes": 64604,
+      "party_candidate_name": "Shyji Ottapalli",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 70,
@@ -78,7 +81,10 @@
       "total_valid": 29912,
       "party_pos": 1,
       "margin_to_second": 28903,
-      "party_votes": 66282
+      "party_votes": 66282,
+      "party_candidate_name": "Adv. Thomas Unniyadan",
+      "party_votes_2021": 56544,
+      "party_share_2021": 36.57698801337741
     },
     {
       "id": 87,
@@ -111,7 +117,10 @@
       "total_valid": 0,
       "party_pos": 1,
       "margin_to_second": 49574,
-      "party_votes": 73479
+      "party_votes": 73479,
+      "party_candidate_name": "Shibu Thekkumpuram",
+      "party_votes_2021": 57629,
+      "party_share_2021": 44.91563072366627
     },
     {
       "id": 90,
@@ -144,7 +153,10 @@
       "total_valid": 9405,
       "party_pos": 1,
       "margin_to_second": 27826,
-      "party_votes": 84796
+      "party_votes": 84796,
+      "party_candidate_name": "Apu John Joseph",
+      "party_votes_2021": 67495,
+      "party_share_2021": 48.862328335734404
     },
     {
       "id": 94,
@@ -177,7 +189,10 @@
       "total_valid": 17515,
       "party_pos": 1,
       "margin_to_second": 26825,
-      "party_votes": 70353
+      "party_votes": 70353,
+      "party_candidate_name": "Adv. Mons Joseph",
+      "party_votes_2021": 59666,
+      "party_share_2021": 45.658096112641566
     },
     {
       "id": 99,
@@ -210,7 +225,10 @@
       "total_valid": 8226,
       "party_pos": 1,
       "margin_to_second": 32820,
-      "party_votes": 55991
+      "party_votes": 55991,
+      "party_candidate_name": "Vinu Job",
+      "party_votes_2021": 49366,
+      "party_share_2021": 40.08574839018765
     },
     {
       "id": 106,
@@ -243,7 +261,10 @@
       "total_valid": 0,
       "party_pos": 1,
       "margin_to_second": 19062,
-      "party_votes": 56594
+      "party_votes": 56594,
+      "party_candidate_name": "Reji Cheriyan",
+      "party_votes_2021": 51863,
+      "party_share_2021": 41.45292655439483
     },
     {
       "id": 111,
@@ -276,7 +297,10 @@
       "total_valid": 0,
       "party_pos": 1,
       "margin_to_second": 1055,
-      "party_votes": 53224
+      "party_votes": 53224,
+      "party_candidate_name": "Adv. Varghese Mammen",
+      "party_votes_2021": 50757,
+      "party_share_2021": 36.53264812575575
     }
   ]
 }

@@ -45,7 +45,10 @@
       "total_valid": 10349,
       "party_pos": 1,
       "margin_to_second": 46967,
-      "party_votes": 70448
+      "party_votes": 70448,
+      "party_candidate_name": "P. K. Praveen",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 19,
@@ -78,7 +81,10 @@
       "total_valid": 10867,
       "party_pos": 2,
       "margin_to_second": 33173,
-      "party_votes": 52348
+      "party_votes": 52348,
+      "party_candidate_name": "P. K. Anil Kumar",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 20,
@@ -111,7 +117,10 @@
       "total_valid": 22690,
       "party_pos": 2,
       "margin_to_second": 40960,
-      "party_votes": 55255
+      "party_votes": 55255,
+      "party_candidate_name": "M. K. Bhaskaran",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     }
   ]
 }

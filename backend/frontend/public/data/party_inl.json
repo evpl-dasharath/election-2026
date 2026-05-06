@@ -45,7 +45,10 @@
       "total_valid": 6635,
       "party_pos": 2,
       "margin_to_second": 9422,
-      "party_votes": 41885
+      "party_votes": 41885,
+      "party_candidate_name": "Ahamed Devarkovil",
+      "party_votes_2021": 52557,
+      "party_share_2021": 44.3702459244751
     }
   ]
 }

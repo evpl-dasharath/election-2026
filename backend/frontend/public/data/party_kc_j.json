@@ -45,7 +45,10 @@
       "total_valid": 11943,
       "party_pos": 1,
       "margin_to_second": 30009,
-      "party_votes": 89551
+      "party_votes": 89551,
+      "party_candidate_name": "Anoop Jacob",
+      "party_votes_2021": 85056,
+      "party_share_2021": 54.179937320049945
     }
   ]
 }

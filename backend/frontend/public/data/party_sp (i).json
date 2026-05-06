@@ -45,7 +45,10 @@
       "total_valid": 10934,
       "party_pos": 8,
       "margin_to_second": 73337,
-      "party_votes": 125
+      "party_votes": 125,
+      "party_candidate_name": "Siyad Koodiyath",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     }
   ]
 }

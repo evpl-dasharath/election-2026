@@ -45,7 +45,10 @@
       "total_valid": 11805,
       "party_pos": 2,
       "margin_to_second": 47819,
-      "party_votes": 74362
+      "party_votes": 74362,
+      "party_candidate_name": "P. V. Anvar",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     }
   ]
 }

@@ -45,7 +45,10 @@
       "total_valid": 10042,
       "party_pos": 4,
       "margin_to_second": 48650,
-      "party_votes": 397
+      "party_votes": 397,
+      "party_candidate_name": "Sunil Mannath",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     }
   ]
 }

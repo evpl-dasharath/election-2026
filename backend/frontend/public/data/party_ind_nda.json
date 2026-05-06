@@ -45,7 +45,10 @@
       "total_valid": 10984,
       "party_pos": 3,
       "margin_to_second": 67117,
-      "party_votes": 6018
+      "party_votes": 6018,
+      "party_candidate_name": "E. P. Kumaradas",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     }
   ]
 }

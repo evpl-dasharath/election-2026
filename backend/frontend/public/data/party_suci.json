@@ -45,7 +45,10 @@
       "total_valid": 12159,
       "party_pos": 5,
       "margin_to_second": 47126,
-      "party_votes": 227
+      "party_votes": 227,
+      "party_candidate_name": "Reshmi Ravi",
+      "party_votes_2021": 226,
+      "party_share_2021": 0.15653137553677796
     },
     {
       "id": 11,
@@ -78,7 +81,10 @@
       "total_valid": 22168,
       "party_pos": 6,
       "margin_to_second": 35925,
-      "party_votes": 229
+      "party_votes": 229,
+      "party_candidate_name": "M.K. Shahazad",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 18,
@@ -111,7 +117,10 @@
       "total_valid": 16454,
       "party_pos": 6,
       "margin_to_second": 31031,
-      "party_votes": 275
+      "party_votes": 275,
+      "party_candidate_name": "V.A Ramesan",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 26,
@@ -144,7 +153,10 @@
       "total_valid": 11947,
       "party_pos": 6,
       "margin_to_second": 33990,
-      "party_votes": 481
+      "party_votes": 481,
+      "party_candidate_name": "P.M.Sreekumar",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 27,
@@ -177,7 +189,10 @@
       "total_valid": 10168,
       "party_pos": 7,
       "margin_to_second": 9254,
-      "party_votes": 124
+      "party_votes": 124,
+      "party_candidate_name": "A Sajeena",
+      "party_votes_2021": 156,
+      "party_share_2021": 0.11383039271485487
     },
     {
       "id": 45,
@@ -210,7 +225,10 @@
       "total_valid": 10934,
       "party_pos": 6,
       "margin_to_second": 73337,
-      "party_votes": 224
+      "party_votes": 224,
+      "party_candidate_name": "Dr.S.Aleena",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 55,
@@ -243,7 +261,10 @@
       "total_valid": 24645,
       "party_pos": 5,
       "margin_to_second": 6646,
-      "party_votes": 355
+      "party_votes": 355,
+      "party_candidate_name": "K Prasad",
+      "party_votes_2021": 555,
+      "party_share_2021": 0.34143130463669863
     },
     {
       "id": 63,
@@ -276,7 +297,10 @@
       "total_valid": 10075,
       "party_pos": 6,
       "margin_to_second": 35124,
-      "party_votes": 218
+      "party_votes": 218,
+      "party_candidate_name": "C. R. Unnikrishnan",
+      "party_votes_2021": 301,
+      "party_share_2021": 0.20651517646413084
     },
     {
       "id": 75,
@@ -309,7 +333,10 @@
       "total_valid": 0,
       "party_pos": 4,
       "margin_to_second": 31430,
-      "party_votes": 220
+      "party_votes": 220,
+      "party_candidate_name": "P V Rajeesh",
+      "party_votes_2021": 301,
+      "party_share_2021": 0.21918326925317488
     },
     {
       "id": 76,
@@ -342,7 +369,10 @@
       "total_valid": 0,
       "party_pos": 9,
       "margin_to_second": 36024,
-      "party_votes": 0
+      "party_votes": 0,
+      "party_candidate_name": "Satheesan",
+      "party_votes_2021": 228,
+      "party_share_2021": 0.15251958338071697
     },
     {
       "id": 77,
@@ -375,7 +405,10 @@
       "total_valid": 12067,
       "party_pos": 7,
       "margin_to_second": 50164,
-      "party_votes": 301
+      "party_votes": 301,
+      "party_candidate_name": "A Rajeena",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 81,
@@ -408,7 +441,10 @@
       "total_valid": 6343,
       "party_pos": 8,
       "margin_to_second": 22317,
-      "party_votes": 148
+      "party_votes": 148,
+      "party_candidate_name": "SATHEESAN",
+      "party_votes_2021": 173,
+      "party_share_2021": 0.11146332663264781
     },
     {
       "id": 85,
@@ -441,7 +477,10 @@
       "total_valid": 11943,
       "party_pos": 5,
       "margin_to_second": 30009,
-      "party_votes": 397
+      "party_votes": 397,
+      "party_candidate_name": "T C Ramanan",
+      "party_votes_2021": 454,
+      "party_share_2021": 0.28919407852829515
     },
     {
       "id": 90,
@@ -474,7 +513,10 @@
       "total_valid": 9405,
       "party_pos": 8,
       "margin_to_second": 27826,
-      "party_votes": 234
+      "party_votes": 234,
+      "party_candidate_name": "P T Varghese",
+      "party_votes_2021": 273,
+      "party_share_2021": 0.1976356120550484
     },
     {
       "id": 95,
@@ -507,7 +549,10 @@
       "total_valid": 20008,
       "party_pos": 7,
       "margin_to_second": 31287,
-      "party_votes": 115
+      "party_votes": 115,
+      "party_candidate_name": "T M Bose",
+      "party_votes_2021": 152,
+      "party_share_2021": 0.11977369076324208
     },
     {
       "id": 96,
@@ -540,7 +585,10 @@
       "total_valid": 26726,
       "party_pos": 5,
       "margin_to_second": 31350,
-      "party_votes": 277
+      "party_votes": 277,
+      "party_candidate_name": "Ashna Thambi",
+      "party_votes_2021": 247,
+      "party_share_2021": 0.19699011859283655
     },
     {
       "id": 97,
@@ -573,7 +621,10 @@
       "total_valid": 17402,
       "party_pos": 5,
       "margin_to_second": 23181,
-      "party_votes": 171
+      "party_votes": 171,
+      "party_candidate_name": "Ralesh Chandran",
+      "party_votes_2021": 144,
+      "party_share_2021": 0.11874819609945161
     },
     {
       "id": 99,
@@ -606,7 +657,10 @@
       "total_valid": 8226,
       "party_pos": 6,
       "margin_to_second": 32820,
-      "party_votes": 331
+      "party_votes": 331,
+      "party_candidate_name": "Aravind V",
+      "party_votes_2021": 328,
+      "party_share_2021": 0.26633969679499153
     },
     {
       "id": 102,
@@ -639,7 +693,10 @@
       "total_valid": 10016,
       "party_pos": 4,
       "margin_to_second": 44811,
-      "party_votes": 317
+      "party_votes": 317,
+      "party_candidate_name": "N.K. Sasikumar",
+      "party_votes_2021": 374,
+      "party_share_2021": 0.22854349353784104
     },
     {
       "id": 105,
@@ -672,7 +729,10 @@
       "total_valid": 0,
       "party_pos": 4,
       "margin_to_second": 30901,
-      "party_votes": 1020
+      "party_votes": 1020,
+      "party_candidate_name": "Johnson Mathew",
+      "party_votes_2021": 221,
+      "party_share_2021": 0.16198783258814045
     },
     {
       "id": 106,
@@ -705,7 +765,10 @@
       "total_valid": 0,
       "party_pos": 5,
       "margin_to_second": 19062,
-      "party_votes": 656
+      "party_votes": 656,
+      "party_candidate_name": "P.K. Sasi",
+      "party_votes_2021": 392,
+      "party_share_2021": 0.3133167616474707
     },
     {
       "id": 107,
@@ -738,7 +801,10 @@
       "total_valid": 29095,
       "party_pos": 4,
       "margin_to_second": 13785,
-      "party_votes": 231
+      "party_votes": 231,
+      "party_candidate_name": "Vidhya V.P",
+      "party_votes_2021": 204,
+      "party_share_2021": 0.13592116572388016
     },
     {
       "id": 110,
@@ -771,7 +837,10 @@
       "total_valid": 9104,
       "party_pos": 4,
       "margin_to_second": 16625,
-      "party_votes": 429
+      "party_votes": 429,
+      "party_candidate_name": "B. Praneesh",
+      "party_votes_2021": 316,
+      "party_share_2021": 0.21543789798061058
     },
     {
       "id": 113,
@@ -804,7 +873,10 @@
       "total_valid": 8304,
       "party_pos": 5,
       "margin_to_second": 16115,
-      "party_votes": 229
+      "party_votes": 229,
+      "party_candidate_name": "Radhamani",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 116,
@@ -837,7 +909,10 @@
       "total_valid": 10417,
       "party_pos": 5,
       "margin_to_second": 23854,
-      "party_votes": 295
+      "party_votes": 295,
+      "party_candidate_name": "Twinkle Prabhakaran",
+      "party_votes_2021": 283,
+      "party_share_2021": 0.16374093060393208
     },
     {
       "id": 118,
@@ -870,7 +945,10 @@
       "total_valid": 17305,
       "party_pos": 5,
       "margin_to_second": 31333,
-      "party_votes": 366
+      "party_votes": 366,
+      "party_candidate_name": "Sasidharan",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 121,
@@ -903,7 +981,10 @@
       "total_valid": 8411,
       "party_pos": 6,
       "margin_to_second": 35022,
-      "party_votes": 560
+      "party_votes": 560,
+      "party_candidate_name": "K. Mahesh",
+      "party_votes_2021": 407,
+      "party_share_2021": 0.2796040202523993
     },
     {
       "id": 123,
@@ -936,7 +1017,10 @@
       "total_valid": 9708,
       "party_pos": 6,
       "margin_to_second": 36302,
-      "party_votes": 269
+      "party_votes": 269,
+      "party_candidate_name": "Rahul R",
+      "party_votes_2021": 459,
+      "party_share_2021": 0.2949359686943782
     },
     {
       "id": 133,
@@ -969,7 +1053,10 @@
       "total_valid": 7074,
       "party_pos": 6,
       "margin_to_second": 5700,
-      "party_votes": 131
+      "party_votes": 131,
+      "party_candidate_name": "Emil B.S",
+      "party_votes_2021": 201,
+      "party_share_2021": 0.14694915997718996
     },
     {
       "id": 134,
@@ -1002,7 +1089,10 @@
       "total_valid": 6007,
       "party_pos": 9,
       "margin_to_second": 598,
-      "party_votes": 227
+      "party_votes": 227,
+      "party_candidate_name": "A Saboora",
+      "party_votes_2021": 366,
+      "party_share_2021": 0.28777657215643726
     },
     {
       "id": 135,
@@ -1035,7 +1125,10 @@
       "total_valid": 7618,
       "party_pos": 4,
       "margin_to_second": 22484,
-      "party_votes": 163
+      "party_votes": 163,
+      "party_candidate_name": "Karamana Prasad",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     }
   ]
 }

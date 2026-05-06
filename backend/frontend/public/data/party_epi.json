@@ -45,7 +45,10 @@
       "total_valid": 10161,
       "party_pos": 6,
       "margin_to_second": 42250,
-      "party_votes": 117
+      "party_votes": 117,
+      "party_candidate_name": "G Suresh",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 121,
@@ -78,7 +81,10 @@
       "total_valid": 8411,
       "party_pos": 4,
       "margin_to_second": 35022,
-      "party_votes": 1538
+      "party_votes": 1538,
+      "party_candidate_name": "Nedumoncavu Gopalakrishnan",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     }
   ]
 }

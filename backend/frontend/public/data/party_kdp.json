@@ -45,7 +45,10 @@
       "total_valid": 7499,
       "party_pos": 1,
       "margin_to_second": 12504,
-      "party_votes": 50799
+      "party_votes": 50799,
+      "party_candidate_name": "Mani C. Kappan",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     }
   ]
 }

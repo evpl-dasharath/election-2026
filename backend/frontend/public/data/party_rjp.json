@@ -45,7 +45,10 @@
       "total_valid": 0,
       "party_pos": 7,
       "margin_to_second": 49574,
-      "party_votes": 137
+      "party_votes": 137,
+      "party_candidate_name": "Finto Xavier",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     }
   ]
 }

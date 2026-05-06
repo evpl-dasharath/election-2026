@@ -45,7 +45,10 @@
       "total_valid": 11791,
       "party_pos": 5,
       "margin_to_second": 62699,
-      "party_votes": 1083
+      "party_votes": 1083,
+      "party_candidate_name": "Anappally Gopalan",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 9,
@@ -78,7 +81,10 @@
       "total_valid": 19782,
       "party_pos": 4,
       "margin_to_second": 38852,
-      "party_votes": 1151
+      "party_votes": 1151,
+      "party_candidate_name": "Joseph P.V",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 15,
@@ -111,7 +117,10 @@
       "total_valid": 10349,
       "party_pos": 6,
       "margin_to_second": 46967,
-      "party_votes": 254
+      "party_votes": 254,
+      "party_candidate_name": "Rafeed AP",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 16,
@@ -144,7 +153,10 @@
       "total_valid": 10722,
       "party_pos": 4,
       "margin_to_second": 53667,
-      "party_votes": 431
+      "party_votes": 431,
+      "party_candidate_name": "Adv. Henstion George",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 18,
@@ -177,7 +189,10 @@
       "total_valid": 16454,
       "party_pos": 4,
       "margin_to_second": 31031,
-      "party_votes": 1781
+      "party_votes": 1781,
+      "party_candidate_name": "Prakrithi N V",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 19,
@@ -210,7 +225,10 @@
       "total_valid": 10867,
       "party_pos": 4,
       "margin_to_second": 33173,
-      "party_votes": 867
+      "party_votes": 867,
+      "party_candidate_name": "Rafeek C A",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 23,
@@ -243,7 +261,10 @@
       "total_valid": 10183,
       "party_pos": 5,
       "margin_to_second": 44298,
-      "party_votes": 193
+      "party_votes": 193,
+      "party_candidate_name": "Musthafa PK (Padinjare Kuniyoth)",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 24,
@@ -276,7 +297,10 @@
       "total_valid": 9825,
       "party_pos": 7,
       "margin_to_second": 63300,
-      "party_votes": 124
+      "party_votes": 124,
+      "party_candidate_name": "Ranjith Malayil",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 26,
@@ -309,7 +333,10 @@
       "total_valid": 11947,
       "party_pos": 7,
       "margin_to_second": 33990,
-      "party_votes": 348
+      "party_votes": 348,
+      "party_candidate_name": "Abdul Basith Atholi",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 27,
@@ -342,7 +369,10 @@
       "total_valid": 10168,
       "party_pos": 4,
       "margin_to_second": 9254,
-      "party_votes": 542
+      "party_votes": 542,
+      "party_candidate_name": "Dr. Alphonsa Mathew",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 31,
@@ -375,7 +405,10 @@
       "total_valid": 10042,
       "party_pos": 6,
       "margin_to_second": 48650,
-      "party_votes": 286
+      "party_votes": 286,
+      "party_candidate_name": "Bavan Kutty K M",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 32,
@@ -408,7 +441,10 @@
       "total_valid": 22095,
       "party_pos": 4,
       "margin_to_second": 63019,
-      "party_votes": 812
+      "party_votes": 812,
+      "party_candidate_name": "Sunny V Joseph",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 35,
@@ -441,7 +477,10 @@
       "total_valid": 20341,
       "party_pos": 4,
       "margin_to_second": 46075,
-      "party_votes": 1942
+      "party_votes": 1942,
+      "party_candidate_name": "Jaisal Maliyekkal",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 37,
@@ -474,7 +513,10 @@
       "total_valid": 6256,
       "party_pos": 4,
       "margin_to_second": 42312,
-      "party_votes": 2222
+      "party_votes": 2222,
+      "party_candidate_name": "Adv. PPA Sageer",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 40,
@@ -507,7 +549,10 @@
       "total_valid": 10088,
       "party_pos": 5,
       "margin_to_second": 37178,
-      "party_votes": 2060
+      "party_votes": 2060,
+      "party_candidate_name": "Aboobacker K.P. (Kundupuzhakkal)",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 42,
@@ -540,7 +585,10 @@
       "total_valid": 8705,
       "party_pos": 5,
       "margin_to_second": 26146,
-      "party_votes": 1575
+      "party_votes": 1575,
+      "party_candidate_name": "Abdul Azeez Kadalundi",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 43,
@@ -573,7 +621,10 @@
       "total_valid": 0,
       "party_pos": 5,
       "margin_to_second": 36985,
-      "party_votes": 843
+      "party_votes": 843,
+      "party_candidate_name": "Moosa Jarathingal",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 45,
@@ -606,7 +657,10 @@
       "total_valid": 10934,
       "party_pos": 4,
       "margin_to_second": 73337,
-      "party_votes": 340
+      "party_votes": 340,
+      "party_candidate_name": "Kabeer Shameer Kuttoor",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 55,
@@ -639,7 +693,10 @@
       "total_valid": 24645,
       "party_pos": 6,
       "margin_to_second": 6646,
-      "party_votes": 197
+      "party_votes": 197,
+      "party_candidate_name": "Saji P J",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 56,
@@ -672,7 +729,10 @@
       "total_valid": 14173,
       "party_pos": 4,
       "margin_to_second": 15121,
-      "party_votes": 437
+      "party_votes": 437,
+      "party_candidate_name": "Udayan Sukumaran",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 61,
@@ -705,7 +765,10 @@
       "total_valid": 31987,
       "party_pos": 5,
       "margin_to_second": 9401,
-      "party_votes": 669
+      "party_votes": 669,
+      "party_candidate_name": "K V Subramaniyan",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 62,
@@ -738,7 +801,10 @@
       "total_valid": 20639,
       "party_pos": 4,
       "margin_to_second": 47855,
-      "party_votes": 1035
+      "party_votes": 1035,
+      "party_candidate_name": "Rajeev K Sivaraman",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 63,
@@ -771,7 +837,10 @@
       "total_valid": 10075,
       "party_pos": 5,
       "margin_to_second": 35124,
-      "party_votes": 466
+      "party_votes": 466,
+      "party_candidate_name": "Pauly Francis Guruvayur",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 64,
@@ -804,7 +873,10 @@
       "total_valid": 0,
       "party_pos": 5,
       "margin_to_second": 27086,
-      "party_votes": 330
+      "party_votes": 330,
+      "party_candidate_name": "Unnikrishnan C. S.",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 65,
@@ -837,7 +909,10 @@
       "total_valid": 26622,
       "party_pos": 4,
       "margin_to_second": 39191,
-      "party_votes": 478
+      "party_votes": 478,
+      "party_candidate_name": "Jithin Sadanananthan",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 66,
@@ -870,7 +945,10 @@
       "total_valid": 0,
       "party_pos": 4,
       "margin_to_second": 41082,
-      "party_votes": 594
+      "party_votes": 594,
+      "party_candidate_name": "V P Prinson Avinissery",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 67,
@@ -903,7 +981,10 @@
       "total_valid": 21254,
       "party_pos": 4,
       "margin_to_second": 4825,
-      "party_votes": 299
+      "party_votes": 299,
+      "party_candidate_name": "Rani Anto",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 69,
@@ -936,7 +1017,10 @@
       "total_valid": 9609,
       "party_pos": 4,
       "margin_to_second": 35816,
-      "party_votes": 653
+      "party_votes": 653,
+      "party_candidate_name": "Jayan Eratt",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 70,
@@ -969,7 +1053,10 @@
       "total_valid": 29912,
       "party_pos": 5,
       "margin_to_second": 28903,
-      "party_votes": 579
+      "party_votes": 579,
+      "party_candidate_name": "Dr. Shaju K Y (Kavungal)",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 71,
@@ -1002,7 +1089,10 @@
       "total_valid": 10887,
       "party_pos": 4,
       "margin_to_second": 32265,
-      "party_votes": 863
+      "party_votes": 863,
+      "party_candidate_name": "Jayakrishnan P N",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 72,
@@ -1035,7 +1125,10 @@
       "total_valid": 8577,
       "party_pos": 5,
       "margin_to_second": 32016,
-      "party_votes": 519
+      "party_votes": 519,
+      "party_candidate_name": "Wilson Kallen",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 73,
@@ -1068,7 +1161,10 @@
       "total_valid": 8915,
       "party_pos": 5,
       "margin_to_second": 32921,
-      "party_votes": 447
+      "party_votes": 447,
+      "party_candidate_name": "Dr. K.M Francis Roy",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 76,
@@ -1101,7 +1197,10 @@
       "total_valid": 0,
       "party_pos": 4,
       "margin_to_second": 36024,
-      "party_votes": 403
+      "party_votes": 403,
+      "party_candidate_name": "Hakhikhath Hameed",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 77,
@@ -1134,7 +1233,10 @@
       "total_valid": 12067,
       "party_pos": 5,
       "margin_to_second": 50164,
-      "party_votes": 553
+      "party_votes": 553,
+      "party_candidate_name": "Shamsu T.K",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 79,
@@ -1167,7 +1269,10 @@
       "total_valid": 0,
       "party_pos": 4,
       "margin_to_second": 36827,
-      "party_votes": 342
+      "party_votes": 342,
+      "party_candidate_name": "Mohandas PG",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 81,
@@ -1200,7 +1305,10 @@
       "total_valid": 6343,
       "party_pos": 7,
       "margin_to_second": 22317,
-      "party_votes": 272
+      "party_votes": 272,
+      "party_candidate_name": "Thomas Paul",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 82,
@@ -1233,7 +1341,10 @@
       "total_valid": 7280,
       "party_pos": 4,
       "margin_to_second": 5979,
-      "party_votes": 783
+      "party_votes": 783,
+      "party_candidate_name": "Moses Henry Motha",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 83,
@@ -1266,7 +1377,10 @@
       "total_valid": 6702,
       "party_pos": 4,
       "margin_to_second": 11740,
-      "party_votes": 605
+      "party_votes": 605,
+      "party_candidate_name": "Jose George",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 85,
@@ -1299,7 +1413,10 @@
       "total_valid": 11943,
       "party_pos": 4,
       "margin_to_second": 30009,
-      "party_votes": 1004
+      "party_votes": 1004,
+      "party_candidate_name": "Eldho Abraham",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 90,
@@ -1332,7 +1449,10 @@
       "total_valid": 9405,
       "party_pos": 4,
       "margin_to_second": 27826,
-      "party_votes": 2603
+      "party_votes": 2603,
+      "party_candidate_name": "Adv. Basil John",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 92,
@@ -1365,7 +1485,10 @@
       "total_valid": 7566,
       "party_pos": 4,
       "margin_to_second": 32820,
-      "party_votes": 508
+      "party_votes": 508,
+      "party_candidate_name": "Joseph Jacob",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 93,
@@ -1398,7 +1521,10 @@
       "total_valid": 7499,
       "party_pos": 4,
       "margin_to_second": 12504,
-      "party_votes": 506
+      "party_votes": 506,
+      "party_candidate_name": "Adv. Rony Jose Nedumpallil",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 94,
@@ -1431,7 +1557,10 @@
       "total_valid": 17515,
       "party_pos": 5,
       "margin_to_second": 26825,
-      "party_votes": 628
+      "party_votes": 628,
+      "party_candidate_name": "Dominic Simon",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 97,
@@ -1464,7 +1593,10 @@
       "total_valid": 17402,
       "party_pos": 4,
       "margin_to_second": 23181,
-      "party_votes": 1202
+      "party_votes": 1202,
+      "party_candidate_name": "Dr. Selin Philip",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 99,
@@ -1497,7 +1629,10 @@
       "total_valid": 8226,
       "party_pos": 7,
       "margin_to_second": 32820,
-      "party_votes": 256
+      "party_votes": 256,
+      "party_candidate_name": "Prof. Dr. Saju Kannanthara",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 106,
@@ -1530,7 +1665,10 @@
       "total_valid": 0,
       "party_pos": 4,
       "margin_to_second": 19062,
-      "party_votes": 689
+      "party_votes": 689,
+      "party_candidate_name": "Joseph Mathew",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 119,
@@ -1563,7 +1701,10 @@
       "total_valid": 10161,
       "party_pos": 4,
       "margin_to_second": 42250,
-      "party_votes": 386
+      "party_votes": 386,
+      "party_candidate_name": "Mamachan D",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 124,
@@ -1596,7 +1737,10 @@
       "total_valid": 20260,
       "party_pos": 4,
       "margin_to_second": 28049,
-      "party_votes": 290
+      "party_votes": 290,
+      "party_candidate_name": "Adv. Sinu L R",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 126,
@@ -1629,7 +1773,10 @@
       "total_valid": 9521,
       "party_pos": 4,
       "margin_to_second": 12249,
-      "party_votes": 627
+      "party_votes": 627,
+      "party_candidate_name": "Arun A",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 134,
@@ -1662,7 +1809,10 @@
       "total_valid": 6007,
       "party_pos": 5,
       "margin_to_second": 598,
-      "party_votes": 556
+      "party_votes": 556,
+      "party_candidate_name": "Samin Sathyadas",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 135,
@@ -1695,7 +1845,10 @@
       "total_valid": 7618,
       "party_pos": 5,
       "margin_to_second": 22484,
-      "party_votes": 146
+      "party_votes": 146,
+      "party_candidate_name": "Vinu K",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 137,
@@ -1728,7 +1881,10 @@
       "total_valid": 8704,
       "party_pos": 6,
       "margin_to_second": 24217,
-      "party_votes": 298
+      "party_votes": 298,
+      "party_candidate_name": "Deepumon N",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 139,
@@ -1761,7 +1917,10 @@
       "total_valid": 8037,
       "party_pos": 4,
       "margin_to_second": 21572,
-      "party_votes": 677
+      "party_votes": 677,
+      "party_candidate_name": "Manoj S.P",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     }
   ]
 }

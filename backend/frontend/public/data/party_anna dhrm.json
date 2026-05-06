@@ -45,7 +45,10 @@
       "total_valid": 0,
       "party_pos": 6,
       "margin_to_second": 52934,
-      "party_votes": 297
+      "party_votes": 297,
+      "party_candidate_name": "Aneesh Aneesh",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 122,
@@ -78,7 +81,10 @@
       "total_valid": 10582,
       "party_pos": 5,
       "margin_to_second": 39824,
-      "party_votes": 381
+      "party_votes": 381,
+      "party_candidate_name": "Aji Kadasseri",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 126,
@@ -111,7 +117,10 @@
       "total_valid": 9521,
       "party_pos": 5,
       "margin_to_second": 12249,
-      "party_votes": 428
+      "party_votes": 428,
+      "party_candidate_name": "Sindhu Puthenkulam",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 127,
@@ -144,7 +153,10 @@
       "total_valid": 7766,
       "party_pos": 5,
       "margin_to_second": 25915,
-      "party_votes": 290
+      "party_votes": 290,
+      "party_candidate_name": "Vinod Elakamon",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 128,
@@ -177,7 +189,10 @@
       "total_valid": 19010,
       "party_pos": 6,
       "margin_to_second": 4416,
-      "party_votes": 397
+      "party_votes": 397,
+      "party_candidate_name": "Sunitha Kilimanoor",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 129,
@@ -210,7 +225,10 @@
       "total_valid": 17965,
       "party_pos": 5,
       "margin_to_second": 22491,
-      "party_votes": 617
+      "party_votes": 617,
+      "party_candidate_name": "Anoop Alappuramkunnu",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 130,
@@ -243,7 +261,10 @@
       "total_valid": 7622,
       "party_pos": 6,
       "margin_to_second": 8624,
-      "party_votes": 171
+      "party_votes": 171,
+      "party_candidate_name": "Shibu G",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 131,
@@ -276,7 +297,10 @@
       "total_valid": 7716,
       "party_pos": 5,
       "margin_to_second": 49312,
-      "party_votes": 275
+      "party_votes": 275,
+      "party_candidate_name": "Ratheesh R",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 132,
@@ -309,7 +333,10 @@
       "total_valid": 7672,
       "party_pos": 5,
       "margin_to_second": 8953,
-      "party_votes": 260
+      "party_votes": 260,
+      "party_candidate_name": "Deebika Karimanal",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     }
   ]
 }

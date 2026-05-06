@@ -45,7 +45,10 @@
       "total_valid": 15860,
       "party_pos": 1,
       "margin_to_second": 60721,
-      "party_votes": 76640
+      "party_votes": 76640,
+      "party_candidate_name": "V. Kunjikrishnan",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 8,
@@ -78,7 +81,10 @@
       "total_valid": 11791,
       "party_pos": 1,
       "margin_to_second": 62699,
-      "party_votes": 91339
+      "party_votes": 91339,
+      "party_candidate_name": "T K Govindan Master",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 52,
@@ -111,7 +117,10 @@
       "total_valid": 25254,
       "party_pos": 2,
       "margin_to_second": 6109,
-      "party_votes": 48585
+      "party_votes": 48585,
+      "party_candidate_name": "P. K. Sasi",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 61,
@@ -144,7 +153,10 @@
       "total_valid": 31987,
       "party_pos": 2,
       "margin_to_second": 9401,
-      "party_votes": 46687
+      "party_votes": 46687,
+      "party_candidate_name": "Sivan Veettikkunnu",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 105,
@@ -177,7 +189,10 @@
       "total_valid": 0,
       "party_pos": 1,
       "margin_to_second": 30901,
-      "party_votes": 75184
+      "party_votes": 75184,
+      "party_candidate_name": "G. Sudhakaran",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     }
   ]
 }

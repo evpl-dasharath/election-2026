@@ -45,7 +45,10 @@
       "total_valid": 11947,
       "party_pos": 2,
       "margin_to_second": 33990,
-      "party_votes": 65500
+      "party_votes": 65500,
+      "party_candidate_name": "A. K. Saseendran",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 40,
@@ -78,7 +81,10 @@
       "total_valid": 10088,
       "party_pos": 2,
       "margin_to_second": 37178,
-      "party_votes": 46305
+      "party_votes": 46305,
+      "party_candidate_name": "K. T. Mujeeb",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 106,
@@ -111,7 +117,10 @@
       "total_valid": 0,
       "party_pos": 2,
       "margin_to_second": 19062,
-      "party_votes": 35994
+      "party_votes": 35994,
+      "party_candidate_name": "Thomas K. Thomas",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     }
   ]
 }

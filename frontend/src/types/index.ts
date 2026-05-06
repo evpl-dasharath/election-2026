@@ -88,6 +88,10 @@ export interface ConstituencyListItem {
   alliance_party_code?: string | null;
   margin?: number | null;
   voteShare?: number;
+  alliance_votes_2021?: number;
+  alliance_share_2021?: number;
+  party_votes_2021?: number;
+  party_share_2021?: number;
   candidates_2026?: Candidate[];
 }
 

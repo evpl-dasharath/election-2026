@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useParties, usePartyDetail, useAllHistorical, useConstituencies } from '../hooks/useElectionData';
 import GlobalHeader from '../components/GlobalHeader';
 import { partyAbbr } from '../utils/partyAbbr';
-import { classifySeat } from '../utils/seatClassification';
+import { classifySeat, classifyForAlliance } from '../utils/seatClassification';
 import type { Party, ConstituencyListItem, SeatClass } from '../types';
 
 // ── Design tokens ─────────────────────────────────────────────
@@ -60,8 +60,6 @@ function PartyConstCard({
   const outcomeLabels: Record<string, string> = {
     won: 'WON',
     leading: 'LEADING',
-    gained: 'GAINED',
-    lost: 'LOST',
     '2nd': '2ND',
     close_3rd: 'CLOSE 3RD',
     distant_3rd: 'DISTANT 3RD',
@@ -81,7 +79,7 @@ function PartyConstCard({
   let borderStyle = 'none';
 
   if (countingStarted) {
-    if (outcome === 'won' || outcome === 'leading' || outcome === 'gained') {
+    if (outcome === 'won' || outcome === 'leading') {
       cardBg = partyColor;
       textPrimary = '#fff';
       textSecondary = 'rgba(255,255,255,0.85)';
@@ -134,7 +132,7 @@ function PartyConstCard({
       onMouseLeave={e => (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)'}
     >
       <div className="flex justify-between items-start mb-2">
-        <span className="font-mono text-[9px]" style={{ color: (outcome === 'won' || outcome === 'leading' || outcome === 'gained') ? 'rgba(255,255,255,0.6)' : '#9CA3AF' }}>
+        <span className="font-mono text-[9px]" style={{ color: (outcome === 'won' || outcome === 'leading') ? 'rgba(255,255,255,0.6)' : '#9CA3AF' }}>
           #{String(c.number).padStart(3, '0')}
         </span>
         <div className="flex gap-1 items-center">
@@ -153,7 +151,7 @@ function PartyConstCard({
       </div>
 
       <div className="text-[9px] mb-2 flex items-center gap-1.5" style={{ color: textSecondary, opacity: subTextOpacity }}>
-        <span>2021: <span style={{ fontWeight: 700, color: (outcome === 'won' || outcome === 'leading' || outcome === 'gained') ? '#fff' : ac(c.sitting_alliance || 'OTH') }}>{c.sitting_alliance}</span></span>
+        <span>2021: <span style={{ fontWeight: 700, color: (outcome === 'won' || outcome === 'leading') ? '#fff' : ac(c.sitting_alliance || 'OTH') }}>{c.sitting_alliance}</span></span>
         {c.sitting_party && <span className="opacity-60">· {c.sitting_party}</span>}
       </div>
 
@@ -263,10 +261,38 @@ export default function PartyPage() {
 
   const classMap = useMemo(() => {
     const map: Record<number, { seatClass: SeatClass; ownerAlliance: string | null }> = {};
-    if (!allHistory) return map;
-    allHistory.forEach(h => { map[h.constituency_number] = classifySeat(h); });
+    if (!allHistory || !detailData?.alliance) return map;
+    
+    const targetAl = detailData.alliance as 'LDF' | 'UDF' | 'NDA';
+
+    allHistory.forEach(h => {
+      const results = [h.la_2011, h.la_2016, h.la_2021];
+      
+      // 1. Check if the selected party's alliance "owns" it (Stronghold/Leaning/Fragile)
+      const clsForUs = classifyForAlliance(targetAl, results);
+      if (clsForUs === 'Stronghold' || clsForUs === 'Leaning' || clsForUs === 'Fragile') {
+        map[h.constituency_number] = {
+          seatClass: clsForUs,
+          ownerAlliance: targetAl
+        };
+      } else {
+        // 2. Not ours. Is it a global Swing or belongs to someone else?
+        const global = classifySeat(h);
+        if (global.seatClass === 'Swing') {
+          map[h.constituency_number] = {
+            seatClass: 'Swing',
+            ownerAlliance: null
+          };
+        } else {
+          map[h.constituency_number] = {
+            seatClass: "Opponent's",
+            ownerAlliance: global.ownerAlliance
+          };
+        }
+      }
+    });
     return map;
-  }, [allHistory]);
+  }, [allHistory, detailData?.alliance]);
 
   const sidebarParties = useMemo(() => {
     const alOrder = { LDF: 0, UDF: 1, NDA: 2, OTH: 3 };
@@ -359,6 +385,10 @@ export default function PartyPage() {
         }
       }
 
+      // Trends
+      const shareDiff = (c as any).party_share_2021 !== undefined ? (voteShare - (c as any).party_share_2021) : 0;
+      const votesDiff = (c as any).party_votes_2021 !== undefined ? (partyVotes - (c as any).party_votes_2021) : 0;
+
       return { 
         ...c, 
         status,
@@ -371,7 +401,9 @@ export default function PartyPage() {
         movement, 
         partyVotes, 
         voteShare,
-        party_candidate_name: partyCandidateName 
+        party_candidate_name: partyCandidateName,
+        shareDiff,
+        votesDiff
       };
     });
   }, [detailData, allConst, classMap, code]);
@@ -386,13 +418,18 @@ export default function PartyPage() {
       trailing: 0,
       contested: enrichedConsts.length,
       totalVotes: 0,
-      totalValid: 0,
+      totalValid: 0, // Will be sum of competed seats
+      shareInc: 0,
+      shareDec: 0,
+      shareHeld: 0,
+      votesInc: 0,
+      votesDec: 0,
+      votesHeld: 0,
     };
 
     enrichedConsts.forEach(c => {
       stats.totalVotes += c.partyVotes || 0;
-      const cValid = (c.status !== 'NOT_STARTED' && c.votes_counted) ? c.votes_counted : (c.total_valid || 0);
-      stats.totalValid += cValid;
+      stats.totalValid += (c.votes_counted || 0);
 
       if (c.placing === 'won') stats.won++;
       else if (c.placing === 'leading') stats.leading++;
@@ -400,6 +437,20 @@ export default function PartyPage() {
       else if (c.placing === 'close_3rd') stats.close3rd++;
       else if (c.placing === 'distant_3rd') stats.distant3rd++;
       else if (c.status !== 'NOT_STARTED') stats.trailing++;
+
+      // Trend counts
+      if (c.status !== 'NOT_STARTED') {
+        const sd = (c as any).shareDiff || 0;
+        const vd = (c as any).votesDiff || 0;
+        
+        if (sd > 0.1) stats.shareInc++;
+        else if (sd < -0.1) stats.shareDec++;
+        else stats.shareHeld++;
+
+        if (vd > 10) stats.votesInc++;
+        else if (vd < -10) stats.votesDec++;
+        else stats.votesHeld++;
+      }
     });
 
     return stats;
@@ -407,13 +458,16 @@ export default function PartyPage() {
 
   const filteredConsts = useMemo(() => {
     let rows = enrichedConsts;
-    if (rawProfile) rows = rows.filter(r => r.seatClass === rawProfile && r.ownerAlliance === detailData?.alliance);
+    if (rawProfile) rows = rows.filter(r => r.seatClass === rawProfile);
     if (rawOutcome) rows = rows.filter(r => r.placing === rawOutcome);
     if (rawMovement) rows = rows.filter(r => r.movement === rawMovement);
 
     if (rawMargin === 'safe') rows = rows.filter(r => r.margin !== null && r.margin >= 10000);
     else if (rawMargin === 'comfortable') rows = rows.filter(r => r.margin !== null && r.margin >= 2000 && r.margin < 10000);
-    else if (rawMargin === 'close') rows = rows.filter(r => r.margin !== null && Math.abs(r.margin ?? 0) < 2000);
+    else if (rawMargin === 'close') rows = rows.filter(r => r.margin !== null && r.margin > 0 && r.margin < 2000);
+    else if (rawMargin === 'lost_safe') rows = rows.filter(r => r.margin !== null && r.margin <= -10000);
+    else if (rawMargin === 'lost_comfortable') rows = rows.filter(r => r.margin !== null && r.margin <= -2000 && r.margin > -10000);
+    else if (rawMargin === 'lost_close') rows = rows.filter(r => r.margin !== null && r.margin < 0 && r.margin > -2000);
 
     if (rawVotes !== null) {
       if (rawVotes === 100000) rows = rows.filter(r => r.partyVotes >= 90000);
@@ -568,7 +622,6 @@ export default function PartyPage() {
                     <div className="flex items-end gap-0 overflow-x-auto custom-scrollbar pb-1 -mb-1">
                       {[
                         { label: 'Won', value: liveSummary.won, color: partyColor },
-                        { label: 'Leading', value: liveSummary.leading, color: partyColor + 'BB' },
                         { label: '2nd', value: liveSummary.second, color: '#1A1611' },
                         { label: 'Close 3rd', value: liveSummary.close3rd, color: '#F59E0B', desc: '< 10k margin' },
                         { label: 'Dist. 3rd', value: liveSummary.distant3rd, color: '#6B7280', desc: '≥ 10k margin' },
@@ -593,6 +646,27 @@ export default function PartyPage() {
                       </div>
                     </div>
                   </div>
+                </div>
+              </div>
+
+              {/* ── Trend Analysis ── */}
+              <div className="mb-6">
+                <h2 className="text-[11px] font-bold tracking-widest uppercase text-ink2 mb-3">Vote & Share Trends (vs 2021)</h2>
+                <div className="grid grid-cols-2 md:grid-cols-6 gap-3">
+                  {[
+                    { label: 'Share Up', value: liveSummary.shareInc, color: '#16A34A', desc: '> 0.1% increase' },
+                    { label: 'Share Held', value: liveSummary.shareHeld, color: '#6B7280', desc: '± 0.1% change' },
+                    { label: 'Share Down', value: liveSummary.shareDec, color: '#DC2626', desc: '> 0.1% decrease' },
+                    { label: 'Votes Up', value: liveSummary.votesInc, color: '#16A34A', desc: 'Absolute increase' },
+                    { label: 'Votes Held', value: liveSummary.votesHeld, color: '#6B7280', desc: 'No change' },
+                    { label: 'Votes Down', value: liveSummary.votesDec, color: '#DC2626', desc: 'Absolute decrease' },
+                  ].map(s => (
+                    <div key={s.label} className="bg-surface rounded-xl px-3.5 py-2.5 shadow-sm border border-pageborder/50">
+                      <div className="font-mono text-[22px] font-black leading-none mb-1" style={{ color: s.color }}>{s.value}</div>
+                      <div className="text-[11px] font-bold text-ink truncate">{s.label}</div>
+                      <div className="text-[9px] text-ink2 mt-0.5 whitespace-nowrap">{s.desc}</div>
+                    </div>
+                  ))}
                 </div>
               </div>
 
@@ -672,13 +746,26 @@ export default function PartyPage() {
                   <span className="border-l border-pageborder h-4 mx-1" />
                   
                   {/* Margins */}
-                  {[{ k: 'safe', l: 'Safe 5k+' }, { k: 'comfortable', l: '2–5k' }, { k: 'close', l: 'Close <2k' }].map(({ k, l }) => (
+                  <span className="text-[10px] font-bold text-ink2 ml-1">Win Margin:</span>
+                  {[{ k: 'safe', l: 'Safe 10k+' }, { k: 'comfortable', l: '2–10k' }, { k: 'close', l: '<2k' }].map(({ k, l }) => (
                     <button key={k}
                       onClick={() => setRawMargin(rawMargin === k ? null : k)}
                       className="text-[10px] px-2.5 py-1 rounded-full cursor-pointer border font-medium transition-all"
                       style={{
-                        border: `1px solid ${rawMargin === k ? '#1A1611' : '#D1CBC4'}`,
-                        background: rawMargin === k ? '#1A1611' : 'transparent',
+                        border: `1px solid ${rawMargin === k ? '#16A34A' : '#D1CBC4'}`,
+                        background: rawMargin === k ? '#16A34A' : 'transparent',
+                        color: rawMargin === k ? '#fff' : '#5C5245',
+                      }}>{l}</button>
+                  ))}
+                  
+                  <span className="text-[10px] font-bold text-ink2 ml-1">Loss Margin:</span>
+                  {[{ k: 'lost_safe', l: 'Large 10k+' }, { k: 'lost_comfortable', l: '2–10k' }, { k: 'lost_close', l: '<2k' }].map(({ k, l }) => (
+                    <button key={k}
+                      onClick={() => setRawMargin(rawMargin === k ? null : k)}
+                      className="text-[10px] px-2.5 py-1 rounded-full cursor-pointer border font-medium transition-all"
+                      style={{
+                        border: `1px solid ${rawMargin === k ? '#DC2626' : '#D1CBC4'}`,
+                        background: rawMargin === k ? '#DC2626' : 'transparent',
                         color: rawMargin === k ? '#fff' : '#5C5245',
                       }}>{l}</button>
                   ))}

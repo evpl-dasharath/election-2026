@@ -45,7 +45,10 @@
       "total_valid": 11457,
       "party_pos": 6,
       "margin_to_second": 43850,
-      "party_votes": 276
+      "party_votes": 276,
+      "party_candidate_name": "Santhosh P T",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     }
   ]
 }

@@ -45,7 +45,10 @@
       "total_valid": 10722,
       "party_pos": 7,
       "margin_to_second": 53667,
-      "party_votes": 86
+      "party_votes": 86,
+      "party_candidate_name": "Aruvikkal Krishnan",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 19,
@@ -78,7 +81,10 @@
       "total_valid": 10867,
       "party_pos": 9,
       "margin_to_second": 33173,
-      "party_votes": 325
+      "party_votes": 325,
+      "party_candidate_name": "V. K. Prakash",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 24,
@@ -111,7 +117,10 @@
       "total_valid": 9825,
       "party_pos": 5,
       "margin_to_second": 63300,
-      "party_votes": 151
+      "party_votes": 151,
+      "party_candidate_name": "Akhil Kumar A.M",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 69,
@@ -144,7 +153,10 @@
       "total_valid": 9609,
       "party_pos": 6,
       "margin_to_second": 35816,
-      "party_votes": 335
+      "party_votes": 335,
+      "party_candidate_name": "Manoj M.M.",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 73,
@@ -177,7 +189,10 @@
       "total_valid": 8915,
       "party_pos": 8,
       "margin_to_second": 32921,
-      "party_votes": 0
+      "party_votes": 0,
+      "party_candidate_name": "T. C. Subrahmanyan",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 79,
@@ -210,7 +225,10 @@
       "total_valid": 0,
       "party_pos": 5,
       "margin_to_second": 36827,
-      "party_votes": 262
+      "party_votes": 262,
+      "party_candidate_name": "T. C. SUBRAHMANYAN",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     }
   ]
 }

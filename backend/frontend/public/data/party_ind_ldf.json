@@ -45,7 +45,10 @@
       "total_valid": 22089,
       "party_pos": 3,
       "margin_to_second": 17020,
-      "party_votes": 36678
+      "party_votes": 36678,
+      "party_candidate_name": "Shanavas Padhoor",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 30,
@@ -78,7 +81,10 @@
       "total_valid": 11457,
       "party_pos": 2,
       "margin_to_second": 43850,
-      "party_votes": 78285
+      "party_votes": 78285,
+      "party_candidate_name": "Adv. P.T.A Rahim",
+      "party_votes_2021": 85138,
+      "party_share_2021": 44.12255516744577
     },
     {
       "id": 31,
@@ -111,7 +117,10 @@
       "total_valid": 10042,
       "party_pos": 2,
       "margin_to_second": 48650,
-      "party_votes": 58482
+      "party_votes": 58482,
+      "party_candidate_name": "Saleem Madavoor",
+      "party_votes_2021": 65992,
+      "party_share_2021": 43.80281035730169
     },
     {
       "id": 35,
@@ -144,7 +153,10 @@
       "total_valid": 20341,
       "party_pos": 2,
       "margin_to_second": 46075,
-      "party_votes": 58735
+      "party_votes": 58735,
+      "party_candidate_name": "U. Sharafali",
+      "party_votes_2021": 81227,
+      "party_share_2021": 47.03412894185225
     },
     {
       "id": 37,
@@ -177,7 +189,10 @@
       "total_valid": 6256,
       "party_pos": 2,
       "margin_to_second": 42312,
-      "party_votes": 55735
+      "party_votes": 55735,
+      "party_candidate_name": "V. M. Mustafa",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 39,
@@ -210,7 +225,10 @@
       "total_valid": 18606,
       "party_pos": 2,
       "margin_to_second": 55150,
-      "party_votes": 65083
+      "party_votes": 65083,
+      "party_candidate_name": "Kunnath Mohamed S/o Ali Haji",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 41,
@@ -243,7 +261,10 @@
       "total_valid": 12575,
       "party_pos": 2,
       "margin_to_second": 59412,
-      "party_votes": 65538
+      "party_votes": 65538,
+      "party_candidate_name": "Muhammad Sabah Kundupuzhakkal",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 42,
@@ -276,7 +297,10 @@
       "total_valid": 8705,
       "party_pos": 2,
       "margin_to_second": 26146,
-      "party_votes": 49429
+      "party_votes": 49429,
+      "party_candidate_name": "Adv. C. P. Musthafa",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 44,
@@ -309,7 +333,10 @@
       "total_valid": 22381,
       "party_pos": 2,
       "margin_to_second": 51219,
-      "party_votes": 64861
+      "party_votes": 64861,
+      "party_candidate_name": "Mohamed Sameer T Thiruthiyil House",
+      "party_votes_2021": 247,
+      "party_share_2021": 0.16225022005596645
     },
     {
       "id": 47,
@@ -342,7 +369,10 @@
       "total_valid": 14273,
       "party_pos": 2,
       "margin_to_second": 48975,
-      "party_votes": 65014
+      "party_votes": 65014,
+      "party_candidate_name": "Dr. K. T. Jaleel",
+      "party_votes_2021": 70358,
+      "party_share_2021": 46.61075337202215
     },
     {
       "id": 56,
@@ -375,7 +405,10 @@
       "total_valid": 14173,
       "party_pos": 3,
       "margin_to_second": 15121,
-      "party_votes": 33931
+      "party_votes": 33931,
+      "party_candidate_name": "N. M. R. Razaq",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 117,
@@ -408,7 +441,10 @@
       "total_valid": 23655,
       "party_pos": 2,
       "margin_to_second": 44723,
-      "party_votes": 55735
+      "party_votes": 55735,
+      "party_candidate_name": "Dr. Sujith Vijayanpillai",
+      "party_votes_2021": 63282,
+      "party_share_2021": 44.50868271685692
     },
     {
       "id": 134,
@@ -441,7 +477,10 @@
       "total_valid": 6007,
       "party_pos": 2,
       "margin_to_second": 598,
-      "party_votes": 35723
+      "party_votes": 35723,
+      "party_candidate_name": "Sudheer Karamana",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 139,
@@ -474,7 +513,10 @@
       "total_valid": 8037,
       "party_pos": 2,
       "margin_to_second": 21572,
-      "party_votes": 46952
+      "party_votes": 46952,
+      "party_candidate_name": "Bhagat Rufus",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     }
   ]
 }

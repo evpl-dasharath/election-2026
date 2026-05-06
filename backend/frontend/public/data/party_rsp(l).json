@@ -45,7 +45,10 @@
       "total_valid": 17305,
       "party_pos": 2,
       "margin_to_second": 31333,
-      "party_votes": 56174
+      "party_votes": 56174,
+      "party_candidate_name": "Kovoor Kunjumon",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     }
   ]
 }

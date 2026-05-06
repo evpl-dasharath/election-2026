@@ -45,7 +45,10 @@
       "total_valid": 22690,
       "party_pos": 1,
       "margin_to_second": 40960,
-      "party_votes": 70117
+      "party_votes": 70117,
+      "party_candidate_name": "K. K. Rema",
+      "party_votes_2021": 65093,
+      "party_share_2021": 47.750146713615024
     }
   ]
 }

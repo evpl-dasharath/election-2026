@@ -45,7 +45,10 @@
       "total_valid": 6806,
       "party_pos": 4,
       "margin_to_second": 28244,
-      "party_votes": 278
+      "party_votes": 278,
+      "party_candidate_name": "SURESH NOORANAD",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 113,
@@ -78,7 +81,10 @@
       "total_valid": 8304,
       "party_pos": 6,
       "margin_to_second": 16115,
-      "party_votes": 95
+      "party_votes": 95,
+      "party_candidate_name": "Omalloor Ramachandran",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     }
   ]
 }

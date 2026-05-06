@@ -45,7 +45,10 @@
       "total_valid": 11947,
       "party_pos": 5,
       "margin_to_second": 33990,
-      "party_votes": 692
+      "party_votes": 692,
+      "party_candidate_name": "P.K.Saseendran",
+      "party_votes_2021": 83639,
+      "party_share_2021": 51.197311558096544
     }
   ]
 }

@@ -45,7 +45,10 @@
       "total_valid": 7618,
       "party_pos": 9,
       "margin_to_second": 22484,
-      "party_votes": 53
+      "party_votes": 53,
+      "party_candidate_name": "Subi S M",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     }
   ]
 }

@@ -45,7 +45,10 @@
       "total_valid": 11884,
       "party_pos": 1,
       "margin_to_second": 46484,
-      "party_votes": 96948
+      "party_votes": 96948,
+      "party_candidate_name": "A. K. M. Ashraf",
+      "party_votes_2021": 65758,
+      "party_share_2021": 38.222728567359724
     },
     {
       "id": 2,
@@ -78,7 +81,10 @@
       "total_valid": 22089,
       "party_pos": 1,
       "margin_to_second": 17020,
-      "party_votes": 76396
+      "party_votes": 76396,
+      "party_candidate_name": "Kallatra Mahin Haji",
+      "party_votes_2021": 63296,
+      "party_share_2021": 43.99802587219608
     },
     {
       "id": 10,
@@ -111,7 +117,10 @@
       "total_valid": 12159,
       "party_pos": 2,
       "margin_to_second": 47126,
-      "party_votes": 64602
+      "party_votes": 64602,
+      "party_candidate_name": "Adv.  Kareem Cheleri",
+      "party_votes_2021": 59653,
+      "party_share_2021": 41.31666435794432
     },
     {
       "id": 15,
@@ -144,7 +153,10 @@
       "total_valid": 10349,
       "party_pos": 2,
       "margin_to_second": 46967,
-      "party_votes": 69162
+      "party_votes": 69162,
+      "party_candidate_name": "Jayanthi Rajan",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 21,
@@ -177,7 +189,10 @@
       "total_valid": 9943,
       "party_pos": 1,
       "margin_to_second": 65240,
-      "party_votes": 88197
+      "party_votes": 88197,
+      "party_candidate_name": "Parakkal Abdulla",
+      "party_votes_2021": 79810,
+      "party_share_2021": 47.09026864051262
     },
     {
       "id": 24,
@@ -210,7 +225,10 @@
       "total_valid": 9825,
       "party_pos": 1,
       "margin_to_second": 63300,
-      "party_votes": 81429
+      "party_votes": 81429,
+      "party_candidate_name": "Adv. Fathima Thahiliya",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 28,
@@ -243,7 +261,10 @@
       "total_valid": 6635,
       "party_pos": 1,
       "margin_to_second": 9422,
-      "party_votes": 52680
+      "party_votes": 52680,
+      "party_candidate_name": "Adv. Fyzal Babu",
+      "party_votes_2021": 40098,
+      "party_share_2021": 33.85197254560958
     },
     {
       "id": 30,
@@ -276,7 +297,10 @@
       "total_valid": 11457,
       "party_pos": 1,
       "margin_to_second": 43850,
-      "party_votes": 91598
+      "party_votes": 91598,
+      "party_candidate_name": "M. A. Razak Master",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 31,
@@ -309,7 +333,10 @@
       "total_valid": 10042,
       "party_pos": 1,
       "margin_to_second": 48650,
-      "party_votes": 95164
+      "party_votes": 95164,
+      "party_candidate_name": "P. K. Firos",
+      "party_votes_2021": 72336,
+      "party_share_2021": 48.01369999402617
     },
     {
       "id": 32,
@@ -342,7 +369,10 @@
       "total_valid": 22095,
       "party_pos": 1,
       "margin_to_second": 63019,
-      "party_votes": 77140
+      "party_votes": 77140,
+      "party_candidate_name": "C. K. Kasim",
+      "party_votes_2021": 63224,
+      "party_share_2021": 44.33971526755032
     },
     {
       "id": 33,
@@ -375,7 +405,10 @@
       "total_valid": 0,
       "party_pos": 1,
       "margin_to_second": 44986,
-      "party_votes": 114997
+      "party_votes": 114997,
+      "party_candidate_name": "T. P. Ashrafali",
+      "party_votes_2021": 82759,
+      "party_share_2021": 50.58896883080365
     },
     {
       "id": 34,
@@ -408,7 +441,10 @@
       "total_valid": 17191,
       "party_pos": 1,
       "margin_to_second": 48530,
-      "party_votes": 98547
+      "party_votes": 98547,
+      "party_candidate_name": "P. K. Basheer",
+      "party_votes_2021": 78076,
+      "party_share_2021": 54.73793432233097
     },
     {
       "id": 37,
@@ -441,7 +477,10 @@
       "total_valid": 6256,
       "party_pos": 1,
       "margin_to_second": 42312,
-      "party_votes": 113622
+      "party_votes": 113622,
+      "party_candidate_name": "Adv. M. Rahmathulla",
+      "party_votes_2021": 78836,
+      "party_share_2021": 50.60401822966815
     },
     {
       "id": 38,
@@ -474,7 +513,10 @@
       "total_valid": 9834,
       "party_pos": 1,
       "margin_to_second": 65217,
-      "party_votes": 104888
+      "party_votes": 104888,
+      "party_candidate_name": "Najeeb Kanthapuram",
+      "party_votes_2021": 76530,
+      "party_share_2021": 46.452482260893845
     },
     {
       "id": 39,
@@ -507,7 +549,10 @@
       "total_valid": 18606,
       "party_pos": 1,
       "margin_to_second": 55150,
-      "party_votes": 110692
+      "party_votes": 110692,
+      "party_candidate_name": "Manjalamkuzhi Ali",
+      "party_votes_2021": 83231,
+      "party_share_2021": 49.64006465118776
     },
     {
       "id": 40,
@@ -540,7 +585,10 @@
       "total_valid": 10088,
       "party_pos": 1,
       "margin_to_second": 37178,
-      "party_votes": 131632
+      "party_votes": 131632,
+      "party_candidate_name": "P. K. Kunhalikutty",
+      "party_votes_2021": 93166,
+      "party_share_2021": 57.92788703670312
     },
     {
       "id": 41,
@@ -573,7 +621,10 @@
       "total_valid": 12575,
       "party_pos": 1,
       "margin_to_second": 59412,
-      "party_votes": 95863
+      "party_votes": 95863,
+      "party_candidate_name": "K. M. Shaji",
+      "party_votes_2021": 70381,
+      "party_share_2021": 53.822917622587255
     },
     {
       "id": 42,
@@ -606,7 +657,10 @@
       "total_valid": 8705,
       "party_pos": 1,
       "margin_to_second": 26146,
-      "party_votes": 100718
+      "party_votes": 100718,
+      "party_candidate_name": "T. V. Ibrahim",
+      "party_votes_2021": 71823,
+      "party_share_2021": 47.797875738699894
     },
     {
       "id": 43,
@@ -639,7 +693,10 @@
       "total_valid": 0,
       "party_pos": 1,
       "margin_to_second": 36985,
-      "party_votes": 111869
+      "party_votes": 111869,
+      "party_candidate_name": "P. M. A. Sameer",
+      "party_votes_2021": 73499,
+      "party_share_2021": 49.98231893913635
     },
     {
       "id": 44,
@@ -672,7 +729,10 @@
       "total_valid": 22381,
       "party_pos": 1,
       "margin_to_second": 51219,
-      "party_votes": 91992
+      "party_votes": 91992,
+      "party_candidate_name": "P. K. Navas",
+      "party_votes_2021": 69719,
+      "party_share_2021": 45.79725948211306
     },
     {
       "id": 45,
@@ -705,7 +765,10 @@
       "total_valid": 10934,
       "party_pos": 1,
       "margin_to_second": 73337,
-      "party_votes": 106108
+      "party_votes": 106108,
+      "party_candidate_name": "Kurukkoli Moideen",
+      "party_votes_2021": 82314,
+      "party_share_2021": 48.327608982826945
     },
     {
       "id": 46,
@@ -738,7 +801,10 @@
       "total_valid": 0,
       "party_pos": 1,
       "margin_to_second": 44915,
-      "party_votes": 118111
+      "party_votes": 118111,
+      "party_candidate_name": "Prof. K. K. Abid Hussain Thangal",
+      "party_votes_2021": 81700,
+      "party_share_2021": 51.29815088060779
     },
     {
       "id": 54,
@@ -771,7 +837,10 @@
       "total_valid": 0,
       "party_pos": 1,
       "margin_to_second": 54032,
-      "party_votes": 90606
+      "party_votes": 90606,
+      "party_candidate_name": "Adv. N. Samsudheen",
+      "party_votes_2021": 71657,
+      "party_share_2021": 47.3477289846837
     },
     {
       "id": 63,
@@ -804,7 +873,10 @@
       "total_valid": 10075,
       "party_pos": 2,
       "margin_to_second": 35124,
-      "party_votes": 64071
+      "party_votes": 64071,
+      "party_candidate_name": "C. H. Rasheed",
+      "party_votes_2021": 58804,
+      "party_share_2021": 40.34524397606894
     },
     {
       "id": 77,
@@ -837,7 +909,10 @@
       "total_valid": 12067,
       "party_pos": 1,
       "margin_to_second": 50164,
-      "party_votes": 80606
+      "party_votes": 80606,
+      "party_candidate_name": "Adv. V. E. Abdul Gafoor",
+      "party_votes_2021": 61805,
+      "party_share_2021": 40.043409245521396
     },
     {
       "id": 121,
@@ -870,7 +945,10 @@
       "total_valid": 8411,
       "party_pos": 2,
       "margin_to_second": 35022,
-      "party_votes": 50415
+      "party_votes": 50415,
+      "party_candidate_name": "Noushad Yusuf",
+      "party_votes_2021": 43371,
+      "party_share_2021": 29.795346344881597
     }
   ]
 }

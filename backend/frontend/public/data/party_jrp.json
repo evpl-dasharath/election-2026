@@ -45,7 +45,10 @@
       "total_valid": 16312,
       "party_pos": 5,
       "margin_to_second": 19580,
-      "party_votes": 122
+      "party_votes": 122,
+      "party_candidate_name": "Sabu Mylakkadan",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 99,
@@ -78,7 +81,10 @@
       "total_valid": 8226,
       "party_pos": 10,
       "margin_to_second": 32820,
-      "party_votes": 43
+      "party_votes": 43,
+      "party_candidate_name": "Jose Joseph",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 134,
@@ -111,7 +117,10 @@
       "total_valid": 6007,
       "party_pos": 10,
       "margin_to_second": 598,
-      "party_votes": 210
+      "party_votes": 210,
+      "party_candidate_name": "Karthika Devi M",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     }
   ]
 }

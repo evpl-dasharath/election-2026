@@ -45,7 +45,10 @@
       "total_valid": 8037,
       "party_pos": 5,
       "margin_to_second": 21572,
-      "party_votes": 469
+      "party_votes": 469,
+      "party_candidate_name": "Kattachalkuzhi.M.Sugathan",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     }
   ]
 }

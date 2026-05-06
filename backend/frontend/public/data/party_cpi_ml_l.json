@@ -45,7 +45,10 @@
       "total_valid": 21254,
       "party_pos": 7,
       "margin_to_second": 4825,
-      "party_votes": 110
+      "party_votes": 110,
+      "party_candidate_name": "Arshed Aziz",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     },
     {
       "id": 138,
@@ -78,7 +81,10 @@
       "total_valid": 8029,
       "party_pos": 5,
       "margin_to_second": 11479,
-      "party_votes": 262
+      "party_votes": 262,
+      "party_candidate_name": "Adv. Jayakumar Theertham",
+      "party_votes_2021": 0,
+      "party_share_2021": 0.0
     }
   ]
 }

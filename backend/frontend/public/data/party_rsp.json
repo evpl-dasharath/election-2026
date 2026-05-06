@@ -45,7 +45,10 @@
       "total_valid": 23655,
       "party_pos": 1,
       "margin_to_second": 44723,
-      "party_votes": 74308
+      "party_votes": 74308,
+      "party_candidate_name": "Shibu Baby John",
+      "party_votes_2021": 62186,
+      "party_share_2021": 43.73782344790722
     },
     {
       "id": 118,
@@ -78,7 +81,10 @@
       "total_valid": 17305,
       "party_pos": 1,
       "margin_to_second": 31333,
-      "party_votes": 81488
+      "party_votes": 81488,
+      "party_candidate_name": "Ullas Kovoor",
+      "party_votes_2021": 66522,
+      "party_share_2021": 41.54535064545744
     },
     {
       "id": 125,
@@ -111,7 +117,10 @@
       "total_valid": 8166,
       "party_pos": 1,
       "margin_to_second": 45111,
-      "party_votes": 64383
+      "party_votes": 64383,
+      "party_candidate_name": "Adv. Vishnu Mohan",
+      "party_votes_2021": 43452,
+      "party_share_2021": 34.40107671601615
     },
     {
       "id": 128,
@@ -144,7 +153,10 @@
       "total_valid": 19010,
       "party_pos": 3,
       "margin_to_second": 4416,
-      "party_votes": 41372
+      "party_votes": 41372,
+      "party_candidate_name": "Santhosh Bhadran",
+      "party_votes_2021": 36938,
+      "party_share_2021": 25.204189553409982
     }
   ]
 }

@@ -67,7 +67,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 46484,
-      "alliance_votes": 523
+      "alliance_votes": 523,
+      "alliance_candidate_name": "Gean Lavina Monteiro",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 629,
+      "alliance_share_2021": 0.3656147733944048
     },
     {
       "id": 2,
@@ -101,7 +105,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 17020,
-      "alliance_votes": 893
+      "alliance_votes": 893,
+      "alliance_candidate_name": "Shanavas A A",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 1847,
+      "alliance_share_2021": 1.283878187973113
     },
     {
       "id": 3,
@@ -135,7 +143,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 47164,
-      "alliance_votes": 191
+      "alliance_votes": 191,
+      "alliance_candidate_name": "Kunhampu P P S/o Raman",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 347,
+      "alliance_share_2021": 0.21066946749801171
     },
     {
       "id": 4,
@@ -169,7 +181,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 37541,
-      "alliance_votes": 3132
+      "alliance_votes": 3132,
+      "alliance_candidate_name": "B. Vijayakumar",
+      "alliance_party_code": "BSP",
+      "alliance_votes_2021": 2537,
+      "alliance_share_2021": 1.5264924969012863
     },
     {
       "id": 5,
@@ -203,7 +219,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 70841,
-      "alliance_votes": 258
+      "alliance_votes": 258,
+      "alliance_candidate_name": "Sandeep Elatt",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 2724,
+      "alliance_share_2021": 1.7040975914920238
     },
     {
       "id": 6,
@@ -237,7 +257,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 60721,
-      "alliance_votes": 552
+      "alliance_votes": 552,
+      "alliance_candidate_name": "Sandeep V. K.",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 341,
+      "alliance_share_2021": 0.22846193529368417
     },
     {
       "id": 7,
@@ -271,7 +295,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 49885,
-      "alliance_votes": 1281
+      "alliance_votes": 1281,
+      "alliance_candidate_name": "K.K. Abdul Jabbar",
+      "alliance_party_code": "SDPI",
+      "alliance_votes_2021": 1443,
+      "alliance_share_2021": 0.9957286484173917
     },
     {
       "id": 8,
@@ -305,7 +333,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 62699,
-      "alliance_votes": 1202
+      "alliance_votes": 1202,
+      "alliance_candidate_name": "Koyyam Janardhanan",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 1214,
+      "alliance_share_2021": 0.6846263598066804
     },
     {
       "id": 9,
@@ -339,7 +371,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 38852,
-      "alliance_votes": 1151
+      "alliance_votes": 1151,
+      "alliance_candidate_name": "Joseph P.V",
+      "alliance_party_code": "AAP",
+      "alliance_votes_2021": 714,
+      "alliance_share_2021": 0.4695607568214551
     },
     {
       "id": 10,
@@ -373,7 +409,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 47126,
-      "alliance_votes": 235
+      "alliance_votes": 235,
+      "alliance_candidate_name": "Abdul Kareem. V. V",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 3192,
+      "alliance_share_2021": 2.2108325252805097
     },
     {
       "id": 11,
@@ -407,7 +447,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 35925,
-      "alliance_votes": 281
+      "alliance_votes": 281,
+      "alliance_candidate_name": "T.K. Mohanan",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 3123,
+      "alliance_share_2021": 2.3378373320357824
     },
     {
       "id": 12,
@@ -441,7 +485,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 47812,
-      "alliance_votes": 193
+      "alliance_votes": 193,
+      "alliance_candidate_name": "Vadi Hareendran",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 4303,
+      "alliance_share_2021": 2.6919491763999326
     },
     {
       "id": 13,
@@ -475,7 +523,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 26466,
-      "alliance_votes": 1444
+      "alliance_votes": 1444,
+      "alliance_candidate_name": "A.C. Jalaluddin",
+      "alliance_party_code": "SDPI",
+      "alliance_votes_2021": 3857,
+      "alliance_share_2021": 2.951574887508035
     },
     {
       "id": 15,
@@ -509,7 +561,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 46967,
-      "alliance_votes": 671
+      "alliance_votes": 671,
+      "alliance_candidate_name": "Jayanthi",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 4820,
+      "alliance_share_2021": 3.1230157187471654
     },
     {
       "id": 14,
@@ -543,7 +599,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 49473,
-      "alliance_votes": 2171
+      "alliance_votes": 2171,
+      "alliance_candidate_name": "Basheer Punnad",
+      "alliance_party_code": "SDPI",
+      "alliance_votes_2021": 932,
+      "alliance_share_2021": 0.6004574300164288
     },
     {
       "id": 16,
@@ -577,7 +637,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 53667,
-      "alliance_votes": 431
+      "alliance_votes": 431,
+      "alliance_candidate_name": "Adv. Henstion George",
+      "alliance_party_code": "AAP",
+      "alliance_votes_2021": 2339,
+      "alliance_share_2021": 1.6502744577871222
     },
     {
       "id": 17,
@@ -611,7 +675,11 @@
       "competing": false,
       "alliance_pos": null,
       "margin_to_second": 47201,
-      "alliance_votes": 0
+      "alliance_votes": 0,
+      "alliance_candidate_name": null,
+      "alliance_party_code": null,
+      "alliance_votes_2021": 2852,
+      "alliance_share_2021": 1.8789859273704739
     },
     {
       "id": 18,
@@ -645,7 +713,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 31031,
-      "alliance_votes": 1781
+      "alliance_votes": 1781,
+      "alliance_candidate_name": "Prakrithi N V",
+      "alliance_party_code": "AAP",
+      "alliance_votes_2021": 742,
+      "alliance_share_2021": 0.44625673595073134
     },
     {
       "id": 19,
@@ -679,7 +751,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 33173,
-      "alliance_votes": 867
+      "alliance_votes": 867,
+      "alliance_candidate_name": "Rafeek C A",
+      "alliance_party_code": "AAP",
+      "alliance_votes_2021": 2234,
+      "alliance_share_2021": 1.475746626062716
     },
     {
       "id": 20,
@@ -713,7 +789,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 40960,
-      "alliance_votes": 2477
+      "alliance_votes": 2477,
+      "alliance_candidate_name": "Shamseer Chombala",
+      "alliance_party_code": "SDPI",
+      "alliance_votes_2021": 3400,
+      "alliance_share_2021": 2.494131455399061
     },
     {
       "id": 21,
@@ -747,7 +827,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 65240,
-      "alliance_votes": 114
+      "alliance_votes": 114,
+      "alliance_candidate_name": "Kunhammadkutty",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 391,
+      "alliance_share_2021": 0.23070160429069583
     },
     {
       "id": 22,
@@ -781,7 +865,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 64657,
-      "alliance_votes": 314
+      "alliance_votes": 314,
+      "alliance_candidate_name": "Vasantha",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 2099,
+      "alliance_share_2021": 1.1981482644260133
     },
     {
       "id": 23,
@@ -815,7 +903,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 44298,
-      "alliance_votes": 198
+      "alliance_votes": 198,
+      "alliance_candidate_name": "Praveen",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 1253,
+      "alliance_share_2021": 0.775409673746225
     },
     {
       "id": 24,
@@ -849,7 +941,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 63300,
-      "alliance_votes": 151
+      "alliance_votes": 151,
+      "alliance_candidate_name": "Fathimathu Ruksana.P",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 2660,
+      "alliance_share_2021": 1.6291133581170878
     },
     {
       "id": 25,
@@ -883,7 +979,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 60155,
-      "alliance_votes": 272
+      "alliance_votes": 272,
+      "alliance_candidate_name": "Sooraj K S/o Asokan",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 1727,
+      "alliance_share_2021": 0.9513945891154288
     },
     {
       "id": 26,
@@ -917,7 +1017,11 @@
       "competing": false,
       "alliance_pos": 2,
       "margin_to_second": 33990,
-      "alliance_votes": 65500
+      "alliance_votes": 65500,
+      "alliance_candidate_name": "A. K. Saseendran",
+      "alliance_party_code": "NCP(SP)",
+      "alliance_votes_2021": 2580,
+      "alliance_share_2021": 1.579275981538386
     },
     {
       "id": 27,
@@ -951,7 +1055,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 9254,
-      "alliance_votes": 542
+      "alliance_votes": 542,
+      "alliance_candidate_name": "Dr. Alphonsa Mathew",
+      "alliance_party_code": "AAP",
+      "alliance_votes_2021": 774,
+      "alliance_share_2021": 0.5647738715467799
     },
     {
       "id": 28,
@@ -985,7 +1093,11 @@
       "competing": false,
       "alliance_pos": null,
       "margin_to_second": 9422,
-      "alliance_votes": 0
+      "alliance_votes": 0,
+      "alliance_candidate_name": null,
+      "alliance_party_code": null,
+      "alliance_votes_2021": 923,
+      "alliance_share_2021": 0.7792251648360926
     },
     {
       "id": 29,
@@ -1019,7 +1131,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 47819,
-      "alliance_votes": 538
+      "alliance_votes": 538,
+      "alliance_candidate_name": "Anver S/o Moideenkoya",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 2739,
+      "alliance_share_2021": 1.6641452344931922
     },
     {
       "id": 30,
@@ -1053,7 +1169,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 43850,
-      "alliance_votes": 2110
+      "alliance_votes": 2110,
+      "alliance_candidate_name": "Rahim",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 5286,
+      "alliance_share_2021": 2.7394562547290087
     },
     {
       "id": 31,
@@ -1087,7 +1207,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 48650,
-      "alliance_votes": 397
+      "alliance_votes": 397,
+      "alliance_candidate_name": "Sunil Mannath",
+      "alliance_party_code": "RPI (A)",
+      "alliance_votes_2021": 2831,
+      "alliance_share_2021": 1.8791028627942943
     },
     {
       "id": 32,
@@ -1121,7 +1245,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 63019,
-      "alliance_votes": 812
+      "alliance_votes": 812,
+      "alliance_candidate_name": "Sunny V Joseph",
+      "alliance_party_code": "AAP",
+      "alliance_votes_2021": 3705,
+      "alliance_share_2021": 2.5983589312013464
     },
     {
       "id": 33,
@@ -1155,7 +1283,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 44986,
-      "alliance_votes": 2231
+      "alliance_votes": 2231,
+      "alliance_candidate_name": "M. Abdul Khader",
+      "alliance_party_code": "SDPI",
+      "alliance_votes_2021": 4625,
+      "alliance_share_2021": 2.8271726439718567
     },
     {
       "id": 34,
@@ -1189,7 +1321,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 48530,
-      "alliance_votes": 2530
+      "alliance_votes": 2530,
+      "alliance_candidate_name": "Yusuf Chemmala",
+      "alliance_party_code": "SDPI",
+      "alliance_votes_2021": 2347,
+      "alliance_share_2021": 1.6454471521915925
     },
     {
       "id": 35,
@@ -1223,7 +1359,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 46075,
-      "alliance_votes": 1942
+      "alliance_votes": 1942,
+      "alliance_candidate_name": "Jaisal Maliyekkal",
+      "alliance_party_code": "AAP",
+      "alliance_votes_2021": 4349,
+      "alliance_share_2021": 2.5182688855690283
     },
     {
       "id": 36,
@@ -1257,7 +1397,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 67117,
-      "alliance_votes": 1267
+      "alliance_votes": 1267,
+      "alliance_candidate_name": "Anilkumar S/o Kuttan",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 2943,
+      "alliance_share_2021": 1.7386732204150837
     },
     {
       "id": 37,
@@ -1291,7 +1435,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 42312,
-      "alliance_votes": 2222
+      "alliance_votes": 2222,
+      "alliance_candidate_name": "Adv. PPA Sageer",
+      "alliance_party_code": "AAP",
+      "alliance_votes_2021": 1341,
+      "alliance_share_2021": 0.8607741190063547
     },
     {
       "id": 38,
@@ -1325,7 +1473,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 65217,
-      "alliance_votes": 239
+      "alliance_votes": 239,
+      "alliance_candidate_name": "Abdul Najeeb S/o Mohamed",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 3706,
+      "alliance_share_2021": 2.2494825461763046
     },
     {
       "id": 39,
@@ -1359,7 +1511,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 55150,
-      "alliance_votes": 663
+      "alliance_votes": 663,
+      "alliance_candidate_name": "Kunnath Muhammed",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 812,
+      "alliance_share_2021": 0.48428749500503976
     },
     {
       "id": 40,
@@ -1393,7 +1549,11 @@
       "competing": false,
       "alliance_pos": 2,
       "margin_to_second": 37178,
-      "alliance_votes": 46305
+      "alliance_votes": 46305,
+      "alliance_candidate_name": "K. T. Mujeeb",
+      "alliance_party_code": "NCP(SP)",
+      "alliance_votes_2021": 3824,
+      "alliance_share_2021": 2.377651074730618
     },
     {
       "id": 41,
@@ -1427,7 +1587,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 59412,
-      "alliance_votes": 1145
+      "alliance_votes": 1145,
+      "alliance_candidate_name": "Abdul Rafeeq Chemban",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 14630,
+      "alliance_share_2021": 11.188094582606833
     },
     {
       "id": 42,
@@ -1461,7 +1625,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 26146,
-      "alliance_votes": 3698
+      "alliance_votes": 3698,
+      "alliance_candidate_name": "Muhamed Musthafa Pamangadan",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 881,
+      "alliance_share_2021": 0.5863014427940159
     },
     {
       "id": 43,
@@ -1495,7 +1663,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 36985,
-      "alliance_votes": 2650
+      "alliance_votes": 2650,
+      "alliance_candidate_name": "Hameed V",
+      "alliance_party_code": "SDPI",
+      "alliance_votes_2021": 1316,
+      "alliance_share_2021": 0.8949336960217612
     },
     {
       "id": 44,
@@ -1529,7 +1701,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 51219,
-      "alliance_votes": 502
+      "alliance_votes": 502,
+      "alliance_candidate_name": "P P Navas S/o Kunhimuhamed",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 974,
+      "alliance_share_2021": 0.6398045114757545
     },
     {
       "id": 45,
@@ -1563,7 +1739,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 73337,
-      "alliance_votes": 340
+      "alliance_votes": 340,
+      "alliance_candidate_name": "Kabeer Shameer Kuttoor",
+      "alliance_party_code": "AAP",
+      "alliance_votes_2021": 3814,
+      "alliance_share_2021": 2.2392484955232645
     },
     {
       "id": 46,
@@ -1597,7 +1777,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 44915,
-      "alliance_votes": 4557
+      "alliance_votes": 4557,
+      "alliance_candidate_name": "Adv. Majeed Marakkara",
+      "alliance_party_code": "SDPI",
+      "alliance_votes_2021": 1657,
+      "alliance_share_2021": 1.0404043575173452
     },
     {
       "id": 47,
@@ -1631,7 +1815,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 48975,
-      "alliance_votes": 2021
+      "alliance_votes": 2021,
+      "alliance_candidate_name": "Abdul Jaleel",
+      "alliance_party_code": "SDPI",
+      "alliance_votes_2021": 2882,
+      "alliance_share_2021": 1.9092667673635952
     },
     {
       "id": 48,
@@ -1665,7 +1853,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 57197,
-      "alliance_votes": 1971
+      "alliance_votes": 1971,
+      "alliance_candidate_name": "Anvar Pazhanji",
+      "alliance_party_code": "SDPI",
+      "alliance_votes_2021": 5243,
+      "alliance_share_2021": 3.6169845814218204
     },
     {
       "id": 49,
@@ -1699,7 +1891,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 52991,
-      "alliance_votes": 1746
+      "alliance_votes": 1746,
+      "alliance_candidate_name": "Shaheer Chalippuram",
+      "alliance_party_code": "SDPI",
+      "alliance_votes_2021": 2421,
+      "alliance_share_2021": 1.5939796160227542
     },
     {
       "id": 50,
@@ -1733,7 +1929,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 55338,
-      "alliance_votes": 2582
+      "alliance_votes": 2582,
+      "alliance_candidate_name": "S.P. Ameer Ali",
+      "alliance_party_code": "SDPI",
+      "alliance_votes_2021": 4293,
+      "alliance_share_2021": 2.833308033975937
     },
     {
       "id": 51,
@@ -1767,7 +1967,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 20802,
-      "alliance_votes": 1263
+      "alliance_votes": 1263,
+      "alliance_candidate_name": "Aboobacker",
+      "alliance_party_code": "SDPI",
+      "alliance_votes_2021": 2134,
+      "alliance_share_2021": 1.4110676902527886
     },
     {
       "id": 52,
@@ -1801,7 +2005,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 6109,
-      "alliance_votes": 1062
+      "alliance_votes": 1062,
+      "alliance_candidate_name": "Sasi P.K S/o Krishnankutty",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 672,
+      "alliance_share_2021": 0.41922966548966273
     },
     {
       "id": 53,
@@ -1835,7 +2043,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 34103,
-      "alliance_votes": 859
+      "alliance_votes": 859,
+      "alliance_candidate_name": "Guruvayoorappan P E",
+      "alliance_party_code": "BSP",
+      "alliance_votes_2021": 1351,
+      "alliance_share_2021": 0.9821525935080514
     },
     {
       "id": 54,
@@ -1869,7 +2081,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 54032,
-      "alliance_votes": 939
+      "alliance_votes": 939,
+      "alliance_candidate_name": "Ashitha Najeeb",
+      "alliance_party_code": "SDPI",
+      "alliance_votes_2021": 3522,
+      "alliance_share_2021": 2.327179500733438
     },
     {
       "id": 55,
@@ -1903,7 +2119,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 6646,
-      "alliance_votes": 448
+      "alliance_votes": 448,
+      "alliance_candidate_name": "Ramnath C",
+      "alliance_party_code": "BSP",
+      "alliance_votes_2021": 973,
+      "alliance_share_2021": 0.598581368309023
     },
     {
       "id": 56,
@@ -1937,7 +2157,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 15121,
-      "alliance_votes": 437
+      "alliance_votes": 437,
+      "alliance_candidate_name": "Udayan Sukumaran",
+      "alliance_party_code": "AAP",
+      "alliance_votes_2021": 844,
+      "alliance_share_2021": 0.5961462394756174
     },
     {
       "id": 57,
@@ -1971,7 +2195,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 27485,
-      "alliance_votes": 866
+      "alliance_votes": 866,
+      "alliance_candidate_name": "Narayanankutty  K T",
+      "alliance_party_code": "BSP",
+      "alliance_votes_2021": 985,
+      "alliance_share_2021": 0.7553275514351224
     },
     {
       "id": 58,
@@ -2005,7 +2233,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 44118,
-      "alliance_votes": 6984
+      "alliance_votes": 6984,
+      "alliance_candidate_name": "Murugadas. P.  S/o Pazhaniappa Mudaliyaar",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 1696,
+      "alliance_share_2021": 1.1185859385305368
     },
     {
       "id": 59,
@@ -2039,7 +2271,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 45109,
-      "alliance_votes": 793
+      "alliance_votes": 793,
+      "alliance_candidate_name": "Anvar Sadiq",
+      "alliance_party_code": "SDPI",
+      "alliance_votes_2021": 2213,
+      "alliance_share_2021": 1.470773934137507
     },
     {
       "id": 60,
@@ -2073,7 +2309,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 35664,
-      "alliance_votes": 651
+      "alliance_votes": 651,
+      "alliance_candidate_name": "M T Chandran",
+      "alliance_party_code": "BSP",
+      "alliance_votes_2021": 1046,
+      "alliance_share_2021": 0.7772155472830893
     },
     {
       "id": 61,
@@ -2107,7 +2347,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 9401,
-      "alliance_votes": 1204
+      "alliance_votes": 1204,
+      "alliance_candidate_name": "P. R. Vinod Kumar",
+      "alliance_party_code": "SDPI",
+      "alliance_votes_2021": 1120,
+      "alliance_share_2021": 0.7339690029162161
     },
     {
       "id": 62,
@@ -2141,7 +2385,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 47855,
-      "alliance_votes": 1035
+      "alliance_votes": 1035,
+      "alliance_candidate_name": "Rajeev K Sivaraman",
+      "alliance_party_code": "AAP",
+      "alliance_votes_2021": 2006,
+      "alliance_share_2021": 1.3003007674756273
     },
     {
       "id": 63,
@@ -2175,7 +2423,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 35124,
-      "alliance_votes": 1610
+      "alliance_votes": 1610,
+      "alliance_candidate_name": "K.V. Abdul Nasar Paroor",
+      "alliance_party_code": "SDPI",
+      "alliance_votes_2021": 9876,
+      "alliance_share_2021": 6.77589329820517
     },
     {
       "id": 64,
@@ -2209,7 +2461,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 27086,
-      "alliance_votes": 1031
+      "alliance_votes": 1031,
+      "alliance_candidate_name": "Dileef Abdul Khader",
+      "alliance_party_code": "SDPI",
+      "alliance_votes_2021": 3426,
+      "alliance_share_2021": 2.0540799808141976
     },
     {
       "id": 65,
@@ -2243,7 +2499,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 39191,
-      "alliance_votes": 478
+      "alliance_votes": 478,
+      "alliance_candidate_name": "Jithin Sadanananthan",
+      "alliance_party_code": "AAP",
+      "alliance_votes_2021": 388,
+      "alliance_share_2021": 0.22955999029694887
     },
     {
       "id": 66,
@@ -2277,7 +2537,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 41082,
-      "alliance_votes": 594
+      "alliance_votes": 594,
+      "alliance_candidate_name": "V P Prinson Avinissery",
+      "alliance_party_code": "AAP",
+      "alliance_votes_2021": 1241,
+      "alliance_share_2021": 0.7988721804511277
     },
     {
       "id": 67,
@@ -2311,7 +2575,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 4825,
-      "alliance_votes": 299
+      "alliance_votes": 299,
+      "alliance_candidate_name": "Rani Anto",
+      "alliance_party_code": "AAP",
+      "alliance_votes_2021": 252,
+      "alliance_share_2021": 0.19643149451628747
     },
     {
       "id": 68,
@@ -2345,7 +2613,11 @@
       "competing": false,
       "alliance_pos": null,
       "margin_to_second": 6670,
-      "alliance_votes": 0
+      "alliance_votes": 0,
+      "alliance_candidate_name": null,
+      "alliance_party_code": null,
+      "alliance_votes_2021": 1579,
+      "alliance_share_2021": 1.0338912024305282
     },
     {
       "id": 69,
@@ -2379,7 +2651,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 35816,
-      "alliance_votes": 653
+      "alliance_votes": 653,
+      "alliance_candidate_name": "Jayan Eratt",
+      "alliance_party_code": "AAP",
+      "alliance_votes_2021": 2927,
+      "alliance_share_2021": 2.1582839909450877
     },
     {
       "id": 70,
@@ -2413,7 +2689,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 28903,
-      "alliance_votes": 921
+      "alliance_votes": 921,
+      "alliance_candidate_name": "Thankamany Tharayil",
+      "alliance_party_code": "BSP",
+      "alliance_votes_2021": 1223,
+      "alliance_share_2021": 0.7911300286566315
     },
     {
       "id": 71,
@@ -2447,7 +2727,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 32265,
-      "alliance_votes": 863
+      "alliance_votes": 863,
+      "alliance_candidate_name": "Jayakrishnan P N",
+      "alliance_party_code": "AAP",
+      "alliance_votes_2021": 944,
+      "alliance_share_2021": 0.6081925599494891
     },
     {
       "id": 72,
@@ -2481,7 +2765,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 32016,
-      "alliance_votes": 663
+      "alliance_votes": 663,
+      "alliance_candidate_name": "M S Asokan Mangalappilly",
+      "alliance_party_code": "BSP",
+      "alliance_votes_2021": 2134,
+      "alliance_share_2021": 1.501188851527217
     },
     {
       "id": 73,
@@ -2515,7 +2803,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 32921,
-      "alliance_votes": 488
+      "alliance_votes": 488,
+      "alliance_candidate_name": "Ravi A K",
+      "alliance_party_code": "BSP",
+      "alliance_votes_2021": 807,
+      "alliance_share_2021": 0.5451523994811932
     },
     {
       "id": 74,
@@ -2549,7 +2841,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 24157,
-      "alliance_votes": 1562
+      "alliance_votes": 1562,
+      "alliance_candidate_name": "Eldho George",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 3728,
+      "alliance_share_2021": 3.03257085217844
     },
     {
       "id": 75,
@@ -2583,7 +2879,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 31430,
-      "alliance_votes": 220
+      "alliance_votes": 220,
+      "alliance_candidate_name": "P V Rajeesh",
+      "alliance_party_code": "SUCI",
+      "alliance_votes_2021": 1456,
+      "alliance_share_2021": 1.0602353489455902
     },
     {
       "id": 76,
@@ -2617,7 +2917,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 36024,
-      "alliance_votes": 403
+      "alliance_votes": 403,
+      "alliance_candidate_name": "Hakhikhath Hameed",
+      "alliance_party_code": "AAP",
+      "alliance_votes_2021": 5076,
+      "alliance_share_2021": 3.395567566844383
     },
     {
       "id": 77,
@@ -2651,7 +2955,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 50164,
-      "alliance_votes": 1578
+      "alliance_votes": 1578,
+      "alliance_candidate_name": "Ajmal K Mujeeb",
+      "alliance_party_code": "SDPI",
+      "alliance_votes_2021": 4220,
+      "alliance_share_2021": 2.7341345686611165
     },
     {
       "id": 78,
@@ -2685,7 +2993,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 37681,
-      "alliance_votes": 828
+      "alliance_votes": 828,
+      "alliance_candidate_name": "V.M. Faisal",
+      "alliance_party_code": "SDPI",
+      "alliance_votes_2021": 1290,
+      "alliance_share_2021": 0.8191464367130002
     },
     {
       "id": 79,
@@ -2719,7 +3031,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 36827,
-      "alliance_votes": 342
+      "alliance_votes": 342,
+      "alliance_candidate_name": "Mohandas PG",
+      "alliance_party_code": "AAP",
+      "alliance_votes_2021": 309,
+      "alliance_share_2021": 0.2725733036942945
     },
     {
       "id": 80,
@@ -2753,7 +3069,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 44276,
-      "alliance_votes": 803
+      "alliance_votes": 803,
+      "alliance_candidate_name": "Aneesh Mattancherry",
+      "alliance_party_code": "SDPI",
+      "alliance_votes_2021": 2377,
+      "alliance_share_2021": 2.1897137803653517
     },
     {
       "id": 81,
@@ -2787,7 +3107,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 22317,
-      "alliance_votes": 544
+      "alliance_votes": 544,
+      "alliance_candidate_name": "UNNIKRISHNAN K N",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 694,
+      "alliance_share_2021": 0.4471418999020669
     },
     {
       "id": 82,
@@ -2821,7 +3145,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 5979,
-      "alliance_votes": 783
+      "alliance_votes": 783,
+      "alliance_candidate_name": "Moses Henry Motha",
+      "alliance_party_code": "AAP",
+      "alliance_votes_2021": 1819,
+      "alliance_share_2021": 1.8419880103694102
     },
     {
       "id": 83,
@@ -2855,7 +3183,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 11740,
-      "alliance_votes": 605
+      "alliance_votes": 605,
+      "alliance_candidate_name": "Jose George",
+      "alliance_party_code": "AAP",
+      "alliance_votes_2021": 1146,
+      "alliance_share_2021": 0.9395136827952582
     },
     {
       "id": 84,
@@ -2889,7 +3221,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 8788,
-      "alliance_votes": 380
+      "alliance_votes": 380,
+      "alliance_candidate_name": "Manikuttan A. T.",
+      "alliance_party_code": "BSP",
+      "alliance_votes_2021": 2453,
+      "alliance_share_2021": 2.1968869225671246
     },
     {
       "id": 85,
@@ -2923,7 +3259,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 30009,
-      "alliance_votes": 1004
+      "alliance_votes": 1004,
+      "alliance_candidate_name": "Eldho Abraham",
+      "alliance_party_code": "AAP",
+      "alliance_votes_2021": 1219,
+      "alliance_share_2021": 0.7764924707620965
     },
     {
       "id": 86,
@@ -2957,7 +3297,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 37245,
-      "alliance_votes": 609
+      "alliance_votes": 609,
+      "alliance_candidate_name": "Roy Arakkal",
+      "alliance_party_code": "SDPI",
+      "alliance_votes_2021": 176,
+      "alliance_share_2021": 0.13497760598809744
     },
     {
       "id": 87,
@@ -2991,7 +3335,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 49574,
-      "alliance_votes": 703
+      "alliance_votes": 703,
+      "alliance_candidate_name": "Roy Arackal",
+      "alliance_party_code": "SDPI",
+      "alliance_votes_2021": 1804,
+      "alliance_share_2021": 1.406024706753439
     },
     {
       "id": 88,
@@ -3025,7 +3373,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 30325,
-      "alliance_votes": 206
+      "alliance_votes": 206,
+      "alliance_candidate_name": "Rajendran .V. B",
+      "alliance_party_code": "BSP",
+      "alliance_votes_2021": 0,
+      "alliance_share_2021": 0.0
     },
     {
       "id": 89,
@@ -3059,7 +3411,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 34738,
-      "alliance_votes": 702
+      "alliance_votes": 702,
+      "alliance_candidate_name": "P.K. Sajeevan",
+      "alliance_party_code": "BSP",
+      "alliance_votes_2021": 867,
+      "alliance_share_2021": 0.696206597501044
     },
     {
       "id": 90,
@@ -3093,7 +3449,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 27826,
-      "alliance_votes": 2603
+      "alliance_votes": 2603,
+      "alliance_candidate_name": "Adv. Basil John",
+      "alliance_party_code": "AAP",
+      "alliance_votes_2021": 2139,
+      "alliance_share_2021": 1.5485075977499947
     },
     {
       "id": 91,
@@ -3127,7 +3487,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 37330,
-      "alliance_votes": 977
+      "alliance_votes": 977,
+      "alliance_candidate_name": "Shijo Antony",
+      "alliance_party_code": "BSP",
+      "alliance_votes_2021": 2225,
+      "alliance_share_2021": 1.7027105621623277
     },
     {
       "id": 92,
@@ -3161,7 +3525,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 32820,
-      "alliance_votes": 508
+      "alliance_votes": 508,
+      "alliance_candidate_name": "Joseph Jacob",
+      "alliance_party_code": "AAP",
+      "alliance_votes_2021": 1317,
+      "alliance_share_2021": 1.0379068484514147
     },
     {
       "id": 93,
@@ -3195,7 +3563,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 12504,
-      "alliance_votes": 506
+      "alliance_votes": 506,
+      "alliance_candidate_name": "Adv. Rony Jose Nedumpallil",
+      "alliance_party_code": "AAP",
+      "alliance_votes_2021": 2728,
+      "alliance_share_2021": 1.9792928816559892
     },
     {
       "id": 94,
@@ -3229,7 +3601,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 26825,
-      "alliance_votes": 1324
+      "alliance_votes": 1324,
+      "alliance_candidate_name": "Jijith K Joy",
+      "alliance_party_code": "BSP",
+      "alliance_votes_2021": 3934,
+      "alliance_share_2021": 3.010407101316192
     },
     {
       "id": 95,
@@ -3263,7 +3639,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 31287,
-      "alliance_votes": 280
+      "alliance_votes": 280,
+      "alliance_candidate_name": "Sumam P S",
+      "alliance_party_code": "BSP",
+      "alliance_votes_2021": 1299,
+      "alliance_share_2021": 1.023592265141128
     },
     {
       "id": 96,
@@ -3297,7 +3677,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 31350,
-      "alliance_votes": 455
+      "alliance_votes": 455,
+      "alliance_candidate_name": "Binoy Joseph Kulathunkal",
+      "alliance_party_code": "BSP",
+      "alliance_votes_2021": 9366,
+      "alliance_share_2021": 7.469673889637682
     },
     {
       "id": 97,
@@ -3331,7 +3715,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 23181,
-      "alliance_votes": 1202
+      "alliance_votes": 1202,
+      "alliance_candidate_name": "Dr. Selin Philip",
+      "alliance_party_code": "AAP",
+      "alliance_votes_2021": 595,
+      "alliance_share_2021": 0.49066094916092856
     },
     {
       "id": 98,
@@ -3365,7 +3753,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 19580,
-      "alliance_votes": 663
+      "alliance_votes": 663,
+      "alliance_candidate_name": "Paul P Chacko",
+      "alliance_party_code": "BSP",
+      "alliance_votes_2021": 1906,
+      "alliance_share_2021": 1.4516374714394515
     },
     {
       "id": 99,
@@ -3399,7 +3791,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 32820,
-      "alliance_votes": 883
+      "alliance_votes": 883,
+      "alliance_candidate_name": "Usha Johnson",
+      "alliance_party_code": "BSP",
+      "alliance_votes_2021": 3869,
+      "alliance_share_2021": 3.141671606401897
     },
     {
       "id": 100,
@@ -3433,7 +3829,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 23890,
-      "alliance_votes": 696
+      "alliance_votes": 696,
+      "alliance_candidate_name": "Thampi Kavumpadam",
+      "alliance_party_code": "BSP",
+      "alliance_votes_2021": 1027,
+      "alliance_share_2021": 0.7492030143202095
     },
     {
       "id": 101,
@@ -3467,7 +3867,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 14035,
-      "alliance_votes": 603
+      "alliance_votes": 603,
+      "alliance_candidate_name": "Shiny A C",
+      "alliance_party_code": "BSP",
+      "alliance_votes_2021": 43283,
+      "alliance_share_2021": 31.016345513045597
     },
     {
       "id": 102,
@@ -3501,7 +3905,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 44811,
-      "alliance_votes": 317
+      "alliance_votes": 317,
+      "alliance_candidate_name": "N.K. Sasikumar",
+      "alliance_party_code": "SUCI",
+      "alliance_votes_2021": 1945,
+      "alliance_share_2021": 1.1885483821687188
     },
     {
       "id": 103,
@@ -3535,7 +3943,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 50730,
-      "alliance_votes": 455
+      "alliance_votes": 455,
+      "alliance_candidate_name": "Nandakumar",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 1677,
+      "alliance_share_2021": 0.9448153469111806
     },
     {
       "id": 104,
@@ -3569,7 +3981,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 44677,
-      "alliance_votes": 163
+      "alliance_votes": 163,
+      "alliance_candidate_name": "Joseph Chacko",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 527,
+      "alliance_share_2021": 0.33490724912142456
     },
     {
       "id": 105,
@@ -3603,7 +4019,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 30901,
-      "alliance_votes": 1020
+      "alliance_votes": 1020,
+      "alliance_candidate_name": "Johnson Mathew",
+      "alliance_party_code": "SUCI",
+      "alliance_votes_2021": 2436,
+      "alliance_share_2021": 1.7855310415597743
     },
     {
       "id": 106,
@@ -3637,7 +4057,11 @@
       "competing": false,
       "alliance_pos": 2,
       "margin_to_second": 19062,
-      "alliance_votes": 35994
+      "alliance_votes": 35994,
+      "alliance_candidate_name": "Thomas K. Thomas",
+      "alliance_party_code": "NCP(SP)",
+      "alliance_votes_2021": 925,
+      "alliance_share_2021": 0.7393316441936489
     },
     {
       "id": 107,
@@ -3671,7 +4095,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 13785,
-      "alliance_votes": 231
+      "alliance_votes": 231,
+      "alliance_candidate_name": "Vidhya V.P",
+      "alliance_party_code": "SUCI",
+      "alliance_votes_2021": 327,
+      "alliance_share_2021": 0.21787363329269024
     },
     {
       "id": 108,
@@ -3705,7 +4133,11 @@
       "competing": false,
       "alliance_pos": null,
       "margin_to_second": 44106,
-      "alliance_votes": 0
+      "alliance_votes": 0,
+      "alliance_candidate_name": null,
+      "alliance_party_code": null,
+      "alliance_votes_2021": 1026,
+      "alliance_share_2021": 0.6379129180474642
     },
     {
       "id": 109,
@@ -3739,7 +4171,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 28244,
-      "alliance_votes": 278
+      "alliance_votes": 278,
+      "alliance_candidate_name": "SURESH NOORANAD",
+      "alliance_party_code": "API",
+      "alliance_votes_2021": 282,
+      "alliance_share_2021": 0.18799248030078797
     },
     {
       "id": 110,
@@ -3773,7 +4209,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 16625,
-      "alliance_votes": 429
+      "alliance_votes": 429,
+      "alliance_candidate_name": "B. Praneesh",
+      "alliance_party_code": "SUCI",
+      "alliance_votes_2021": 1147,
+      "alliance_share_2021": 0.7819850284296213
     },
     {
       "id": 111,
@@ -3807,7 +4247,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 1055,
-      "alliance_votes": 999
+      "alliance_votes": 999,
+      "alliance_candidate_name": "Ramesh Chathenkary",
+      "alliance_party_code": "BSP",
+      "alliance_votes_2021": 3327,
+      "alliance_share_2021": 2.3946277422698223
     },
     {
       "id": 112,
@@ -3841,7 +4285,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 32315,
-      "alliance_votes": 333
+      "alliance_votes": 333,
+      "alliance_candidate_name": "Sreehari K P",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 3367,
+      "alliance_share_2021": 2.643977824195499
     },
     {
       "id": 113,
@@ -3875,7 +4323,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 16115,
-      "alliance_votes": 347
+      "alliance_votes": 347,
+      "alliance_candidate_name": "Prabhakaran V R",
+      "alliance_party_code": "BSP",
+      "alliance_votes_2021": 1059,
+      "alliance_share_2021": 0.6575393499115209
     },
     {
       "id": 114,
@@ -3909,7 +4361,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 43264,
-      "alliance_votes": 400
+      "alliance_votes": 400,
+      "alliance_candidate_name": "Adv Varughese Oommen",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 289,
+      "alliance_share_2021": 0.1936633875680167
     },
     {
       "id": 115,
@@ -3943,7 +4399,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 29484,
-      "alliance_votes": 576
+      "alliance_votes": 576,
+      "alliance_candidate_name": "Sivakumar C S",
+      "alliance_party_code": "BSP",
+      "alliance_votes_2021": 618,
+      "alliance_share_2021": 0.39918096849829154
     },
     {
       "id": 116,
@@ -3977,7 +4437,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 23854,
-      "alliance_votes": 1227
+      "alliance_votes": 1227,
+      "alliance_candidate_name": "Latheef",
+      "alliance_party_code": "SDPI",
+      "alliance_votes_2021": 1448,
+      "alliance_share_2021": 0.8377981184257727
     },
     {
       "id": 117,
@@ -4011,7 +4475,11 @@
       "competing": false,
       "alliance_pos": null,
       "margin_to_second": 44723,
-      "alliance_votes": 0
+      "alliance_votes": 0,
+      "alliance_candidate_name": null,
+      "alliance_party_code": null,
+      "alliance_votes_2021": 2500,
+      "alliance_share_2021": 1.7583468726042524
     },
     {
       "id": 118,
@@ -4045,7 +4513,11 @@
       "competing": false,
       "alliance_pos": 2,
       "margin_to_second": 31333,
-      "alliance_votes": 56174
+      "alliance_votes": 56174,
+      "alliance_candidate_name": "Kovoor Kunjumon",
+      "alliance_party_code": "RSP(L)",
+      "alliance_votes_2021": 2219,
+      "alliance_share_2021": 1.385844278318001
     },
     {
       "id": 119,
@@ -4079,7 +4551,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 42250,
-      "alliance_votes": 386
+      "alliance_votes": 386,
+      "alliance_candidate_name": "Mamachan D",
+      "alliance_party_code": "AAP",
+      "alliance_votes_2021": 1029,
+      "alliance_share_2021": 0.6907060102833975
     },
     {
       "id": 120,
@@ -4113,7 +4589,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 52934,
-      "alliance_votes": 629
+      "alliance_votes": 629,
+      "alliance_candidate_name": "Vipinkumar V",
+      "alliance_party_code": "BSP",
+      "alliance_votes_2021": 3948,
+      "alliance_share_2021": 2.8909945665704955
     },
     {
       "id": 121,
@@ -4147,7 +4627,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 35022,
-      "alliance_votes": 1538
+      "alliance_votes": 1538,
+      "alliance_candidate_name": "Nedumoncavu Gopalakrishnan",
+      "alliance_party_code": "EPI",
+      "alliance_votes_2021": 1695,
+      "alliance_share_2021": 1.1644442612477073
     },
     {
       "id": 122,
@@ -4181,7 +4665,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 39824,
-      "alliance_votes": 1674
+      "alliance_votes": 1674,
+      "alliance_candidate_name": "Sharafath Mallam",
+      "alliance_party_code": "SDPI",
+      "alliance_votes_2021": 3428,
+      "alliance_share_2021": 2.340059525434836
     },
     {
       "id": 123,
@@ -4215,7 +4703,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 36302,
-      "alliance_votes": 722
+      "alliance_votes": 722,
+      "alliance_candidate_name": "Riyas M",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 1132,
+      "alliance_share_2021": 0.7273802103748064
     },
     {
       "id": 124,
@@ -4249,7 +4741,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 28049,
-      "alliance_votes": 290
+      "alliance_votes": 290,
+      "alliance_candidate_name": "Adv. Sinu L R",
+      "alliance_party_code": "AAP",
+      "alliance_votes_2021": 473,
+      "alliance_share_2021": 0.3646849291832754
     },
     {
       "id": 125,
@@ -4283,7 +4779,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 45111,
-      "alliance_votes": 597
+      "alliance_votes": 597,
+      "alliance_candidate_name": "Firoz  S  R",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 2817,
+      "alliance_share_2021": 2.230227218747526
     },
     {
       "id": 126,
@@ -4317,7 +4817,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 12249,
-      "alliance_votes": 627
+      "alliance_votes": 627,
+      "alliance_candidate_name": "Arun A",
+      "alliance_party_code": "AAP",
+      "alliance_votes_2021": 1195,
+      "alliance_share_2021": 0.8731486690876145
     },
     {
       "id": 127,
@@ -4351,7 +4855,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 25915,
-      "alliance_votes": 949
+      "alliance_votes": 949,
+      "alliance_candidate_name": "Raju S Kottarakonam",
+      "alliance_party_code": "BSP",
+      "alliance_votes_2021": 3389,
+      "alliance_share_2021": 2.521314743999881
     },
     {
       "id": 128,
@@ -4385,7 +4893,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 4416,
-      "alliance_votes": 1019
+      "alliance_votes": 1019,
+      "alliance_candidate_name": "Jayarajan M",
+      "alliance_party_code": "SDPI",
+      "alliance_votes_2021": 1457,
+      "alliance_share_2021": 0.9941660127597148
     },
     {
       "id": 129,
@@ -4419,7 +4931,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 22491,
-      "alliance_votes": 743
+      "alliance_votes": 743,
+      "alliance_candidate_name": "Ramasamy Sasi",
+      "alliance_party_code": "BSP",
+      "alliance_votes_2021": 2085,
+      "alliance_share_2021": 1.4446861878299913
     },
     {
       "id": 130,
@@ -4453,7 +4969,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 8624,
-      "alliance_votes": 1191
+      "alliance_votes": 1191,
+      "alliance_candidate_name": "Siyad Kandala",
+      "alliance_party_code": "SDPI",
+      "alliance_votes_2021": 3049,
+      "alliance_share_2021": 2.004799947397837
     },
     {
       "id": 131,
@@ -4487,7 +5007,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 49312,
-      "alliance_votes": 734
+      "alliance_votes": 734,
+      "alliance_candidate_name": "Vipinlal V A",
+      "alliance_party_code": "BSP",
+      "alliance_votes_2021": 3873,
+      "alliance_share_2021": 2.6617093218242296
     },
     {
       "id": 132,
@@ -4521,7 +5045,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 8953,
-      "alliance_votes": 298
+      "alliance_votes": 298,
+      "alliance_candidate_name": "T. S. Rajan",
+      "alliance_party_code": "BSP",
+      "alliance_votes_2021": 779,
+      "alliance_share_2021": 0.5658993004351396
     },
     {
       "id": 133,
@@ -4555,7 +5083,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 5700,
-      "alliance_votes": 299
+      "alliance_votes": 299,
+      "alliance_candidate_name": "N. Murali",
+      "alliance_party_code": "BSP",
+      "alliance_votes_2021": 620,
+      "alliance_share_2021": 0.45327601585003874
     },
     {
       "id": 134,
@@ -4589,7 +5121,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 598,
-      "alliance_votes": 769
+      "alliance_votes": 769,
+      "alliance_candidate_name": "Suresh Kumar",
+      "alliance_party_code": "IND",
+      "alliance_votes_2021": 1779,
+      "alliance_share_2021": 1.39878284662924
     },
     {
       "id": 135,
@@ -4623,7 +5159,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 22484,
-      "alliance_votes": 163
+      "alliance_votes": 163,
+      "alliance_candidate_name": "Karamana Prasad",
+      "alliance_party_code": "SUCI",
+      "alliance_votes_2021": 1012,
+      "alliance_share_2021": 0.696677015854221
     },
     {
       "id": 136,
@@ -4657,7 +5197,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 35304,
-      "alliance_votes": 687
+      "alliance_votes": 687,
+      "alliance_candidate_name": "Santhosh Kumar. S",
+      "alliance_party_code": "BSP",
+      "alliance_votes_2021": 923,
+      "alliance_share_2021": 0.6373957239931495
     },
     {
       "id": 137,
@@ -4691,7 +5235,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 24217,
-      "alliance_votes": 340
+      "alliance_votes": 340,
+      "alliance_candidate_name": "Adv. Dhanuvachapuram Thankachan",
+      "alliance_party_code": "BSP",
+      "alliance_votes_2021": 1342,
+      "alliance_share_2021": 0.8260494891050105
     },
     {
       "id": 138,
@@ -4725,7 +5273,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 11479,
-      "alliance_votes": 433
+      "alliance_votes": 433,
+      "alliance_candidate_name": "Nobil M. D",
+      "alliance_party_code": "BSP",
+      "alliance_votes_2021": 1021,
+      "alliance_share_2021": 0.704050531658139
     },
     {
       "id": 139,
@@ -4759,7 +5311,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 21572,
-      "alliance_votes": 677
+      "alliance_votes": 677,
+      "alliance_candidate_name": "Manoj S.P",
+      "alliance_party_code": "AAP",
+      "alliance_votes_2021": 1489,
+      "alliance_share_2021": 0.9404586709784181
     },
     {
       "id": 140,
@@ -4793,7 +5349,11 @@
       "competing": false,
       "alliance_pos": 4,
       "margin_to_second": 29936,
-      "alliance_votes": 327
+      "alliance_votes": 327,
+      "alliance_candidate_name": "Surendranathan. K",
+      "alliance_party_code": "BSP",
+      "alliance_votes_2021": 643,
+      "alliance_share_2021": 0.464649092380622
     }
   ]
 }

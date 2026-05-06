@@ -45,7 +45,10 @@
       "total_valid": 22168,
       "party_pos": 2,
       "margin_to_second": 35925,
-      "party_votes": 52069
+      "party_votes": 52069,
+      "party_candidate_name": "Kadannappalli Ramachandran",
+      "party_votes_2021": 60313,
+      "party_share_2021": 45.14953026163117
     }
   ]
 }
