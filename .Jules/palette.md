@@ -1,0 +1,3 @@
+## 2024-05-09 - Global Header Accessibility Improvement
+**Learning:** The application extensively uses `<div>` and `<span>` elements with `onClick` handlers for interactive navigation elements (like logo, pills, and nav items) instead of semantic `<button>` elements. This lack of semantic HTML hinders keyboard navigation and accessibility, specifically missing visual focus states.
+**Action:** Replace interactive `<div>` and `<span>` tags with `<button>` elements and apply `focus-visible:` Tailwind utilities (`focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded`) to ensure visual keyboard focus indicators are present. Ensure to apply this pattern for any new interactive elements.
