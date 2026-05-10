@@ -1,0 +1,3 @@
+## 2024-05-10 - Replace onClick div/span with semantic buttons
+**Learning:** Found interactive UI elements (like top navigation links and alliance pills) implemented as `div` and `span` with `onClick` handlers. This pattern creates severe accessibility barriers because screen readers won't announce them as interactive controls, and they lack keyboard focus visibility by default.
+**Action:** Replaced interactive `div` and `span` elements with semantic `<button>` elements and added `focus-visible:ring-2 focus-visible:ring-white/50 outline-none rounded` classes to ensure they are fully accessible to keyboard and screen reader users without altering the default mouse interactions.
