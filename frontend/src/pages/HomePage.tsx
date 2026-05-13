@@ -441,10 +441,11 @@ export default function HomePage() {
           })}
         </div>
         <div className="flex items-center gap-2 bg-pagebg border border-pageborder rounded-md px-3 py-1.5 shrink-0 w-full md:w-[220px]">
-          <span className="text-ink2 text-sm">⌕</span>
+          <span className="text-ink2 text-sm" aria-hidden="true">⌕</span>
           <input
             type="text"
             placeholder="Search..."
+            aria-label="Search constituencies"
             className="bg-transparent border-none outline-none w-full text-[13px] font-sans text-ink placeholder-ink2"
             value={searchTerm}
             onChange={e => setSearchTerm(e.target.value)}
