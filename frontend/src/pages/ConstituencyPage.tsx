@@ -338,10 +338,11 @@ export default function ConstituencyPage() {
           {/* Toolbar */}
           <div style={{ padding: '12px 14px', borderBottom: '1px solid #E2DDD8', flexShrink: 0 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, background: '#F5F2EE', border: '1px solid #E2DDD8', borderRadius: 7, padding: '7px 11px', marginBottom: 10 }}>
-              <span style={{ color: '#5C5245', fontSize: 14 }}>⌕</span>
+              <span style={{ color: '#5C5245', fontSize: 14 }} aria-hidden="true">⌕</span>
               <input
                 type="text"
                 placeholder="Search constituency…"
+                aria-label="Search constituency"
                 value={search}
                 onChange={e => setSearch(e.target.value)}
                 style={{ border: 'none', background: 'none', outline: 'none', fontFamily: "'DM Sans',sans-serif", fontSize: 13, color: '#1A1611', width: '100%' }}
