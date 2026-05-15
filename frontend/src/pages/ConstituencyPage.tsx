@@ -337,10 +337,11 @@ export default function ConstituencyPage() {
 
           {/* Toolbar */}
           <div style={{ padding: '12px 14px', borderBottom: '1px solid #E2DDD8', flexShrink: 0 }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8, background: '#F5F2EE', border: '1px solid #E2DDD8', borderRadius: 7, padding: '7px 11px', marginBottom: 10 }}>
-              <span style={{ color: '#5C5245', fontSize: 14 }}>⌕</span>
+            <div className="focus-within:border-ink transition-colors border border-[#E2DDD8]" style={{ display: 'flex', alignItems: 'center', gap: 8, background: '#F5F2EE', borderRadius: 7, padding: '7px 11px', marginBottom: 10 }}>
+              <span style={{ color: '#5C5245', fontSize: 14 }} aria-hidden="true">⌕</span>
               <input
                 type="text"
+                aria-label="Search constituency"
                 placeholder="Search constituency…"
                 value={search}
                 onChange={e => setSearch(e.target.value)}

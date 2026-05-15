@@ -514,10 +514,11 @@ export default function PartyPage() {
           {/* Sidebar header */}
           <div className="px-3.5 py-3 border-b border-pageborder shrink-0">
             {/* Search */}
-            <div className="flex items-center gap-1.5 bg-pagebg rounded-lg px-2.5 py-2 mb-2">
-              <span className="text-ink2 text-sm">⌕</span>
+            <div className="flex items-center gap-1.5 bg-pagebg border border-transparent focus-within:border-ink transition-colors rounded-lg px-2.5 py-2 mb-2">
+              <span className="text-ink2 text-sm" aria-hidden="true">⌕</span>
               <input
                 type="text"
+                aria-label="Search party"
                 placeholder="Search party…"
                 value={sidebarSearch}
                 onChange={e => setSidebarSearch(e.target.value)}
