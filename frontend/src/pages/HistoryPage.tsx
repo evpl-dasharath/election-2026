@@ -284,10 +284,11 @@ export default function HistoryPage() {
           <div className="flex flex-col md:flex-row gap-3 md:gap-2 flex-wrap items-stretch md:items-center">
 
             {/* Search */}
-            <div className="flex items-center gap-2 bg-[#F5F2EE] border border-[#E2DDD8] rounded-md px-3 py-1.5 w-full md:w-[180px] shrink-0">
-              <span className="text-[#5C5245] text-sm">⌕</span>
+            <div className="flex items-center gap-2 bg-[#F5F2EE] border border-[#E2DDD8] rounded-md px-3 py-1.5 w-full md:w-[180px] shrink-0 focus-within:border-ink transition-colors">
+              <span className="text-[#5C5245] text-sm" aria-hidden="true">⌕</span>
               <input
                 type="text"
+                aria-label="Search constituency"
                 placeholder="Search constituency…"
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}

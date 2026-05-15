@@ -458,10 +458,11 @@ function AdminPanel() {
           </button>
 
           {/* Search */}
-          <div className="ml-auto flex items-center gap-2 bg-[#0f1117] border border-[#2a2d3a] rounded-xl px-3 py-2 min-w-[240px]">
-            <span className="text-[#555]">⌕</span>
+          <div className="ml-auto flex items-center gap-2 bg-[#0f1117] border border-[#2a2d3a] rounded-xl px-3 py-2 min-w-[240px] focus-within:border-white transition-colors">
+            <span className="text-[#555]" aria-hidden="true">⌕</span>
             <input
               type="text"
+              aria-label="Search constituency"
               placeholder="Search constituency..."
               value={searchTerm}
               onChange={e => setSearchTerm(e.target.value)}
