@@ -174,13 +174,13 @@ export default function GlobalHeader() {
 
         {/* Left: logo + status badge */}
         <div className="flex items-center gap-2 md:gap-2.5 shrink-0 md:w-[200px]">
-          <div
-            className="font-serif text-[15px] md:text-[17px] tracking-tight whitespace-nowrap cursor-pointer hover:text-white/85 transition-colors"
+          <button
+            className="font-serif text-[15px] md:text-[17px] tracking-tight whitespace-nowrap cursor-pointer hover:text-white/85 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-ink rounded"
             onClick={() => navigate('/')}
             title="Go to state overview"
           >
             Kerala <span className="text-gold">Elections</span> 2026
-          </div>
+          </button>
           <StatusBadge />
         </div>
 
@@ -188,18 +188,28 @@ export default function GlobalHeader() {
         <div className="flex items-center gap-2 w-full md:w-auto md:flex-1 justify-start md:justify-center overflow-x-auto custom-scrollbar order-3 md:order-2 pb-1 md:pb-0">
           {allPills.map(({ id, won, lead, share, color }) => {
             const total = won + lead;
+            const isClickable = id === 'LDF' || id === 'UDF' || id === 'NDA';
             return (
               <div
                 key={id}
                 onClick={() => handlePillNavigation(id)}
+                role={isClickable ? "button" : undefined}
+                tabIndex={isClickable ? 0 : undefined}
+                onKeyDown={(e) => {
+                  if (isClickable && (e.key === 'Enter' || e.key === ' ')) {
+                    e.preventDefault();
+                    handlePillNavigation(id);
+                  }
+                }}
+                className={isClickable ? "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-ink" : ""}
                 style={{
                   display: 'inline-flex', alignItems: 'center', gap: 8,
                   background: `${color}18`,
                   border: `1px solid ${color}50`,
                   borderRadius: 10, padding: '6px 14px',
-                  cursor: id === 'LDF' || id === 'UDF' || id === 'NDA' ? 'pointer' : 'default',
+                  cursor: isClickable ? 'pointer' : 'default',
                 }}
-                title={id === 'LDF' || id === 'UDF' || id === 'NDA' ? `Open ${id} alliance page` : undefined}
+                title={isClickable ? `Open ${id} alliance page` : undefined}
               >
                 <div style={{ width: 8, height: 8, borderRadius: '50%', background: color, flexShrink: 0 }} />
                 <span style={{ fontSize: 13, fontWeight: 700, color, letterSpacing: 0.5 }}>{id}</span>
@@ -224,13 +234,13 @@ export default function GlobalHeader() {
           {/* Nav — wrap instead of horizontal drag so all links remain reachable */}
           <div className="flex flex-wrap justify-end gap-x-2 gap-y-1 md:gap-x-4">
             {navItems.map(({ label, active, onClick }) => (
-              <span
+              <button
                 key={label}
                 onClick={onClick}
-                className={`text-[10px] md:text-[11px] font-medium cursor-pointer hover:text-white/80 transition-colors whitespace-nowrap ${active ? 'text-white' : 'text-white/45'}`}
+                className={`text-[10px] md:text-[11px] font-medium cursor-pointer hover:text-white/80 transition-colors whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-ink rounded px-1 -mx-1 ${active ? 'text-white' : 'text-white/45'}`}
               >
                 {label}
-              </span>
+              </button>
             ))}
           </div>
           <div className="font-mono text-[10px] text-white/35 shrink-0 whitespace-nowrap">
