@@ -1,0 +1,3 @@
+## 2024-05-17 - Keyboard Navigation in Global Header
+**Learning:** Found multiple non-semantic navigation elements (`<span onClick>`, `<div onClick>`) in `GlobalHeader.tsx` which blocked keyboard users from accessing core sections (State, Constituency, Alliances). The interactive Alliance Pills were also generic divs.
+**Action:** Always use semantic `<button>` or `<a>` with `href` for interactive navigation headers to ensure they are naturally focusable and announced properly by screen readers. Added Tailwind `focus-visible:` utilities to ensure custom elements show a clear focus ring only when navigating by keyboard.
