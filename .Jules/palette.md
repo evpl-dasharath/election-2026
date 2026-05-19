@@ -1,0 +1,3 @@
+## 2026-05-19 - Accessible Interactive Elements in GlobalHeader
+**Learning:** The application's GlobalHeader frequently used `<div>` and `<span>` elements with `onClick` handlers for navigation, which screen readers and keyboard users cannot easily interact with. Furthermore, these elements lacked any visual focus indicators when navigating via keyboard.
+**Action:** Replaced these faux-interactive elements with semantic `<button>` tags and added Tailwind CSS utility classes (`focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50`) to ensure proper keyboard accessibility and visual focus feedback without disrupting the existing flex layout.
